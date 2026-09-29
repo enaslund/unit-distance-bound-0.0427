@@ -1,0 +1,6 @@
+# Python packages for certificates/*.py; PARI/GP 2.17 must also be on PATH.
+mpmath==1.3.0
+python-flint==0.9.0
+numpy
+# Only for certificates/shells241.py and research/design-model/.
+scipy

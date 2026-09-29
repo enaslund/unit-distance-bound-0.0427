@@ -1,0 +1,965 @@
+\section{The Relative Zeta Factor and Its Explicit Ceiling}
+\label{an:section}
+
+We bound the relative zeta value needed in the geometric construction.
+Each zeta function is normalized by the absolute degree of its field.
+With this normalization, the relative degree contributes no additional
+factor of two to the final bound.
+
+Let $K$ be a field in Theorem~\ref{tw:field-family}, let $c_0$ be its
+actual complex conjugation, and put
+\[
+ F=K^{\langle c_0\rangle},\qquad [K:\mathbb Q]=2d,\qquad
+ [F:\mathbb Q]=d=b+2c,\qquad \theta=c/d.
+\]
+The extension $K/F$ is quadratic and unramified at all finite primes.
+The field $K$ is totally imaginary and $b\geq1$. Its root discriminant, equal to
+that of $F$, is
+\[
+ \lambda=2^{9/4}\sqrt{15015},\qquad
+ \ell=\log\lambda=\frac94\log2+\frac12\log15015.
+\]
+Write $L_F(s)=\zeta_K(s)/\zeta_F(s)$. We will prove the following bound.
+
+\begin{theorem}\label{an:ceiling}
+For all sufficiently large degrees in the constructed field family,
+\[
+ \frac{\log L_F(1)}d<0.042161819.
+\]
+No generalized Riemann hypothesis, effective lower bound for the first
+such degree, or asymptotic class-number formula is required.
+\end{theorem}
+
+\subsection{Finite-Field Comparison and Passage to One}
+
+For a number field $A$, denote its class number, regulator, and number
+of roots of unity by $h_A,R_A,w_A$. The analytic class-number formula
+gives the positive value
+\begin{equation}\label{an:class-formula}
+ L_F(1)=2^c\pi^{d-c}\lambda^{-d/2}
+       \frac{h_KR_Kw_F}{h_FR_Fw_K}>0.
+\end{equation}
+Indeed, the residues of $\zeta_A$ are
+$2^{r_1(A)}(2\pi)^{r_2(A)}h_AR_A/(w_A\sqrt{|\Delta_A|})$,
+and finite unramifiedness gives $|\Delta_K|=|\Delta_F|^2$.
+We bound the factor in~\eqref{an:class-formula}. The relative unit and
+ideal-class normalizations enter later in the geometric argument.
+
+At a prime of $F$ of norm $q$, quadratic splitting gives respectively
+\[
+ \zeta_{K,v}(s)=(1-q^{-s})^{-2}
+ \quad\hbox{or}\quad
+ \zeta_{K,v}(s)=(1-q^{-2s})^{-1}.
+\]
+Both are at most $\zeta_{F,v}(s)^2$ for real $s>1$. Consequently
+\begin{equation}\label{an:relative-euler}
+ \frac{\log L_F(s)}d
+ \leq\frac{\log\zeta_K(s)}{2d}.
+\end{equation}
+For a rational prime $p$ with absolute ramification index $e$ and
+residue degree $f$ in a Galois field, its contribution to the normalized
+logarithm is
+\begin{equation}\label{an:local-phi}
+ \Phi_{p,s}(e,f)=\frac{-\log(1-p^{-fs})}{ef}.
+\end{equation}
+Multiplying either $e$ or $f$ by a positive integer cannot increase
+this expression. Hence, in an extension of finite Galois fields, the
+normalized zeta function of the larger field is at most that of the
+smaller field, prime by prime.
+
+Set $\Gamma_{\mathbb R}(s)=\pi^{-s/2}\Gamma(s/2)$ and
+$\Gamma_{\mathbb C}(s)=2(2\pi)^{-s}\Gamma(s)$. The nontrivial
+quadratic Hecke character of $K/F$ is unramified at finite places and
+odd at each real place of $F$. The Hecke continuation and functional
+equation theorem \cite{Hecke1920,Tate1967} gives, up to a
+positive constant independent of $s$, the completion
+\begin{equation}\label{an:completion}
+ \mathcal L_F(s)=\lambda^{ds/2}\pi^{-bs/2}(2\pi)^{-cs}
+       \Gamma((s+1)/2)^b\Gamma(s)^cL_F(s).
+\end{equation}
+It is entire of order one. Taking the quotient of the completed
+Dedekind zeta functional equations shows that its root number is $+1$.
+
+The zero pairing in the functional equation lets us compare this
+completion at one with its values to the right of one.
+\begin{lemma}\label{an:monotonicity}
+The function $\mathcal L_F(s)$ is nondecreasing on the real interval
+$[1,\infty)$.
+\end{lemma}
+\begin{proof}
+The Euler product and functional equation place every zero in
+$0\leq\operatorname{Re}s\leq1$. Center the function at $1/2$ and
+write $t=s-1/2$. Its zeros occur in pairs $z,-z$ and in conjugate
+pairs. Since its order is one, $\sum_{z\ne0}|z|^{-2}<\infty$.
+It follows that the paired canonical product and its logarithmic
+derivative converge locally off the zeros. Evenness makes the remaining linear exponential
+factor constant. A zero of multiplicity $m$ at the center contributes
+$m/t$ to the logarithmic derivative. A pair with $z=a+iv$ contributes
+the real part
+\[
+ \operatorname{Re}\frac{2t}{t^2-z^2}
+ =\frac{2t(t^2-a^2+v^2)}
+ {(t^2-a^2+v^2)^2+4a^2v^2}\geq0\qquad(t\geq1/2),
+\]
+because $|a|\leq1/2$. There are no zeros on $[1,\infty)$:
+this follows from the Euler product above one and
+\eqref{an:class-formula} at one. The completion is positive there.
+Its logarithmic derivative is nonnegative, proving the lemma.
+\end{proof}
+
+For $\varepsilon>0$, division of the two completion factors gives
+\begin{align}
+ \frac{\log L_F(1)}d
+ &\leq\frac{\log\zeta_K(1+\varepsilon)}{[K:\mathbb Q]}
+           +G(\varepsilon,\theta),\label{an:finite-gamma}\\
+ G(\varepsilon,\theta)
+ &=\frac\varepsilon2(\ell-\log\pi)-\varepsilon\theta\log2
+ +(1-2\theta)\log\Gamma(1+\varepsilon/2)
+ +\theta\log\Gamma(1+\varepsilon).
+ \label{an:gamma}
+\end{align}
+In particular $G(\varepsilon,\theta)\to0$ uniformly for
+$0\leq\theta\leq1/2$ as $\varepsilon\downarrow0$.
+
+\subsection{An Unconditional Asymptotic Prime Budget}
+
+The basic inequality for limiting prime counts improves a finite Euler
+estimate at a fixed abscissa to the following bound at one. Only this
+inequality is needed, without a Brauer--Siegel equality.
+
+\begin{proposition}\label{an:prime-budget}
+Suppose that, at $\sigma=1+\varepsilon>1$, every field in the family
+satisfies
+\[
+ \frac{\log\zeta_K(\sigma)}{[K:\mathbb Q]}\leq Y_K(\sigma)
+ \leq Y_*(\sigma).
+\]
+Let $e_p^0,f_p^0$ be uniform lower bounds for its absolute local indices,
+and suppose
+\[
+ R\geq\sum_p\frac{\log p}{e_p^0(p^{2f_p^0}-1)}.
+\]
+Then
+\begin{equation}\label{an:budget-conclusion}
+ \limsup_{d\to\infty}\frac{\log L_F(1)}d
+ \leq Y_*(1+\varepsilon)
+ +\varepsilon\left(\frac{\ell-\gamma_E-\log(4\pi)}4+R\right).
+\end{equation}
+Every strictly larger constant is an eventual uniform ceiling.
+\end{proposition}
+\begin{proof}
+Take any sequence with $n=[K:\mathbb Q]=2d\to\infty$. A diagonal
+subsequence makes each normalized prime count converge:
+$\beta_q=\lim N_q(K)/n$, where $q$ ranges over prime powers.
+The fixed root discriminant makes this an asymptotically exact family.
+The unconditional Basic Inequality$'$ of
+\cite[Proposition 3.1]{TsfasmanVladut2002} is
+\begin{equation}\label{an:tv-budget}
+ \sum_q\beta_q w(q)\leq B,\qquad
+ w(q)=2\log q\sum_{m\geq1}\frac1{q^m+1},\qquad
+ B=\frac{\ell-\gamma_E-\log(4\pi)}2.
+\end{equation}
+To check the normalization, their genus is $g=n\ell/2$, their finite
+invariants are $\phi_q=2\beta_q/\ell$, and total imaginary signature
+gives $\phi_{\mathbb R}=0$, $\phi_{\mathbb C}=1/\ell$.
+The proposition is unconditional, with archimedean constant
+$\gamma_E+\log(4\pi)$.
+
+Put $a_s(q)=-\log(1-q^{-s})$ and
+$Z_\infty(s)=\sum_q\beta_q a_s(q)$. The series converges at one,
+since $a_1(q)/w(q)\leq(q+1)/(2(q-1)\log q)$ is bounded for $q\geq2$.
+For every fixed $\tau>1$, dominated convergence in the normalized
+Euler products gives
+\[
+ \lim\frac{\log\zeta_K(\tau)}n=Z_\infty(\tau).
+\]
+One can dominate prime by prime by $-\log(1-p^{-\tau})$.
+Equation~\eqref{an:finite-gamma}, followed by $\tau\downarrow1$,
+then gives $\limsup d^{-1}\log L_F(1)\leq Z_\infty(1)$.
+The uniform vanishing of $G$ and monotone convergence justify this
+order of limits. The finite-field Euler products are used only to the
+right of one.
+
+For every prime power $q$,
+\begin{align*}
+ a_1(q)-a_{1+\varepsilon}(q)&\leq
+                \frac{\varepsilon\log q}{q-1},\\
+ \frac{\log q}{q-1}-\frac{w(q)}2
+ &=\log q\sum_{m\geq1}\frac1{q^m(q^m+1)}
+ \leq\frac{\log q}{q^2-1}.
+\end{align*}
+For a Galois field, the normalized contribution above $p$ to the last
+weighted sum is $\log p/[e_p(p^{2f_p}-1)]$. The local floors and
+Fatou's lemma bound its limiting sum by $R$. Combining this with
+\eqref{an:tv-budget} proves
+$Z_\infty(1)\leq Z_\infty(1+\varepsilon)+\varepsilon(B/2+R)$.
+This proves the assertion on every such subsequence. If a strictly
+larger constant were not an eventual uniform bound, a sequence of
+violating fields would have a diagonal subsequence of the kind just
+considered, giving a contradiction.
+\end{proof}
+
+\subsection{The Complete Finite-Field Euler Factorization}
+\label{an:factorization}
+
+Let $N$ be the degree-$16384$ retained field of
+Proposition~\ref{ar:central-fields}, and set
+$S'=\{2,3,5,7,11,13,17\}$. A superscript $S'$ removes these Euler
+factors. Proposition~\ref{ar:hecke-data} gives all irreducible
+representations of $\operatorname{Gal}(N/\mathbb Q)$ and realizes
+each nonlinear factor as an induced nontrivial finite-order Hecke
+character. There are $128$ linear, $256$ quadratic, $456$ quartic,
+and $124$ octic factors. Among the quartics, eight have pure gamma
+parity, and every other nonlinear factor is mixed. The regular
+representation identity is
+\begin{equation}\label{an:regular-factorization}
+ \zeta_N(s)=\prod_\rho L(s,\rho)^{\dim\rho},\qquad
+ 128+256\cdot4+456\cdot16+124\cdot64=16384.
+\end{equation}
+For real $s>1$ the factors are nonzero. Real factors are positive:
+their Euler products tend to one as $s\to\infty$ and cannot cross
+zero. Conjugate factors have product $|L(s,\rho)|^2$. Thus
+\begin{equation}\label{an:Y}
+ Y(s):=\frac{\log\zeta_N^{S'}(s)}{16384}
+ =\frac1{16384}\sum_\rho\dim\rho\,
+          \log|L^{S'}(s,\rho)|.
+\end{equation}
+Each conjugate pair is counted twice in this sum, with the same
+representation degree. An upper bound for each modulus may be
+substituted after this identity, even when some logarithms are negative.
+
+The exact arithmetic input for one factor consists of its conductor
+$Q$, gamma parities, root number when proved to be one, an inducing
+radicand, genus twist, and the exceptional denominators
+\[
+ D_{\rho,p}(T)=\det(1-T\rho(\operatorname{Frob}_p)
+                         \mid V_\rho^{I_p}).
+\]
+Their construction, including the cancellation of quartic twists at
+5 and 13, is given in Proposition~\ref{ar:hecke-data}. The
+analytic evaluations below use the representations constructed there,
+including their conductors and local characters. Formal compatibility
+among a set of Euler polynomials would not identify these functions.
+
+\subsection{Exact Coefficients and Their Enumeration}
+\label{an:coefficients}
+
+Write $L(s,\rho)=\sum_{n\geq1}a_n n^{-s}$ and $r=\dim\rho$.
+At every prime, the reciprocal roots of $D_{\rho,p}$ have modulus
+one, and there are at most $r$ of them. Hence
+\begin{equation}\label{an:divisor-bound}
+ |a_n|\leq d_r(n),\qquad
+ \sum_{n\geq1}d_r(n)n^{-\beta}=\zeta(\beta)^r
+ \quad(\beta>1).
+\end{equation}
+The finite-image representation also makes every coefficient used here
+an exact Gaussian integer.
+
+To construct the coefficients outside $S'$, let
+$v_p\in\mathbb F_2^7$ be genus Frobenius, and let $B_q$ be the polar
+form of the corresponding central character. Outside its radical,
+Frobenius has eigenvalues in opposite pairs and square $\kappa I$,
+where $\kappa\in\{1,-1\}$. Its denominator is
+$(1-\kappa T^2)^{r/2}$, before the explicitly supplied quartic twist.
+The coefficients at exponents $2j$ are
+$\binom{j+r/2-1}{r/2-1}\kappa^j$, and odd exponents vanish.
+Inside the radical, Frobenius is scalar, and its denominator is
+$(1-\omega T)^r$, where $\omega\in\{1,-1,i,-i\}$ is determined
+by the inducing field and twist. Its coefficients are
+$\binom{j+r-1}{r-1}\omega^j$.
+
+At a scalar prime the inducing multiquadratic base splits completely.
+For the positive quadratic induction, the scalar sign is obtained by
+evaluating the radicand at these embeddings modulo $p$ and taking
+quadratic residue symbols. These symbols agree
+because the represented Frobenius is scalar. There is an exact
+procedure even at a prime dividing the norm of the displayed radicand.
+For an integral radicand $\eta$, let $m=v_p(N\eta)$. Each embedding
+valuation is between zero and $m$. Lift the base square roots to
+modulus $p^{m+1}$ by Hensel's lemma. This determines every embedding
+valuation and normalized nonzero unit residue. The valuations are
+even, by unramifiedness outside $S'$. The normalized quadratic symbols
+give the required signs. Rational square normalization does not change
+the extension. This procedure treats every norm prime, rather than
+assuming that a finite list of ordinary exceptions is exhaustive.
+
+The genus and twist characters are evaluated exactly by Kronecker
+symbols and by discrete logarithms in $(\mathbb Z/5\mathbb Z)^\times$
+or $(\mathbb Z/13\mathbb Z)^\times$, with $\xi_p(2)=i$.
+The genus characters have common period $120120$, so lookup tables may
+use this period or any multiple of it. At $p\in S'$, the
+verified polynomial $D_{\rho,p}$ supplies the recurrence
+\[
+ a_{p^j}=-\sum_{k=1}^{\min(j,r)}[T^k]D_{\rho,p}(T)\,a_{p^{j-k}},
+ \qquad a_1=1.
+\]
+Multiplicativity then determines all coefficients.
+
+To enumerate the nonzero coefficients through the cutoff $N_0$, first
+list all primes up to $N_0$ by a segmented sieve using every sieving
+prime through $\lfloor\sqrt{N_0}\rfloor$. Assign an ordinary nonscalar prime the
+first possible support location $p^2$, a scalar prime the location $p$,
+and an exceptional prime the safe lower bound $p$. Sort primes by these
+locations. Recursion appends only later primes in that order, considering
+every admissible prime power and continuing across intermediate zero
+coefficients. Unique factorization then visits each supported integer
+exactly once. If a first support location exceeds the remaining quotient,
+that prime and every later prime can be skipped. These observations prove that
+the enumeration is complete.
+
+Signed and absolute moments use arbitrary-precision integers. Fixed-width
+coefficient arithmetic is checked before conversion, and intermediate
+products are formed in a wider type. An overflow aborts the calculation.
+Modular multiplication uses a wide product or a checked Montgomery
+reduction as appropriate. The coefficients, support counts, and moments are computed exactly.
+
+\subsection{The Linear Factors}
+
+The $128$ linear factors are the primitive quadratic Dirichlet functions
+of the genus field
+$E=\mathbb Q(i,\sqrt2,\sqrt3,\sqrt5,\sqrt7,\sqrt{11},\sqrt{13})$,
+including the principal factor $\zeta(s)$. For a signed squarefree
+product $D_0$ of these radicands, its fundamental discriminant is
+$D=D_0$ if $D_0\equiv1\pmod4$, and $D=4D_0$ otherwise.
+The character is the Kronecker symbol $(D/\cdot)$.
+The implementation checks its primitive conductor and its values on
+explicit generators of every prime-power component of the unit group.
+These values identify the character independently of its library index.
+
+The finite identity
+\begin{equation}\label{an:dirichlet-hurwitz}
+ L(s,\chi)=q^{-s}\sum_{a=1}^{q}\chi(a)\zeta(s,a/q)
+\end{equation}
+reduces evaluation to Hurwitz zeta functions. Euler--Maclaurin summation
+gives the explicit enclosure
+\begin{align*}
+ \zeta(s,x)={}&\sum_{k=0}^{M-1}(k+x)^{-s}
+ +\frac{(M+x)^{1-s}}{s-1}+\frac12(M+x)^{-s}\\
+ &+\sum_{j=1}^{J}\frac{B_{2j}}{(2j)!}(s)_{2j-1}
+                     (M+x)^{1-s-2j}+\mathcal R,\\
+ |\mathcal R|\leq{}&
+ \frac{2\zeta(2J)(s)_{2J}}{(2\pi)^{2J}(s+2J-1)}
+                       (M+x)^{1-s-2J},
+ \qquad s>1, x>0.
+\end{align*}
+The remainder follows from the periodic Bernoulli bound
+$|\widetilde B_{2J}(t)|\leq2(2J)!\zeta(2J)/(2\pi)^{2J}$.
+For rigorous high-precision evaluation by Euler--Maclaurin summation,
+see \cite{Johansson2015Hurwitz}. The supplied evaluation uses Arb/FLINT
+ball arithmetic \cite{Johansson2017}, retaining the endpoints of each
+real value.
+Removing $S'$ multiplies a factor by
+$\prod_{p\in S'}(1-\chi(p)p^{-s})$.
+
+\subsection{An Approximate Functional Equation for Mixed Factors}
+\label{an:mixed-afe}
+
+Numerical evaluation from gamma factors and a functional equation is
+developed in \cite{Dokchitser2004}. We use this approach with explicit
+kernel and tail bounds for the factors constructed above.
+For a mixed factor of degree $2m$, where $m=1,2,4$, its completion is
+\[
+ \Lambda(s)=Q^{s/2}\Gamma_{\mathbb R}(s)^m
+                    \Gamma_{\mathbb R}(s+1)^m L(s)
+ =2^m Q^{s/2}(2\pi)^{-ms}\Gamma(s)^mL(s).
+\]
+It is entire and satisfies
+$\Lambda(s)=\varepsilon_\rho\overline{\Lambda(1-\overline s)}$,
+with $|\varepsilon_\rho|=1$. For a real quadratic induction the
+Dedekind zeta quotient gives $\varepsilon_\rho=1$.
+
+Let $k_m(x)$ have Mellin transform $\Gamma(z)^m$, and put
+\[
+ H_{m,a}(x)=\int_1^\infty u^{a-1}k_m(xu)\,du,\qquad
+ t=\frac{(2\pi)^m}{\sqrt Q},\qquad
+ F_m=\frac{t^s}{\Gamma(s)^m}.
+\]
+These kernels are positive. More explicitly,
+\begin{equation}\label{an:positive-kernel}
+ k_m(x)=\int_{(0,\infty)^{m-1}}
+ \exp\left(-u_1-\cdots-u_{m-1}-\frac{x}{u_1\cdots u_{m-1}}\right)
+                  \frac{du_1\cdots du_{m-1}}{u_1\cdots u_{m-1}},
+\end{equation}
+with $k_1(x)=e^{-x}$. Taking the Mellin transform under this positive
+integral proves the asserted transform and also complete monotonicity
+in $x$. In particular $k_2(x)=2K_0(2\sqrt x)$
+\cite[10.32.10, 10.43.19]{DLMF}.
+
+Splitting the Mellin integral at one gives a common approximate
+functional equation for the mixed factors.
+\begin{lemma}\label{an:balanced-afe}
+For real $s>1$ and every nonlinear mixed factor,
+\begin{equation}\label{an:mixed-formula}
+ L(s)=F_m\sum_{n\geq1}a_nH_{m,s}(tn)
+ +\varepsilon_\rho F_m\sum_{n\geq1}\overline{a_n}
+                                      H_{m,1-s}(tn).
+\end{equation}
+\end{lemma}
+\begin{proof}
+The function $\Theta(u)=\sum a_n k_m(tnu)$ has Mellin transform
+$\Gamma(z)^m t^{-z}L(z)=2^{-m}\Lambda(z)$. Mellin inversion and
+the completed functional equation give
+$\Theta(u)=\varepsilon_\rho u^{-1}\overline{\Theta(1/u)}$.
+The contour shift has no residues because the completion is entire,
+and the gamma factors give the needed vertical decay. Splitting the Mellin
+integral at one and substituting $u\mapsto1/u$ below one yields
+\eqref{an:mixed-formula}. The positive integral representation and
+\eqref{an:divisor-bound} justify the sums in either exponentially
+decaying half.
+\end{proof}
+
+For degree two this uses
+$H_{1,a}(x)=\int_1^\infty u^{a-1}e^{-xu}\,du$.
+For the mixed quartic implementation it is convenient to write
+\[
+ I_b(y)=\int_1^\infty u^bK_0(yu)\,du,\qquad
+ H_{2,a}(x)=4I_{2a-1}(2\sqrt x).
+\]
+Its prefactor is $4t^s/\Gamma(s)^2$ when the stored kernel
+is $I_{2s-1}+I_{1-2s}$. This identity accounts for the factor four
+in the quartic evaluation. For octics the stored kernel is
+$H_{4,a}$ itself, with prefactor $t^s/\Gamma(s)^4$.
+
+\subsection{Tail Bounds and Absolute Coefficient Prefixes}
+\label{an:tails}
+
+For $\beta\geq\max(s,1-s)$,
+$H_{m,a}(x)\leq H_{m,\beta}(x)$ when $a\leq\beta$, and
+\[
+ x^\beta H_{m,\beta}(x)=\int_x^\infty v^{\beta-1}k_m(v)\,dv
+\]
+is decreasing. If $M_{N_0}(\beta)$ bounds
+$\sum_{n>N_0}|a_n|n^{-\beta}$, either omitted half of
+\eqref{an:mixed-formula} is at most
+\begin{equation}\label{an:general-tail}
+ F_m (N_0+1)^\beta H_{m,\beta}(t(N_0+1))M_{N_0}(\beta).
+\end{equation}
+One may always use $M_{N_0}(\beta)=\zeta(\beta)^{2m}$.
+
+The quadratic and quartic evaluations also use elementary envelopes.
+For the exponents in question, with $1<s<1.01$,
+\begin{align}
+ H_{1,s}(x),H_{1,1-s}(x)&\leq
+ V(x):=e^{-x}(1+1/x)/x,\label{an:exp-envelope}\\
+ I_{2s-1}(y),I_{1-2s}(y)&\leq
+ U(y):=\sqrt{\pi/2}\,e^{-y}(1+1/y)y^{-3/2}.
+ \label{an:bessel-envelope}
+\end{align}
+The first follows by replacing $u^{s-1}$ and $u^{-s}$ by $u$.
+For the second use $K_0(yu)\leq\sqrt{\pi/(2yu)}e^{-yu}$ and
+$u^{b-1/2}\leq u$ for $b\leq3/2$.
+The functions $n^\beta V(tn)$ and
+$n^\beta U(2\sqrt{tn})$ decrease respectively when
+$tn>\beta-1$ and $2\sqrt{tn}>2\beta-3/2$.
+Thus substituting these envelopes and the divisor majorant gives
+valid tails even when the chosen $\beta$ exceeds an exponent covered
+by the envelope. The quartic prefactor includes the factor four from the conversion
+between the kernels. When we sum both halves, we include both tail
+allowances.
+
+For the octics a sharper absolute series is available. Let
+$W=\operatorname{rad}B_q$. Then $[E^W:\mathbb Q]=64$. At an ordinary
+prime, absolute coefficients have local series $(1-T)^{-8}$ if
+$v_p\in W$, and $(1-T^2)^{-4}$ otherwise. These are precisely the
+local factors of $\zeta_{E^W}^{S'}(\beta)^{1/8}$.
+For every exceptional denominator in the supplied arithmetic table,
+an exact Gaussian-polynomial comparison supplies nonnegative integers
+$u_p,v_p$ and a fourth root of unity $\omega_p$ such that
+\begin{equation}\label{an:exceptional-phase}
+ D_{\rho,p}(T)=(1-\omega_pT)^{u_p}
+                          (1-\omega_p^2T^2)^{v_p}.
+\end{equation}
+The check enumerates $u_p,v_p\geq0$ with $u_p+2v_p\leq8$ and
+the four possible $\omega_p$, comparing all polynomial coefficients
+exactly. After the rotation $T\mapsto\omega_p^{-1}T$, the reciprocal
+has nonnegative coefficients. Consequently the full absolute series is
+exactly
+\begin{equation}\label{an:absolute-series}
+ M_\rho(\beta):=\sum_{n\geq1}|a_n|n^{-\beta}
+ =\zeta_{E^W}^{S'}(\beta)^{1/8}
+ \prod_{p\in S'}(1-p^{-\beta})^{-u_p}
+                       (1-p^{-2\beta})^{-v_p}.
+\end{equation}
+The same rotations show that each nonzero coefficient lies on a
+Gaussian coordinate axis, so $|a_n|=|\operatorname{Re}a_n|+
+|\operatorname{Im}a_n|$ exactly. The genus subfield zeta value is
+evaluated using its $64$ quadratic characters by
+\eqref{an:dirichlet-hurwitz}.
+
+We subtract a rigorous lower bound for the finite absolute prefix.
+On a bin with integer midpoint $m_0$ and radius $r_0$, record exact
+moments $A_j=\sum|a_n|(n-m_0)^j$, $0\leq j\leq J=20$.
+Let $h=\lceil\beta\rceil$ and $\rho_0=r_0/m_0<1/16$.
+The degree-$J$ binomial expansion of $n^{-\beta}$ has error at most
+\begin{equation}\label{an:absolute-prefix-error}
+ A_0m_0^{-\beta}\binom{J+h}{h-1}
+                    \frac{\rho_0^{J+1}}{(1-\rho_0)^h}.
+\end{equation}
+Indeed $(\beta)_j/j!\leq\binom{j+h-1}{h-1}$, and after the first
+omitted coefficient their ratios are bounded by the coefficients of
+$(1-\rho_0)^{-h}$. Sum the interval polynomials and subtract these
+errors to obtain $P_{N_0}(\beta)\leq\sum_{n\leq N_0}|a_n|n^{-\beta}$.
+Then $M_\rho(\beta)-P_{N_0}(\beta)$ is an admissible
+$M_{N_0}(\beta)$ in~\eqref{an:general-tail}.
+The octic evaluation selects the smallest valid enclosure among
+$\beta=5/4,3/2,2,5/2,3$. Each candidate is an upper bound, so this selection preserves the
+inequality.
+
+\subsection{The Eight Pure Quartic Factors}
+\label{an:pure}
+
+The pure factors in Proposition~\ref{ar:hecke-data} are real quadratic
+Hecke inductions with root number one, conductor $Q=240240^2$, and
+gamma vector $(a,a,a,a)$, $a\in\{0,1\}$, four of each parity.
+Their completion is $Q^{s/2}\Gamma_{\mathbb R}(s+a)^4L(s)$.
+Put
+\[
+ t=\pi^2/\sqrt Q,\quad b_0=(s+a)/2,\quad b_1=(1-s+a)/2,
+ \quad F=\frac{t^{s+a}}{\Gamma(b_0)^4},\quad K_b=H_{4,b}.
+\]
+Then the exact functional equation is
+\begin{equation}\label{an:pure-afe}
+ L(s)=F\sum_{n\geq1}a_n n^a
+       \bigl(K_{b_0}(t^2n^2)+K_{b_1}(t^2n^2)\bigr).
+\end{equation}
+To verify the normalization, the Mellin transform of
+$\sum a_n n^a k_4(t^2n^2u)$ is
+\[
+ \Gamma(z)^4t^{-2z}L(2z-a)=Q^{a/2}\Lambda(2z-a).
+\]
+Reflection is about $z=(a+1/2)/2$. Splitting at one gives
+\eqref{an:pure-afe}, with no extra factor two.
+For $\beta\geq\max(s,1-s)$, put $B=(\beta+a)/2$. Either omitted
+side is bounded by
+\begin{equation}\label{an:pure-tail}
+ F(N_0+1)^{\beta+a}K_B(t^2(N_0+1)^2)\zeta(\beta)^4.
+\end{equation}
+This follows from the same decreasing-integral argument as
+\eqref{an:general-tail}. The exact cutoff here is
+$N_0=8\sqrt Q=1921920$.
+
+\subsection{Kernel and Moment Evaluation}
+\label{an:kernel-enclosures}
+
+We evaluate the kernels on finite grids and bound the interpolation
+errors. For the four-gamma kernel, let
+$H_n^{(j)}=\sum_{k=1}^n k^{-j}$ and
+\[
+ L_n=4(H_n^{(1)}-\gamma_E)-\log x,\quad
+ P_{3,n}=L_n^3/6+2L_n(\zeta(2)+H_n^{(2)})
+                     +4(H_n^{(3)}-\zeta(3))/3,
+\]
+\[
+ P_{2,n}=L_n^2/2+2(\zeta(2)+H_n^{(2)}).
+\]
+Residues at the order-four poles of $\Gamma(z)^4$ give the convergent
+series
+\begin{align}
+ k_4(x)&=\sum_{n\geq0}\frac{x^n}{(n!)^4}P_{3,n},
+ \label{an:k4-series}\\
+ K_a(x)&=\Gamma(a)^4x^{-a}-
+ \sum_{n\geq0}\frac{x^n}{(n!)^4}
+ \left(\frac{P_{3,n}}{n+a}+\frac{P_{2,n}}{(n+a)^2}
+       +\frac{L_n}{(n+a)^3}+\frac1{(n+a)^4}\right).
+ \label{an:K4-series}
+\end{align}
+The second identity initially follows for $a>0$ and extends to
+$-1/100<a<0$ by analytic continuation. None of the exponents evaluated
+here is zero or a negative integer, so no colliding-pole formula is
+needed.
+
+To bound the tails of these series, for $n\geq2$ set
+\[
+ B_n=|\log x|+4(1+\log n+\gamma_E),\quad
+ U_{3,n}=B_n^3/6+4\zeta(2)B_n+4\zeta(3)/3,
+ \quad U_{2,n}=B_n^2/2+4\zeta(2).
+\]
+They bound $|L_n|,|P_{3,n}|,|P_{2,n}|$ in the corresponding order.
+Also $B_{n+1}\leq(1+1/n)B_n$, so
+\[
+ r_n=\frac{x}{(n+1)^4}(1+1/n)^3
+\]
+is an upper bound for the subsequent term ratios of the majorants.
+Once $r_n<1$, the entire omitted tail of~\eqref{an:k4-series}
+is at most
+\[
+ \frac{x^n}{(n!)^4}\frac{U_{3,n}}{1-r_n}.
+\]
+For~\eqref{an:K4-series}, provided $a>-1/100$, it is at most
+\[
+ \frac{x^n}{(n!)^4}\frac1{1-r_n}
+ \left(\frac{U_{3,n}}{n-1}+\frac{U_{2,n}}{(n-1)^2}
+       +\frac{B_n}{(n-1)^3}+\frac1{(n-1)^4}\right).
+\]
+All these expressions are evaluated outward. The first four Taylor
+coefficients of $k_4$ are obtained by the same argument on
+$|z-x|\leq x/2$, replacing $x$ by $3x/2$ in the numerator bound
+and $|\log x|$ by $|\log x|+\log2+\pi/2$.
+Cauchy's estimate bounds the error in the $j^{th}$ coefficient by
+the uniform tail times $(2/x)^j$.
+
+Higher Taylor coefficients follow from
+\begin{equation}\label{an:kernel-odes}
+ (x\partial_x)^4k_4=xk_4,\qquad xK_a'+aK_a=-k_4.
+\end{equation}
+These identities follow directly from the Mellin transform and the
+defining integral. They give finite recurrences using rational
+operations and the enclosed initial values. The two-gamma kernel
+uses $K(x)=K_0(2\sqrt x)$, $J_b(x)=I_b(2\sqrt x)$, with
+\[
+ xK''+K'-K=0,\qquad 2xJ_b'+(b+1)J_b=-K.
+\]
+If $k_j,j_j$ denote Taylor coefficients at $x_0$, the recurrences are
+\[
+ k_{j+2}=\frac{k_j-(j+1)^2k_{j+1}}{x_0(j+1)(j+2)},\qquad
+ j_{j+1}=\frac{-k_j-(2j+b+1)j_j}{2x_0(j+1)}.
+\]
+The initial values are $K_0(2\sqrt{x_0})$ and
+$-K_1(2\sqrt{x_0})/\sqrt{x_0}$. The one-gamma case uses the elementary
+exponential and $xH_{1,a}'+aH_{1,a}=-e^{-x}$.
+
+The grids have consecutive endpoints $x_0,31x_0/32$.
+For any positive Laplace kernel $H$ in use, its holomorphic extension
+obeys $|H(z)|\leq H(x_0/2)$ on $|z-x_0|\leq x_0/2$.
+Hence a degree-$J$ Taylor polynomial has error at most
+\begin{equation}\label{an:taylor-error}
+ H(x_0/2)\frac{16^{-J-1}}{1-1/16}
+\end{equation}
+throughout the bin. The backward Taylor remainder is nonnegative by
+complete monotonicity, allowing propagation of the exponential and
+Bessel kernels from a certified large-argument interval.
+Their starting values are bounded by~\eqref{an:exp-envelope} and
+\eqref{an:bessel-envelope}. The four-gamma kernel instead uses the
+residue series at each center. Grid endpoints, their integer floors,
+and complete coverage from $1$ to the exact coefficient cutoff are
+checked with outward intervals. The calculation is rejected if an
+integer floor is unresolved.
+
+For a linear kernel argument $x=tn$, translating its degree-$20$
+Taylor polynomial at $x_0$ to the integer midpoint $m_0$ gives
+\[
+ [ (n-m_0)^j ]\,P(tn)
+ =t^j\sum_{h=j}^{20}[ (x-x_0)^h ]P(x)
+                 \binom hj(tm_0-x_0)^{h-j}.
+\]
+Contract this polynomial against the exact real and imaginary moments.
+Multiplying~\eqref{an:taylor-error} by the sum of absolute coefficients
+in the bin bounds its contribution to the error.
+For the pure quartics the substitution is quadratic:
+\[
+ t^2n^2-x_0=(t^2m_0^2-x_0)+2t^2m_0(n-m_0)+t^2(n-m_0)^2.
+\]
+A degree-$20$ kernel polynomial thus needs moments through degree
+$40$. These moments and their absolute masses include $n^a$ exactly
+once. The uniform remainder still has degree $20$ in the kernel
+variable, so~\eqref{an:taylor-error} applies before composition.
+
+Suppose $A,B$ are the finite primary and conjugated dual sums, and
+$E_A,E_B$ bound their interpolation and infinite-tail errors. A known
+root number one gives $|L(s)|\leq|A+B|+E_A+E_B$. With an unknown
+phase one always has $|L(s)|\leq|A|+|B|+E_A+E_B$.
+Every modulus, gamma value, logarithm, and conversion to an endpoint
+retains its rounding enclosure.
+
+\subsection{Recovering the Mixed Quadratic and Quartic Phase}
+\label{an:two-cutoffs}
+
+For the complex quadratic and mixed quartic factors, a second Mellin
+cutoff can sharpen this bound by enclosing the root number. Split the
+Mellin integral at $y>0$ instead of one. The two exact terms are
+\[
+ A_y=F_m y^s\sum a_nH_{m,s}(tyn),\qquad
+ B_y=F_m y^{s-1}\sum\overline{a_n}H_{m,1-s}(tn/y),
+ \qquad L(s)=A_y+\varepsilon_\rho B_y.
+\]
+Take $y=(31/32)^{22}$, so shifted kernels reuse the same exact moment
+bins. Any terminal part outside the stored kernel range is put into
+the tail with its actual first omitted integer.
+
+For finite approximations, write $U=A_y-A_1$, $V=B_1-B_y$ and let
+$\eta,\Delta$ bound their respective errors. If $|V|>\Delta$, then
+\begin{equation}\label{an:phase-disk}
+ \varphi=U/V,\qquad
+ |\varepsilon_\rho-\varphi|
+ \leq r_\varphi:=\frac{\eta+|\varphi|\Delta}{|V|-\Delta}.
+\end{equation}
+This follows by writing the exact quotient as
+$(U+u)/(V+v)$, with $|u|\leq\eta$, $|v|\leq\Delta$.
+If each balanced side has error at most $E_1$, the resulting bound is
+\begin{equation}\label{an:phase-upper}
+ |L(s)|\leq|A_1+\varphi B_1|+2E_1+|B_1|r_\varphi.
+\end{equation}
+The coefficient $2E_1$ uses the known identity
+$|\varepsilon_\rho|=1$, not an assumption that $|\varphi|=1$.
+All distances from zero and radii are enclosed outward. If the
+denominator cannot be separated from zero, the phase-free bound is
+retained. Complex octic factors use the phase-free bound directly.
+
+\subsection{The Certified Factor Sums}
+\label{an:factor-sums}
+
+The arithmetic table and exact moment files in the supplementary
+certificate determine every factor just described. The abscissa is
+the exact rational
+\[
+ \sigma=\frac{12001}{12000}.
+\]
+For each row, the evaluator applies the appropriate AFE, includes
+interpolation and both infinite tails, and removes the exceptional
+factors by
+\[
+ \log|L^{S'}(\sigma,\rho)|
+ \leq\log U_\rho+
+       \sum_{p\in S'}\log|D_{\rho,p}(p^{-\sigma})|,
+\]
+where $U_\rho$ is its proved modulus upper bound.
+The octic cutoffs are
+$N_0=\min(3\cdot10^9,\lfloor\sqrt Q/40\rfloor)$.
+The exact integers for the quadratic and mixed quartic rows are
+specified in their moment records and individually checked when
+constructing the bins and tails. The pure quartic cutoff was given
+in Section~\ref{an:pure}.
+
+The following table gives rational upper bounds for the sums of
+logarithms. The number of factors includes both members of each
+conjugate pair. An interval enclosing an AFE upper bound encloses that
+bound, and need not give a two-sided enclosure of comparable width for
+the $L$-value itself.
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Type & Number & Upper bound for $\sum\log|L^{S'}(\sigma,\rho)|$\\
+\midrule
+Linear &128& $7.337578130846530221$\\
+Mixed quadratic &256& $0.400886873183882259$\\
+Mixed quartic &448& $-0.046453348154273950$\\
+Pure quartic &8& $0.058145052434373409$\\
+Mixed octic &124& $-0.111176963043772737$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Exact addition of their dimension-weighted upper endpoints in
+\eqref{an:Y} gives
+\begin{equation}\label{an:Y-numerical}
+ Y(\sigma)\leq0.00044535540710354679437255859375
+             <0.000445355407103547.
+\end{equation}
+The coefficient algorithms, kernel bounds, and tail estimates above
+specify how to verify these inequalities. The supplementary program
+checks the exact row identities and partitions before performing the
+interval evaluations. Its moment mode regenerates the newest 64 sector
+moment files from the coefficient algorithms. Earlier moment records
+remain finite inputs, and the data manifest checks their identities.
+% CHECK: The current replay does not regenerate all earlier moments or actual-field data.
+% The required independent verification scope is recorded in evidence/body-review-arithmetic-20260927.md.
+
+\subsection{Finite Corrections beyond the Retained Field}
+\label{an:census}
+
+To compare $N$ with the whole tower, restore $S'$ using the actual
+local indices of $K$. Its exact contribution is
+\begin{align}
+ B_D(\sigma)={}&-\frac{\log(1-2^{-4\sigma})}{32}
+ -\sum_{p=3,5}\frac{\log(1-p^{-2\sigma})}{4}\\
+ &-\sum_{p=7,11,13}\frac{\log(1-p^{-4\sigma})}{8}
+ -\frac{\log(1-17^{-4\sigma})}{4}.
+ \label{an:bad-restored}
+\end{align}
+This restores the deleted factors using the local indices of $K$.
+The indices of $N$ at $S'$ may be different.
+
+First consider $p\leq10^4$, $p\notin S'$, with nonzero genus vector
+$v_p$. Its square is detected in the full retained degree-two quotient
+if some form in the twelve-dimensional central space has $q(v_p)=1$.
+If all seven completed forms instead have $q(v_p)=0$, then $f_N(p)=2$
+whereas $4\mid f_K(p)$. Define $\mathcal P_4$ by precisely these
+conditions. It contains $45$ primes. Equation~\eqref{an:local-phi}
+gives the saving
+\begin{equation}\label{an:order-four-saving}
+ S_4=\frac14\sum_{p\in\mathcal P_4}
+                     \log\frac{1+p^{-2\sigma}}{1-p^{-2\sigma}}
+ >0.00003724741189544274807446.
+\end{equation}
+Primes for which the completed field already has order four are
+excluded from this sum.
+
+The second correction uses primes that split in $E$ and in $N$,
+but not in the full twelve-dimensional retained central field.
+Here $f_N(p)=1$ and $f_K(p)$ is even, so the saving is
+\begin{equation}\label{an:central-saving}
+ S_{\rm cen}=\sum_{\substack{p\leq10^{12}\\
+                  p\text{ split in }N,\ p\text{ nonsplit in the full field}}}
+                     \operatorname{atanh}(p^{-\sigma}).
+\end{equation}
+The support has zero genus vector, so it is disjoint from
+$\mathcal P_4$. Both supports exclude $S'$. No saving from an
+uncomputed tail is claimed.
+
+To compute~\eqref{an:central-saving}, enumerate the genus-split primes.
+Their residues are the $180$ classes modulo $120120$ satisfying
+$p\equiv1\pmod8$ and being nonzero squares modulo each of
+$3,5,7,11,13$. Construct them by the Chinese remainder theorem.
+For each class, sieve the numbers $120120k+r$ through $X=10^{12}$
+by all primes up to $\sqrt X$, beginning at the square of each
+sieving prime. Every surviving number above $13$ is prime, since
+a composite would have a prime divisor at most its square root.
+The classes are disjoint and none contains a prime dividing the modulus.
+
+For a surviving prime, evaluate the $17$ norm radicands of
+Section~\ref{ar:catalog} using exact modular square roots. The symbol of
+$x+y\sqrt A$ is independent of the choice of root: its product with
+the conjugate is $Bz^2$, a nonzero square at a genus-split prime.
+All catalog $B$ are supported on $2,3,5,7,11,13$ and all catalog
+$z$ are $1$ or $2$. Thus no prime in this census divides $Bz$,
+and no zero residue or unhandled norm prime occurs in these raw
+predicates.
+The seven completed and twelve full-field product predicates in
+Proposition~\ref{ar:central-fields} are then exact splitting tests.
+Order the completed tests first and count only the first nonzero
+predicate. A hit in the first seven tests is already accounted for by
+$N$. A later hit belongs to~\eqref{an:central-saving}. A prime on
+which every predicate vanishes is not counted. This proves that the
+computed complement contains each eligible prime exactly once.
+
+For outward summation, use disjoint bins $l<p\leq h$, beginning at
+$l=13$ and with next endpoint
+$h=\min(X,\max(l+1,\lceil1001l/1000\rceil))$.
+For complement primes in a bin record their exact number $n$ and
+$u=\sum\lfloor10^{30}/p\rfloor$. With $\varepsilon=\sigma-1$,
+their contribution is enclosed between
+\begin{equation}\label{an:census-bin}
+ h^{-\varepsilon}\frac{u}{10^{30}}
+ \quad\hbox{and}\quad
+ l^{-\varepsilon}\frac{u+n}{10^{30}}
+                         \frac1{1-l^{-2}}.
+\end{equation}
+Indeed $x\leq\operatorname{atanh}x\leq x/(1-x^2)$ for $0<x<1$,
+and $\sigma>1$. The only rounded quantities in the producer are the
+explicit floors, whose full error is included in $u+n$.
+All counts and reciprocal numerators use exact integers.
+For the fixed-width census implementation, counts are at most $X$, and
+the total reciprocal numerator is less than
+$10^{30}(1+\log X)<2^{105}$. Thus its $64$-bit counts and $128$-bit
+accumulators cannot overflow at this cutoff. Modular products use the
+wider reduction described above.
+
+The full sieve finds $293772662$ genus-split primes. Of these,
+$293705608$ are detected by the full central field, and $291485548$
+are already detected by $N$. The complement contains
+$2220060$ primes. Summing~\eqref{an:census-bin} outward gives
+\begin{equation}\label{an:census-value}
+ 0.00004201663320373563276702<S_{\rm cen}
+          <0.00004201663670363397482805.
+\end{equation}
+An independent prime-list and modular-arithmetic calculation through
+$10^7$ checks every bin, first-hit count, and reciprocal numerator.
+Its complement has $31$ primes. This finite comparison checks the
+implementation but does not replace the full sieve or its completeness
+argument.
+
+Primewise comparison now proves, for every retained tower field,
+\begin{equation}\label{an:full-euler}
+ \frac{\log\zeta_K(\sigma)}{[K:\mathbb Q]}
+ \leq Y(\sigma)+B_D(\sigma)-S_4-S_{\rm cen}.
+\end{equation}
+
+\begin{remark}[Fixed-field form]\label{an:fixed-field-form}
+The same primewise comparison applies to the retained field $M$ of
+Proposition~\ref{ar:central-fields} itself, of degree $2^{19}$, and
+gives
+\[
+ \frac{\log\zeta_M(\sigma)}{2^{19}}
+ \leq Y(\sigma)+B_D(\sigma)-S_4-S_{\rm cen}.
+\]
+Since $M$ contains $N$, equation~\eqref{an:local-phi} bounds its
+normalized zeta logarithm prime by prime by that of $N$ outside $S'$.
+At $S'$ we restore the factors in $B_D$ using the indices of $M$.
+These are $(e,f)=(8,4)$ at $2$, $(2,2)$ at $3$ and $5$, $(2,4)$ at
+$7,11,13$, and $f=4$ at $17,19,23,29,31$. To justify these indices,
+Proposition~\ref{ar:central-fields} identifies $M$ with the field of
+$G/D_3G$, which retains every local cut of Section~\ref{tw:tower}.
+A direct local computation from the radicands also confirms them.
+They give the terms in \eqref{an:bad-restored} and the local floors
+used below.
+
+The conditions defining $\mathcal P_4$ and the census complement are
+the tests \eqref{ar:nonsplit-test} on the central quadratic forms and
+the twelve full-field predicates. These are tests in $M$. Hence a prime
+in $\mathcal P_4$ has $f_M(p)=4$, and a complement prime has $f_M(p)=2$.
+Both savings $S_4$ and $S_{\rm cen}$ are thus realized in $M$.
+Each term in the following absolutely convergent series decreases in
+$e_M(p)$ and $f_M(p)$, so the same local floors give
+\[
+ -\frac{\zeta_M'}{\zeta_M}(2)\cdot\frac1{2^{19}}
+ =\sum_p\frac{\log p}{e_M(p)\,(p^{2f_M(p)}-1)}\leq R
+\]
+with $R$ as in \eqref{an:R}.
+Consequently the fixed-field quantity
+\[
+ H_M:=\frac{\log\zeta_M(\sigma)}{2^{19}}
+ +(\sigma-1)\left(\frac{\ell-\gamma_E-\log(4\pi)}4
+ -\frac{\zeta_M'}{\zeta_M}(2)\cdot\frac1{2^{19}}\right)
+\]
+satisfies, with $L$ as in \eqref{an:slope} and the five allowances
+\eqref{an:Y-numerical}, \eqref{an:bad-value},
+\eqref{an:order-four-saving}, \eqref{an:census-value} and
+\eqref{an:debit},
+\[
+ H_M\leq Y(\sigma)+B_D(\sigma)-S_4-S_{\rm cen}+(\sigma-1)L
+ <0.04216181893948094953138458.
+\]
+The accompanying Lean formalization assumes this inequality for $H_M$
+with the relaxed threshold $0.042165819$. Under that hypothesis, it
+proves the transfer from $M$ to the tower fields and
+Proposition~\ref{an:prime-budget}. The numerical bound for $H_M$ itself
+is not proved in the formalization.
+\end{remark}
+
+\subsection{The Numerical Prime-Budget Bound}
+
+We specify the local floors used in Proposition~\ref{an:prime-budget}.
+For $p\leq10^4$, take $e_2^0=8$, $e_p^0=2$ at
+$p=3,5,7,11,13$, and $e_p^0=1$ elsewhere. Use the exact retained
+residue degrees $4$ at $2$, $2$ at $3,5$, and $4$ at
+$7,11,13,17,19,23,29,31$. At any other such prime use $f_p^0=4$
+if its square is nonzero in the full central quotient, $f_p^0=2$
+if its genus vector is nonzero, and $f_p^0=1$ otherwise.
+We apply the square test only when the genus vector is nonzero. For a
+genus-split prime with a nontrivial central image, we keep the weaker
+floor one. All these are lower bounds supplied by the
+actual finite quotients in Proposition~\ref{ar:central-fields}.
+Above $10^4$ use both floors one.
+
+Since $\log x/(x^2-1)$ decreases on $[2,\infty)$, the integer tail
+is bounded by its integral. It is enough to take
+\begin{equation}\label{an:R}
+ R=\sum_{p\leq10^4}\frac{\log p}{e_p^0(p^{2f_p^0}-1)}
+          +\frac{\log10^4+1}{10^4(1-10^{-8})}.
+\end{equation}
+All finite floors are reconstructed by exact genus and square tests.
+Outward evaluation gives
+\begin{align}
+ B_D(\sigma)&<0.041727023150898786,\label{an:bad-value}\\
+ L:=\frac{\ell-\gamma_E-\log(4\pi)}4+R
+ &<0.824453118933538946712643997041,\label{an:slope}\\
+ (\sigma-1)L&<0.00006870442657779491222606.
+ \label{an:debit}
+\end{align}
+The slope is independent of the abscissa, and the debit uses exactly
+$\sigma-1=1/12000$.
+
+Combining Proposition~\ref{an:prime-budget} with
+\eqref{an:full-euler}, and then using the five conservative rational
+bounds \eqref{an:Y-numerical}, \eqref{an:bad-value},
+\eqref{an:order-four-saving}, \eqref{an:census-value}, and
+\eqref{an:debit}, gives
+\begin{align*}
+ \limsup_{d\to\infty}\frac{\log L_F(1)}d
+ &\leq Y(\sigma)+B_D(\sigma)-S_4-S_{\rm cen}+(\sigma-1)L\\
+ &<0.04216181893948094953138458\\
+ &<0.042161819.
+\end{align*}
+The middle number is the exact sum of the five rational bounds, with
+the saving terms subtracted using their lower endpoints. The eventual
+uniformity in Proposition~\ref{an:prime-budget} now proves
+Theorem~\ref{an:ceiling}.

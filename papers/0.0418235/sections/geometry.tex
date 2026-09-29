@@ -1,0 +1,308 @@
+\section{Norm-One Mass and the Geometric Transfer}
+\label{geo:section}
+
+Let $K/F$ be quadratic with involution $\iota$, let $K$ be totally
+imaginary, and let $F$ have signature $(b,c)$, where $b>0$. We keep these
+assumptions in Sections~\ref{fw:section} and~\ref{pf:section}.
+Write
+\[
+ d=[F:\mathbb Q]=b+2c,\qquad \theta=c/d,
+ \qquad |\Delta_K|=\lambda^{2d},\quad
+ |\Delta_F|=\lambda^d,\quad \ell=\log\lambda.
+\]
+Assume that $K/F$ is unramified at all finite places. The discriminants
+are field discriminants, and archimedean integrals use Lebesgue measure
+on unweighted complex coordinates. We count ordered edges and divide
+by two to obtain the stated bounds for unordered edges.
+
+We use Dirichlet's unit theorem, Kronecker's theorem, trace duality,
+Hilbert's theorem~90, and the analytic class-number formula
+\cite{MilneANT,MilneCFT}.
+
+\subsection{The Unit Mass}
+
+Put $E_K=\mathcal O_K^\times$, $E_F=\mathcal O_F^\times$,
+$U=\ker(N:E_K\to E_F)$, and $I_U=[E_F:N(E_K)]$.
+At each complex place of $F$, choose its two extensions to $K$ and set
+\[
+ l_j(x)=\frac12\bigl(\log|\sigma_j^+(x)|-
+                         \log|\sigma_j^-(x)|\bigr).
+\]
+On $U$, this is $\log|\sigma_j^+(x)|$. Its image is a full lattice in
+$\mathbb R^c$ of covolume $R_U$, where $R_U=1$ if $c=0$.
+Let $w_K$ be the number of roots of unity in $K$,
+$h_{\rm rel}=h_K/h_F$, $\kappa=|\ker(\mathrm{Cl}(F)\to\mathrm{Cl}(K))|$,
+and $L_F(s)=\zeta_K(s)/\zeta_F(s)$. The following identities give the
+mass of the norm-one units needed in the lattice construction.
+
+\begin{proposition}\label{geo:mass}
+We have that
+\[
+ \kappa=I_U/2^{b-1},\qquad
+ R_K/R_F=2^{c-1}I_U R_U,
+\]
+and consequently
+\begin{equation}\label{geo:mass-density}
+ \frac{w_K}{h_{\rm rel}\kappa R_U}
+ =\frac{2^{d-1}\pi^{b+c}}{\lambda^{d/2}L_F(1)}.
+\end{equation}
+Here $R_K,R_F$ are ordinary regulators, using twice the logarithm of
+absolute value at a complex place.
+\end{proposition}
+
+\begin{proof}
+Dirichlet's theorem gives invariant and anti-invariant rational unit
+ranks $b+c-1$ and $c$. The Herbrand quotient is multiplicative in exact
+sequences, equals one for finite groups, and is $2$ or $1/2$ on a trivial
+or sign copy of $\mathbb Z$. Applying this to the finite-index sum of
+the two eigenspace lattices gives the quotient $2^{b-1}$, without
+requiring the integral unit lattice to split.
+Its degree-zero Tate group has size $I_U$, so
+$|H^1(\langle\iota\rangle,E_K)|=I_U/2^{b-1}$.
+
+Capitulation injects into this $H^1$, since a relation
+$\mathfrak a\mathcal O_K=(x)$ gives the cocycle $x/\iota x$ and a
+coboundary gives an invariant generator. Conversely, Hilbert 90
+writes every norm-one unit as $x/\iota x$. The fractional ideal $(x)$ is
+invariant. It descends from $F$, since exponents agree on split prime
+pairs and every finite ramification index is one. This proves
+surjectivity and the formula for $\kappa$.
+
+The norm map on rational unit spaces is onto the invariant space, since
+the norm of an $F$-unit is its square. Its kernel has rank $c$.
+The logarithmic kernel in $U$ consists of roots of unity by Kronecker's
+theorem. Every root of unity of $K$ has norm one, since its norm is a
+torsion unit of $F$ and is positive at a real place.
+Thus the logarithmic kernel has exactly $w_K$ elements.
+
+For the regulator identity, delete a coordinate over a real place of
+$F$ in both weighted logarithmic unit spaces. The norm adds the two
+coordinates above a complex place of $F$. Replacing a pair $(x,y)$ by
+$(x,x+y)$ has determinant one. On the kernel its first coordinate is
+$2l_j$, giving covolume $2^cR_U$. The logarithmic norm image has index
+$I_U/2$ in the logarithmic $F$-unit lattice. The torsion index is two,
+since $-1$ is not a norm at a complexifying real place. Multiplication
+of the kernel and image covolumes gives
+$R_K/R_F=2^cR_U(I_U/2)$.
+
+The analytic class-number formula
+\cite[Chapter~V, Theorem~2.4]{MilneCFT}, with $w_F=2$, gives
+\[
+ h_{\rm rel}\frac{R_K}{R_F}
+ =\frac{w_K\lambda^{d/2}L_F(1)}{2^{c+1}\pi^{b+c}}.
+\]
+Substitution proves \eqref{geo:mass-density}.
+\end{proof}
+
+Choose finitely many primes $\mathfrak p$ of $F$ split as
+$\mathfrak P\iota\mathfrak P$ in $K$, and integers $k_{\mathfrak p}\ge0$.
+Set $P_0=\prod_{\mathfrak p}(k_{\mathfrak p}+1)$. The one-sided ideals
+$B_{\boldsymbol j}=\prod\mathfrak P^{j_{\mathfrak p}}$ have a fiber of
+size at least $P_0/(\kappa h_{\rm rel})$ in
+$\mathrm{Cl}(K)/\mathrm{im}\,\mathrm{Cl}(F)$. If
+$B_{\boldsymbol j}/B_{\boldsymbol j_0}=(x)\mathfrak a\mathcal O_K$, then
+\[
+ J_{\boldsymbol j}/J_{\boldsymbol j_0}=(x/\iota x),\qquad
+ J_{\boldsymbol j}=\prod\mathfrak P^{j_{\mathfrak p}}
+                (\iota\mathfrak P)^{k_{\mathfrak p}-j_{\mathfrak p}}.
+\]
+Thus $I=J_{\boldsymbol j_0}^{-1}$ contains this many disjoint cosets
+$\beta_jU$ of norm-one elements. Their principal ideals distinguish the
+cosets, and
+\[
+ N_K(I)=\prod_{\mathfrak p}(N_F\mathfrak p)^{-k_{\mathfrak p}}.
+\]
+For uniform rational-prime data define
+\begin{equation}\label{geo:HJ}
+ H=\sum_p\frac{k_p\log p}{e_p},\qquad
+ J=\sum_p\frac{\log(k_p+1)}{e_pf_p}.
+\end{equation}
+Here $e_p,f_p$ are the absolute indices at the selected primes, and all
+$F$-primes above them split in $K/F$. Then $N_K(I)=e^{-dH}$ and
+$P_0=e^{dJ}$. Prime-ideal mixtures give the corresponding sums with a
+bounded rounding error, provided the finite list of exponents is fixed.
+
+\subsection{Unit Averaging and Translation}
+
+For $h\in\mathbb R^c$, rescale each complex pair by $(e^{-h_j},e^{h_j})$,
+leaving the $b$ compact coordinates unchanged. Denote the resulting ideal
+lattice by $\Lambda_h$. Its determinant, independently of $h$, is
+\begin{equation}\label{geo:determinant}
+ D=2^{-d}\lambda^d e^{-dH}.
+\end{equation}
+For any nonnegative integrable $\Phi$ on $\mathbb R^c$, averaging over a
+fundamental parallelepiped $P_U$ of $l(U)$ gives exactly
+\begin{equation}\label{geo:unfold}
+ \frac1{R_U}\int_{P_U}
+ \sum_{\beta\in\bigcup_j\beta_jU}\Phi(l(\beta)-h)\,dh
+ =\frac{q w_K}{R_U}\int_{\mathbb R^c}\Phi(u)\,du,
+ \qquad q\ge\frac{P_0}{\kappa h_{\rm rel}}.
+\end{equation}
+This follows from tiling and Tonelli's theorem for the full unit lattice.
+We use logarithmic Haar measure $du$ and angular measures of total mass
+one.
+
+Let $\Omega$ be bounded and invariant under rotations in each complex
+coordinate. Let $V$ be its volume and let $\Phi(u)$ be its overlap with
+a displacement having compact moduli one and pair moduli $(e^{u_j},e^{-u_j})$.
+This function is nonnegative, bounded, and compactly supported in $u$.
+Parameterize additive translates by $B_hr$, $r\in[0,1)^{2d}$, where
+$B_h$ is a continuous basis matrix of $\Lambda_h$. The point count $N(h,r)$
+and inherited ordered-edge count $E(h,r)$ are measurable countable sums
+of indicators. Averaging $r$ by lattice tiling gives
+\[
+ \mathbb E_r N(h,r)=V/D,\qquad
+ \mathbb E_r E(h,r)=D^{-1}\sum_\beta\Phi(l(\beta)-h).
+\]
+If a uniform point bound $N\le N_{\max}$ holds for every $h,r$, all these
+quantities are integrable. Averaging also in $h$, and weighting parameter
+space by $N$, selects one pair $(h,r)$ with $N>0$ and
+\begin{equation}\label{geo:joint-average}
+ \frac{E(h,r)}{N(h,r)}\ge
+ \frac{q w_K}{R_U}\frac{\int\Phi}{V}.
+\end{equation}
+The vertex bound and the edge bound hold for the same rescaling and
+translate.
+
+\subsection{Uniform Lattice Counting}
+
+The real Euclidean dual of the unweighted complex ideal lattice is the
+coordinatewise complex conjugate of the image of
+$2\mathfrak D_K^{-1}I^{-1}$. Indeed its real pairing is the trace pairing
+divided by two. Reciprocal deformations invert on the dual. Consequently
+every nonzero dual vector satisfies
+\begin{equation}\label{geo:dual-product}
+ \prod_{i=1}^d|\xi_i|\ge\mu^d,
+ \qquad \mu=2e^{H/2-\ell},\qquad
+ \sum_i|\xi_i|\ge d\mu.
+\end{equation}
+The product assertion follows by taking the square root of the absolute
+norm and using $|N_K(x)|\ge1/(|\Delta_K|N_K(I))$ for
+$0\ne x\in\mathfrak D_K^{-1}I^{-1}$.
+Here conjugation acts coordinatewise and need not agree with $\iota$.
+
+Suppose a smooth positive weight $F$ on $\mathbb C^d$, formed as a product
+over the chosen one- and two-coordinate blocks, has normalized
+Fourier bound, for the convention $e^{-2\pi i x\cdot\xi}$,
+\[
+ |\widehat F(\xi)|/\int F\le M^d
+                  \exp\left(-\sigma\sum_i|\xi_i|\right),
+ \qquad M\ge1,\quad \sigma>0.
+\]
+Put $R=d\mu$ and use the norm $\|\xi\|_*=\sum_i|\xi_i|$.
+Every two distinct dual points are separated by at least $R$, so open
+balls of radius $R/2$ centered at them are disjoint. Comparing volumes
+inside the ball of radius $(j+3/2)R$ bounds the number of points in
+$jR\le\|\xi\|_*<(j+1)R$ by
+$(2j+3)^{2d}\le5^{2dj}$. Thus the sufficient condition
+\begin{equation}\label{geo:poisson-condition}
+ \sigma\mu\ge\log M+2\log5+2
+\end{equation}
+makes the nonzero normalized Fourier sum at most
+$\sum_{j\ge1}e^{-2dj}<1$.
+For Gaussian and polynomial Student profiles, we obtain
+\begin{equation}\label{geo:pointwise-poisson}
+ \sum_{x\in\Lambda_h+r}F(x)\le2\int F/D,
+\end{equation}
+uniformly in $h,r$. To justify Poisson summation, multiply $F$ by
+$e^{-\varepsilon|x|^2}$. The result is Schwartz. Convolution with the
+normalized positive Fourier Gaussian multiplies the Fourier envelope by
+its exponential norm moment, which tends to one in each fixed dimension.
+The strict tail bound persists for sufficiently small $\varepsilon$.
+Schwartz Poisson summation and monotone convergence on the primal side
+prove \eqref{geo:pointwise-poisson}. This limit is taken before $d$ grows.
+
+For $F_C(z)=e^{-a_C|z|^2}$ with $0<a_C\le1$, one may use
+$2e^{-|\xi|}$ as a normalized Fourier envelope. For
+$F_C(z)=(1+a|z|^2)^{-\nu}$, $\nu>1$, Gaussian integration gives
+\[
+ \frac{\widehat F_C(\xi)}{\int F_C}
+ =\frac1{\Gamma(\nu-1)}\int_0^\infty
+ t^{\nu-2}e^{-t-\pi^2|\xi|^2/(at)}\,dt
+ \le2^{\nu-1}e^{-\sqrt2\pi|\xi|/\sqrt a}.
+\]
+The inequality follows from $t+L/t\ge t/2+\sqrt{2L}$.
+
+\subsection{Compact and Complex-Pair Profiles}
+
+Fix $0<\delta<1$, $p=2/(1+\delta)$, a positive radial $f_C$ on $\mathbb C$,
+and a positive separately radial $g_D$ on $\mathbb C^2$. Here $p$ denotes
+the Lebesgue exponent. Define
+\[
+ A_C=\int f_C^p,\quad I_C=\int f_C(z)f_C(z+1)\,dz,
+ \qquad A_D=\int g_D^p,
+\]
+\[
+ I_D=\int_{\mathbb R}\int_{\mathbb C^2}
+ g_D(x,y)g_D(x+e^u,y+e^{-u})\,dx\,dy\,du,
+\]
+\[
+ J_C=\log I_C-(1+\delta)\log A_C,
+ \quad J_D=\log I_D-(1+\delta)\log A_D.
+\]
+Assume these integrals are finite and positive, the two endpoint log-energy
+variables have finite second moments, the total energy is bounded below
+and coercive, and \eqref{geo:pointwise-poisson} holds for the tensor
+weight $F=\prod f_C^p\prod g_D^p$ uniformly in reciprocal deformations.
+Section~\ref{pf:section} verifies these hypotheses for our profiles. They
+give the following geometric criterion.
+
+\begin{proposition}\label{geo:transfer}
+Suppose the preceding arithmetic data exist with $d\to\infty$, and
+$\log L_F(1)\le dC$. With $H,J,\ell$ fixed up to bounded total rounding
+errors, set
+\begin{equation}\label{geo:general-margin}
+ \mathcal M(\theta)=J-\delta H-(1/2-\delta)\ell-C
+ +(1-\delta)\log2+(1-\theta)\log\pi
+ +(1-2\theta)J_C+\theta J_D.
+\end{equation}
+If this margin has a fixed positive lower bound over all occurring
+signatures, there are arbitrarily large planar sets whose unordered
+unit-distance count divided by $|U|^{1+\delta}$ tends to infinity.
+\end{proposition}
+
+\begin{proof}
+Write $V_C=-\log f_C$, $V_D=-\log g_D$. The compact endpoint law has
+density $f_C(z)f_C(z+1)/I_C$ with respect to $dz$. The pair endpoint law
+has density $g_D(x,y)g_D(x+e^u,y+e^{-u})/I_D$ with respect to $dx\,dy\,du$.
+These are probability laws. Reflection about the midpoint exchanges the
+two endpoints without changing either law. Let the first-endpoint energy
+means be $v_C,v_D$ and set
+$v=(b v_C+c v_D)/d$. Take the common sublevel set
+\[
+ \Omega=\left\{\sum V_C+\sum V_D\le d(v+\eta)\right\},\qquad\eta>0.
+\]
+It is bounded. Its volume is at most
+$A_C^bA_D^c e^{pd(v+\eta)}$, and the pointwise weighted bound gives
+\[
+ N_{\max}\le2e^{dB_\eta},\quad
+ B_\eta=H+\log2-\ell+(1-2\theta)\log A_C+\theta\log A_D+pv+p\eta.
+\]
+Independence across blocks, endpoint exchange symmetry, Chebyshev's inequality and a
+union bound put both endpoint energies within $\eta d$ of their means
+with probability at least $1/2$ for large $d$, uniformly in signature.
+Undoing the overlap density gives
+$\int\Phi\ge\tfrac12 I_C^b I_D^c e^{2d(v-\eta)}$.
+Equations \eqref{geo:mass-density} and \eqref{geo:joint-average}
+give ordered average degree at least $\tfrac14e^{dA_\eta}$, where
+\[
+ \begin{aligned}
+ A_\eta={}&J+\log2+(1-\theta)\log\pi-\ell/2-C
+ +(1-2\theta)\log I_C+\theta\log I_D\\
+ &-(1-2\theta)\log A_C-\theta\log A_D
+ +(2-p)v-(2+p)\eta.
+ \end{aligned}
+\]
+Since $p(1+\delta)=2$, we have
+$A_\eta-\delta B_\eta=\mathcal M(\theta)-4\eta$.
+The ordered ratio is at least
+$2^{-2-\delta}\exp(d(\mathcal M-4\eta))$, apart from bounded rounding
+factors. Choose $4\eta<\inf\mathcal M$.
+A compact coordinate comes from a real place of $F$. Projection to that
+embedding is injective on differences of affine ideal points and sends
+all distinguished norm-one displacements to unit vectors. Division by two
+gives the unordered conclusion. Since $u(U)\le |U|^2/2$ and
+$0<\delta<1$, the ratio $u(U)/|U|^{1+\delta}$ can tend to infinity only
+if $|U|\to\infty$. This gives a sequence of cardinalities, with no claim
+at every sufficiently large cardinality.
+\end{proof}

@@ -1,0 +1,289 @@
+\section{Introduction}
+For a finite set $U\subset\R^2$, let
+\[
+ u(U)=\#\{\{x,y\}\subset U:|x-y|=1\},\qquad
+ u(n)=\max_{|U|=n}u(U),
+\]
+where the pairs are unordered and the distance is Euclidean.
+Erd\H{o}s introduced the unit distance problem in 1946
+\cite{Erdos1946}. His lattice construction gives
+\[
+ u(n)\ge n^{1+c/\log\log n}
+\]
+for some $c>0$ and arbitrarily large $n$. The upper bound
+\[
+ u(n)=O(n^{4/3})
+\]
+is due to Spencer, Szemer\'edi and Trotter
+\cite{SpencerSzemerediTrotter1984}, with a later crossing-number proof
+due to Sz\'ekely \cite{Szekely1997}.
+
+The recent number-field construction of OpenAI \cite{OpenAI2026},
+explained by Alon et al.~\cite{Alon2026}, gives
+$u(n)\ge n^{1+\delta}$ for a fixed $\delta>0$ and arbitrarily large $n$.
+Sawin \cite{Sawin2026} made this exponent explicit. In our convention
+for unordered pairs, his result gives
+\[
+ u(n)\ge C^{-1}n^{1.014114}
+\]
+for an absolute constant $C$ and arbitrarily large $n$.
+Emmerich \cite{Emmerich2026} obtained a certificate with
+$\delta=0.015263\ldots$ by optimizing the integer parameters in Sawin's
+criterion. A subsequent certificate of Emmerich and Cordella
+\cite{EmmerichCordella2026} reports $\delta=0.031185334443\ldots$.
+The author's earlier manuscript \cite{NaslundLegacy2026} records
+$\delta=0.0358324$. We compare its construction with the present one below.
+
+Our main result is:
+\begin{theorem}\label{thm:main}
+There are finite sets $U_j\subset\R^2$, with $|U_j|\to\infty$, such that
+\[
+ \frac{u(U_j)}{|U_j|^{1.0418235}}\longrightarrow\infty.
+\]
+In particular, $u(n)\ge n^{1.0418235}$ for arbitrarily large integers $n$.
+\end{theorem}
+
+We obtain the improvement by changing the number fields and counting
+norm-one unit orbits in mixed signature, then optimizing the local and
+archimedean overlap in the same construction. The result concerns an
+unbounded sequence of cardinalities. No generalized Riemann hypothesis
+or asymptotic class-number equality is used.
+
+\subsection{Sawin's Construction}
+
+The arithmetic source of unit distances is a quadratic extension
+$K/F$ with involution $\iota$. If a prime $\mathfrak p$ of $F$ splits as
+$\mathfrak P\iota\mathfrak P$, then the $k+1$ ideals
+\[
+ \mathfrak P^j(\iota\mathfrak P)^{k-j},\qquad 0\le j\le k,
+\]
+have the same relative norm $\mathfrak p^k$. Choices at different primes
+multiply. An ideal-class argument converts some of these choices into
+elements of a common relative norm. At an embedding where $\iota$
+acts as complex conjugation, their images have a common length.
+After rescaling, they give unit displacements in a planar projection
+of an ideal lattice.
+
+Sawin already uses fractional ideals, relative class numbers, and
+powers of Frobenius elements to obtain small residue degrees
+\cite{Sawin2026}. His explicit construction takes $F$ totally real and
+$K/F$ CM. A sup-norm window controls the number of vertices and the
+overlap under unit displacements, while Louboutin's relative
+class-number bound \cite{Louboutin2000} controls the loss in selecting
+an ideal class. Prescribing the local behavior requires relations in
+a pro-$2$ group. The Golod--Shafarevich criterion
+\cite{GolodShafarevich} ensures that sufficiently few such relations
+leave an infinite tower. The use of Frobenius cuts to control splitting
+belongs to the class-field-tower methods of Hajir, Maire and Ramakrishna
+\cite{HajirMaireRamakrishna2021Cutting}.
+
+There are two related arithmetic precedents. Small split primes and
+ideal-class selection occur in the work of Ellenberg and Venkatesh
+\cite{EllenbergVenkatesh2007} on class-group torsion. Number fields
+with controlled discriminants have also been used to construct codes
+and high-dimensional sphere packings
+\cite{Lenstra1986,LitsynTsfasman1987}. Here the required lattice
+vectors must have the same length after projection to the plane,
+which is supplied by their common relative norm.
+
+\subsection{The Earlier Bound $\delta=0.0358324$}
+
+The earlier manuscript \cite{NaslundLegacy2026} keeps the totally
+real/CM setting but changes several estimates in Sawin's criterion.
+For Euclidean balls of radius $R>1/2$ and a unit vector $e_1$, the
+overlap has exponential rate
+\[
+ \frac{1}{2d}\log
+ \frac{\operatorname{vol}_{2d}(B_R\cap(B_R-e_1))}
+      {\operatorname{vol}_{2d}(B_R)}
+ \longrightarrow \frac12\log\left(1-\frac1{4R^2}\right).
+\]
+This replaces the loss $\log(1-1/R)$ in the earlier window estimate.
+A bound for the dual lattice, together with Banaszczyk's transference
+theorem \cite{Banaszczyk1993}, replaces the packing estimate for the
+number of vertices by a covolume estimate. The narrow ideal-class
+calculation also removes an exponential sign loss.
+
+The analytic estimate uses a fixed multiquadratic subfield of every
+field in the tower. Its normalized Euler product retains more
+information than a comparison with a power of the Riemann zeta
+function. This develops the small-prime comparisons in relative
+class-number estimates \cite{Louboutin2000,Louboutin2005}.
+The local construction allows dyadic ramification and charges some
+relations at degree three in the filtration. For its set of the first
+38 odd primes, the displayed infinitude certificate is
+\[
+ P(t)=1-38t+355t^2+114t^3,\qquad
+ P(6/115)=-\frac{101}{1520875}<0.
+\]
+These changes, followed by reoptimization, give the earlier manuscript's
+stated exponent $1.0358324$.
+
+Some of these ideas were described in the author's MathOverflow
+answer \cite{NaslundMO2026}, which credits spiderduckpig with placing
+the second split-prime Frobenius relation in filtration degree at least
+three. Sawin's comment there
+also records that he knew the fixed-subfield analytic comparison,
+without having evaluated it. The answer and the archived manuscript
+are distinct records. In particular, the answer's June 9 change log
+reports a bookkeeping correction and the figure $\delta>0.0357$.
+We use the archived manuscript's $0.0358324$ to identify the earlier
+construction, rather than as a hypothesis of the present proof.
+
+The further improvement comes from allowing a different signature
+and different local groups. Covolume counting, ball overlap and the
+removal of the sign loss are already part of the earlier argument.
+The new counting problem is to use a positive-rank group of norm-one
+units without losing its regulator.
+
+\subsection{Mixed Signature and Norm-One Units}
+
+Let $K/\Q$ be totally imaginary and Galois, choose actual complex
+conjugation $\iota$, and set $F=K^{\langle\iota\rangle}$. Write
+\[
+ [K:\Q]=2d,\qquad [F:\Q]=d=b+2c,\qquad \theta=c/d,
+\]
+where $(b,c)$ is the signature of $F$. The chosen complex embedding of
+$K$ restricts to a real embedding of $F$ and supplies the planar
+projection. The other embeddings
+need not be real, since $\iota$ need not be central. In fact,
+\[
+ \frac bd=\frac1{|\operatorname{class}(\iota)|},
+\]
+where the conjugacy class is taken in $\Gal(K/\Q)$. Retaining a finite
+quotient with many conjugates of this involution gives a field whose
+signature is predominantly complex.
+
+In the CM case, a norm-one element has modulus one at every
+archimedean coordinate and the norm-one unit group is finite.
+Above a complex place of $F$, its two coordinates can instead have
+moduli $e^u$ and $e^{-u}$. The norm-one units have rank $c$ and
+translate these reciprocal pairs. We average over a fundamental
+domain of their full logarithmic lattice. Tiling gives an exact
+integral divided by the relative regulator.
+
+For the extensions used here, which are unramified at every finite
+place, the class-number formula cancels this regulator together with
+the kernel of extension of ideal classes. More precisely, if
+$h_{\rm rel}=h_K/h_F$, $\kappa$ is the order of that kernel,
+$R_U$ is the norm-one unit covolume, $w_K$ counts roots of unity, and
+$\lambda=\rd(K)$, Proposition~\ref{geo:mass} gives
+\[
+ \frac{w_K}{h_{\rm rel}\kappa R_U}
+ =\frac{2^{d-1}\pi^{b+c}}{\lambda^{d/2}L_F(1)},
+ \qquad L_F(s)=\frac{\zeta_K(s)}{\zeta_F(s)}.
+\]
+At $s=1$, the quotient denotes the quotient of residues.
+The averaging uses the entire unit lattice, so no independence of
+its coordinates or equidistribution of unit orbits is needed.
+
+\subsection{Local Relations and the Euler Calculation}
+
+To construct the fields, we use the filtered images of the local
+relation modules. Fox derivatives \cite{Fox1953} retain the
+dependencies among relators that a count of their degrees alone
+would discard. The filtration is the one in the
+Golod--Shafarevich method, with its group-algebra description
+\cite{Jennings,Quillen,Ershov2012}. In particular, a relation shared
+by a global condition and a local condition is subtracted only after
+identifying the same row in their actual filtered images.
+
+This permits a nonabelian decomposition group of order $32$ at $2$,
+with inertia order $8$ and residue degree $4$. Its relation calculation
+allows residue degree $2$ at both $3$ and $5$. The resulting family has
+\[
+ \lambda=2^{9/4}\sqrt{15015},\qquad
+ \theta\ge\frac{4095}{8192}.
+\]
+The gain at $3$ and $5$ has costs. Compared with the preceding
+five-prime family, the root discriminant increases from
+$4\sqrt{15015}$, and the residue degree at $17$ increases from $2$
+to $4$. The smaller residue degrees also increase the corresponding
+absolute Euler factors. The exponent improves because the additional
+norm choices outweigh these losses in the final inequality.
+
+For the analytic calculation we retain two fields
+\[
+ N\subset M\subset K,\qquad
+ [N:\Q]=16384,\qquad [M:\Q]=524288.
+\]
+The full Euler calculation is made in $N$. Its regular representation
+contains $128$ linear, $256$ quadratic, $456$ quartic and $124$ octic
+irreducible representations, and we evaluate their Hecke factors
+with the required multiplicities. Further Frobenius information from
+$M$ is charged only on the remaining primes. This is necessary because
+adding savings from different subfields can otherwise count the same
+prime more than once.
+
+The evaluation is at $\sigma=12001/12000$. The unconditional
+Tsfasman--Vl\u{a}du\c{t} prime inequality \cite{TsfasmanVladut2002}
+then gives, for all sufficiently large fields in the tower,
+\[
+ \frac1d\log L_F(1)<0.042161819.
+\]
+Thus the fixed-subfield idea from the earlier paper is used with a
+nonabelian field and a complete factor calculation. The finite
+field identities, conductor data and analytic remainders are proved
+in sections \ref{ar:field} and \ref{an:section}.
+
+\subsection{Archimedean Profiles and Finite Shells}
+
+At a complex place of $F$, a norm-one displacement couples two
+coordinates through reciprocal scaling. We consequently use a
+profile on $\C^2$ that depends jointly on their radii. It is a positive
+cubic Bernstein modification of a Student profile. The coordinates
+above real places use a Gaussian. Products are taken over places,
+while the two coordinates at each complex place remain coupled.
+
+At a split finite place of residue-field size $Q$, a hard valuation
+window gives the factor
+\[
+ (k+1)Q^{-\delta k}.
+\]
+We replace it by a weighted sum of six valuation shells. The shell
+overlap matrix is explicit, so the gain and the mass can be optimized
+together. Section \ref{fw:section} gives the exact finite functional.
+
+Both choices enter the same arithmetic and geometric inequality.
+For hard finite windows its form is
+\[
+ \sum_q\frac{\log(k_q+1)-\delta k_qf_q\log q}{e_qf_q}
+ -(1/2-\delta)\log\lambda-C+\mathcal A_\delta(\theta)>0,
+\]
+where $e_q,f_q$ are absolute local indices, $C$ bounds
+$d^{-1}\log L_F(1)$, and $\mathcal A_\delta$ is the archimedean
+contribution. Proposition~\ref{geo:transfer} gives the precise
+expression, and Proposition~\ref{fw:transfer} replaces the hard
+windows by shell weights. Changing the local fields changes several
+terms at once, which is why the tower and the profiles are optimized
+together.
+
+The weights are converted into an ordinary finite set by restricting
+the combined energy to a concentration window. Ideal-class selection
+uses the resulting overlap weights. A uniform Poisson estimate then
+bounds the vertices for the same translate and unit deformation that
+supplies the edges. At
+\[
+ \delta=\frac{83647}{2000000}=0.0418235,
+\]
+the rational witness in section \ref{sec:certificate} leaves a
+certified margin greater than $5.33204359816794\times10^{-6}$
+after the concentration allowance.
+
+\subsection{Computation and Formalization}
+
+The proof uses finite linear algebra, exact coefficient recurrences,
+prime data and directed interval enclosures. The arithmetic inputs
+and the algorithms for checking them accompany the manuscript.
+Section \ref{sec:certificate} distinguishes computations rerun by
+the supplied verifier from stored finite data. These certificates
+concern numerical inequalities and explicit arithmetic, rather than
+the statistical accuracy of a floating-point approximation.
+
+There is also a separate Lean development, using Lean~4 and Mathlib
+\cite{Lean4_2021,Mathlib2020}. Its selected theorem proves the planar
+conclusion from one explicit inequality for the ordinary Dedekind
+zeta function of the fixed field $M$. That inequality is stated in
+Remark~\ref{an:fixed-field-form}. It has not been proved in Lean.
+The formalization is consequently conditional, and is not used as a
+substitute for the analytic argument or finite certificate here.

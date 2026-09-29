@@ -1,0 +1,14 @@
+# Rebuildable TeX products. PDFs are publication inputs and remain tracked.
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+__pycache__/
+*.py[cod]
+.venv/
+.lake/
+papers/0.0418235/certificates/data.tar.gz

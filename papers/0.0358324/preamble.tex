@@ -1,0 +1,45 @@
+\documentclass[12pt,oneside,english]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=3cm,rmargin=3cm,headheight=0.5cm,headsep=0.5cm,footskip=0.5cm}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\covol}{covol}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\Art}{Art}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\disc}{disc}
+\DeclareMathOperator{\inv}{inv}
+\DeclareMathOperator{\cd}{cd}
+\DeclareMathOperator{\rd}{rd}
+\makeatother
+
+\usepackage{babel}
+
+\title{An Improved Explicit Lower Bound for the Unit Distance Problem}
+\author{Eric Naslund}
+\email{naslund.math@gmail.com}

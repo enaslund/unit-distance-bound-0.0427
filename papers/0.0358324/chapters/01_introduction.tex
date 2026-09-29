@@ -1,0 +1,253 @@
+\section{Introduction}
+
+For a finite set $U\subset\mathbb{R}^{2}$, let
+\[
+u(U)=\#\left\{ (u,v)\in U^{2}:\ |u-v|=1\right\}
+\]
+denote the number of ordered pairs of points of $U$ at distance exactly
+$1$, and let $u(n)$ be the maximum of $u(U)$ over all sets with $\#U=n$.
+In 1946, Erd\H{o}s \cite{Erdos1946} proved that a $\sqrt{n}\times\sqrt{n}$
+section of a suitably scaled integer lattice satisfies
+\[
+u(n)\geq n^{1+c/\log\log n}
+\]
+for an absolute constant $c>0$, and conjectured that this lattice
+construction is essentially optimal \cite{Erdos1946,Erdos1994}. The best
+existing upper bound, due to Spencer, Szemer\'edi and Trotter
+\cite{SpencerSzemerediTrotter}, is
+\[
+u(n)=O(n^{4/3}).
+\]
+Determining the true order of $u(n)$ is the Erd\H{o}s unit distance
+problem.
+
+Erd\H{o}s's conjecture was recently disproved. A team at OpenAI
+\cite{OpenAIUnitDistance} constructed sets with $u(U)\geq(\#U)^{1+\delta}$
+for a positive but inexplicit constant $\delta$, replacing the integer
+lattice by ideal lattices in number fields of large degree and small root
+discriminant, with the fields supplied by class field towers. In a set of
+remarks on the proof, Alon, Bloom, Gowers, Litt, Sawin, Shankar,
+Tsimerman, Wang and Wood \cite{AlonEtAl} produced a simplified version
+of the argument, and obtained $\delta\approx6.24\cdot10^{-38}$. Sawin
+\cite{Sawin} then reworked and optimized the construction, and proved
+that for arbitrarily large $n$,
+\[
+u(n)\geq n^{1.014114}/C.
+\]
+In this paper we improve upon Sawin's exponent. Our main result is:
+\begin{theorem}
+\label{thm:main}There exist an absolute constant $C>0$ and arbitrarily
+large finite sets $U\subset\mathbb{R}^{2}$ such that
+\[
+\#\left\{ (u,v)\in U^{2}:\ |u-v|=1\right\} \geq C^{-1}(\#U)^{1.0358324}.
+\]
+\end{theorem}
+\noindent In the notation above, Theorem \ref{thm:main} says that
+$u(n)\geq C^{-1}n^{1.0358324}$ for arbitrarily large $n$.
+
+We follow the number field strategy of \cite{Sawin}, which we now
+recall. Let $K$ be a CM field of degree $2d$ with maximal totally real
+subfield $F$, let $c$ denote complex conjugation, let $I$ be a
+fractional ideal of $K$, and let $\alpha\in F$ be totally positive.
+Every solution of
+\[
+\beta c(\beta)=\alpha,\ \ \ \beta\in I,
+\]
+satisfies $|\sigma(\beta)|^{2}=\sigma(\alpha)$ at each complex embedding
+$\sigma$ of $K$, and so after dividing the coordinate at the chosen
+embedding $\sigma_{v}$ by $\sqrt{\sigma_{v}(\alpha)}$ at each real place
+$v$ of $F$, each solution becomes a unit vector in $\mathbb{C}^{d}$.
+When $I$ is realized as a lattice $\Lambda\subset\mathbb{C}^{d}$ under
+this normalization, the solutions become lattice vectors of length
+exactly $1$ in a normalized norm, and projecting to a single complex
+coordinate is injective on $K$. Intersecting $\Lambda$ with a ball of
+bounded radius and projecting then produces a finite planar set in which
+each norm solution generates many unit distance pairs.
+
+The quality of
+the construction is governed by a ratio of two logarithmic quantities, a
+numerator measuring how many solutions $\beta$ can be guaranteed, and a
+denominator measuring how many lattice points the ball may contain.
+Solutions are produced by a pigeonhole argument in a relative class
+group, from a finite set $S$ of rational primes, the \emph{selected
+primes}, whose primes in $F$ split in $K$, weighted by multiplicities
+$k(p)$. The pigeonhole loses a factor of the relative class number
+$h^{-}(K)=h(K)/h(F)$, which is bounded by Louboutin's method. Finally,
+CM fields $K$ of arbitrarily large degree with all of the required local
+properties are supplied by a $2$-tower over a real quadratic field
+$Q_{0}=\mathbb{Q}(\sqrt{D})$, and the infinitude of the tower is
+certified by a Golod-Shafarevich criterion.
+
+All of this is quantitative: Theorem \ref{prop:master}, our version
+of the master criterion of \cite[Proposition 10]{Sawin}, achieves
+every exponent below $1+N(R)/M(R)$, with the numerator $N(R)$ and
+denominator $M(R)$ given by (\ref{eq:N-master}) and (\ref{eq:M-master}).
+In particular, for our certificate we have that $N(R)/M(R)>0.0358324$
+(section \ref{sec:certificate}), with $N(R)\approx37.887$ and
+$M(R)\approx1057.33$ at the optimized radius $R$.
+
+We stress seven differences between our construction and that of
+\cite{Sawin}. First, the number of points of $\Lambda$ in a ball of
+normalized radius $R$ is bounded by volume over covolume, uniformly in
+the center, using a lower bound for the minimum of the dual lattice and
+Banaszczyk's transference theorem \cite{Banaszczyk} (Proposition
+\ref{prop:covolume-count}). This replaces the packing bound
+$\#U\leq(2RA+1)^{2d}$ of \cite[Lemma 2]{Sawin} and shortens the
+denominator by roughly $\frac{1}{2}\log\lambda$ per unit of $2d$, where
+$\lambda$ is the relative root discriminant, about $3.6$ percent of the
+final denominator. Second, the overlap factor $(1-\frac{1}{R})^{2d}$ of
+\cite[Lemma 2]{Sawin} is sharpened to the exact two ball overlap
+$\Theta_{2d}(R)$ of Proposition \ref{lem:overlap}, which loses only
+$\frac{1}{2}\log(1-1/(4R^{2}))$ per unit of $2d$ in the numerator
+rather than $\log(1-\frac{1}{R})$, and together with the covolume count
+this permits the small radius $R\approx2.69$ used by our certificate.
+
+Third, the pigeonhole is performed in the group $G_{K/F}^{+}$ of ideals
+with totally positive principal relative norm, modulo a natural
+equivalence (section \ref{sec:pigeonhole}). For $K/F$ quadratic and
+unramified at all finite primes, we have that
+$\#G_{K/F}^{+}\leq2h^{-}(K)$, whereas the group used in
+\cite[Lemma 6]{Sawin} has order up to $2^{d+1}h^{-}(K)$, and so this is
+worth $\frac{1}{2}\log2\approx0.35$ in the numerator. Fourth, in
+Louboutin's bound for $L(1,\chi_{K/F})$, the Dedekind zeta function
+$\zeta_{F}$ appearing on the right is majorized, after normalization by
+degree, by $\zeta_{E}$ for any fixed subfield $E\subseteq F$ (section
+\ref{sec:louboutin}). Every field in our tower contains the fixed
+multiquadratic field $E_{39}=\mathbb{Q}(\sqrt{q}:q\in T,\sqrt{2})$,
+where $T$ is the set of the first $38$ odd primes fixed in section
+\ref{sec:certificate}, whose splitting behavior is completely explicit,
+and so this yields
+$h^{-}(K)^{1/d}\lesssim\sqrt{\lambda}\cdot\mathrm{B}_{E_{39}}(\lambda)/(2\pi)$
+with $\log\mathrm{B}_{E_{39}}(\lambda)<0.09$ (section \ref{sec:e39}).
+The corresponding term in \cite[Lemma 9]{Sawin} is
+$\frac{1}{2}\log\log\lambda\approx2.17$ for our $\lambda$, and the
+refinement recovers all but $0.045$ of it, which is decisive on the
+scale of the numerator $N(R)\approx37.9$.
+
+Fifth, the tower is permitted
+to ramify at the unique dyadic prime $\mathfrak{q}$ of $Q_{0}$, in a
+controlled two dimensional direction, and a theorem of Schmidt
+\cite{Schmidt} supplies an exact relation count for the resulting
+$\mathfrak{q}$-ramified Galois group (section \ref{sec:dyadic}). Sixth,
+the relation counting is done in the weighted Golod-Shafarevich
+criterion of Vinberg and Koch \cite{Vinberg,Koch} rather than the
+unweighted criterion of \cite[Lemma 11]{Sawin}: a dyadic reciprocity
+lemma shows that the second square Frobenius relation at each split
+selected prime has Zassenhaus degree at least $3$ (the degree filtration is recalled in section \ref{sec:dyadic}), where relations are far cheaper, and so split primes become affordable in large numbers.
+This weighted count, with the second split prime relation placed at
+degree $3$, was proposed by the MathOverflow user Spiderduckpig
+\cite{Spiderduckpig} in the setting of the everywhere unramified tower.
+Seventh, the finite data are optimized against the sharpened master
+inequality: we found $T$, the selected set $S$, the weights $k(p)$, and
+the radius $R$ by a computer search combined with an exact optimization
+(section \ref{sec:certificate}). The fifth and sixth differences are
+the main new ingredients, and we describe them now.
+
+\subsection{Overview of the Dyadic Two Ray Tower}
+
+The tower of \cite[Lemmas 11 and 12]{Sawin} is everywhere unramified
+over the real quadratic base field $Q_{0}=\mathbb{Q}(\sqrt{D})$, where
+$D=\prod_{q\in T}q$ for a finite set $T$ of odd primes, while the
+original construction of \cite{OpenAIUnitDistance} used unramified
+$3$-towers over cyclic cubic fields. We allow ramification at the unique
+dyadic prime $\mathfrak{q}$ of $Q_{0}$, which is unique since
+$D\equiv3\pmod 8$, but only in a controlled two dimensional direction:
+every dyadic decomposition group is required to factor through the
+\emph{two ray quotient}
+\[
+A_{\mathfrak{q}}=\Gal\left(K_{\mathfrak{q}}(\sqrt{5},\sqrt{2})/K_{\mathfrak{q}}\right)\simeq C_{2}\times C_{2},\ \ \ K_{\mathfrak{q}}=(Q_{0})_{\mathfrak{q}}\simeq\mathbb{Q}_{2}(\sqrt{3}),
+\]
+whose two rays are the unramified quadratic direction $\sqrt{5}$ and the
+ramified direction $\sqrt{2}$. The condition keeps the dyadic residue
+degree at most $2$, which the master exponent inequality (Proposition
+\ref{prop:master}) requires, while adjoining $\sqrt{2}$ to the tower.
+
+The ramified direction must be built into the global ramification set
+from the outset: $Q_{0}(\sqrt{2})/Q_{0}$ is ramified at $\mathfrak{q}$,
+and so it is not a subextension of any everywhere unramified tower, and
+no bookkeeping of local presentations on the unramified tower can
+produce it. All relation counting below takes place in the Galois group
+$G_{0}$ of the maximal pro-$2$ extension of $Q_{0}$ unramified outside
+$\mathfrak{q}$, with no real primes in the allowed ramification set, so
+that every field in the tower is totally real. Two structural facts make
+this tractable. First, by a theorem of Schmidt \cite{Schmidt}, $G_{0}$
+has cohomological dimension at most $2$ and satisfies the exact
+Euler-Poincar\'e identity $1-d(G_{0})+r(G_{0})=-r_{2}(Q_{0})=0$, and so
+$G_{0}$ has a minimal presentation with exactly $d(G_{0})-1$ relations.
+Imposing the finite quotient $A_{\mathfrak{q}}$ at the dyadic
+decomposition groups costs at most five further relations (Lemma
+\ref{lem:five-local}), and so the constrained group admits a minimal
+presentation with at most four more relators than generators before any
+selected prime conditions are imposed (Proposition
+\ref{prop:preselected}). Second, a dyadic reciprocity lemma (Lemma
+\ref{lem:artin-trivial}) shows that rational principal ideles have
+trivial local Artin image in $A_{\mathfrak{q}}$. By global reciprocity,
+the two Frobenius elements above a rational prime $p$ split in $Q_{0}$
+then agree modulo commutators and squares (Lemma
+\ref{lem:split-frattini}), and so once the first square Frobenius
+relation at $p$ is imposed, the second one has Zassenhaus degree at
+least $3$ (Proposition \ref{lem:degree-three}).
+
+Under the weighted Golod-Shafarevich criterion of Vinberg and Koch
+\cite{Vinberg,Koch}, relations of degree $3$ are far cheaper than
+relations of degree $2$. The upshot (Theorem \ref{thm:dyadic-gs}) is
+that the constrained tower is infinite whenever
+\[
+1-g\tau+(g+|S|+3)\tau^{2}+U_{S}\tau^{3}<0
+\]
+for some $\tau\in(0,1)$, where $g=|T|$, $|S|$ is the number of selected
+primes, and $U_{S}$ is the number of selected primes split in $Q_{0}$.
+Split primes, which are the most valuable primes for the numerator,
+become affordable in large numbers: our certificate uses $114$ of them,
+whereas the certificate of \cite{Sawin} uses none. The idea of cutting
+class field towers by powers of Frobenius originates in work of Hajir,
+Maire and Ramakrishna \cite{HajirMaireRamakrishna}.
+
+For our certificate we take $T$ to be the set of the first $38$ odd
+primes, so that $g=38$ and $\lambda=\sqrt{16D}$, and a selected set $S$
+of $314$ rational primes with weights $k(p)$, of which $114$ split in
+$Q_{0}$. The weighted Golod-Shafarevich polynomial is
+\[
+P(\tau)=1-38\tau+355\tau^{2}+114\tau^{3},\ \ \ P\left(\frac{6}{115}\right)=-\frac{101}{1520875}<0,
+\]
+an exact rational computation, and the analytic input is the bound
+$\log\mathrm{B}_{E_{39}}(\lambda)<0.09$ of Proposition \ref{prop:B39}.
+Every discrete assertion in the certificate (primality, splitting
+types, admissibility witnesses, counts, and the rational negativity of
+$P$) is verified by a finite computation in exact integer or rational
+arithmetic, and a verification script accompanies the source of this
+paper.
+
+\subsection{Preliminaries and Notation}
+
+Unit distances are counted as ordered pairs $(u,v)\in U^{2}$ throughout,
+and the unordered count differs by exactly a factor of $2$. All
+logarithms are natural. For a number field $L$, $\Delta_{L}$ denotes its
+absolute discriminant, $h(L)$ its class number, and $h^{+}(L)$ its
+narrow class number. For a CM field $K$ with maximal totally real
+subfield $F$ we write $h^{-}(K)=h(K)/h(F)$, which is a positive integer.
+Rational primes are denoted $p$ or $q$, and primes of number fields
+$\mathfrak{p}$, $\mathfrak{q}$, $\mathfrak{P}$. For a pro-$2$ group $G$
+we write $d(G)$ and $r(G)$ for the minimal numbers of generators and
+relations, and $G_{2}\supseteq G_{3}\supseteq\cdots$ for the Zassenhaus
+filtration.
+
+\subsection{Outline}
+
+Sections \ref{sec:geometry} through \ref{sec:certificate} are devoted
+to the proof of Theorem \ref{thm:main}. In section \ref{sec:geometry}
+we realize fractional ideals as normalized lattices in $\mathbb{C}^{d}$
+and prove the uniform covolume count, and in section
+\ref{sec:pigeonhole} we produce many norm solutions by a pigeonhole
+argument in the narrow positive relative class group. In section
+\ref{sec:louboutin} we prove the relative class number bound through
+the fixed subfield $E_{39}$, and in section \ref{sec:master} we
+assemble the covolume count, the pigeonhole, and the class number bound
+into the master exponent inequality, Theorem \ref{prop:master}. In
+section \ref{sec:dyadic} we construct the dyadic two ray tower and
+prove the weighted Golod-Shafarevich criterion, Theorem
+\ref{thm:dyadic-gs}. In section \ref{sec:certificate} we fix the
+finite data, certify the bound $\log\mathrm{B}_{E_{39}}(\lambda)<0.09$,
+and evaluate the master inequality, which proves Theorem
+\ref{thm:main}. The Appendix contains the complete selected prime
+certificate.

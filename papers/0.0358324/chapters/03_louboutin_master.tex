@@ -1,0 +1,140 @@
+\section{The Relative Class Number Bound}\label{sec:louboutin}
+
+In this section we prove an upper bound for the relative class number $h^-(K)$, which the pigeonhole of section \ref{sec:pigeonhole} loses as a denominator.  In section \ref{sec:master} we will then assemble the covolume count, the pigeonhole, and the class number bound into the master exponent inequality.  Louboutin's method \cite{Louboutin} bounds $L(1,\chi_{K/F})$ by an expression involving $\zeta_F$ near $s=1$, and bounding $\zeta_F$ crudely costs a factor that grows like $\log\lambda$ per unit of degree.  The towers constructed in section \ref{sec:dyadic} will all contain one fixed multiquadratic field $E$ however, and the degree normalized Dedekind zeta function of this subfield majorizes that of every field $F$ in the tower (Lemma \ref{lem:zeta-monotone}).  Since the splitting of rational primes in a multiquadratic field is completely explicit, we are able to certify an upper bound for $\zeta_E$ near $s=1$ numerically once and for all in section \ref{sec:e39}, and the loss of size roughly $\log\lambda$ is replaced by a small explicit constant.
+
+Let $E\subseteq F$ be a fixed subfield.  For $\lambda>1$ define
+\begin{equation}\label{eq:B-def}
+   \mathrm{B}_E(\lambda)=\inf_{x>0}
+   \lambda^{x/2}\pi^{-x/2}\Gamma(1+x/2)\,\zeta_E(1+x)^{1/[E:\mathbb{Q}]}.
+\end{equation}
+
+We first show that the degree normalized zeta function of a field is dominated by that of any subfield:
+\begin{lemma}\label{lem:zeta-monotone}
+If $E\subseteq F$ and $\sigma>1$, then
+\[
+   \zeta_F(\sigma)^{1/[F:\mathbb{Q}]}
+   \leq \zeta_E(\sigma)^{1/[E:\mathbb{Q}]}.
+\]
+\end{lemma}
+
+\begin{proof}
+It suffices to compare, for each prime $\mathfrak p$ of $E$, the local factors above $\mathfrak p$.  Put $q=N_{E/\mathbb{Q}}\mathfrak p$ and $m=[F:E]$.  If the primes of $F$ above $\mathfrak p$ have residue degrees $f_1,\dots,f_r$ over $\mathfrak p$, then $r\leq m$, and the degree normalized local contribution to $\log\zeta_F$ is
+\[
+   \frac1m\sum_{i=1}^r -\log(1-q^{-f_i\sigma})
+   \leq \frac{r}{m}\,(-\log(1-q^{-\sigma}))
+   \leq -\log(1-q^{-\sigma}),
+\]
+since $f_i\geq1$ and $-\log(1-t)$ is increasing for $t\in(0,1)$.  The right side is the degree normalized local contribution to $\log\zeta_E$, and so summing over $\mathfrak p$ and exponentiating, the result follows.
+\end{proof}
+
+With Lemma \ref{lem:zeta-monotone} in hand, we are now ready to prove our version of Louboutin's bound.  The corresponding bound is Lemma 9 of \cite{Sawin}, which reads $h^-(K)\leq8\lambda^2\left(\frac{e}{4\pi}\sqrt\lambda\log\lambda\right)^d$, and the effect of the fixed subfield is to replace the factor $\frac{e}{2}\log\lambda$ by $\mathrm{B}_E(\lambda)$:
+\begin{proposition}\label{prop:louboutin}
+Let $K/F$ be a CM quadratic extension with associated quadratic character $\chi_{K/F}$, and put
+\[
+   \lambda=(\Delta_K/\Delta_F)^{1/d}\ \ \ \text{and}\ \ \ d=[F:\mathbb{Q}].
+\]
+If $E\subseteq F$, then
+\[
+   L(1,\chi_{K/F})\leq 2\,\mathrm{B}_E(\lambda)^d.
+\]
+Consequently
+\begin{equation}\label{eq:hminus-bound}
+   h^-(K)\leq C_\lambda\left(\frac{\sqrt\lambda\,\mathrm{B}_E(\lambda)}{2\pi}\right)^d,
+\end{equation}
+where $C_\lambda$ depends only on $\lambda$ and not on $d$, and we may take $C_\lambda=8\lambda^2$.
+\end{proposition}
+
+\begin{proof}
+Louboutin's positive kernel argument \cite[Theorem 2]{Louboutin} bounds $L(1,\chi_{K/F})$ by the value of the completed $L$-function at $1+x$, for any $x>0$, after replacing the Dirichlet coefficients by their absolute values, and those absolute values are dominated by the coefficients of $\zeta_F$.  Since $K$ is totally imaginary and $F$ totally real, every one of the $d$ archimedean places contributes the odd gamma factor, and we obtain, for every $x>0$,
+\[
+   L(1,\chi_{K/F})\leq
+   2\left(\lambda^{x/2}\pi^{-x/2}\Gamma(1+x/2)\right)^d\zeta_F(1+x).
+\]
+Applying Lemma \ref{lem:zeta-monotone} to bound $\zeta_F(1+x)\leq\zeta_E(1+x)^{d/[E:\mathbb{Q}]}$ and taking the infimum over $x>0$ gives the first assertion.
+
+For the second assertion, the relative class number formula for CM fields reads
+\[
+   h^-(K)=Q_Kw_K\left(\frac{\sqrt\lambda}{2\pi}\right)^dL(1,\chi_{K/F}),
+\]
+where $Q_K\in\{1,2\}$ is the Hasse unit index and $w_K$ is the number of roots of unity in $K$.  We claim that $w_K\leq2\lambda^2$.  To see this, we make use of the fact that the field $K$ contains $\mathbb{Q}(\mu_{w_K})$, that root discriminants do not decrease in extensions of number fields, and that
+\[
+   \rd(\mathbb{Q}(\mu_m))=\frac{m}{\prod_{p\mid m}p^{1/(p-1)}}\geq \sqrt{m/2}
+\]
+for all $m\geq3$ (see \cite[Proposition 2.7]{Washington} for the discriminant of cyclotomic fields).  Since $|\Delta_K|=\Delta_F^2\,N_{F/\mathbb{Q}}(\mathfrak d_{K/F})\geq\Delta_F^2$, we have that
+\[
+   \rd(K)=|\Delta_K|^{1/2d}\leq(\Delta_K/\Delta_F)^{1/d}=\lambda,
+\]
+and so $w_K\leq2\rd(K)^2\leq2\lambda^2$, which proves the claim.  The bounded factors $Q_Kw_K\leq4\lambda^2$ together with the factor $2$ from the first assertion are absorbed into $C_\lambda=8\lambda^2$, and the result follows.
+\end{proof}
+
+Before assembling the exponent, we record the bookkeeping of the narrow positive factor:
+\begin{remark}\label{rem:narrow-bookkeeping}
+On the $(2d)^{-1}\log$ scale, (\ref{eq:hminus-bound}) and Proposition \ref{lem:pigeonhole} together contribute
+\[
+   \frac12\log(2\pi)-\frac14\log\lambda-\frac12\log \mathrm{B}_E(\lambda)
+\]
+to the numerator of the master inequality.  Had we used the non-narrow pigeonhole with denominator $2^dh^-(K)$, the constant $\frac12\log(2\pi)$ would read $\frac12\log\pi$.  The narrow positive saving of Lemma \ref{lem:narrow} is thus already incorporated exactly once, and adding a further $\frac12\log2$ anywhere in the accounting would count it twice.
+\end{remark}
+
+\section{The Master Exponent Inequality}\label{sec:master}
+
+Armed with the covolume count of section \ref{sec:geometry}, the narrow positive pigeonhole of section \ref{sec:pigeonhole}, and the class number bound of Proposition \ref{prop:louboutin}, we are now ready to prove the master exponent inequality, which turns any family of CM fields of growing degree with prescribed splitting, ramification, and root discriminant data into a unit distance exponent expressed as a ratio of two explicit logarithmic sums:
+
+\begin{theorem}\label{prop:master}
+Let the subfield $E$ and the real number $\lambda>1$ be fixed.  Suppose there are Galois CM fields $K$ of arbitrarily large degree with totally real subfields $F$, $d=[F:\mathbb{Q}]$, satisfying the following four conditions.  First, $E\subseteq F$.  Second, $(\Delta_K/\Delta_F)^{1/d}=\lambda$ and $\sqrt{|\Delta_K|}=\lambda^d$.  Third, every prime of $F$ above every $p\in S$ splits in $K/F$.  Fourth, $e(p)$ is the ramification index of $p$ in $F/\mathbb{Q}$, and $f(p)$ is an upper bound for the inertia degree of $p$ in $F/\mathbb{Q}$.
+Let $k:S\to\mathbb{Z}_{\geq1}$ and put
+\[
+   A=\prod_{p\in S}p^{k(p)/(2e(p))}.
+\]
+For $R>1/2$ define
+\begin{equation}\label{eq:N-master}
+   N(R)=
+   \frac12\log\left(1-\frac1{4R^2}\right)
+   +\sum_{p\in S}\frac{\log(k(p)+1)}{2e(p)f(p)}
+   +\frac12\log(2\pi)
+   -\frac14\log\lambda
+   -\frac12\log \mathrm{B}_E(\lambda)
+\end{equation}
+and
+\begin{equation}\label{eq:M-master}
+   M(R)=
+   \log A+\log\left(R+\frac{\lambda}{2A}\right)
+   +\frac12\log(2\pi e)-\frac12\log\lambda.
+\end{equation}
+If $M(R)>0$, then for every $\varepsilon>0$ there are arbitrarily large finite sets $U\subset\mathbb{R}^2$ with
+\[
+   \#\left\{(u,v)\in U^2 :\ |u-v|=1\right\}\geq (\#U)^{1+N(R)/M(R)-\varepsilon}.
+\]
+In particular every exponent below $1+N(R)/M(R)$ is achieved by arbitrarily large finite planar point sets.
+\end{theorem}
+Theorem \ref{prop:master} is our version of the master criterion of \cite[Proposition 10]{Sawin}, and the differences are exactly the sharpenings assembled above.  In the numerator, the overlap term $\log(1-\frac{1}{R})$ of \cite{Sawin} becomes the exact two ball exponent $\frac{1}{2}\log(1-\frac{1}{4R^{2}})$ by Proposition \ref{lem:overlap}, while the terms $\frac{1}{2}\log(2\pi/e)-\frac{1}{2}\log\log\lambda$ there, which record the pigeonhole and class number losses, become $\frac{1}{2}\log(2\pi)-\frac{1}{2}\log \mathrm{B}_E(\lambda)$ by Lemma \ref{lem:narrow} and Proposition \ref{prop:louboutin}.  In the denominator, the packing bound $\log(2RA+1)$ of \cite{Sawin} becomes the covolume count of Proposition \ref{prop:covolume-count}.
+
+\begin{proof}
+If $N(R)\leq0$ then $1+N(R)/M(R)\leq1$, and the conclusion already holds for $n$ collinear points spaced at unit distance, which span $2(n-1)$ ordered unit distance pairs, and so we may assume $N(R)>0$.
+
+Fix $K$ and $F$ in the family with $d$ large.  Our goal is to combine Corollary \ref{cor:rational}, which produces many solutions of $\beta c(\beta)=\alpha$ in an ideal, Proposition \ref{prop:louboutin}, which bounds the class number loss, and Proposition \ref{lem:overlap}, which converts these solutions into unit distance pairs in the plane.  Corollary \ref{cor:rational} supplies $I$ and $\alpha$ with $Q=\#(N_{K/F}(I)/(\alpha))=A^{2d}$ and
+\[
+   \frac1{2d}\log M_I
+   \geq
+   \sum_{p\in S}\frac{\log(k(p)+1)}{2e(p)f(p)}
+   -\frac1{2d}\log h^-(K),
+\]
+where $M_I=\#\left\{\beta\in I :\ \beta c(\beta)=\alpha\right\}$.  Applying Proposition \ref{prop:louboutin} to bound the class number term, we obtain
+\[
+   \frac1{2d}\log M_I
+   \geq
+   \sum_{p\in S}\frac{\log(k(p)+1)}{2e(p)f(p)}
+   +\frac12\log(2\pi)-\frac14\log\lambda-\frac12\log \mathrm{B}_E(\lambda)+o(1),
+\]
+where the $o(1)$ absorbs $(2d)^{-1}\log C_\lambda\to0$.  Proposition \ref{lem:overlap}, applied with this $I$ and $\alpha$, produces a set $U$ with
+\[
+   \frac1{2d}\log\frac{\#\left\{(u,v)\in U^2 :\ |u-v|=1\right\}}{\#U}
+   \geq \frac1{2d}\log M_I+\frac12\log\left(1-\frac1{4R^2}\right)+o(1)
+   \geq N(R)+o(1)
+\]
+and $\frac1{2d}\log\#U\leq M(R)+o(1)$.  Combining these two bounds, since $M(R)>0$ we conclude that
+\[
+   \#\left\{(u,v)\in U^2 :\ |u-v|=1\right\}\geq(\#U)^{1+N(R)/M(R)+o(1)},
+\]
+where $o(1)\to0$ as $d\to\infty$ along the family.  Note that $\#U\to\infty$, since the count of unit distance pairs, and hence $\#U$ itself, is at least $e^{2d(N(R)+o(1))}$ with $N(R)>0$.  Taking $d$ large enough that the $o(1)$ is below $\varepsilon$, the result follows.
+\end{proof}

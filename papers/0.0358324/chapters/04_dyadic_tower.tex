@@ -1,0 +1,363 @@
+\section{The Dyadic Two Ray Tower}\label{sec:dyadic}
+
+In this section we construct the fields required by Theorem \ref{prop:master}.  The everywhere unramified counterpart of this construction is Lemmas 11 and 12 of \cite{Sawin}, and the ramified two ray direction at the dyadic prime is what is new.  The argument runs as follows.  Over the real quadratic field $k=Q_{0}=\mathbb{Q}(\sqrt D)$ we consider the maximal pro-$2$ extension unramified outside the unique dyadic prime $\mathfrak{q}$, with no real primes in the allowed ramification set.  By a theorem of Schmidt its Galois group $G_0$ satisfies an exact Euler-Poincar\'e identity, and so it has a minimal presentation with exactly $d(G_0)-1$ relations.  We will then impose a finite two dimensional condition at $\mathfrak{q}$, the \emph{two ray} condition, which keeps the dyadic residue degree bounded while retaining a ramified $\sqrt2$ direction, and this will cost at most five relations.  The resulting group still surjects onto an elementary abelian quotient of rank $|T|$, which bounds its generator rank from below.  A dyadic reciprocity lemma then shows that for each selected rational prime split in $k$, the two square Frobenius conditions cost one relation of Zassenhaus degree $2$ and one of degree at least $3$.  Feeding these counts into the weighted Golod-Shafarevich criterion of Vinberg and Koch yields the infinitude criterion (\ref{eq:c3}), and we extract the tower fields at the end of the section.
+
+Let $T$ be a finite set of odd primes and put
+\[
+   D=\prod_{q\in T}q
+   \ \ \ \text{and}\ \ \
+   k=Q_0=\mathbb{Q}(\sqrt D).
+\]
+Assume throughout this section that
+\[
+   D\equiv3\pmod8
+\]
+and that the number of primes $q\in T$ with $q\equiv3\pmod4$ is odd.  Then $k$ is real quadratic, $2$ is ramified in $k$, there is a unique dyadic prime $\mathfrak{q}$ of $k$, and
+\[
+   k_{\mathfrak{q}}\simeq\mathbb{Q}_2(\sqrt3).
+\]
+Let $S$ be a finite set of rational \emph{selected} primes with $2\in S$.  For every odd $p\in S$ assume, as in \cite[Lemma 12]{Sawin}, the admissibility condition
+\begin{equation}\label{eq:admissible}
+   p\equiv1\pmod4
+   \ \ \ \text{or}\ \ \
+   p\text{ is inert in }\mathbb{Q}(\sqrt q)\text{ for some }q\in T,
+\end{equation}
+which will guarantee in Proposition \ref{thm:fields} that $p$ splits in $K/F$, where $F$ ranges over the tower fields constructed there and $K=F(i)$.  Define
+\[
+   U_S=\#\left\{p\in S:\ p\ne2\text{ and }p\text{ splits in }k\right\}.
+\]
+
+Write $K_{\mathfrak{q}}=k_{\mathfrak{q}}$ (we reserve the letter $K$ for the CM fields, which do not appear until Proposition \ref{thm:fields}).  Since $K_{\mathfrak{q}}\simeq\mathbb{Q}_2(\sqrt3)$, its unramified quadratic extension is $K_{\mathfrak{q}}(\sqrt5)$.  The \emph{dyadic two ray quotient} is
+\begin{equation}\label{eq:Aq}
+  A_{\mathfrak{q}}
+  =\Gal\left(K_{\mathfrak{q}}(\sqrt5,\sqrt2)/K_{\mathfrak{q}}\right)
+  =\Gal\left(k_{\mathfrak{q}}^{\mathrm{ur},(2)}k_{\mathfrak{q}}(\sqrt2)/k_{\mathfrak{q}}\right)
+  \simeq C_2^{\mathrm{ur}}\times C_2^{\mathrm{ram}},
+\end{equation}
+where $k_{\mathfrak{q}}^{\mathrm{ur},(2)}$ denotes the unramified quadratic extension, and not the full unramified pro-$2$ extension.  Its two rays are the unramified direction $\sqrt5$ and the ramified direction $\sqrt2$.  Requiring dyadic decomposition groups to factor through this finite quotient keeps the dyadic residue degree at most $2$, as the master inequality requires, while adjoining the ramified $\sqrt2$ direction to the tower.
+
+\subsection{The Global Base Group}
+
+We first set up the presentation bookkeeping promised above.  For a finitely generated pro-$2$ group $G$, write
+\[
+  d(G)=\dim_{\mathbb{F}_2}H^1(G,\mathbb{F}_2)
+  \ \ \ \text{and}\ \ \
+  r(G)=\dim_{\mathbb{F}_2}H^2(G,\mathbb{F}_2).
+\]
+In a minimal pro-$2$ presentation $1\to R\to F_0\to G\to1$, with $F_0$ free pro-$2$, $d(G)$ is the number of generators and $r(G)$ the minimal number of relators normally generating $R$.  We write $G=G_1\supseteq G_2\supseteq G_3\supseteq\cdots$ for the Zassenhaus filtration of $G$ (the mod-$2$ dimension subgroups), so that $G_2=\Phi(G)$ is the Frattini subgroup, and we say a relator has \emph{Zassenhaus degree} at least $m$ if it lies in $F_{0,m}$, the $m^{th}$ filtration step of the free group.  Minimal relators always lie in $F_{0,2}$, that is, they have degree at least $2$.
+
+Let
+\[
+   G_0=G_{\{\mathfrak{q}\}}(k)(2)
+\]
+be the Galois group of the maximal pro-$2$ extension of $k$ unramified outside the finite prime $\mathfrak{q}$, with no real prime included in the ramification set.  Since $\mathbb{C}/\mathbb{R}$ counts as ramified at a real place, excluding the real places forces every finite subextension of this tower to be totally real.  The relation count for $G_0$ will come from the following theorem:
+
+\begin{theorem}\label{thm:schmidt}
+(Schmidt \cite{Schmidt})  Let $L$ be a number field and let $S_L$ be a finite set of primes of $L$ containing all primes above $2$ and no real primes.  Then
+\[
+   \cd G_{S_L}(L)(2)\leq2.
+\]
+The cohomology groups $H^i(G_{S_L}(L)(2),\mathbb{F}_2)$ are finite for $i=0,1,2$, and
+\[
+  \sum_{i=0}^2(-1)^i\dim_{\mathbb{F}_2}H^i(G_{S_L}(L)(2),\mathbb{F}_2)=-r_2(L),
+\]
+where $r_2(L)$ is the number of complex places of $L$.
+\end{theorem}
+
+We refer to \cite{Schmidt} for the proof and to \cite[Chapters VIII and X]{NSW} for the general theory of Galois groups with restricted ramification.  Applied to $G_0$, Schmidt's theorem gives an exact relation count:
+
+\begin{lemma}\label{lem:base}
+The group $G_0$ has a minimal pro-$2$ presentation with $d_0=d(G_0)$ generators and exactly
+\[
+   r(G_0)=d_0-1
+\]
+relations, all of Zassenhaus degree at least $2$.
+\end{lemma}
+
+\begin{proof}
+The set $\{\mathfrak{q}\}$ contains all primes of $k$ above $2$, since $2$ ramifies in $k$ and $\mathfrak{q}$ is the unique dyadic prime, and it contains no real prime, and so the conditions of Theorem \ref{thm:schmidt} are satisfied.  As $k$ is real quadratic, $r_2(k)=0$, and Theorem \ref{thm:schmidt} gives
+\[
+   1-d(G_0)+r(G_0)=0,
+\]
+because $H^0(G_0,\mathbb{F}_2)$ has dimension $1$.  Hence $r(G_0)=d(G_0)-1$, and minimal relators lie in the Frattini subgroup of the free group, so they have Zassenhaus degree at least $2$.
+\end{proof}
+
+The next elementary lemma, the bookkeeping device used throughout, shows that killing an element of a pro-$2$ group either adds one relation or removes one generator:
+
+\begin{lemma}\label{lem:kill}
+Let $G$ have a minimal pro-$2$ presentation on $d$ generators with $r$ relators, all of Zassenhaus degree at least $2$.  Let $x\in G$ and
+\[
+   G'=G/\langle\!\langle x\rangle\!\rangle.
+\]
+If $x\in\Phi(G)$, then $G'$ has a minimal presentation on $d$ generators with at most $r+1$ relators, all of degree at least $2$.  If $x\notin\Phi(G)$, then $G'$ has a minimal presentation on $d-1$ generators with at most $r$ relators, all of degree at least $2$.
+\end{lemma}
+
+\begin{proof}
+Let $1\to R\to F\to G\to1$ be the given minimal presentation, so that $F$ is free pro-$2$ on $d$ generators and $R\subseteq\Phi(F)$.  Lift $x$ to $w\in F$.
+
+If $x\in\Phi(G)$, then $w$ may be chosen in $\Phi(F)$, because the preimage of $\Phi(G)$ in $F$ is $\Phi(F)R=\Phi(F)$.  Adding $w$ to the relators presents $G'$ on the same generators with $r+1$ relators of degree at least $2$.  If $x\notin\Phi(G)$, then $w\notin\Phi(F)$, so $w$ extends to a free pro-$2$ basis of $F$.  Killing $w$ leaves a free pro-$2$ group $F'$ on $d-1$ generators, and the images of the old relators lie in the image of $\Phi(F)$, which is $\Phi(F')$.  Hence $G'$ is presented on $d-1$ generators by at most $r$ relators of degree at least $2$.
+\end{proof}
+
+\subsection{The Finite Dyadic Local Quotient}
+
+Let
+\[
+   G_{\mathrm{loc}}=G_{K_{\mathfrak{q}}}(2)
+   \ \ \ \text{and}\ \ \
+   N_{\mathrm{loc}}=\ker(G_{\mathrm{loc}}\twoheadrightarrow A_{\mathfrak{q}}),
+\]
+where $G_{K_{\mathfrak{q}}}(2)$ is the Galois group of the maximal pro-$2$ extension of $K_{\mathfrak{q}}$.  We first show that the two ray condition costs at most five local relations:
+
+\begin{lemma}\label{lem:five-local}
+The closed normal subgroup $N_{\mathrm{loc}}$ is normally generated in $G_{\mathrm{loc}}$ by at most five elements.
+\end{lemma}
+
+\begin{proof}
+Local Kummer theory gives
+\[
+   d(G_{\mathrm{loc}})=\dim_{\mathbb{F}_2}K_{\mathfrak{q}}^\times/K_{\mathfrak{q}}^{\times2}=[K_{\mathfrak{q}}:\mathbb{Q}_2]+2=4.
+\]
+Choose elements $a,b$ of $G_{\mathrm{loc}}$ whose images generate $A_{\mathfrak{q}}$, and extend their classes modulo $\Phi(G_{\mathrm{loc}})$ to a basis of $G_{\mathrm{loc}}/\Phi(G_{\mathrm{loc}})$ by two further elements $z_1,z_2$ lying in $N_{\mathrm{loc}}$, so that $a,b,z_1,z_2$ generate $G_{\mathrm{loc}}$.  The quotient $A_{\mathfrak{q}}\simeq C_2\times C_2$ has presentation
+\[
+   \langle \sigma,\tau\mid \sigma^2,\tau^2,[\sigma,\tau]\rangle.
+\]
+Killing the five elements
+\[
+   z_1,\ z_2,\ a^2,\ b^2,\ [a,b]
+\]
+normally in $G_{\mathrm{loc}}$ produces a quotient generated by the images of $a,b$ subject to the defining relations of $C_2\times C_2$, which still surjects onto $A_{\mathfrak{q}}$.  Hence the quotient is exactly $A_{\mathfrak{q}}$, and the five elements normally generate $N_{\mathrm{loc}}$.
+\end{proof}
+
+\begin{remark}\label{rem:local-count}
+The number five is exactly what local cohomology predicts.  The five term exact sequence of
+\[
+   1\longrightarrow N_{\mathrm{loc}}\longrightarrow G_{\mathrm{loc}}\longrightarrow A_{\mathfrak{q}}\longrightarrow1
+\]
+gives
+\[
+\dim_{\mathbb{F}_2}H^1(N_{\mathrm{loc}},\mathbb{F}_2)^{G_{\mathrm{loc}}}
+=(4-2)+\dim_{\mathbb{F}_2}\ker\left(H^2(A_{\mathfrak{q}},\mathbb{F}_2)\to H^2(G_{\mathrm{loc}},\mathbb{F}_2)\right).
+\]
+The group $H^2(C_2^2,\mathbb{F}_2)$ is three dimensional, spanned by the cup products of the two Kummer characters attached to $5$ and $2$.  These inflate to the classes of the quaternion algebras $(5,5)$, $(5,2)$, and $(2,2)$ over $K_{\mathfrak{q}}$.  Since $5$ and $2$ lie in $\mathbb{Q}_2$ and $[K_{\mathfrak{q}}:\mathbb{Q}_2]=2$, restriction multiplies Brauer invariants by $2$ and kills every $2$-torsion invariant.  Hence all three classes vanish over $K_{\mathfrak{q}}$, giving $2+3=5$ normal generators.
+\end{remark}
+
+Choose an embedding of a separable closure of $k$ into a separable closure of $K_{\mathfrak{q}}$.  This determines a decomposition homomorphism
+\[
+   \iota:G_{\mathrm{loc}}\longrightarrow G_0.
+\]
+Let $w_1,\dots,w_5$ be local normal generators of $N_{\mathrm{loc}}$ as in Lemma \ref{lem:five-local}, and set
+\begin{equation}\label{eq:H-def}
+   H=G_0/\left\langle\!\left\langle\iota(w_1),\dots,\iota(w_5)\right\rangle\!\right\rangle.
+\end{equation}
+We then have the following relation count before any selected prime conditions are imposed:
+
+\begin{proposition}\label{prop:preselected}
+The group $H$ is the Galois group of the maximal pro-$2$ extension of $k$ satisfying the following three conditions: (a) the extension is totally real, (b) it is unramified at every finite prime other than $\mathfrak{q}$, and (c) every dyadic decomposition group has image factoring through $A_{\mathfrak{q}}$.  It has a minimal pro-$2$ presentation with $d=d(H)$ generators and at most
+\[
+   d+4
+\]
+relations, all of Zassenhaus degree at least $2$.
+\end{proposition}
+
+\begin{proof}
+The first two conditions are built into $G_0$: the only finite prime in the allowed ramification set is $\mathfrak{q}$, and no real prime is in the set.  Quotienting by the normal closure of $\iota(w_1),\dots,\iota(w_5)$ forces the chosen dyadic decomposition subgroup to factor through $A_{\mathfrak{q}}$.  Since all extensions in the tower are Galois over $k$ and the dyadic decomposition subgroups above $\mathfrak{q}$ are conjugate, the normal closure imposes the same condition at every one of them.  Conversely, any finite pro-$2$ extension of $k$ with properties (a), (b), and (c) kills the image of $N_{\mathrm{loc}}$ and hence is a quotient of $H$.
+
+By Lemma \ref{lem:base}, $G_0$ has $d_0=d(G_0)$ generators and $d_0-1$ relators of degree at least $2$.  We pass from $G_0$ to $H$ by killing five elements in succession.  Say $m$ of the five are non-Frattini in the intermediate quotient at the moment they are killed.  By Lemma \ref{lem:kill}, those $m$ cuts each remove one generator and add no relator, while the other $5-m$ cuts each add at most one relator of degree at least $2$.  The final generator rank is $d=d_0-m$ and the relator count is at most
+\[
+   (d_0-1)+(5-m)=d+4.
+   \qedhere
+\]
+\end{proof}
+
+\subsection{The Elementary Quotient and Dyadic Reciprocity}
+
+Put
+\[
+   E_T=k(\sqrt q:q\in T,\sqrt2).
+\]
+We first check that this elementary abelian quotient survives the two ray condition:
+
+\begin{lemma}\label{lem:elementary}
+The extension $E_T/k$ is a quotient of $H$ and
+\[
+   \Gal(E_T/k)\simeq(\mathbb{Z}/2\mathbb{Z})^{|T|}.
+\]
+Consequently $d(H)\geq g:=|T|$.
+\end{lemma}
+
+\begin{proof}
+The genus part $k(\sqrt q:q\in T)/k$ has rank $|T|-1$: the rational square classes $q\in T$ satisfy exactly one relation over $k$, namely that their product $D$ is a square in $k$.  The standard genus theory computation shows this extension is unramified at every finite prime and totally real: above a given $q\in T$, the extension is generated over $k$ by the square roots of the primes $q'\in T\setminus\{q\}$, which are units at $q$ (note $\sqrt q\in k(\sqrt{q'}:q'\ne q)$ because $\sqrt D\in k$).  At $2$, each $q'\in T$ has local square class $1$ or $5$ in $K_{\mathfrak{q}}$, and both classes generate unramified directions, so the genus part is unramified at $\mathfrak{q}$ as well.
+
+The class $\sqrt2$ is independent of the genus part, because $k(\sqrt2)/k$ is ramified at $\mathfrak{q}$ while the genus part is unramified at all finite primes.  Hence $\Gal(E_T/k)$ is elementary abelian of rank $(|T|-1)+1=|T|$.
+
+What remains to be shown is the dyadic two ray condition (c).  In $K_{\mathfrak{q}}=\mathbb{Q}_2(\sqrt3)$ the class of $3$ is a square, so the image of $\mathbb{Q}_2^\times/\mathbb{Q}_2^{\times2}$ in $K_{\mathfrak{q}}^\times/K_{\mathfrak{q}}^{\times2}$ is generated by the classes of $2$ and $5$.  Each odd $q\in T$ has local square class $1$ or $5$ in $K_{\mathfrak{q}}$, while $\sqrt2$ generates the class of $2$.  It follows that the completion of $E_T$ at any dyadic prime is contained in $K_{\mathfrak{q}}(\sqrt5,\sqrt2)$, that is, the dyadic decomposition group factors through $A_{\mathfrak{q}}$.  Hence $E_T$ is a quotient of $H$, and $d(H)\geq d(\Gal(E_T/k))=|T|$.
+\end{proof}
+
+The following reciprocity lemma is the key arithmetic input behind the split prime saving, and shows that the dyadic ray conditions are invisible to rational ideles:
+
+\begin{lemma}\label{lem:artin-trivial}
+For every $u\in\mathbb{Q}_2^\times\subset K_{\mathfrak{q}}^\times$, the local Artin image of $u$ in
+\[
+   A_{\mathfrak{q}}=\Gal(K_{\mathfrak{q}}(\sqrt5,\sqrt2)/K_{\mathfrak{q}})
+\]
+is trivial.  Equivalently, the Hilbert symbols
+\[
+   (u,5)_{K_{\mathfrak{q}}}=(u,2)_{K_{\mathfrak{q}}}=1
+\]
+vanish for all $u\in\mathbb{Q}_2^\times$.
+\end{lemma}
+
+\begin{proof}
+The two characters of $A_{\mathfrak{q}}$ are the Kummer characters of the square classes $5$ and $2$.  By local class field theory, the value of the character attached to $a\in\{5,2\}$ on $\Art_{\mathfrak{q}}(u)$ is the Hilbert symbol $(a,u)_{K_{\mathfrak{q}}}$.  Since both $a$ and $u$ lie in $\mathbb{Q}_2^\times$, the quaternion class $(a,u)_{K_{\mathfrak{q}}}$ is the restriction to $K_{\mathfrak{q}}$ of the class $(a,u)_{\mathbb{Q}_2}$, and restriction on Brauer groups multiplies invariants by the degree:
+\[
+   \inv_{K_{\mathfrak{q}}}\left(\operatorname{res}_{K_{\mathfrak{q}}/\mathbb{Q}_2}B\right)=[K_{\mathfrak{q}}:\mathbb{Q}_2]\inv_{\mathbb{Q}_2}(B)=2\inv_{\mathbb{Q}_2}(B).
+\]
+Every $2$-torsion Brauer invariant is $0$ or $1/2$ in $\mathbb{Q}/\mathbb{Z}$, so multiplication by $2$ annihilates it.  Thus $(a,u)_{K_{\mathfrak{q}}}=1$ for $a\in\{5,2\}$, and both characters of $A_{\mathfrak{q}}$ vanish on $\Art_{\mathfrak{q}}(u)$.
+\end{proof}
+
+\subsection{The Split Prime Degree Three Relation}
+
+Let $p\ne2$ be a rational prime split in $k$:
+\[
+   p\mathcal{O}_k=\mathfrak{p}\,\overline{\mathfrak{p}}.
+\]
+Let $x=\Frob_{\mathfrak{p}}$ and $y=\Frob_{\overline{\mathfrak{p}}}$ denote Frobenius elements in the dyadically constrained group ($H$, or any quotient of $H$ by selected prime conditions at other primes) before the two square Frobenius cuts at $p$ are imposed.  Frobenius elements are well defined here because $\mathfrak{p}$ and $\overline{\mathfrak{p}}$ are unramified in the tower.  Dyadic reciprocity now gives the following compatibility:
+
+\begin{lemma}\label{lem:split-frattini}
+The two Frobenius elements have the same image in the mod-$2$ abelianization:
+\[
+   x\equiv y\pmod {H_2}.
+\]
+\end{lemma}
+
+\begin{proof}
+It suffices to test equality against every quadratic character $\chi$ of $H$.  Such a character corresponds to a quadratic extension of $k$ that is totally real, unramified at all finite primes other than $\mathfrak{q}$, and whose dyadic local character factors through $A_{\mathfrak{q}}$.
+
+Apply global Artin reciprocity to the principal idele of the positive rational number $p$.  The real local factors are trivial because the corresponding extension is totally real and $p$ is positive in both real embeddings of $k$.  The dyadic local factor is trivial by Lemma \ref{lem:artin-trivial}, since $p\in\mathbb{Q}_2^\times$.  Every other finite place is unramified for $\chi$ and $p$ is a local unit there, except at $\mathfrak{p}$ and $\overline{\mathfrak{p}}$, where the local factors are $\chi(x)$ and $\chi(y)$.  The product formula then reads
+\[
+   \chi(x)\chi(y)=1,
+\]
+and since the values are $\pm1$ this says $\chi(x)=\chi(y)$ for every quadratic character $\chi$ of $H$.  Hence $x\equiv y\pmod{H_2}$.
+\end{proof}
+
+It follows that the second square Frobenius relation may be counted in degree at least $3$:
+\begin{proposition}\label{lem:degree-three}
+After imposing the first square Frobenius relation $x^2=1$ for a rational prime $p$ split in $k$, the second square Frobenius relation $y^2=1$ can be represented by a relator of Zassenhaus degree at least $3$.
+\end{proposition}
+
+\begin{proof}
+By Lemma \ref{lem:split-frattini}, write $y=xh$ with $h\in H_2$.  In the quotient in which $x^2=1$ has been imposed,
+\[
+   y^2=(xh)^2=x^2(x^{-1}hx)h=(x^{-1}hx)h.
+\]
+Since $h\in H_2$, the Zassenhaus commutator inclusion $[H_i,H_j]\subseteq H_{i+j}$ gives $x^{-1}hx\equiv h\pmod {H_3}$, so
+\[
+   (x^{-1}hx)h\equiv h^2\pmod {H_3}.
+\]
+For the mod-$2$ Zassenhaus filtration, $h\in H_2$ implies $h^2\in H_4\subseteq H_3$, so $y^2\in H_3$.  If $F_0\twoheadrightarrow H$ is a minimal free pro-$2$ presentation, functoriality of the Zassenhaus filtration gives $F_{0,3}\twoheadrightarrow H_3$, so $y^2$ lifts to a relator lying in $F_{0,3}$, that is, of degree at least $3$.
+\end{proof}
+
+\subsection{The Weighted Golod-Shafarevich Criterion}
+
+We will make use of the following weighted refinement of the Golod-Shafarevich theorem \cite{GolodShafarevich}, due to Vinberg \cite{Vinberg} and Koch \cite{Koch} (see also \cite[Chapter III, \S9]{NSW}):
+
+\begin{theorem}\label{thm:wgs}
+(Vinberg, Koch)  Let $G$ be a pro-$2$ group with a presentation on $d$ generators whose relators $\rho_1,\rho_2,\dots$ have Zassenhaus degrees $m_1,m_2,\dots\geq2$.  If there exists $\tau\in(0,1)$ with
+\[
+   1-d\,\tau+\sum_i\tau^{m_i}<0,
+\]
+then $G$ is infinite.
+\end{theorem}
+
+Starting from $H$, we impose the selected prime conditions for the primes of $S$ as follows.  For $p=2$ no cut is needed, since the dyadic residue degree bound is already encoded in $A_{\mathfrak{q}}$.  If an odd $p\in S$ is inert in $k$, we kill the Frobenius of the unique prime of $k$ above $p$.  If $p$ is ramified or split in $k$, we impose the square Frobenius relations at the (one or two) primes of $k$ above $p$.  For split $p$, the first square Frobenius relation is counted in degree $2$ and the second in degree at least $3$, by Proposition \ref{lem:degree-three}.  Killing Frobenius elements or their squares to force bounded residue degrees in a class field tower follows Hajir, Maire and Ramakrishna \cite{HajirMaireRamakrishna}, and the weighted count for split primes, with the second square Frobenius relation placed at degree $3$, was proposed by the MathOverflow user Spiderduckpig \cite{Spiderduckpig}.  We are now ready to prove the main criterion of this section, the two ray analog of \cite[Lemma 11]{Sawin}, where the unweighted criterion counts both square Frobenius relations of a split prime at the same cost:
+
+\begin{theorem}\label{thm:dyadic-gs}
+With the notation above, the pro-$2$ group obtained after all of the selected prime cuts has a presentation with generator rank $d_{\mathrm{fin}}\geq g=|T|$, at most
+\[
+   d_{\mathrm{fin}}+|S|+3
+\]
+relators of Zassenhaus degree at least $2$, and at most $U_S$ further relators of Zassenhaus degree at least $3$.  Consequently, if there is $\tau\in(0,1)$ such that
+\begin{equation}\label{eq:c3}
+   1-g\tau+(g+|S|+3)\tau^2+U_S\tau^3<0,
+\end{equation}
+then the final constrained pro-$2$ group is infinite.
+\end{theorem}
+
+\begin{proof}
+By Proposition \ref{prop:preselected}, before the selected prime cuts the group $H$ has a minimal presentation with $d=d(H)$ generators and at most $d+4$ relators of degree at least $2$.
+
+There are $|S|-1$ first cuts, one for each odd rational prime in $S$: the inert Frobenius cut, or the first square Frobenius cut for ramified and split primes.  Say $m'$ of them are non-Frattini in the intermediate quotient at the moment they are imposed.  By Lemma \ref{lem:kill}, those $m'$ cuts remove $m'$ generators and add no relator, while the remaining $|S|-1-m'$ each add at most one relator of degree at least $2$.  After all first cuts the generator rank is $d_{\mathrm{fin}}=d-m'$ and the number of relators of degree at least $2$ is at most
+\[
+   (d+4)+(|S|-1-m')=d_{\mathrm{fin}}+|S|+3.
+\]
+For each of the $U_S$ selected odd primes split in $k$, Proposition \ref{lem:degree-three} represents the second square Frobenius condition by a relator of degree at least $3$.
+
+Next, the elementary quotient $E_T/k$ of Lemma \ref{lem:elementary} survives all selected prime cuts, which bounds $d_{\mathrm{fin}}$ from below.  Indeed, if $p$ is inert in $k$, the unique prime of $k$ above $p$ has residue degree $2$ over $\mathbb{Q}$, so its Frobenius acts on every rational quadratic character as the square of a rational Frobenius and is already trivial on the exponent-$2$ extension $E_T/k$.  If $p$ is ramified or split, only the squares of Frobenius elements are killed, and these too are trivial on an exponent-$2$ quotient.  Hence the constrained group still surjects onto $\Gal(E_T/k)$, and so $d_{\mathrm{fin}}\geq g$.
+
+Finally, the weighted polynomial of the resulting presentation is bounded above by
+\[
+   1-d_{\mathrm{fin}}\tau+(d_{\mathrm{fin}}+|S|+3)\tau^2+U_S\tau^3.
+\]
+For fixed $\tau\in(0,1)$ this expression is decreasing in $d_{\mathrm{fin}}$, since $\partial/\partial d_{\mathrm{fin}}=-\tau+\tau^2<0$, and so replacing $d_{\mathrm{fin}}$ by its lower bound $g$ can only increase it.  Hence (\ref{eq:c3}) makes the weighted polynomial negative, and Theorem \ref{thm:wgs} gives infinitude.
+\end{proof}
+
+\subsection{The Extraction of the Tower Fields}
+
+Armed with Theorem \ref{thm:dyadic-gs}, we are now ready to extract the fields required by Theorem \ref{prop:master}, following the argument of \cite[Lemma 12]{Sawin}:
+
+\begin{proposition}\label{thm:fields}
+Assume (\ref{eq:c3}) and assume $7\in T$.  Then there are totally real Galois extensions $F/\mathbb{Q}$ of arbitrarily large degree, containing
+\[
+   \mathbb{Q}(\sqrt q:q\in T,\sqrt2),
+\]
+such that for $K=F(i)$ the following three properties hold.  (i) Every prime of $F$ above every $p\in S$ splits in $K/F$.  (ii) The extension $K/F$ is unramified at all finite primes, and the discriminant parameters are
+\[
+   (\Delta_K/\Delta_F)^{1/[F:\mathbb{Q}]}=\sqrt{16D}
+   \ \ \ \text{and}\ \ \
+   \sqrt{|\Delta_K|}=(\sqrt{16D})^{[F:\mathbb{Q}]}.
+\]
+(iii) The local parameters may be taken as
+\[
+   e(p)=
+   \begin{cases}
+   4,&p=2,\\
+   2,&p\in T,\\
+   1,&p\notin T\cup\{2\},
+   \end{cases}
+   \ \ \ \text{and}\ \ \
+   f(p)\leq2\quad(p\in S).
+\]
+\end{proposition}
+
+\begin{proof}
+By Theorem \ref{thm:dyadic-gs}, the constrained pro-$2$ group is infinite, and it surjects onto the finite elementary quotient $\Gal(E_T/k)$.  Consequently, the group has finite quotients of arbitrarily large order that still retain $E_T/k$.  Let $F'/k$ be the corresponding finite Galois extensions: they are totally real, unramified at all finite primes other than $\mathfrak{q}$, have dyadic local image inside $A_{\mathfrak{q}}$, and satisfy the selected prime residue degree conditions.
+
+Let $F'^*$ be the conjugate of $F'$ under the non-trivial automorphism of $k/\mathbb{Q}$, and set
+\[
+   F=F'F'^*.
+\]
+The prime $\mathfrak{q}$ is the unique dyadic prime of $k$, so the dyadic two ray condition is stable under conjugation, and the selected prime conditions are visibly stable.  Thus $F/\mathbb{Q}$ is Galois, totally real, of arbitrarily large degree, contains $E_T$, and satisfies the same local bounds.
+
+We compute the local parameters.  At odd rational primes, $F/k$ is unramified, so $e(p)=2$ for $p\in T$ (ramified in $k$) and $e(p)=1$ for odd $p\notin T$.  At $p=2$, the extension $k/\mathbb{Q}$ has ramification index $2$, the retained $\sqrt2$ ray gives one further ramified quadratic step above $k_{\mathfrak{q}}$, and since the dyadic local image lies in $A_{\mathfrak{q}}$ there is no further dyadic ramification.  Hence $e(2)=4$, and the unramified part of $A_{\mathfrak{q}}$ bounds the dyadic residue degree by $2$.  For odd $p\in S$ the imposed Frobenius conditions bound the residue degree of $p$ in $F$ by $2$, and thus $f(p)\leq2$ for all $p\in S$.
+
+We now set $K=F(i)$ and verify the splitting condition (i).  If $p\equiv1\pmod4$, then $p$ splits already in $\mathbb{Q}(i)$, and hence every prime of $F$ above it splits in $K/F$.  If $p\not\equiv1\pmod4$ is odd, the admissibility condition (\ref{eq:admissible}) provides $q\in T$ with $p$ inert in $\mathbb{Q}(\sqrt q)$.  Since $\sqrt q\in F$, the residue degree of $p$ in $F/\mathbb{Q}$ is even, so the local field at any prime of $F$ above $p$ contains the quadratic unramified extension $\mathbb{Q}_p(i)$ of $\mathbb{Q}_p$, and $p$ splits in $F(i)/F$.  At $p=2$, the hypothesis $7\in T$ gives $\sqrt7\in F$.  Since $-7\equiv1\pmod8$ is a square in $\mathbb{Q}_2$, we get $\mathbb{Q}_2(\sqrt7)=\mathbb{Q}_2(\sqrt{-1})$, so every dyadic completion of $F$ contains $i$ and the dyadic primes split in $K/F$.
+
+For (ii), note $k(i)=k(\sqrt{-D})$ and the biquadratic discriminant identity
+\[
+   \disc\mathbb{Q}(\sqrt D,i)=(4D)\cdot(-4)\cdot(-D)=(4D)^2,
+\]
+by the conductor-discriminant formula, so the relative discriminant of $k(i)/k$ is trivial and $k(i)/k$ is unramified at all finite primes.  Its base change $K/F$ is then also unramified at all finite primes.
+
+Finally we compute the root discriminant of $F$.  The tower above the fixed field $k(\sqrt2)$ is unramified at all finite primes, so $\rd(F)=\rd(k(\sqrt2))$, and $k(\sqrt2)=\mathbb{Q}(\sqrt D,\sqrt2)$.  For $D\equiv3\pmod8$,
+\[
+   \disc(\mathbb{Q}(\sqrt D))=4D,
+   \ \ \ \disc(\mathbb{Q}(\sqrt2))=8,
+   \ \ \ \text{and}\ \ \
+   \disc(\mathbb{Q}(\sqrt{2D}))=8D,
+\]
+and the conductor-discriminant formula gives
+\[
+   \disc(\mathbb{Q}(\sqrt D,\sqrt2))=(4D)\cdot8\cdot(8D)=256D^2.
+\]
+Thus $\rd(F)=(256D^2)^{1/4}=\sqrt{16D}$.  Since $K/F$ is unramified at all finite primes, we have that $(\Delta_K/\Delta_F)^{1/[F:\mathbb{Q}]}=\rd(F)=\sqrt{16D}$ and $\sqrt{|\Delta_K|}=\rd(F)^{[F:\mathbb{Q}]}$, which proves (ii) and completes the proof of the theorem.
+\end{proof}

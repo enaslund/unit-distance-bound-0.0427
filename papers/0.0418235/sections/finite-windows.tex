@@ -1,0 +1,300 @@
+\section{Weighted Windows at Split Finite Places}
+\label{fw:section}
+
+We extend the geometric criterion by placing locally constant weights
+at the selected finite primes. Keep the notation $K/F$, $d=b+2c$,
+$\theta=c/d$, $\lambda$ and $\ell=\log\lambda$ of
+Section~\ref{geo:section}, where $b>0$ and $K/F$ is unramified at all
+finite places. Put $D_0=(\lambda/2)^d$, and keep the archimedean profiles
+$f_C,g_D$ and functionals $J_C,J_D$ defined there.
+
+\subsection{The Local Functional}
+
+Let $L$ be a nonarchimedean local field with valuation ring $\mathcal O$,
+uniformizer $\pi$, and residue cardinality $Q$. Additive Haar measure gives
+$\mathcal O^2$ mass one. Multiplicative Haar measure $du$ on
+$\mathcal O^\times$ has mass one, and $n\in\mathbb Z$ has counting measure.
+Define
+\[
+ s(n,u)=(\pi^nu,\pi^{-n}u^{-1}),\qquad
+ Tg(z)=\sum_{n\in\mathbb Z}\int_{\mathcal O^\times}g(z+s(n,u))\,du.
+\]
+For a nonnegative, locally constant, compactly supported $g$, put
+\begin{equation}\label{fw:functional}
+ A(g)=\int g^p,\qquad Z(g)=\int gTg,\qquad
+ \mathcal F_\delta(g)=\frac{Z(g)}{A(g)^{1+\delta}},
+ \qquad p=\frac2{1+\delta},\quad0<\delta<1.
+\end{equation}
+Assume $g\ne0$ and $Z(g)>0$. Only finitely many valuation labels
+contribute, since both coordinates of $s(n,u)$ lie in a fixed compact
+difference set. The unit average has mass one.
+
+For any integer $a$, put $B_a=\pi^{-a}\mathcal O$. Ball intersection gives
+\begin{equation}\label{fw:rectangle-gram}
+ \int 1_{B_a\times B_b}\,T1_{B_c\times B_e}
+ =Q^{\min(a,c)+\min(b,e)}
+   [\max(a,c)+\max(b,e)+1]_+.
+\end{equation}
+Two translated balls intersect with the smaller volume exactly when
+the displacement lies in the larger ball. The first displacement must
+have valuation at least $-\max(a,c)$ and the second at least
+$-\max(b,e)$. These conditions say
+$-\max(a,c)\le n\le\max(b,e)$. Every permitted unit contributes the same
+intersection volume. This also proves the formula for negative ball indices.
+
+Put $S_0=\mathcal O$, $S_i=B_i\setminus B_{i-1}$ for $i\ge1$, and
+$m_0=1$, $m_i=Q^i-Q^{i-1}$. For $k\ge0$, let $g$ have value $w_{ij}$
+on $S_i\times\pi^{-k}S_j$ for $0\le i\le L_x$, $0\le j\le L_y$, and
+be zero elsewhere. The weights are nonnegative. With
+\[
+ D_{ir}=\begin{cases}
+ m_{\min(i,r)},&i\ne r,\\
+ 0,&i=r=0,\\
+ i m_i-Q^{i-1},&i=r\ge1,
+ \end{cases}
+\]
+define
+\[
+ K_{(i,j),(r,t)}=(k+1)m_im_j\mathbf1_{i=r,\,j=t}
+       +m_jD_{ir}\mathbf1_{j=t}+m_iD_{jt}\mathbf1_{i=r}.
+\]
+Then
+\begin{equation}\label{fw:shell-kernel}
+ A(g)=Q^k\sum_{i,j}m_im_jw_{ij}^p,\qquad Z(g)=Q^k w^TKw.
+\end{equation}
+To verify the second formula, take the four shell differences of
+\eqref{fw:rectangle-gram}. The constant $k+1$ gives the diagonal
+term. The double difference of $\max(i,r)Q^{\min(i,r)}$ is $D_{ir}$,
+whereas that of $Q^{\min(j,t)}$ is $m_j\mathbf1_{j=t}$. The remaining
+term is symmetric. Since $k\ge0$, the positive-part sign can be removed
+in all these differences. The formula holds in residue characteristic
+two and for ramified $L/\mathbb Q_p$.
+
+These profiles are separately invariant under multiplication by units and
+have the additive period
+\begin{equation}\label{fw:hard-period}
+ C=\mathcal O\times\pi^{-k}\mathcal O,\qquad |C|=Q^k,
+\end{equation}
+irrespective of the number of shells. In particular $w_{00}=1$ and all
+other weights zero recover $\mathcal F_\delta=(k+1)Q^{-\delta k}$.
+
+For product weights $w_{ij}=a_i b_j$, define
+\[
+ P_a=\sum_i m_i a_i^p,\quad S_a=\sum_i m_i a_i^2,\quad
+ R_a=\sum_{i,r}a_iD_{ir}a_r,
+\]
+and define $P_b,S_b,R_b$ similarly. Formula
+\eqref{fw:shell-kernel} becomes
+\begin{equation}\label{fw:product-shells}
+ A(g)=Q^kP_aP_b,\qquad
+ Z(g)=Q^k[(k+1)S_aS_b+R_aS_b+S_aR_b].
+\end{equation}
+Thus symmetric product weights need only one vector. The one-shell choice
+$(a_0,a_1)=(b_0,b_1)=(1,x)$ has
+$S=1+(Q-1)x^2$ and $R=2x+(Q-2)x^2$, so its log gain over the hard
+rectangle is
+\begin{equation}\label{fw:one-shell-gain}
+ \log\frac{(k+1)S^2+2SR}{k+1}
+ -2(1+\delta)\log(1+(Q-1)x^p).
+\end{equation}
+Its right derivative at zero is $4/(k+1)>0$. For the numerical
+certificate we use the full finite functional.
+
+\subsection{Finite Periods and Lattice Counting}
+
+Let $S$ now denote a finite set of $F$-primes split in $K$. At each
+$v\in S$ identify the two completions with $L_v=F_v$, compatibly with
+$\iota$, and choose a common uniformizer. Put
+\[
+ E_S=\prod_{v\in S}(L_v\times L_v),\qquad
+ \Gamma=\mathcal O_{K,S}\subset\mathbb C^d\times E_S.
+\]
+Here $\mathcal O_{K,S}$ consists of the elements integral outside the
+selected prime pairs. For a rectangular compact open subgroup
+$C_f=\prod_v(\pi_v^{a_v}\mathcal O_v\times\pi_v^{b_v}\mathcal O_v)$,
+the elements of $\Gamma$ with finite component in $C_f$ form the fractional
+ideal
+\[
+ L=\prod_v\mathfrak P_v^{a_v}(\iota\mathfrak P_v)^{b_v},\qquad
+ N_K(L)=|C_f|^{-1},\qquad \operatorname{covol}(L)=D_0/|C_f|.
+\]
+Every $C_f$-coset in $E_S$ contains a finite component of a $\Gamma$-point.
+To see this, enclose the coset and $C_f$ in larger local balls and form
+the corresponding fractional ideal $J\supset L$. After clearing a common
+denominator, the Chinese Remainder Theorem identifies $J/L$ with its
+local quotients at the selected prime ideals. This requires no
+principality hypothesis, and each finite coset has an archimedean fiber
+equal to a translate of $L$.
+
+If $P_L$ is an archimedean fundamental parallelepiped, then $P_L\times C_f$
+is a fundamental domain for $\Gamma$, of Haar volume $D_0$. First subtract
+a $\Gamma$-element to put the finite component in $C_f$, then subtract an
+$L$-element to put the infinite component in $P_L$. The same argument
+proves uniqueness and discreteness. Reciprocal archimedean deformation
+$B_h$ gives $\Gamma_h=(B_h,\mathrm{id})\Gamma$ with the same covolume.
+
+Write $H_C=d^{-1}\log|C_f|$. The codifferent argument in
+\eqref{geo:dual-product} applied to $L$ gives the product minimum
+$[2e^{H_C/2-\ell}]^d$ on every deformed dual lattice. Consequently the
+archimedean Fourier condition sufficient for this section is
+\begin{equation}\label{fw:fourier-condition}
+ \sigma\,2e^{H_C/2-\ell}\ge\log M+2\log5+2,
+\end{equation}
+using the envelope and pointwise regularity of Section~\ref{geo:section}.
+It gives a bound $2\int F_\infty/(D_0/|C_f|)$ for the sum of
+$F_\infty=\prod f_C^p\prod g_D^p$ on every archimedean fiber.
+Summing against any nonnegative, compactly supported, $C_f$-periodic
+function $F_f$ yields
+\begin{equation}\label{fw:weighted-count}
+ \sum_{\gamma\in\Gamma_h+w}F_\infty(\gamma_\infty)F_f(\gamma_f)
+ \le\frac2{D_0}\int F_\infty\int F_f.
+\end{equation}
+The values of $F_f$ on its finitely many nonzero cells sum to
+$(\int F_f)/|C_f|$, so the estimate depends on the period volume.
+Local reciprocal diagonal rescaling replaces $C_f$ by a rectangular
+period of the same volume. Hence the bound remains uniform after such
+rescalings, including those that do not preserve $\Gamma$.
+
+\subsection{Class Selection and Unit Averaging}
+
+Let $\Omega\subset\mathbb C^d\times E_S$ be bounded, have compact finite
+support, and be invariant under all coordinate rotations and local
+reciprocal unit multiplications. Denote its overlap with a norm-one step
+of archimedean pair-log coordinates $u\in\mathbb R^c$ and finite valuation
+labels $n\in\mathbb Z^S$ by $\Phi(u,n)$. Invariance removes all phase and
+unit choices. Only finitely many labels occur, and the $u$-support is
+bounded. Form the weights
+\[
+ W(n)=\int_{\mathbb R^c}\Phi(u,n)\,du.
+\]
+The quotient $\mathrm{Cl}(K)/\mathrm{im}\,\mathrm{Cl}(F)$ has order
+$\kappa h_{\rm rel}$. Map $n$ to the class of
+$A(n)=\prod_v\mathfrak P_v^{n_v}$. One class has total weight at least
+$\sum_nW(n)/(\kappa h_{\rm rel})$. Suppose this sum is positive and
+choose a positive-weight reference label $n_0$ in that class.
+For every selected label, write
+$A(n)/A(n_0)=(x_n)\mathfrak a_n\mathcal O_K$. Then
+\[
+ \beta_n=x_n/\iota(x_n),\quad N_{K/F}\beta_n=1,\quad
+ (\beta_n)=\prod_v\mathfrak P_v^{n_v-n_{0,v}}
+                  (\iota\mathfrak P_v)^{-n_v+n_{0,v}}.
+\]
+Then $\beta_n\in\mathcal O_{K,S}$ and the full set of norm-one generators
+of this ideal is $\beta_nU$. Distinct labels give disjoint cosets.
+
+Let $\alpha_0$ be the identity at infinity with finite coordinates
+$(\pi_v^{n_{0,v}},\pi_v^{-n_{0,v}})$, and put $\Omega'=\alpha_0^{-1}\Omega$.
+This preserves Haar and period volumes. The overlap with the displacement
+$(B_h\beta,\beta_f)$, for $\beta\in\beta_nU$, is
+$\Phi(l(\beta)-h,n)$. Since the overlap is independent of units and
+phases, correlations between local units of global generators and their
+archimedean data do not affect it. Tiling by the full unit lattice gives
+\[
+ \frac1{R_U}\int_{P_U}\sum_{n\text{ selected}}
+ \sum_{\beta\in\beta_nU}\Phi(l(\beta)-h,n)\,dh
+ =\frac{w_K}{R_U}\sum_{n\text{ selected}}W(n).
+\]
+For each fixed field and bounded $h$-domain, only finitely many unit-log
+lattice points meet the bounded overlap support, and the logarithmic
+kernel has $w_K$ elements. Tonelli also justifies the sums directly,
+since their terms are nonnegative. We need no distribution hypothesis
+on the local unit images.
+
+Jointly average $h$ and additive translations over a fundamental domain
+of $\Gamma_h$, then weight parameter space by its point count. The
+translation averages are $|\Omega|/D_0$ for vertices and the sum of
+overlaps divided by $D_0$ for ordered edges. Hence some pair of
+transformations gives a nonempty point set satisfying
+\begin{equation}\label{fw:joint-average}
+ \frac EN\ge
+ \frac{w_K}{\kappa h_{\rm rel}R_U}
+ \frac{\sum_n\int\Phi(u,n)\,du}{|\Omega|}.
+\end{equation}
+The uniform bound \eqref{fw:weighted-count} holds for this same pair.
+Choose the parameter domains using a continuously deformed basis and
+Haar measure on the finite period. Countable indicator sums and Tonelli
+justify the averages, including sublevel boundaries, since the
+exponential majorant is pointwise and additive tiling holds for
+measurable indicators. The class is chosen from the overlaps of the
+final window, so concentration will be applied before class selection.
+
+\subsection{The Finite-Place Transfer}
+
+For every selected place choose a nonzero, nonnegative, locally constant,
+compactly supported $g_v$ with a rectangular additive period $C_v$ and
+the unit invariance above, and with $Z_v=Z(g_v)>0$. Suppose their number
+is $O(d)$ and their profiles belong to a fixed finite list of local types.
+The finite shell profiles above meet these hypotheses. Write
+$A_v=A(g_v)$ and $\mathcal F_{\delta,v}=Z_v/A_v^{1+\delta}$. These local
+functionals give the following extension of Proposition~\ref{geo:transfer}.
+
+\begin{proposition}\label{fw:transfer}
+Suppose the field degrees tend to infinity, $\log L_F(1)\le dC$, and
+\eqref{fw:fourier-condition} holds with $C_f=\prod_v C_v$.
+Assume the archimedean energy and moment hypotheses of
+Proposition~\ref{geo:transfer}. If
+\begin{equation}\label{fw:margin}
+ \begin{split}
+ \mathcal M_{\rm fin}(\theta)={}&
+ \frac1d\sum_{v\in S}\log\mathcal F_{\delta,v}
+ -(1/2-\delta)\ell-C+(1-\delta)\log2+(1-\theta)\log\pi\\
+ &+(1-2\theta)J_C+\theta J_D
+ \end{split}
+\end{equation}
+has a fixed positive lower bound, there are planar sets of cardinality
+tending to infinity whose unordered unit-distance count divided by
+$n^{1+\delta}$ tends to infinity.
+\end{proposition}
+
+\begin{proof}
+The total profile $f=\prod f_C\prod g_D\prod_v g_v$ has
+\[
+ A=\int f^p=A_C^bA_D^c\prod_v A_v,\qquad
+ Z=I_C^bI_D^c\prod_v Z_v.
+\]
+Use the independent normalized overlap probability laws of all these
+blocks. The two endpoint energy distributions agree by reflection and
+the stated symmetries. Let $d\bar v$ be the sum of first-endpoint means
+for energy $-\log f$. On each finite factor, the positive support is a
+finite union of additive cells with a positive minimum weight, so its
+endpoint energy is bounded. The total variance is $O(d)$.
+
+On the positive support put
+$\Omega=\{-\log f\le d(\bar v+\varepsilon)\}$, for $\varepsilon>0$.
+Coercivity makes it bounded. Its finite support is compact and it has
+all the required periods and invariances. Exponential majorization and
+\eqref{fw:weighted-count}, also after the reference-label rescaling,
+give
+\[
+ |\Omega|\le A e^{pd(\bar v+\varepsilon)},\qquad
+ N\le 2A e^{pd(\bar v+\varepsilon)}/D_0.
+\]
+Chebyshev's inequality and a union bound put both endpoint energies in
+$[d(\bar v-\varepsilon),d(\bar v+\varepsilon)]$ with probability at least
+$1/2$ for large $d$. Undoing the overlap density on this event gives
+\[
+ \sum_n\int\Phi(u,n)\,du\ge\tfrac12 Z e^{2d(\bar v-\varepsilon)}.
+\]
+Since $p(1+\delta)=2$, \eqref{fw:joint-average} implies
+\[
+ \frac E{N^{1+\delta}}\ge
+ \frac{w_K D_0^\delta}{2^{1+\delta}\kappa h_{\rm rel}R_U}
+ \frac{Z}{A^{1+\delta}}e^{-4\varepsilon d}.
+\]
+Substituting \eqref{geo:mass-density}, the ordered ratio is at least
+$2^{-2-\delta}e^{d(\mathcal M_{\rm fin}-4\varepsilon)}$.
+Choose $4\varepsilon<\inf\mathcal M_{\rm fin}$ and divide by two for
+unordered edges. Projection to a compact coordinate is injective on the
+field points and sends the norm-one displacements to unit vectors.
+The upper bound $N^2/2$ for unordered edges forces $N\to\infty$.
+\end{proof}
+
+If a rational prime has actual indices $e_p,f_p$ and all its $F$-places
+split in $K/F$, there are $d/(e_pf_p)$ such places. A common local profile
+contributes $\log\mathcal F_{\delta,p}/(e_pf_p)$ to
+\eqref{fw:margin}. Hard rectangles give
+$\log\mathcal F_{\delta,p}=\log(k_p+1)-\delta k_pf_p\log p$, so their
+sum is exactly $J-\delta H$. Adding finite shells with period
+\eqref{fw:hard-period} preserves
+$H_C=\sum_p k_p\log p/e_p=H$. Hence the finite-place functional replaces
+the ideal-choice term and leaves the Fourier condition unchanged.

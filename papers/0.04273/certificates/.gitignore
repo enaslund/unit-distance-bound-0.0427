@@ -1,0 +1,4 @@
+.cache/
+__pycache__/
+census241
+lrows241.json

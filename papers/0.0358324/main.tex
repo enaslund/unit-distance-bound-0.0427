@@ -1,0 +1,136 @@
+\def\paperroot{paper/}
+\IfFileExists{preamble.tex}{\def\paperroot{}}{}
+
+\input{\paperroot preamble}
+
+\begin{document}
+
+\begin{abstract}
+For a finite set $U\subset\mathbb{R}^{2}$, let $u(U)$ denote the number
+of ordered pairs of points in $U$ at distance exactly $1$. In this
+paper we improve upon the best existing explicit lower bound for the
+Erd\H{o}s unit distance problem, due to Sawin \cite{Sawin}, and prove
+that there are arbitrarily large finite sets $U\subset\mathbb{R}^{2}$
+satisfying
+\[
+u(U)\geq C^{-1}(\#U)^{1.0358324},
+\]
+where $C>0$ is an absolute constant. The construction follows the
+number field strategy introduced in the recent disproof of Erd\H{o}s's
+unit distance conjecture, where unit distances arise from elements of
+prescribed relative norm in an ideal of a CM field, and the fields are
+supplied by a Golod-Shafarevich tower over a real quadratic field
+$\mathbb{Q}(\sqrt{D})$. The main new ingredient is a tower that is
+allowed to ramify at the unique dyadic prime of $\mathbb{Q}(\sqrt{D})$,
+which makes primes that split in $\mathbb{Q}(\sqrt{D})$ affordable in
+the Golod-Shafarevich criterion.
+\end{abstract}
+
+\maketitle
+
+\input{\paperroot chapters/01_introduction}
+\input{\paperroot chapters/02_norm_count_pigeonhole}
+\input{\paperroot chapters/03_louboutin_master}
+\input{\paperroot chapters/04_dyadic_tower}
+\input{\paperroot chapters/05_certificate}
+
+\input{\paperroot appendices/selected_prime_certificate}
+\input{\paperroot appendices/ramified_prime_witnesses}
+
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{AlonEtAl}
+Noga Alon, Thomas~F. Bloom, W.~Timothy Gowers, Daniel Litt, Will Sawin, Arul
+  Shankar, Jacob Tsimerman, Victor Wang, and Melanie~Matchett Wood,
+  \emph{Remarks on the disproof of the unit distance conjecture}, 2026,
+  arXiv:2605.20695 [math.CO].
+
+\bibitem{Banaszczyk}
+Wojciech Banaszczyk, \emph{New bounds in some transference theorems in the
+  geometry of numbers}, Mathematische Annalen \textbf{296} (1993), 625--635.
+
+\bibitem{Erdos1946}
+Paul Erd{\H o}s, \emph{On sets of distances of {$n$} points}, The American
+  Mathematical Monthly \textbf{53} (1946), no.~5, 248--250.
+
+\bibitem{Erdos1994}
+\bysame, \emph{Some problems in number theory, combinatorics and combinatorial
+  geometry}, Mathematica Pannonica \textbf{5} (1994), no.~2, 261--269.
+
+\bibitem{GolodShafarevich}
+Evgenii~S. Golod and Igor~R. Shafarevich, \emph{On the class field tower}, Izv.
+  Akad. Nauk SSSR Ser. Mat. \textbf{28} (1964), 261--272.
+
+\bibitem{HajirMaireRamakrishna}
+Farshid Hajir, Christian Maire, and Ravi Ramakrishna, \emph{On the
+  {Shafarevich} group of restricted ramification extensions of number fields in
+  the tame case}, Indiana University Mathematics Journal \textbf{70} (2021),
+  no.~6, 2693--2710.
+
+\bibitem{HalberstamRichert}
+Heini Halberstam and Hans-Egon Richert, \emph{Sieve methods}, Academic Press,
+  1974.
+
+\bibitem{IwaniecKowalski}
+Henryk Iwaniec and Emmanuel Kowalski, \emph{Analytic number theory}, AMS
+  Colloquium Publications, vol.~53, American Mathematical Society, 2004.
+
+\bibitem{Koch}
+Helmut Koch, \emph{Zum {Satz} von {Golod-Schafarewitsch}}, Mathematische
+  Nachrichten \textbf{42} (1969), 321--333.
+
+\bibitem{Louboutin}
+St{\'e}phane Louboutin, \emph{Explicit bounds for residues of {Dedekind} zeta
+  functions, values of {$L$}-functions at {$s=1$}, and relative class numbers},
+  Journal of Number Theory \textbf{85} (2000), 263--282.
+
+\bibitem{MontgomeryVaughan}
+Hugh~L. Montgomery and Robert~C. Vaughan, \emph{The large sieve}, Mathematika
+  \textbf{20} (1973), no.~2, 119--134.
+
+\bibitem{NSW}
+J{\"u}rgen Neukirch, Alexander Schmidt, and Kay Wingberg, \emph{Cohomology of
+  number fields}, 2 ed., Grundlehren der mathematischen Wissenschaften, vol.
+  323, Springer, 2008.
+
+\bibitem{OpenAIUnitDistance}
+{OpenAI}, \emph{Planar point sets with many unit distances}, 2026,
+  URL:https://openai.com/news/.
+
+\bibitem{Sawin}
+Will Sawin, \emph{An explicit lower bound for the unit distance problem}, 2026,
+  arXiv:2605.20579 [math.CO].
+
+\bibitem{Schmidt}
+Alexander Schmidt, \emph{On the relation between {$2$} and {$\infty$} in
+  {Galois} cohomology of number fields}, Compositio Mathematica \textbf{133}
+  (2002), 267--288.
+
+\bibitem{SpencerSzemerediTrotter}
+Joel Spencer, Endre Szemer{\'e}di, and William~T. Trotter, Jr., \emph{Unit
+  distances in the {Euclidean} plane}, Graph Theory and Combinatorics
+  (Cambridge, 1983), Academic Press, London, 1984, pp.~293--303.
+
+\bibitem{Spiderduckpig}
+{Spiderduckpig}, \emph{What is the unit distance exponent?}, 2026, MathOverflow
+  answer, URL (accessed on 2026-07-06): https://mathoverflow.net/a/511531.
+
+\bibitem{Vinberg}
+Ernest~B. Vinberg, \emph{On the theorem concerning the infinite-dimensionality
+  of an associative algebra}, Izv. Akad. Nauk SSSR Ser. Mat. \textbf{29}
+  (1965), 209--214.
+
+\bibitem{Washington}
+Lawrence~C. Washington, \emph{Introduction to cyclotomic fields}, 2 ed.,
+  Graduate Texts in Mathematics, vol.~83, Springer, 1997.
+
+\end{thebibliography}
+
+\end{document}

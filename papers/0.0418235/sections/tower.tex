@@ -1,0 +1,593 @@
+\section{The Arithmetic Tower}\label{tw:tower}
+We construct an infinite pro-$2$ extension with prescribed local groups.
+Its finite subextensions will supply the fields in the geometric and
+analytic arguments. All pro-$2$ subgroups and normal closures are topological. For a pro-$2$
+group $H$, write $D_nH$ for its Zassenhaus filtration, characterized in a
+finite quotient by $D_nH=\{h:h-1\in I_H^n\}$, where $I_H$ is the
+augmentation ideal of $\mathbb F_2[H]$. The associated restricted Lie
+algebra has bracket induced by commutators and restricted square induced
+by squaring. Our commutator convention is $[x,y]=x^{-1}y^{-1}xy$.
+Put
+\[
+ T=\{3,5,7,11,13\},\qquad \Sigma=T\cup\{2\},\qquad
+ E=\mathbb Q(i,\sqrt2,\sqrt3,\sqrt5,\sqrt7,\sqrt{11},\sqrt{13}).
+\]
+Let $\mathcal G$ be the Galois group of the maximal pro-$2$ extension of
+$\mathbb Q$ unramified at finite primes outside $\Sigma$, with no
+restriction at infinity. Fix actual complex conjugation $c$.
+
+\subsection{The Complete Global Presentation}
+We use the presentation and cohomological framework for pro-$p$
+extensions described in \cite{Koch2002,NeukirchSchmidtWingberg2008}.
+The odd local relations and the relation at infinity give a complete
+presentation of the global group.
+\begin{lemma}\label{tw:complete-global-presentation}
+The group $\mathcal G$ has a minimal presentation with $7$
+generators and $6$ relators.  The relators can be chosen to be $c^2$ and
+the five odd tame local relators.  In particular, the image in the global
+free group of any dyadic local relation belongs to their closed normal
+closure.
+\end{lemma}
+
+\begin{proof}
+Set $X=\operatorname{Spec}\mathbb Z[1/\prod_{p\in\Sigma}p]$.
+Since $2$ is invertible on $X$, the sheaf $\mu_2$ is constant and Kummer
+theory gives
+\[
+ H^1(X,\mathbb F_2)=
+ \langle-1,2,q:q\in T\rangle_{\mathbb F_2}.
+\]
+The displayed squareclasses are independent, so the generator rank is $7$.
+
+To bound the relation rank, take the inverse system of connected finite
+Galois $2$-covers $Y\to X$.
+Every class in $H^1(Y,\mathbb F_2)$ is a quadratic torsor.  Its normal
+closure over $X$ is again a finite Galois $2$-cover: its Galois group embeds
+in an extension of $\operatorname{Gal}(Y/X)$ by a product of copies of
+$C_2$.  The direct limit of these first cohomology groups is thus zero. The
+five-term sequence of the continuous Cartan--Leray spectral sequence
+gives an injection
+\begin{equation}\label{tw:global-h2-injection}
+ H^2(\mathcal G,\mathbb F_2)
+ \lhook\joinrel\longrightarrow H^2(X,\mu_2).
+\end{equation}
+We obtain the continuous sequence from finite Galois covers, using
+the spectral sequence for schemes
+\cite[Theorem~14.9]{MilneEtale}.
+
+The Kummer sequence and $\operatorname{Pic}(X)=0$ identify the group on the
+right with $\operatorname{Br}(X)[2]$.  Since $X$ is a regular integral
+arithmetic curve with finite residue fields, the Brauer residue sequence
+identifies $\operatorname{Br}(X)$ with the classes in
+$\operatorname{Br}(\mathbb Q)$ having zero invariant outside
+$\Sigma\cup\{\infty\}$ \cite[Theorem~6.8.3 and
+Example~6.9.4]{Poonen}. Global Brauer reciprocity then identifies its
+$2$-torsion with the vectors of local $2$-torsion invariants supported
+on $\Sigma\cup\{\infty\}$ whose sum is zero.  In particular its dimension
+is $6$. The odd-place and infinite-place coordinates are free, and
+reciprocity determines the dyadic coordinate
+\cite[Chapter~IV, Example~2.14(e)]{MilneCFT}.
+
+To prove surjectivity, we use the quaternion classes obtained by taking
+cups of global quadratic characters.
+The class $(-1,-1)$ supplies the infinite coordinate.  If $q\equiv3\pmod4$,
+then $(-1,q)$ supplies the coordinate at $q$ among the odd places and
+has zero infinite coordinate.  If $(2/q)=-1$, the class $(2,q)$ does the
+same.  The remaining primes of $T$ are $5,13$, and $2$ is a quadratic
+nonresidue at both. These classes span the odd and infinite coordinates. Their only other
+possible nonzero invariant is at two, whose value is determined by
+reciprocity.
+
+It follows, by naturality of restriction, that
+\begin{equation}\label{tw:local-h2-isomorphism}
+ H^2(\mathcal G,\mathbb F_2)
+ \xrightarrow{\ \sim\ }
+ \bigoplus_{q\in T}H^2(\mathcal G_q,\mathbb F_2)
+ \oplus H^2(C_2,\mathbb F_2),
+\end{equation}
+where $\mathcal G_q$ is the maximal pro-$2$ local group.
+At odd $q$, this group has the tame presentation
+$\langle\tau_q,\phi_q\mid
+\phi_q\tau_q\phi_q^{-1}=\tau_q^q\rangle$ and a one-dimensional second
+cohomology group.  The real group is $C_2$ and also has one relation.
+
+For a minimal free pro-$2$ presentation
+$1\to R\to\mathcal F\to\mathcal G\to1$, transgression is the
+natural perfect pairing
+\[
+ H^2(\mathcal G,\mathbb F_2)
+ \simeq\operatorname{Hom}_{\mathrm{cts}}
+       (R/R^2[R,\mathcal F],\mathbb F_2).
+\]
+This follows from the five-term sequence since $\mathcal F$ is free
+\cite[(3.3)--(3.4)]{Quadrelli2021}.
+Lift the local generators to $\mathcal F$.  Naturality of transgression
+identifies the dual of \eqref{tw:local-h2-isomorphism} with the map taking
+each local defining relator to its class in $R/R^2[R,\mathcal F]$.
+The odd tame relators and $c^2$ consequently form a basis of this quotient.
+The lift of $c$ may be chosen as a free generator, because its image is
+nonzero modulo the Frattini subgroup, detected by $\mathbb Q(i)$.
+
+A basis of the relation quotient also gives closed normal generation.
+Suppose the indicated relators normally generated $R'\ne R$.
+Some finite $2$-quotient of $\mathcal F/R'$ would then have nontrivial image
+$N$ of $R/R'$.  The finite nonzero module $N/\Phi(N)$ has nonzero
+coinvariants under this finite $2$-group: its group algebra has nilpotent
+augmentation ideal.  Hence $N/N^2[N,\mathcal F/R']\ne0$, contradicting
+that the indicated relators span $R/R^2[R,\mathcal F]$.
+Finally, a dyadic local relation maps to the identity in
+$\mathcal G$, so its lift belongs to $R$.
+\end{proof}
+
+\subsection{The Prescribed Dyadic Field}
+We choose the following extension at two.
+\begin{lemma}\label{tw:new-local-two}
+There is a Galois extension $L_2/\mathbb Q_2$ with decomposition group
+\[
+ D=\langle x,y,z\mid x^2,y^2,z^4,[y,z]^2,
+                  [x,y],[x,z],[[y,z],z]\rangle
+\]
+of order $32$, inertia $C_2^3$, residue degree $4$, and normalized
+different exponent $9/4$. Its augmentation Hilbert polynomial is
+\[
+ P_D(t)=(1+t)^3(1+t^2)^2,
+\]
+and its socle has degree seven.
+\end{lemma}
+\begin{proof}
+Let $U_4/\mathbb Q_2$ be the unramified quartic extension and set
+\[
+ A=\mathbb Q_2(i,\sqrt5,\sqrt{1+2i}),\qquad
+ L_2=A(\sqrt2)U_4.
+\]
+The norm identity $(1+2i)(1-2i)=5$ gives the dihedral extension
+$A/\mathbb Q_2$ of order eight. Its maximal abelian subextension is
+$\mathbb Q_2(i,\sqrt5)$ and its unramified degree is two. Thus
+$A(\sqrt2)$ has group $D_8\times C_2$, degree sixteen, and unramified
+degree two: its elementary abelian abelianization cannot have a cyclic
+quotient of order four. Adjoining $U_4$ doubles the degree and the
+unramified degree. Its inertia has order eight and is elementary abelian.
+
+Write $w=[y,z]$. The inertia and Frobenius generators can be chosen with
+the indicated elementary reciprocity classes $5,-1,-2$. In particular
+$z$ is a lift of a uniformizer with the specified unit component.
+The elements $x,w$ are central involutions, $y$ is an involution, and
+$z$ has order four with $z^2$ independent of $w$. These facts give the
+displayed presentation. Conversely, that presentation makes $w$ central:
+the identity $w^y=w^{-1}$ and the imposed $w^2=1$ give commutation with
+$y$, while commutation with $z$ is imposed explicitly. Its normal forms
+$x^a y^b z^c w^d$, with $a,b,d\in\mathbb F_2$ and
+$c\in\mathbb Z/4$, have multiplication
+\[
+ (a,b,c,d)(A,B,C,D)=(a+A,b+B,c+C,d+D+cB).
+\]
+These normal forms give precisely thirty-two elements. The two
+restricted layers have dimensions three and two, which gives the
+asserted Hilbert polynomial.
+
+For the different, put $k=\mathbb Q_2(i)$, $\pi=1+i$, and
+$\alpha=1+2i=1+\pi^2$. Here $v_k(\pi)=1$ and $v_k(2)=2$.
+For $b=1+\pi$, the element
+\[
+ u=\frac{\sqrt\alpha-b}{\pi}
+\]
+satisfies the Eisenstein polynomial
+\[
+ u^2+\frac{2b}{\pi}u+\frac2\pi=0.
+\]
+It is a uniformizer of $k(\sqrt\alpha)$ and gives an integral power
+basis. In its derivative, $2u$ has valuation five and $2b/\pi$ has
+valuation two. The relative different has exponent two, and the quadratic
+conductor--discriminant formula gives the same exponent for the
+character over $k$. Induction to
+$\mathbb Q_2$ adds $v_2(\operatorname{disc}k)=2$, so the associated
+degree-two representation $\rho$ has conductor exponent four.
+For the twist by $\chi_2$, dividing $2\alpha$ by the square $\pi^2$
+gives $\alpha'=2-i$. The element $u'=\sqrt{\alpha'}-1$ has Eisenstein
+polynomial
+\[
+ (u')^2+2u'+1-\alpha'=0,
+\]
+since $v_k(1-\alpha')=1$. Its derivative $2(u'+1)$ has valuation four
+in the quadratic extension. Thus the relative conductor is four and
+$\rho\otimes\chi_2$ has conductor exponent six. These calculations
+use the integral-basis formula for the different and the
+conductor--discriminant formula for a quadratic character.
+
+The local genus field $E_2=\mathbb Q_2(i,\sqrt2,\sqrt5)$ has
+discriminant exponent sixteen. The conductor--discriminant identity for
+$A(\sqrt2)$ gives
+\[
+ v_2(\operatorname{disc}(A(\sqrt2)))=16+2(4+6)=36.
+\]
+Its normalized different is $36/16=9/4$, which is unchanged by the
+unramified base extension to $L_2$.
+\end{proof}
+
+For the choice of generators in this lemma, the elementary reciprocity
+classes are $5,-1,-2$, in that order. Here reciprocity classes refer to the
+maximal elementary abelian quotient. The characters of $-1$ and $5$
+on these generators are respectively $y+z$ and $z$. Consequently the
+central square form of $A$ is $(y+z)z$, while the unramified quartic
+contributes $z^2$. Their independent sum gives the two central directions
+$[y,z]$ and $z^2$ in the presentation. Inertia is
+$\langle x,y,[y,z]\rangle$. In particular, we may choose the indicated
+representatives of the two inertia directions to have order two.
+
+The maximal pro-$2$ group of $\mathbb Q_2$ has three generators and
+one relation. Local Kummer theory gives generator rank three.
+The pro-$2$ cohomology comparison in the global proof injects its
+second cohomology into $\operatorname{Br}(\mathbb Q_2)[2]$, and the
+nonzero local Hilbert pairing makes this injection an isomorphism.
+The Kummer basis dual to $5,-1,-2$ under that pairing is $2,-5,5$.
+Its Hilbert matrix is
+\[
+ \begin{pmatrix}0&1&1\\1&1&0\\1&0&0\end{pmatrix},
+\]
+as follows, for odd $u,v$, from
+\[
+ (2^a u,2^b v)_2
+ =(-1)^{(u-1)(v-1)/4+a(v^2-1)/8+b(u^2-1)/8}.
+\]
+By the relation--cup identity \cite[Proposition~3.2]{Quadrelli2021},
+an actual defining relation in these generators has quadratic initial
+$y^{[2]}+[x,y]+[x,z]$.
+
+\subsection{The Global Cuts and Their Finite Quotient}
+Define $G$ from $\mathcal G$ by imposing the full kernel of the local
+map at two to $D$, inertia squares at $3,5,7,11,13$, Frobenius squares
+at $3,5$, and Frobenius fourth powers at
+$7,11,13,17,19,23,29,31$. At an odd ramified prime choose the Frobenius
+lift with zero coordinate on its own genus character. We may make this
+choice by multiplying by inertia. After the inertia square is imposed, the
+local tame relation makes inertia and Frobenius commute, so the specified
+even-power cut is independent of this remaining choice. Every cut
+vanishes in $E$, so the resulting extension still contains $E$.
+
+For the finite binary calculations, number the genus basis
+$(-1,2,3,5,7,11,13)$ by $0,\ldots,6$ and encode
+$v=\sum v_ie_i$ by the integer $\sum 2^iv_i$. For odd $p$, let
+\[
+ f_p=\sum_{i:a_i\ne p}\frac{1-(a_i/p)}2e_i,
+ \qquad (a_0,\ldots,a_6)=(-1,2,3,5,7,11,13),
+\]
+where $(\cdot/p)$ is the Legendre symbol. The relevant vectors are
+\[
+\begin{array}{c|rrrrrrrrrr}
+ p&3&5&7&11&13&17&19&23&29&31\\\hline
+ f_p&43&86&77&83&58&60&71&57&38&101.
+\end{array}
+\]
+The inertia vector at $p\in T$ is $e_{i(p)}$, and the dyadic vectors are
+$x=2$, $y=53$, $z=89$. Let $S(v)$ and $B(v,w)$ denote the free
+restricted square and bracket in degree two. In the ordered basis
+\[
+ e_0^{[2]},\ldots,e_6^{[2]},\quad [e_i,e_j]\ (0\le i<j\le6)
+\]
+with lexicographically ordered pairs,
+\[
+ S(v)=\sum_i v_i e_i^{[2]}+\sum_{i<j}v_iv_j[e_i,e_j],\qquad
+ B(v,w)=S(v+w)+S(v)+S(w).
+\]
+The six original quadratic initials are
+\[
+ S(e_0),\qquad
+ B(e_{i(p)},f_p)+\frac{p-1}{2}S(e_{i(p)})\quad(p\in T),
+\]
+with scalars reduced modulo two. These formulas follow by expanding the tame
+relators and the infinity
+square. We use them to compute the first three layers of the quotient.
+
+\begin{lemma}\label{tw:new-retained-quotient}
+The actual quotient $Q=G/D_4G$ has order $2^{38}$. It retains the
+entire local group $D$, local groups $C_2^2$ at $3,5$,
+$C_2\times C_4$ at $7,11,13$, and $C_4$ at
+$17,19,23,29,31$. The conjugacy class of actual complex conjugation
+in $Q$ has size $2^{12}$. Its elementary image is outside every one
+of these decomposition groups' elementary spans.
+\end{lemma}
+\begin{proof}
+Use the genus basis $(-1,2,3,5,7,11,13)$. The dyadic generators have
+elementary vectors
+\[
+ x=2,\qquad y=53,\qquad z=89.
+\]
+The six original odd and infinite quadratic relations are independent,
+and their sum is $y^{[2]}+[x,y]+[x,z]$.
+Lemma~\ref{tw:complete-global-presentation} shows that the corresponding
+original relators give a complete presentation.
+
+The local presentation in Lemma~\ref{tw:new-local-two} has four
+independent quadratic initials. In its local kernel relation quotient,
+the actual defining relation $r$ of the maximal pro-$2$ group of
+$\mathbb Q_2$ has coefficient one on $y^2$: its quadratic initial is
+$y^{[2]}+[x,y]+[x,z]$. The other six local kernel generators have no
+$y^{[2]}$ coordinate. Replacing $y^2$ by $r$ preserves generation of
+the relation quotient, hence closed normal generation by the pro-$2$
+Nakayama argument. Globally $r$ already belongs to the closed normal
+closure of the six original relators. We need not impose it
+again.
+
+The resulting complete presentation has sixteen independent quadratic
+initials: the six originals, five odd inertia squares,
+$x^{[2]},[x,y],[x,z]$, and the two Frobenius squares at $3,5$.
+It also has the actual cubic $[[y,z],z]$ and ten degree-four relators,
+including both $z^4$ and $[y,z]^2$. Reduction of the local square and
+commutator forms against these sixteen rows retains exactly the two
+independent local classes $z^{[2]}$ and $[y,z]$. The three local
+degree-one generators are independent. Thus $G/D_3G$, of order
+$2^{7+12}$, already retains all of $D$. Reduction against the same rows
+verifies the other displayed local
+groups and the separation of the elementary image of complex conjugation.
+
+The free restricted cubic layer has dimension $112$. Bracketing the
+sixteen quadratic initials with the seven generators gives rank $92$.
+The actual cubic $[[y,z],z]$ is independent and raises this rank to
+$93$. To see that there are no other degree-three initials, work in the free quotient
+$\mathcal F/D_4\mathcal F$. Its second Zassenhaus subgroup is elementary
+abelian and its third is central. The normal closure of the actual
+quadratic words $\rho_i$ and actual cubic $\kappa$ is the vector space
+spanned by $\rho_i,[\rho_i,X_k],\kappa$. Independence of the sixteen
+quadratic initials implies that a combination of the $\rho_i$ can lie in
+degree three only with every coefficient zero. Its intersection with
+degree three is precisely the span of the displayed brackets
+and $\kappa$. Their initials depend only on the quadratic initials, so
+unknown cubic coefficients of the actual quadratic words do not change
+the calculation. Consequently
+\[
+ \dim D_3G/D_4G=19,\qquad |Q|=2^{7+12+19}=2^{38}.
+\]
+In the preceding 28-coordinate convention, the sixteen rows have
+hexadecimal masks
+\[
+\begin{gathered}
+\texttt{1},\ \texttt{142104},\ \texttt{1444000},\ \texttt{4480410},\
+\texttt{a010820},\ \texttt{d020000},\\
+\texttt{4},\ \texttt{8},\ \texttt{10},\ \texttt{20},\ \texttt{40},\
+\texttt{2},\ \texttt{1a080},\ \texttt{2c080},\
+\texttt{814aab},\ \texttt{42aa056}.
+\end{gathered}
+\]
+We compute the ranks by binary elimination in a free associative algebra.
+Embed the free restricted degree-two space in the free associative algebra
+on $X_0,\ldots,X_6$ by
+$e_i^{[2]}\mapsto X_i^2$ and
+$[e_i,e_j]\mapsto X_iX_j+X_jX_i$.
+Represent homogeneous cubics by their 343 coefficients on the words
+$X_iX_jX_k$. For each of the sixteen rows $r$ and each $k$, insert
+$rX_k+X_kr$ into a binary row-echelon basis. This produces rank 92.
+Insert the tensor for $[[y,z],z]$ to obtain rank 93.
+Running the same operation on all 28 free quadratic basis elements gives
+rank 112. Ordinary binary elimination in degree two gives rank 16 and
+verifies independence of the two retained local classes. Reduction of
+$B(e_0,e_k)$ modulo the sixteen rows gives rank six and kernel
+$\langle e_0\rangle$. Reduction of $rX_0+X_0r$, for the 28 free quadratic
+basis elements $r$, modulo the cubic relation space gives rank six.
+Each calculation uses only the displayed masks and these tensor
+operations. The supplementary code performs the same integer operations.
+
+Commutation with $c$ has rank six in the second layer and rank six on
+the second layer with values in the third. Its degree-one kernel is
+exactly $\langle c\rangle$. Since $D_2Q$ has order $2^{31}$ and its
+commutator image with $c$ has order $2^6$, the intersection of the
+centralizer with $D_2Q$ has order $2^{25}$. Its image in $Q/D_2Q$ is
+the line through $c$, giving $|C_Q(c)|=2^{26}$ and the asserted
+conjugacy-class size.
+\end{proof}
+
+\subsection{Filtered Fox Images}
+We use left Fox coefficients \cite{Fox1953}:
+\[
+ w-1=\sum_i\partial_iw\,(x_i-1),\qquad
+ \partial_i(uv)=\partial_i u+u\partial_i v.
+\]
+Derivative basis vectors have degree one. If a finite-dimensional space
+$M$ has a decreasing filtration $F^0M=M$, eventually zero, write
+$H_M(t)=\sum_n\dim(F^nM/F^{n+1}M)t^n$. Subspaces have the induced
+filtration and quotients the quotient filtration. For $0<t<1$,
+\[
+ H_M(t)=(1-t)\sum_{n\ge1}\dim(M/F^nM)t^{n-1}.
+\]
+Consequently a filtration-preserving surjection $M\to N$ satisfies
+$H_N(t)\le H_M(t)$, even without strictness. In particular, for subspaces
+$U,V$ of a filtered ambient space,
+\begin{equation}\label{tw:filtered-sum}
+ H_{U+V}(t)\le H_U(t)+H_V(t)-H_{U\cap V}(t).
+\end{equation}
+To obtain this inequality, apply additivity to the quotient filtration
+from $U\oplus V$, then compare it with the induced filtration on the sum.
+We next compute the cost of a full local relation kernel.
+
+\begin{lemma}\label{tw:filtered-local-freeness}
+Let $P$ be a finite $2$-group and $D'\le P$ one of
+$C_2,C_4,C_2^2,C_2\times C_4$, or the group $D$ of
+Lemma~\ref{tw:new-local-two}. Suppose its degree-one directions, and
+its nonzero degree-two directions when present, embed in the corresponding
+Zassenhaus layers of $P$. If $D'$ has $r$ minimal generators and
+augmentation Hilbert polynomial $P_{D'}$, its full induced local Fox
+kernel has Hilbert polynomial
+\begin{equation}\label{tw:local-full-cost}
+ \left(rt-1+P_{D'}(t)^{-1}\right)H_{\mathbb F_2[P]}(t).
+\end{equation}
+Its image under a filtration-preserving map has no larger Hilbert value.
+\end{lemma}
+\begin{proof}
+These local groups have no nonzero layer above degree two, so the
+hypotheses imply $D'\cap D_nP=D_nD'$ for every $n$.
+Extend a homogeneous basis of the graded restricted Lie algebra of $D'$
+to one for $P$, ordering the local factors last. The restricted PBW
+form of Jennings' theorem \cite{Jennings,Quillen} gives lifts $t_j$ of the
+remaining monomials such that
+\[
+ \mathbb F_2[P]=\bigoplus_jt_j\mathbb F_2[D']
+\]
+as right modules and filtered vector spaces. The shift of the $j^{th}$
+summand is the weight of $t_j$, and the shift polynomial is
+$H_{\mathbb F_2[P]}/P_{D'}$.
+Put $B=\mathbb F_2[D']$. The local map
+$B^r(-1)\to I_{D'}$, $(a_i)\mapsto\sum a_i(d_i-1)$, is strict, because
+$I_{D'}^n=\sum_iI_{D'}^{n-1}(d_i-1)$. Its kernel has polynomial
+$rtP_{D'}-(P_{D'}-1)$. Filtered right-freeness preserves exactness and
+strictness under induction, proving the formula. Finally, the local
+generator words have independent elementary images in a minimal global
+free presentation and so extend to a free pro-$2$ basis. The Fox
+change-of-basis matrix and its inverse preserve augmentation degree.
+Thus the identification with a coordinate submodule in the global
+derivative module preserves the induced filtration. The assertion about
+images follows from the cumulative Hilbert formula.
+\end{proof}
+
+The dyadic block shares a relation with the odd and infinite blocks.
+We compute the image of this relation as well as the full dyadic cost.
+\begin{lemma}\label{tw:new-local-fox}
+For this dyadic local group the full induced local Fox-image cost is
+$d_D(t)=3t-1+P_D(t)^{-1}$. The common actual dyadic defining row has
+normalized image polynomial
+\[
+ s_D(t)=t^2\left(1-\frac{t^7}{P_D(t)}\right).
+\]
+\end{lemma}
+\begin{proof}
+The independent local degree-one and degree-two classes in
+Lemma~\ref{tw:new-retained-quotient} give an embedding of the local
+restricted graded Lie algebra in the global one. Extend its restricted
+PBW basis to a global basis, with the local factors last. This proves
+filtered freeness as a right local-algebra module, including the exact
+augmentation shifts. The local augmentation sequence then gives the
+full Fox-image cost $3t-1+P_D^{-1}$ by
+Lemma~\ref{tw:filtered-local-freeness}. This argument does not require
+commutativity.
+
+Write $B=\mathbb F_2[D]$. The linear coefficients of the actual
+local relation's Fox row span $I_B/I_B^2$, because the local Hilbert
+pairing is nonsingular \cite[Chapter~III, Theorem~4.4]{MilneCFT}, and
+its matrix is the matrix of linear Fox coefficients
+\cite[Proposition~3.2]{Quadrelli2021}. In our coordinates the relation
+has initial $y^{[2]}+[x,y]+[x,z]$, whose three derivative coefficients
+are $y+z,y+x,x$ and are independent. They generate $I_B$ as a right ideal by
+Nakayama. Their common left annihilator is the one-dimensional left socle of $B$.
+We can check the required graded assertion in this 32-element algebra.
+Starting with its displayed normal-form multiplication,
+form $J^0=B$ and obtain $J^{n+1}$ by spanning the right products of a
+basis of $J^n$ by $x-1,y-1,z-1$. The dimensions for $0\le n\le8$ are
+\[
+ 32,31,28,23,16,9,4,1,0.
+\]
+On $J^n/J^{n+1}$ the simultaneous multiplication map to
+$(J^{n+1}/J^{n+2})^3$ has kernel zero for $n<7$ and dimension one for
+$n=7$. This is a finite row reduction on vectors of length 32 using the
+specified multiplication. The top vector is the sum of all group elements.
+Changing the three degree-one coefficients by an invertible matrix does
+not change these kernels. Thus every nonzero homogeneous element below
+degree seven has nonzero product with at least one linear Fox coefficient. Row
+multiplication raises coefficient degree by exactly one, and the
+derivative basis shift contributes one more. The row image consequently has
+polynomial $t^2(P_D-t^7)$. Filtered induction gives the stated normalized
+cost.
+
+The actual row belongs to the full dyadic block because the local
+relation vanishes in $D$. It also belongs to the sum of the odd blocks
+and infinity square. Indeed, by the complete global presentation, the
+local relation belongs to the closed normal closure of those original
+relators. If a defining relator $\rho$ evaluates to one in the finite
+group, the Fox product rule gives
+\[
+ \partial(u\rho u^{-1})=u\partial\rho.
+\]
+Products of conjugates give module combinations of the original rows.
+Evaluation in the finite derivative module is continuous
+and its row span is closed, so the same conclusion holds for the closed
+normal closure. The filtered local coordinate change used above preserves
+the computed image polynomial. Thus the common submodule is an actual
+intersection in the global derivative module.
+\end{proof}
+
+\subsection{Infinitude and the Resulting Number Fields}
+The local Fox bounds imply that the global group is infinite and give
+the following family of number fields.
+\begin{theorem}\label{tw:new-field-family}\label{tw:field-family}
+The group $G$ is infinite. For every sufficiently large power of two $d$
+there is a totally imaginary Galois extension $K/\mathbb Q$ of degree
+$2d$ retaining $Q=G/D_4G$. For its actual complex conjugation $c$, the
+fixed field $F=K^{\langle c\rangle}$ has at least one real embedding and
+\[
+ \operatorname{rd}(K)=\operatorname{rd}(F)
+ =2^{9/4}\sqrt{15015},\qquad
+ \frac{4095}{8192}\le\theta:=\frac{r_2(F)}d<\frac12.
+\]
+The extension $K/F$ is quadratic, unramified at every finite place, and
+split at every place above the following rational primes, whose uniform
+local types in both $K$ and $F$ are
+\[
+\begin{array}{c|c|c}
+ p&e_p&f_p\\\hline
+ 2&8&4\\
+ 3,5&2&2\\
+ 7,11,13&2&4\\
+ 17,19,23,29,31&1&4.
+\end{array}
+\]
+\end{theorem}
+\begin{proof}
+Suppose first that $G$ is finite and put $A=\mathbb F_2[G]$.
+The strict global augmentation map $A^7(-1)\to I_G$ has kernel $L$ with
+$H_L=1-(1-7t)H_A$. The continuous Fox relation sequence says that the
+rows of the complete defining relations generate $L$. This also follows
+by tensoring the free augmentation sequence and using the ideal normally
+generated by the defining relators.
+The local hypotheses of Lemma~\ref{tw:filtered-local-freeness} hold by
+Lemma~\ref{tw:new-retained-quotient}. Write
+\[
+ c_1=\frac{t^2}{1+t},\qquad c_2=2t-1+(1+t)^{-2},\qquad
+ c_{24}=2t-1+\frac1{(1+t)^2(1+t^2)},\qquad
+ c_4=\frac{t^4}{(1+t)(1+t^2)}.
+\]
+The two odd $C_2^2$ blocks cost $2c_2H_A$, the three odd
+$C_2\times C_4$ blocks cost $3c_{24}H_A$, infinity costs $c_1H_A$,
+and the five unramified order-four caps cost $5c_4H_A$.
+The full dyadic block costs $d_DH_A$. Its actual intersection with the
+sum of the odd and infinite blocks contains the common row image
+$s_DH_A$, which is subtracted once by \eqref{tw:filtered-sum}.
+Consequently
+\[
+ 1\le H_A(t)\mathcal P(t),\qquad
+ \mathcal P(t)=1-7t+2c_2+3c_{24}+d_D+c_1-s_D+5c_4.
+\]
+Exact rational substitution gives
+\[
+ \mathcal P(11/34)=-\frac{160218343}{112275691650}<0.
+\]
+This contradicts finiteness. The inequality includes every defining
+relation, and the subtracted term comes from the common row image in the
+global Fox kernel.
+
+An infinite profinite group has finite quotients of unbounded order.
+Taking common refinements with $Q$ gives arbitrarily large finite
+$2$-quotients $H\twoheadrightarrow Q$. A nontrivial kernel meets $Z(H)$
+nontrivially by the class equation for conjugation, and hence contains a
+central subgroup of order two. Repeated quotienting by such subgroups
+inside the kernel realizes every intermediate power-of-two order while
+retaining $Q$. These quotients correspond to the claimed Galois fields.
+
+Because $K$ contains $i$, it is totally imaginary. The chosen complex
+conjugation fixes a real subfield in the given embedding, so $F$ has a
+real embedding. If $b=r_1(F)$ and $H=\operatorname{Gal}(K/\mathbb Q)$,
+embeddings of $F$ correspond to cosets of $\langle c\rangle$ in $H$.
+A coset is real exactly when its representative centralizes $c$. Hence
+\[
+ b=|C_H(c)|/2,\qquad \frac bd=\frac{|C_H(c)|}{|H|}.
+\]
+The conjugacy class in $H$ maps onto the class in $Q$, of size $2^{12}$.
+Thus $0<b/d\le2^{-12}$, giving the stated interval for
+$\theta=(1-b/d)/2$.
+
+Conjugation preserves an elementary image. The separation verified in
+Lemma~\ref{tw:new-retained-quotient} excludes every conjugate
+of $c$ from each ramified or selected decomposition group. Intersection
+with $\langle c\rangle$ is trivial, proving relative splitting at these
+places. Elsewhere $K/\mathbb Q$ is unramified, so $K/F$ is unramified
+there also. Relative splitting transfers the displayed local types to $F$.
+Tame inertia of order two contributes $p^{1/2}$ to the root discriminant
+at each $p\in T$, and the dyadic lemma contributes $2^{9/4}$. Finally
+$\Delta_K=\Delta_F^2$ because the relative finite discriminant is one.
+\end{proof}

@@ -1,0 +1,251 @@
+\section{Ideal Lattices and the Covolume Count}\label{sec:geometry}
+
+In this section we develop the counting side of the argument. We realize an ideal in a CM field as a lattice in $\mathbb{C}^d$, bound the number of lattice points in any ball by volume over covolume, and convert norm solutions $\beta c(\beta)=\alpha$ into unit distance pairs in the plane. In section \ref{sec:pigeonhole} we then produce an ideal $I$ and a totally positive $\alpha$ admitting many such norm solutions, by a pigeonhole argument in a narrow class group attached to $K/F$.  The counting scheme is that of \cite[Lemmas 2 through 8]{Sawin}, and we sharpen it in two places: the packing bound of \cite[Lemma 2]{Sawin} is replaced by a uniform covolume count, and the pigeonhole group of \cite[Lemma 6]{Sawin} is replaced by a narrow positive group whose order does not grow with the degree.  The goal of sections \ref{sec:geometry} through \ref{sec:master} is the master exponent inequality, Theorem \ref{prop:master}, which converts these counts into a unit distance exponent.
+
+Let $F$ be totally real of degree $d$, and let $K/F$ be a CM quadratic extension.  Choose one complex embedding $\sigma_v:K\hookrightarrow\mathbb{C}$ above each real place $v$ of $F$.  Let $I$ be a fractional ideal of $K$, let $\alpha\in F_{>0}$ be totally positive, and set
+\[
+   Q=\#\left(N_{K/F}(I)/(\alpha)\right)
+   \ \ \ \text{and}\ \ \ A=Q^{1/(2d)}.
+\]
+We assume throughout this section that
+\begin{equation}\label{eq:abs-root}
+   \sqrt{|\Delta_K|}=\lambda^d.
+\end{equation}
+Following \cite[Lemma 4]{Sawin}, define the \emph{normalized ideal lattice}
+\begin{equation}\label{eq:lattice}
+   \Lambda=\left\{\left(\frac{\sigma_v(x)}{\sqrt{\sigma_v(\alpha)}}\right)_{v\mid\infty}:\ x\in I\right\}
+   \subset \mathbb{C}^d\simeq\mathbb{R}^{2d},
+\end{equation}
+which we equip with the normalized Euclidean norm
+\[
+   |z|^2=\frac1d\sum_{v\mid\infty}|z_v|^2.
+\]
+Thus the normalized length of a vector is $1/\sqrt d$ times its ordinary Euclidean length in $\mathbb{R}^{2d}$, while volumes and covolumes below are always ordinary $2d$-dimensional Lebesgue measure, and we take the balls $B_R(w)$ in the normalized norm.  In \cite[Lemma 4]{Sawin} the same lattice is measured in the sup norm, while the Euclidean normalization is what the covolume count below requires.
+
+The key will be that the number of points of $\Lambda$ in any ball is controlled by volume over covolume, uniformly in the center.  We have the following uniform covolume count:
+\begin{proposition}\label{prop:covolume-count}
+For every $R>0$ and every $w\in\mathbb{C}^d$,
+\begin{equation}\label{eq:uniform-count}
+   \#(\Lambda\cap B_R(w))
+   \leq
+   \frac{\vol_{2d}(B_{R+\lambda/(2A)})}{\covol(\Lambda)},
+\end{equation}
+and
+\begin{equation}\label{eq:covol}
+   \covol(\Lambda)=\frac{(\lambda/2)^d}{A^{2d}}.
+\end{equation}
+Consequently, uniformly in $w$,
+\begin{equation}\label{eq:size-denom}
+  \frac1{2d}\log\#(\Lambda\cap B_R(w))
+  \leq
+  \log A+\log\left(R+\frac{\lambda}{2A}\right)
+  +\frac12\log(2\pi e)-\frac12\log\lambda+o(1),
+\end{equation}
+where $o(1)\to0$ as $d\to\infty$ for fixed $R$, $\lambda$, and $A$.
+\end{proposition}
+
+\begin{proof}
+Let $\Phi:I\hookrightarrow\mathbb{C}^d$ be the Minkowski embedding $x\mapsto(\sigma_v(x))_v$.  For a fractional ideal of a CM field,
+\[
+   \covol(\Phi(I))=2^{-d}\sqrt{|\Delta_K|}\,N_{K/\mathbb{Q}}(I).
+\]
+Passing from $\Phi(I)$ to (\ref{eq:lattice}) multiplies the $v^{th}$ complex coordinate by the real scalar $\sigma_v(\alpha)^{-1/2}$, hence multiplies covolume by
+\[
+   \prod_{v\mid\infty}\sigma_v(\alpha)^{-1}=N_{F/\mathbb{Q}}(\alpha)^{-1},
+\]
+and so
+\[
+   \covol(\Lambda)=2^{-d}\sqrt{|\Delta_K|}\frac{N_{K/\mathbb{Q}}(I)}{N_{F/\mathbb{Q}}(\alpha)}.
+\]
+Since
+\[
+   Q=\frac{N_{F/\mathbb{Q}}(\alpha)}{N_{K/\mathbb{Q}}(I)}=A^{2d},
+\]
+(\ref{eq:abs-root}) gives (\ref{eq:covol}).
+
+To prove (\ref{eq:uniform-count}) we bound the covering radius of $\Lambda$, which requires a lower bound for the minimum of the dual lattice.  Let $\mathfrak D_K$ be the different of $K/\mathbb{Q}$.  With respect to the ordinary real inner product on $\mathbb{C}^d\simeq\mathbb{R}^{2d}$, the dual lattice is
+\begin{equation}\label{eq:dual-lattice}
+   \Lambda^*=\left\{
+   \left(2\sqrt{\sigma_v(\alpha)}\,\overline{\sigma_v(\eta)}\right)_v:\
+   \eta\in\mathfrak D_K^{-1}I^{-1}
+   \right\}.
+\end{equation}
+Indeed, for $x\in I$ and $\eta\in\mathfrak D_K^{-1}I^{-1}$,
+\[
+   \sum_v \operatorname{Re}\left(\frac{\sigma_v(x)}{\sqrt{\sigma_v(\alpha)}}
+   \,2\sqrt{\sigma_v(\alpha)}\,\sigma_v(\eta)\right)=\Tr_{K/\mathbb{Q}}(x\eta)\in\mathbb{Z},
+\]
+and conversely trace duality identifies the dual of $I$ under the trace pairing with $\mathfrak D_K^{-1}I^{-1}$, so (\ref{eq:dual-lattice}) is exactly the dual lattice.
+
+For non-zero $\eta\in\mathfrak D_K^{-1}I^{-1}$, the ideal $(\eta)\mathfrak D_K I$ is integral, so
+\[
+   |N_{K/\mathbb{Q}}(\eta)|\,|\Delta_K|\,N_{K/\mathbb{Q}}(I)\geq1.
+\]
+For the corresponding vector $y\in\Lambda^*$ in (\ref{eq:dual-lattice}),
+\[
+\begin{aligned}
+   \prod_v |y_v|^2
+   &=4^dN_{F/\mathbb{Q}}(\alpha)\,|N_{K/\mathbb{Q}}(\eta)| \\
+   &\geq 4^d\frac{N_{F/\mathbb{Q}}(\alpha)}{|\Delta_K|\,N_{K/\mathbb{Q}}(I)}
+    =\left(\frac{2A}{\lambda}\right)^{2d},
+\end{aligned}
+\]
+and the inequality of arithmetic and geometric means converts this product bound into the normalized dual minimum bound
+\begin{equation}\label{eq:dual-min}
+   \lambda_1(\Lambda^*)\geq \frac{2A}{\lambda}.
+\end{equation}
+We will make use of Banaszczyk's transference theorem \cite[Theorem 2.2]{Banaszczyk}, which states that $\mu(L)\lambda_1(L^*)\leq n/2$ for every lattice $L$ of rank $n$, where $\mu$ is the covering radius and both quantities are measured in the ordinary Euclidean norm.  Here $n=2d$ and ordinary length is $\sqrt d$ times normalized length, so that in normalized units the inequality reads
+\[
+   \mu(\Lambda)\lambda_1(\Lambda^*)\leq1,
+\]
+and so by (\ref{eq:dual-min})
+\begin{equation}\label{eq:covering-radius}
+   \mu(\Lambda)\leq \frac{\lambda}{2A}.
+\end{equation}
+Now tile $\mathbb{C}^d$ by Voronoi cells of $\Lambda$.  Each cell has volume $\covol(\Lambda)$ and, by (\ref{eq:covering-radius}), is contained in the normalized ball of radius $\lambda/(2A)$ around its lattice point.  The cells centered at the points of $\Lambda\cap B_R(w)$ are disjoint and lie in $B_{R+\lambda/(2A)}(w)$, which proves (\ref{eq:uniform-count}).  Finally, a ball of normalized radius $r$ has ordinary radius $\sqrt d\,r$, so
+\[
+   \vol_{2d}(B_r)=\frac{\pi^d(dr^2)^d}{d!}=\exp(o(d))\,(\pi e r^2)^d
+\]
+by Stirling's formula, which together with (\ref{eq:covol}) gives (\ref{eq:size-denom}).
+\end{proof}
+
+The following lemma converts solutions of $\beta c(\beta)=\alpha$ in $I$ into unit distance pairs in the plane.  It plays the role of Lemmas 2 and 5 of \cite{Sawin}, with the overlap factor $(1-\frac{1}{R})^{2d}$ there sharpened to the exact two ball overlap $\Theta_{2d}(R)$:
+\begin{proposition}\label{lem:overlap}
+Let $M$ be the number of elements $\beta\in I$ satisfying $\beta c(\beta)=\alpha$.  For every fixed $R>1/2$ there is a finite set $U\subset\mathbb{R}^2$ such that
+\begin{equation}\label{eq:U-size}
+  \frac1{2d}\log\#U
+  \leq
+  \log A+\log\left(R+\frac{\lambda}{2A}\right)
+  +\frac12\log(2\pi e)-\frac12\log\lambda+o(1)
+\end{equation}
+and
+\begin{equation}\label{eq:U-pairs}
+   \frac{\#\left\{(u,v)\in U^2:\ |u-v|=1\right\}}{\#U}
+   \geq M\,\Theta_{2d}(R),
+\end{equation}
+where $\Theta_{2d}(R)$ is the volume of the intersection of two $2d$-dimensional balls of normalized radius $R$ whose centers are at normalized distance $1$, divided by the volume of one such ball.  In addition,
+\begin{equation}\label{eq:overlap-asymp}
+   \lim_{d\to\infty}\frac1{2d}\log\Theta_{2d}(R)
+   =\frac12\log\left(1-\frac1{4R^2}\right).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+If $\beta c(\beta)=\alpha$, then $|\sigma_v(\beta)|^2=\sigma_v(\alpha)$ for every real place $v$ of $F$, so the corresponding lattice vector $t_\beta\in\Lambda$ has normalized length $1$, and its projection to any fixed complex coordinate is a unit vector of $\mathbb{C}\simeq\mathbb{R}^2$ after the same normalization.  The projection $\Lambda\to\mathbb{C}$ is injective since it is induced by a field embedding $K\hookrightarrow\mathbb{C}$.
+
+Now average over translates.  Choose $w$ uniformly at random in a fundamental domain of $\Lambda$ and let $U_w\subset\mathbb{R}^2$ be the projection of $\Lambda\cap B_R(w)$.  For each solution vector $t_\beta$, the expected number of $x\in\Lambda$ with both $x$ and $x+t_\beta$ in $B_R(w)$ is
+\[
+   \frac{\vol(B_R\cap(B_R-t_\beta))}{\covol(\Lambda)}
+   =\Theta_{2d}(R)\,\frac{\vol(B_R)}{\covol(\Lambda)},
+\]
+while the expected number of points of $\Lambda\cap B_R(w)$ is exactly $\vol(B_R)/\covol(\Lambda)$.  Each such pair $(x,x+t_\beta)$ projects to an ordered pair of points of $U_w$ at distance $1$.  Summing over the $M$ solutions and comparing expectations, we see that some translate $w$ satisfies (\ref{eq:U-pairs}), and Proposition \ref{prop:covolume-count} bounds $\#U_w$ uniformly in $w$, so that (\ref{eq:U-size}) holds for the same translate.  The limit (\ref{eq:overlap-asymp}) is the standard large dimension asymptotic for the relative volume of the intersection of two equal balls at center distance $1$, since the intersection contains and is contained in caps whose relative volume has exponential rate $\frac12\log(1-1/(4R^2))$.  This then completes the proof of Proposition \ref{lem:overlap}.
+\end{proof}
+
+Note that the count (\ref{eq:uniform-count}) improves the packing bound $\#U\leq(2RA+1)^{2d}$ of \cite[Lemma 2]{Sawin} in two ways.  First, the covolume $(\lambda/2)^d/A^{2d}$ is visible in the denominator, and contributes the term $-\frac12\log\lambda$ to (\ref{eq:size-denom}).  Second, the additive thickening $\lambda/(2A)$ is negligible for our certificate, where $\log(\lambda/2A)\approx-1017$, so that the count is effectively volume over covolume.  This is what makes small radii $R$ usable in Proposition \ref{lem:overlap}.
+
+\section{The Narrow Positive Pigeonhole}\label{sec:pigeonhole}
+
+The count of Proposition \ref{lem:overlap} requires an ideal $I$ and a totally positive $\alpha$ admitting many solutions of $\beta c(\beta)=\alpha$, and in this section we produce such a pair.  The pigeonhole will take place in the following group, which records ideals together with a chosen totally positive generator of the relative norm.  Let
+\[
+G_{K/F}^+=\left\{(J,u):\ J\text{ a fractional ideal of }K,\;N_{K/F}J=(u),\;u\gg0\right\}/\sim,
+\]
+where
+\[
+   (J,u)\sim ((\gamma)J,\gamma c(\gamma)u)\ \ \ \text{for}\ \ \ \gamma\in K^\times.
+\]
+The group $G^+_{K/F}$ may be viewed as a narrow class group of the norm one torus attached to $K/F$.  The corresponding group $G_K$ of \cite[Lemma 6]{Sawin} omits the positivity condition on $u$, and has order as large as $2^{d+1}h^-(K)$.  Imposing total positivity gives a bound independent of the degree:
+
+\begin{lemma}\label{lem:narrow}
+If $K/F$ is quadratic and unramified at every finite prime, then
+\[
+   \#G_{K/F}^+\leq 2h^-(K),
+   \ \ \ \text{where}\ \ \ h^-(K)=\frac{h(K)}{h(F)}.
+\]
+\end{lemma}
+
+\begin{proof}
+There is an exact sequence
+\[
+   \mathcal{O}_K^\times\longrightarrow \mathcal{O}_F^{\times,+}\longrightarrow G_{K/F}^+
+   \longrightarrow \Cl(K)\longrightarrow \Cl^+(F),
+\]
+in which the first map is the relative norm $\gamma\mapsto\gamma c(\gamma)$, the second sends a totally positive unit $u$ to the class of $(\mathcal{O}_K,u)$, the third sends $(J,u)$ to the class of $J$, and the fourth is the relative norm of ideals.  Exactness is immediate from the definitions.  Indeed, $(J,u)$ maps to zero in $\Cl(K)$ exactly when $J=(\gamma)$ is principal, in which case $(J,u)\sim(\mathcal{O}_K,\gamma^{-1}c(\gamma)^{-1}u)$ comes from the totally positive unit $\gamma^{-1}c(\gamma)^{-1}u$.  Similarly, the classes of ideals $J$ with $N_{K/F}J$ principal with a totally positive generator are precisely those mapping to zero in $\Cl^+(F)$.
+
+It follows that
+\[
+   \#G^+_{K/F}
+   \leq
+   \#\left(\mathcal{O}_F^{\times,+}/N_{K/F}\mathcal{O}_K^\times\cap\mathcal{O}_F^{\times,+}\right)
+   \cdot
+   \#\ker\left(\Cl(K)\to\Cl^+(F)\right).
+\]
+We first bound the unit factor.  Since $N_{K/F}(\gamma)=\gamma^2$ for $\gamma\in\mathcal{O}_F^\times$, we have that $(\mathcal{O}_F^\times)^2\subseteq N_{K/F}\mathcal{O}_K^\times$, and so the factor is at most $\#\left(\mathcal{O}_F^{\times,+}/(\mathcal{O}_F^\times)^2\right)$.  Since $F$ is totally real, $\mathcal{O}_F^\times\simeq\{\pm1\}\times\mathbb{Z}^{d-1}$, hence $\#\left(\mathcal{O}_F^\times/(\mathcal{O}_F^\times)^2\right)=2^d$, and the narrow class number formula $h^+(F)/h(F)=2^d/[\mathcal{O}_F^\times:\mathcal{O}_F^{\times,+}]$ gives
+\[
+   \#\left(\mathcal{O}_F^{\times,+}/(\mathcal{O}_F^\times)^2\right)
+   =\frac{2^d}{[\mathcal{O}_F^\times:\mathcal{O}_F^{\times,+}]}
+   =\frac{h^+(F)}{h(F)}.
+\]
+We next bound the class group factor.  Since $K$ is totally imaginary, we have $\Cl^+(K)=\Cl(K)$, and since $K/F$ is quadratic, unramified at all finite primes, and ramified at all infinite places, $K$ is contained in the narrow Hilbert class field of $F$.  By class field theory the cokernel of the norm map $\Cl(K)\to\Cl^+(F)$ then has order at most $[K:F]=2$, so
+\[
+   \#\ker\left(\Cl(K)\to\Cl^+(F)\right)
+   =\frac{h(K)}{\#N_{K/F}\Cl(K)}
+   \leq\frac{2h(K)}{h^+(F)}.
+\]
+Multiplying the two factors gives $\#G^+_{K/F}\leq 2h(K)/h(F)$, which proves the lemma.
+\end{proof}
+
+Armed with Lemma \ref{lem:narrow}, we are now ready to run the pigeonhole argument of \cite[Lemma 7]{Sawin} in the smaller group:
+\begin{proposition}\label{lem:pigeonhole}
+Let $S_F$ be a finite set of prime ideals of $F$, all split in $K/F$, and let $k:S_F\to\mathbb{Z}_{\geq1}$.  Then there exist a fractional ideal $I$ of $K$ and a totally positive $\alpha\in N_{K/F}(I)$ such that
+\[
+   \#\left\{\beta\in I:\ \beta c(\beta)=\alpha\right\}
+   \geq \frac{\prod_{\mathfrak p\in S_F}(k(\mathfrak p)+1)}{h^-(K)}
+\]
+and
+\[
+   \#(N_{K/F}(I)/(\alpha))=
+   \prod_{\mathfrak p\in S_F}\#(\mathcal{O}_F/\mathfrak p)^{k(\mathfrak p)}.
+\]
+\end{proposition}
+
+\begin{proof}
+For each $\mathfrak p\in S_F$, write $\mathfrak p\mathcal{O}_K=\mathfrak P_{\mathfrak p}c(\mathfrak P_{\mathfrak p})$ and consider the set $L$ of ideals
+\[
+   J=\prod_{\mathfrak p\in S_F}\mathfrak P_{\mathfrak p}^{j_{\mathfrak p}}\,
+   c(\mathfrak P_{\mathfrak p})^{k(\mathfrak p)-j_{\mathfrak p}}
+   \ \ \ \text{with}\ \ \ 0\leq j_{\mathfrak p}\leq k(\mathfrak p).
+\]
+Every $J\in L$ has relative norm $\prod_{\mathfrak p}\mathfrak p^{k(\mathfrak p)}$, and $\#L=\prod_{\mathfrak p}(k(\mathfrak p)+1)$.  Fix $J_0\in L$.  For $J\in L$ the ideal $JJ_0^{-1}$ has trivial relative norm, so $(JJ_0^{-1},1)$ defines a class in $G_{K/F}^+$.  By Lemma \ref{lem:narrow}, some fiber of the map $L\to G^+_{K/F}$, $J\mapsto[(JJ_0^{-1},1)]$, has size at least $\#L/(2h^-(K))$.
+
+Fix such a fiber, with class represented by $(J_m,u)$, $u\gg0$.  For every $J$ in the fiber there is $\beta_J\in K^\times$ with
+\[
+   (\beta_J)J_m=JJ_0^{-1}
+   \ \ \ \text{and}\ \ \ u\,\beta_J c(\beta_J)=1.
+\]
+Take $I=J_0^{-1}J_m^{-1}$ and $\alpha=u^{-1}$, which is totally positive.  Then $\beta_J\in I$ and $\beta_J c(\beta_J)=\alpha$, and we have that $N_{K/F}(I)=(\alpha)\prod_{\mathfrak p}\mathfrak p^{-k(\mathfrak p)}$, which gives the stated index $\#(N_{K/F}(I)/(\alpha))$.  Distinct $J$ in the fiber determine distinct ideals $(\beta_J)J_m$, hence distinct solutions $\beta_J$.  Since $-\beta_J$ is a further solution generating the same ideal, the solutions come in distinct pairs $\pm\beta_J$.  The total count is thus at least
+\[
+   2\cdot\frac{\#L}{2h^-(K)}=\frac{\prod_{\mathfrak p}(k(\mathfrak p)+1)}{h^-(K)}.
+   \qedhere
+\]
+\end{proof}
+
+Specializing to rational primes as in \cite[Lemma 8]{Sawin}, we have the following corollary:
+\begin{corollary}\label{cor:rational}
+Assume $K/\mathbb{Q}$ is Galois with totally real subfield $F$ of degree $d$.  Let $S$ be a finite set of rational primes and let $k:S\to\mathbb{Z}_{\geq1}$.  Suppose every prime of $F$ above every $p\in S$ splits in $K/F$.  Let $e(p)$ be the ramification index of $p$ in $F/\mathbb{Q}$ and let $f(p)$ be an upper bound for the inertia degree of $p$ in $F/\mathbb{Q}$.  Then $I,\alpha$ may be chosen so that
+\[
+   M:=\#\left\{\beta\in I:\ \beta c(\beta)=\alpha\right\}
+   \geq \frac{\prod_{p\in S}(k(p)+1)^{d/(e(p)f(p))}}{h^-(K)}
+\]
+and
+\[
+   \#(N_{K/F}(I)/(\alpha))=\prod_{p\in S}p^{k(p)d/e(p)}.
+\]
+\end{corollary}
+
+\begin{proof}
+Apply Proposition \ref{lem:pigeonhole} with $S_F$ the set of all primes of $F$ above the primes of $S$, taking the weight of every prime above $p$ to be $k(p)$.  Since $F/\mathbb{Q}$ is Galois, there are exactly $d/(e(p)f_p)$ primes above $p$, where $f_p\leq f(p)$ is the true inertia degree, and each has residue field of size $p^{f_p}$.  Hence
+\[
+   \prod_{\mathfrak p\mid p}(k(p)+1)=(k(p)+1)^{d/(e(p)f_p)}\geq(k(p)+1)^{d/(e(p)f(p))},
+\]
+while the norm index is $\prod_{\mathfrak p\mid p}p^{f_pk(p)}=p^{k(p)d/e(p)}$, independent of $f_p$, and the result follows.
+\end{proof}
