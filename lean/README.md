@@ -23,8 +23,10 @@ selected declaration is
 `UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound`, with
 configuration [comparator-zeta241.json](comparator-zeta241.json).
 
-The package also contains the earlier conditional theorem at exponent
-`2083647/2000000 = 1.0418235`: [ChallengeZeta.lean](ChallengeZeta.lean),
+The package also contains the conditional theorem at exponent
+`2083647/2000000 = 1.0418235` of the author's interim note
+(`docs/manuscript/`), a private note never released before its inclusion in
+the public repository and superseded by the 1.04273 paper: [ChallengeZeta.lean](ChallengeZeta.lean),
 [SolutionZeta.lean](SolutionZeta.lean), `comparator-zeta.json` and its
 metadata `formalization-zeta.yaml`. It assumes a different inequality, for a
 fixed field of degree 524288, and 2,048 of its 2,162 modules are shared with

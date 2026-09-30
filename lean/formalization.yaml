@@ -41,7 +41,7 @@ sources:
 - title: An exponent of 1.04273 for the unit distance problem
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/cb7f1af7c4330b60b169473c823f196d55875d95/papers/0.04273/main.tex
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/f9f3917224cd4b2051044c73d1d61df290769b4e/papers/0.04273/main.tex
   type: paper
   location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.04273/ at the cited commit
     (main.tex, sections/, certificates/). The source archive includes these materials under
@@ -59,18 +59,20 @@ sources:
 - title: A lower exponent of 1.0418235 for planar unit distances
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/cb7f1af7c4330b60b169473c823f196d55875d95/papers/0.0418235/main.tex
-  type: paper
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/f9f3917224cd4b2051044c73d1d61df290769b4e/papers/0.0418235/main.tex
+  type: research note
   location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.0418235/ at the cited commit.
     Exported formalization package: docs/manuscript/; especially sections/tower.tex, analytic.tex,
     geometry.tex and finite-windows.tex'
   relationship: adapts
   author_endorsement: participated
-  note: 'The manuscript''s construction over Q and its conditional formalization (exponent 1.0418235,
-    in the same repository) are the templates that this development adapts to the base Q(sqrt 241): the
+  note: 'An interim private note of the author, never released before its inclusion in this repository,
+    with the lesser exponent 1.0418235; its methods are incorporated in the 1.04273 paper cited above.
+    The note''s construction over Q and its conditional formalization (exponent 1.0418235, in the same
+    repository) are the templates that this development adapts to the base Q(sqrt 241): the
     tower (sections/tower.tex), the analytic transfer (analytic.tex) and the geometric construction (geometry.tex,
-    finite-windows.tex) are reused with new data. The manuscript is an unrefereed preprint written with
-    AI tools under the owner''s direction. The inherited participated value records the author''s directing
+    finite-windows.tex) are reused with new data. The note is unrefereed and was written with AI tools
+    under the owner''s direction. The inherited participated value records the author''s directing
     role in that development; it does not assert owner proof review or authorize a new remote action.'
 - title: An explicit lower bound for the unit distance problem
   authors:

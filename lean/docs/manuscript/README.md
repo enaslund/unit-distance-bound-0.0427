@@ -1,6 +1,12 @@
 # A lower exponent of 1.0418235 for planar unit distances
 
-[Read the manuscript](main.pdf) · [LaTeX source](main.tex) · [Bibliography](references.bib)
+[Read the note](main.pdf) · [LaTeX source](main.tex) · [Bibliography](references.bib)
+
+**Status.** An interim private note of the author, never released before its
+inclusion in this repository. Its result, the exponent 1.0418235, is weaker than
+that of the paper [*An Exponent of 1.04273 for the Unit Distance Problem*](../0.04273/README.md),
+which incorporates its methods and proves them in full. It is kept for the
+record, with its computer-assisted certificate.
 
 The theorem constructs finite planar sets (U_j), with (|U_j|\to\infty),
 such that (u(U_j)/|U_j|^{1.0418235}\to\infty), counting unordered pairs.

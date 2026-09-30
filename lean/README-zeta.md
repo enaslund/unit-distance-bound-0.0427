@@ -1,5 +1,11 @@
 # Planar unit distances from one fixed zeta inequality
 
+This is the formalization of the author's interim note at exponent 1.0418235
+(`docs/manuscript/`), a private note never released before its inclusion in
+the public repository. Its lesser result is superseded by the paper *An
+Exponent of 1.04273 for the Unit Distance Problem*, which incorporates its
+methods.
+
 This package proves a **conditional theorem**: one explicit inequality H for
 the Dedekind zeta function of a fixed number field implies that finite sets
 `U_j` in the ordinary Euclidean plane satisfy
