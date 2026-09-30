@@ -1,0 +1,56 @@
+\contentsline {section}{\tocsection {}{1}{Introduction}}{1}{section.1}%
+\contentsline {subsection}{\tocsubsection {}{1.1}{Background}}{2}{subsection.1.1}%
+\contentsline {subsection}{\tocsubsection {}{1.2}{The construction in outline}}{2}{subsection.1.2}%
+\contentsline {subsection}{\tocsubsection {}{1.3}{A tower over $\mathbb Q(\sqrt {241})$}}{3}{subsection.1.3}%
+\contentsline {subsection}{\tocsubsection {}{1.4}{Why the exponent improves}}{4}{subsection.1.4}%
+\contentsline {subsection}{\tocsubsection {}{1.5}{Relation to Sawin's criterion}}{4}{subsection.1.5}%
+\contentsline {subsection}{\tocsubsection {}{1.6}{Organization}}{5}{subsection.1.6}%
+\contentsline {subsection}{\tocsubsection {}{1.7}{Computations and data}}{5}{subsection.1.7}%
+\contentsline {section}{\tocsection {}{2}{The Tower over $\mathbb Q(\sqrt {241})$}}{6}{section.2}%
+\contentsline {subsection}{\tocsubsection {}{2.1}{The Base Field}}{6}{subsection.2.1}%
+\contentsline {subsection}{\tocsubsection {}{2.2}{Local Galois Groups}}{8}{subsection.2.2}%
+\contentsline {subsection}{\tocsubsection {}{2.3}{The Global Group and Its Complete Presentation}}{10}{subsection.2.3}%
+\contentsline {subsection}{\tocsubsection {}{2.4}{The Prescribed Local Groups}}{13}{subsection.2.4}%
+\contentsline {subsection}{\tocsubsection {}{2.5}{The Retained Quotient}}{14}{subsection.2.5}%
+\contentsline {subsection}{\tocsubsection {}{2.6}{Filtered Fox Images}}{15}{subsection.2.6}%
+\contentsline {subsection}{\tocsubsection {}{2.7}{Infinitude}}{18}{subsection.2.7}%
+\contentsline {subsection}{\tocsubsection {}{2.8}{The Fields}}{19}{subsection.2.8}%
+\contentsline {section}{\tocsection {}{3}{The Kummer Field and Its Quadratic $L$-Functions}}{20}{section.3}%
+\contentsline {subsection}{\tocsubsection {}{3.1}{The Characters of the Kummer Field}}{20}{subsection.3.1}%
+\contentsline {subsection}{\tocsubsection {}{3.2}{Local Data}}{21}{subsection.3.2}%
+\contentsline {subsection}{\tocsubsection {}{3.3}{The Zeta Function of the Kummer Field}}{22}{subsection.3.3}%
+\contentsline {section}{\tocsection {}{4}{The Relative Zeta Factor and Its Explicit Ceiling}}{23}{section.4}%
+\contentsline {subsection}{\tocsubsection {}{4.1}{Reduction to $s>1$}}{24}{subsection.4.1}%
+\contentsline {subsection}{\tocsubsection {}{4.2}{The Tsfasman--Vl\u {a}du\c {t} Inequality over $B$}}{25}{subsection.4.2}%
+\contentsline {subsection}{\tocsubsection {}{4.3}{Comparison with the Kummer Field}}{26}{subsection.4.3}%
+\contentsline {subsection}{\tocsubsection {}{4.4}{A Degree-Two Approximate Functional Equation}}{27}{subsection.4.4}%
+\contentsline {subsection}{\tocsubsection {}{4.5}{Kernel Enclosures and Finite Sums}}{29}{subsection.4.5}%
+\contentsline {subsection}{\tocsubsection {}{4.6}{The Certified Value at $\sigma =301/300$}}{30}{subsection.4.6}%
+\contentsline {subsection}{\tocsubsection {}{4.7}{The Frobenius Census and the Prime Floors}}{31}{subsection.4.7}%
+\contentsline {subsection}{\tocsubsection {}{4.8}{Proof of the Ceiling}}{32}{subsection.4.8}%
+\contentsline {section}{\tocsection {}{5}{Norm-One Mass and the Geometric Transfer}}{33}{section.5}%
+\contentsline {subsection}{\tocsubsection {}{5.1}{Coordinates}}{33}{subsection.5.1}%
+\contentsline {subsection}{\tocsubsection {}{5.2}{The Unit Mass}}{34}{subsection.5.2}%
+\contentsline {subsection}{\tocsubsection {}{5.3}{Norm-One Elements from Split Primes}}{35}{subsection.5.3}%
+\contentsline {subsection}{\tocsubsection {}{5.4}{Unit Averaging and Translation}}{36}{subsection.5.4}%
+\contentsline {subsection}{\tocsubsection {}{5.5}{Uniform Lattice Counting}}{37}{subsection.5.5}%
+\contentsline {subsection}{\tocsubsection {}{5.6}{Profiles at Real and Complex Places}}{38}{subsection.5.6}%
+\contentsline {section}{\tocsection {}{6}{Weighted Windows at Split Finite Places}}{40}{section.6}%
+\contentsline {subsection}{\tocsubsection {}{6.1}{The Local Functional}}{40}{subsection.6.1}%
+\contentsline {subsection}{\tocsubsection {}{6.2}{Finite Periods and Lattice Counting}}{42}{subsection.6.2}%
+\contentsline {subsection}{\tocsubsection {}{6.3}{Class Selection and Unit Averaging}}{43}{subsection.6.3}%
+\contentsline {subsection}{\tocsubsection {}{6.4}{The Finite-Place Transfer}}{43}{subsection.6.4}%
+\contentsline {subsection}{\tocsubsection {}{6.5}{Uniform Local Types}}{45}{subsection.6.5}%
+\contentsline {section}{\tocsection {}{7}{Archimedean Profiles}}{45}{section.7}%
+\contentsline {subsection}{\tocsubsection {}{7.1}{The Gaussian at the Compact Coordinates}}{46}{subsection.7.1}%
+\contentsline {subsection}{\tocsubsection {}{7.2}{The Pair Convolution}}{46}{subsection.7.2}%
+\contentsline {subsection}{\tocsubsection {}{7.3}{Admissibility}}{48}{subsection.7.3}%
+\contentsline {subsection}{\tocsubsection {}{7.4}{A Lower Bound for the Pair Overlap}}{49}{subsection.7.4}%
+\contentsline {subsection}{\tocsubsection {}{7.5}{An Upper Bound for the Pair Mass}}{50}{subsection.7.5}%
+\contentsline {subsection}{\tocsubsection {}{7.6}{The Pair Functional}}{51}{subsection.7.6}%
+\contentsline {section}{\tocsection {}{8}{The Final Certificate}}{52}{section.8}%
+\contentsline {subsection}{\tocsubsection {}{8.1}{Parameters and Local Data}}{52}{subsection.8.1}%
+\contentsline {subsection}{\tocsubsection {}{8.2}{Certified Enclosures}}{53}{subsection.8.2}%
+\contentsline {subsection}{\tocsubsection {}{8.3}{Proof of the Main Theorem}}{55}{subsection.8.3}%
+\contentsline {subsection}{\tocsubsection {}{8.4}{Computations}}{55}{subsection.8.4}%
+\contentsline {section}{\tocsection {}{}{References}}{55}{section*.2}%

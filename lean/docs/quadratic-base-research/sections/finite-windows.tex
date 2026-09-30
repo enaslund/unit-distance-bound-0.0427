@@ -1,0 +1,521 @@
+\section{Weighted Windows at Split Finite Places}
+\label{fw:section}
+
+We now place locally constant weights at the selected finite places.
+This refines the choice of ideals in Lemma~\ref{geo:selection} in the
+same way that the archimedean profiles refine a ball. We keep the
+hypotheses (G1)--(G3) and the notation of Section~\ref{geo:section},
+and put
+\[
+ \covol_0=\covol\bigl((\mathcal O_K)_\infty\bigr)=(\lambda/2)^d .
+\]
+
+\subsection{The Local Functional}
+
+Let $L$ be a nonarchimedean local field with valuation ring $\mathcal
+O$, uniformizer $\varpi$ and residue field of cardinality $Q$. We use
+the additive Haar measure on $L$ with $|\mathcal O|=1$, the product
+measure on $L^2$, and the multiplicative Haar measure $d\omega$ on
+$\mathcal O^\times$ of total mass one. For $n\in\Z$ and
+$\omega\in\mathcal O^\times$ put
+\[
+ s(n,\omega)=(\varpi^n\omega,\ \varpi^{-n}\omega^{-1})\in L^2,\qquad
+ Tg(z)=\sum_{n\in\Z}\int_{\mathcal O^\times}g(z+s(n,\omega))\,d\omega .
+\]
+The two coordinates of $s(n,\omega)$ have product one; they model the
+finite coordinates of an element of relative norm one at a split place.
+For a nonnegative, locally constant, compactly supported function $g$
+on $L^2$ with $g\ne0$, and $0<\delta<1$, $p=2/(1+\delta)$, put
+\begin{equation}\label{fw:functional}
+ A(g)=\int_{L^2}g^p,\qquad Z(g)=\int_{L^2}g\,Tg,\qquad
+ \mathcal F_\delta(g)=\frac{Z(g)}{A(g)^{1+\delta}} .
+\end{equation}
+Only finitely many $n$ contribute to $Z(g)$: if $g(z)g(z+s(n,\omega))\ne0$
+then both coordinates of $s(n,\omega)$ lie in the compact set
+$\operatorname{supp}g-\operatorname{supp}g$, which bounds $n$ from above
+and from below.
+
+For $i\in\Z$ let $\mathcal B_i=\varpi^{-i}\mathcal O$, a ball of measure
+$Q^i$. Write $[x]_+=\max(x,0)$.
+
+\begin{lemma}\label{fw:gram-lemma}
+For all integers $i_1,j_1,i_2,j_2$,
+\begin{equation}\label{fw:rectangle-gram}
+ \int_{L^2}\mathbf 1_{\mathcal B_{i_1}\times\mathcal B_{j_1}}\,
+ T\mathbf 1_{\mathcal B_{i_2}\times\mathcal B_{j_2}}
+ =Q^{\min(i_1,i_2)+\min(j_1,j_2)}\,
+ [\max(i_1,i_2)+\max(j_1,j_2)+1]_+.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Two balls of an ultrametric space are disjoint or nested. Hence
+$\mathcal B_{i_1}\cap(\mathcal B_{i_2}-x)$ has measure
+$Q^{\min(i_1,i_2)}$ if $x\in\mathcal B_{\max(i_1,i_2)}$, and is empty
+otherwise. The left side of \eqref{fw:rectangle-gram} is therefore
+$Q^{\min(i_1,i_2)+\min(j_1,j_2)}$ times the measure of the set of
+$(n,\omega)$ with $\varpi^n\omega\in\mathcal B_{\max(i_1,i_2)}$ and
+$\varpi^{-n}\omega^{-1}\in\mathcal B_{\max(j_1,j_2)}$. These conditions
+say $-\max(i_1,i_2)\le n\le\max(j_1,j_2)$ and do not involve $\omega$,
+and the unit integral has mass one.
+\end{proof}
+
+Put $\mathcal S_0=\mathcal O$ and $\mathcal S_i=\mathcal B_i\setminus
+\mathcal B_{i-1}$ for $i\ge1$, the \emph{shells}, of measures $m_0=1$
+and $m_i=Q^i-Q^{i-1}$.
+
+\begin{definition}\label{fw:shell-profile}
+Let $k\ge0$ be an integer, and let $w=(w_{ij})_{i,j\ge0}$ be nonnegative
+weights, finitely many of them nonzero, with $w_{00}>0$. The
+\emph{shell profile} of type $(Q,k,w)$ on $L^2$ is
+\[
+ g=\sum_{i,j\ge0}w_{ij}\mathbf 1_{\mathcal S_i\times\varpi^{-k}\mathcal S_j}.
+\]
+\end{definition}
+
+A shell profile is nonnegative, locally constant and compactly
+supported. It is invariant under $(x,y)\mapsto(\omega x,\omega'y)$ for
+all $\omega,\omega'\in\mathcal O^\times$, since multiplication by a unit
+preserves valuations and hence each shell; in particular it is even. It
+is also invariant under translation by the group
+\begin{equation}\label{fw:hard-period}
+ \mathcal C=\mathcal O\times\varpi^{-k}\mathcal O,\qquad |\mathcal C|=Q^k,
+\end{equation}
+whatever the number of shells: adding an element of $\mathcal O$ does
+not change the shell of a point. We call $\mathcal C$ the \emph{period}
+of $g$. Define the symmetric matrix $\Delta=(\Delta_{ii'})_{i,i'\ge0}$ by
+\[
+ \Delta_{ii'}=m_{\min(i,i')}\ (i\ne i'),\qquad \Delta_{00}=0,\qquad
+ \Delta_{ii}=im_i-Q^{i-1}\ (i\ge1),
+\]
+and the kernel
+\[
+ \mathcal K_{(i,j),(i',j')}=(k+1)m_im_j\mathbf 1_{i=i',\,j=j'}
+ +m_j\Delta_{ii'}\mathbf 1_{j=j'}+m_i\Delta_{jj'}\mathbf 1_{i=i'}.
+\]
+
+\begin{lemma}\label{fw:shell-lemma}
+The shell profile $g$ of type $(Q,k,w)$ satisfies
+\begin{equation}\label{fw:shell-kernel}
+ A(g)=Q^k\sum_{i,j}m_im_jw_{ij}^p,\qquad
+ Z(g)=Q^k\sum_{(i,j),(i',j')}w_{ij}\,\mathcal K_{(i,j),(i',j')}\,w_{i'j'} .
+\end{equation}
+In particular $\mathcal F_\delta(g)$ depends only on the type, and the
+hard window $w_{00}=1$, $w_{ij}=0$ otherwise, has
+$\mathcal F_\delta(g)=(k+1)Q^{-\delta k}$.
+\end{lemma}
+
+\begin{proof}
+The formula for $A(g)$ holds because the sets
+$\mathcal S_i\times\varpi^{-k}\mathcal S_j$ are disjoint of measure
+$Q^km_im_j$. For $Z(g)$, write $\mathbf 1_{\mathcal S_0}=\mathbf
+1_{\mathcal B_0}$ and $\mathbf 1_{\mathcal S_i}=\mathbf 1_{\mathcal
+B_i}-\mathbf 1_{\mathcal B_{i-1}}$ for $i\ge1$, and note
+$\varpi^{-k}\mathcal B_j=\mathcal B_{j+k}$. Only balls with nonnegative
+indices occur, so by \eqref{fw:rectangle-gram} and $k\ge0$ the positive
+part can be dropped, and the Gram value of $\mathcal B_{i_1}\times
+\mathcal B_{j_1+k}$ and $\mathcal B_{i_2}\times\mathcal B_{j_2+k}$, for
+$i_1,j_1,i_2,j_2\ge0$, is
+\[
+ Q^k\bigl[(k+1)Q^{\min(i_1,i_2)}Q^{\min(j_1,j_2)}
+ +\max(i_1,i_2)Q^{\min(i_1,i_2)}Q^{\min(j_1,j_2)}
+ +Q^{\min(i_1,i_2)}\max(j_1,j_2)Q^{\min(j_1,j_2)}\bigr].
+\]
+For a function $\varphi$ of two nonnegative integers put
+$(\partial\varphi)(i,i')=\varphi(i,i')-\varphi(i-1,i')-\varphi(i,i'-1)
++\varphi(i-1,i'-1)$, where terms with an index $-1$ are omitted; this is
+the expansion of the shells into balls. Apply $\partial$ in
+$(i_1,i_2)$ and in $(j_1,j_2)$. A direct computation gives, for
+$i,i'\ge0$, that $\partial Q^{\min(i_1,i_2)}$ at $(i,i')$ is
+$m_i\mathbf 1_{i=i'}$, and that
+$\partial\bigl(\max(i_1,i_2)Q^{\min(i_1,i_2)}\bigr)$ is $\Delta_{ii'}$.
+For example, when $1\le i<i'$ the latter is
+$i'Q^i-i'Q^{i-1}-(i'-1)Q^i+(i'-1)Q^{i-1}=m_i$, and when $i=i'\ge1$ it is
+$iQ^i-2iQ^{i-1}+(i-1)Q^{i-1}=im_i-Q^{i-1}$. This gives the formula for
+$Z(g)$. For the hard window only $\mathcal K_{(0,0),(0,0)}=k+1$
+contributes.
+\end{proof}
+
+All entries of $\mathcal K$ are nonnegative, since
+$\Delta_{ii}=Q^{i-1}(iQ-i-1)\ge0$ for $i\ge1$. Hence
+$Z(g)\ge(k+1)Q^kw_{00}^2>0$ for every shell profile.
+
+For product weights $w_{ij}=x_ix'_j$, with vectors $x,x'$ of
+nonnegative numbers, put
+\[
+ P_x=\sum_im_ix_i^p,\qquad S_x=\sum_im_ix_i^2,\qquad
+ R_x=\sum_{i,i'}x_i\Delta_{ii'}x_{i'},
+\]
+and define $P_{x'},S_{x'},R_{x'}$ in the same way. Then
+\eqref{fw:shell-kernel} becomes
+\begin{equation}\label{fw:product-shells}
+ A(g)=Q^kP_xP_{x'},\qquad
+ Z(g)=Q^k\bigl[(k+1)S_xS_{x'}+R_xS_{x'}+S_xR_{x'}\bigr].
+\end{equation}
+For example, the one-shell choice $x=x'=(1,t)$ has $S_x=1+(Q-1)t^2$ and
+$R_x=2t+(Q-2)t^2$, and its gain over the hard window is
+\begin{equation}\label{fw:one-shell-gain}
+ \log\frac{(k+1)S_x^2+2S_xR_x}{k+1}-2(1+\delta)\log\bigl(1+(Q-1)t^p\bigr).
+\end{equation}
+Since $p>1$, its right derivative at $t=0$ is $4/(k+1)>0$, so a
+sufficiently small first shell always improves on the hard window. The
+certificate uses the exact finite functional \eqref{fw:product-shells}.
+
+\subsection{Finite Periods and Lattice Counting}
+
+Let $\mathcal P$ be a finite set of finite places of $F$ that split in
+$K$. For $v\in\mathcal P$ write $v\mathcal O_K=\mathfrak P_v\,\iota\mathfrak
+P_v$, where we also write $v$ for the prime ideal of $F$. The completion
+of $K$ at $\mathfrak P_v$ is $F_v$; let $j_v\colon K\to F_v$ be the
+completion map. The map $x\mapsto(j_v(x),j_v(\iota x))$ records the
+completions at $\mathfrak P_v$ and at $\iota\mathfrak P_v$, and $\iota$
+exchanges the two coordinates. If $N_{K/F}\beta=1$, then
+$j_v(\beta)j_v(\iota\beta)=1$. Let $\mathcal O_v$, $\varpi_v$ and $Q_v$
+be the valuation ring, a uniformizer and the residue cardinality of
+$F_v$. Put
+\[
+ \mathbb A_{\mathcal P}=\prod_{v\in\mathcal P}(F_v\times F_v),
+\]
+with the Haar measure that gives $\prod_v(\mathcal O_v\times\mathcal
+O_v)$ measure one, and let $\Gamma=\mathcal O_{K,\mathcal P}$ be the
+ring of elements of $K$ that are integral at every prime other than the
+$\mathfrak P_v$ and $\iota\mathfrak P_v$. We embed $\Gamma$ in
+$\C^d\times\mathbb A_{\mathcal P}$ by
+$\gamma\mapsto(\gamma_\infty,\gamma_f)$, where
+$\gamma_f=(j_v(\gamma),j_v(\iota\gamma))_v$. A subgroup of $\mathbb
+A_{\mathcal P}$ of the form
+\[
+ \mathcal C_f=\prod_{v\in\mathcal P}\bigl(\varpi_v^{a_v}\mathcal
+ O_v\times\varpi_v^{b_v}\mathcal O_v\bigr),\qquad a_v,b_v\in\Z,
+\]
+is called \emph{rectangular}; its measure is
+$|\mathcal C_f|=\prod_vQ_v^{-a_v-b_v}$.
+
+\begin{lemma}\label{fw:lattice}
+Let $\mathcal C_f$ be rectangular and put
+$\mathfrak L=\prod_v\mathfrak P_v^{a_v}(\iota\mathfrak P_v)^{b_v}$.
+\begin{enumerate}
+\item[(a)] The elements $\gamma\in\Gamma$ with $\gamma_f\in\mathcal C_f$
+form $\mathfrak L$, and $N\mathfrak L=|\mathcal C_f|^{-1}$, so
+$\covol(\mathfrak L_\infty)=\covol_0/|\mathcal C_f|$.
+\item[(b)] Every coset of $\mathcal C_f$ in $\mathbb A_{\mathcal P}$
+contains $\gamma_f$ for some $\gamma\in\Gamma$.
+\item[(c)] $\Gamma$ is a lattice in $\C^d\times\mathbb A_{\mathcal P}$.
+If $P_{\mathfrak L}$ is a fundamental parallelepiped of
+$\mathfrak L_\infty$, then $P_{\mathfrak L}\times\mathcal C_f$ is a
+fundamental domain for $\Gamma$, of measure $\covol_0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) The valuation of $j_v(\gamma)$ is the exponent of $\mathfrak P_v$
+in $\gamma$, and that of $j_v(\iota\gamma)$ is the exponent of
+$\iota\mathfrak P_v$. Together with integrality at the other primes,
+$\gamma_f\in\mathcal C_f$ says exactly that $\gamma\in\mathfrak L$. As
+$N\mathfrak P_v=N(\iota\mathfrak P_v)=Q_v$, we get
+$N\mathfrak L=\prod_vQ_v^{a_v+b_v}=|\mathcal C_f|^{-1}$, and the
+covolume follows from the formula of Section~\ref{geo:section}.
+
+(b) Choose $a'_v\le a_v$ and $b'_v\le b_v$ such that the given coset
+lies in $\mathcal C'_f=\prod_v(\varpi_v^{a'_v}\mathcal O_v\times
+\varpi_v^{b'_v}\mathcal O_v)$, and let $\mathfrak L'\supset\mathfrak L$
+be the corresponding ideal. The map $\gamma\mapsto\gamma_f$ induces a
+homomorphism $\mathfrak L'/\mathfrak L\to\mathcal C'_f/\mathcal C_f$. It
+is injective by (a), applied to $\mathcal C_f$. Both groups are finite
+of the same order: $|\mathcal C'_f/\mathcal C_f|=|\mathcal
+C'_f|/|\mathcal C_f|$, and
+$|\mathfrak L'/\mathfrak L|=N\mathfrak L/N\mathfrak L'$
+\cite[Proposition~4.2]{MilneANT}, which is the same number by (a). So
+the map is bijective, and every coset of $\mathcal C_f$ in $\mathcal
+C'_f$ contains $\gamma_f$ for some $\gamma\in\mathfrak L'\subset\Gamma$.
+No principality is needed.
+
+(c) Given $(z,c)\in\C^d\times\mathbb A_{\mathcal P}$, by (b) there is
+$\gamma\in\Gamma$ with $c-\gamma_f\in\mathcal C_f$, and then a unique
+$\gamma'\in\mathfrak L$ with $z-(\gamma+\gamma')_\infty\in P_{\mathfrak
+L}$. If $(z,c)$ had two such representations, the difference of the
+two elements of $\Gamma$ would have finite part in $\mathcal C_f$, hence
+lie in $\mathfrak L$ by (a), and then it would vanish because
+$P_{\mathfrak L}$ is a fundamental domain. Thus
+$P_{\mathfrak L}\times\mathcal C_f$ is a fundamental domain, of measure
+$(\covol_0/|\mathcal C_f|)\cdot|\mathcal C_f|=\covol_0$. Finally $\Gamma$
+is discrete: for a bounded open set $Y\ni0$ in $\C^d$, its intersection
+with the neighborhood $Y\times\mathcal C_f$ of $0$ consists of the
+finitely many $\gamma\in\mathfrak L$ with $\gamma_\infty\in Y$.
+\end{proof}
+
+For $h\in\R^c$ let $\Gamma_h=\{(W_h\gamma_\infty,\gamma_f):\gamma\in
+\Gamma\}$. It is again a lattice, with fundamental domains
+$W_hP_{\mathfrak L}\times\mathcal C_f$ of measure $\covol_0$. For a
+rectangular $\mathcal C_f$ put
+\[
+ H_f=d^{-1}\log|\mathcal C_f|.
+\]
+By Lemma~\ref{fw:lattice}(a), $N\mathfrak L=e^{-dH_f}$, and
+Lemma~\ref{geo:dual} gives the dual product bound $\mu_f^d$ for every
+$W_h\mathfrak L_\infty$, with $\mu_f=2e^{H_f/2-\ell}$. Accordingly, the
+Fourier condition used in this section is
+\begin{equation}\label{fw:fourier-condition}
+ \sigma\cdot2e^{H_f/2-\ell}\ge\log M+2\log5+2 .
+\end{equation}
+
+\begin{lemma}\label{fw:counting}
+Let $(f_\R,g_\C)$ be admissible with Fourier constants $(M,\sigma)$, and
+let $\Psi_\infty=\prod_vf_\R^p\prod_jg_\C^p$ on $\C^d$. Let
+$\Psi_f\ge0$ be a function on $\mathbb A_{\mathcal P}$ that is invariant
+under translation by a rectangular group $\mathcal C_f$ and vanishes
+outside a finite union of its cosets. If \eqref{fw:fourier-condition}
+holds, with $H_f$ defined by this $\mathcal C_f$, then for every
+$h\in\R^c$ and every $z_0\in\C^d\times\mathbb A_{\mathcal P}$,
+\begin{equation}\label{fw:weighted-count}
+ \sum_{\gamma\in\Gamma_h+z_0}\Psi_\infty(\gamma_\infty)\Psi_f(\gamma_f)
+ \le\frac2{\covol_0}\int\Psi_\infty\int\Psi_f ,
+\end{equation}
+where $\gamma_\infty$ and $\gamma_f$ are the two components of $\gamma$.
+\end{lemma}
+
+\begin{proof}
+Group the points by the coset of $\mathcal C_f$ containing their finite
+component. If two points of $\Gamma_h+z_0$ have finite components in
+the same coset, their difference comes from an element of $\mathfrak L$,
+by Lemma~\ref{fw:lattice}(a). So the archimedean components of the
+points in one coset form a translate of $W_h\mathfrak L_\infty$, or the
+empty set. By Lemma~\ref{geo:poisson}, with the dual bound $\mu_f$ and
+the Fourier bound for $\Psi_\infty$ from Section~\ref{geo:section}, the
+sum of $\Psi_\infty$ over such a translate is at most
+$2|\mathcal C_f|\int\Psi_\infty/\covol_0$. The values of $\Psi_f$ on its
+finitely many nonzero cosets sum to $\int\Psi_f/|\mathcal C_f|$.
+\end{proof}
+
+If $\alpha\in\mathbb A_{\mathcal P}$ has coordinates
+$(\varpi_v^{n_v},\varpi_v^{-n_v})$, multiplication by $\alpha$ preserves
+the Haar measure and maps rectangular groups to rectangular groups of
+the same measure. So \eqref{fw:fourier-condition} is unchanged, and
+Lemma~\ref{fw:counting} applies after such a rescaling of $\Psi_f$,
+even though the rescaling does not preserve $\Gamma$.
+
+\subsection{Class Selection and Unit Averaging}
+
+For $u\in\R^c$ and $n=(n_v)\in\Z^{\mathcal P}$ let
+$\nu(u,n)\in\C^d\times\mathbb A_{\mathcal P}$ have archimedean part
+$\nu(u)$ and finite part $(\varpi_v^{n_v},\varpi_v^{-n_v})_v$.
+
+\begin{lemma}\label{fw:selection}
+Let $\mathcal N\subset\Z^{\mathcal P}$ be finite, and let
+$\mathcal W\colon\mathcal N\to[0,\infty)$ have positive sum. There are
+$n_0\in\mathcal N$ with $\mathcal W(n_0)>0$, a subset
+$\mathcal N'\subset\mathcal N$ with
+\[
+ \sum_{n\in\mathcal N'}\mathcal W(n)\ge\frac1{\kappa h_{\rm rel}}
+ \sum_{n\in\mathcal N}\mathcal W(n),
+\]
+and elements $\beta_n\in\Gamma$, for $n\in\mathcal N'$, with
+$N_{K/F}\beta_n=1$ and
+\[
+ \beta_n\mathcal O_K=\prod_v\mathfrak P_v^{\,n_v-n_{0,v}}
+ (\iota\mathfrak P_v)^{-(n_v-n_{0,v})}.
+\]
+The cosets $\beta_n\mathcal O_K^1$ are pairwise disjoint, and
+$\beta_n\mathcal O_K^1$ is the set of all elements of relative norm one
+that generate this ideal.
+\end{lemma}
+
+\begin{proof}
+Map $n$ to the class of $\mathfrak A(n)=\prod_v\mathfrak P_v^{n_v}$ in
+$\Cl(K)$ modulo the image of $\Cl(F)$, a group of order $\kappa h_{\rm
+rel}$. Let $\mathcal N'$ be a fiber of largest total weight, and choose
+$n_0\in\mathcal N'$ with $\mathcal W(n_0)>0$. For $n\in\mathcal N'$ write
+$\mathfrak A(n)\mathfrak A(n_0)^{-1}=x_n\mathfrak a_n\mathcal O_K$ with
+$x_n\in K^\times$ and $\mathfrak a_n$ a fractional ideal of $F$, and put
+$\beta_n=x_n/\iota x_n$. As in the proof of Lemma~\ref{geo:selection},
+$N_{K/F}\beta_n=1$ and $\beta_n$ generates the displayed ideal, which
+is supported on the primes $\mathfrak P_v,\iota\mathfrak P_v$; hence
+$\beta_n\in\Gamma$. Two elements of relative norm one generating the
+same ideal differ by an element of $\mathcal O_K^1$, and distinct labels
+give distinct ideals.
+\end{proof}
+
+If $\beta\in\beta_n\mathcal O_K^1$, then $j_v(\beta)$ has valuation
+$n_v-n_{0,v}$ and $j_v(\iota\beta)=j_v(\beta)^{-1}$. Let
+$\varpi_0\in\mathbb A_{\mathcal P}$ have coordinates
+$(\varpi_v^{n_{0,v}},\varpi_v^{-n_{0,v}})$. Then $\varpi_0\beta_f$ has
+coordinates $(\varpi_v^{n_v}\omega_v,\varpi_v^{-n_v}\omega_v^{-1})$ with
+units $\omega_v\in\mathcal O_v^\times$.
+
+\subsection{The Finite-Place Transfer}
+
+\begin{proposition}\label{fw:transfer}
+Let $0<\delta<1$ and $C\in\R$. Let $(K_j/F_j)_{j\ge1}$ be quadratic
+extensions satisfying (G1)--(G3) with a common $\lambda$, with
+$d_j=[F_j:\Q]\to\infty$ and $\log L_{F_j}(1)\le d_jC$. For each $j$ let
+$\mathcal P_j$ be a finite set of finite places of $F_j$ that split in
+$K_j$, and for $v\in\mathcal P_j$ let $g_v$ be a shell profile on
+$F_v^2$ of type $(Q_v,k_v,w^{(v)})$, where the types range over a fixed
+finite set independent of $j$. Let $\mathcal F_{\delta,v}=\mathcal
+F_\delta(g_v)$, let $(f_\R,g_\C)$ be admissible with Fourier constants
+$(M,\sigma)$, and suppose that \eqref{fw:fourier-condition} holds for
+every $j$, with $\mathcal C_f=\prod_{v\in\mathcal P_j}(\mathcal
+O_v\times\varpi_v^{-k_v}\mathcal O_v)$, that is, with
+$H_f=d_j^{-1}\sum_{v\in\mathcal P_j}k_v\log Q_v$. Put
+\begin{equation}\label{fw:margin}
+ \begin{split}
+ \mathcal M_{\rm fin}(\theta)={}&
+ \frac1d\sum_{v\in\mathcal P}\log\mathcal F_{\delta,v}
+ -(1/2-\delta)\ell-C+(1-\delta)\log2+(1-\theta)\log\pi\\
+ &+(1-2\theta)J_\R+\theta J_\C ,
+ \end{split}
+\end{equation}
+evaluated for $K_j/F_j$. If these margins have a positive lower bound
+over $j$, then there are finite sets $U_j\subset\R^2$ with
+$|U_j|\to\infty$ and $u(U_j)/|U_j|^{1+\delta}\to\infty$.
+\end{proposition}
+
+\begin{proof}
+Fix $\eta>0$ with $4\eta$ less than the lower bound of the margins, and
+consider one extension $K/F$ of the sequence, with $d$ large.
+
+\emph{The profile and its window.} On $\C^d\times\mathbb A_{\mathcal
+P}$ let $f=\prod_vf_\R\prod_jg_\C\prod_{v\in\mathcal P}g_v$, with one
+factor for each archimedean block and each finite place, let
+$V=-\log f$ on the set where $f>0$, and put
+\[
+ A=\int f^p=A_\R^bA_\C^c\prod_{v\in\mathcal P}A(g_v),\qquad
+ Z=I_\R^bI_\C^c\prod_{v\in\mathcal P}Z(g_v).
+\]
+At a finite place, the \emph{endpoint law} is the probability density
+$g_v(z)g_v(z+s(n,\omega))/Z(g_v)$ on $F_v^2\times\Z\times\mathcal
+O_v^\times$; the energy $-\log g_v$ of its first endpoint takes finitely
+many values. The map $(z,n,\omega)\mapsto(-z-s(n,\omega),n,\omega)$
+preserves this law and carries the first endpoint to minus the second,
+and $g_v$ is even. Together with the archimedean endpoint laws of
+Section~\ref{geo:section}, the product of all these laws is a
+probability law under which the energies $V$ of the two endpoints have
+the same distribution and are sums of independent terms. Let $d\bar m$
+be their mean. The residue characteristics of the places in $\mathcal
+P$ lie in a fixed finite set, so $|\mathcal P|=O(d)$, and since the
+types range over a finite set, the variance of either energy is $O(d)$.
+As in the proof of Proposition~\ref{geo:transfer}, with probability at
+least $1/2$ for large $d$, both energies lie in
+$[d(\bar m-\eta),d(\bar m+\eta)]$.
+
+Let $\Omega$ be the set of points of $\C^d\times\mathbb A_{\mathcal P}$
+where $f>0$ and $V\le d(\bar m+\eta)$. It is a bounded Borel set: the
+archimedean energies are coercive and bounded below, and the finite
+part lies in the compact support of $\prod_vg_v$, on which the finite
+energies are bounded. It is invariant under rotations of the
+archimedean coordinates, under $(x_v,y_v)\mapsto(\omega x_v,\omega'y_v)$
+for units at each $v\in\mathcal P$, and under translation by
+$\mathcal C_f$. For $u\in\R^c$ and $n\in\Z^{\mathcal P}$ let
+$\Phi(u,n)=|\Omega\cap(\Omega-\nu(u,n))|$, and let
+$\mathcal W(n)=\int_{\R^c}\Phi(u,n)\,du$. By the unit invariance, the
+overlap of $\Omega$ with its translate by a vector whose archimedean
+part has the moduli of $\nu(u)$ and whose finite part is
+$(\varpi_v^{n_v}\omega_v,\varpi_v^{-n_v}\omega_v^{-1})_v$ equals
+$\Phi(u,n)$. Only finitely many $n$ have $\mathcal W(n)\ne0$. Undoing the
+endpoint density on the event of the previous paragraph, as in the
+proof of Proposition~\ref{geo:transfer}, gives
+\[
+ \sum_{n}\mathcal W(n)\ge\tfrac12Ze^{2d(\bar m-\eta)},
+ \qquad
+ |\Omega|\le Ae^{pd(\bar m+\eta)} .
+\]
+
+\emph{Class selection and rescaling.} Apply Lemma~\ref{fw:selection} to
+the finitely many $n$ with $\mathcal W(n)>0$, obtaining $n_0$,
+$\mathcal N'$ and $\beta_n$, and let $\varpi_0$ be as above. Put
+$\Omega'=\varpi_0^{-1}\Omega$, where $\varpi_0$ acts on the finite part.
+Then $|\Omega'|=|\Omega|$, and $\Omega'$ is invariant under the
+rectangular group $\mathcal C'_f=\varpi_0^{-1}\mathcal C_f$, of measure
+$|\mathcal C_f|$. For $n\in\mathcal N'$, $\beta\in\beta_n\mathcal O_K^1$
+and $h\in\R^c$, the element $\beta_h=(W_h\beta_\infty,\beta_f)\in
+\Gamma_h$ satisfies
+\[
+ |\Omega'\cap(\Omega'-\beta_h)|=|\Omega\cap(\Omega-(W_h\beta_\infty,
+ \varpi_0\beta_f))|=\Phi(l(\beta)-h,n),
+\]
+by the last paragraph of the previous subsection and the unit
+invariance.
+
+\emph{Points and edges.} For $h\in\R^c$ and $z_0$ in the fundamental
+domain $W_hP_{\mathfrak L'}\times\mathcal C'_f$ of $\Gamma_h$ given by
+Lemma~\ref{fw:lattice}, where $\mathfrak L'$ corresponds to
+$\mathcal C'_f$, let $\mathcal X(h,z_0)=(\Gamma_h+z_0)\cap\Omega'$ and
+$N(h,z_0)=|\mathcal X(h,z_0)|$, and let $\mathcal E(h,z_0)$ count the
+pairs $(x,\beta)$ with $x\in\mathcal X(h,z_0)$,
+$\beta\in\bigcup_{n\in\mathcal N'}\beta_n\mathcal O_K^1$ and
+$x+\beta_h\in\Omega'$. Parametrize $z_0$ by $y\in[0,1)^{2d}$ through a
+basis of $\mathfrak L'_\infty$, as in Section~\ref{geo:section}, and by
+the Haar probability on $\mathcal C'_f$. Since
+$\mathbf 1_{\Omega'}\le e^{pd(\bar m+\eta)}(f\circ\varpi_0)^p$ and
+$(f\circ\varpi_0)^p$ is the product of an archimedean factor and a
+function invariant under $\mathcal C'_f$, Lemma~\ref{fw:counting} gives
+\[
+ N(h,z_0)\le N_{\max}=\frac{2Ae^{pd(\bar m+\eta)}}{\covol_0}
+\]
+for all $(h,z_0)$. By tiling, the average of $N(h,z_0)$ over $z_0$ is
+$|\Omega'|/\covol_0$, and the average of $\mathcal E(h,z_0)$ is
+$\covol_0^{-1}\sum_{n\in\mathcal N'}\sum_{\beta\in\beta_n\mathcal O_K^1}
+\Phi(l(\beta)-h,n)$. Averaging over $h\in\Pi^1$ as in
+Lemma~\ref{geo:unfold-lemma}, the average of $\mathcal E$ becomes
+\[
+ \frac{w_K}{\operatorname{Reg}^1\covol_0}\sum_{n\in\mathcal N'}\mathcal W(n)
+ \ge\frac{w_K}{\kappa h_{\rm rel}\operatorname{Reg}^1\covol_0}
+ \sum_n\mathcal W(n).
+\]
+Measurability and integrability hold as in
+Lemma~\ref{geo:joint-average-lemma}, since $\mathcal E\le N^2\le
+N_{\max}^2$. The argument of that lemma yields a pair $(h,z_0)$ with
+$N=N(h,z_0)>0$ and
+\[
+ \frac{\mathcal E(h,z_0)}N\ge\frac{w_K}{\kappa h_{\rm rel}
+ \operatorname{Reg}^1}\,\frac{\sum_n\mathcal W(n)}{|\Omega|}
+ \ge\frac{w_K}{\kappa h_{\rm rel}\operatorname{Reg}^1}\,
+ \frac{Ze^{2d(\bar m-\eta)}}{2Ae^{pd(\bar m+\eta)}} .
+\]
+With $N\le N_{\max}$ and $p(1+\delta)=2$,
+\[
+ \frac{\mathcal E(h,z_0)}{N^{1+\delta}}\ge
+ \frac{w_K\covol_0^\delta}{2^{1+\delta}\kappa h_{\rm rel}
+ \operatorname{Reg}^1}\,\frac{Z}{A^{1+\delta}}\,e^{-4\eta d}.
+\]
+By \eqref{geo:mass-density} and $\log L_F(1)\le dC$, the first factor
+is at least
+$2^{-2-\delta}2^{d(1-\delta)}\pi^{(1-\theta)d}\lambda^{-(1/2-\delta)d}e^{-dC}$,
+and $Z/A^{1+\delta}=\exp\bigl(bJ_\R+cJ_\C+\sum_v\log\mathcal
+F_{\delta,v}\bigr)$. Hence
+$\mathcal E/N^{1+\delta}\ge2^{-2-\delta}e^{d(\mathcal M_{\rm
+fin}(\theta)-4\eta)}$.
+
+\emph{The planar set.} Let $v_0$ be a real place of $F$ and let $U$ be
+the set of $v_0$-coordinates of the points of $\mathcal X(h,z_0)$.
+Distinct points differ by $(W_h\gamma_\infty,\gamma_f)$ with
+$0\ne\gamma\in\Gamma$, whose $v_0$-coordinate is nonzero, so $|U|=N$.
+Each counted pair $(x,\beta)$ gives two points at distance
+$|\sigma_{v_0}(\beta)|=1$, and distinct pairs give distinct ordered
+pairs of points. As in the proof of Proposition~\ref{geo:transfer},
+$u(U)\ge\mathcal E/2$, the ratio $u(U)/|U|^{1+\delta}$ tends to
+infinity, and the bound $u(U)\le|U|^2/2$ forces $|U|\to\infty$.
+\end{proof}
+
+\subsection{Uniform Local Types}
+Suppose that $K/F$ has uniform local types $(e_r,f_r)_{r\in\mathcal R}$
+in the sense of Section~\ref{geo:section}, that $\mathcal P$ is the set
+of all places of $F$ above $\mathcal R$, and that at every place above
+$r$ we use a shell profile of the same type $(r^{f_r},k_r,w^{(r)})$.
+Write $\mathcal F_{\delta,r}$ for its functional. Since there are
+$d/(e_rf_r)$ places above $r$,
+\begin{equation}\label{fw:uniform}
+ \frac1d\sum_{v\in\mathcal P}\log\mathcal F_{\delta,v}
+ =\sum_{r\in\mathcal R}\frac{\log\mathcal F_{\delta,r}}{e_rf_r},
+ \qquad
+ H_f=\sum_{r\in\mathcal R}\frac{k_r\log r}{e_r}=H .
+\end{equation}
+In particular \eqref{fw:fourier-condition} coincides with
+\eqref{geo:poisson-condition}, whatever the shell weights. For hard
+windows, Lemma~\ref{fw:shell-lemma} gives
+$\log\mathcal F_{\delta,r}=\log(k_r+1)-\delta k_rf_r\log r$, and the sum
+in \eqref{fw:uniform} is $J-\delta H$. Thus
+Proposition~\ref{fw:transfer} contains Proposition~\ref{geo:transfer},
+and the shell weights replace the term $J-\delta H$ of
+\eqref{geo:general-margin} by the finite functional without changing the
+Fourier condition.

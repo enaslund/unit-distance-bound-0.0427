@@ -1,23 +1,23 @@
 {
-  "archive": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/candidate4.tar.gz",
-  "archive_sha256": "4f6b79d9690b34a1db592700385db73a8d2b371e94592806288e951f8c9fd30e",
+  "archive": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/candidate5.tar.gz",
+  "archive_sha256": "6614aefb039743275c774b8ad14717c8d4528684de2a1aaa355fc8d604e57f2f",
   "checks": [
     {
       "command": [
         "/usr/bin/python3",
         "scripts/export-zeta241-candidate.py",
         "--output",
-        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/gate4-work/reexport.tar.gz",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/gate5-work/reexport.tar.gz",
         "--report",
-        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/gate4-work/reexport.json"
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/gate5-work/reexport.json"
       ],
       "exit_code": 0,
-      "finished_at": "2026-09-30T06:47:44.794960+00:00",
-      "log": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/gate4-determinism.log",
-      "log_sha256": "08a2e76c1277fac5ec64a4d7403a4ddcd093e9a635481e839e64feb8058e7093",
-      "pid": 4068516,
-      "seconds": 4.565,
-      "started_at": "2026-09-30T06:47:40.230041+00:00",
+      "finished_at": "2026-09-30T21:44:18.018454+00:00",
+      "log": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/gate5-determinism.log",
+      "log_sha256": "dd96fc9faf86e8b33c72bb25ec5c4fadfdf30329094d4997fb5791f0be4f15f7",
+      "pid": 83672,
+      "seconds": 4.625,
+      "started_at": "2026-09-30T21:44:13.393329+00:00",
       "state": "passed"
     },
     {
@@ -30,24 +30,24 @@
         "65f0154ed776cd26c224254aa57b379137f28b0d"
       ],
       "exit_code": 0,
-      "finished_at": "2026-09-30T06:47:44.924143+00:00",
-      "log": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/gate4-metadata.log",
-      "log_sha256": "e5994e3b18fc99a494496048803a08bdf99114114629c9d2e1efb2e2e527465f",
-      "pid": 4068520,
-      "seconds": 0.109,
-      "started_at": "2026-09-30T06:47:44.815040+00:00",
+      "finished_at": "2026-09-30T21:44:18.148935+00:00",
+      "log": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/gate5-metadata.log",
+      "log_sha256": "520c8156b72299437f067f4c5168e52982f232f253345655bd353f3ee4904b4b",
+      "pid": 83674,
+      "seconds": 0.108,
+      "started_at": "2026-09-30T21:44:18.040999+00:00",
       "state": "passed"
     }
   ],
   "deterministic_archive": true,
-  "finished_at": "2026-09-30T06:47:45.133054+00:00",
+  "finished_at": "2026-09-30T21:44:18.356694+00:00",
   "mode": "archive-only",
   "passed": true,
   "policy_revision": "65f0154ed776cd26c224254aa57b379137f28b0d",
   "policy_tree": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/upstream/PalomarSubmission-current-20260928-pinned",
   "remote_submission": false,
   "scope": "Local source archive and pinned metadata contract only. No Lean build, axiom audit, or independent kernel replay. The fixed zeta inequality is not verified.",
-  "seconds": 5.564,
+  "seconds": 5.637,
   "selected_audit_script": "verification/Zeta241Audit.lean",
   "selected_configuration": "comparator-zeta241.json",
   "selected_exporter": "scripts/export-zeta241-candidate.py",
@@ -58,11 +58,11 @@
   "selected_theorems": [
     "UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound"
   ],
-  "snapshot_sha256": "c474d592bd165bb03b470c65c736591617187697deaee60349d9fd654e309c6d",
+  "snapshot_sha256": "2bcea56ab85fabd19e2e26e26937c2a0b9cd12b9620ac02b4455e35a37defd86",
   "sources_unchanged": true,
-  "started_at": "2026-09-30T06:47:39.569561+00:00",
+  "started_at": "2026-09-30T21:44:12.719506+00:00",
   "state": "passed",
   "threads": 2,
   "timeout_seconds": 19800,
-  "work_directory": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/gate4-work"
+  "work_directory": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/gate5-work"
 }

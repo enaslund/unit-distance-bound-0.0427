@@ -1,0 +1,349 @@
+\section{Introduction}\label{intro:section}
+For a finite set $U\subset\R^2$, let
+\[
+ u(U)=\#\{\{x,y\}\subset U:|x-y|=1\},\qquad
+ u(n)=\max_{|U|=n}u(U),
+\]
+where the pairs are unordered and the distance is Euclidean. The unit
+distance problem of Erd\H{o}s \cite{Erdos1946} asks for the order of
+growth of $u(n)$. Our main result is the following.
+
+\begin{theorem}\label{thm:main}
+There are finite sets $U_j\subset\R^2$, with $|U_j|\to\infty$, such that
+\[
+ \frac{u(U_j)}{|U_j|^{1.04273}}\longrightarrow\infty.
+\]
+In particular, $u(n)\ge n^{1.04273}$ for arbitrarily large integers $n$.
+\end{theorem}
+
+The largest exponent previously claimed, $1.0418235$, is in the author's
+unpublished manuscript \cite{Naslund0418235}. Theorem~\ref{thm:main}
+uses the same method with one new ingredient, together with the
+corresponding change in the analytic estimate: the class field tower
+that supplies the number fields is built over the real quadratic field
+$\Q(\sqrt{241})$ instead of over $\Q$. The theorem concerns an unbounded
+sequence of cardinalities. Its proof uses no unproved hypothesis, such
+as the generalized Riemann hypothesis, but it is computer-assisted:
+finite facts about the tower and several numerical inequalities are
+certified by exact computation and interval arithmetic, as described in
+Section~\ref{intro:code}.
+
+\subsection{Background}\label{intro:background}
+Erd\H{o}s \cite{Erdos1946} showed that a suitable section of a scaled
+integer lattice gives
+\[
+ u(n)\ge n^{1+c/\log\log n}
+\]
+for some $c>0$ and arbitrarily large $n$, and he conjectured that this is
+essentially optimal \cite{Erdos1946,Erdos1994}. The best upper bound,
+\[
+ u(n)=O(n^{4/3}),
+\]
+is due to Spencer, Szemer\'edi and Trotter
+\cite{SpencerSzemerediTrotter1984}; Sz\'ekely \cite{Szekely1997} gave a
+proof by crossing numbers.
+
+In $2026$ a team at OpenAI \cite{OpenAI2026} disproved Erd\H{o}s's
+conjecture. They constructed sets with $u(U)\ge|U|^{1+\delta}$ for a
+fixed $\delta>0$ and arbitrarily large $|U|$, replacing the integer
+lattice by ideal lattices in number fields of large degree and small
+root discriminant. Alon, Bloom, Gowers, Litt, Sawin, Shankar, Tsimerman,
+Wang and Wood \cite{Alon2026} simplified the argument and obtained
+$\delta\approx6\cdot10^{-38}$. Sawin \cite{Sawin2026} made every step
+explicit and sharpened it, and reached the exponent $1.014114$.
+
+Improvements followed within days in online discussions. On the
+Erd\H{o}s Problems forum, mlewko \cite{ErdosProblems90} reached
+$1.031849$ in Sawin's criterion with finite data found by ChatGPT, and
+on MathOverflow spiderduckpig \cite{SpiderduckpigMO2026} adjusted these
+data to reach $1.031883$. In a comment the next day, spiderduckpig
+proposed a structural change: in the Golod--Shafarevich step of Sawin's
+argument \cite[Lemma~11]{Sawin2026}, replace the unweighted count of
+relations by a count weighted by degree in the Zassenhaus filtration.
+This was reported to give $\delta\ge0.0333487$
+\cite{SpiderduckpigMO2026}. Weighted counts of this kind underlie the
+towers of \cite{NaslundLegacy2026}, \cite{Naslund0418235} and the
+present paper. The author's MathOverflow answer \cite{NaslundMO2026}
+then combined this count with covolume counting, dyadic ramification and
+Euler products over a fixed subfield, and reported $\delta\ge0.03583$;
+the author's archived manuscript \cite{NaslundLegacy2026} records this
+construction with $\delta=0.0358324$. The change log of that answer, of
+June~9, 2026, reports a bookkeeping issue affecting the covolume step and
+gives $\delta>0.0357$ instead. Table~\ref{intro:table-bounds} lists the
+explicit exponents, and the repository \cite{TaoConstants84a} records
+further bounds posted online.
+
+\begin{table}[htbp]
+\centering
+\caption{Explicit lower bounds $u(n)\ge n^{1+\delta}$ for arbitrarily
+large $n$, in increasing order. The exponents are rounded down and
+constant factors are omitted. The last column gives the kind of source;
+apart from Erd\H{o}s's, none of these bounds had appeared in a refereed
+journal when this paper was written.}
+\label{intro:table-bounds}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+Exponent & Source & Main new input & Kind of source\\
+\midrule
+$1+c/\log\log n$ & Erd\H{o}s \cite{Erdos1946} & integer lattice & journal\\
+$1+\delta$, $\delta>0$ & OpenAI \cite{OpenAI2026} & ideal lattices from class field towers & manuscript\\
+$1+6\cdot10^{-38}$ & Alon et al.\ \cite{Alon2026} & simplified argument & preprint\\
+$1.014114$ & Sawin \cite{Sawin2026} & explicit and sharpened criterion & preprint\\
+$1.015263$ & Emmerich \cite{Emmerich2026} & optimized parameters & preprint\\
+$1.031185$ & Emmerich, Cordella \cite{EmmerichCordella2026} & extended range of primes & certificate\\
+$1.031849$ & mlewko \cite{ErdosProblems90} & finite data found by ChatGPT & forum post\\
+$1.0333487$ & spiderduckpig \cite{SpiderduckpigMO2026} & weighted Zassenhaus count & online post\\
+$1.0357$ & Naslund \cite{NaslundMO2026,NaslundLegacy2026} & covolume counting, dyadic & online post,\\
+ & & ramification, fixed-subfield Euler products & manuscript\\
+$1.0418235$ & Naslund \cite{Naslund0418235} & mixed signature, norm-one units, & manuscript\\
+ & & nonabelian dyadic local group, profiles & \\
+$1.04273$ & this paper & tower over $\Q(\sqrt{241})$ & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The construction in outline}\label{intro:outline}
+The construction carries Erd\H{o}s's lattice argument to number fields
+of large degree. Let $K$ be such a field, of degree $2d$, with an
+involution $\iota$ whose fixed field is $F$. We take the points of a
+translated ideal lattice of $K$ that lie in a bounded region of
+$K\otimes\R$. A complex embedding in which $\iota$ acts as complex
+conjugation maps them injectively to the plane. It sends every
+difference of relative norm one over $F$ to a unit vector. The exponent
+is then set by a balance, per unit of $d$. The gain is the number of
+equal-norm choices: a prime of $F$ that splits in $K$ and is used with
+exponent $k$ gives $k+1$ ideals of the same relative norm. Selecting a
+common ideal class loses part of this gain. Through the class-number
+formula, that loss is governed by the root discriminant $\lambda$ of $K$
+and the value at $s=1$ of $L_F(s)=\zeta_K(s)/\zeta_F(s)$. The geometric
+window decides how many of the resulting displacements keep both
+endpoints in the region, and its volume fixes the number of points.
+Using a prime $\mathfrak p$ with exponent $k$ also makes the ideal
+lattice denser by the factor $N\mathfrak p^k$, and the exponent $\delta$
+charges the gain for the points this adds.
+
+Quantitatively, suppose that such fields exist with $d\to\infty$, a fixed
+root discriminant $\lambda$, fixed local types at the selected primes,
+and $\theta=c/d$ bounded below, where $(b,c)$ is the signature of $F$ and
+$d=b+2c$; thus $2\theta$ is the proportion of non-real embeddings of $F$.
+With hard windows at the selected primes, the exponent $1+\delta$ is
+attained when
+\begin{equation}\label{intro:margin}
+ \sum_q\frac{\log(k_q+1)-\delta k_qf_q\log q}{e_qf_q}
+ -\Bigl(\frac12-\delta\Bigr)\log\lambda-C+\mathcal A_\delta(\theta)>0.
+\end{equation}
+Here $q$ runs over the rational primes below the selected primes, $e_q$
+and $f_q$ are their absolute ramification indices and residue degrees in
+$F$, $k_q$ is the exponent used at the primes above $q$, $C$ is an upper
+bound for $d^{-1}\log L_F(1)$, and
+\[
+ \mathcal A_\delta(\theta)=(1-\delta)\log2+(1-\theta)\log\pi
+ +(1-2\theta)J_\R+\theta J_\C
+\]
+is the archimedean contribution, in which $J_\R$ and $J_\C$ measure the
+overlap of the archimedean profiles at the real and at the complex
+places of $F$ under unit displacements (Proposition~\ref{geo:transfer}).
+The term $\theta J_\C$ comes from mixed signature: above a complex place
+of $F$, the two coordinates of a norm-one element have reciprocal moduli.
+Averaging over the norm-one units counts the resulting one-parameter
+family of displacements exactly, and the class-number formula cancels the
+regulator of these units (Proposition~\ref{geo:mass}).
+Section~\ref{fw:section} replaces the hard windows by weighted shells
+(Proposition~\ref{fw:transfer}), and Section~\ref{sec:certificate}
+verifies the resulting inequality at $\delta=\deltastar$.
+
+The fields must form an infinite family of growing degree with fixed
+$\lambda$ and fixed local types. Such families come from infinite
+pro-$2$ class field towers with prescribed local Galois groups. The
+Golod--Shafarevich criterion \cite{GolodShafarevich} proves that a tower
+is infinite when a certain power series in a variable $t$ takes a
+negative value; the use of Frobenius conditions to control splitting in
+such towers goes back to Hajir, Maire and Ramakrishna
+\cite{HajirMaireRamakrishna2021Cutting}.
+
+\subsection{A tower over $\Q(\sqrt{241})$}\label{intro:new}
+The fields of \cite{Naslund0418235} come from a pro-$2$ tower over $\Q$
+that is unramified outside $2,3,5,7,11,13$, with prescribed local Galois
+groups at these primes and Frobenius conditions at the selected primes
+up to $31$. Its Golod--Shafarevich series has the form
+\[
+ 1-7t+(\text{a cost for each local condition})-s_D(t).
+\]
+Here $7$ is the number of generators of the Galois group of the maximal
+pro-$2$ extension of $\Q$ unramified outside these six primes, and
+$s_D(t)$ is a saving: by Hilbert reciprocity, one dyadic relation is
+implied by the others and need not be paid for. Tame ramification at $7$,
+$11$ and $13$ supplies generators to pay for the local conditions, and it
+costs a factor $\sqrt{1001}$ in the root discriminant.
+
+Now let $B$ be a totally real field of degree $m$ in which every prime
+used by the construction splits completely. The generators and the local
+conditions of a construction over $\Q$ are then repeated $m$ times over
+$B$, while the constant term $1$ and the saving $s_D$ are not; if $P(t)$
+is the series over $\Q$, the series over $B$ is roughly
+$mP(t)-(m-1)(1-s_D(t))$. The extra room can be spent on ramifying at
+fewer primes. The price is the discriminant of $B$, which enters the
+root discriminant of the fields. The field $B=\Q(\sqrt{241})$ is the
+real quadratic field of smallest discriminant in which $2$, $3$ and $5$
+all split, and over it the tower needs no ramification at $7$, $11$ or
+$13$. Section~\ref{tw:tower} gives the exact series.
+
+Over $B$ we prescribe, at each of the two primes above $2$, the same
+nonabelian dyadic local Galois group of order $32$ as in
+\cite{Naslund0418235}; at each of the four primes above $3$ and $5$, a
+tame local group $C_2\times C_2$; and conditions that make the Frobenius
+elements have order dividing $4$ at the two primes above $29$ and at the
+prime $7$, which is inert in $B$. The tower is ramified only above $2$,
+$3$ and $5$. Its Galois group has $8$ generators, and the root
+discriminant of its fields is
+\[
+ \lambda=2^{9/4}\sqrt{3615}\approx286.0,
+ \qquad 3615=3\cdot5\cdot241,
+\]
+against $2^{9/4}\sqrt{15015}\approx582.9$ over $\Q$: the base contributes
+$\sqrt{241}$, and $\sqrt{1001}$ is saved. The price is paid in the
+selected primes: only $2$, $3$, $5$, $7$ and $29$ remain, against the
+eleven primes up to $31$ over $\Q$. Theorem~\ref{tw:field-family} states
+the resulting family of fields.
+
+The analytic estimate changes accordingly. In \cite{Naslund0418235} the
+bound $C$ for $d^{-1}\log L_F(1)$ came from a complete Hecke-factor
+calculation in a nonabelian subfield of degree $16384$ of the tower.
+Here every field $K$ of Theorem~\ref{tw:field-family} contains the
+Kummer field $E=B(\sqrt V)$, of degree $512$ over $\Q$, where $V$ is the
+group of $\{2,3,5\}$-units of $B$ modulo squares. Its Dedekind zeta
+function is the product of $\zeta_B$ and $255$ quadratic Hecke
+$L$-functions of $B$, which we evaluate with certified approximate
+functional equations (Sections~\ref{gf:section} and~\ref{an:section}).
+Together with refinements from the exact local types of the tower, this
+gives $C=\ceiling$ (Theorem~\ref{an:ceiling}).
+Table~\ref{intro:table-constructions} compares the two constructions.
+
+\begin{table}[htbp]
+\centering
+\caption{The construction of \cite{Naslund0418235} and the present one.
+The pairs $(e,f)$ are absolute ramification indices and residue degrees
+of the selected primes of $F$.}
+\label{intro:table-constructions}
+\begin{tabular}{lll}
+\toprule
+ & \cite{Naslund0418235} & this paper\\
+\midrule
+base field & $\Q$ & $\Q(\sqrt{241})$\\
+primes ramified in the tower & $2,3,5,7,11,13$ & above $2,3,5$\\
+selected primes, $(e,f)$ & $2{:}\,(8,4)$;\ $3,5{:}\,(2,2)$; & $2{:}\,(8,4)$;\ $3,5{:}\,(2,2)$;\\
+ & $7,11,13{:}\,(2,4)$;\ $17,\dots,31{:}\,(1,4)$ & $7{:}\,(1,8)$;\ $29{:}\,(1,4)$\\
+root discriminant $\lambda$ & $2^{9/4}\sqrt{15015}\approx582.9$ & $2^{9/4}\sqrt{3615}\approx286.0$\\
+$\ell=\log\lambda$ & $6.3680$ & $5.6560$\\
+lower bound $\theta_*$ for $\theta$ & $4095/8192$ & $65535/131072$\\
+ceiling $C$ & $0.042161819$ & $0.04871285$\\
+exponent $1+\delta$ & $1.0418235$ & $1.04273$\\
+certified margin & $5.3\cdot10^{-6}$ & $1.77\cdot10^{-4}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Why the exponent improves}\label{intro:why}
+In \eqref{intro:margin}, lowering $\log\lambda$ from $6.3680$ to
+$5.6560$ is worth $(1/2-\delta)\cdot0.712\approx0.33$ per unit of $d$ at
+$\delta\approx0.043$. Three terms pay for it. The first sum, the gain
+from equal-norm choices net of their cost in vertices, falls from $1.034$
+to $0.721$, because the tower over $B$ selects only five rational primes,
+and two of them, $7$ and $29$, with large residue degrees. The ceiling
+$C$ rises by $0.0066$, because the Kummer field carries less Frobenius
+information than the field of degree $16384$ used over $\Q$. The
+archimedean term falls by $0.013$, mostly because $\delta$ is larger.
+Table~\ref{intro:table-budget} shows the certified terms of the margin
+for both constructions, each at its own exponent.
+
+\begin{table}[htbp]
+\centering
+\caption{The terms of the certified margin, per unit of $d$, rounded to
+seven decimals. The first row is the weighted-shell form of the first sum
+in \eqref{intro:margin} (Section~\ref{fw:section}), and the archimedean
+term is computed with the certified lower bound $J_\C^*$ for $J_\C$. The
+margin is the quantity $M_*(\theta_*)$ of Section~\ref{sec:certificate}
+and of the certificate of \cite{Naslund0418235}.}
+\label{intro:table-budget}
+\begin{tabular}{lrr}
+\toprule
+Term & \cite{Naslund0418235}, $\delta=0.0418235$ & this paper, $\delta=\deltastar$\\
+\midrule
+finite sum & $1.0335669$ & $0.7214955$\\
+$-(1/2-\delta)\log\lambda$ & $-2.9176605$ & $-2.5863213$\\
+$-C$ & $-0.0421618$ & $-0.0487129$\\
+$\mathcal A_\delta(\theta_*)$ & $1.9262607$ & $1.9137154$\\
+\midrule
+margin & $0.0000053$ & $0.0001767$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The balance leaves a certified margin of about $1.77\cdot10^{-4}$ per unit
+of $d$ at $\delta=\deltastar$. With the same profiles, and shell weights
+optimized in the same way, the margin at $\delta=0.0428$ is negative.
+
+\subsection{Relation to Sawin's criterion}\label{intro:comparison}
+All bounds in Table~\ref{intro:table-bounds} from Sawin's onward use his
+framework \cite{Sawin2026}: a quadratic extension $K/F$, ideals of equal
+relative norm built from split primes, a pigeonhole over ideal classes,
+and fields from Golod--Shafarevich towers with Frobenius conditions.
+Section~1.6 of \cite{Naslund0418235} compares that criterion with
+\eqref{intro:margin} term by term. In brief, counting vertices by
+covolume instead of packing returns $\delta\log\lambda$. The exact
+class-number formula, with an explicit Euler-product bound $C$, replaces
+Louboutin's bound for the relative class number \cite{Louboutin2000}
+together with the factor $2^d$ that Sawin allows for units; their
+combined cost $1+\log\log\lambda$ would be about $2.73$ here. Mixed
+signature contributes the term $\theta(J_\C-2J_\R-\log\pi)$, worth more
+than $0.31$ per unit of $d$ here. Optimized profiles and shells replace
+the sup-norm window. The present paper keeps all of these and changes the
+tower. Sawin suggested that towers satisfying different local conditions
+might improve the exponent \cite{Sawin2026}. The base field is a change
+of a different kind: it adds no local conditions at new primes, but
+repeats the conditions at the small primes over two primes of $B$ each.
+
+\subsection{Organization}\label{intro:organization}
+Section~\ref{tw:tower} constructs the tower over $B$ and proves
+Theorem~\ref{tw:field-family}, which supplies the fields.
+Section~\ref{gf:section} describes the Kummer field and its quadratic
+$L$-functions, and Section~\ref{an:section} proves the ceiling
+$d^{-1}\log L_F(1)<C$ (Theorem~\ref{an:ceiling}).
+Sections~\ref{geo:section}--\ref{pf:section} carry out the geometric
+construction: the norm-one mass formula and the transfer to planar sets,
+the weighted windows at the selected primes, and the archimedean
+profiles. These sections hold for any quadratic extension with the
+stated properties and follow \cite{Naslund0418235} closely.
+Section~\ref{sec:certificate} evaluates the final inequality at
+$\delta=\deltastar$ and completes the proof of Theorem~\ref{thm:main}.
+
+\subsection{Computations and data}\label{intro:code}
+The proof uses finite computations: linear algebra over $\Ftwo$ for the
+tower, exact rational arithmetic for the Golod--Shafarevich series,
+certified evaluations of $L$-functions in the ball arithmetic of Arb,
+now part of FLINT \cite{Johansson2017,FLINT}, and directed interval
+bounds for the geometric margin \cite{Mpmath}. PARI/GP \cite{PARI} is
+used for the arithmetic of number fields and for independent checks.
+Each finite fact is verified by a supplementary program, named in the
+text where the fact is used. These certificates concern exact arithmetic
+and rigorous inequalities, not the statistical accuracy of
+floating-point approximations.
+
+The programs and their data are in the directory
+\texttt{papers/0.04273/certificates} of the public repository
+\cite{NaslundCode2026}. Some certified routines, for the degree-two
+approximate functional equations, the archimedean profiles and the
+finite windows, are imported unchanged from the supplementary archive of
+\cite{Naslund0418235}, which is in the same repository together with a
+manifest of the SHA-256 hashes of its members. A replay program runs
+every step and records its results. The computations were run with
+PARI/GP~2.17.2, python-flint~0.9.0 (FLINT~3.6.0) and mpmath~1.3.0.
+
+A separate Lean~4 development \cite{NaslundLean2026}, built on Mathlib
+\cite{Lean4_2021,Mathlib2020}, proves the planar conclusion with the
+slightly smaller exponent $1.0427$ from one explicit numerical inequality
+for the Dedekind zeta function of $E$
+(Remark~\ref{an:lean-hypothesis}). That inequality has not been proved in
+Lean, so the formalization is conditional, and it is not used as a
+substitute for the arguments here.

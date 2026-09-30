@@ -1,0 +1,1336 @@
+\section{\texorpdfstring{The Tower over $\Q(\sqrt{241})$}{The Tower over Q(sqrt 241)}}\label{tw:tower}
+
+This section constructs the number fields of Theorem~\ref{tw:field-family}
+as finite layers of an infinite pro-$2$ extension of $B=\Q(\sqrt{241})$
+with prescribed local Galois groups. The construction adapts the tower over
+$\Q$ of \cite[Section~2]{Naslund0418235}, and we repeat its arguments in the
+form needed over $B$. Subsection~\ref{tw:base-section} describes $B$ and its
+$\{2,3,5\}$-units. Subsection~\ref{tw:local-section} recalls the local Galois
+groups involved and constructs the dyadic local field.
+Subsection~\ref{tw:global-section} shows that the Galois group
+$\mathcal G_B$ of the maximal pro-$2$ extension of $B$ unramified outside
+$2,3,5$ has a presentation with eight generators and seven local relators.
+Subsection~\ref{tw:prescribed-section} imposes the local conditions and
+defines the quotient $G_B$. Subsection~\ref{tw:retained-section} computes the
+first three layers of the Zassenhaus filtration of $G_B$: they retain the
+prescribed local groups, and complex conjugation has many conjugates.
+Subsections~\ref{tw:fox-section} and~\ref{tw:infinite-section} prove that
+$G_B$ is infinite, by the filtered Fox calculus of \cite{Naslund0418235} and
+the Golod--Shafarevich method \cite{GolodShafarevich}.
+Subsection~\ref{tw:fields-section} proves Theorem~\ref{tw:field-family}.
+
+We use the following conventions. Subgroups of profinite groups are closed,
+generation is topological, and the normal closure of a set is the smallest
+closed normal subgroup containing it. The commutator is
+$[g,h]=g^{-1}h^{-1}gh$. For a finite $2$-group $\Delta$ with augmentation
+ideal $\mathfrak I\subset\Ftwo[\Delta]$, the Zassenhaus filtration is
+$D_n\Delta=\{g:g-1\in\mathfrak I^n\}$; for a pro-$2$ group it is defined
+through finite quotients. Then $[D_m,D_n]\subset D_{m+n}$, $g^2\in D_{2n}$
+for $g\in D_n$, a surjection maps $D_n$ onto $D_n$, and
+$\operatorname{gr}\Delta=\bigoplus_{n\ge1}D_n\Delta/D_{n+1}\Delta$ is a
+restricted Lie algebra over $\Ftwo$ whose bracket is induced by commutators
+and whose restricted square $v\mapsto v^{[2]}$ is induced by squaring
+\cite{Jennings,Quillen,Ershov2012}. By Lazard's formula
+\cite[Proposition~3.2]{Ershov2012}, $D_n=\prod_{i2^j\ge n}\gamma_i^{2^j}$,
+where $\gamma_i$ is the lower central series. In particular $D_1$ is the
+whole group, $D_2$ is the Frattini subgroup, and $D_3=D_2^{\,2}[D_2,D_1]$. For
+a free pro-$2$ group $\mathcal F$ of rank $n$, $\operatorname{gr}\mathcal F$
+is the free restricted Lie algebra on $\mathcal F/D_2\mathcal F\cong\Ftwo^n$
+\cite{Quillen,Ershov2012}. We realize it inside the free associative
+algebra $\Ftwo\langle X_1,\dots,X_n\rangle$, with bracket $[a,b]=ab+ba$ and
+restricted square $a^{[2]}=a^2$; its layers of degrees one, two and three
+have dimensions $n$, $n(n+1)/2$ and $(n^3-n)/3$.
+
+\subsection{The Base Field}\label{tw:base-section}
+Let $B=\Q(\sqrt{241})$, with real places $v_1$ ($\sqrt{241}\mapsto+\sqrt{241}$)
+and $v_2$ ($\sqrt{241}\mapsto-\sqrt{241}$). Put
+\begin{equation}\label{tw:alpha}
+\begin{gathered}
+ \alpha_0=-1,\qquad \alpha_1=\varepsilon=-71011068+4574225\sqrt{241},\\
+ \alpha_2=\tfrac{-6101-393\sqrt{241}}2,\qquad
+ \alpha_3=\tfrac{6101-393\sqrt{241}}2,\\
+ \alpha_4=31-2\sqrt{241},\quad \alpha_5=31+2\sqrt{241},\quad
+ \alpha_6=326-21\sqrt{241},\quad \alpha_7=326+21\sqrt{241}.
+\end{gathered}
+\end{equation}
+Their norms $N_{B/\Q}(\alpha_i)$ are $1,-1,-2,-2,-3,-3,-5,-5$, and
+$\alpha_2\alpha_3=2$, $\alpha_4\alpha_5=-3$, $\alpha_6\alpha_7=-5$. For a
+nonzero ideal $\mathfrak a$ of $\mathcal O_B$ we write
+$N\mathfrak a=|\mathcal O_B/\mathfrak a|$ for its absolute norm.
+
+\begin{lemma}\label{tw:base}
+\begin{enumerate}
+\item[(a)] $\mathcal O_B=\Z[(1+\sqrt{241})/2]$, the discriminant of $B$ is
+ $241$, and $B$ has class number one.
+\item[(b)] The unit $\varepsilon$ has norm $N_{B/\Q}(\varepsilon)=-1$, and the
+ classes of $-1$ and $\varepsilon$ form a basis of
+ $\mathcal O_B^\times/\mathcal O_B^{\times2}$.
+\item[(c)] In $\mathcal O_B$ we have $2=\mathfrak p_1\mathfrak p_2$,
+ $3=\mathfrak q_1\mathfrak q_2$, $5=\mathfrak r_1\mathfrak r_2$ and
+ $29=\mathfrak t_1\mathfrak t_2$, where
+ \[
+  \mathfrak p_j=\alpha_{1+j}\mathcal O_B,\quad
+  \mathfrak q_j=\alpha_{3+j}\mathcal O_B,\quad
+  \mathfrak r_j=\alpha_{5+j}\mathcal O_B,\quad
+  \mathfrak t_j=(-14127\pm910\sqrt{241})\mathcal O_B,
+ \]
+ with the sign $+$ for $j=1$. These eight primes are distinct and of degree
+ one. The prime $7$ is inert, and we write $\mathfrak t_0=7\mathcal O_B$, so
+ that $N\mathfrak t_0=49$. The prime $241$ ramifies. At each of the eight
+ primes of degree one, above $p\in\{2,3,5,29\}$, the completion of $B$ is
+ $\Q_p$, and $\sqrt{241}$ maps to the square root of $241$ in $\Z_p$ given in
+ Table~\ref{tw:squareclass-table}.
+\item[(d)] Let $S=\{\mathfrak p_1,\mathfrak p_2,\mathfrak q_1,\mathfrak q_2,\mathfrak r_1,\mathfrak r_2\}$
+ and $V=\mathcal O_B[1/30]^\times/\mathcal O_B[1/30]^{\times2}$. The classes
+ of $\alpha_0,\dots,\alpha_7$ form a basis of $V$, and $V$ is the subgroup of
+ $B^\times/B^{\times2}$ of classes with even valuation at every prime outside
+ $S$. Moreover $\Pic(\mathcal O_B[1/30])=0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Since $241\equiv1\pmod 4$, the ring of integers and the discriminant are
+as stated. The Minkowski bound is $\sqrt{241}/2<8$, so every ideal class
+contains an integral ideal of norm at most $7$, which is a product of primes
+of norm at most $7$. By (c), these are the six primes above $2,3,5$, and they
+are principal.
+
+(b) A direct computation gives $71011068^2-241\cdot4574225^2=-1$. By
+Dirichlet's theorem $\mathcal O_B^\times=\{\pm1\}\times\eta^{\Z}$ for a
+fundamental unit $\eta$, and $\varepsilon=\pm\eta^k$. Since
+$N_{B/\Q}(\varepsilon)=-1$, the exponent $k$ is odd, so $-1$ and
+$\varepsilon$ generate $\mathcal O_B^\times$ modulo squares. Neither $-1$ nor
+$\pm\varepsilon$ is a square, because $B$ is real and
+$N_{B/\Q}(\pm\varepsilon)=-1$.
+
+(c) We have $241\equiv1\pmod8$, $241\equiv1\pmod3$, $241\equiv1\pmod5$,
+$241\equiv9\pmod{29}$ and $241\equiv3\pmod7$, and $3$ is not a square modulo
+$7$. Hence $2,3,5,29$ split, $7$ is inert and $241$ ramifies. The listed
+generators have norms $\pm2,\pm3,\pm5,29$, so they generate primes of degree
+one, and the displayed products show that the two generators above each $p$
+generate the two distinct primes above $p$; for $29$ the product of the two
+generators is $29$. A prime of degree one above $p$ is the preimage of
+$p\Z_p$ under an embedding $B\to\Q_p$, which sends $\sqrt{241}$ to one of
+the two square roots of $241$ in $\Z_p$; the completion there is $\Q_p$, and
+the prime contains the stated generator exactly for the square root in
+Table~\ref{tw:squareclass-table}.
+
+(d) Every $S$-unit $u$ satisfies
+$u\mathcal O_B=\prod_{i\ge2}(\alpha_i\mathcal O_B)^{a_i}$, so
+$u\prod_{i\ge2}\alpha_i^{-a_i}$ is a unit, and by (b) the classes of
+$\alpha_0,\dots,\alpha_7$ generate $V$. If $\prod_i\alpha_i^{a_i}$ with
+$a_i\in\{0,1\}$ is a square, the valuations at $S$ give $a_i=0$ for $i\ge2$,
+and then (b) gives $a_0=a_1=0$. If $b\in B^\times$ has even valuation outside
+$S$, then
+$b\mathcal O_B=\mathfrak a^2\prod_{\mathfrak p\in S}\mathfrak p^{a_{\mathfrak p}}$
+with $\mathfrak a$ principal by (a), so $b$ is an $S$-unit times a square.
+Finally $\Pic(\mathcal O_B[1/30])$ is a quotient of $\Pic(\mathcal O_B)=0$.
+\end{proof}
+
+\begin{table}[htbp]
+\centering
+\caption{The image of $\sqrt{241}$ in $\Z_p$ at each prime of degree one,
+given by its residue, and in $\R$ at the real places; the classes of
+$\alpha_0,\dots,\alpha_7$ in $\Q_p^\times/\Q_p^{\times2}$ at these primes, and
+their signs at the real places. At $p=2$ the classes are written as
+$\pm1,\pm5,\pm2,\pm10$; at odd $p$ as $1,u,p,up$, where $u=-1,2,2$ is a
+nonsquare unit for $p=3,5,29$.}
+\label{tw:squareclass-table}
+\begin{tabular}{llrrrrrrrr}
+\toprule
+place & $\sqrt{241}\mapsto$ & $\alpha_0$ & $\alpha_1$ & $\alpha_2$ & $\alpha_3$ & $\alpha_4$ & $\alpha_5$ & $\alpha_6$ & $\alpha_7$\\
+\midrule
+$\mathfrak p_1$ & $7\bmod 32$ & $-1$ & $-5$ & $-10$ & $-5$ & $1$ & $5$ & $-5$ & $1$\\
+$\mathfrak p_2$ & $25\bmod 32$ & $-1$ & $5$ & $5$ & $10$ & $5$ & $1$ & $1$ & $-5$\\
+$\mathfrak q_1$ & $2\bmod 3$ & $-1$ & $1$ & $-1$ & $1$ & $3$ & $-1$ & $-1$ & $-1$\\
+$\mathfrak q_2$ & $1\bmod 3$ & $-1$ & $-1$ & $-1$ & $1$ & $-1$ & $3$ & $-1$ & $-1$\\
+$\mathfrak r_1$ & $1\bmod 5$ & $1$ & $2$ & $2$ & $1$ & $1$ & $2$ & $10$ & $2$\\
+$\mathfrak r_2$ & $4\bmod 5$ & $1$ & $2$ & $1$ & $2$ & $2$ & $1$ & $2$ & $10$\\
+$\mathfrak t_1$ & $3\bmod 29$ & $1$ & $1$ & $2$ & $1$ & $1$ & $2$ & $2$ & $2$\\
+$\mathfrak t_2$ & $26\bmod 29$ & $1$ & $1$ & $1$ & $2$ & $2$ & $1$ & $2$ & $2$\\
+$v_1$ & $+\sqrt{241}$ & $-$ & $+$ & $-$ & $-$ & $-$ & $+$ & $-$ & $+$\\
+$v_2$ & $-\sqrt{241}$ & $-$ & $-$ & $+$ & $+$ & $+$ & $-$ & $+$ & $-$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The classes in Table~\ref{tw:squareclass-table} follow from the residues of
+$\sqrt{241}$ given there; at $p=2$ they need its image modulo $32$. For
+example, at $\mathfrak p_1$ we have $4574225\equiv1$ and $-71011068\equiv4$
+modulo $8$, so $\varepsilon\equiv4+7\equiv3\equiv-5\pmod 8$. At the inert
+prime $\mathfrak t_0$, an element $a\in\mathcal O_B$ prime to $\mathfrak t_0$
+is a square modulo $\mathfrak t_0$ exactly when $a^{24}\equiv1$, that is, when
+the reduction of $N_{B/\Q}(a)\equiv a^8$ is a square in $\mathbb F_7$. Hence
+$\alpha_i$ is a square modulo $\mathfrak t_0$ exactly for $i=0,4,5,6,7$.
+
+\subsection{Local Galois Groups}\label{tw:local-section}
+For a place $\nu$ of $B$ let $\mathcal G_\nu$ be the Galois group of the
+maximal pro-$2$ extension of the completion $B_\nu$; for a real place,
+$\mathcal G_\nu=\Gal(\C/\R)$. We write $(\cdot,\cdot)$ for the Hilbert symbol
+of order two of a local field \cite[Chapter~III, Section~4]{MilneCFT}. For
+odd $p$ and $p$-adic units $u,w$, and for $2$-adic units $u,w$,
+\begin{equation}\label{tw:hilbert}
+ (p^au,p^bw)_p=(-1)^{ab(p-1)/2}\Bigl(\frac up\Bigr)^b\Bigl(\frac wp\Bigr)^a,
+ \qquad
+ (2^au,2^bw)_2=(-1)^{\frac{u-1}2\frac{w-1}2+a\frac{w^2-1}8+b\frac{u^2-1}8}
+\end{equation}
+\cite[Chapter~III, Theorem~1]{SerreCourse}, \cite[Chapter~VIII,
+Section~5]{MilneCFT}. A defining relator of a pro-$2$ group with respect to
+generators $g_1,\dots,g_k$ is an element of the free pro-$2$ group on $k$
+letters whose normal closure is the kernel of the map to the group; its
+quadratic initial is its class in the degree-two layer of the Zassenhaus
+filtration of the free group.
+
+\begin{lemma}\label{tw:local-groups}
+\begin{enumerate}
+\item[(a)] If $\nu$ is real, then $\mathcal G_\nu=\langle\iota\rangle\cong C_2$
+ with the single defining relator $\iota^2$, and $\iota(\sqrt b)=-\sqrt b$
+ exactly when $b<0$.
+\item[(b)] Let $p$ be an odd prime and $\varpi$ a uniformizer of $\Q_p$. Then
+ $\mathcal G_{\Q_p}$ is generated by a generator $\tau$ of its inertia group
+ and a Frobenius lift $\varphi$ with $\varphi(\sqrt\varpi)=\sqrt\varpi$, with
+ the single defining relator $\varphi\tau\varphi^{-1}\tau^{-p}$. For
+ $b\in\Q_p^\times$, $\tau(\sqrt b)=-\sqrt b$ exactly when $v_p(b)$ is odd;
+ for a unit $b$, $\varphi(\sqrt b)=-\sqrt b$ exactly when $b$ is not a square
+ modulo $p$. The relator has quadratic initial
+ $[\tau,\varphi]+\frac{p-1}2\tau^{[2]}$.
+\item[(c)] Let $E_2=\Q_2(\sqrt{-1},\sqrt2,\sqrt5)$, and let
+ $x,y,z\in\mathcal G_{\Q_2}$ multiply the triple $(\sqrt2,\sqrt{-1},\sqrt5)$
+ by the signs $(-,+,+)$, by $(+,-,+)$ and by $(+,-,-)$. Then $x,y,z$
+ generate $\mathcal G_{\Q_2}$. If $b\equiv(-1)^{a_1}2^{a_2}5^{a_3}$ modulo
+ squares, they multiply $\sqrt b$ by $(-1)^{a_2}$, $(-1)^{a_1}$ and
+ $(-1)^{a_1+a_3}$, that is, by the Hilbert symbols $(5,b)_2$, $(-1,b)_2$ and
+ $(-2,b)_2$. The group $\mathcal G_{\Q_2}$ has a single defining relator $r$
+ with respect to $x,y,z$, and every such $r$ has quadratic initial
+ $y^{[2]}+[x,y]+[x,z]$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) is clear.
+
+(b) By Iwasawa's theorem \cite[Theorem~7.5.3]{NeukirchSchmidtWingberg2008},
+the Galois group of the maximal tamely ramified extension of $\Q_p$ is
+generated by a Frobenius lift $\varphi'$ and a generator $\tau$ of tame
+inertia, with the single relation $\varphi'\tau\varphi'^{-1}=\tau^p$. Since
+$p$ is odd,
+every $2$-extension of $\Q_p$ is tamely ramified, so $\mathcal G_{\Q_p}$ is
+the pro-$2$ group with the same presentation. The extension
+$\Q_p(\sqrt\varpi)$ is ramified, so $\tau$ moves $\sqrt\varpi$; replacing
+$\varphi'$ by $\varphi'\tau$ if necessary gives $\varphi$. This substitution
+does not change the relator, since
+$(\varphi'\tau)\tau(\varphi'\tau)^{-1}=\varphi'\tau\varphi'^{-1}$.
+The actions on square roots hold because $\Q_p(\sqrt b)$ is ramified exactly
+when $v_p(b)$ is odd, and because $\varphi$ acts on unramified extensions as
+the Frobenius. Modulo $D_3$, the element $\varphi\tau\varphi^{-1}\tau^{-1}$
+has class $[\varphi,\tau]=[\tau,\varphi]$, and $\tau^{1-p}$ has class
+$\frac{p-1}2\tau^{[2]}$.
+
+(c) By Kummer theory the maximal elementary abelian quotient of
+$\mathcal G_{\Q_2}$ is $\Gal(E_2/\Q_2)$, since $\Q_2^\times/\Q_2^{\times2}$
+has basis $-1,2,5$. The images of $x,y,z$ form a basis of it, so $x,y,z$
+generate \cite[Proposition~3.9.1]{NeukirchSchmidtWingberg2008}. The action on
+$\sqrt b$ is read off from the actions on $\sqrt{-1},\sqrt2,\sqrt5$, and it
+agrees with the stated Hilbert symbols by \eqref{tw:hilbert}. By
+\cite[Theorem~7.5.11]{NeukirchSchmidtWingberg2008}, $\mathcal G_{\Q_2}$ is a
+Demu\v skin group of rank $3$: it has a single defining relator $r$, and
+$H^2(\mathcal G_{\Q_2},\Ftwo)\cong\Ftwo$. For $b\in\Q_2^\times$ let $\chi_b$
+be the character with $g(\sqrt b)=(-1)^{\chi_b(g)}\sqrt b$. The characters
+dual to $x,y,z$ are $\chi_2,\chi_{-5},\chi_5$. Inflation identifies
+$H^2(\mathcal G_{\Q_2},\Ftwo)$ with $H^2$ of the absolute Galois group of
+$\Q_2$ \cite[Proposition~7.5.8]{NeukirchSchmidtWingberg2008}, and there the
+invariant of $\chi_a\cup\chi_b$ is given by the Hilbert symbol $(a,b)_2$
+\cite[Chapter~III, Section~4]{MilneCFT}. By \eqref{tw:hilbert}, the matrix of
+the indicator of $(a,b)_2=-1$ on $2,-5,5$ is
+\[
+ \begin{pmatrix}0&1&1\\1&1&0\\1&0&0\end{pmatrix}.
+\]
+The evaluation $\operatorname{tr}_r$ of the transgression at $r$ is an
+isomorphism $H^2(\mathcal G_{\Q_2},\Ftwo)\to\Ftwo$
+\cite[Proposition~3.9.12(iii)]{NeukirchSchmidtWingberg2008}, and so is the
+invariant, so the two coincide. We now apply the relation--cup identity
+\cite[Proposition~3.9.13(ii)]{NeukirchSchmidtWingberg2008}, see also
+\cite[Proposition~3.2]{Quadrelli2021}. Write $g_1,g_2,g_3$ for $x,y,z$. The
+identity writes the relator as
+$r=\prod_jg_j^{qa_j}\prod_{k<l}[g_k,g_l]^{a_{kl}}\,r'$, with $r'$ in the
+third term of the descending $q$-central series, and states that
+$\operatorname{tr}_r$ of the cup product of the characters dual to $g_k$ and
+$g_l$ is $-a_{kl}$ for $k<l$ and $-\binom q2a_k$ for $k=l$. Here $q$, the
+smallest elementary divisor of the
+abelianization of $\mathcal G_{\Q_2}$, is $2$: by local class field theory
+this abelianization is the pro-$2$ completion of $\Q_2^\times$, which is
+$\Z_2^2\times\Z/2$. The third term of the $2$-central series is
+$(D_2)^2[D_2,D_1]=D_3$ by Lazard's formula, the class of $g_j^2$ in
+$\operatorname{gr}_2$ is $g_j^{[2]}$, and the signs disappear modulo $2$,
+with $\binom22=1$. Hence the off-diagonal entries of the matrix are the
+coefficients of $[x,y],[x,z],[y,z]$ in the quadratic initial of $r$, and the
+diagonal entries, which are the values of the cup squares $\chi\cup\chi$,
+are the coefficients of $x^{[2]},y^{[2]},z^{[2]}$. For $p=2$ the cup square
+of a character is its Bockstein, so the diagonal coefficients are also given
+by \cite[Proposition~3.9.14]{NeukirchSchmidtWingberg2008}.
+\end{proof}
+
+We now construct the dyadic local field. It is the field of
+\cite[Lemma~2.2]{Naslund0418235}, and we repeat the proof. Let $U_4$ be the
+unramified extension of $\Q_2$ of degree four, with Frobenius $\mathrm{Fr}$;
+let $i=\sqrt{-1}$, $k=\Q_2(i)$, $\alpha=1+2i$, and
+\[
+ M_8=\Q_2(i,\sqrt5,\sqrt\alpha),\qquad M_{16}=M_8(\sqrt2),\qquad
+ L_2=M_{16}U_4 .
+\]
+Since $\alpha\bar\alpha=5$ with $\bar\alpha=1-2i$, the field $M_8$ contains
+$\sqrt{\bar\alpha}=\sqrt5/\sqrt\alpha$. Let $\sigma_y$ and $\sigma_z$ be the
+automorphisms of $M_8$ given by
+\[
+ \sigma_y:\ i\mapsto-i,\ \sqrt5\mapsto\sqrt5,\ \sqrt\alpha\mapsto\sqrt5/\sqrt\alpha;
+ \qquad
+ \sigma_z:\ i\mapsto-i,\ \sqrt5\mapsto-\sqrt5,\ \sqrt\alpha\mapsto\sqrt5/\sqrt\alpha.
+\]
+
+\begin{lemma}\label{tw:local-two}
+\begin{enumerate}
+\item[(a)] The extension $M_8/\Q_2$ is Galois of degree $8$, and its Galois
+ group $\langle\sigma_y,\sigma_z\rangle$ is dihedral.
+\item[(b)] The extension $L_2/\Q_2$ is Galois of degree $32$, with
+ ramification index $8$ and residue degree $4$. There are unique
+ $x,y,z\in\Gal(L_2/\Q_2)$ such that $x$ is trivial on $M_8$ and $U_4$ and
+ negates $\sqrt2$; $y$ restricts to $\sigma_y$ on $M_8$, fixes $\sqrt2$ and
+ is trivial on $U_4$; and $z$ restricts to $\sigma_z$ on $M_8$, fixes $\sqrt2$
+ and restricts to $\mathrm{Fr}$ on $U_4$. They act on $E_2\subset L_2$ as in
+ Lemma~\ref{tw:local-groups}(c), and the map sending the generators of
+ \[
+  D=\langle x,y,z\mid x^2,\ y^2,\ z^4,\ [y,z]^2,\ [x,y],\ [x,z],\ [[y,z],z]\rangle
+ \]
+ to $x,y,z$ is an isomorphism $D\cong\Gal(L_2/\Q_2)$. The inertia group is
+ $\langle x,y,[y,z]\rangle\cong C_2^3$.
+\item[(c)] The Zassenhaus layers of $D$ are
+ $\operatorname{gr}_1D=\langle\bar x,\bar y,\bar z\rangle\cong\Ftwo^3$ and
+ $\operatorname{gr}_2D=\langle\overline{z^2},\overline{[y,z]}\rangle\cong\Ftwo^2$,
+ and $D_3(D)=1$, so the augmentation Hilbert polynomial of $\Ftwo[D]$ is
+ $P_D(t)=(1+t)^3(1+t^2)^2$.
+\item[(d)] The different of $L_2/\Q_2$ has valuation $18$ in $L_2$;
+ equivalently, its normalized exponent is $18/8=9/4$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\emph{Quadratic extensions of $k$.} Put $\varpi=1+i$, a uniformizer of $k$,
+so that $v_k(2)=2$, and for $b\in k^\times$ let $f(b)$ be the exponent of the
+conductor of $k(\sqrt b)/k$, which for a quadratic extension equals the
+exponent of its discriminant. Then $f(5)=0$, since $\Q_2(\sqrt5)/\Q_2$ is
+unramified. Since $\alpha=1+\varpi^2$, the element
+$\varpi_\alpha=(\sqrt\alpha-1-\varpi)/\varpi$ is a root of the Eisenstein
+polynomial $X^2+\frac{2(1+\varpi)}\varpi X+\frac2\varpi$; its derivative at
+$\varpi_\alpha$ is the sum of terms of valuations $5$ and $2$ in
+$k(\sqrt\alpha)$, so $f(\alpha)=2$. Next $2\alpha=\varpi^2\alpha'$ with
+$\alpha'=2-i$, and $\sqrt{\alpha'}-1$ is a root of $X^2+2X+1-\alpha'$, which
+is Eisenstein since $v_k(1-\alpha')=1$; its derivative $2\sqrt{\alpha'}$ has
+valuation $4$, so $f(2\alpha)=4$. Similarly $2=-i\varpi^2$, $-i\equiv i$
+modulo squares, and $\sqrt i-1$ is a root of $X^2+2X+1-i$, so $f(2)=4$.
+Finally $f(5b)=f(b)$ when $b\notin k^{\times2}\cup5k^{\times2}$: the field
+$k(\sqrt5,\sqrt b)$ is unramified over both $k(\sqrt b)$ and $k(\sqrt{5b})$,
+so the two ways of computing its discriminant over $k$ give $2f(b)=2f(5b)$.
+
+(a) Since $k(\sqrt5)/k$ is unramified and $k(\sqrt\alpha)/k$ is ramified,
+$\alpha$ is not a square in $k(\sqrt5)$, so $[M_8:\Q_2]=8$. The field $M_8$
+contains the conjugate $\sqrt{\bar\alpha}$ of $\sqrt\alpha$, so it is Galois
+over $\Q_2$, and an automorphism is determined by the images $\pm i$,
+$\pm\sqrt5$ and a square root of the image of $\alpha$; in particular
+$\sigma_y$ and $\sigma_z$ exist. Now $\sigma_y^2=1$, $\sigma_z^2$ fixes
+$i,\sqrt5$ and negates $\sqrt\alpha$, $\sigma_z$ has order four, and
+$\sigma_y\sigma_z\sigma_y=\sigma_z^{-1}$. So
+$\Gal(M_8/\Q_2)=\langle\sigma_y,\sigma_z\rangle$ is dihedral of order eight,
+with center $\langle\sigma_z^2\rangle$ and maximal abelian subextension
+$\Q_2(i,\sqrt5)$.
+
+(b) The quadratic subfields of $M_8$ are $\Q_2(\sqrt b)$ for $b=-1,5,-5$, so
+$\sqrt2\notin M_8$, and $M_{16}$ has degree $16$ and group
+$\Gal(M_8/\Q_2)\times C_2$. This group has elementary abelian
+abelianization, so the maximal unramified subextension of $M_{16}$, which is
+cyclic over $\Q_2$ and contains $\Q_2(\sqrt5)$, is $\Q_2(\sqrt5)$. Hence
+$M_{16}$ has ramification index $8$, $M_{16}\cap U_4=\Q_2(\sqrt5)$, and
+$[L_2:\Q_2]=16\cdot4/2=32$. Since $L_2$ contains $U_4$ and has ramification
+index at least $8$, its residue degree is $4$ and its ramification index is
+$8$. Restriction identifies $\Gal(L_2/\Q_2)$ with the set of triples
+$(\sigma,\epsilon,\mu)$, where $\sigma\in\Gal(M_8/\Q_2)$, $\epsilon=\pm1$ is
+the sign by which the element multiplies $\sqrt2$, and $\mu\in\Gal(U_4/\Q_2)$
+agrees with $\sigma$ on $\sqrt5$; both sets have $32$ elements. Since $\mathrm{Fr}$
+negates $\sqrt5$, the triples
+\[
+ x=(1,-1,1),\qquad y=(\sigma_y,1,1),\qquad z=(\sigma_z,1,\mathrm{Fr}),\qquad
+ w=[y,z]=(\sigma_z^2,1,1)
+\]
+exist and are the unique elements described in the statement. They act on
+$E_2$ as required. The elements $x$ and $w$ are central involutions, $y$ is
+an involution, and $z$ has order four. Hence the relations of $D$ hold. Conversely, in
+$D$ these relations make $w=[y,z]$ central: $w^y=w^{-1}=w$, and $[w,z]=1$ is
+imposed. Since $zy=yzw$, every element of $D$ is
+$x^{a_1}y^{a_2}z^{a_3}w^{a_4}$ with $a_1,a_2,a_4\in\Ftwo$ and
+$a_3\in\Z/4$, and
+\[
+ (a_1,a_2,a_3,a_4)(a'_1,a'_2,a'_3,a'_4)
+ =(a_1+a'_1,\,a_2+a'_2,\,a_3+a'_3,\,a_4+a'_4+a_3a'_2).
+\]
+These $32$ normal forms have distinct images in $\Gal(L_2/\Q_2)$: the third
+component determines $a_3$, the second $a_1$, and
+$\sigma_y^{a_2}\sigma_z^{a_3+2a_4}$ determines $a_2$ and $a_4$. So
+$D\cong\Gal(L_2/\Q_2)$. The inertia group consists of the elements trivial
+on $U_4$, namely $\langle x,y,w\rangle$.
+
+(c) The Frattini subgroup of $D$ is $\langle z^2,w\rangle$, which is central
+of exponent two, and $D$ has exponent four. So Lazard's formula gives
+$D_3(D)=[[D,D],D]\,[D,D]^2D^4=1$, and the Hilbert polynomial follows from
+Jennings' theorem \cite{Jennings}.
+
+(d) The extension $M_{16}/k$ is abelian of type $(2,2,2)$, generated by
+$\sqrt5,\sqrt\alpha,\sqrt2$. We apply the conductor--discriminant formula for
+abelian extensions \cite[Chapter~V, Theorem~3.27]{MilneCFT} to the extension
+$\Q(i)(\sqrt5,\sqrt{1+2i},\sqrt2)$ of $\Q(i)$, whose completion at the unique
+prime above $1+i$ is $M_{16}/k$. Taking $(1+i)$-adic valuations gives
+\[
+ v_k(\mathfrak d_{M_{16}/k})=\sum_bf(b)=0+0+2+2+4+4+4+4=20,
+\]
+the sum over the classes $b=1,5,\alpha,5\alpha,2,10,2\alpha,10\alpha$. Hence
+\[
+ v_2(\mathfrak d_{M_{16}/\Q_2})=[M_{16}:k]\,v_2(\mathfrak d_{k/\Q_2})+20=8\cdot2+20=36.
+\]
+Since $M_{16}$ has residue degree two over $\Q_2$, its different has
+valuation $36/2=18$. The extension $L_2/M_{16}$ is unramified, so the
+different of $L_2/\Q_2$ also has valuation $18$, and $18/8=9/4$.
+\end{proof}
+
+The field $E_2$ is the maximal elementary abelian subextension of $L_2$, so
+$\Gal(L_2/E_2)$ is the Frattini subgroup $\langle z^2,[y,z]\rangle$, which is
+central of exponent two. Hence any triple in $\Gal(L_2/\Q_2)$ that acts on
+$E_2$ as $x,y,z$ do differs from $x,y,z$ by central elements of order at
+most two; it satisfies the relations of $D$ and generates, so it also
+defines an isomorphism $D\cong\Gal(L_2/\Q_2)$. The description of the
+inertia group, however, refers to the triple of
+Lemma~\ref{tw:local-two}(b).
+
+\subsection{The Global Group and Its Complete Presentation}\label{tw:global-section}
+Let $B_S$ be the maximal pro-$2$ extension of $B$, in a fixed algebraic
+closure, that is unramified at every finite prime outside $S$; no condition
+is imposed at $v_1,v_2$. Let $\mathcal G_B=\Gal(B_S/B)$, and let
+$E=B(\sqrt{\alpha_0},\dots,\sqrt{\alpha_7})=B(\sqrt V)$ be the Kummer field.
+Every prime above $2$ lies in $S$, so a quadratic extension $B(\sqrt b)$ lies
+in $B_S$ exactly when $b$ has even valuation outside $S$. By
+Lemma~\ref{tw:base}(d), $E$ is the maximal elementary abelian extension of
+$B$ in $B_S$, and $[E:B]=256$. For $g\in\mathcal G_B$ define its elementary
+image $\bar g\in\Ftwo^8$ by $g(\sqrt{\alpha_i})=(-1)^{\bar g_i}\sqrt{\alpha_i}$.
+This identifies $\mathcal G_B/D_2\mathcal G_B=\Gal(E/B)$ with $\Ftwo^8$. We
+write vectors as strings $v_0v_1\cdots v_7$. For $a\in V$ let $\chi_a$ be the
+Kummer character, $g(\sqrt a)=(-1)^{\chi_a(g)}\sqrt a$; then $a\mapsto\chi_a$
+identifies $V$ with the dual of $\Ftwo^8$, and $\chi_{\alpha_i}(g)=\bar g_i$.
+
+For a place $\nu$ of $B$, a choice of a place of $B_S$ above $\nu$ gives a
+homomorphism $\mathcal G_\nu\to\mathcal G_B$, the local map at $\nu$; another
+choice changes it by an inner automorphism of $\mathcal G_B$. For a finite
+place $\nu\notin S$, the local map kills inertia, and its image is generated
+by a Frobenius element $\Frob_\nu$. Let $\Sigma=S\cup\{v_1,v_2\}$. For
+$\nu\in\Sigma$ we fix generators of $\mathcal G_\nu$ as follows, and use the
+same names for their images in $\mathcal G_B$: $\iota_j$ at $v_j$
+(Lemma~\ref{tw:local-groups}(a)), so that $\iota_1,\iota_2$ are complex
+conjugations; $\tau_\nu,\varphi_\nu$ at
+$\nu\in\{\mathfrak q_1,\mathfrak q_2,\mathfrak r_1,\mathfrak r_2\}$, with the
+generator $\alpha_i$ of $\nu$ as uniformizer $\varpi$ in
+Lemma~\ref{tw:local-groups}(b); and $x_j,y_j,z_j$ at $\mathfrak p_j$, the
+images of one fixed triple $x,y,z\in\mathcal G_{\Q_2}=\mathcal G_{\mathfrak p_j}$
+lifting the elements $x,y,z$ of Lemma~\ref{tw:local-two}(b). This triple
+satisfies the hypothesis of Lemma~\ref{tw:local-groups}(c). We also write
+$\Frob_{\mathfrak t_k}$ for $k=0,1,2$.
+
+\begin{table}[htbp]
+\centering
+\caption{Elementary images in $\Ftwo^8$ of the local generators. Entry $i$
+is $1$ exactly when the element negates $\sqrt{\alpha_i}$. The third and
+sixth columns give the action on $\sqrt b$ for $b$ in the completion.}
+\label{tw:vector-table}
+\begin{tabular}{lll@{\qquad}lll}
+\toprule
+element & image & action & element & image & action\\
+\midrule
+$\iota_1$ & $10111010$ & sign at $v_1$ & $\iota_2$ & $11000101$ & sign at $v_2$\\
+$x_1$ & $00100000$ & $(5,b)_{\mathfrak p_1}$ & $x_2$ & $00010000$ & $(5,b)_{\mathfrak p_2}$\\
+$y_1$ & $11110010$ & $(-1,b)_{\mathfrak p_1}$ & $y_2$ & $10000001$ & $(-1,b)_{\mathfrak p_2}$\\
+$z_1$ & $10000100$ & $(-2,b)_{\mathfrak p_1}$ & $z_2$ & $11111000$ & $(-2,b)_{\mathfrak p_2}$\\
+$\tau_{\mathfrak q_1}$ & $00001000$ & $(-1,b)_{\mathfrak q_1}$ & $\varphi_{\mathfrak q_1}$ & $10100111$ & $(-\alpha_4,b)_{\mathfrak q_1}$\\
+$\tau_{\mathfrak q_2}$ & $00000100$ & $(-1,b)_{\mathfrak q_2}$ & $\varphi_{\mathfrak q_2}$ & $11101011$ & $(-\alpha_5,b)_{\mathfrak q_2}$\\
+$\tau_{\mathfrak r_1}$ & $00000010$ & $(2,b)_{\mathfrak r_1}$ & $\varphi_{\mathfrak r_1}$ & $01100101$ & $(-\alpha_6,b)_{\mathfrak r_1}$\\
+$\tau_{\mathfrak r_2}$ & $00000001$ & $(2,b)_{\mathfrak r_2}$ & $\varphi_{\mathfrak r_2}$ & $01011010$ & $(-\alpha_7,b)_{\mathfrak r_2}$\\
+$\Frob_{\mathfrak t_1}$ & $00100111$ & $(29,b)_{\mathfrak t_1}$ & $\Frob_{\mathfrak t_2}$ & $00011011$ & $(29,b)_{\mathfrak t_2}$\\
+$\Frob_{\mathfrak t_0}$ & $01110000$ & $(7,b)_{\mathfrak t_0}$ & & &\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tw:vector-table} lists the elementary images. They follow from
+Lemma~\ref{tw:local-groups} and Table~\ref{tw:squareclass-table}. For
+example, at the places above $3$ and $5$ the vector of $\tau_\nu$ marks the
+odd valuations, and that of $\varphi_\nu$ marks the units that are not
+squares modulo $\nu$, with a zero at the generator of $\nu$. The columns
+headed ``action'' express the same actions as Hilbert symbols, that is, as
+local Artin symbols \cite[Chapter~III, Remark~4.5]{MilneCFT}. The
+supplementary program \texttt{kummer241.gp} checks the norms of the
+$\alpha_i$, the generators of the primes in Lemma~\ref{tw:base}(c) and the
+residues of $\sqrt{241}$ in Table~\ref{tw:squareclass-table}, and recomputes
+Table~\ref{tw:vector-table} from these Hilbert symbols.
+
+Fix a minimal presentation $1\to R\to\mathcal F\to\mathcal G_B\to1$, where
+$\mathcal F$ is a free pro-$2$ group of rank $8$. Minimality means
+$R\subset D_2\mathcal F$, so $\mathcal F/D_2\mathcal F=\Ftwo^8$ with the
+coordinates above. Put $\mathfrak L=\operatorname{gr}\mathcal F$, so that
+$\dim\mathfrak L_1=8$, $\dim\mathfrak L_2=36$ and $\dim\mathfrak L_3=168$.
+For $v,w\in\mathfrak L_1$ we have $(v+w)^{[2]}=v^{[2]}+w^{[2]}+[v,w]$, and the
+square of an element of $\mathcal F$ with image $v$ has class $v^{[2]}$. For
+each local generator $g$ above choose a lift $\hat g\in\mathcal F$, and define
+the local relators
+\begin{equation}\label{tw:relators}
+ \rho_{v_j}=\hat\iota_j^{\,2},\qquad
+ \rho_\nu=\hat\varphi_\nu\hat\tau_\nu\hat\varphi_\nu^{-1}\hat\tau_\nu^{-p}
+ \ (\nu\in\{\mathfrak q_1,\mathfrak q_2,\mathfrak r_1,\mathfrak r_2\}),\qquad
+ \rho_{\mathfrak p_j}=r(\hat x_j,\hat y_j,\hat z_j),
+\end{equation}
+where $p\in\{3,5\}$ is the rational prime below $\nu$, and $r$ is a
+defining relator of $\mathcal G_{\Q_2}$ with respect to the fixed triple
+$x,y,z$, the same for $j=1,2$. They lie in $R$, because each local relation
+holds in $\mathcal G_\nu$. Their classes in $\mathfrak L_2$ are obtained by
+substituting elementary images into the quadratic initials of
+Lemma~\ref{tw:local-groups}:
+\begin{equation}\label{tw:local-initials}
+ \bar\iota_j^{\,[2]},\qquad
+ [\bar\tau_\nu,\bar\varphi_\nu]+\tfrac{p-1}2\bar\tau_\nu^{\,[2]},\qquad
+ \bar y_j^{\,[2]}+[\bar x_j,\bar y_j]+[\bar x_j,\bar z_j].
+\end{equation}
+The results below hold for every minimal presentation and every choice of
+lifts.
+
+The classes \eqref{tw:local-initials} have an arithmetic meaning. The
+elements $e_i^{[2]}$ and $[e_i,e_j]$ ($i<j$) of the standard basis form a
+basis of $\mathfrak L_2$, so there is a linear isomorphism $\beta$ from
+$\mathfrak L_2$ onto the space of symmetric bilinear forms on $V$ with
+\[
+ \beta(v^{[2]})(a,b)=\chi_a(v)\chi_b(v),\qquad
+ \beta([v,w])(a,b)=\chi_a(v)\chi_b(w)+\chi_a(w)\chi_b(v)
+ \qquad(v,w\in\mathfrak L_1).
+\]
+It is defined by these formulas for basis vectors $v,w$, which send the basis
+of $\mathfrak L_2$ to a basis of the symmetric bilinear forms. The formulas
+then hold for all $v,w$, because the bracket is bilinear,
+$(v+w)^{[2]}=v^{[2]}+w^{[2]}+[v,w]$, and squaring is the identity on $\Ftwo$.
+Equivalently, if $\xi\in\mathfrak L_2$ is written in the free algebra
+$\Ftwo\langle X_0,\dots,X_7\rangle$ as $\sum_{i,j}n_{ij}X_iX_j$, then
+$\beta(\xi)(\alpha_i,\alpha_j)=n_{ij}$.
+For $\nu\in\Sigma$, the local Hilbert form $H_\nu$ on $V$ is the symmetric
+bilinear form with $H_\nu(a,b)=1$ if $(a,b)_\nu=-1$ and $H_\nu(a,b)=0$
+otherwise.
+
+\begin{lemma}\label{tw:local-forms}
+For every $\nu\in\Sigma$, $\beta$ maps the class of $\rho_\nu$ to $H_\nu$. The
+eight classes \eqref{tw:local-initials} sum to zero, and the seven classes
+with $\nu\ne\mathfrak p_1$ are linearly independent.
+\end{lemma}
+
+\begin{proof}
+For a local generator $g$ at $\nu$, $\chi_a(\bar g)$ is the value at $g$ of
+the local Kummer character of the image of $a$ in $B_\nu$. Hence
+$\beta$ of the class of $\rho_\nu$ is the pullback to $V$ of a symmetric
+bilinear form on $B_\nu^\times/B_\nu^{\times2}$, as is $H_\nu$, and it
+suffices to compare the two on a basis of $B_\nu^\times/B_\nu^{\times2}$. At a
+real place the only class is $-1$, and both forms take the value $1$ on
+$(-1,-1)$. At $\nu$ above $p\in\{3,5\}$, take the basis $\varpi,u$ with
+$\varpi$ the generator of $\nu$ and $u$ a nonsquare unit. By
+Lemma~\ref{tw:local-groups}(b), $\chi_\varpi(\tau)=\chi_u(\varphi)=1$ and
+$\chi_\varpi(\varphi)=\chi_u(\tau)=0$, so the form of
+$[\tau,\varphi]+\frac{p-1}2\tau^{[2]}$ takes the values $\frac{p-1}2$, $1$,
+$0$ on $(\varpi,\varpi)$, $(\varpi,u)$, $(u,u)$; by \eqref{tw:hilbert} these
+are the indicators of $(\varpi,\varpi)_p=(-1)^{(p-1)/2}$, $(\varpi,u)_p=-1$
+and $(u,u)_p=1$. At $\mathfrak p_j$ the characters $\chi_2,\chi_{-5},\chi_5$
+are dual to $x,y,z$, as in the proof of Lemma~\ref{tw:local-groups}(c). So
+$y^{[2]}$ contributes the entry at $(-5,-5)$, $[x,y]$ the entries at $(2,-5)$
+and $(-5,2)$, and $[x,z]$ those at $(2,5)$ and $(5,2)$: the form of
+$y^{[2]}+[x,y]+[x,z]$ on the basis $2,-5,5$ is the matrix of the Hilbert
+symbol displayed in that proof, from which this initial was obtained.
+
+For $a,b\in V$ and a place $\nu'\notin\Sigma$, the place $\nu'$ is finite
+and not above $2$, and $a,b$ are units at $\nu'$, so $(a,b)_{\nu'}=1$
+\cite[Chapter~VIII, 5.8]{MilneCFT}. By the
+product formula for the Hilbert symbol \cite[Chapter~V, Example~5.4]{MilneCFT},
+$\sum_{\nu\in\Sigma}H_\nu=0$, so the eight classes sum to zero.
+
+Finally, by Table~\ref{tw:squareclass-table} and \eqref{tw:hilbert}, the
+seven pairs
+\[
+ (-1,\alpha_2),\ (-1,\varepsilon),\ (-1,\alpha_7),\ (-1,\alpha_4),\
+ (-1,\alpha_5),\ (\alpha_2,\alpha_6),\ (\varepsilon,\alpha_7)
+\]
+have Hilbert symbol $-1$ exactly at $\{\mathfrak p_1,v_1\}$,
+$\{\mathfrak p_1,v_2\}$, $\{\mathfrak p_2,v_2\}$, $\{\mathfrak q_1,v_1\}$,
+$\{\mathfrak q_2,v_2\}$, $\{\mathfrak r_1,v_1\}$ and $\{\mathfrak r_2,v_2\}$;
+the supplementary program \texttt{cup241.gp} recomputes these symbols.
+Evaluating a relation $\sum_{\nu\ne\mathfrak p_1}n_\nu H_\nu=0$, with
+$n_\nu\in\Ftwo$, at the first two pairs gives $n_{v_1}=n_{v_2}=0$, and then
+at the other five pairs gives
+$n_{\mathfrak p_2}=n_{\mathfrak q_1}=n_{\mathfrak q_2}=n_{\mathfrak r_1}=n_{\mathfrak r_2}=0$.
+\end{proof}
+
+\begin{lemma}\label{tw:complete-global-presentation}
+The group $\mathcal G_B$ has generator rank $8$ and relation rank $7$. The
+seven relators $\rho_\nu$ with $\nu\in\Sigma\setminus\{\mathfrak p_1\}$ form
+a minimal system of defining relations: their normal closure in
+$\mathcal F$ is $R$. In particular the dyadic local relator
+$\rho_{\mathfrak p_1}$ lies in the normal closure of the other seven.
+\end{lemma}
+
+\begin{proof}
+The generator rank is $\dim H^1(\mathcal G_B,\Ftwo)=8$
+\cite[Proposition~3.9.1]{NeukirchSchmidtWingberg2008}.
+
+Next we bound $H^2$. Let $X=\operatorname{Spec}\mathcal O_B[1/30]$. Since
+$2$ is invertible on $X$, the sheaf $\mu_2$ is the constant sheaf $\Ftwo$.
+The finite subextensions of $B_S/B$ correspond to the connected finite étale
+Galois $2$-covers $Y\to X$, and the Hochschild--Serre spectral sequence of
+this tower \cite[Theorem~14.9 and Remark~14.10]{MilneEtale} gives an exact
+sequence
+\[
+ 0\to H^1(\mathcal G_B,\Ftwo)\to H^1(X,\Ftwo)\to
+ \bigl(\varinjlim_Y H^1(Y,\Ftwo)\bigr)^{\mathcal G_B}\to
+ H^2(\mathcal G_B,\Ftwo)\to H^2(X,\Ftwo).
+\]
+A class in $H^1(Y,\Ftwo)$ is an étale double cover of $Y$. Its Galois closure
+over $X$ is a finite étale Galois cover whose group embeds in the wreath
+product of $\Gal(Y/X)$ with $C_2$, hence a $2$-cover in the tower, over which
+the class vanishes. So the direct limit is zero, and
+$H^2(\mathcal G_B,\Ftwo)$ injects into $H^2(X,\mu_2)$. The Kummer sequence and
+$\Pic(X)=0$ identify $H^2(X,\mu_2)$ with $\Br(X)[2]$, where
+$\Br(X)=H^2(X,\mathbb G_m)$. By \cite[Theorem~6.8.3 and
+Example~6.9.4]{Poonen}, $\Br(X)$ is the kernel of the sum of the local
+invariants $\bigoplus_{\nu\in\Sigma}\Br(B_\nu)\to\Q/\Z$. Each of the eight
+groups $\Br(B_\nu)[2]$ has order two, and the sum of the invariants maps their
+direct sum onto $\frac12\Z/\Z$, so $\dim\Br(X)[2]=7$. We use only the
+resulting bound $\dim H^2(\mathcal G_B,\Ftwo)\le\dim\Br(X)[2]\le7$.
+
+By Lemma~\ref{tw:local-forms}, the classes in $\mathfrak L_2$ of the seven
+relators $\rho_\nu$, $\nu\ne\mathfrak p_1$, are linearly independent. Since
+$R\subset D_2\mathcal F$, we have $R^2[R,\mathcal F]\subset D_3\mathcal F$, so
+the classes of these seven relators in $R/R^2[R,\mathcal F]$ are independent.
+On the other hand
+$\dim R/R^2[R,\mathcal F]=\dim H^2(\mathcal G_B,\Ftwo)\le7$ by the five-term
+exact sequence of the presentation
+\cite[Proposition~3.9.5]{NeukirchSchmidtWingberg2008},
+\cite[(3.3)--(3.4)]{Quadrelli2021}. Hence the seven classes form a basis, the
+relation rank is $7$, and by the pro-$2$ Nakayama lemma
+\cite[Corollary~3.9.3]{NeukirchSchmidtWingberg2008} the seven relators
+generate $R$ as a normal subgroup. Finally $\rho_{\mathfrak p_1}\in R$.
+\end{proof}
+
+By Lemma~\ref{tw:local-forms}, the only linear relation among the eight
+classes \eqref{tw:local-initials} is that their sum vanishes, and this
+relation is Hilbert reciprocity. Hence any seven of the eight classes are
+linearly independent, and the proof of
+Lemma~\ref{tw:complete-global-presentation} shows that any seven of the eight
+local relators generate $R$ as a normal subgroup. We omit the dyadic relator
+at $\mathfrak p_1$.
+
+\begin{remark}\label{tw:cup-remark}
+By Lemma~\ref{tw:complete-global-presentation}, the bound
+$\dim H^2(\mathcal G_B,\Ftwo)\le\dim\Br(X)[2]=7$ is attained, so
+$H^2(\mathcal G_B,\Ftwo)\to\Br(X)[2]$ is an isomorphism. This can also be seen
+as in the proof of \cite[Lemma~2.1]{Naslund0418235}: the cup product
+$\chi_a\cup\chi_b$ maps to the class of the quaternion algebra $(a,b)$, whose
+invariant at $\nu$ is given by $(a,b)_\nu$ \cite[Chapter~III,
+Remark~4.7]{MilneCFT}, and the seven pairs in the proof of
+Lemma~\ref{tw:local-forms} give seven classes with independent invariant
+vectors. The supplementary program \texttt{cup241.gp} computes the invariant
+vectors at the eight places of $\Sigma$ of all $36$ algebras
+$(\alpha_i,\alpha_j)$.
+\end{remark}
+
+\subsection{The Prescribed Local Groups}\label{tw:prescribed-section}
+We now cut $\mathcal G_B$ down to prescribed local groups. At the dyadic
+places we use the restriction
+$\mathcal G_{\mathfrak p_j}=\mathcal G_{\Q_2}\to\Gal(L_2/\Q_2)=D$ of
+Lemma~\ref{tw:local-two}. At a place $\nu$ above $p\in\{3,5\}$, the maximal
+elementary abelian quotient of $\mathcal G_\nu$ is
+$\Gal(\Q_p(\sqrt u,\sqrt p)/\Q_p)\cong C_2\times C_2$ for a nonsquare unit $u$;
+this quotient has ramification index and residue degree two. At
+$\mathfrak t_1,\mathfrak t_2$, whose completions are $\Q_{29}$, and at
+$\mathfrak t_0$, whose residue field is $\mathbb F_{49}$, we bound the order
+of the Frobenius by four.
+
+\begin{definition}\label{tw:GB}
+Let $N$ be the normal closure in $\mathcal G_B$ of the images of
+$\ker(\mathcal G_{\mathfrak p_j}\to D)$ for $j=1,2$, of the Frattini subgroups
+$D_2\mathcal G_\nu$ for $\nu\in\{\mathfrak q_1,\mathfrak q_2,\mathfrak r_1,\mathfrak r_2\}$,
+and of $\Frob_{\mathfrak t_k}^4$ for $k=0,1,2$. Put $G_B=\mathcal G_B/N$ and
+$\overline G_B=G_B/D_4G_B$, and let $B_G\subset B_S$ be the fixed field of
+$N$, so that $\Gal(B_G/B)=G_B$.
+\end{definition}
+
+This does not depend on the choice of places of $B_S$ above each $\nu$. The
+image of $\mathcal G_{\mathfrak p_j}$ in $G_B$ is a quotient of $D$, the image
+of $\mathcal G_\nu$ for $\nu$ above $3$ or $5$ is a quotient of
+$C_2\times C_2$ in which inertia maps to the image of $\tau_\nu$, and
+$\Frob_{\mathfrak t_k}$ has order dividing four in $G_B$.
+Subsection~\ref{tw:retained-section} shows that these are equalities. Since
+$D$ and $\mathcal G_{\Q_2}$ both have generator rank three,
+$\ker(\mathcal G_{\mathfrak p_j}\to D)$ lies in the Frattini subgroup of
+$\mathcal G_{\mathfrak p_j}$. Hence $N\subset D_2\mathcal G_B$,
+$G_B/D_2G_B=\Gal(E/B)$, and $E\subset B_G$ is the fixed field of $D_2G_B$.
+
+\begin{lemma}\label{tw:GB-presentation}
+The kernel $N_B$ of $\mathcal F\to\mathcal G_B\to G_B$ is the normal closure
+of the following thirty elements:
+\begin{enumerate}
+\item[(i)] the seven relators $\rho_\nu$, $\nu\in\Sigma\setminus\{\mathfrak p_1\}$;
+\item[(ii)] for $j=1,2$: $\hat x_j^{\,2}$, $[\hat x_j,\hat y_j]$,
+ $[\hat x_j,\hat z_j]$, $[[\hat y_j,\hat z_j],\hat z_j]$, $\hat z_j^{\,4}$,
+ $[\hat y_j,\hat z_j]^2$;
+\item[(iii)] for $\nu\in\{\mathfrak q_1,\mathfrak q_2,\mathfrak r_1,\mathfrak r_2\}$:
+ $\hat\tau_\nu^{\,2}$ and $\hat\varphi_\nu^{\,2}$;
+\item[(iv)] for $k=0,1,2$: $\hat F_k^{\,4}$, where $\hat F_k$ is the chosen
+ lift of $\Frob_{\mathfrak t_k}$.
+\end{enumerate}
+Moreover $N_B\subset D_2\mathcal F$, and $\rho_{\mathfrak p_1}\in N_B$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{tw:complete-global-presentation}, it suffices to show that the
+images in $\mathcal G_B$ of the elements (ii)--(iv) generate $N$ as a normal
+subgroup. Let $\mathcal F_3$ be free on $x,y,z$, and let $N_D$ be the normal
+closure of the seven relators of $D$ in Lemma~\ref{tw:local-two}, so that
+$\mathcal F_3/N_D=D$. The relator $r$ maps to $1$ in $D$, so $r\in N_D$, and
+$\ker(\mathcal G_{\Q_2}\to D)$ is the image of $N_D$. Since
+$N_D\subset D_2\mathcal F_3$, we have
+$N_D^2[N_D,\mathcal F_3]\subset D_3\mathcal F_3$. The seven relators of $D$
+span $N_D/N_D^2[N_D,\mathcal F_3]$
+\cite[Corollary~3.9.3]{NeukirchSchmidtWingberg2008}; write the class of $r$ as
+a combination of them. The classes in $\operatorname{gr}_2\mathcal F_3$ of
+$x^2,y^2,[x,y],[x,z]$ are independent, the relators $z^4$, $[y,z]^2$ and
+$[[y,z],z]$ lie in $D_3\mathcal F_3$, and $r$ has class
+$y^{[2]}+[x,y]+[x,z]$; so $y^2$ has coefficient one. Replacing $y^2$ by $r$
+therefore still gives a spanning set, and by
+\cite[Corollary~3.9.3]{NeukirchSchmidtWingberg2008} the elements $r$, $x^2$,
+$[x,y]$, $[x,z]$, $[[y,z],z]$, $z^4$, $[y,z]^2$ generate $N_D$ as a normal
+subgroup. Since $r=1$ in $\mathcal G_{\Q_2}$, the other six generate
+$\ker(\mathcal G_{\Q_2}\to D)$. For $\nu$ above $p\in\{3,5\}$, the quotient
+of $\mathcal G_\nu$ by the normal closure of $\tau^2,\varphi^2$ is generated
+by two involutions which commute, because
+$\varphi\tau\varphi^{-1}=\tau^p=\tau$ there; so that normal closure is
+$D_2\mathcal G_\nu$. Finally $N\subset D_2\mathcal G_B$ and
+$R\subset D_2\mathcal F$ give $N_B\subset D_2\mathcal F$, and
+$\rho_{\mathfrak p_1}\in R\subset N_B$.
+\end{proof}
+
+\subsection{The Retained Quotient}\label{tw:retained-section}
+For $n\ge1$ let $R_n\subset\mathfrak L_n$ be the image of
+$N_B\cap D_n\mathcal F$. Since $N_B\subset D_2\mathcal F$ and $D_nG_B$ is
+the image of $D_n\mathcal F$,
+\[
+ \operatorname{gr}_1G_B=\Ftwo^8,\qquad
+ \operatorname{gr}_nG_B\cong\mathfrak L_n/R_n .
+\]
+Consider the following $22$ elements of $\mathfrak L_2$, written with the
+vectors of Table~\ref{tw:vector-table}:
+\begin{equation}\label{tw:initials-list}
+\begin{aligned}
+ &\bar\iota_1^{\,[2]},\ \bar\iota_2^{\,[2]};\qquad
+ [\bar\tau_\nu,\bar\varphi_\nu]+\bar\tau_\nu^{\,[2]}\ (\nu=\mathfrak q_1,\mathfrak q_2),\quad
+ [\bar\tau_\nu,\bar\varphi_\nu]\ (\nu=\mathfrak r_1,\mathfrak r_2);\\
+ &\bar y_j^{\,[2]}+[\bar x_j,\bar y_j]+[\bar x_j,\bar z_j],\quad
+ \bar x_j^{\,[2]},\quad [\bar x_j,\bar y_j],\quad [\bar x_j,\bar z_j]\quad(j=1,2);\\
+ &\bar\tau_\nu^{\,[2]},\ \bar\varphi_\nu^{\,[2]}\quad
+ (\nu=\mathfrak q_1,\mathfrak q_2,\mathfrak r_1,\mathfrak r_2).
+\end{aligned}
+\end{equation}
+They are the classes of the eight local relators \eqref{tw:local-initials}
+and of the fourteen quadratic elements $\hat x_j^{\,2}$,
+$[\hat x_j,\hat y_j]$, $[\hat x_j,\hat z_j]$, $\hat\tau_\nu^{\,2}$,
+$\hat\varphi_\nu^{\,2}$ of Lemma~\ref{tw:GB-presentation}.
+
+\begin{lemma}\label{tw:quadratic-layer}
+The space $R_2$ is spanned by the $22$ elements \eqref{tw:initials-list}, and
+$\dim R_2=21$; their only linear relation is that the eight classes of local
+relators sum to zero. Hence $\dim\operatorname{gr}_2G_B=15$. Consequently, if
+$g\in G_B$ has nonzero elementary image $v$, then $g$ has order at least four
+in $G_B/D_3G_B$ exactly when $v^{[2]}\notin R_2$; otherwise $g$ has order two
+there.
+\end{lemma}
+
+\begin{proof}
+Conjugates of an element of $D_2\mathcal F$ have the same class modulo
+$D_3\mathcal F$, classes of products add, and $\mathfrak L_2$ is finite.
+Hence, by Lemma~\ref{tw:GB-presentation}, $R_2$ is spanned by the classes of
+the thirty generators of $N_B$. Those in (i) have the classes
+\eqref{tw:local-initials}, and the quadratic elements of (ii) and (iii) have
+the classes $\bar x_j^{\,[2]}$, $[\bar x_j,\bar y_j]$, $[\bar x_j,\bar z_j]$,
+$\bar\tau_\nu^{\,[2]}$, $\bar\varphi_\nu^{\,[2]}$. The remaining generators,
+$[[\hat y_j,\hat z_j],\hat z_j]$, $\hat z_j^{\,4}$, $[\hat y_j,\hat z_j]^2$ and
+the fourth powers in (iv), lie in $D_3\mathcal F$. The class of
+$\rho_{\mathfrak p_1}$ also lies in $R_2$, since $\rho_{\mathfrak p_1}\in N_B$.
+The supplementary program \texttt{lie241.py} computes the rank of the $22$
+elements in the $36$-dimensional space $\mathfrak L_2$: it is $21$. The sum of
+the eight local classes vanishes by Lemma~\ref{tw:local-forms}, that is, by
+Hilbert reciprocity, so this is the only relation; none of the fourteen
+quadratic elements of (ii) and (iii) is involved in it. For the last statement, $g^2\in D_2G_B$ has class $v^{[2]}$ in
+$\operatorname{gr}_2G_B=\mathfrak L_2/R_2$, so $g^2\in D_3G_B$ exactly when
+$v^{[2]}\in R_2$.
+\end{proof}
+
+\begin{lemma}\label{tw:retained-quotient}
+\begin{enumerate}
+\item[(a)] $\dim\operatorname{gr}_3G_B=26$, so $|\overline G_B|=2^{8+15+26}=2^{49}$.
+\item[(b)] For $j=1,2$, the local map induces an injection
+ $D\to G_B/D_3G_B$, and $\operatorname{gr}_nD\to\operatorname{gr}_nG_B$ is
+ injective for $n=1,2$. For $\nu$ above $3$ or $5$, the image of
+ $\mathcal G_\nu$ in $G_B$ is
+ $\langle\tau_\nu\rangle\times\langle\varphi_\nu\rangle\cong C_2\times C_2$,
+ and it injects into $G_B/D_2G_B$. For $k=0,1,2$, $\Frob_{\mathfrak t_k}$ has
+ order exactly four in $G_B$ and in $G_B/D_3G_B$. For $j=1,2$, $\iota_j$ has
+ order two in $G_B/D_2G_B$.
+\item[(c)] The conjugacy class of $\iota_1$ in $\overline G_B$ has $2^{15}$
+ elements.
+\item[(d)] The elementary images $\bar\iota_1\ne\bar\iota_2$ lie outside the
+ span of the elementary images of the local generators at each of
+ $\mathfrak p_1,\mathfrak p_2,\mathfrak q_1,\mathfrak q_2,\mathfrak r_1,\mathfrak r_2,\mathfrak t_0,\mathfrak t_1,\mathfrak t_2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Work in $\mathcal F/D_4\mathcal F$, in which $D_2\mathcal F/D_4\mathcal F$
+is elementary abelian and $D_3\mathcal F/D_4\mathcal F$ is central. Let
+$\rho_1,\dots,\rho_{21}$ be the generators of $N_B$ of degree two, namely
+(i), the first three elements of (ii) for each $j$, and (iii). Their classes
+are the elements of \eqref{tw:initials-list} other than the class of
+$\rho_{\mathfrak p_1}$, and these are independent by
+Lemma~\ref{tw:quadratic-layer}. The cubic generators are
+$\omega_j=[[\hat y_j,\hat z_j],\hat z_j]$, and the remaining generators lie
+in $D_4\mathcal F$. For $\rho\in D_2\mathcal F$ and $g\in\mathcal F$ we have
+$g^{-1}\rho g=\rho[\rho,g]$, and modulo $D_4\mathcal F$ the commutator
+$[\rho,g]$ is central and depends only, and linearly, on the classes of
+$\rho$ in $\mathfrak L_2$ and of $g$ in $\mathfrak L_1$. Hence the image of
+$N_B$ in $\mathcal F/D_4\mathcal F$ is the subgroup generated by the $\rho_i$,
+the $[\rho_i,f]$ for $f$ in a basis of $\mathcal F$, and the $\omega_j$. An
+element $\prod_i\rho_i^{a_i}$ times an element of $D_3\mathcal F$ lies in
+$D_3\mathcal F$ only if all $a_i=0$. Therefore $R_3$ is spanned by the
+brackets $[\bar\rho_i,\xi]$, for $\xi$ in a basis of $\mathfrak L_1$, and by
+$[[\bar y_j,\bar z_j],\bar z_j]$. The supplementary program
+\texttt{lie241c.py} computes these elements in the free associative algebra,
+where $[a,\xi]=a\xi+\xi a$: they span a space of dimension $142$ in the
+$168$-dimensional space $\mathfrak L_3$. So $\dim\operatorname{gr}_3G_B=26$.
+
+(b) The local map $\mathcal G_{\mathfrak p_j}\to G_B$ factors through $D$ by
+Definition~\ref{tw:GB}, and the induced map $D\to G_B$ preserves the
+Zassenhaus filtrations. It is injective on $\operatorname{gr}_1$ because
+$\bar x_j,\bar y_j,\bar z_j$ are independent, and on $\operatorname{gr}_2$
+because $\bar z_j^{\,[2]}$ and $[\bar y_j,\bar z_j]$, the images of
+$\overline{z^2}$ and $\overline{[y,z]}$, are independent modulo $R_2$; the
+program \texttt{lie241.py} checks both facts. If $1\neq g\in D$, let $n\le2$
+be maximal with $g\in D_n(D)$; then the image of $g$ is nonzero in
+$\operatorname{gr}_nG_B$, so it is not in $D_3G_B$. For $\nu$ above $3$ or
+$5$, the vectors $\bar\tau_\nu$ and $\bar\varphi_\nu$ are independent, and the
+image of $\mathcal G_\nu$ is a quotient of $C_2\times C_2$. For the Frobenius
+elements, \texttt{lie241.py} checks that
+$\overline{\Frob}_{\mathfrak t_k}^{\,[2]}\notin R_2$, so
+Lemma~\ref{tw:quadratic-layer} gives order at least four in $G_B/D_3G_B$,
+while Definition~\ref{tw:GB} gives order at most four in $G_B$. Finally
+$\bar\iota_j\neq0$.
+
+(c) Write $\overline G=\overline G_B$ and $\iota=\iota_1$. The map
+$\mathfrak L_1\to\operatorname{gr}_2\overline G$, $v\mapsto[\bar\iota,v]$, has
+rank $7$ by \texttt{lie241.py}, so its kernel is the line through
+$\bar\iota$. The map
+$\operatorname{gr}_2\overline G\to\operatorname{gr}_3\overline G$,
+$u\mapsto[u,\bar\iota]$, has rank $8$ by \texttt{lie241c.py}. Since
+$D_2\overline G$ is abelian and $D_3\overline G$ is central in $\overline G$,
+the map $h\mapsto[h,\iota]$ is a homomorphism $D_2\overline G\to D_3\overline G$;
+it factors through $\operatorname{gr}_2\overline G$ and equals the second map.
+Its kernel $C_{\overline G}(\iota)\cap D_2\overline G$ therefore has order
+$2^{15+26-8}=2^{33}$. If $g\in C_{\overline G}(\iota)$, then
+$[\bar\iota,\bar g]=0$ in $\operatorname{gr}_2\overline G$, so
+$\bar g\in\{0,\bar\iota\}$; conversely $\iota\in C_{\overline G}(\iota)$.
+Hence $|C_{\overline G}(\iota)|=2^{34}$, and the class of $\iota$ has
+$2^{49-34}=2^{15}$ elements.
+
+(d) This is a finite check on Table~\ref{tw:vector-table}, carried out by
+\texttt{lie241.py}.
+\end{proof}
+
+\subsection{Filtered Fox Images}\label{tw:fox-section}
+We now recall the filtered Fox calculus of \cite[Section~2]{Naslund0418235}.
+Let $\Delta$ be a finite $2$-group, $\Lambda=\Ftwo[\Delta]$, and
+$\mathfrak I$ its augmentation ideal. Filtrations are decreasing, with
+$F^0M=M$ and $F^nM=0$ for large $n$. For a finite-dimensional filtered space
+put $h_M(t)=\sum_n\dim(F^nM/F^{n+1}M)\,t^n$. We filter $\Lambda$ by
+$F^n\Lambda=\mathfrak I^n$, and $\Lambda^m(-1)$ denotes $\Lambda^m$ with
+$F^n=(\mathfrak I^{n-1})^m$ for $n\ge1$, so that
+$h_{\Lambda^m(-1)}=mt\,h_\Lambda$. Subspaces carry the induced filtration
+unless stated otherwise. For $0<t<1$,
+\begin{equation}\label{tw:cumulative}
+ h_M(t)=(1-t)\sum_{n\ge1}\dim(M/F^nM)\,t^{n-1}.
+\end{equation}
+Hence, for $0<t<1$: (h1) if $f\colon M\to M'$ is surjective with
+$f(F^nM)\subset F^nM'$, then $h_{M'}(t)\le h_M(t)$; (h2) if $U_1\subset U_2$
+are subspaces of the same filtered space, then $h_{U_1}(t)\le h_{U_2}(t)$;
+(h3) if $f$ is surjective and strict, $f(F^nM)=F^nM'$, then
+$h_M=h_{\ker f}+h_{M'}$; and (h4) for subspaces $U_1,U_2$ of a filtered
+space,
+\begin{equation}\label{tw:filtered-sum}
+ h_{U_1+U_2}(t)\le h_{U_1}(t)+h_{U_2}(t)-h_{U_1\cap U_2}(t).
+\end{equation}
+For (h4), apply (h3) to $U_1\oplus U_2\to U_1+U_2$, $(u_1,u_2)\mapsto u_1+u_2$,
+whose kernel is $U_1\cap U_2$, with the image filtration $F^nU_1+F^nU_2$ on
+$U_1+U_2$; this filtration is contained in the induced one, and (h1) applies
+to the identity map.
+
+Let $\mathcal F$ be a free pro-$2$ group with basis $f_1,\dots,f_n$ and
+$\pi\colon\mathcal F\to\Delta$ a surjection. Since $\Lambda^n\rtimes\Delta$,
+with $\Delta$ acting by left multiplication, is a finite $2$-group, there is
+a unique homomorphism $\mathcal F\to\Lambda^n\rtimes\Delta$ sending $f_i$ to
+$(e_i,\pi(f_i))$, where $e_1,\dots,e_n$ is the standard basis of $\Lambda^n$.
+We write it as $w\mapsto(\partial w,\pi(w))$ and call $\partial w$ the row of
+$w$. For $w$ in the discrete free group on the $f_i$, the row
+$\partial w\in\Lambda^n$ is the image of the vector of free derivatives of $w$
+\cite[Section~2]{Fox1953}. We use the following properties.
+\begin{enumerate}
+\item[(F1)] $\partial(ww')=\partial w+\pi(w)\partial w'$.
+\item[(F2)] $\sum_i\partial_iw\,(\pi(f_i)-1)=\pi(w)-1$.
+\item[(F3)] If $\pi(\rho)=1$, then $\partial(u\rho u^{-1})=\pi(u)\partial\rho$;
+ and $\partial$ restricts to a continuous homomorphism on $\ker\pi$.
+\item[(F4)] If $\mathcal F'$ is free on $f'_1,\dots,f'_m$,
+ $u_1,\dots,u_m\in\mathcal F$, and $\partial'$ denotes the rows for the map
+ $\mathcal F'\to\Delta$, $f'_l\mapsto\pi(u_l)$, then
+ $\partial(W(u_1,\dots,u_m))=\sum_l\partial'_lW\cdot\partial u_l$ for
+ $W\in\mathcal F'$.
+\end{enumerate}
+(F1) is the multiplication of the semidirect product. For (F2), the pairs
+$(a,g)$ with $\sum a_i(\pi(f_i)-1)=g-1$ form a subgroup containing the
+images of the $f_i$. (F3) follows from (F1). For (F4), both sides are the first
+components of homomorphisms $\mathcal F'\to\Lambda^n\rtimes\Delta$ that agree
+on the basis.
+
+\begin{lemma}\label{tw:fox-rows}
+Let $\mathcal M=\{a\in\Lambda^n:\sum_ia_i(\pi(f_i)-1)=0\}$, with the
+filtration induced from $\Lambda^n(-1)$. Then
+$h_{\mathcal M}=1-(1-nt)h_\Lambda$ and $\mathcal M=\partial(\ker\pi)$. If
+$\rho$ lies in the normal closure of a set $Y\subset\ker\pi$, then
+$\partial\rho$ lies in the $\Lambda$-span of $\partial Y$. In particular,
+$\mathcal M$ is the $\Lambda$-span of the rows of any set of normal
+generators of $\ker\pi$.
+\end{lemma}
+
+\begin{proof}
+Since the $\pi(f_i)$ generate $\Delta$, we have
+$\mathfrak I=\sum_i\Lambda(\pi(f_i)-1)\subset\sum_i\Ftwo(\pi(f_i)-1)+\mathfrak I^2$,
+hence $\mathfrak I^m=\sum_i\mathfrak I^{m-1}(\pi(f_i)-1)$ for all $m\ge1$, by
+induction and because $\mathfrak I$ is nilpotent. So
+$\Lambda^n(-1)\to\mathfrak I$, $a\mapsto\sum a_i(\pi(f_i)-1)$, is strict and
+surjective with kernel $\mathcal M$, and (h3) gives
+$h_{\mathcal M}=nt\,h_\Lambda-(h_\Lambda-1)$.
+
+By (F2), $\partial(\ker\pi)\subset\mathcal M$. Conversely, let
+$\mathcal F^\circ\subset\mathcal F$ be the dense subgroup generated by the
+$f_i$, which is a free group on them. Then $\pi(\mathcal F^\circ)=\Delta$, and
+the kernel of $\Ftwo[\mathcal F^\circ]\to\Lambda$ is
+$\Ftwo[\mathcal F^\circ]\,(\mathcal F^\circ\cap\ker\pi-1)$. Lift
+$a\in\mathcal M$ to $\tilde a\in\Ftwo[\mathcal F^\circ]^n$. Then
+$\sum_i\tilde a_i(f_i-1)=\sum_l\zeta_l(n_l-1)$ with
+$n_l\in\mathcal F^\circ\cap\ker\pi$ and $\zeta_l\in\Ftwo[\mathcal F^\circ]$.
+By Fox's fundamental formula
+$n_l-1=\sum_i(\partial n_l/\partial f_i)(f_i-1)$, where the
+$\partial/\partial f_i$ are the free derivatives \cite[Section~2]{Fox1953},
+and the coefficients of the $f_i-1$ are unique, because $\partial/\partial f_j$
+maps $\sum_i\zeta'_i(f_i-1)$ to $\zeta'_j$. So
+$\tilde a_i=\sum_l\zeta_l\,\partial n_l/\partial f_i$. On $\mathcal F^\circ$
+the rows are the images of the vectors of free derivatives, so
+$a=\sum_l\bar\zeta_l\,\partial n_l$ lies in $\Lambda\,\partial(\ker\pi)$, which
+equals $\partial(\ker\pi)$ by (F3). For the remaining statements, let $M_Y$ be
+the $\Lambda$-span of $\partial Y$. By (F3), the elements $n\in\ker\pi$ with
+$\partial n\in M_Y$ form a closed normal subgroup of $\mathcal F$ containing
+$Y$.
+\end{proof}
+
+The next lemma computes the cost of imposing a full local group. The groups
+$\Gamma$ below are $C_2$, $C_2\times C_2$, $C_4$ and $D$, with standard
+generators $\iota$; $\tau,\varphi$; a generator; and $x,y,z$. Let $k$ be the
+number of standard generators, so $k=1,2,1,3$. The augmentation Hilbert
+polynomials are $P_\Gamma(t)=1+t$, $(1+t)^2$, $(1+t)(1+t^2)$ and $P_D(t)$,
+and $D_3(\Gamma)=1$ in each case. Put
+\[
+ \psi_\Gamma(t)=kt-1+P_\Gamma(t)^{-1}.
+\]
+
+\begin{lemma}\label{tw:filtered-local-freeness}
+Let $\Gamma\le\Delta$ be a subgroup isomorphic to one of these groups, with
+$g_1,\dots,g_k\in\Gamma$ corresponding to its standard generators, and
+suppose that $\operatorname{gr}_n\Gamma\to\operatorname{gr}_n\Delta$ is
+injective for $n=1,2$. Let $\Lambda_\Gamma=\Ftwo[\Gamma]\subset\Lambda$, with
+augmentation ideal $\mathfrak I_\Gamma$, and let
+$\mathcal M_\Gamma\subset\Lambda_\Gamma^k(-1)$ be the kernel of
+$b\mapsto\sum_lb_l(g_l-1)$.
+\begin{enumerate}
+\item[(a)] There are elements $\eta_j\in\Lambda$ with weights $w_j$ such that
+ $\Lambda=\bigoplus_j\eta_j\Lambda_\Gamma$ and
+ $\mathfrak I^m=\bigoplus_j\eta_j\mathfrak I_\Gamma^{m-w_j}$ for every $m$,
+ where $\mathfrak I_\Gamma^{m'}=\Lambda_\Gamma$ for $m'\le0$; moreover
+ $\sum_jt^{w_j}=h_\Lambda/P_\Gamma$.
+\item[(b)] The $\Lambda$-module $\Lambda\mathcal M_\Gamma\subset\Lambda^k(-1)$
+ has $h_{\Lambda\mathcal M_\Gamma}=\psi_\Gamma h_\Lambda$.
+\item[(c)] Let $\mathcal F$ and $\pi$ be as above, let
+ $u_1,\dots,u_k\in\mathcal F$ with $\pi(u_l)=g_l$, and let $\mathcal F_k$ be
+ free on $k$ letters, mapping to $\Gamma$ by the standard generators. Let
+ $U\subset\Lambda^n(-1)$ be the $\Lambda$-span of the rows
+ $\partial W(u_1,\dots,u_k)$ for all $W$ in the kernel of
+ $\mathcal F_k\to\Gamma$. Then $h_U(t)\le\psi_\Gamma(t)h_\Lambda(t)$ for
+ $0<t<1$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Since $D_3(\Gamma)=1$ and $\operatorname{gr}\Gamma\to\operatorname{gr}\Delta$
+is injective, $\Gamma\cap D_m\Delta=D_m(\Gamma)$ for all $m$. Choose elements
+of $\Gamma$ whose classes form a homogeneous basis of $\operatorname{gr}\Gamma$,
+and extend them by elements of $\Delta$ to a family whose classes form a
+homogeneous basis of $\operatorname{gr}\Delta$. By the restricted
+Poincar\'e--Birkhoff--Witt form of Jennings' theorem \cite{Jennings,Quillen},
+the ordered products of the elements $g-1$ of this family, each used at most
+once and with the elements of $\Gamma$ last, form a basis of $\Lambda$, and
+those of weight at least $m$ form a basis of $\mathfrak I^m$. The same holds
+for $\Lambda_\Gamma$ and the elements of $\Gamma$ alone. Let the $\eta_j$ be
+the ordered products of the other elements. Comparing Hilbert series gives
+the last assertion.
+
+(b) As in the proof of Lemma~\ref{tw:fox-rows}, the map
+$\Lambda_\Gamma^k(-1)\to\mathfrak I_\Gamma$ is strict and surjective, so
+$h_{\mathcal M_\Gamma}=ktP_\Gamma-(P_\Gamma-1)$. By (a),
+$\Lambda^k(-1)=\bigoplus_j\eta_j\Lambda_\Gamma^k(-1)$ with
+$F^m=\bigoplus_j\eta_jF^{m-w_j}$, and
+$\Lambda\mathcal M_\Gamma=\bigoplus_j\eta_j\mathcal M_\Gamma$. Hence
+$h_{\Lambda\mathcal M_\Gamma}=(h_\Lambda/P_\Gamma)\,h_{\mathcal M_\Gamma}=\psi_\Gamma h_\Lambda$.
+
+(c) For $W$ in the kernel, the local row $\partial'W\in\Lambda_\Gamma^k$ lies in
+$\mathcal M_\Gamma$ by (F2), and by (F4)
+$\partial W(u)=\sum_l\partial'_lW\,\partial u_l$. Thus $U$ is contained in the
+image of $\Lambda\mathcal M_\Gamma$ under the map
+$T_u\colon\Lambda^k(-1)\to\Lambda^n(-1)$, $a\mapsto\sum_la_l\partial u_l$,
+which preserves filtrations because $\partial u_l\in\Lambda^n=F^0$. By (h2),
+(h1) and (b),
+$h_U\le h_{T_u(\Lambda\mathcal M_\Gamma)}\le h_{\Lambda\mathcal M_\Gamma}=\psi_\Gamma h_\Lambda$.
+\end{proof}
+
+For $\Gamma=D$ we write $d_D=\psi_D=3t-1+P_D(t)^{-1}$. In the proof of
+Proposition~\ref{tw:infinite}, the module of the dyadic place $\mathfrak p_1$
+and the modules of the other places share the row of one relator, and the
+next lemma computes the module generated by this row.
+
+\begin{lemma}\label{tw:local-fox}
+In the situation of Lemma~\ref{tw:filtered-local-freeness} with $\Gamma=D$,
+suppose that $u_1,u_2,u_3$ are the basis elements $f_1,f_2,f_3$ of
+$\mathcal F$. Let $r\in\mathcal F_3$ map to $1$ in $D$, with class
+$y^{[2]}+[x,y]+[x,z]$ in $\operatorname{gr}_2\mathcal F_3$, and let
+$\rho=r(f_1,f_2,f_3)$. Then
+\[
+ h_{\Lambda\partial\rho}=s_Dh_\Lambda,\qquad
+ s_D(t)=t^2\Bigl(1-\frac{t^7}{P_D(t)}\Bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+By (F4), $\partial\rho=(\partial'r,0,\dots,0)$, where
+$\partial'r\in\Lambda_D^3$ is the local row, so $\Lambda\partial\rho$ is the
+module $\Lambda\partial'r\subset\Lambda^3(-1)$ placed in the first three
+coordinates. By Lemma~\ref{tw:filtered-local-freeness}(a),
+$\Lambda^3=\bigoplus_j\eta_j\Lambda_D^3$ with
+$F^n(\Lambda^3(-1))=\bigoplus_j\eta_jF^{n-w_j}(\Lambda_D^3(-1))$, and
+$b\mapsto\eta_jb$ is injective on $\Lambda_D^3$. The submodule
+$\Lambda\partial'r=\bigoplus_j\eta_j\Lambda_D\partial'r$ decomposes in the
+same way, so
+$F^n(\Lambda\partial'r)=\bigoplus_j\eta_jF^{n-w_j}(\Lambda_D\partial'r)$ for
+the induced filtrations, and
+$h_{\Lambda\partial\rho}=(h_\Lambda/P_D)\,h_{\Lambda_D\partial'r}$. It
+therefore suffices to show that $h_{\Lambda_D\partial'r}=t^2(P_D-t^7)$, for
+the filtration induced from $\Lambda_D^3(-1)$. Write $\mathfrak I_D$ for the augmentation ideal of
+$\Lambda_D=\Ftwo[D]$, and $X_1,X_2,X_3,X_4$ for $x-1,y-1,z-1,w-1$, where
+$w=[y,z]$.
+
+\emph{The linear part of $\partial'r$.} Here $\pi$ also denotes the map
+$\mathcal F_3\to D$. For $g,h\in\mathcal F_3$, (F1) gives
+$\partial'(g^2)=(1+\pi(g))\partial'g$ and
+$\partial'[g,h]=\pi(g)^{-1}(\pi(h)^{-1}-1)\partial'g+\pi(g)^{-1}\pi(h)^{-1}(\pi(g)-1)\partial'h$.
+Moreover $\partial'g$ is congruent modulo $\mathfrak I_D$ to the image
+$\bar g\in\Ftwo^3$ of $g$ in $\mathcal F_3/D_2\mathcal F_3$, and
+$\pi(g)-1\equiv\sum_l\bar g_lX_l$ modulo $\mathfrak I_D^2$ by (F2). Hence, for
+$q\in D_2\mathcal F_3$, the row $\partial'q$ has entries in $\mathfrak I_D$,
+and modulo $\mathfrak I_D^2$ it is additive in $q$, because
+$\pi(q)-1\in\mathfrak I_D^2$. It vanishes modulo $\mathfrak I_D^2$ on
+$D_3\mathcal F_3=(D_2\mathcal F_3)^2[D_2\mathcal F_3,\mathcal F_3]$ (Lazard's
+formula): for $q\in D_2\mathcal F_3$ the formulas above give
+$\partial'(q^2),\partial'[q,h]\in\mathfrak I_D^2$, since $\bar q=0$ and
+$\pi(q)-1\in\mathfrak I_D^2$. So the row modulo $\mathfrak I_D^2$ depends
+only on the class of $q$ in $\operatorname{gr}_2\mathcal F_3$, the classes
+$v^{[2]}$ and $[v,v']$ giving the rows with $l$-th entries $v_l\sum_mv_mX_m$
+and $v_l\sum_mv'_mX_m+v'_l\sum_mv_mX_m$.
+For the class $y^{[2]}+[x,y]+[x,z]$ this gives
+\[
+ \partial'r\equiv(X_2+X_3,\ X_2+X_1,\ X_1)\pmod{\mathfrak I_D^2}.
+\]
+
+\emph{Three facts about $\Lambda_D$.} Let $A=\bigoplus_m\mathfrak I_D^m/\mathfrak I_D^{m+1}$,
+and write $X,Y,Z$ and $W$ for the classes of $X_1,X_2,X_3$ in degree one and
+of $X_4$ in degree two. By Jennings' theorem \cite{Jennings} and
+Lemma~\ref{tw:local-two}(c), the products
+$X_1^{a_1}X_2^{a_2}X_3^{a_3}X_4^{a_4}$ with $a_1,a_2,a_4\in\{0,1\}$ and
+$0\le a_3\le3$, of weight $a_1+a_2+a_3+2a_4\ge m$, form a basis of
+$\mathfrak I_D^m$; here $X_3^2=z^2-1$. Hence the monomials
+$X^{a_1}Y^{a_2}Z^{a_3}W^{a_4}$ form a basis of $A$, and, since the
+coefficients of $P_D$ are $1,3,5,7,7,5,3,1$,
+\[
+ \dim\mathfrak I_D^m=32,31,28,23,16,9,4,1,0\qquad(m=0,\dots,8).
+\]
+Because $x$ and $w$ are central and $x^2=y^2=w^2=z^4=1$, the elements $X$
+and $W$ are central in $A$ and $X^2=Y^2=W^2=Z^4=0$. Moreover $ZY=YZ+W$,
+because $X_3X_2+X_2X_3=zy+yz=zy(w-1)\equiv X_4\pmod{\mathfrak I_D^3}$; by
+induction $Z^jY=YZ^j+jZ^{j-1}W$ for $j\ge1$.
+
+First, $\mathfrak I_D^7=\Ftwo\Omega_D$, where $\Omega_D=\sum_{g\in D}g$:
+$\mathfrak I_D^7$ is one-dimensional and $(g-1)\mathfrak I_D^7\subset\mathfrak I_D^8=0$,
+so its nonzero element is invariant under left multiplication by $D$, and
+hence equal to $\Omega_D$.
+
+Second, for $m<7$ the map $A_m\to A_{m+1}^3$, $\xi\mapsto(\xi X,\xi Y,\xi Z)$,
+is injective. Let $\xi=\sum_\mu b_\mu\mu$ over the basis monomials
+$\mu=X^{a_1}Y^{a_2}Z^{a_3}W^{a_4}$ of degree $m$. Right multiplication by $X$
+maps the monomials with $a_1=0$ to distinct basis monomials and kills the
+others, and right multiplication by $Z$ maps those with $a_3\le2$ to
+distinct basis monomials and kills those with $a_3=3$. So $\xi X=\xi Z=0$
+forces $\xi=\sum_{a_2,a_4}b_{a_2a_4}XY^{a_2}Z^3W^{a_4}$. Then
+\[
+ \xi Y=b_{00}(XYZ^3+XZ^2W)+b_{01}XYZ^3W+b_{10}XYZ^2W,
+\]
+a combination of distinct basis monomials, so $\xi Y=0$ forces
+$\xi=b_{11}XYZ^3W$, which has degree $7$. Hence $\xi=0$ when $m<7$.
+
+Third, the same holds for $\xi\mapsto(\xi(Y+Z),\xi(Y+X),\xi X)$, because this
+triple is obtained from $(X,Y,Z)$ by the invertible matrix
+\[
+ \begin{pmatrix}0&1&1\\1&1&0\\1&0&0\end{pmatrix}.
+\]
+This is the coefficient matrix of $y^{[2]}+[x,y]+[x,z]$, that is, the matrix
+of the $2$-adic Hilbert symbol on $2,-5,5$ in the proof of
+Lemma~\ref{tw:local-groups}(c). So the injectivity used here, and with it
+the saving $s_D$, comes from the nondegeneracy of the local Hilbert pairing,
+that is, from local duality. The supplementary program \texttt{dyadic241.py}
+confirms these three facts by direct computation in $\Lambda_D$.
+
+\emph{The filtration.} If $\xi\in\mathfrak I_D^m\setminus\mathfrak I_D^{m+1}$
+with $m<7$, then by the third fact $\xi\,\partial'r$ lies in $F^{m+2}$ but not
+in $F^{m+3}$, whereas $\Omega_D\partial'r=0$ because $\Omega_D\mathfrak I_D=0$.
+Now let $\xi\in\Lambda_D$ with $\xi\,\partial'r\in F^{m+2}$, and suppose that
+$\xi\notin\mathfrak I_D^m+\Ftwo\Omega_D$. Let $m'<m$ be maximal with
+$\xi\in\mathfrak I_D^{m'}+\Ftwo\Omega_D$, and write $\xi=\xi'+a\,\Omega_D$
+with $\xi'\in\mathfrak I_D^{m'}$ and $a\in\Ftwo$. Then
+$\xi'\notin\mathfrak I_D^{m'+1}$, and $m'<7$ because
+$\mathfrak I_D^7=\Ftwo\Omega_D$; so $\xi\,\partial'r=\xi'\partial'r$ is not in
+$F^{m'+3}\supset F^{m+2}$, a contradiction. Therefore
+$F^{m+2}(\Lambda_D\partial'r)=\mathfrak I_D^m\partial'r$ for every $m\ge0$,
+the map $\xi\mapsto\xi\,\partial'r$ has kernel $\Ftwo\Omega_D$, and
+$h_{\Lambda_D\partial'r}=\sum_{m<7}\dim(\mathfrak I_D^m/\mathfrak I_D^{m+1})\,t^{m+2}=t^2(P_D-t^7)$.
+\end{proof}
+
+\subsection{Infinitude}\label{tw:infinite-section}
+Put
+\begin{equation}\label{tw:costs}
+ \psi_1(t)=\frac{t^2}{1+t},\quad
+ \psi_2(t)=2t-1+\frac1{(1+t)^2},\quad
+ \psi_4(t)=\frac{t^4}{(1+t)(1+t^2)},\quad
+ d_D(t)=3t-1+\frac1{P_D(t)},
+\end{equation}
+so that $\psi_1,\psi_2,\psi_4,d_D$ are the functions $\psi_\Gamma$ for
+$\Gamma=C_2,C_2\times C_2,C_4,D$; they are the functions used for the same
+local groups in \cite[Section~2]{Naslund0418235}. With $s_D$ as in
+Lemma~\ref{tw:local-fox}, let
+\begin{equation}\label{tw:PB}
+ P_B(t)=1-8t+2\psi_1(t)+4\psi_2(t)+2d_D(t)-s_D(t)+3\psi_4(t).
+\end{equation}
+Exact rational arithmetic, carried out by the supplementary program
+\texttt{gs241.py}, gives
+\[
+ P_B\Bigl(\frac{34}{117}\Bigr)=-\frac{187433948535241}{88772225460489675}<0.
+\]
+
+\begin{proposition}\label{tw:infinite}
+The group $G_B$ is infinite.
+\end{proposition}
+
+\begin{proof}
+Suppose that $G_B$ is finite, and put $\Delta=G_B$ and
+$\Lambda=\Ftwo[\Delta]$. By Table~\ref{tw:vector-table},
+$\bar x_1,\bar y_1,\bar z_1$ are independent; choose
+$g_4,\dots,g_8\in\mathcal G_B$ such that
+$\bar x_1,\bar y_1,\bar z_1,\bar g_4,\dots,\bar g_8$ is a basis of
+$\Ftwo^8$. Let $\mathcal F$ be free on $f_1,\dots,f_8$, and send
+$f_1,f_2,f_3$ to $x_1,y_1,z_1$ and $f_l$ to $g_l$ for $4\le l\le8$. This is a
+minimal presentation of
+$\mathcal G_B$; we take the lifts $\hat x_1=f_1$, $\hat y_1=f_2$,
+$\hat z_1=f_3$, and arbitrary lifts of the other local generators. Let
+$\pi\colon\mathcal F\to\Delta$ be the composite and $\mathcal M$ as in
+Lemma~\ref{tw:fox-rows}, so that $h_{\mathcal M}=1-(1-8t)h_\Lambda$.
+
+By Lemma~\ref{tw:retained-quotient}(b), which concerns only
+$\operatorname{gr}_1$ and $\operatorname{gr}_2$, the image in $\Delta$ of each
+local group is the prescribed group $\Gamma$ and satisfies the hypothesis of
+Lemma~\ref{tw:filtered-local-freeness}. We use eleven places: the real
+places $v_1,v_2$, with $\Gamma=C_2$; the four places above $3$ and $5$, with
+$\Gamma=C_2\times C_2$; the dyadic places $\mathfrak p_1,\mathfrak p_2$, with
+$\Gamma=D$; and $\mathfrak t_0,\mathfrak t_1,\mathfrak t_2$, with $\Gamma=C_4$
+generated by the Frobenius. For each of these places $\nu$, let $U_\nu$ be
+the module $U$ of Lemma~\ref{tw:filtered-local-freeness}(c) for this $\Gamma$,
+formed with the lifts of the local generators at $\nu$. Every generator of
+$N_B$ in Lemma~\ref{tw:GB-presentation} is of the form $W(u_1,\dots,u_k)$ for
+one of these places and some $W$ in the kernel of $\mathcal F_k\to\Gamma$, and
+conversely every such element lies in $N_B$. By Lemma~\ref{tw:fox-rows},
+$\mathcal M=\sum_\nu U_\nu$. Let $U'$ be the sum of the $U_\nu$ over the ten
+places $\nu\ne\mathfrak p_1$. The row of $\rho_{\mathfrak p_1}$ lies in
+$U_{\mathfrak p_1}$. Since $\rho_{\mathfrak p_1}$ lies in the normal closure of
+the relators (i) of Lemma~\ref{tw:GB-presentation}, its row also lies in the
+$\Lambda$-span of their rows (Lemma~\ref{tw:fox-rows}), which is contained in
+$U'$. Hence $\Lambda\partial\rho_{\mathfrak p_1}\subset U_{\mathfrak p_1}\cap U'$.
+By \eqref{tw:filtered-sum}, (h2), Lemma~\ref{tw:filtered-local-freeness}(c)
+and Lemma~\ref{tw:local-fox}, for $0<t<1$,
+\[
+ 1-(1-8t)h_\Lambda(t)=h_{\mathcal M}(t)
+ \le h_{U_{\mathfrak p_1}}(t)+\sum_{\nu\ne\mathfrak p_1}h_{U_\nu}(t)
+ -h_{\Lambda\partial\rho_{\mathfrak p_1}}(t)
+ \le\bigl(2\psi_1+4\psi_2+2d_D+3\psi_4-s_D\bigr)(t)\,h_\Lambda(t),
+\]
+that is, $1\le h_\Lambda(t)P_B(t)$. Since $h_\Lambda(t)>0$, this contradicts
+$P_B(34/117)<0$.
+\end{proof}
+
+\subsection{The Fields}\label{tw:fields-section}
+Recall that $\lambda=2^{9/4}\sqrt{3615}$, where $3615=3\cdot5\cdot241$, and
+note that $\thetastar=1/2-2^{-17}$.
+
+\begin{theorem}\label{tw:field-family}
+For every power of two $m\ge2^{49}$ there is a finite Galois extension
+$K/B$ of degree $m$, contained in $B_G$, such that $G_B\to\overline G_B$
+factors through $\Gal(K/B)$. In particular $K$ contains the fixed field of
+$D_4G_B$, hence the fixed field of $D_3G_B$ and the Kummer field $E$. Every
+such $K$ is totally imaginary. Let $\iota_1$ be complex conjugation at a
+place of $K$ above $v_1$, let $F=K^{\langle\iota_1\rangle}$ and
+$d=[F:\Q]=m$, and let $(b,c)$ be the signature of $F$ and $\theta=c/d$. Then
+$F$ has a real place,
+\[
+ \rd(K)=\rd(F)=\lambda,\qquad \thetastar\le\theta<\frac12 .
+\]
+The extension $K/F$ is quadratic, unramified at every finite place, and
+split at every place of $F$ above $2,3,5,7$ and $29$. At these primes all
+places of $K$, and of $F$, have the absolute ramification indices and residue
+degrees of Table~\ref{tw:types-table}.
+\end{theorem}
+
+\begin{table}[htbp]
+\centering
+\caption{Absolute ramification indices and residue degrees of the places of
+$K$ and $F$ above the selected primes, the corresponding local extensions of
+the completions of $B$, and their contributions to $\rd(K)$. The last row is
+the ramified prime of $B$, at which $K/B$ is unramified.}
+\label{tw:types-table}
+\begin{tabular}{llll}
+\toprule
+$p$ & $(e_p,f_p)$ & local extension over $B$ & factor of $\rd(K)$\\
+\midrule
+$2$ & $(8,4)$ & $L_2/\Q_2$, group $D$ & $2^{9/4}$\\
+$3$ & $(2,2)$ & $\Q_3(\sqrt{-1},\sqrt3)/\Q_3$, group $C_2\times C_2$ & $3^{1/2}$\\
+$5$ & $(2,2)$ & $\Q_5(\sqrt2,\sqrt5)/\Q_5$, group $C_2\times C_2$ & $5^{1/2}$\\
+$7$ & $(1,8)$ & unramified of degree $4$ over $B_{\mathfrak t_0}$ & $1$\\
+$29$ & $(1,4)$ & unramified of degree $4$ over $\Q_{29}$ & $1$\\
+\midrule
+$241$ & $e_p=2$ & unramified & $241^{1/2}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proof}
+\emph{Existence.} By Proposition~\ref{tw:infinite}, $G_B$ has open normal
+subgroups of arbitrarily large index, and $D_4G_B$ is open because $G_B$ is
+finitely generated. Given $m$, choose an open normal subgroup
+$U'\subset D_4G_B$ of $G_B$ of index at least $m$, and put $\Delta'=G_B/U'$
+and $N'=D_4G_B/U'$. A nontrivial normal subgroup of a finite $2$-group meets
+its center, so $N'$ contains normal subgroups of $\Delta'$ of every order
+dividing $|N'|$. Take one of order $|\Delta'|/m$, which divides
+$|N'|=|\Delta'|/2^{49}$. Its preimage $U$ is open and normal in $G_B$,
+contained in $D_4G_B$, and of index $m$. Let $K$ be its fixed field in $B_G$.
+Conversely, every $K$ as in the statement is the fixed field of an open
+normal subgroup $U\subset D_4G_B$. We fix such a $K$ and put
+$H=\Gal(K/B)=G_B/U$.
+
+\emph{Complex places.} Since $\sqrt{-1}=\sqrt{\alpha_0}\in E\subset K$, the
+field $K$ is totally imaginary, and $[K:F]=2$. Let $\sigma_1\colon K\to\C$
+induce the chosen place, so that $\bar\sigma_1=\sigma_1\circ\iota_1$ and
+$\sigma_1(F)\subset\R$. The embeddings above $v_1$ are $\sigma_1\circ h$ with
+$h\in H$, and two of them agree on $F$ exactly when they differ by right
+multiplication by an element of $\langle\iota_1\rangle$. The restriction of
+$\sigma_1\circ h$ to $F$ is real exactly when $\sigma_1\circ\iota_1h$ and
+$\sigma_1\circ h$ agree on $F$, that is, when
+$h^{-1}\iota_1h\in\langle\iota_1\rangle$, that is, when
+$h\in C_H(\iota_1)$. Similarly, if $\iota'$ is complex conjugation for an
+embedding $\sigma_2$ above $v_2$, the restriction of $\sigma_2\circ h$ to $F$
+is real exactly when $h^{-1}\iota'h=\iota_1$. This never happens, because
+conjugation preserves elementary images and $\bar\iota'=\bar\iota_2\ne\bar\iota_1$
+(Lemma~\ref{tw:retained-quotient}(d)). Hence $b=|C_H(\iota_1)|/2\ge1$, so $F$
+has a real place and $\theta=(1-b/d)/2<1/2$. Moreover $d=|H|$, so
+$b/d=|C_H(\iota_1)|/(2|H|)$ is half the reciprocal of the size of the
+conjugacy class of $\iota_1$ in $H$. This class maps onto the class of
+$\iota_1$ in $\overline G_B$, which has $2^{15}$ elements by
+Lemma~\ref{tw:retained-quotient}(c). Hence $b/d\le2^{-16}$ and
+$\theta\ge(1-2^{-16})/2=\thetastar$.
+
+\emph{Local structure and splitting.} Let $\mathfrak P$ be a prime of $K$
+above $\mathfrak p\in S\cup\{\mathfrak t_0,\mathfrak t_1,\mathfrak t_2\}$. Its
+decomposition group in $H$ is conjugate to the image of the local map at
+$\mathfrak p$. Since $U\subset D_3G_B$, Lemma~\ref{tw:retained-quotient}(b)
+shows that this image is $D$, $C_2\times C_2$ or $C_4$, the last one cyclic on
+the Frobenius, and that the prescribed local group injects into $H$.
+Therefore the completion $K_{\mathfrak P}$ is $L_2$ over
+$B_{\mathfrak p_j}=\Q_2$, the field $\Q_p(\sqrt u,\sqrt p)$ over
+$B_{\mathfrak p}=\Q_p$ for $p=3,5$, and the unramified extension of degree
+four of $B_{\mathfrak t_k}$. Since $B_{\mathfrak t_0}$ is unramified of
+degree two over $\Q_7$ and $B_{\mathfrak t_1}=B_{\mathfrak t_2}=\Q_{29}$, the
+places of $K$ have the types of Table~\ref{tw:types-table}. Every element of
+the decomposition group has elementary image in the span of the images of the
+local generators at $\mathfrak p$, whereas every conjugate of $\iota_1$ has
+elementary image $\bar\iota_1$. By Lemma~\ref{tw:retained-quotient}(d),
+$\iota_1$ lies in no decomposition group of a prime above
+$S\cup\{\mathfrak t_0,\mathfrak t_1,\mathfrak t_2\}$, so the decomposition
+group of $\mathfrak P$ in $\Gal(K/F)=\langle\iota_1\rangle$ is trivial. Hence
+the places of $F$ above $2,3,5,7,29$ split in $K$, and they have the same
+local types.
+
+\emph{Ramification and root discriminant.} The extension $K/B$, and hence
+$K/F$, is unramified at every prime outside $S$, in particular at
+$(\sqrt{241})$. At primes above $S$ the inertia group of $K/F$ is trivial,
+because it lies in the decomposition group. So $K/F$ is unramified at every
+finite place, its relative discriminant is trivial, $|d_K|=|d_F|^2$, and
+$\rd(K)=\rd(F)$. To compute $\rd(K)$ we use
+$|d_K|=241^{[K:B]}N\mathfrak d_{K/B}$. Since $K/B$ is Galois, for
+$\mathfrak p\in S$ all primes $\mathfrak P$ above $\mathfrak p$ have the same
+ramification index $e$, residue degree and different exponent
+$v_{\mathfrak P}(\mathfrak D_{K/B})$, and
+$v_{\mathfrak p}(\mathfrak d_{K/B})=[K:B]\,v_{\mathfrak P}(\mathfrak D_{K/B})/e$.
+For $\mathfrak p$ above $3$ or $5$ we have $e=2$ and
+$v_{\mathfrak P}(\mathfrak D_{K/B})=1$, since over the unramified extension
+$\Q_p(\sqrt u)$ the different of $\Q_p(\sqrt u,\sqrt p)$ is generated by
+$2\sqrt p$. For $\mathfrak p_1,\mathfrak p_2$, Lemma~\ref{tw:local-two}(d)
+gives $v_{\mathfrak P}(\mathfrak D_{K/B})/e=9/4$. Since $[K:\Q]=2[K:B]$, the
+base contributes $241^{1/2}$, each of the two primes above $3$ contributes
+$3^{1/4}$, each of the two above $5$ contributes $5^{1/4}$, and each dyadic
+prime contributes $2^{9/8}$. Hence
+$\rd(K)=2^{9/4}\,3^{1/2}\,5^{1/2}\,241^{1/2}=\lambda$.
+\end{proof}
+
+\begin{remark}\label{tw:lean-remark}
+The Lean development \cite{NaslundLean2026} formalizes a version of this
+construction; Remark~\ref{an:lean-hypothesis} states what it proves and the
+numerical hypothesis it assumes.
+\end{remark}

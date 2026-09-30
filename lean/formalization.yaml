@@ -36,23 +36,24 @@ classification:
   - 11R37
   - 20C05
 sources:
-- title: A tower over Q(sqrt 241) and the exponent 1.04273 (research note)
+- title: A lower bound with exponent 1.04273 for the unit distance problem
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/tree/81755b057db7e21488b7d92c1a538751278803de/papers/0.04273
-  type: research note
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/d293700740582b8992d30afb76e9968ea5c61b49/papers/0.04273/main.tex
+  type: paper
   location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.04273/ at the cited commit
-    (research/construction.md, certificates/, research/review-20260929.md). The source archive includes
-    these materials under docs/quadratic-base-research/.'
+    (main.tex, sections/, certificates/). The source archive includes these materials under
+    docs/quadratic-base-research/.'
   relationship: adapts
-  note: 'Research note (not yet a self-contained manuscript) for the tower over Q(sqrt 241): construction,
-    analytic ceiling via the genus field, geometric margin and certified replay. It claims 1.04273 unconditionally
-    by a computer-assisted certificate; the formalization proves the exponent 1.0427 conditional on the
-    displayed hypothesis (H). Three independent AI referee reviews reported no mathematical error within
-    their stated scopes. It is an unrefereed research note produced with AI tools under Eric Naslund''s
-    direction, published in the repository cited above; it is not a peer-reviewed publication. His role
-    as directing author and responsible maintainer does not assert human proof review. No registry action
-    is claimed by this metadata.'
+  note: 'Self-contained manuscript of September 30, 2026 for the tower over Q(sqrt 241): the tower,
+    the Kummer field of the tower (called the genus field here) and its 255 quadratic L-functions, the
+    analytic ceiling, the geometric transfer and the final certificate. It proves the exponent 1.04273
+    unconditionally, with a computer-assisted certificate; this formalization proves the exponent 1.0427
+    conditional on the displayed hypothesis (H). Independent AI referee reviews found no mathematical
+    error. It is an unrefereed manuscript produced with AI tools under Eric Naslund''s direction, with an
+    AI Methodology statement on its first page, published in the repository cited above; it is not a
+    peer-reviewed publication. His role as directing author and responsible maintainer does not assert
+    human proof review. No registry action is claimed by this metadata.'
 - title: A lower exponent of 1.0418235 for planar unit distances
   authors:
   - Eric Naslund
@@ -267,7 +268,7 @@ automation:
     authorship or human proof verification.
 fidelity:
   divergences: >-
-    The research note's externally computer-assisted exponent is 1.04273. This
+    The manuscript's externally computer-assisted exponent is 1.04273. This
     formalization proves the sequence implication at exact exponent 10427/10000
     = 1.0427 from one explicit numerical inequality on the independently defined
     degree-512 genus field. That inequality remains unproved in Lean. Ordinary

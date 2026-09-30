@@ -89,12 +89,13 @@ Candidate 4's complete run fit within 32 GiB, and the present sources' kernel
 replays each within 16 GiB; the complete run of these sources records its own
 resource use.
 
-The [quadratic-base research note](docs/quadratic-base-research/README.md)
-reports an external computer-assisted result at exponent 1.04273. Its
+The [quadratic-base manuscript](docs/quadratic-base-research/README.md)
+proves an external computer-assisted result at exponent 1.04273. Its
 `certificates/h241_receipt.py` separately computes an upper bound of about
 0.0848335193 for H's left side. These are external numerical evidence,
 not Lean proofs of H. The [original manuscript](docs/manuscript/README.md)
-and the research note are included as source material with their original
+and the quadratic-base manuscript, with its certificates and the research
+note that preceded it, are included as source material with their original
 authorship and AI-production disclosures. Their local provenance and the
 change of conclusion to conditional exponent 1.0427 are recorded in
 [formalization.yaml](formalization.yaml).

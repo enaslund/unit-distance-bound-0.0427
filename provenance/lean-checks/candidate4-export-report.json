@@ -1,16 +1,16 @@
 {
-  "archive": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/candidate5.tar.gz",
-  "archive_bytes": 9747576,
-  "archive_sha256": "6614aefb039743275c774b8ad14717c8d4528684de2a1aaa355fc8d604e57f2f",
+  "archive": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/candidate4.tar.gz",
+  "archive_bytes": 8791154,
+  "archive_sha256": "4f6b79d9690b34a1db592700385db73a8d2b371e94592806288e951f8c9fd30e",
   "companion_modules_beyond_selected": 114,
-  "external_zeta_records": 30,
-  "files": 3021,
+  "external_zeta_records": 27,
+  "files": 2998,
   "historical_planned_references": {
     "scripts/sqrt241/generate_tower_certificates.py": [
       "docs/sqrt241/TOWER_PLAN.md"
     ]
   },
-  "manuscript_files": 78,
+  "manuscript_files": 55,
   "missing_references": [],
   "missing_references_tolerated": false,
   "project_modules": 2289,
@@ -20,9 +20,9 @@
     "scripts/verify_submission.py"
   ],
   "remote_submission": false,
-  "research_note_files": 64,
+  "research_note_files": 41,
   "selected_configuration": "comparator-zeta241.json",
   "selected_theorem": "UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound",
-  "snapshot_sha256": "2bcea56ab85fabd19e2e26e26937c2a0b9cd12b9620ac02b4455e35a37defd86",
-  "source_bytes": 48168512
+  "snapshot_sha256": "c474d592bd165bb03b470c65c736591617187697deaee60349d9fd654e309c6d",
+  "source_bytes": 46929246
 }

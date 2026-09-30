@@ -23,7 +23,7 @@ this file is the plan and progress record as written during the port.
 Statement: [ChallengeZeta241.lean](../ChallengeZeta241.lean) (placeholder proof); proof:
 [SolutionZeta241.lean](../SolutionZeta241.lean).
 
-* Exponent `10427/10000` (the "0.0427 bound"). The research note certifies
+* Exponent `10427/10000` (the "0.0427 bound"). The manuscript certifies
   1.04273, but at 1.0427 the geometric margin is 0.000908 instead of
   0.000177, which leaves room for the rational enclosures of a formal proof.
 * **H is stated on the genus field E = ℚ(√241, √α₁, …, √α₈)**, degree 512,

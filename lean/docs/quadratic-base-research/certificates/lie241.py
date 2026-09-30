@@ -1,7 +1,14 @@
-"""Degree-2 and degree-3 restricted Lie layers for the tower over B=Q(sqrt 241).
+"""Degree-2 restricted Lie layer for the tower over B = Q(sqrt 241), with 8 generators.
 
-Mirrors Lemma tw:new-retained-quotient of the manuscript, with 8 generators.
-Linear parts of local generators come from kummer241.gp (Hilbert symbols).
+Checks finite facts used in Section 2 of the manuscript: the rank 21 of the 22
+quadratic elements (Lemma tw:quadratic-layer), the retention statements of
+Lemma tw:retained-quotient(b), the rank 7 of v -> [iota_1, v] used in the proof
+of Lemma tw:retained-quotient(c), and Lemma tw:retained-quotient(d).  The
+degree-3 layer is computed by lie241c.py, which imports this module.
+
+The vectors below are the elementary images of Table tw:vector-table, which
+kummer241.gp recomputes from Hilbert symbols.  In the code, c1 and c2 are the
+complex conjugations iota_1 and iota_2, and S(v) is the restricted square v^[2].
 """
 import itertools
 import numpy as np

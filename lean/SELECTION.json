@@ -1585,7 +1585,9 @@
     "docs/quadratic-base-research/certificates/census241.c",
     "docs/quadratic-base-research/certificates/census241.py",
     "docs/quadratic-base-research/certificates/census_1e9.txt",
+    "docs/quadratic-base-research/certificates/check255.gp",
     "docs/quadratic-base-research/certificates/cup241.gp",
+    "docs/quadratic-base-research/certificates/dyadic241.py",
     "docs/quadratic-base-research/certificates/env241.py",
     "docs/quadratic-base-research/certificates/geom241.py",
     "docs/quadratic-base-research/certificates/gs241.py",
@@ -1597,6 +1599,7 @@
     "docs/quadratic-base-research/certificates/lie241.py",
     "docs/quadratic-base-research/certificates/lie241c.py",
     "docs/quadratic-base-research/certificates/lrows241.json",
+    "docs/quadratic-base-research/certificates/lvalues255.gp",
     "docs/quadratic-base-research/certificates/replay241.json",
     "docs/quadratic-base-research/certificates/reproduce241.py",
     "docs/quadratic-base-research/certificates/shells241.py",
@@ -1689,10 +1692,15 @@
       "origin": "papers/0.0418235/sections/tower.tex",
       "sha256": "6cbe36fe27a46d37048001c53848fae5b7f59d1313d54ec924f9a298bf925c41"
     },
+    "docs/quadratic-base-research/Makefile": {
+      "bytes": 348,
+      "origin": "papers/0.04273/Makefile",
+      "sha256": "329da8fe66ca05f839916bab903f2f0935ea98afd21909e5b1d92caddea684a2"
+    },
     "docs/quadratic-base-research/README.md": {
-      "bytes": 3984,
+      "bytes": 5566,
       "origin": "papers/0.04273/README.md",
-      "sha256": "684b1b9ea6a88f5fb9924a76514557c713d697ff1d69ab67ffb07aa45c6866c3"
+      "sha256": "22fc95a53b7baa45f6b73b92bcd95cf88c1bc6870aba831f377cd73e675c471f"
     },
     "docs/quadratic-base-research/certificates/afe241.py": {
       "bytes": 2413,
@@ -1702,7 +1710,7 @@
     "docs/quadratic-base-research/certificates/afe241_301_300.json": {
       "bytes": 40793,
       "origin": "papers/0.04273/certificates/afe241_301_300.json",
-      "sha256": "c2a747782edb8b78e0ec1aaac35a32f0bcc948d3eed892f8e4493e60156cad3c"
+      "sha256": "c40ea76f93e46c6d8881722ab4038dd9bd32485eaa51d82adf32efbe0937ee47"
     },
     "docs/quadratic-base-research/certificates/ceiling241.py": {
       "bytes": 4246,
@@ -1724,10 +1732,20 @@
       "origin": "papers/0.04273/certificates/census_1e9.txt",
       "sha256": "29ec6e2d11e73c8d034e745272b99c1758d21ae3385eecd85a6d8938fbaa464f"
     },
+    "docs/quadratic-base-research/certificates/check255.gp": {
+      "bytes": 5113,
+      "origin": "papers/0.04273/certificates/check255.gp",
+      "sha256": "afd7aab4c0d11f0bd93ac2b9b1b3f9a84aa844cc8c3447e58661f95cd6db31b8"
+    },
     "docs/quadratic-base-research/certificates/cup241.gp": {
-      "bytes": 735,
+      "bytes": 2254,
       "origin": "papers/0.04273/certificates/cup241.gp",
-      "sha256": "5587b1368cec4f640c1a596eeba51ff9249f46a58636020a938e4ab8c2e2be46"
+      "sha256": "d87a7684b2d8fafe4769a2f1b53c00b6c66d06f6c4900d65612abd2db98c3e9c"
+    },
+    "docs/quadratic-base-research/certificates/dyadic241.py": {
+      "bytes": 8722,
+      "origin": "papers/0.04273/certificates/dyadic241.py",
+      "sha256": "688daaa425513eacbaea9855cd569717544c3f12d8292bdc8a2ed39df7c4def4"
     },
     "docs/quadratic-base-research/certificates/env241.py": {
       "bytes": 1927,
@@ -1735,9 +1753,9 @@
       "sha256": "886ffdb02aa5f6ba1d13eb2c268c7d2ce5f52fcdce45cd8bc28b0a33ac697889"
     },
     "docs/quadratic-base-research/certificates/geom241.py": {
-      "bytes": 3315,
+      "bytes": 8047,
       "origin": "papers/0.04273/certificates/geom241.py",
-      "sha256": "8fdf48806b70161207411a37b0cae207481394899a1a381a86a3f6529aae9ac3"
+      "sha256": "2fda015aad9bba8ba0afa276ead3a99dbb6961a47a40ecbd6bf0d55f2b82a93e"
     },
     "docs/quadratic-base-research/certificates/gs241.py": {
       "bytes": 729,
@@ -1755,9 +1773,9 @@
       "sha256": "cfa61b90339f03cbc07ad38f41fabe894c5e9114ad07078c69577ed918a04575"
     },
     "docs/quadratic-base-research/certificates/kummer241.gp": {
-      "bytes": 1343,
+      "bytes": 3534,
       "origin": "papers/0.04273/certificates/kummer241.gp",
-      "sha256": "3cb5eb2996a832a6836b705487134793d1126ff5e4ce42f6d5bfa2914648bbda"
+      "sha256": "8ccb1cd3e81232d747fcff36725209fddefa7b55b42d80c3e8dcb2ba65238988"
     },
     "docs/quadratic-base-research/certificates/lcheck.gp": {
       "bytes": 28633,
@@ -1770,9 +1788,9 @@
       "sha256": "bce07f3889d9cfcf7561565ed76394c569955a40cd28c659f0d6635ac8b78909"
     },
     "docs/quadratic-base-research/certificates/lie241.py": {
-      "bytes": 4640,
+      "bytes": 5108,
       "origin": "papers/0.04273/certificates/lie241.py",
-      "sha256": "9d1ff615b8594db08b7b305567eb51c40cc8b351dcff73794e3d6ee30f6424d6"
+      "sha256": "9f4daf06573ac59808e0cd1a8331bdac9c2ee1a035cda321156a5bf1440fcb49"
     },
     "docs/quadratic-base-research/certificates/lie241c.py": {
       "bytes": 2087,
@@ -1784,20 +1802,25 @@
       "origin": "papers/0.04273/certificates/lrows241.json",
       "sha256": "ab12088e869ee929033b20b3cb59d26f3b1986d432827c7bc2c1549f245e863f"
     },
+    "docs/quadratic-base-research/certificates/lvalues255.gp": {
+      "bytes": 4198,
+      "origin": "papers/0.04273/certificates/lvalues255.gp",
+      "sha256": "f9f2e0af007d286304a1527eabd48d9d7117263f678425d331eae6a83e79ca12"
+    },
     "docs/quadratic-base-research/certificates/replay241.json": {
-      "bytes": 1097,
+      "bytes": 1404,
       "origin": "papers/0.04273/certificates/replay241.json",
-      "sha256": "2a2fa981827fd990c8564d1b6cdc27a492110efd32e0f70377c5d9c32397561c"
+      "sha256": "376a4c8ecc4080b50f2afa346945a82932b16fa553edaab6f6f7ab48ec1ead0e"
     },
     "docs/quadratic-base-research/certificates/reproduce241.py": {
-      "bytes": 4736,
+      "bytes": 5595,
       "origin": "papers/0.04273/certificates/reproduce241.py",
-      "sha256": "d9ec7c43012b1ce6230b040f45cd7880f0610ef8c0cd19cfc3c9e7bdedfc2e04"
+      "sha256": "ab6999b80d44a02cf56558586283a7ad5dde39c590d7b8c277bade8a462bfed5"
     },
     "docs/quadratic-base-research/certificates/shells241.py": {
-      "bytes": 1631,
+      "bytes": 1922,
       "origin": "papers/0.04273/certificates/shells241.py",
-      "sha256": "5a318060710a742101693a6318036cfabb511b90df0145a4d370fdfe705f3a6c"
+      "sha256": "d6edd9eb27e9b6ac94078b7593b049d31a3a0889e9b1842d2a3604606a7080bf"
     },
     "docs/quadratic-base-research/certificates/shells241_0.0426.json": {
       "bytes": 761,
@@ -1829,15 +1852,60 @@
       "origin": "papers/0.04273/certificates/yecheck.gp",
       "sha256": "4e37b5413f982aecb212b84c6db4f8c25d0e54780141aa91344bc45251dd2fc9"
     },
+    "docs/quadratic-base-research/main.aux": {
+      "bytes": 30352,
+      "origin": "papers/0.04273/main.aux",
+      "sha256": "9a0029356fc33d93d0717d670ce4e98e2aa838773443f77bf53a6444db8829c8"
+    },
+    "docs/quadratic-base-research/main.bbl": {
+      "bytes": 10814,
+      "origin": "papers/0.04273/main.bbl",
+      "sha256": "3cc4ef47997bc0308c7144cbab1cb2c8909e86cd9455703b7fb6d436a8592194"
+    },
+    "docs/quadratic-base-research/main.blg": {
+      "bytes": 921,
+      "origin": "papers/0.04273/main.blg",
+      "sha256": "02965bf6bf5913c19c610f377e43728267c5de59ab4fa72826d6d83aa6f4fcce"
+    },
+    "docs/quadratic-base-research/main.log": {
+      "bytes": 25004,
+      "origin": "papers/0.04273/main.log",
+      "sha256": "4caa62742bcde05e0604fc5179c3f03c55964ac6c1c4aaa7063e5cde23439408"
+    },
+    "docs/quadratic-base-research/main.out": {
+      "bytes": 1943,
+      "origin": "papers/0.04273/main.out",
+      "sha256": "1a7bffaeb12b2e4c40571d431d07fccb194f0cf6bd5726ba3704deecec25979b"
+    },
+    "docs/quadratic-base-research/main.pdf": {
+      "bytes": 845416,
+      "origin": "papers/0.04273/main.pdf",
+      "sha256": "01fae1816d661aa5c1ef2dc732c66cd60ee19f251fa871694393a24c55664bcc"
+    },
+    "docs/quadratic-base-research/main.tex": {
+      "bytes": 4073,
+      "origin": "papers/0.04273/main.tex",
+      "sha256": "d6cc4b0a6d66e3d0998bf6fa320b7a231ad5af1f6aff1a554ca916853527a14e"
+    },
+    "docs/quadratic-base-research/main.toc": {
+      "bytes": 5500,
+      "origin": "papers/0.04273/main.toc",
+      "sha256": "2ac9092982fd847a1bea2d9e86546e8335a37c9916eea2abef0c4afcdd7e0e8d"
+    },
+    "docs/quadratic-base-research/references.bib": {
+      "bytes": 22076,
+      "origin": "papers/0.04273/references.bib",
+      "sha256": "5d36f184d81081ad6298b1456631c8413194de1007aa9ea003b66f6901ceca3f"
+    },
     "docs/quadratic-base-research/requirements.txt": {
       "bytes": 187,
       "origin": "papers/0.04273/requirements.txt",
       "sha256": "c3ef72268b6e958115eebb056c8a88d728bf597300c92cf72cc17388c188d7b0"
     },
     "docs/quadratic-base-research/research/construction.md": {
-      "bytes": 14813,
+      "bytes": 15183,
       "origin": "papers/0.04273/research/construction.md",
-      "sha256": "af620ce62e473c871d1fdd639952b894841f64534f5a448dab0cd8e2823ff54c"
+      "sha256": "3d2aad9b12bd2e8df8fa0dabda137ee22e453f2d5bfbc43fb34a3022cd99347a"
     },
     "docs/quadratic-base-research/research/design-model/amort.py": {
       "bytes": 769,
@@ -1889,10 +1957,60 @@
       "origin": "papers/0.04273/research/design-search.md",
       "sha256": "088becbf9f8cd62caab4c37eab940e21323e1983588d34ad1fcd218efa072b2c"
     },
+    "docs/quadratic-base-research/research/manuscript-review-20260930.md": {
+      "bytes": 4876,
+      "origin": "papers/0.04273/research/manuscript-review-20260930.md",
+      "sha256": "e39abedd8c8bc0567b07cea0863c9c3d4a84442fa3440dcdf45b5b7fdf6b0d65"
+    },
     "docs/quadratic-base-research/research/review-20260929.md": {
       "bytes": 3969,
       "origin": "papers/0.04273/research/review-20260929.md",
       "sha256": "1238f278886974361c08fb8239c3b8d3ab49a1dac43984222b678d0705b6bf77"
+    },
+    "docs/quadratic-base-research/sections/analytic.tex": {
+      "bytes": 38035,
+      "origin": "papers/0.04273/sections/analytic.tex",
+      "sha256": "7069825d0cc7911dd26ce6f5303c14a832e973ae397e8f00d5fadf5c49a27b1c"
+    },
+    "docs/quadratic-base-research/sections/certificate.tex": {
+      "bytes": 12961,
+      "origin": "papers/0.04273/sections/certificate.tex",
+      "sha256": "f353b8c0fa37c8e31a7f64ac434f8404b5dbd0151a50f76ac43e1bb4fee6410d"
+    },
+    "docs/quadratic-base-research/sections/finite-windows.tex": {
+      "bytes": 24898,
+      "origin": "papers/0.04273/sections/finite-windows.tex",
+      "sha256": "c0fb2c7e75c377bdd5fd946a720965caed4aa8027f350062932c93e10705728e"
+    },
+    "docs/quadratic-base-research/sections/finite-witness.tex": {
+      "bytes": 1536,
+      "origin": "papers/0.04273/sections/finite-witness.tex",
+      "sha256": "78ad6017cfdf1f427ead81031afe1f5999d11a41851a349c953e2375e323d2d1"
+    },
+    "docs/quadratic-base-research/sections/genus-field.tex": {
+      "bytes": 15911,
+      "origin": "papers/0.04273/sections/genus-field.tex",
+      "sha256": "2b6a05415321328dcace4c2976aa4b10e36010651a5eb9125cc1d97d77d31ad4"
+    },
+    "docs/quadratic-base-research/sections/geometry.tex": {
+      "bytes": 32834,
+      "origin": "papers/0.04273/sections/geometry.tex",
+      "sha256": "74dbdb4d7410499e782db6c0cea3da4f6f8926e29967139cff839e63845e20be"
+    },
+    "docs/quadratic-base-research/sections/introduction.tex": {
+      "bytes": 18813,
+      "origin": "papers/0.04273/sections/introduction.tex",
+      "sha256": "3058788922ea5b1fe7cf769a3069b0e2a64cd958627ffc139de229bbdd38e293"
+    },
+    "docs/quadratic-base-research/sections/profiles.tex": {
+      "bytes": 23323,
+      "origin": "papers/0.04273/sections/profiles.tex",
+      "sha256": "2f1b244ff25435e3da6024f5cb96465f430e0cbd70dbafc7c37ef6f8c9d565e2"
+    },
+    "docs/quadratic-base-research/sections/tower.tex": {
+      "bytes": 75038,
+      "origin": "papers/0.04273/sections/tower.tex",
+      "sha256": "95861a874ad6015e7d51759e2cc4913bb11004dfffe27b14d167d52e304fecc9"
     }
   },
   "manuscript_not_included": [
@@ -6970,10 +7088,15 @@
     "scripts/verify_submission.py"
   ],
   "research_note_files": {
+    "docs/quadratic-base-research/Makefile": {
+      "bytes": 348,
+      "origin": "papers/0.04273/Makefile",
+      "sha256": "329da8fe66ca05f839916bab903f2f0935ea98afd21909e5b1d92caddea684a2"
+    },
     "docs/quadratic-base-research/README.md": {
-      "bytes": 3984,
+      "bytes": 5566,
       "origin": "papers/0.04273/README.md",
-      "sha256": "684b1b9ea6a88f5fb9924a76514557c713d697ff1d69ab67ffb07aa45c6866c3"
+      "sha256": "22fc95a53b7baa45f6b73b92bcd95cf88c1bc6870aba831f377cd73e675c471f"
     },
     "docs/quadratic-base-research/certificates/afe241.py": {
       "bytes": 2413,
@@ -6983,7 +7106,7 @@
     "docs/quadratic-base-research/certificates/afe241_301_300.json": {
       "bytes": 40793,
       "origin": "papers/0.04273/certificates/afe241_301_300.json",
-      "sha256": "c2a747782edb8b78e0ec1aaac35a32f0bcc948d3eed892f8e4493e60156cad3c"
+      "sha256": "c40ea76f93e46c6d8881722ab4038dd9bd32485eaa51d82adf32efbe0937ee47"
     },
     "docs/quadratic-base-research/certificates/ceiling241.py": {
       "bytes": 4246,
@@ -7005,10 +7128,20 @@
       "origin": "papers/0.04273/certificates/census_1e9.txt",
       "sha256": "29ec6e2d11e73c8d034e745272b99c1758d21ae3385eecd85a6d8938fbaa464f"
     },
+    "docs/quadratic-base-research/certificates/check255.gp": {
+      "bytes": 5113,
+      "origin": "papers/0.04273/certificates/check255.gp",
+      "sha256": "afd7aab4c0d11f0bd93ac2b9b1b3f9a84aa844cc8c3447e58661f95cd6db31b8"
+    },
     "docs/quadratic-base-research/certificates/cup241.gp": {
-      "bytes": 735,
+      "bytes": 2254,
       "origin": "papers/0.04273/certificates/cup241.gp",
-      "sha256": "5587b1368cec4f640c1a596eeba51ff9249f46a58636020a938e4ab8c2e2be46"
+      "sha256": "d87a7684b2d8fafe4769a2f1b53c00b6c66d06f6c4900d65612abd2db98c3e9c"
+    },
+    "docs/quadratic-base-research/certificates/dyadic241.py": {
+      "bytes": 8722,
+      "origin": "papers/0.04273/certificates/dyadic241.py",
+      "sha256": "688daaa425513eacbaea9855cd569717544c3f12d8292bdc8a2ed39df7c4def4"
     },
     "docs/quadratic-base-research/certificates/env241.py": {
       "bytes": 1927,
@@ -7016,9 +7149,9 @@
       "sha256": "886ffdb02aa5f6ba1d13eb2c268c7d2ce5f52fcdce45cd8bc28b0a33ac697889"
     },
     "docs/quadratic-base-research/certificates/geom241.py": {
-      "bytes": 3315,
+      "bytes": 8047,
       "origin": "papers/0.04273/certificates/geom241.py",
-      "sha256": "8fdf48806b70161207411a37b0cae207481394899a1a381a86a3f6529aae9ac3"
+      "sha256": "2fda015aad9bba8ba0afa276ead3a99dbb6961a47a40ecbd6bf0d55f2b82a93e"
     },
     "docs/quadratic-base-research/certificates/gs241.py": {
       "bytes": 729,
@@ -7036,9 +7169,9 @@
       "sha256": "cfa61b90339f03cbc07ad38f41fabe894c5e9114ad07078c69577ed918a04575"
     },
     "docs/quadratic-base-research/certificates/kummer241.gp": {
-      "bytes": 1343,
+      "bytes": 3534,
       "origin": "papers/0.04273/certificates/kummer241.gp",
-      "sha256": "3cb5eb2996a832a6836b705487134793d1126ff5e4ce42f6d5bfa2914648bbda"
+      "sha256": "8ccb1cd3e81232d747fcff36725209fddefa7b55b42d80c3e8dcb2ba65238988"
     },
     "docs/quadratic-base-research/certificates/lcheck.gp": {
       "bytes": 28633,
@@ -7051,9 +7184,9 @@
       "sha256": "bce07f3889d9cfcf7561565ed76394c569955a40cd28c659f0d6635ac8b78909"
     },
     "docs/quadratic-base-research/certificates/lie241.py": {
-      "bytes": 4640,
+      "bytes": 5108,
       "origin": "papers/0.04273/certificates/lie241.py",
-      "sha256": "9d1ff615b8594db08b7b305567eb51c40cc8b351dcff73794e3d6ee30f6424d6"
+      "sha256": "9f4daf06573ac59808e0cd1a8331bdac9c2ee1a035cda321156a5bf1440fcb49"
     },
     "docs/quadratic-base-research/certificates/lie241c.py": {
       "bytes": 2087,
@@ -7065,20 +7198,25 @@
       "origin": "papers/0.04273/certificates/lrows241.json",
       "sha256": "ab12088e869ee929033b20b3cb59d26f3b1986d432827c7bc2c1549f245e863f"
     },
+    "docs/quadratic-base-research/certificates/lvalues255.gp": {
+      "bytes": 4198,
+      "origin": "papers/0.04273/certificates/lvalues255.gp",
+      "sha256": "f9f2e0af007d286304a1527eabd48d9d7117263f678425d331eae6a83e79ca12"
+    },
     "docs/quadratic-base-research/certificates/replay241.json": {
-      "bytes": 1097,
+      "bytes": 1404,
       "origin": "papers/0.04273/certificates/replay241.json",
-      "sha256": "2a2fa981827fd990c8564d1b6cdc27a492110efd32e0f70377c5d9c32397561c"
+      "sha256": "376a4c8ecc4080b50f2afa346945a82932b16fa553edaab6f6f7ab48ec1ead0e"
     },
     "docs/quadratic-base-research/certificates/reproduce241.py": {
-      "bytes": 4736,
+      "bytes": 5595,
       "origin": "papers/0.04273/certificates/reproduce241.py",
-      "sha256": "d9ec7c43012b1ce6230b040f45cd7880f0610ef8c0cd19cfc3c9e7bdedfc2e04"
+      "sha256": "ab6999b80d44a02cf56558586283a7ad5dde39c590d7b8c277bade8a462bfed5"
     },
     "docs/quadratic-base-research/certificates/shells241.py": {
-      "bytes": 1631,
+      "bytes": 1922,
       "origin": "papers/0.04273/certificates/shells241.py",
-      "sha256": "5a318060710a742101693a6318036cfabb511b90df0145a4d370fdfe705f3a6c"
+      "sha256": "d6edd9eb27e9b6ac94078b7593b049d31a3a0889e9b1842d2a3604606a7080bf"
     },
     "docs/quadratic-base-research/certificates/shells241_0.0426.json": {
       "bytes": 761,
@@ -7110,15 +7248,60 @@
       "origin": "papers/0.04273/certificates/yecheck.gp",
       "sha256": "4e37b5413f982aecb212b84c6db4f8c25d0e54780141aa91344bc45251dd2fc9"
     },
+    "docs/quadratic-base-research/main.aux": {
+      "bytes": 30352,
+      "origin": "papers/0.04273/main.aux",
+      "sha256": "9a0029356fc33d93d0717d670ce4e98e2aa838773443f77bf53a6444db8829c8"
+    },
+    "docs/quadratic-base-research/main.bbl": {
+      "bytes": 10814,
+      "origin": "papers/0.04273/main.bbl",
+      "sha256": "3cc4ef47997bc0308c7144cbab1cb2c8909e86cd9455703b7fb6d436a8592194"
+    },
+    "docs/quadratic-base-research/main.blg": {
+      "bytes": 921,
+      "origin": "papers/0.04273/main.blg",
+      "sha256": "02965bf6bf5913c19c610f377e43728267c5de59ab4fa72826d6d83aa6f4fcce"
+    },
+    "docs/quadratic-base-research/main.log": {
+      "bytes": 25004,
+      "origin": "papers/0.04273/main.log",
+      "sha256": "4caa62742bcde05e0604fc5179c3f03c55964ac6c1c4aaa7063e5cde23439408"
+    },
+    "docs/quadratic-base-research/main.out": {
+      "bytes": 1943,
+      "origin": "papers/0.04273/main.out",
+      "sha256": "1a7bffaeb12b2e4c40571d431d07fccb194f0cf6bd5726ba3704deecec25979b"
+    },
+    "docs/quadratic-base-research/main.pdf": {
+      "bytes": 845416,
+      "origin": "papers/0.04273/main.pdf",
+      "sha256": "01fae1816d661aa5c1ef2dc732c66cd60ee19f251fa871694393a24c55664bcc"
+    },
+    "docs/quadratic-base-research/main.tex": {
+      "bytes": 4073,
+      "origin": "papers/0.04273/main.tex",
+      "sha256": "d6cc4b0a6d66e3d0998bf6fa320b7a231ad5af1f6aff1a554ca916853527a14e"
+    },
+    "docs/quadratic-base-research/main.toc": {
+      "bytes": 5500,
+      "origin": "papers/0.04273/main.toc",
+      "sha256": "2ac9092982fd847a1bea2d9e86546e8335a37c9916eea2abef0c4afcdd7e0e8d"
+    },
+    "docs/quadratic-base-research/references.bib": {
+      "bytes": 22076,
+      "origin": "papers/0.04273/references.bib",
+      "sha256": "5d36f184d81081ad6298b1456631c8413194de1007aa9ea003b66f6901ceca3f"
+    },
     "docs/quadratic-base-research/requirements.txt": {
       "bytes": 187,
       "origin": "papers/0.04273/requirements.txt",
       "sha256": "c3ef72268b6e958115eebb056c8a88d728bf597300c92cf72cc17388c188d7b0"
     },
     "docs/quadratic-base-research/research/construction.md": {
-      "bytes": 14813,
+      "bytes": 15183,
       "origin": "papers/0.04273/research/construction.md",
-      "sha256": "af620ce62e473c871d1fdd639952b894841f64534f5a448dab0cd8e2823ff54c"
+      "sha256": "3d2aad9b12bd2e8df8fa0dabda137ee22e453f2d5bfbc43fb34a3022cd99347a"
     },
     "docs/quadratic-base-research/research/design-model/amort.py": {
       "bytes": 769,
@@ -7170,10 +7353,60 @@
       "origin": "papers/0.04273/research/design-search.md",
       "sha256": "088becbf9f8cd62caab4c37eab940e21323e1983588d34ad1fcd218efa072b2c"
     },
+    "docs/quadratic-base-research/research/manuscript-review-20260930.md": {
+      "bytes": 4876,
+      "origin": "papers/0.04273/research/manuscript-review-20260930.md",
+      "sha256": "e39abedd8c8bc0567b07cea0863c9c3d4a84442fa3440dcdf45b5b7fdf6b0d65"
+    },
     "docs/quadratic-base-research/research/review-20260929.md": {
       "bytes": 3969,
       "origin": "papers/0.04273/research/review-20260929.md",
       "sha256": "1238f278886974361c08fb8239c3b8d3ab49a1dac43984222b678d0705b6bf77"
+    },
+    "docs/quadratic-base-research/sections/analytic.tex": {
+      "bytes": 38035,
+      "origin": "papers/0.04273/sections/analytic.tex",
+      "sha256": "7069825d0cc7911dd26ce6f5303c14a832e973ae397e8f00d5fadf5c49a27b1c"
+    },
+    "docs/quadratic-base-research/sections/certificate.tex": {
+      "bytes": 12961,
+      "origin": "papers/0.04273/sections/certificate.tex",
+      "sha256": "f353b8c0fa37c8e31a7f64ac434f8404b5dbd0151a50f76ac43e1bb4fee6410d"
+    },
+    "docs/quadratic-base-research/sections/finite-windows.tex": {
+      "bytes": 24898,
+      "origin": "papers/0.04273/sections/finite-windows.tex",
+      "sha256": "c0fb2c7e75c377bdd5fd946a720965caed4aa8027f350062932c93e10705728e"
+    },
+    "docs/quadratic-base-research/sections/finite-witness.tex": {
+      "bytes": 1536,
+      "origin": "papers/0.04273/sections/finite-witness.tex",
+      "sha256": "78ad6017cfdf1f427ead81031afe1f5999d11a41851a349c953e2375e323d2d1"
+    },
+    "docs/quadratic-base-research/sections/genus-field.tex": {
+      "bytes": 15911,
+      "origin": "papers/0.04273/sections/genus-field.tex",
+      "sha256": "2b6a05415321328dcace4c2976aa4b10e36010651a5eb9125cc1d97d77d31ad4"
+    },
+    "docs/quadratic-base-research/sections/geometry.tex": {
+      "bytes": 32834,
+      "origin": "papers/0.04273/sections/geometry.tex",
+      "sha256": "74dbdb4d7410499e782db6c0cea3da4f6f8926e29967139cff839e63845e20be"
+    },
+    "docs/quadratic-base-research/sections/introduction.tex": {
+      "bytes": 18813,
+      "origin": "papers/0.04273/sections/introduction.tex",
+      "sha256": "3058788922ea5b1fe7cf769a3069b0e2a64cd958627ffc139de229bbdd38e293"
+    },
+    "docs/quadratic-base-research/sections/profiles.tex": {
+      "bytes": 23323,
+      "origin": "papers/0.04273/sections/profiles.tex",
+      "sha256": "2f1b244ff25435e3da6024f5cb96465f430e0cbd70dbafc7c37ef6f8c9d565e2"
+    },
+    "docs/quadratic-base-research/sections/tower.tex": {
+      "bytes": 75038,
+      "origin": "papers/0.04273/sections/tower.tex",
+      "sha256": "95861a874ad6015e7d51759e2cc4913bb11004dfffe27b14d167d52e304fecc9"
     }
   },
   "research_note_not_included": [
@@ -10152,8 +10385,8 @@
       "sha256": "2d691c0c559185576858d0bafd72d2fd48470a2febb904d860f421d3c5770731"
     },
     "README-zeta241.md": {
-      "bytes": 6731,
-      "sha256": "eae9e54b89db5c986b2d0a720d15e52ef7c05bee95cd97486ad0132190e0f105"
+      "bytes": 6802,
+      "sha256": "134bf8f8e1f022bdd9d6ded348c787b014fa3d882df08fcce4d0ea5d51129103"
     },
     "SolutionZeta.lean": {
       "bytes": 6026,
@@ -19808,8 +20041,8 @@
       "sha256": "2f64e4eeb163fbf3f2299409b857fe446d41f82209e8722aeff8cb241d3db2d7"
     },
     "docs/SQRT241_PORT.md": {
-      "bytes": 17130,
-      "sha256": "4c88b2edd384cd54aac8b46c692993e3c475e3eeef46a9031610e9071088240b"
+      "bytes": 17127,
+      "sha256": "6623f740ff12d07635ca45a42e3ebcb907622a300524c0192b58e4a8c82bce48"
     },
     "docs/SUBMISSION_PROVENANCE.md": {
       "bytes": 9848,
@@ -19852,8 +20085,8 @@
       "sha256": "b464be4df1d2ac2ce1d0779858601a90df584beb8e17d90efd8e8547cd3f4496"
     },
     "docs/sqrt241/SUBMISSION.md": {
-      "bytes": 13473,
-      "sha256": "43a932fb1e7b79886a7f23e9053191ea845648455aa45425c1a107d8b3e28b89"
+      "bytes": 13530,
+      "sha256": "264a92071df6e904d15aa704d30f70b2091d3e44ab0fca3305da78db7bff2489"
     },
     "docs/sqrt241/T0_T4.md": {
       "bytes": 16852,
@@ -19888,8 +20121,8 @@
       "sha256": "005599f5068fbbea9ac20584591a758461ebe6f77a2dbc50ba0f276b22dd43dc"
     },
     "formalization-zeta241.yaml": {
-      "bytes": 19521,
-      "sha256": "1ae7ab68b1438e87f19f753d4bc01aa7f7a7ec8ffd04ca115a9ebb7df6587bcc"
+      "bytes": 19602,
+      "sha256": "9ffff0f5275d7548c5aa5679ea54c7e903128ffb93a8724ba0a9a3faebd1309f"
     },
     "lake-manifest.json": {
       "bytes": 3167,

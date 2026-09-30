@@ -28,6 +28,11 @@ def rationalise(w):
         if fr > out[-1]:
             fr = out[-1]
         out.append(fr)
+    # Weights that round to zero are trailing (the list is nonincreasing).
+    # A shell of weight zero does not change the profile, and the certified
+    # window routine accepts only positive weights, so these shells are omitted.
+    while len(out) > 1 and out[-1] == 0:
+        out.pop()
     return out
 
 

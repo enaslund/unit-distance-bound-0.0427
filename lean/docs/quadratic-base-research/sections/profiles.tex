@@ -1,0 +1,570 @@
+\section{Archimedean Profiles}
+\label{pf:section}
+
+We use the profiles of \cite{Naslund0418235} without change: a Gaussian
+at the compact coordinates, and a positive polynomial modification of a
+Student profile at the pair coordinates. For $(z,w)\in\C^2$ put
+\[
+ t=(1+a|z|^2)^{-1},\qquad t'=(1+a|w|^2)^{-1},\qquad
+ g_\C(z,w)=t^s\,t'^{\,s}P(t,t'),
+\]
+where
+\[
+ s=1.14600585,\qquad a=0.0000128633241758,
+\]
+and
+\[
+ P(t,t')=\sum_{i,j=0}^3\beta_{ij}\,b_i^3(t)\,b_j^3(t'),\qquad
+ b_i^m(t)=\binom mi t^i(1-t)^{m-i},
+\]
+with the symmetric matrix of Bernstein coefficients
+\begin{equation}\label{pf:bernstein-witness}
+ (\beta_{ij})=\begin{pmatrix}
+ 1&2.4129438977&2.7721799210&6.6857798061\\
+ 2.4129438977&3.8532983888&4.6371750119&8.1307168183\\
+ 2.7721799210&4.6371750119&5.4628959084&9.5512647588\\
+ 6.6857798061&8.1307168183&9.5512647588&13.8659430610
+ \end{pmatrix}.
+\end{equation}
+All finite decimals here are exact rational numbers. The Bernstein
+polynomials $b_i^m$ are nonnegative on $[0,1]$ and sum to one, so
+$\min\beta\le P\le\max\beta$ on $[0,1]^2$, where $\min\beta$ and
+$\max\beta$ are the smallest and largest coefficients.
+
+The shape of $g_\C$ is adapted to the displacements at a pair of
+coordinates. By \eqref{geo:norm-modulus} they have moduli
+$(e^u,e^{-u})$, so as $u$ varies they run along a hyperbola. A profile
+of width $a^{-1/2}$ in each coordinate keeps a large overlap with its
+translate for all $u$ with $e^{|u|}\lesssim a^{-1/2}$, a range of length
+about $\log(1/a)$; this produces the factor $\log(1/a)$ in
+Proposition~\ref{pf:overlap}, against a mass penalty of order
+$\delta\log(1/a)$. For Student profiles the overlaps along this
+hyperbola reduce to beta integrals and digamma values
+(Lemmas~\ref{pf:laplace}--\ref{pf:pair-reduction}), which makes
+certified bounds possible, and the polynomial $P$ couples the two radii.
+
+In this section we prove that these profiles are admissible in the sense
+of Definition~\ref{geo:admissible}, and we derive bounds for $J_\R$ and
+$J_\C$ that reduce to finite computations with rational data.
+Section~\ref{sec:certificate} carries out these computations at
+$\delta=\deltastar$. Throughout, $0<\delta<1$ and $p=2/(1+\delta)$. We
+write $\psi=\Gamma'/\Gamma$, $\gamma$ for Euler's constant, $(x)_n$ for
+the rising factorial, $H_n=\sum_{k=1}^n1/k$ with $H_0=0$, and
+$\mathrm{Beta}(\alpha,\alpha')$ for the beta distribution on $(0,1)$
+with density proportional to $t^{\alpha-1}(1-t)^{\alpha'-1}$.
+
+\subsection{The Gaussian at the Compact Coordinates}
+
+\begin{lemma}\label{pf:gaussian}
+Let $a_\R=2p\delta$ and $f_\R(z)=e^{-a_\R|z|^2/p}$, so that
+$f_\R^p=e^{-a_\R|z|^2}$. Then
+\begin{equation}\label{pf:gaussian-compact}
+ J_\R=\log(p/2)+\delta\log(a_\R/\pi)-a_\R/(2p)
+ =\log(p/2)+\delta\bigl(\log(a_\R/\pi)-1\bigr),
+\end{equation}
+and $a_\R$ maximizes $J_\R$ over the Gaussians $e^{-a'|z|^2/p}$, $a'>0$.
+\end{lemma}
+
+\begin{proof}
+For $f=e^{-a'|z|^2/p}$ we have $A_\R=\pi/a'$ and, since
+$|z|^2+|z+1|^2=2|z+1/2|^2+1/2$, $I_\R=(\pi p/(2a'))e^{-a'/(2p)}$. Hence
+$J_\R=\log(p/2)+\delta\log(a'/\pi)-a'/(2p)$, a concave function of
+$\log a'$ with its maximum at $a'=2p\delta$.
+\end{proof}
+
+By \eqref{geo:general-margin}, the margin is affine in $\theta$ with
+slope $-\log\pi-2J_\R+J_\C$. This slope depends on the profiles; for
+ours it is positive (Section~\ref{sec:certificate}).
+
+\subsection{The Pair Convolution}
+
+\begin{lemma}\label{pf:laplace}
+Let $\alpha,\alpha'>0$ with $A=\alpha+\alpha'-1>0$, and let $h\in\C$.
+Then
+\begin{equation}\label{pf:laplace-convolution}
+ \int_{\C}(1+|z|^2)^{-\alpha}(1+|z+h|^2)^{-\alpha'}\,dz
+ =\frac\pi A\,\mathbb E\bigl(1+T(1-T)|h|^2\bigr)^{-A},
+ \qquad T\sim\mathrm{Beta}(\alpha,\alpha').
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Insert
+$(1+|z|^2)^{-\alpha}=\Gamma(\alpha)^{-1}\int_0^\infty
+r^{\alpha-1}e^{-r(1+|z|^2)}\,dr$ and the analogous formula with a
+variable $r'$. Since
+$r|z|^2+r'|z+h|^2=(r+r')|z+r'h/(r+r')|^2+rr'|h|^2/(r+r')$, the
+integral of $e^{-r|z|^2-r'|z+h|^2}$ over $z\in\C$ is
+$\pi(r+r')^{-1}e^{-rr'|h|^2/(r+r')}$; the factors $e^{-r}$ and
+$e^{-r'}$ remain in the Laplace integrals. Substitute $r=RT$,
+$r'=R(1-T)$, with Jacobian $R$, and integrate over $R$. This gives
+\[
+ \frac{\pi\,\Gamma(A)}{\Gamma(\alpha)\Gamma(\alpha')}
+ \int_0^1T^{\alpha-1}(1-T)^{\alpha'-1}\bigl(1+T(1-T)|h|^2\bigr)^{-A}dT,
+\]
+which equals the right side of \eqref{pf:laplace-convolution} because
+$\Gamma(\alpha+\alpha')=A\,\Gamma(A)$. All integrands are nonnegative,
+so Tonelli's theorem justifies the interchanges.
+\end{proof}
+
+For $A,B>0$ and $y>0$ define
+\[
+ Q_{AB}(y)=\int_\R(1+ye^{2v})^{-A}(1+ye^{-2v})^{-B}\,dv .
+\]
+
+\begin{lemma}\label{pf:hyperbola}
+Let $A,B>0$.
+\begin{enumerate}
+\item[(a)] For $y>0$,
+\begin{equation}\label{pf:elementary-hyperbola-error}
+ \Bigl|Q_{AB}(y)-\log(1/y)+\frac{\psi(A)+\psi(B)+2\gamma}{2}\Bigr|
+ \le\frac{(A+B)y}2 .
+\end{equation}
+\item[(b)] For $0<y<1$, with absolutely convergent series,
+\[
+ Q_{AB}(y)=\sum_{n\ge0}\frac{(A)_n(B)_n}{(n!)^2}\,y^{2n}
+ \Bigl[\log(1/y)+\psi(n+1)-\frac{\psi(A+n)+\psi(B+n)}2\Bigr].
+\]
+\item[(c)] Suppose $A,B\ge1$, $0<y<1$, $ABy^2<1$ and
+$2\log(1/y)\ge H_{\lceil A\rceil-1}+H_{\lceil B\rceil-1}$. Then every
+term of the series in (b) is nonnegative, and for every integer $m\ge0$
+its remainder $\mathcal R_m(y)$ after the terms $n\le m$ satisfies
+\[
+ 0\le\mathcal R_m(y)\le\log(1/y)\frac{(ABy^2)^{m+1}}{1-ABy^2}.
+\]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Split the integral at $v=0$. On $v\ge0$, first replace
+$(1+ye^{-2v})^{-B}$ by $1$. Since
+$0\le1-(1+ye^{-2v})^{-B}\le Bye^{-2v}$, this changes the half-integral
+by an amount in $[0,By/2]$. The substitution $x=ye^{2v}$ gives
+$\int_0^\infty(1+ye^{2v})^{-A}dv=\frac12\int_y^\infty(1+x)^{-A}dx/x$,
+and
+\[
+ \int_y^\infty\frac{dx}{x(1+x)^A}
+ =\log\frac1y+c_A+\int_0^y\bigl(1-(1+x)^{-A}\bigr)\frac{dx}x,\qquad
+ c_A=\int_0^\infty\bigl((1+x)^{-A}-\mathbf 1_{x<1}\bigr)\frac{dx}x .
+\]
+The last integral lies in $[0,Ay]$, because $0\le1-(1+x)^{-A}\le Ax$;
+in particular it tends to $0$ with $y$. On the other hand, the
+substitution $t=1/(1+x)$ gives
+\[
+ \int_y^\infty\frac{dx}{x(1+x)^A}
+ =\int_0^{1/(1+y)}\frac{t^{A-1}-1}{1-t}\,dt+\log\frac{1+y}y .
+\]
+Letting $y\to0$ in the two expressions yields
+$c_A=\int_0^1(t^{A-1}-1)(1-t)^{-1}dt=-\psi(A)-\gamma$
+\cite[Equation~(5.9.16)]{DLMF}. Thus the half $v\ge0$ equals
+$\frac12(\log(1/y)-\psi(A)-\gamma)$ plus a gain in $[0,Ay/2]$ minus a
+loss in $[0,By/2]$. The half $v\le0$ is the same with $A$ and $B$
+exchanged. Adding the halves proves (a).
+
+(b) The substitutions $x=ye^{2v}$ and then $t=x/(x+y^2)$ give
+\[
+ 2Q_{AB}(y)=\int_0^1t^{B-1}(1-t)^{A-1}\bigl(1-(1-y^2)t\bigr)^{-A}dt .
+\]
+By Euler's integral \cite[Equation~(15.6.1)]{DLMF}, the right side is
+$\Gamma(A)\Gamma(B)\,\mathbf F(A,B;A+B;1-y^2)$, where $\mathbf F$ is
+Olver's regularized hypergeometric function. The expansion
+\cite[Equation~(15.8.10)]{DLMF}, in the case $c=a+b$, gives
+\[
+ \mathbf F(A,B;A+B;1-y^2)=\frac1{\Gamma(A)\Gamma(B)}\sum_{n\ge0}
+ \frac{(A)_n(B)_n}{(n!)^2}\,y^{2n}\bigl[2\psi(n+1)-\psi(A+n)-\psi(B+n)
+ -\log y^2\bigr]
+\]
+for $0<y<1$. Dividing by two proves (b). The coefficients grow at most
+polynomially in $n$, so the series converges absolutely.
+
+(c) For $A\ge1$ and $n\ge0$, monotonicity of $\psi$ and the recurrence
+$\psi(x+1)=\psi(x)+1/x$ give
+$\psi(n+1)\le\psi(A+n)\le\psi(\lceil A\rceil+n)\le\psi(n+1)+H_{\lceil
+A\rceil-1}$. Hence the bracket in (b) lies between
+$\log(1/y)-\frac12(H_{\lceil A\rceil-1}+H_{\lceil B\rceil-1})\ge0$ and
+$\log(1/y)$. Moreover $(A)_n/n!=\prod_{k<n}(A+k)/(k+1)\le A^n$ for
+$A\ge1$, and similarly for $B$. Summing the geometric series proves
+(c).
+\end{proof}
+
+Let $d_{ij}$ be the monomial coefficients of $P$, so that
+$P(t,t')=\sum_{i,j}d_{ij}t^it'^{\,j}$, and put $\eta_0=2s-1$,
+\[
+ A_{ik}=\eta_0+i+k,\qquad B_{jl}=\eta_0+j+l,\qquad
+ w_{ijkl}=\frac{d_{ij}d_{kl}}{A_{ik}B_{jl}} .
+\]
+We call a quadruple $(i,j,k,l)$ with $d_{ij}d_{kl}\ne0$ a \emph{cross}.
+In the pair overlap we rename the variable of integration $v$, so that
+$I_\C=\int_\R\int_{\C^2}g_\C(z,w)g_\C(z+e^v,w+e^{-v})\,dz\,dw\,dv$.
+
+\begin{lemma}\label{pf:pair-reduction}
+Let $s\ge1$ and $a>0$. Then
+\[
+ I_\C=\frac{\pi^2}{a^2}\sum_{(i,j,k,l)}w_{ijkl}\,
+ \mathbb E\,Q_{A_{ik}B_{jl}}(y),\qquad
+ y=a\sqrt{T(1-T)T'(1-T')}\le a/4,
+\]
+where $T\sim\mathrm{Beta}(s+i,s+k)$ and $T'\sim\mathrm{Beta}(s+j,s+l)$
+are independent. Each expectation is finite.
+\end{lemma}
+
+\begin{proof}
+Expand $g_\C(z,w)=\sum_{i,j}d_{ij}(1+a|z|^2)^{-s-i}(1+a|w|^2)^{-s-j}$ and
+multiply out $g_\C(z,w)g_\C(z+e^v,w+e^{-v})$. For one cross, the scaling
+$z\mapsto z/\sqrt a$ and Lemma~\ref{pf:laplace} give
+\[
+ \int_\C(1+a|z|^2)^{-s-i}(1+a|z+e^v|^2)^{-s-k}\,dz
+ =\frac\pi{aA_{ik}}\,\mathbb E\bigl(1+aT(1-T)e^{2v}\bigr)^{-A_{ik}},
+\]
+and similarly in $w$ with $e^{-2v}$, $B_{jl}$ and $T'$. By Tonelli's
+theorem, the $v$-integral of the product is
+$\mathbb E\int_\R(1+Ye^{2v})^{-A_{ik}}(1+Y'e^{-2v})^{-B_{jl}}dv$ with
+$Y=aT(1-T)$ and $Y'=aT'(1-T')$, and the translation
+$v\mapsto v+\frac14\log(Y'/Y)$ turns the inner integral into
+$Q_{A_{ik}B_{jl}}(\sqrt{YY'})$. By
+\eqref{pf:elementary-hyperbola-error}, $Q_{AB}(y)$ is at most
+$\log(1/y)$ plus a constant, and $\log(1/(T(1-T)))$ is integrable under
+every beta law; so each term is finite and the finite signed sum is
+legitimate.
+\end{proof}
+
+\subsection{Admissibility}
+
+For the Fourier bound let $m\ge1$ and write
+$P(t,t')=\sum_{i,j=0}^m\beta_{ij}b_i^m(t)b_j^m(t')$ with all
+$\beta_{ij}>0$. Let $\Delta_1$ and $\Delta_2$ be the forward difference
+operators in the two indices. Fix $0<\rho<1$, the width of the complex
+tube in the proof below, and put $\omega=(\rho+\rho^2)/(1-\rho^2)$,
+\[
+ E_{rr'}=\binom mr\binom m{r'}\max_{i,j}\bigl|\Delta_1^r\Delta_2^{r'}
+ \beta_{ij}\bigr|,\qquad
+ q_0=\frac1{\min\beta}\sum_{r+r'>0}E_{rr'}\,\omega^{r+r'} .
+\]
+
+\begin{lemma}\label{pf:tube}
+Let $s>0$, $sp>1$ and $a>0$, and suppose $q_0<1$. Then for all
+$\xi_1,\xi_2\in\C$,
+\[
+ \bigl|\widehat{g_\C^p}(\xi_1,\xi_2)\bigr|
+ \le K_\C e^{-\sigma_\C(|\xi_1|+|\xi_2|)}A_\C,\qquad
+ K_\C=(1-\rho^2)^{-2sp}(1+q_0)^p,\qquad
+ \sigma_\C=2\pi\rho/\sqrt a .
+\]
+\end{lemma}
+
+\begin{proof}
+Write $x=\sqrt a\,z\in\R^2$ and consider complex vectors $x+iy$ with
+$x,y\in\R^2$ and $|y|\le\rho$. Put
+$\mathcal D(x+iy)=1+(x_1+iy_1)^2+(x_2+iy_2)^2$. Then
+\[
+ \operatorname{Re}\mathcal D=1+|x|^2-|y|^2\ge(1-\rho^2)(1+|x|^2),\qquad
+ \bigl|\mathcal D^{-1}-(1+|x|^2)^{-1}\bigr|
+ \le\frac{2|x|\rho+\rho^2}{(1-\rho^2)(1+|x|^2)^2}\le\omega .
+\]
+So the complexified $t=\mathcal D^{-1}$ lies within $\omega$ of the real
+$t_0=(1+|x|^2)^{-1}\in(0,1]$, and likewise for $t'$. By the Bernstein
+derivative formula,
+$\partial_t^r\partial_{t'}^{r'}P/(r!\,r'!)=\binom mr\binom m{r'}
+\sum_{i,j}(\Delta_1^r\Delta_2^{r'}\beta)_{ij}\,b_i^{m-r}(t)b_j^{m-r'}(t')$,
+which is at most $E_{rr'}$ in absolute value on $[0,1]^2$. Taylor
+expansion of the polynomial $P$ about $(t_0,t'_0)$ therefore gives
+$|P(t,t')-P(t_0,t'_0)|\le q_0\min\beta\le q_0P(t_0,t'_0)$. Thus
+$P(t,t')$ lies in the right half-plane, and with principal branches,
+\[
+ \bigl|\mathcal D(x+iy)^{-sp}\mathcal D(x'+iy')^{-sp}P(t,t')^p\bigr|
+ \le K_\C\,t_0^{sp}\,t_0'^{\,sp}P(t_0,t'_0)^p ,
+\]
+where $x'+iy'$ is the variable attached to $w$. The same bounds hold
+for $|y|,|y'|<\rho'$ with some $\rho'>\rho$, since $q_0$ depends
+continuously on $\rho$, so the left side is holomorphic in each complex
+coordinate on a neighborhood of the closed tube.
+
+The function $g_\C^p$ is invariant under rotations of $z$ and of $w$.
+Rotate so that $\xi_1$ and $\xi_2$ are positive multiples of the first
+basis vector, and shift the first real coordinate of $x$ by $-i\rho$,
+then that of $x'$ by $-i\rho$. Each shift is justified by Cauchy's
+theorem in one variable: the integrand is holomorphic in the strip and
+bounded there by a constant times $(1+|x|^2)^{-sp}(1+|x'|^2)^{-sp}$,
+which tends to zero at infinity and is integrable because $sp>1$. After
+the shifts the Fourier factor gains the factor
+$e^{-2\pi\rho(|\xi_1|+|\xi_2|)/\sqrt a}$, and the displayed bound gives
+the lemma.
+\end{proof}
+
+\begin{proposition}\label{pf:admissible}
+Let $s\ge1$, $a>0$, and let $P$ have positive Bernstein coefficients
+$\beta_{ij}$ of some degree $m$ in each variable. Let $0<\delta<1$ with
+$a_\R=2p\delta\le1$, let $f_\R$ be the Gaussian of
+Lemma~\ref{pf:gaussian}, and let $0<\rho<1$ with $q_0<1$. Then
+$(f_\R,g_\C)$ is admissible with Fourier constants
+\begin{equation}\label{pf:polynomial-fourier-contract}
+ M=\max\{2,\sqrt{K_\C}\},\qquad \sigma=\min\{1,\sigma_\C\}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+(P1) The functions $f_\R^p$ and
+$g_\C^p=(1+a|z|^2)^{-sp}(1+a|w|^2)^{-sp}P(t,t')^p$ are smooth, because
+$P\ge\min\beta>0$ on $[0,1]^2$, and they and all their derivatives are
+bounded.
+
+(P2) The integrals at the compact coordinates are computed in
+Lemma~\ref{pf:gaussian}. The mass $A_\C$ is finite because $sp>1$
+(Proposition~\ref{pf:mass} below), and $0<I_\C<\infty$ because
+$g_\C\le\max\beta\,t^st'^{\,s}$ and Lemma~\ref{pf:pair-reduction}
+applies to the pure Student profile $t^st'^{\,s}$.
+
+(P3) $V_\R=a_\R|z|^2/p$, and
+$V_\C=s\log(1+a|z|^2)+s\log(1+a|w|^2)-\log P(t,t')$ is at least
+$-\log\max\beta$ and tends to infinity with $|z|$ or $|w|$.
+
+(P4) The endpoint law at a compact coordinate is Gaussian. For the pair,
+$-\log P$ is bounded, so it suffices to bound the second moments of
+$\log(1+a|z|^2)$ and $\log(1+a|w|^2)$. Choose $0<\tau<s$; then
+$\tau<2s-1$ as well, since $s\ge1$. We have
+$\log^2(1+x)\le c_\tau(1+x)^\tau$ for $x\ge0$ and some constant
+$c_\tau$, and $g_\C\le\max\beta\,t^st'^{\,s}$. Hence the second moment
+of $\log(1+a|z|^2)$ is at most a constant times the integral of
+$(1+a|z|^2)^{-(s-\tau)}(1+a|z+e^v|^2)^{-s}(1+a|w|^2)^{-s}
+(1+a|w+e^{-v}|^2)^{-s}$. By the argument of
+Lemma~\ref{pf:pair-reduction}, with exponents $s-\tau>0$ and $s$ and
+$A=2s-\tau-1>0$, this integral is a multiple of
+$\mathbb E\,Q_{A,2s-1}(y)$, which is finite by
+\eqref{pf:elementary-hyperbola-error}. The same holds for $w$.
+
+(P5) By Lemma~\ref{geo:gaussian} the Gaussian satisfies
+$|\widehat{f_\R^p}(\xi)|\le2e^{-|\xi|}A_\R\le Me^{-\sigma|\xi|}A_\R$, and by
+Lemma~\ref{pf:tube} the pair profile satisfies the bound with
+$K_\C e^{-\sigma_\C(|\xi_1|+|\xi_2|)}\le
+M^2e^{-\sigma(|\xi_1|+|\xi_2|)}$.
+\end{proof}
+
+\subsection{A Lower Bound for the Pair Overlap}
+For $n\ge0$ and integers $i,k\ge0$ define
+\[
+ K_n(i,k)=\frac{(s+i)_n(s+k)_n}{n!\,(\eta_0+i+k+n)_{n+1}},\qquad
+ S_x(j)=\sum_{h=0}^{j-1}\frac1{x+h}\quad(S_x(0)=0),
+\]
+\[
+ r_n(i,k)=-\frac1{\eta_0}+\frac{H_n}2-\frac{S_{\eta_0}(i+k+n)}2
+ +S_{\eta_0}(i+k+2n+1)-\frac{S_s(i+n)+S_s(k+n)}2,
+\]
+$R_n(i,k)=K_n(i,k)r_n(i,k)$, and
+\[
+ G_n=\sum d_{ij}d_{kl}K_n(i,k)K_n(j,l),\qquad
+ \widetilde G_n=\sum d_{ij}d_{kl}\bigl[R_n(i,k)K_n(j,l)+K_n(i,k)R_n(j,l)\bigr],
+\]
+where the sums run over all crosses. For rational $s$ and $d_{ij}$ these
+are rational numbers. Put
+\begin{equation}\label{pf:student-constant}
+ C_s=-2\psi(s)+\psi(2s)+(2s-1)^{-1}-\gamma ,\qquad z_0=a^2/16 .
+\end{equation}
+
+\begin{proposition}\label{pf:overlap}
+Let $s\ge1$ and $a>0$, and suppose that for every cross
+\begin{equation}\label{pf:cross-threshold}
+ A_{ik}B_{jl}z_0<1,\qquad
+ 2\log(4/a)\ge H_{\lceil A_{ik}\rceil-1}+H_{\lceil B_{jl}\rceil-1},
+ \qquad \log(4/a)>1/2 .
+\end{equation}
+Then for every integer $m\ge0$,
+\begin{equation}\label{pf:collected-overlap}
+ \begin{split}
+ \frac{I_\C}{\pi^2a^{-2}}\ge{}&
+ \sum_{n=0}^ma^{2n}\bigl\{G_n[\log(1/a)+C_s]+\widetilde G_n\bigr\}-E_{-,m},\\
+ E_{-,m}={}&\log(4/a)\sum_{w_{ijkl}<0}(-w_{ijkl})
+ \frac{(A_{ik}B_{jl}z_0)^{m+1}}{1-A_{ik}B_{jl}z_0}.
+ \end{split}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Start from Lemma~\ref{pf:pair-reduction}. Since $y\le a/4<1$, the
+hypotheses of Lemma~\ref{pf:hyperbola}(c) hold at every value of $y$,
+with $A=A_{ik}\ge1$ and $B=B_{jl}\ge1$. Split each
+$Q_{A_{ik}B_{jl}}(y)$ into the terms $n\le m$ of
+Lemma~\ref{pf:hyperbola}(b) and the remainder $\mathcal R_m(y)$.
+
+Consider the term of index $n$ for one cross, with $\alpha=s+i$,
+$\alpha'=s+k$, $A=A_{ik}=\alpha+\alpha'-1$, and similarly for $T'$. Its
+factor $y^{2n}$ is $a^{2n}(T(1-T))^n(T'(1-T'))^n$, and
+$\log(1/y)=\log(1/a)-\frac12\log(T(1-T))-\frac12\log(T'(1-T'))$. The
+beta integral gives $\mathbb E(T(1-T))^n=(\alpha)_n(\alpha')_n/(A+1)_{2n}$,
+so
+\[
+ \frac{(A)_n}{A\,n!}\,\mathbb E(T(1-T))^n
+ =\frac{(\alpha)_n(\alpha')_n}{n!\,(A+n)_{n+1}}=K_n(i,k).
+\]
+Weighting by $(T(1-T))^n$ turns $\mathrm{Beta}(\alpha,\alpha')$ into
+$\mathrm{Beta}(\alpha+n,\alpha'+n)$, under which the mean of
+$\log(T(1-T))$ is $\psi(\alpha+n)+\psi(\alpha'+n)-2\psi(A+2n+1)$. The
+recurrence $\psi(x+j)=\psi(x)+S_x(j)$ and $\psi(1)=-\gamma$ give
+\[
+ \begin{gathered}
+ \psi(n+1)=-\gamma+H_n,\qquad
+ \psi(\alpha+n)=\psi(s)+S_s(i+n),\qquad
+ \psi(\alpha'+n)=\psi(s)+S_s(k+n),\\
+ \psi(A+n)=\psi(\eta_0)+S_{\eta_0}(i+k+n),\qquad
+ \psi(A+2n+1)=\psi(\eta_0)+S_{\eta_0}(i+k+2n+1),\\
+ \tfrac12C_s=-\psi(s)+\tfrac12\psi(\eta_0)+\eta_0^{-1}-\tfrac12\gamma,
+ \end{gathered}
+\]
+the last one because $\psi(2s)=\psi(\eta_0)+1/\eta_0$. Substituting,
+\[
+ \tfrac12\psi(n+1)-\tfrac12\psi(A+n)
+ -\tfrac12\bigl[\psi(\alpha+n)+\psi(\alpha'+n)\bigr]+\psi(A+2n+1)
+ =\tfrac12C_s+r_n(i,k).
+\]
+Hence the expectation of the term of index $n$, multiplied by
+$w_{ijkl}$, is
+\[
+ a^{2n}d_{ij}d_{kl}K_n(i,k)K_n(j,l)\bigl[\log(1/a)+C_s+r_n(i,k)
+ +r_n(j,l)\bigr].
+\]
+Summing over crosses gives the displayed main terms.
+
+By Lemma~\ref{pf:hyperbola}(c),
+$0\le\mathcal R_m(y)\le\log(1/y)(ABy^2)^{m+1}/(1-ABy^2)$. The right side
+increases with $y$ on $(0,a/4]$, because the derivative of
+$y^{2m+2}\log(1/y)$ is $y^{2m+1}((2m+2)\log(1/y)-1)>0$ when
+$\log(1/y)>1/2$. So
+$0\le\mathcal R_m(y)\le\log(4/a)(ABz_0)^{m+1}/(1-ABz_0)$. For crosses
+with $w_{ijkl}>0$ we discard the remainder, and for crosses with
+$w_{ijkl}<0$ we subtract its upper bound. This proves
+\eqref{pf:collected-overlap}.
+\end{proof}
+
+With $m=1$ the bound keeps the exact term of order $a^2$ and leaves a
+signed error of order $a^4\log(1/a)$. It is a lower bound for $I_\C$
+only.
+
+\subsection{An Upper Bound for the Pair Mass}
+
+\begin{proposition}\label{pf:mass}
+Let $s>0$ with $q=sp-1>0$, let $a>0$, and let $P$ be positive on
+$[0,1]^2$. Then
+\begin{equation}\label{pf:polynomial-mass}
+ A_\C=\frac{\pi^2}{a^2q^2}\,\bar A_\C,\qquad
+ \bar A_\C=\mathbb E\,P(T,T')^p,
+\end{equation}
+where $T$ and $T'$ are independent with density $qt^{q-1}$ on $(0,1)$.
+Partition $[0,1]^2$ into rectangles $\mathcal Q=[l,r]\times[l',r']$, and
+use on $\mathcal Q$ the coordinates $x=(T-l)/(r-l)$ and
+$x'=(T'-l')/(r'-l')$. Suppose that the Bernstein coefficients of the
+restriction of $P$ to $\mathcal Q$, in these coordinates, lie in
+$[m_{\mathcal Q},M_{\mathcal Q}]$ with $m_{\mathcal Q}>0$, and put
+\[
+ c_{\mathcal Q}=\frac{m_{\mathcal Q}+M_{\mathcal Q}}2,\qquad
+ \rho_{\mathcal Q}=\frac{M_{\mathcal Q}-m_{\mathcal Q}}
+ {M_{\mathcal Q}+m_{\mathcal Q}},\qquad
+ P=c_{\mathcal Q}(1+W_{\mathcal Q})\ \text{on }\mathcal Q .
+\]
+Define
+\begin{equation}\label{pf:subrectangle-moments}
+ M_i(l,r)=\int_l^rqv^{q-1}\Bigl(\frac{v-l}{r-l}\Bigr)^idv
+ =\frac q{(r-l)^i}\sum_{j=0}^i\binom ij(-l)^{i-j}
+ \frac{r^{q+j}-l^{q+j}}{q+j},
+\end{equation}
+and, writing $W_{\mathcal Q}^k=\sum_{i,j}c^{(k)}_{ij}x^ix'^{\,j}$,
+\[
+ \Sigma_{\mathcal Q,N}=c_{\mathcal Q}^p\sum_{k=0}^N\binom pk
+ \sum_{i,j}c^{(k)}_{ij}M_i(l,r)M_j(l',r').
+\]
+Then for every $N\ge1$,
+\begin{equation}\label{pf:subrectangle-mass}
+ \Bigl|\bar A_\C-\sum_{\mathcal Q}\Sigma_{\mathcal Q,N}\Bigr|
+ \le\sum_{\mathcal Q}c_{\mathcal Q}^p
+ \frac{|\binom p{N+1}|\rho_{\mathcal Q}^{N+1}}{1-\rho_{\mathcal Q}}
+ M_0(l,r)M_0(l',r').
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The substitution $t=(1+a|z|^2)^{-1}$ gives $dz=\pi\,dt/(at^2)$ on $\C$.
+Hence
+\[
+ A_\C=\frac{\pi^2}{a^2}\int_0^1\!\!\int_0^1t^{sp-2}t'^{\,sp-2}
+ P(t,t')^p\,dt\,dt',
+\]
+which is \eqref{pf:polynomial-mass} since $sp-2=q-1$. The Bernstein
+convex-hull property gives $|W_{\mathcal Q}|\le\rho_{\mathcal Q}<1$ on
+$\mathcal Q$. For $1<p<2$ the binomial coefficients satisfy
+$|\binom p{k+1}|/|\binom pk|=|p-k|/(k+1)<1$ for $k\ge1$, so the binomial
+series of $(1+W)^p$ converges uniformly on $|W|\le\rho_{\mathcal Q}$,
+and its tail after index $N\ge1$ is at most
+$|\binom p{N+1}|\rho_{\mathcal Q}^{N+1}/(1-\rho_{\mathcal Q})$.
+Integrate against the density on $\mathcal Q$, whose total mass is
+$M_0(l,r)M_0(l',r')$. The moment formula follows by expanding
+$(v-l)^i$; the convention $0^q=0$ is valid since $q>0$.
+\end{proof}
+
+When $p$, $q$, the partition and the coefficients of $P$ are rational,
+the restrictions, the Bernstein coefficients, the powers
+$W_{\mathcal Q}^k$ and the binomial coefficients are exact rationals,
+computed by integer polynomial arithmetic after clearing denominators.
+The endpoint powers $r^{q+j}$ and the factors $c_{\mathcal Q}^p$ need
+not be rational; they are enclosed by interval evaluation of
+$\exp(y\log x)$. Exact rational algebra followed by interval evaluation
+keeps the bound valid despite the cancellation in
+\eqref{pf:subrectangle-moments}. If $P$ is symmetric and both axes are
+partitioned alike, a rectangle and its reflection contribute equally,
+so off-diagonal rectangles may be counted twice and diagonal ones once.
+
+\subsection{The Pair Functional}
+
+\begin{corollary}\label{pf:functional}
+Under the hypotheses of Propositions~\ref{pf:overlap} and~\ref{pf:mass},
+let $Z_*$ be the right side of \eqref{pf:collected-overlap} for some
+$m$, and suppose $Z_*>0$. If $\bar A_\C^*\ge\bar A_\C$, then
+\begin{equation}\label{pf:collected-functional}
+ J_\C\ge\log Z_*+2(1+\delta)\log q-2\delta\log\pi
+ +2\delta\log a-(1+\delta)\log\bar A_\C^* .
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+By Proposition~\ref{pf:overlap}, $I_\C\ge\pi^2a^{-2}Z_*$, and by
+\eqref{pf:polynomial-mass}, $A_\C\le\pi^2a^{-2}q^{-2}\bar A_\C^*$.
+Substitute into $J_\C=\log I_\C-(1+\delta)\log A_\C$.
+\end{proof}
+
+Interval evaluation of the right side of \eqref{pf:collected-functional}
+gives a certified lower bound for $J_\C$; the upper endpoint of such an
+enclosure is not an upper bound for $J_\C$. For rational $s$, all
+digamma values in Proposition~\ref{pf:overlap} reduce to rational
+corrections and to $C_s=2/\eta_0+\psi(\eta_0)-2\psi(s)+\psi(1)$. The
+digamma function at rational arguments is enclosed as follows.
+
+\begin{lemma}\label{pf:digamma}
+For $x>0$ and integers $L\ge0$ and $m\ge1$, put $z=x+L$. Then
+\[
+ \Bigl|\psi(x)-\Bigl(\log z-\frac1{2z}
+ -\sum_{k=1}^{m-1}\frac{B_{2k}}{2kz^{2k}}
+ -\sum_{j=0}^{L-1}\frac1{x+j}\Bigr)\Bigr|
+ \le\frac{|B_{2m}|}{2mz^{2m}},
+\]
+where $B_{2k}$ are the Bernoulli numbers.
+\end{lemma}
+
+\begin{proof}
+By Binet's formula \cite[Equation~(5.9.15)]{DLMF},
+\[
+ \psi(z)=\log z-\frac1{2z}
+ -2\int_0^\infty\frac{t\,dt}{(t^2+z^2)(e^{2\pi t}-1)} .
+\]
+Write
+\[
+ \frac1{t^2+z^2}=\sum_{k=1}^{m-1}(-1)^{k-1}\frac{t^{2k-2}}{z^{2k}}
+ +(-1)^{m-1}\frac{t^{2m-2}}{z^{2m-2}(t^2+z^2)},
+\]
+and use $\int_0^\infty t^{2k-1}(e^{2\pi t}-1)^{-1}dt=|B_{2k}|/(4k)$ and
+$(-1)^{k-1}|B_{2k}|=B_{2k}$. The remaining integral has a fixed sign and
+is at most $|B_{2m}|/(2mz^{2m})$ in absolute value, because
+$(t^2+z^2)^{-1}\le z^{-2}$. Finally apply the recurrence
+$\psi(x+1)=\psi(x)+1/x$ $L$ times.
+\end{proof}
+
+The certificate evaluates the right side of this lemma with exact
+rational arguments and Bernoulli numbers, $L=64$ and $m=16$, in outward
+rounded interval arithmetic, without rounding the rational parameters of
+the profile.

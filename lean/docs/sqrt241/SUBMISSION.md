@@ -5,8 +5,9 @@ proof: [SolutionZeta241.lean](../../SolutionZeta241.lean), which applies the lib
 theorem `UnitDistance.Sqrt241.target_of_canonical_genus_zeta_bound`
 ([UnitDistance/Sqrt241/Final.lean](../../UnitDistance/Sqrt241/Final.lean)).
 Comparator configuration: [comparator-zeta241.json](../../comparator-zeta241.json).
-Mathematics: `papers/0.04273/` (research note, reviewed; not
-yet a self-contained manuscript).
+Mathematics: the self-contained manuscript `papers/0.04273/main.pdf`
+(September 30, 2026), which supersedes the reviewed research note of
+September 29.
 
 ## The theorem
 

@@ -1,13 +1,13 @@
 {
  "schema": "unit-distance-public-lean-release-v1",
  "research_repository": "enaslund/unit-distance-bound",
- "research_commit": "72581ddad724c38a9f2efdb52c39c9177cb30e2f",
+ "research_commit": "03abb384acad6aa563a4453cb99f945fa034efd3",
  "exporter": "lean/scripts/export-zeta241-candidate.py",
- "archive_sha256": "4f6b79d9690b34a1db592700385db73a8d2b371e94592806288e951f8c9fd30e",
- "archive_bytes": 8791154,
- "archive_files": 2998,
- "source_snapshot_sha256": "c474d592bd165bb03b470c65c736591617187697deaee60349d9fd654e309c6d",
- "selection_sha256": "6b3227275ebca8ec2aeb0eb83626d662d79a3c0714d36b53cfb420533a236319",
+ "archive_sha256": "6614aefb039743275c774b8ad14717c8d4528684de2a1aaa355fc8d604e57f2f",
+ "archive_bytes": 9747576,
+ "archive_files": 3021,
+ "source_snapshot_sha256": "2bcea56ab85fabd19e2e26e26937c2a0b9cd12b9620ac02b4455e35a37defd86",
+ "selection_sha256": "1012ae59815a7baf3c1644111759c32e938c72ab4ccb3051ea2bfd47fe012477",
  "identity_scope": "Every file of the source archive is unchanged under lean/; lean/SOURCE_SNAPSHOT.json lists their hashes.",
  "palomar_request": {
   "project_path": "lean",
@@ -19,10 +19,10 @@
  "local_checks": {
   "archive_gate": "passed for this archive: deterministic re-export and the metadata contract of PalomarSubmission 65f0154ed776cd26c224254aa57b379137f28b0d",
   "palomar_source_rules": "passed: all 2,407 Lean files of this repository use the module system and have at most 10,000 lines",
-  "fresh_build": "passed on the first export of this package (archive 3c8c0576c2a97b9d4dfbfba68789bbd96717d1de266e368e80db61e75ec7630e, research commit c11cb34c), whose Lean files are byte-identical to these: fresh build of the selected closure from the archive alone (6,960 jobs, 3,708 s, 6 threads) and its generated axiom audit (52,186 project and 32 submission declarations; only propext, Quot.sound, Classical.choice). This archive differs from that export, and from the second and third exports (archives 9ec3501efe148ef09c950225b74ee7a00ea3217d258b09a545b0d2f9000f84e9 and 8b298e333c2df26a2b873a681b34b0ac33750b1bd3c899ac990a9fc977a24e87, research commits c459e36b and e221d03b), only in the paper copies under docs/, the paper citations in formalization.yaml and formalization-zeta.yaml, and SELECTION.json and SOURCE_SNAPSHOT.json.",
+  "fresh_build": "passed on the first export of this package (archive 3c8c0576c2a97b9d4dfbfba68789bbd96717d1de266e368e80db61e75ec7630e, research commit c11cb34c), whose Lean files are byte-identical to these: fresh build of the selected closure from the archive alone (6,960 jobs, 3,708 s, 6 threads) and its generated axiom audit (52,186 project and 32 submission declarations; only propext, Quot.sound, Classical.choice). No Lean file has changed in any later export (archives 9ec3501e…, 8b298e33…, 4f6b79d9… and this one); they differ only in the paper copies under docs/, the Lean project README, the paper citations in formalization.yaml and formalization-zeta.yaml, and SELECTION.json and SOURCE_SNAPSHOT.json.",
   "check_reports": "provenance/lean-checks/"
  },
  "published": true,
  "submitted": false,
- "check_reports": "provenance/lean-checks/ (candidate1-*, candidate2-* and candidate3-* are the earlier exports' reports)"
+ "check_reports": "provenance/lean-checks/ (candidate1-* to candidate4-* are the earlier exports' reports)"
 }
