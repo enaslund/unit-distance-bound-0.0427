@@ -10314,8 +10314,8 @@
       "sha256": "2d691c0c559185576858d0bafd72d2fd48470a2febb904d860f421d3c5770731"
     },
     "README-zeta241.md": {
-      "bytes": 6802,
-      "sha256": "134bf8f8e1f022bdd9d6ded348c787b014fa3d882df08fcce4d0ea5d51129103"
+      "bytes": 7060,
+      "sha256": "9fcde3ebe07f4a3aaf5622b55b39c547fb7bd545bfd581907667d5737e34f02b"
     },
     "SolutionZeta.lean": {
       "bytes": 6026,
@@ -20014,8 +20014,8 @@
       "sha256": "b464be4df1d2ac2ce1d0779858601a90df584beb8e17d90efd8e8547cd3f4496"
     },
     "docs/sqrt241/SUBMISSION.md": {
-      "bytes": 13530,
-      "sha256": "264a92071df6e904d15aa704d30f70b2091d3e44ab0fca3305da78db7bff2489"
+      "bytes": 13586,
+      "sha256": "5a2c193cef15c531f8af24ce1a38726e4d5d1434d1dbf5bce4daa23f994141fd"
     },
     "docs/sqrt241/T0_T4.md": {
       "bytes": 16852,
@@ -20050,8 +20050,8 @@
       "sha256": "005599f5068fbbea9ac20584591a758461ebe6f77a2dbc50ba0f276b22dd43dc"
     },
     "formalization-zeta241.yaml": {
-      "bytes": 19589,
-      "sha256": "3c4f1f9a753b91942be07e95866c77f5f23abef876dbad345052de05b670fbee"
+      "bytes": 19871,
+      "sha256": "8c255aabf44241be52a0cd35d5125a52970f79ca7b4ba0359b60143b34b9dc53"
     },
     "lake-manifest.json": {
       "bytes": 3167,

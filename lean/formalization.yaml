@@ -3,8 +3,10 @@
 # Publication, submission, registration and owner proof review are not claimed.
 version: v0.4
 project:
-  name: Planar unit distances at exponent 1.0427 from one genus-field zeta inequality
-  description: 'Conditional theorem on unit distances in the Euclidean plane. Let B = Q(sqrt 241) and
+  name: 'An Exponent of 1.04273 for the Unit Distance Problem: Lean formalization at exponent 1.0427, conditional on one zeta inequality'
+  description: 'Lean formalization accompanying the paper An Exponent of 1.04273 for the Unit Distance Problem by Eric Naslund (cited
+    under sources), which proves the exponent 1.04273 unconditionally with a computer-assisted certificate.
+    Conditional theorem on unit distances in the Euclidean plane. Let B = Q(sqrt 241) and
     let E be the number field of degree 512 generated over Q by sqrt 241 and square roots of the eight
     elements -1, -71011068 + 4574225 sqrt 241, (-6101 - 393 sqrt 241)/2, (6101 - 393 sqrt 241)/2, 31 -
     2 sqrt 241, 31 + 2 sqrt 241, 326 - 21 sqrt 241 and 326 + 21 sqrt 241 of B (a basis of the {2,3,5}-units

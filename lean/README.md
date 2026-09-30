@@ -1,7 +1,10 @@
-# Planar unit distances at exponent 1.0427 from one genus-field inequality
+# An Exponent of 1.04273 for the Unit Distance Problem: Lean formalization
 
-This source package states and supplies a Lean proof of the following
-conditional theorem: one explicit zeta inequality H on a fixed degree-512
+This source package accompanies the paper *An Exponent of 1.04273 for the Unit Distance Problem*
+([docs/quadratic-base-research/main.pdf](docs/quadratic-base-research/main.pdf)),
+which proves the exponent 1.04273 with a computer-assisted certificate. It states
+and supplies a Lean proof of the following conditional theorem, at the exponent
+1.0427: one explicit zeta inequality H on a fixed degree-512
 number field implies that there are finite sets `U_j` in the ordinary
 Euclidean plane for which
 

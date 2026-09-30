@@ -1,14 +1,16 @@
-# Planar unit distances: exponent 1.04273
+# An Exponent of 1.04273 for the Unit Distance Problem
 
-Lower bounds for the number of unit-distance pairs among points in the
-Euclidean plane, by Eric Naslund. Each result constructs finite sets `U_j`
+This repository holds the paper *An Exponent of 1.04273 for the Unit Distance Problem* by Eric Naslund, its two
+predecessors, and a Lean formalization. The papers give lower bounds for the
+number of unit-distance pairs among points in the Euclidean plane. Each
+result constructs finite sets `U_j`
 with `|U_j| → ∞` and `u(U_j)/|U_j|^(1+δ) → ∞`, where `u` counts unordered pairs
 at distance one; equivalently, `u(n) ≥ n^(1+δ)` for arbitrarily large `n`. No
 bound is asserted for every sufficiently large `n`.
 
 | Result | Source | Status |
 | --- | --- | --- |
-| **Exponent 1.04273** (main result) | [PDF](papers/0.04273/main.pdf) · [sources and certificate](papers/0.04273/README.md) | Manuscript of September 30, 2026: the tower of the 1.0418235 construction built over the real quadratic field ℚ(√241), with a computer-assisted certificate and a finite replay. Independent AI referee reviews found no mathematical error; it has not been peer reviewed. |
+| **Exponent 1.04273** (main result): *An Exponent of 1.04273 for the Unit Distance Problem* | [PDF](papers/0.04273/main.pdf) · [sources and certificate](papers/0.04273/README.md) | Manuscript of September 30, 2026: the tower of the 1.0418235 construction built over the real quadratic field ℚ(√241), with a computer-assisted certificate and a finite replay. Independent AI referee reviews found no mathematical error; it has not been peer reviewed. |
 | Exponent 1.0418235 | [PDF](papers/0.0418235/main.pdf) · [sources and certificate](papers/0.0418235/README.md) | Manuscript with a computer-assisted certificate. |
 | Exponent 1.0358324 | [PDF](papers/0.0358324/main.pdf) · [sources](papers/0.0358324/README.md) | Historical manuscript, kept for the record. |
 
