@@ -9,7 +9,8 @@ manuscript, revised on September 30, 2026. The introduction now opens with a
 plain outline of the method, and its §1.6 compares the construction with
 Sawin's criterion term by term, including why mixed signature helps. The
 certificate section's replay paragraph was rewritten in prose, without the
-displayed command. The theorem, proofs, witness and certificate are
+displayed command, and the statement on AI use became an AI Methodology
+paragraph after the abstract. The theorem, proofs, witness and certificate are
 unchanged. All TeX, PDF and numerical inputs are byte-identical copies from
 the research repository. The distribution README and package identity
 manifest are specific to this public layout.

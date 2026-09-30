@@ -2,9 +2,7 @@
 
 This section constructs the number fields of Theorem~\ref{tw:field-family}
 as finite layers of an infinite pro-$2$ extension of $B=\Q(\sqrt{241})$
-with prescribed local Galois groups. The construction adapts the tower over
-$\Q$ of \cite[Section~2]{Naslund0418235}, and we repeat its arguments in the
-form needed over $B$. Subsection~\ref{tw:base-section} describes $B$ and its
+with prescribed local Galois groups. Subsection~\ref{tw:base-section} describes $B$ and its
 $\{2,3,5\}$-units. Subsection~\ref{tw:local-section} recalls the local Galois
 groups involved and constructs the dyadic local field.
 Subsection~\ref{tw:global-section} shows that the Galois group
@@ -15,8 +13,8 @@ defines the quotient $G_B$. Subsection~\ref{tw:retained-section} computes the
 first three layers of the Zassenhaus filtration of $G_B$: they retain the
 prescribed local groups, and complex conjugation has many conjugates.
 Subsections~\ref{tw:fox-section} and~\ref{tw:infinite-section} prove that
-$G_B$ is infinite, by the filtered Fox calculus of \cite{Naslund0418235} and
-the Golod--Shafarevich method \cite{GolodShafarevich}.
+$G_B$ is infinite, by a filtered Fox calculus and the Golod--Shafarevich
+method \cite{GolodShafarevich}.
 Subsection~\ref{tw:fields-section} proves Theorem~\ref{tw:field-family}.
 
 We use the following conventions. Subgroups of profinite groups are closed,
@@ -270,8 +268,7 @@ of a character is its Bockstein, so the diagonal coefficients are also given
 by \cite[Proposition~3.9.14]{NeukirchSchmidtWingberg2008}.
 \end{proof}
 
-We now construct the dyadic local field. It is the field of
-\cite[Lemma~2.2]{Naslund0418235}, and we repeat the proof. Let $U_4$ be the
+We now construct the dyadic local field. Let $U_4$ be the
 unramified extension of $\Q_2$ of degree four, with Frobenius $\mathrm{Fr}$;
 let $i=\sqrt{-1}$, $k=\Q_2(i)$, $\alpha=1+2i$, and
 \[
@@ -636,7 +633,7 @@ at $\mathfrak p_1$.
 By Lemma~\ref{tw:complete-global-presentation}, the bound
 $\dim H^2(\mathcal G_B,\Ftwo)\le\dim\Br(X)[2]=7$ is attained, so
 $H^2(\mathcal G_B,\Ftwo)\to\Br(X)[2]$ is an isomorphism. This can also be seen
-as in the proof of \cite[Lemma~2.1]{Naslund0418235}: the cup product
+directly: the cup product
 $\chi_a\cup\chi_b$ maps to the class of the quaternion algebra $(a,b)$, whose
 invariant at $\nu$ is given by $(a,b)_\nu$ \cite[Chapter~III,
 Remark~4.7]{MilneCFT}, and the seven pairs in the proof of
@@ -857,7 +854,7 @@ $2^{49-34}=2^{15}$ elements.
 \end{proof}
 
 \subsection{Filtered Fox Images}\label{tw:fox-section}
-We now recall the filtered Fox calculus of \cite[Section~2]{Naslund0418235}.
+We now describe the filtered Fox calculus.
 Let $\Delta$ be a finite $2$-group, $\Lambda=\Ftwo[\Delta]$, and
 $\mathfrak I$ its augmentation ideal. Filtrations are decreasing, with
 $F^0M=M$ and $F^nM=0$ for large $n$. For a finite-dimensional filtered space
@@ -1146,8 +1143,7 @@ Put
  d_D(t)=3t-1+\frac1{P_D(t)},
 \end{equation}
 so that $\psi_1,\psi_2,\psi_4,d_D$ are the functions $\psi_\Gamma$ for
-$\Gamma=C_2,C_2\times C_2,C_4,D$; they are the functions used for the same
-local groups in \cite[Section~2]{Naslund0418235}. With $s_D$ as in
+$\Gamma=C_2,C_2\times C_2,C_4,D$. With $s_D$ as in
 Lemma~\ref{tw:local-fox}, let
 \begin{equation}\label{tw:PB}
  P_B(t)=1-8t+2\psi_1(t)+4\psi_2(t)+2d_D(t)-s_D(t)+3\psi_4(t).

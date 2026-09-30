@@ -25,8 +25,7 @@ Lemma~\ref{pf:gaussian}, $f_\R^p=e^{-a_\R|z|^2}$ with
 $a_\R=2p\delta=17092/104273<1$. At the pair coordinates we use the
 profile $g_\C$ of Section~\ref{pf:section}, with the coefficients
 \eqref{pf:bernstein-witness}, $s=1.14600585$ and
-$a=0.0000128633241758$; these are the data of \cite{Naslund0418235},
-used at the new value of $\delta$. For the Fourier bound we take
+$a=0.0000128633241758$. For the Fourier bound we take
 $\rho=10^{-3}$. For the mass we partition $[0,1]^2$ into the $64$
 squares of side $1/8$ with rational corners and use the binomial degree
 $N=18$ in Proposition~\ref{pf:mass}. For the overlap we use $m=1$ in
@@ -138,8 +137,7 @@ that $(f_\R,g_\C)$ is admissible with Fourier constants $M=2$ and
 $\sigma=1$. The right side of \eqref{geo:poisson-condition} is then
 $\log50+2<5.9121$, so \eqref{fw:fourier-condition}, which by
 \eqref{fw:uniform} is the same condition with $H_f=H$, holds with a
-wide margin. The value of $\mu$ is much smaller than in
-\cite{Naslund0418235}, where $H$ is about twice as large, but only
+wide margin: although $\mu$ is not large, only
 $\mu\ge\log M+2\log5+2$ is needed.
 
 Define the conservative margin
@@ -248,9 +246,9 @@ local functionals \eqref{cert:finite-factor} from the exponents and
 weights in the data file \texttt{shells241\_0.04273.json}, and the
 quantities of Propositions~\ref{pf:mass} and~\ref{pf:overlap}, of
 Lemma~\ref{pf:tube} and of Corollary~\ref{pf:functional} from the
-profile data of \cite{Naslund0418235}. For these it uses, unchanged,
-three certified modules of the supplementary archive of
-\cite{Naslund0418235}, which implement exactly these formulas. It checks
+profile data above. For these it uses, unchanged, three certified
+modules of an earlier supplementary archive of the author
+(Section~\ref{intro:code}), which implement exactly these formulas. It checks
 every finite hypothesis used above: the positivity and monotonicity of
 the weights, the two exact computations of each $Z(g_r)Q_r^{-k_r}$, the
 positivity of the $\beta_{ij}$ and of the local Bernstein coefficients,

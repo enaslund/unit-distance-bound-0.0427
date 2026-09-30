@@ -46,36 +46,30 @@
 Let $u(U)$ count the unordered pairs at distance one in a finite planar
 set $U$. We construct finite sets $U_j$ with $|U_j|\to\infty$ and
 $u(U_j)/|U_j|^{1.04273}\to\infty$. The largest exponent previously
-claimed, $1.0418235$, is in the author's unpublished manuscript. The
-method is the number-field construction of OpenAI and Sawin, in the form
-developed there: unit distances come from elements of relative norm one
-in quadratic extensions of mixed signature, and the fields come from an
-infinite pro-$2$ class field tower. The new ingredient is a tower over
-the real quadratic field $\Q(\sqrt{241})$, in which $2$, $3$ and $5$
-split. Its Golod--Shafarevich polynomial contains two copies of the local
+claimed, $1.0358$, is in the author's unpublished manuscript. The
+method is the number-field construction of OpenAI and Sawin: unit
+distances come from elements of relative norm one in quadratic
+extensions, and the fields come from an infinite pro-$2$ class field
+tower. The new ingredients are quadratic extensions of mixed signature,
+with an exact average over their norm-one units, and a tower over the
+real quadratic field $\Q(\sqrt{241})$, in which $2$, $3$ and $5$ split.
+Its Golod--Shafarevich polynomial contains two copies of the local
 conditions at these primes but only one constant term, and the extra room
-lets the tower avoid ramification at $7$, $11$ and $13$. The root
-discriminant of the fields falls from about $583$ to about $286$. The
-relative zeta value is bounded through the $255$ quadratic Hecke
+lets the tower be ramified only above $2$, $3$ and $5$; the root
+discriminant of its fields is about $286$. The relative zeta value is bounded through the $255$ quadratic Hecke
 $L$-functions of the degree-$512$ field generated over $\Q(\sqrt{241})$ by
 the square roots of its $\{2,3,5\}$-units. Finite facts and numerical
-inequalities are certified by exact computation and interval arithmetic.
+inequalities are certified by exact computation and interval arithmetic. A significant portion of this work was verified in Lean.
 \end{abstract}
 \maketitle
 
 % AI Methodology statement, referenced by the asterisk on the author's name.
-{\noindent\small\textsuperscript{*}\textbf{AI Methodology.} The
+{\noindent\small\textsuperscript{*}\textbf{AI Methodology.} This work was done with extensive AI use, with agents developing the mathematics and writing the paper. The listed author is the human responsible for having supervised and prompted the AI agents that produced this work. The
 construction over $\Q(\sqrt{241})$, the computations that certify it, the
 Lean formalization of the reduction of Theorem~\ref{thm:main} to one
 explicit zeta inequality (Remark~\ref{an:lean-hypothesis}), and this paper
-were produced with Claude Opus~5.5 (Anthropic), working as an agent in
-Claude Code. The construction adapts the author's previous manuscript
-\cite{Naslund0418235}, which was also written with AI tools. The
-arguments were checked by independent AI referees working in separate
-contexts, and the finite computations are reproducible from the
-supplementary programs described in Section~\ref{intro:code}. The listed
-human author is responsible for having supervised and prompted the AI
-agents that produced this work.\par}
+were produced with Claude Opus 5.5, ChatGPT Sol 5.6, ChatGPT Astra 6, working as agents in Claude Code and Codex. The construction adapts the author's previous manuscript
+\cite{Naslund0358}, which was also written with AI tools.\par}
 \medskip
 
 \input{sections/introduction}

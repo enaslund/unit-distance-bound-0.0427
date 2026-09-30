@@ -16,12 +16,15 @@ There are finite sets $U_j\subset\R^2$, with $|U_j|\to\infty$, such that
 In particular, $u(n)\ge n^{1.04273}$ for arbitrarily large integers $n$.
 \end{theorem}
 
-The largest exponent previously claimed, $1.0418235$, is in the author's
-unpublished manuscript \cite{Naslund0418235}. Theorem~\ref{thm:main}
-uses the same method with one new ingredient, together with the
-corresponding change in the analytic estimate: the class field tower
-that supplies the number fields is built over the real quadratic field
-$\Q(\sqrt{241})$ instead of over $\Q$. The theorem concerns an unbounded
+The largest exponent previously claimed, $1.0358324$, is in the author's
+unpublished manuscript \cite{Naslund0358}. Theorem~\ref{thm:main} uses
+the same number-field method with several new ingredients: fields of
+mixed signature, averaged over their norm-one units; a
+pro-$2$ class field tower over the real quadratic field $\Q(\sqrt{241})$
+with a nonabelian dyadic local group; an explicit bound for the relative
+zeta value from the quadratic $L$-functions of a Kummer field of degree
+$512$; and optimized archimedean profiles and weighted windows.
+Section~\ref{intro:new} describes them. The theorem concerns an unbounded
 sequence of cardinalities. Its proof uses no unproved hypothesis, such
 as the generalized Riemann hypothesis, but it is computer-assisted:
 finite facts about the tower and several numerical inequalities are
@@ -62,16 +65,15 @@ argument \cite[Lemma~11]{Sawin2026}, replace the unweighted count of
 relations by a count weighted by degree in the Zassenhaus filtration.
 This was reported to give $\delta\ge0.0333487$
 \cite{SpiderduckpigMO2026}. Weighted counts of this kind underlie the
-towers of \cite{NaslundLegacy2026}, \cite{Naslund0418235} and the
-present paper. The author's MathOverflow answer \cite{NaslundMO2026}
-then combined this count with covolume counting, dyadic ramification and
-Euler products over a fixed subfield, and reported $\delta\ge0.03583$;
-the author's archived manuscript \cite{NaslundLegacy2026} records this
-construction with $\delta=0.0358324$. The change log of that answer, of
-June~9, 2026, reports a bookkeeping issue affecting the covolume step and
-gives $\delta>0.0357$ instead. Table~\ref{intro:table-bounds} lists the
-explicit exponents, and the repository \cite{TaoConstants84a} records
-further bounds posted online.
+towers of \cite{Naslund0358} and of the present paper. The author's
+MathOverflow answer \cite{NaslundMO2026} then combined this count with
+covolume counting, dyadic ramification and Euler products over a fixed
+subfield, and reported $\delta\ge0.03583$. The author's manuscript
+\cite{Naslund0358} records this construction with $\delta=0.0358324$; the
+change log of the answer, of June~9, 2026, reports a bookkeeping issue in
+the covolume step there and states $\delta>0.0357$.
+Table~\ref{intro:table-bounds} lists the explicit exponents, and the
+repository \cite{TaoConstants84a} records further bounds posted online.
 
 \begin{table}[htbp]
 \centering
@@ -94,11 +96,9 @@ $1.015263$ & Emmerich \cite{Emmerich2026} & optimized parameters & preprint\\
 $1.031185$ & Emmerich, Cordella \cite{EmmerichCordella2026} & extended range of primes & certificate\\
 $1.031849$ & mlewko \cite{ErdosProblems90} & finite data found by ChatGPT & forum post\\
 $1.0333487$ & spiderduckpig \cite{SpiderduckpigMO2026} & weighted Zassenhaus count & online post\\
-$1.0357$ & Naslund \cite{NaslundMO2026,NaslundLegacy2026} & covolume counting, dyadic & online post,\\
- & & ramification, fixed-subfield Euler products & manuscript\\
-$1.0418235$ & Naslund \cite{Naslund0418235} & mixed signature, norm-one units, & manuscript\\
- & & nonabelian dyadic local group, profiles & \\
-$1.04273$ & this paper & tower over $\Q(\sqrt{241})$ & \\
+$1.0358324$ & Naslund \cite{Naslund0358,NaslundMO2026} & covolume counting, dyadic & manuscript,\\
+ & & ramification, fixed-subfield Euler products & online post\\
+$1.04273$ & this paper & see Section~\ref{intro:new} & \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -144,11 +144,6 @@ bound for $d^{-1}\log L_F(1)$, and
 is the archimedean contribution, in which $J_\R$ and $J_\C$ measure the
 overlap of the archimedean profiles at the real and at the complex
 places of $F$ under unit displacements (Proposition~\ref{geo:transfer}).
-The term $\theta J_\C$ comes from mixed signature: above a complex place
-of $F$, the two coordinates of a norm-one element have reciprocal moduli.
-Averaging over the norm-one units counts the resulting one-parameter
-family of displacements exactly, and the class-number formula cancels the
-regulator of these units (Proposition~\ref{geo:mass}).
 Section~\ref{fw:section} replaces the hard windows by weighted shells
 (Proposition~\ref{fw:transfer}), and Section~\ref{sec:certificate}
 verifies the resulting inequality at $\delta=\deltastar$.
@@ -162,147 +157,164 @@ negative value; the use of Frobenius conditions to control splitting in
 such towers goes back to Hajir, Maire and Ramakrishna
 \cite{HajirMaireRamakrishna2021Cutting}.
 
-\subsection{A tower over $\Q(\sqrt{241})$}\label{intro:new}
-The fields of \cite{Naslund0418235} come from a pro-$2$ tower over $\Q$
-that is unramified outside $2,3,5,7,11,13$, with prescribed local Galois
-groups at these primes and Frobenius conditions at the selected primes
-up to $31$. Its Golod--Shafarevich series has the form
-\[
- 1-7t+(\text{a cost for each local condition})-s_D(t).
-\]
-Here $7$ is the number of generators of the Galois group of the maximal
-pro-$2$ extension of $\Q$ unramified outside these six primes, and
-$s_D(t)$ is a saving: by Hilbert reciprocity, one dyadic relation is
-implied by the others and need not be paid for. Tame ramification at $7$,
-$11$ and $13$ supplies generators to pay for the local conditions, and it
-costs a factor $\sqrt{1001}$ in the root discriminant.
+\subsection{New ingredients}\label{intro:new}
+The construction differs from those of Sawin \cite{Sawin2026} and of
+\cite{Naslund0358} in four ways.
 
-Now let $B$ be a totally real field of degree $m$ in which every prime
-used by the construction splits completely. The generators and the local
-conditions of a construction over $\Q$ are then repeated $m$ times over
-$B$, while the constant term $1$ and the saving $s_D$ are not; if $P(t)$
-is the series over $\Q$, the series over $B$ is roughly
-$mP(t)-(m-1)(1-s_D(t))$. The extra room can be spent on ramifying at
-fewer primes. The price is the discriminant of $B$, which enters the
-root discriminant of the fields. The field $B=\Q(\sqrt{241})$ is the
-real quadratic field of smallest discriminant in which $2$, $3$ and $5$
-all split, and over it the tower needs no ramification at $7$, $11$ or
-$13$. Section~\ref{tw:tower} gives the exact series.
+\emph{Mixed signature.} In Sawin's construction, and in
+\cite{Naslund0358}, the field $K$ is a CM field: complex conjugation is
+central in $\Gal(K/\Q)$, $F$ is totally real, every norm-one element has
+modulus one at every archimedean place, and the norm-one units are
+finite. Here $K$ is totally imaginary and Galois over $B=\Q(\sqrt{241})$,
+and $F$ is the fixed field of one complex conjugation $\iota_1$, which is
+not central: its conjugacy class has at least $2^{15}$ elements, so
+$\theta\ge\thetastar$ and almost every place of $F$ is complex. Above a
+complex place of $F$ the two coordinates of a norm-one element can have
+moduli $e^u$ and $e^{-u}$, and the norm-one units, of rank $c$, move $u$
+along a lattice. Averaging over a fundamental domain of that lattice
+counts the resulting displacements exactly, and the class-number formula
+cancels the regulator of these units together with the capitulation
+kernel (Proposition~\ref{geo:mass}). Mixed signature therefore costs only
+a factor $\pi$ per complex place of $F$, and a profile that couples the
+two coordinates at that place more than repays it.
 
-Over $B$ we prescribe, at each of the two primes above $2$, the same
-nonabelian dyadic local Galois group of order $32$ as in
-\cite{Naslund0418235}; at each of the four primes above $3$ and $5$, a
-tame local group $C_2\times C_2$; and conditions that make the Frobenius
-elements have order dividing $4$ at the two primes above $29$ and at the
-prime $7$, which is inert in $B$. The tower is ramified only above $2$,
-$3$ and $5$. Its Galois group has $8$ generators, and the root
-discriminant of its fields is
+\emph{A tower over $\Q(\sqrt{241})$.} Over a totally real base field in
+which every prime used by the construction splits completely, the
+Golod--Shafarevich series contains a copy of each local condition for
+every prime of the base, but only one constant term. The field
+$B=\Q(\sqrt{241})$ is the real quadratic field of smallest discriminant
+in which $2$, $3$ and $5$ all split. Over $B$ we prescribe a nonabelian
+dyadic local Galois group of order $32$ at each of the two primes above
+$2$, a tame local group $C_2\times C_2$ at each of the four primes above
+$3$ and $5$, and conditions that make the Frobenius elements have order
+dividing $4$ at the two primes above $29$ and at the prime $7$, which is
+inert in $B$. The relations are counted through their images in the
+Zassenhaus filtration, and one dyadic relation is implied by the others
+through Hilbert reciprocity. The resulting tower is infinite, it is
+ramified only above $2$, $3$ and $5$, and its Galois group has $8$
+generators. The root discriminant of its fields is
 \[
  \lambda=2^{9/4}\sqrt{3615}\approx286.0,
- \qquad 3615=3\cdot5\cdot241,
+ \qquad 3615=3\cdot5\cdot241.
 \]
-against $2^{9/4}\sqrt{15015}\approx582.9$ over $\Q$: the base contributes
-$\sqrt{241}$, and $\sqrt{1001}$ is saved. The price is paid in the
-selected primes: only $2$, $3$, $5$, $7$ and $29$ remain, against the
-eleven primes up to $31$ over $\Q$. Theorem~\ref{tw:field-family} states
-the resulting family of fields.
+Sawin's fields come from a pro-$2$ tower of unramified extensions of
+$\Q(\sqrt{3\cdot5\cdots43})$, so they are ramified over $\Q$ at $2$ and at
+the thirteen odd primes up to $43$, and their root discriminant is about
+$1.6\cdot10^8$. Theorem~\ref{tw:field-family}
+states the family of fields.
 
-The analytic estimate changes accordingly. In \cite{Naslund0418235} the
-bound $C$ for $d^{-1}\log L_F(1)$ came from a complete Hecke-factor
-calculation in a nonabelian subfield of degree $16384$ of the tower.
-Here every field $K$ of Theorem~\ref{tw:field-family} contains the
-Kummer field $E=B(\sqrt V)$, of degree $512$ over $\Q$, where $V$ is the
-group of $\{2,3,5\}$-units of $B$ modulo squares. Its Dedekind zeta
-function is the product of $\zeta_B$ and $255$ quadratic Hecke
-$L$-functions of $B$, which we evaluate with certified approximate
+\emph{The zeta value.} Every field $K$ of Theorem~\ref{tw:field-family}
+contains the Kummer field $E=B(\sqrt V)$, of degree $512$ over $\Q$,
+where $V$ is the group of $\{2,3,5\}$-units of $B$ modulo squares. Its
+Dedekind zeta function is the product of $\zeta_B$ and $255$ quadratic
+Hecke $L$-functions of $B$, which we evaluate with certified approximate
 functional equations (Sections~\ref{gf:section} and~\ref{an:section}).
 Together with refinements from the exact local types of the tower, this
-gives $C=\ceiling$ (Theorem~\ref{an:ceiling}).
-Table~\ref{intro:table-constructions} compares the two constructions.
+gives the bound $C=\ceiling$ for $d^{-1}\log L_F(1)$
+(Theorem~\ref{an:ceiling}). It replaces Louboutin's bound
+\cite{Louboutin2000}, which Sawin uses, and the Euler products over a
+fixed multiquadratic subfield of \cite{Naslund0358}.
+
+\emph{Profiles and shells.} Sawin counts points in a sup-norm window by
+packing, and \cite{Naslund0358} counts them by covolume in a Euclidean
+ball. We use a Gaussian profile at the real places of $F$, a coupled
+Student--Bernstein profile at the complex places, and weighted valuation
+shells at the selected primes, and we count points by Poisson summation
+(Sections~\ref{geo:section}--\ref{pf:section}).
+Table~\ref{intro:table-constructions} compares Sawin's example with the
+present construction.
 
 \begin{table}[htbp]
 \centering
-\caption{The construction of \cite{Naslund0418235} and the present one.
-The pairs $(e,f)$ are absolute ramification indices and residue degrees
-of the selected primes of $F$.}
+\caption{Sawin's example and the present construction. The pairs $(e,f)$
+are absolute ramification indices and residue degrees of the selected
+primes of $F$; Sawin's residue degrees are at most $2$.}
 \label{intro:table-constructions}
 \begin{tabular}{lll}
 \toprule
- & \cite{Naslund0418235} & this paper\\
+ & Sawin \cite{Sawin2026} & this paper\\
 \midrule
-base field & $\Q$ & $\Q(\sqrt{241})$\\
-primes ramified in the tower & $2,3,5,7,11,13$ & above $2,3,5$\\
-selected primes, $(e,f)$ & $2{:}\,(8,4)$;\ $3,5{:}\,(2,2)$; & $2{:}\,(8,4)$;\ $3,5{:}\,(2,2)$;\\
- & $7,11,13{:}\,(2,4)$;\ $17,\dots,31{:}\,(1,4)$ & $7{:}\,(1,8)$;\ $29{:}\,(1,4)$\\
-root discriminant $\lambda$ & $2^{9/4}\sqrt{15015}\approx582.9$ & $2^{9/4}\sqrt{3615}\approx286.0$\\
-$\ell=\log\lambda$ & $6.3680$ & $5.6560$\\
-lower bound $\theta_*$ for $\theta$ & $4095/8192$ & $65535/131072$\\
-ceiling $C$ & $0.042161819$ & $0.04871285$\\
-exponent $1+\delta$ & $1.0418235$ & $1.04273$\\
-certified margin & $5.3\cdot10^{-6}$ & $1.77\cdot10^{-4}$\\
+base field of the tower & $\Q(\sqrt{3\cdot5\cdots43})$ & $\Q(\sqrt{241})$\\
+primes ramified in the tower & $2$ and $3,5,\dots,43$ & those above $2,3,5$\\
+fields $K$ & CM, $\theta=0$ & mixed signature, $\theta\ge\thetastar$\\
+selected primes, $(e,f)$ & $22$ primes up to $179$ & $2{:}\,(8,4)$;\ $3,5{:}\,(2,2)$;\\
+ & & $7{:}\,(1,8)$;\ $29{:}\,(1,4)$\\
+root discriminant $\lambda$ & about $1.6\cdot10^8$ & $2^{9/4}\sqrt{3615}\approx286.0$\\
+$\ell=\log\lambda$ & $18.90$ & $5.656$\\
+zeta term & $1+\log\log\lambda\approx3.94$ & $C=\ceiling$\\
+exponent $1+\delta$ & $1.014114$ & $1.04273$\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{Why the exponent improves}\label{intro:why}
-In \eqref{intro:margin}, lowering $\log\lambda$ from $6.3680$ to
-$5.6560$ is worth $(1/2-\delta)\cdot0.712\approx0.33$ per unit of $d$ at
-$\delta\approx0.043$. Three terms pay for it. The first sum, the gain
-from equal-norm choices net of their cost in vertices, falls from $1.034$
-to $0.721$, because the tower over $B$ selects only five rational primes,
-and two of them, $7$ and $29$, with large residue degrees. The ceiling
-$C$ rises by $0.0066$, because the Kummer field carries less Frobenius
-information than the field of degree $16384$ used over $\Q$. The
-archimedean term falls by $0.013$, mostly because $\delta$ is larger.
-Table~\ref{intro:table-budget} shows the certified terms of the margin
-for both constructions, each at its own exponent.
+Write $\ell=\log\lambda$,
+\[
+ J=\sum_q\frac{\log(k_q+1)}{e_qf_q},\qquad
+ H=\sum_q\frac{k_q\log q}{e_q},
+\]
+so that the sum in \eqref{intro:margin} is $J-\delta H$. Sawin's
+criterion \cite[Proposition~10]{Sawin2026} applies to Galois CM fields of
+unbounded degree with relative root discriminant $\lambda$, and uses a
+sup-norm window with parameter $R>1$. Rearranged, it gives arbitrarily
+large sets with $u(U)\gg|U|^{1+\delta}$ whenever
+\eqref{intro:sawin-margin} holds; inequality \eqref{intro:regrouped} is
+\eqref{intro:margin} with $\mathcal A_\delta(\theta)$ written out and
+regrouped:
+\begin{align}
+ &(J-\delta H)+\bigl(\log2\pi-\tfrac12\ell-1-\log\ell\bigr)
+ +\bigl(2\log(1-R^{-1})-2\delta\log(2R+e^{-H/2})\bigr)\ge0,
+ \label{intro:sawin-margin}\\
+ &(J-\delta H)+\bigl(\log2+(1-\theta)\log\pi-\tfrac12\ell-C\bigr)
+ +\bigl(\delta\ell-\delta\log2+(1-2\theta)J_\R+\theta J_\C\bigr)>0.
+ \label{intro:regrouped}
+\end{align}
+In both, the three groups are the gain from equal-norm choices, the loss
+in selecting a common ideal class, and the count of vertices together
+with the window.
 
-\begin{table}[htbp]
-\centering
-\caption{The terms of the certified margin, per unit of $d$, rounded to
-seven decimals. The first row is the weighted-shell form of the first sum
-in \eqref{intro:margin} (Section~\ref{fw:section}), and the archimedean
-term is computed with the certified lower bound $J_\C^*$ for $J_\C$. The
-margin is the quantity $M_*(\theta_*)$ of Section~\ref{sec:certificate}
-and of the certificate of \cite{Naslund0418235}.}
-\label{intro:table-budget}
-\begin{tabular}{lrr}
-\toprule
-Term & \cite{Naslund0418235}, $\delta=0.0418235$ & this paper, $\delta=\deltastar$\\
-\midrule
-finite sum & $1.0335669$ & $0.7214955$\\
-$-(1/2-\delta)\log\lambda$ & $-2.9176605$ & $-2.5863213$\\
-$-C$ & $-0.0421618$ & $-0.0487129$\\
-$\mathcal A_\delta(\theta_*)$ & $1.9262607$ & $1.9137154$\\
-\midrule
-margin & $0.0000053$ & $0.0001767$\\
-\bottomrule
-\end{tabular}
-\end{table}
+\emph{The fields.} The dominant change is in $\ell$. Sawin's example has
+$\ell>18.9$; here $\ell<5.657$, so the term $-\frac12\ell$ improves by
+more than $6.6$ per unit of $d$. The price is paid in the first group:
+Sawin selects $22$ primes with residue degree at most $2$, and we select
+only the primes above $2$, $3$, $5$, $7$ and $29$, several with residue
+degree $4$ or $8$.
 
-The balance leaves a certified margin of about $1.77\cdot10^{-4}$ per unit
-of $d$ at $\delta=\deltastar$. With the same profiles, and shell weights
-optimized in the same way, the margin at $\delta=0.0428$ is negative.
+\emph{Ideal-class selection.} Both criteria use the analytic class-number
+formula, which is exact in either signature; they differ in how they
+bound the zeta value. At $\theta=0$ the constants agree, and the groups
+differ only in $C$ against $1+\log\ell$. In Sawin's criterion,
+$1+\log\ell$ is the sum of $\log(e/2)+\log\ell$, which is Louboutin's
+bound \cite[Corollary~3]{Louboutin2000} for $d^{-1}\log L_F(1)$ read
+through the class-number formula, and $\log2$, for the factor $2^d$
+allowed for units in Sawin's modified class group
+\cite[Lemma~6]{Sawin2026}. The manuscript \cite{Naslund0358} removed the
+unit factor and sharpened Louboutin's bound with Euler products over a
+fixed subfield. Here Proposition~\ref{geo:mass} accounts for the unit
+index exactly, and the Kummer field gives $C=\ceiling$, whereas
+$1+\log\ell$ would exceed $2.73$ even at our value of $\lambda$. Mixed
+signature costs $\theta\log\pi$ in this group, since each place of $F$
+carries one factor $\pi$ in the class-number formula.
 
-\subsection{Relation to Sawin's criterion}\label{intro:comparison}
-All bounds in Table~\ref{intro:table-bounds} from Sawin's onward use his
-framework \cite{Sawin2026}: a quadratic extension $K/F$, ideals of equal
-relative norm built from split primes, a pigeonhole over ideal classes,
-and fields from Golod--Shafarevich towers with Frobenius conditions.
-Section~1.6 of \cite{Naslund0418235} compares that criterion with
-\eqref{intro:margin} term by term. In brief, counting vertices by
-covolume instead of packing returns $\delta\log\lambda$. The exact
-class-number formula, with an explicit Euler-product bound $C$, replaces
-Louboutin's bound for the relative class number \cite{Louboutin2000}
-together with the factor $2^d$ that Sawin allows for units; their
-combined cost $1+\log\log\lambda$ would be about $2.73$ here. Mixed
-signature contributes the term $\theta(J_\C-2J_\R-\log\pi)$, worth more
-than $0.31$ per unit of $d$ here. Optimized profiles and shells replace
-the sup-norm window. The present paper keeps all of these and changes the
-tower. Sawin suggested that towers satisfying different local conditions
-might improve the exponent \cite{Sawin2026}. The base field is a change
-of a different kind: it adds no local conditions at new primes, but
-repeats the conditions at the small primes over two primes of $B$ each.
+\emph{Vertices and window.} Sawin's packing count gives
+$\delta(H+2\log(2R+e^{-H/2}))$, which does not involve $\lambda$.
+Counting by covolume, as in \cite{Naslund0358} and here, returns
+$\delta\ell$, because a larger discriminant makes the ideal lattice
+sparser. The overlap $2\log(1-R^{-1})$ of the sup-norm window and its
+volume become the profile functionals $J_\R$ and $J_\C$.
+
+\emph{Signature.} CM fields have $\theta=0$. With the other data fixed,
+mixed signature adds $\theta(J_\C-2J_\R-\log\pi)$ to the left side of
+\eqref{intro:regrouped}. The certificate gives
+$J_\C-2J_\R-\log\pi>0.632$, so with $\theta\ge\thetastar$ this term
+exceeds $0.316$ per unit of $d$; at $\theta=0$ the certified margin
+would be negative (Remark~\ref{cert:signature-remark}).
+
+Table~\ref{cert:tab-budget} lists the certified terms of the margin at
+$\delta=\deltastar$. Their sum leaves a margin of about
+$1.77\cdot10^{-4}$ per unit of $d$. With the same profiles, and shell
+weights optimized in the same way, the margin at $\delta=0.0428$ is
+negative.
 
 \subsection{Organization}\label{intro:organization}
 Section~\ref{tw:tower} constructs the tower over $B$ and proves
@@ -314,9 +326,9 @@ Sections~\ref{geo:section}--\ref{pf:section} carry out the geometric
 construction: the norm-one mass formula and the transfer to planar sets,
 the weighted windows at the selected primes, and the archimedean
 profiles. These sections hold for any quadratic extension with the
-stated properties and follow \cite{Naslund0418235} closely.
-Section~\ref{sec:certificate} evaluates the final inequality at
-$\delta=\deltastar$ and completes the proof of Theorem~\ref{thm:main}.
+stated properties. Section~\ref{sec:certificate} evaluates the final
+inequality at $\delta=\deltastar$ and completes the proof of
+Theorem~\ref{thm:main}.
 
 \subsection{Computations and data}\label{intro:code}
 The proof uses finite computations: linear algebra over $\Ftwo$ for the
@@ -334,10 +346,11 @@ The programs and their data are in the directory
 \texttt{papers/0.04273/certificates} of the public repository
 \cite{NaslundCode2026}. Some certified routines, for the degree-two
 approximate functional equations, the archimedean profiles and the
-finite windows, are imported unchanged from the supplementary archive of
-\cite{Naslund0418235}, which is in the same repository together with a
-manifest of the SHA-256 hashes of its members. A replay program runs
-every step and records its results. The computations were run with
+finite windows, are imported unchanged from an earlier supplementary
+archive of the author, in the directory
+\texttt{papers/0.0418235/certificates} of the same repository, together
+with a manifest of the SHA-256 hashes of its members. A replay program
+runs every step and records its results. The computations were run with
 PARI/GP~2.17.2, python-flint~0.9.0 (FLINT~3.6.0) and mpmath~1.3.0.
 
 A separate Lean~4 development \cite{NaslundLean2026}, built on Mathlib
