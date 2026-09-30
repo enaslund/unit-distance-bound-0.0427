@@ -56,7 +56,7 @@ ChallengeZeta` builds it.
 | Axiom audit of the 57,394 declarations in the selected closure and the 32 submission declarations | This package | Only the three standard axioms |
 | Packaging gate: deterministic re-export and the metadata contract of PalomarSubmission `65f0154` | This package's archive | Passed ([report](../provenance/lean-checks/gate.json)) |
 | Fresh build from source, with the axiom audit | The first export of this package, with byte-identical Lean files | Passed: 6,960 build jobs in 62 minutes; the audit of 52,186 project and 32 submission declarations reports only the three standard axioms ([report](../provenance/lean-checks/candidate1-fresh-build.json)) |
-| **Palomar's own preflight workflow** (pinned verifier `65f0154` on a GitHub-hosted runner, profile `palomar-standard-v1`: 4 CPUs, 16 GiB): fresh build, protected exports, statement and definition comparison, axiom checks, con-ron, NanoDa, Lean kernel | Commits `5e35812` and `6ebff18` of this repository | **Passed** on September 30, 2026: `status: pass`, `stage: complete`, "Your solution is okay!"; for `6ebff18` the build took 1 h 43 min (peak 11.1 GiB) and the comparator phase 1 h 6 min (peak 12.0 GiB) ([report](../provenance/lean-checks/hosted-6ebff18-mechanical-report.json), [earlier report](../provenance/lean-checks/hosted-5e35812-mechanical-report.json)) |
+| **Palomar's own preflight workflow** (pinned verifier `65f0154` on a GitHub-hosted runner, profile `palomar-standard-v1`: 4 CPUs, 16 GiB): fresh build, protected exports, statement and definition comparison, axiom checks, con-ron, NanoDa, Lean kernel | Commit `144d08d` of this repository, the current package; earlier also `5e35812`, `6ebff18`, `7ce1f81` and `81755b0` | **Passed** on September 30, 2026 for all five: `status: pass`, `stage: complete`, "Your solution is okay!"; for `6ebff18` the build took 1 h 43 min (peak 11.1 GiB) and the comparator phase 1 h 6 min (peak 12.0 GiB) ([current report](../provenance/lean-checks/hosted-144d08d-mechanical-report.json); earlier: [5e35812](../provenance/lean-checks/hosted-5e35812-mechanical-report.json), [6ebff18](../provenance/lean-checks/hosted-6ebff18-mechanical-report.json), [7ce1f81](../provenance/lean-checks/hosted-7ce1f81-mechanical-report.json), [81755b0](../provenance/lean-checks/hosted-81755b0-mechanical-report.json)) |
 | The same pinned pipeline reproduced on a local host under the `palomar-standard-v1` limits | The first export of this package, with byte-identical Lean files | Passed in 9,235 s ([report](../provenance/lean-checks/candidate1-local-standard-report.json)) |
 
 The sources differ from candidate 4 only inside proofs: certificate splits
@@ -76,7 +76,9 @@ the 1.04273 note gained its AI-use statement, and the metadata now cites
 both papers at commit `81755b0`, which carries these versions. Only the
 paper copies under `lean/docs`, the paper citations in the two metadata
 files, and `SELECTION.json` and `SOURCE_SNAPSHOT.json` differ; no Lean file
-changed, and the packaging gate passes.
+changed, the packaging gate passes, and Palomar's preflight passed on commit
+`144d08d`, which carries this package. Later commits change only
+documentation.
 The manual workflow
 [`.github/workflows/palomar-preflight.yml`](../.github/workflows/palomar-preflight.yml)
 reruns Palomar's pinned verifier on any commit, and its results appear in
