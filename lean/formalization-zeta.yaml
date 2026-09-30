@@ -39,7 +39,7 @@ sources:
 - title: A lower exponent of 1.0418235 for planar unit distances
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/81755b057db7e21488b7d92c1a538751278803de/papers/0.0418235/main.tex
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/cb7f1af7c4330b60b169473c823f196d55875d95/papers/0.0418235/main.tex
   type: paper
   location: 'Public repository: papers/0.0418235/ at the cited commit. Exported
     formalization package: docs/manuscript/; especially sections/tower.tex, analytic.tex,
@@ -52,10 +52,11 @@ sources:
     the exact sequence conclusion is derived subject to one displayed fixed-field
     zeta/logarithmic-derivative inequality (H) that remains unproved, and the sufficient
     pair-integral bound uses threshold 0.042165819 in place of the manuscript's
-    0.042161819. The manuscript is an unrefereed preprint; its title note states that
-    it was entirely written with AI tools and that the listed human author is
-    responsible for having supervised and prompted the AI agents that wrote it. It has
-    not been peer reviewed. A copy (main.tex, sections/, references.bib, main.pdf) is
+    0.042161819. The manuscript is an unrefereed preprint; its AI Methodology statement
+    says that the work was done with extensive AI use, with agents developing the
+    mathematics and writing the paper, and that the listed author is the human
+    responsible for having supervised and prompted the AI agents that produced it. It
+    has not been peer reviewed. A copy (main.tex, sections/, references.bib, main.pdf) is
     included in the exported formalization package under docs/manuscript/;
     the public manuscript is available at the immutable identifier above.
     Historical research provenance remains enaslund/unit-distance-bound, commit

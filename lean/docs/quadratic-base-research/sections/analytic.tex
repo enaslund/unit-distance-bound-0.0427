@@ -363,9 +363,8 @@ envelopes
  \mathcal E_2(y)=\sqrt{\frac\pi2}\,\frac{e^{-y}}{y^{3/2}}\Bigl(1+\frac1y\Bigr).
 \]
 Numerical evaluation of $L$-functions from their functional equations is
-developed in \cite{Dokchitser2004}. Part (1) of the next lemma is the
-degree-two case of the approximate functional equation of
-\cite{Naslund0418235}; part (2), for pure gamma factors, uses the kernel
+developed in \cite{Dokchitser2004}. Part (1) of the next lemma treats mixed
+gamma factors, and part (2), for pure gamma factors, uses the kernel
 $K_0$. We prove both.
 
 \begin{lemma}\label{an:balanced-afe}
@@ -644,9 +643,9 @@ factors of Proposition~\ref{gf:local-data} by the supplementary program
 \texttt{lfun241.py}. The supplementary program \texttt{afe241.py} evaluates \eqref{an:row-enclosure}
 in Arb midpoint--radius interval arithmetic
 \cite{Johansson2017,FLINT} with $256$ bits of precision,
-rounding every quantity outward. Its kernel and moment routines are those of
-the supplementary archive of \cite{Naslund0418235} (module
-\texttt{nonpositive-afe.py}), which implement
+rounding every quantity outward. Its kernel and moment routines are those of the
+module \texttt{nonpositive-afe.py}, imported unchanged from an earlier
+supplementary archive of the author (Section~\ref{intro:code}); they implement
 Lemmas~\ref{an:balanced-afe}--\ref{an:taylor} and \eqref{an:bin-sum} as
 stated here. Every enclosure of $L(\sigma,\chi_e)$ is positive. The factor
 $\zeta_B(\sigma)=\zeta(\sigma)L(\sigma,\chi_{241})$ is evaluated with

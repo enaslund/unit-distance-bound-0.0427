@@ -352,9 +352,10 @@ interest of the reduction is not established merely by the amount of Lean
 code, and its novelty has not been established.
 
 The manuscript is included in this package under `docs/manuscript/`; the
-research repository it comes from was private as of 2026-09-22. Its title
-note says it was entirely written with AI tools, and it is an unrefereed
-preprint. It is disclosed as source provenance and is not used to
+research repository it comes from was private as of 2026-09-22. Its AI
+Methodology statement says the work was done with extensive AI use, with
+agents developing the mathematics and writing the paper, and it is an
+unrefereed preprint. It is disclosed as source provenance and is not used to
 establish novelty, priority or research interest. The independently stated
 conditional reduction and the public literature above supply the
 mathematical content and context that a reviewer can assess.

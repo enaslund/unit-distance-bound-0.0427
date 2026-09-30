@@ -11,8 +11,9 @@ manuscript's older threshold is `0.042161819`. The exponent is unchanged.
 The manuscript is included in this package under `docs/manuscript/`. The
 research repository it comes from was private as of 2026-09-22, so the
 citation is an account of source provenance rather than of public
-literature. The manuscript's title note says it was entirely written with
-AI tools; it is an unrefereed preprint. No novelty, priority or
+literature. The manuscript's AI Methodology statement says the work was done
+with extensive AI use, with agents developing the mathematics and writing
+the paper; it is an unrefereed preprint. No novelty, priority or
 research-interest claim rests on it. The independent Challenge and the
 submitted proof are the evidence for the conditional implication itself.
 

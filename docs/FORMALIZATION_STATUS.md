@@ -2,7 +2,7 @@
 
 [`lean/`](../lean/README.md) is a Lean 4 project (Lean `v4.35.0-rc2`, Mathlib
 `065356127b1dc0016f66b7283ce0ce2c4055aa55`). Its sources are the export of
-research commit `5e35417d` of `enaslund/unit-distance-bound`, copied unchanged;
+research commit `eec0838c` of `enaslund/unit-distance-bound`, copied unchanged;
 [`provenance/lean-release.json`](../provenance/lean-release.json) records the
 archive identity. It formalizes the paper *An Exponent of 1.04273 for the Unit Distance Problem* at the
 exponent 1.0427, conditional on one zeta inequality, and its Palomar project
@@ -74,9 +74,9 @@ and its Lean sources are unchanged since.
 The repository is ready for submission to the Palomar registry: project
 `lean`, metadata `lean/formalization.yaml`, comparator
 `lean/comparator-zeta241.json`. No submission has been made. The current
-`lean/` is the export of research commit `5e35417d`. Its metadata cites the
+`lean/` is the export of research commit `eec0838c`. Its metadata cites the
 self-contained manuscript *An Exponent of 1.04273 for the Unit Distance
-Problem*, published at commit `aee1d02`, and it carries that manuscript and
+Problem*, published at commit `cb7f1af`, and it carries that manuscript and
 its certificates under `lean/docs`. No Lean file has changed since the
 package that passed at `6ebff18`, and the packaging gate passes. Palomar's
 preflight on this package was started on September 30, 2026; the table

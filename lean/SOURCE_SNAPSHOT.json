@@ -33,7 +33,7 @@
   },
   "SELECTION.json": {
     "bytes": 1458079,
-    "sha256": "2e502410f5b375d3ebf2f6e1e3151255516a5f2fb934d980135d8c83f68b1fd2"
+    "sha256": "71069beb037ef00c02a94afb123113a0dfe5156bce1f6fd08572d8f5a208fbe1"
   },
   "SolutionZeta.lean": {
     "bytes": 6026,
@@ -9668,8 +9668,8 @@
     "sha256": "6b292344263bd2fbe9886ab594e9686a00d01e87d7970b40cd5fca3029c5e990"
   },
   "docs/CONDITIONAL_SUBMISSION.md": {
-    "bytes": 34319,
-    "sha256": "db182697de15aeceddaf9f94dfe25bf7cdfee88a39b016096e3f1608fc83d864"
+    "bytes": 34397,
+    "sha256": "ea6459c922b88ead58a827e40143d2001af927959a2b777dd45cee18fc9a5f8f"
   },
   "docs/FINAL_HANDOFF_SOL_LUNA_20260923.md": {
     "bytes": 9040,
@@ -9696,24 +9696,24 @@
     "sha256": "6623f740ff12d07635ca45a42e3ebcb907622a300524c0192b58e4a8c82bce48"
   },
   "docs/SUBMISSION_PROVENANCE.md": {
-    "bytes": 9848,
-    "sha256": "747b6c9399679cf5059dabcd6dbc32b56493104be17a9cf0a134cd7376b24da0"
+    "bytes": 9926,
+    "sha256": "f5abc802b4faff7ee453a2ddcf4deb319d90c0f28c5b43baf2c443c30780ede6"
   },
   "docs/manuscript/Makefile": {
     "bytes": 267,
     "sha256": "9b4a3282dc0964b5c4573314c050b51d844a3bdeead9cbc637d6ff28fd7dd69d"
   },
   "docs/manuscript/README.md": {
-    "bytes": 9268,
-    "sha256": "d1893de66ca266f9d316bae25065f70035973b3e1eb6da03e3ff118857a6cee2"
+    "bytes": 9699,
+    "sha256": "8c9205167e013e761cc5b471f828551eaba84d5fe6a9b44a8b02dc692641c558"
   },
   "docs/manuscript/main.pdf": {
-    "bytes": 651890,
-    "sha256": "59ca0a12e7e197e6557bda2d2d124828e222c56a63f771a6cb7dec5fc061c5fb"
+    "bytes": 660190,
+    "sha256": "834034c61f6a6697f27593beda7e20546dfba7ce96590c6952a8b88f82dde2e7"
   },
   "docs/manuscript/main.tex": {
-    "bytes": 2786,
-    "sha256": "f7c0856d03c673657017f9fab25e12c4330f126a790d392a8fbc510509d9ae35"
+    "bytes": 2833,
+    "sha256": "0598ad29c2aef4c844f1a9d81b871b21eaa2d541bfd86f93896bf177a5f4dda5"
   },
   "docs/manuscript/references.bib": {
     "bytes": 18563,
@@ -9760,8 +9760,8 @@
     "sha256": "329da8fe66ca05f839916bab903f2f0935ea98afd21909e5b1d92caddea684a2"
   },
   "docs/quadratic-base-research/README.md": {
-    "bytes": 5540,
-    "sha256": "839d06ffb8525a1b9aa932de098f725ed410d2afd1adf44bb1d6c27b0061023b"
+    "bytes": 5652,
+    "sha256": "251ef0996c91b3fe88703a86f07317abb95794094acec008f67f7e300fd84919"
   },
   "docs/quadratic-base-research/certificates/afe241.py": {
     "bytes": 2413,
@@ -9880,16 +9880,16 @@
     "sha256": "4e37b5413f982aecb212b84c6db4f8c25d0e54780141aa91344bc45251dd2fc9"
   },
   "docs/quadratic-base-research/main.pdf": {
-    "bytes": 845344,
-    "sha256": "09e2076a9e90b8b9c9a0778b0db869cc381a3e1fd3d0f1b068370e243d0a0abc"
+    "bytes": 845502,
+    "sha256": "7c685fb4235847e1e262a6253c482867bc0b2e8aa19b3945ea55ecfc1dad8489"
   },
   "docs/quadratic-base-research/main.tex": {
-    "bytes": 4047,
-    "sha256": "69c9a5f077cf85de297bd4de36cbcedba206932a1dd72fd5ea489b73fa82e3b6"
+    "bytes": 4060,
+    "sha256": "5d7e6921e6236345a9d44d5f2a5ae8527c99fa6b53f0c3a07eb57a011f4411ed"
   },
   "docs/quadratic-base-research/references.bib": {
-    "bytes": 22063,
-    "sha256": "7c590ca0a90d0e0ee6a61d7ba4c3e99e7ff24077035557b9ce531d1658e581fe"
+    "bytes": 22057,
+    "sha256": "3548dc74462c8870307cb56fb93ebc3bcac43b4822a714ce9695bda28bd1887c"
   },
   "docs/quadratic-base-research/requirements.txt": {
     "bytes": 187,
@@ -9948,12 +9948,12 @@
     "sha256": "1238f278886974361c08fb8239c3b8d3ab49a1dac43984222b678d0705b6bf77"
   },
   "docs/quadratic-base-research/sections/analytic.tex": {
-    "bytes": 38035,
-    "sha256": "7069825d0cc7911dd26ce6f5303c14a832e973ae397e8f00d5fadf5c49a27b1c"
+    "bytes": 38028,
+    "sha256": "b41b1cc6c970d48f8e221db3a64d78d419edf8459abc9f2a3d863d7fd59ee328"
   },
   "docs/quadratic-base-research/sections/certificate.tex": {
-    "bytes": 12961,
-    "sha256": "f353b8c0fa37c8e31a7f64ac434f8404b5dbd0151a50f76ac43e1bb4fee6410d"
+    "bytes": 12809,
+    "sha256": "dae3c7758f6ee9ed0410840f5fda77d78884ffb8790bd04ad57eb469acd1b48c"
   },
   "docs/quadratic-base-research/sections/finite-windows.tex": {
     "bytes": 24898,
@@ -9968,20 +9968,20 @@
     "sha256": "2b6a05415321328dcace4c2976aa4b10e36010651a5eb9125cc1d97d77d31ad4"
   },
   "docs/quadratic-base-research/sections/geometry.tex": {
-    "bytes": 32834,
-    "sha256": "74dbdb4d7410499e782db6c0cea3da4f6f8926e29967139cff839e63845e20be"
+    "bytes": 32799,
+    "sha256": "dbf1e4a21aee582b0ffbb7907aedaa5ce661ea8d38cabe1518b26f9cb35e3402"
   },
   "docs/quadratic-base-research/sections/introduction.tex": {
-    "bytes": 18813,
-    "sha256": "3058788922ea5b1fe7cf769a3069b0e2a64cd958627ffc139de229bbdd38e293"
+    "bytes": 19403,
+    "sha256": "f42dd6e48dda1ae702b4be15a35318cbf5132ec3108aa671e9737b3075789513"
   },
   "docs/quadratic-base-research/sections/profiles.tex": {
-    "bytes": 23323,
-    "sha256": "2f1b244ff25435e3da6024f5cb96465f430e0cbd70dbafc7c37ef6f8c9d565e2"
+    "bytes": 23269,
+    "sha256": "cfcc0e2306a5b3148f01dc94f6c4e8058634d7dd5807b9623ebdf460146507be"
   },
   "docs/quadratic-base-research/sections/tower.tex": {
-    "bytes": 75038,
-    "sha256": "95861a874ad6015e7d51759e2cc4913bb11004dfffe27b14d167d52e304fecc9"
+    "bytes": 74627,
+    "sha256": "571b0e7eb452950c49f0f8ebab3f6cc58411698742671163be725ff571be680b"
   },
   "docs/sqrt241/A1_NUMERICS.md": {
     "bytes": 13132,
@@ -10052,12 +10052,12 @@
     "sha256": "61d57af876b06bd000026a0b1db6c790b6e2e047a68111a440c771346963314f"
   },
   "formalization-zeta.yaml": {
-    "bytes": 22935,
-    "sha256": "005599f5068fbbea9ac20584591a758461ebe6f77a2dbc50ba0f276b22dd43dc"
+    "bytes": 23023,
+    "sha256": "0942c8ded23840e4637f2bfff67e22f734badf78e24a726b2d5ad6e1dc8134c1"
   },
   "formalization.yaml": {
     "bytes": 19871,
-    "sha256": "8c255aabf44241be52a0cd35d5125a52970f79ca7b4ba0359b60143b34b9dc53"
+    "sha256": "83d6d9a56daf1d3d4abf0cc9541d68f537f8b7813e3790193cef894df148dc96"
   },
   "lake-manifest.json": {
     "bytes": 3167,

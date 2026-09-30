@@ -119,6 +119,13 @@ identifies the literature sources used to prepare the references.
 
 ## Revision note
 
+- September 30, 2026 (AI Methodology): the statement on AI use is now an
+  "AI Methodology" paragraph after the abstract, reached by the asterisk on
+  the author's name, in the wording of the 1.04273 paper: the work was done
+  with extensive AI use, with agents developing the mathematics and writing
+  the paper, and the listed author is the human responsible for having
+  supervised and prompted the AI agents that produced it.
+
 - September 30, 2026 (introduction): added a plain outline of the method
   after Theorem 1.1 and a subsection, §1.6, that writes Sawin's criterion
   in the form of inequality (1.1) and matches each change with the term it
