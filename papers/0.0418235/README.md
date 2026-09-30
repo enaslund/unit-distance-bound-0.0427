@@ -5,8 +5,11 @@
 *A Lower Exponent of 1.0418235 for Planar Unit Distances*, Eric Naslund.
 This is the September 27, 2026 revision, with 41 cited references and a
 separate introduction comparing Sawin's method and the historical 0.0358324
-manuscript. On September 30, 2026 the certificate section's replay paragraph
-was rewritten in prose, without the displayed command; the mathematics is
+manuscript, revised on September 30, 2026. The introduction now opens with a
+plain outline of the method, and its §1.6 compares the construction with
+Sawin's criterion term by term, including why mixed signature helps. The
+certificate section's replay paragraph was rewritten in prose, without the
+displayed command. The theorem, proofs, witness and certificate are
 unchanged. All TeX, PDF and numerical inputs are byte-identical copies from
 the research repository. The distribution README and package identity
 manifest are specific to this public layout.

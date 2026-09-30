@@ -2,7 +2,7 @@
 
 [`lean/`](../lean/README.md) is a Lean 4 project (Lean `v4.35.0-rc2`, Mathlib
 `065356127b1dc0016f66b7283ce0ce2c4055aa55`). Its sources are the export of
-research commit `c459e36b` of `enaslund/unit-distance-bound`, copied unchanged;
+research commit `e221d03b` of `enaslund/unit-distance-bound`, copied unchanged;
 [`provenance/lean-release.json`](../provenance/lean-release.json) records the
 archive identity.
 
@@ -69,8 +69,13 @@ and its Lean sources are unchanged since.
 
 The repository is ready for submission to the Palomar registry: project
 `lean`, metadata `lean/formalization.yaml`, comparator
-`lean/comparator-zeta241.json`. No submission has been made. Commits after
-`6ebff18` change only documentation; the manual workflow
+`lean/comparator-zeta241.json`. No submission has been made. The current
+`lean/` is the export of research commit `e221d03b`, which revised the
+introduction of the 0.0418235 paper and added the AI-use statement to the
+1.04273 note. It differs from the package that passed at `6ebff18` only in
+the paper copies under `lean/docs` and in `SELECTION.json` and
+`SOURCE_SNAPSHOT.json`; no Lean file changed, and the packaging gate passes.
+The manual workflow
 [`.github/workflows/palomar-preflight.yml`](../.github/workflows/palomar-preflight.yml)
 reruns Palomar's pinned verifier on any commit, and its results appear in
 the repository's Actions tab.

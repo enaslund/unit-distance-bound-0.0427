@@ -21,12 +21,19 @@
   {
    "paths": [
     "papers/0.0418235/sections/certificate.tex",
-    "papers/0.0418235/main.pdf",
-    "papers/0.04273/README.md",
-    "papers/0.04273/research/construction.md"
+    "papers/0.04273/README.md"
    ],
    "via": "research repository, unchanged: the September 30, 2026 revision that removed code listings from the papers",
    "research_commit": "c459e36b35eac607f4e4a7cbf463517714eeaac2"
+  },
+  {
+   "paths": [
+    "papers/0.0418235/sections/introduction.tex",
+    "papers/0.0418235/main.pdf",
+    "papers/0.04273/research/construction.md"
+   ],
+   "via": "research repository, unchanged: the September 30, 2026 revision that added an outline and a term-by-term comparison with Sawin's criterion to the 0.0418235 introduction, and the AI-use statement to the 1.04273 research note",
+   "research_commit": "e221d03b17745051bcb96121e627da9799ce9bfd"
   }
  ],
  "files": {
@@ -194,9 +201,9 @@
   },
   "papers/0.0418235/main.pdf": {
    "research_source": "papers/0.0418235/main.pdf",
-   "research_commit": "c459e36b35eac607f4e4a7cbf463517714eeaac2",
-   "sha256": "dc8eec2b8d2d27b5a7b65577ee9ce075f043542ab36ab0900b840717b3b653c8",
-   "bytes": 640050
+   "research_commit": "e221d03b17745051bcb96121e627da9799ce9bfd",
+   "sha256": "59ca0a12e7e197e6557bda2d2d124828e222c56a63f771a6cb7dec5fc061c5fb",
+   "bytes": 651890
   },
   "papers/0.0418235/main.tex": {
    "research_source": "publication/unit-distance-1.0418235/main.tex",
@@ -247,10 +254,10 @@
    "bytes": 13341
   },
   "papers/0.0418235/sections/introduction.tex": {
-   "research_source": "publication/unit-distance-1.0418235/sections/introduction.tex",
-   "research_commit": "abf46882f6cf71d515087fbf1d849a64a2a53593",
-   "sha256": "f7ce9eab5416224f732d11d3f83b3e786becc4f1ba227cddd4fc6d494d4fe27e",
-   "bytes": 13216
+   "research_source": "papers/0.0418235/sections/introduction.tex",
+   "research_commit": "e221d03b17745051bcb96121e627da9799ce9bfd",
+   "sha256": "ef636eaa796ff4fb949cf4a0c6f58869cf013c96c64da821d1fe121ca24e569d",
+   "bytes": 21651
   },
   "papers/0.0418235/sections/profiles.tex": {
    "research_source": "publication/unit-distance-1.0418235/sections/profiles.tex",
@@ -452,9 +459,9 @@
   },
   "papers/0.04273/research/construction.md": {
    "research_source": "papers/0.04273/research/construction.md",
-   "research_commit": "c459e36b35eac607f4e4a7cbf463517714eeaac2",
-   "sha256": "c9c37f0c115795d835c5434e77ab24e1e11225d068304795dd0823d9305ff6c7",
-   "bytes": 14638
+   "research_commit": "e221d03b17745051bcb96121e627da9799ce9bfd",
+   "sha256": "af620ce62e473c871d1fdd639952b894841f64534f5a448dab0cd8e2823ff54c",
+   "bytes": 14813
   },
   "papers/0.04273/research/design-model/amort.py": {
    "research_source": "papers/0.04273/research/design-model/amort.py",

@@ -11,18 +11,22 @@ document. It uses standard results from the cited literature and a finite
 computer-assisted certificate. Earlier repository manuscripts are not
 mathematical dependencies of the text.
 
-The [introduction](sections/introduction.tex) explains the mechanism,
-compares it separately with Sawin and the
+The [introduction](sections/introduction.tex) opens with a plain outline:
+the exponent is set by the gain from equal-norm choices at split primes,
+the loss in selecting a common ideal class (governed by the root
+discriminant and the relative zeta value), and the geometric window. It
+compares the method separately with Sawin and the
 [historical 0.0358324 manuscript](../0.0358324/README.md),
 and distinguishes that manuscript from the MathOverflow revision history.
 It explains mixed signature, norm-one unit averaging, local relation modules,
-joint Euler information and the geometric profiles. A
+joint Euler information and the geometric profiles, and its §1.6 matches
+each change with the term of Sawin's criterion that it improves. A
 [research-development record](evidence/research-development.md) maps the
 earlier branch results to their sources and evidence status.
 
 | Part | Contents |
 | --- | --- |
-| [Introduction](sections/introduction.tex) | Arithmetic mechanism, prior work, key changes and numerical progression |
+| [Introduction](sections/introduction.tex) | Outline, arithmetic mechanism, prior work, key changes, term-by-term comparison with Sawin's criterion |
 | [Tower](sections/tower.tex) | Complete global presentation, prescribed dyadic field, finite quotient, filtered Fox calculation, infinite field family |
 | [Retained field](sections/retained-field.tex) | Actual Kummer fields, seven-dimensional central space, representation and Hecke data |
 | [Analysis](sections/analytic.tex) | Functional equations, coefficient algorithms and tails, complete Euler table, disjoint prime corrections, unconditional transfer to one |
@@ -114,6 +118,18 @@ The [bibliography verification record](evidence/bibliography-check.md)
 identifies the literature sources used to prepare the references.
 
 ## Revision note
+
+- September 30, 2026 (introduction): added a plain outline of the method
+  after Theorem 1.1 and a subsection, §1.6, that writes Sawin's criterion
+  in the form of inequality (1.1) and matches each change with the term it
+  improves. It compares the towers (root discriminant about 583 here,
+  about 1.6·10^8 in Sawin's example) and the zeta terms (C against
+  1 + log log λ), and explains why mixed signature helps: averaging over
+  the norm-one units makes their regulator cancel in the class-number
+  formula, so mixed signature costs only a factor π per complex place,
+  which the coupled profile more than repays. §1.2 now names Sawin's
+  factor 2^d for units consistently. The theorem, proofs, witness and
+  certificate are unchanged.
 
 - September 30, 2026: removed the displayed replay command and command-line
   options from the certificate section. The section now describes the three

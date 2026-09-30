@@ -1,5 +1,11 @@
 # A tower over Q(√241) and the exponent 1.04273
 
+Eric Naslund\*
+
+\*This note was entirely written with AI tools. The listed human author is
+responsible for having supervised and prompted the AI agents that wrote
+this note.
+
 Date: 2026-09-29. Status: **research result; three independent referee
 reviews found no mathematical error** (see [review-20260929.md](review-20260929.md)).
 The finite computations below are reproducible from

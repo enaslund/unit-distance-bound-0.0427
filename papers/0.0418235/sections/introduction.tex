@@ -43,9 +43,44 @@ There are finite sets $U_j\subset\R^2$, with $|U_j|\to\infty$, such that
 In particular, $u(n)\ge n^{1.0418235}$ for arbitrarily large integers $n$.
 \end{theorem}
 
-We obtain the improvement by changing the number fields and counting
-norm-one unit orbits in mixed signature, then optimizing the local and
-archimedean overlap in the same construction. The result concerns an
+The construction carries Erd\H{o}s's lattice argument to number fields
+of large degree. Let $K$ be such a field, of degree $2d$, with an
+involution $\iota$ whose fixed field is $F$. We take the points of a
+translated ideal lattice of $K$ that lie in a bounded region of
+$K\otimes\R$. A complex embedding in which $\iota$ acts as complex
+conjugation maps them injectively to the plane. It sends every
+difference of relative norm one over $F$ to a unit vector. The exponent
+is then set by a balance, per unit of $d$. The gain is the number of
+equal-norm choices: a prime of $F$ that splits in $K$ and is used with
+exponent $k$ gives $k+1$ ideals of the same relative norm. Selecting a
+common ideal class loses part of this gain. Through the class-number
+formula, that loss is governed by the root discriminant of $K$ and the
+value at $s=1$ of $\zeta_K/\zeta_F$. The geometric window decides how
+many of the resulting displacements keep both endpoints in the region,
+and its volume fixes the number of points. Using a prime $\mathfrak p$
+with exponent $k$ also makes the ideal lattice denser by the factor
+$N\mathfrak p^k$, and the exponent $\delta$ charges the gain for the
+points this adds. Inequality~\eqref{intro:margin} below states the
+balance precisely.
+
+Sawin's criterion has the same structure, and
+Section~\ref{intro:sawin} matches each of our changes with the term of
+his criterion that it improves. Our tower is ramified only at the
+primes up to $13$, and its root discriminant is about $583$, against
+about $1.6\times10^8$ in Sawin's example. It selects fewer primes, with
+larger residue degrees at most of them. The fixed fields $F$ have mixed
+signature, so $K$ is not CM. Mixed signature helps because norm-one units of
+positive rank give each complex place of $F$ a one-parameter family of
+displacements. Averaging over the lattice of these units counts the
+displacements exactly, and the class-number formula then cancels the
+regulator of the lattice. Mixed signature therefore costs only a factor
+$\pi$ per complex place of $F$, which a profile coupling the two
+coordinates at that place more than repays. We also avoid a factor
+$2^d$ that Sawin allows for units, bound the zeta value by an explicit
+Euler calculation instead of a general class-number bound, count points
+by covolume instead of packing, and optimize the window. The earlier
+manuscript \cite{NaslundLegacy2026} made the first and third of these
+changes, and earlier versions of the second and fourth. The result concerns an
 unbounded sequence of cardinalities. No generalized Riemann hypothesis
 or asymptotic class-number equality is used.
 
@@ -102,7 +137,8 @@ This replaces the loss $\log(1-1/R)$ in the earlier window estimate.
 A bound for the dual lattice, together with Banaszczyk's transference
 theorem \cite{Banaszczyk1993}, replaces the packing estimate for the
 number of vertices by a covolume estimate. The narrow ideal-class
-calculation also removes an exponential sign loss.
+calculation also removes the factor $2^d$ that Sawin's count allows
+for units.
 
 The analytic estimate uses a fixed multiquadratic subfield of every
 field in the tower. Its normalized Euler product retains more
@@ -130,9 +166,10 @@ reports a bookkeeping correction and the figure $\delta>0.0357$.
 We use the archived manuscript's $0.0358324$ to identify the earlier
 construction, rather than as a hypothesis of the present proof.
 
-The further improvement comes from allowing a different signature
-and different local groups. Covolume counting, ball overlap and the
-removal of the sign loss are already part of the earlier argument.
+The further improvement comes from a different signature and different
+local groups, together with the Euler calculation, profiles and shells
+described below. Covolume counting, ball overlap and the
+removal of the unit factor are already part of the earlier argument.
 The new counting problem is to use a positive-rank group of norm-one
 units without losing its regulator.
 
@@ -178,6 +215,7 @@ The averaging uses the entire unit lattice, so no independence of
 its coordinates or equidistribution of unit orbits is needed.
 
 \subsection{Local Relations and the Euler Calculation}
+\label{intro:local}
 
 To construct the fields, we use the filtered images of the local
 relation modules. Fox derivatives \cite{Fox1953} retain the
@@ -227,6 +265,7 @@ field identities, conductor data and analytic remainders are proved
 in sections \ref{ar:field} and \ref{an:section}.
 
 \subsection{Archimedean Profiles and Finite Shells}
+\label{intro:profiles}
 
 At a complex place of $F$, a norm-one displacement couples two
 coordinates through reciprocal scaling. We consequently use a
@@ -246,10 +285,10 @@ together. Section \ref{fw:section} gives the exact finite functional.
 
 Both choices enter the same arithmetic and geometric inequality.
 For hard finite windows its form is
-\[
+\begin{equation}\label{intro:margin}
  \sum_q\frac{\log(k_q+1)-\delta k_qf_q\log q}{e_qf_q}
  -(1/2-\delta)\log\lambda-C+\mathcal A_\delta(\theta)>0,
-\]
+\end{equation}
 where $e_q,f_q$ are absolute local indices, $C$ bounds
 $d^{-1}\log L_F(1)$, and $\mathcal A_\delta$ is the archimedean
 contribution. Proposition~\ref{geo:transfer} gives the precise
@@ -269,6 +308,116 @@ supplies the edges. At
 the rational witness in section \ref{sec:certificate} leaves a
 certified margin greater than $5.33204359816794\times10^{-6}$
 after the concentration allowance.
+
+\subsection{Comparison with Sawin's Criterion}
+\label{intro:sawin}
+
+Write $\ell=\log\lambda$ and
+\[
+ J=\sum_q\frac{\log(k_q+1)}{e_qf_q},\qquad
+ H=\sum_q\frac{k_q\log q}{e_q},
+\]
+so that the sum in \eqref{intro:margin} is $J-\delta H$. Sawin's
+criterion \cite[Proposition~10]{Sawin2026} applies to Galois CM fields
+$K$ of unbounded degree with relative root discriminant
+$\rd_{K/F}=\lambda$, and uses a sup-norm window with parameter $R>1$.
+In his example, as for our fields, $K/F$ is unramified at every finite
+place, so that $\lambda=\rd(K)$. Rearranged, his criterion gives
+arbitrarily large sets with $u(U)\gg|U|^{1+\delta}$ whenever
+\eqref{intro:sawin-margin} holds. Inequality \eqref{intro:regrouped} is
+\eqref{intro:margin} with $\mathcal A_\delta(\theta)$ written out from
+Proposition~\ref{geo:transfer} and regrouped:
+\begin{align}
+ &(J-\delta H)+\bigl(\log2\pi-\tfrac12\ell-1-\log\ell\bigr)
+ +\bigl(2\log(1-R^{-1})-2\delta\log(2R+e^{-H/2})\bigr)\ge0,
+ \label{intro:sawin-margin}\\
+ &(J-\delta H)+\bigl(\log2+(1-\theta)\log\pi-\tfrac12\ell-C\bigr)
+ +\bigl(\delta\ell-\delta\log2+(1-2\theta)J_C+\theta J_D\bigr)>0.
+ \label{intro:regrouped}
+\end{align}
+Here $J_C$ and $J_D$ are the profile functionals of
+Section~\ref{geo:section}, for compact coordinates and complex pairs.
+In both inequalities the three groups are the gain from equal-norm
+choices, the loss in selecting a common ideal class, and the count of
+vertices with the window.
+
+\emph{The fields.} The two towers balance the first two groups
+differently. Sawin's example selects $22$ primes up to $179$, each with
+residue degree at most $2$. Its $\lambda$ is the square root of four
+times the product of the odd primes up to $43$, so $\ell>18.9$. Our
+tower is ramified only at the primes up to $13$. It selects the $11$
+primes up to $31$, with the local indices of
+Theorem~\ref{tw:field-family}, and $\ell<6.37$. The relation
+calculation of Section~\ref{intro:local} proves that this tower is
+infinite.
+The finite shells of Section~\ref{intro:profiles} then replace each
+summand of $J-\delta H$ by an optimized shell functional. Sawin
+suggested seeking towers with different local conditions
+\cite{Sawin2026}.
+
+\emph{Ideal-class selection.} Both criteria pay for selecting a common
+ideal class. The analytic class-number formula, which is exact in either
+signature, expresses this cost through $\lambda$ and $L_F(1)$; Sawin
+estimates it with Louboutin's bound. At $\theta=0$ the constants agree, and the groups differ only
+in $C$ against $1+\log\ell$. Sawin's term $1+\log\ell$ is the sum of
+$\log(e/2)+\log\ell$ and $\log2$. The first comes from Louboutin's
+relative class-number bound \cite[Corollary~3]{Louboutin2000}. Read
+through the class-number formula, that bound gives
+$d^{-1}\log L_F(1)\le\log(e/2)+\log\ell+o(1)$ for CM fields. The second
+is the factor $2^d$ allowed for units in Sawin's modified class group
+\cite[Lemma~6]{Sawin2026}. Sawin suggested proving a sharper
+class-group bound for the relevant fields. The earlier manuscript
+removed the unit factor and sharpened Louboutin's bound with the Euler
+product of a fixed multiquadratic subfield. Here
+Proposition~\ref{geo:mass} accounts for the unit index exactly, and the
+Euler calculation of Section~\ref{intro:local} gives $C=\ceiling$. By
+contrast, $1+\log\ell$ exceeds $2.85$ at our value of $\lambda$ and
+$3.9$ at Sawin's. Mixed signature costs $\theta\log\pi$ in this group,
+since each place of $F$ carries one factor $\pi$ in the class-number
+formula: a complex place carries $\pi$ where two real places carry
+$\pi^2$.
+
+\emph{Vertices and window.} Sawin counts the vertices in his window by
+packing. This gives $\delta(H+2\log(2R+e^{-H/2}))$, which does not
+involve $\lambda$. Counting by covolume, through Banaszczyk's
+transference theorem in the earlier manuscript and Poisson summation
+here, returns $\delta\ell$, because a larger discriminant makes the
+ideal lattice sparser. The overlap $2\log(1-R^{-1})$ of the sup-norm
+window and its volume become the profile functionals. The earlier
+manuscript used Euclidean balls. We use a Gaussian at compact
+coordinates and the coupled profile of Section~\ref{intro:profiles} at
+complex pairs.
+
+\emph{Signature.} CM fields have $\theta=0$. With the other data fixed,
+the signature adds $\theta(J_D-2J_C-\log\pi)$ to the left side of
+\eqref{intro:regrouped}. Section~\ref{sec:certificate} certifies
+$J_D-2J_C-\log\pi>0.649$. Since $\theta\ge\thetastar$, this term
+exceeds $0.32$. The certified margin of the final construction is only
+about $5.3\times10^{-6}$.
+
+This is why mixed signature helps. In a CM field, every norm-one
+element has modulus one at every archimedean coordinate. The norm-one
+units are finite, and the displacements lie on a torus. Above a complex
+place of $F$, the two coordinates of a norm-one element can instead
+have moduli $e^u$ and $e^{-u}$. The norm-one units, of rank $c$, move
+$u$ along a lattice of covolume $R_U$. A count of displacements in a
+fixed region would depend on the shape of this lattice. Averaging over
+a fundamental domain of the lattice makes the count exact: it is an
+integral over $u$ divided by $R_U$. The class-number formula of
+Proposition~\ref{geo:mass} then cancels $R_U$ together with the
+capitulation kernel $\kappa$. The unit rank itself therefore costs
+nothing, and mixed signature costs only the factor $\pi$ per complex
+place noted above. In exchange, the window gains a one-parameter family
+of displacements at each complex place. The pair functional $J_D$
+integrates over this family, and it exceeds $2J_C+\log\pi$ by more than
+$0.649$.
+
+The signature also matters for the tower, although the comparison at
+fixed data does not measure this. At infinity, the presentation of
+Lemma~\ref{tw:complete-global-presentation} imposes only the relation
+$c^2$ on complex conjugation $c$. A CM field requires complex
+conjugation to be central in $\Gal(K/\Q)$, which the tower would have
+to impose by further relations.
 
 \subsection{Computation and Formalization}
 

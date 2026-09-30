@@ -1625,14 +1625,14 @@
       "sha256": "9b4a3282dc0964b5c4573314c050b51d844a3bdeead9cbc637d6ff28fd7dd69d"
     },
     "docs/manuscript/README.md": {
-      "bytes": 8181,
+      "bytes": 9268,
       "origin": "papers/0.0418235/README.md",
-      "sha256": "dfe63c70717eed3a8fba7798fca53129421695afa5942acc8540e17db395d3f9"
+      "sha256": "d1893de66ca266f9d316bae25065f70035973b3e1eb6da03e3ff118857a6cee2"
     },
     "docs/manuscript/main.pdf": {
-      "bytes": 640050,
+      "bytes": 651890,
       "origin": "papers/0.0418235/main.pdf",
-      "sha256": "dc8eec2b8d2d27b5a7b65577ee9ce075f043542ab36ab0900b840717b3b653c8"
+      "sha256": "59ca0a12e7e197e6557bda2d2d124828e222c56a63f771a6cb7dec5fc061c5fb"
     },
     "docs/manuscript/main.tex": {
       "bytes": 2786,
@@ -1670,9 +1670,9 @@
       "sha256": "fad5fdfa3edead7375bee66657e01a0588a1f295e17b9683387c24f613dee1f1"
     },
     "docs/manuscript/sections/introduction.tex": {
-      "bytes": 13216,
+      "bytes": 21651,
       "origin": "papers/0.0418235/sections/introduction.tex",
-      "sha256": "f7ce9eab5416224f732d11d3f83b3e786becc4f1ba227cddd4fc6d494d4fe27e"
+      "sha256": "ef636eaa796ff4fb949cf4a0c6f58869cf013c96c64da821d1fe121ca24e569d"
     },
     "docs/manuscript/sections/profiles.tex": {
       "bytes": 18330,
@@ -1835,9 +1835,9 @@
       "sha256": "c3ef72268b6e958115eebb056c8a88d728bf597300c92cf72cc17388c188d7b0"
     },
     "docs/quadratic-base-research/research/construction.md": {
-      "bytes": 14638,
+      "bytes": 14813,
       "origin": "papers/0.04273/research/construction.md",
-      "sha256": "c9c37f0c115795d835c5434e77ab24e1e11225d068304795dd0823d9305ff6c7"
+      "sha256": "af620ce62e473c871d1fdd639952b894841f64534f5a448dab0cd8e2823ff54c"
     },
     "docs/quadratic-base-research/research/design-model/amort.py": {
       "bytes": 769,
@@ -7116,9 +7116,9 @@
       "sha256": "c3ef72268b6e958115eebb056c8a88d728bf597300c92cf72cc17388c188d7b0"
     },
     "docs/quadratic-base-research/research/construction.md": {
-      "bytes": 14638,
+      "bytes": 14813,
       "origin": "papers/0.04273/research/construction.md",
-      "sha256": "c9c37f0c115795d835c5434e77ab24e1e11225d068304795dd0823d9305ff6c7"
+      "sha256": "af620ce62e473c871d1fdd639952b894841f64534f5a448dab0cd8e2823ff54c"
     },
     "docs/quadratic-base-research/research/design-model/amort.py": {
       "bytes": 769,
