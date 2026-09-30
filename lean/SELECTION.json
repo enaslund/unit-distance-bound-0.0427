@@ -19884,12 +19884,12 @@
       "sha256": "61d57af876b06bd000026a0b1db6c790b6e2e047a68111a440c771346963314f"
     },
     "formalization-zeta.yaml": {
-      "bytes": 22832,
-      "sha256": "140999b6f22d1ffb44182cb6b490fcebda4dc5538b3d4b47a6aff81ab485874d"
+      "bytes": 22935,
+      "sha256": "005599f5068fbbea9ac20584591a758461ebe6f77a2dbc50ba0f276b22dd43dc"
     },
     "formalization-zeta241.yaml": {
-      "bytes": 19590,
-      "sha256": "007f568ec5500c77678f661a448dacf5a6ed2c8e0d447d2d37b3056ec4c53ca6"
+      "bytes": 19521,
+      "sha256": "1ae7ab68b1438e87f19f753d4bc01aa7f7a7ec8ffd04ca115a9ebb7df6587bcc"
     },
     "lake-manifest.json": {
       "bytes": 3167,

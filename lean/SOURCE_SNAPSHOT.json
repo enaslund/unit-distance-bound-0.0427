@@ -33,7 +33,7 @@
   },
   "SELECTION.json": {
     "bytes": 1450688,
-    "sha256": "ec402a952ed166e4df7c146b0035cf7eb1f9f62d427e48d4be9da57a060c7f95"
+    "sha256": "6b3227275ebca8ec2aeb0eb83626d662d79a3c0714d36b53cfb420533a236319"
   },
   "SolutionZeta.lean": {
     "bytes": 6026,
@@ -9988,12 +9988,12 @@
     "sha256": "61d57af876b06bd000026a0b1db6c790b6e2e047a68111a440c771346963314f"
   },
   "formalization-zeta.yaml": {
-    "bytes": 22832,
-    "sha256": "140999b6f22d1ffb44182cb6b490fcebda4dc5538b3d4b47a6aff81ab485874d"
+    "bytes": 22935,
+    "sha256": "005599f5068fbbea9ac20584591a758461ebe6f77a2dbc50ba0f276b22dd43dc"
   },
   "formalization.yaml": {
-    "bytes": 19590,
-    "sha256": "007f568ec5500c77678f661a448dacf5a6ed2c8e0d447d2d37b3056ec4c53ca6"
+    "bytes": 19521,
+    "sha256": "1ae7ab68b1438e87f19f753d4bc01aa7f7a7ec8ffd04ca115a9ebb7df6587bcc"
   },
   "lake-manifest.json": {
     "bytes": 3167,
