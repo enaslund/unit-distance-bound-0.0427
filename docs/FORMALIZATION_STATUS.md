@@ -72,7 +72,7 @@ The repository is ready for submission to the Palomar registry: project
 `lean/comparator-zeta241.json`. No submission has been made. The current
 `lean/` is the export of research commit `72581dda`. Since the package that
 passed at `6ebff18`, the introduction of the 0.0418235 paper was revised,
-the 1.04273 note gained its AI-use statement, and the metadata now cites
+the 1.04273 note gained its AI Methodology statement, and the metadata now cites
 both papers at commit `81755b0`, which carries these versions. Only the
 paper copies under `lean/docs`, the paper citations in the two metadata
 files, and `SELECTION.json` and `SOURCE_SNAPSHOT.json` differ; no Lean file

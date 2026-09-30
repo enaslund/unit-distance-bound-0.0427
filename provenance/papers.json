@@ -32,8 +32,17 @@
     "papers/0.0418235/main.pdf",
     "papers/0.04273/research/construction.md"
    ],
-   "via": "research repository, unchanged: the September 30, 2026 revision that added an outline and a term-by-term comparison with Sawin's criterion to the 0.0418235 introduction, and the AI-use statement to the 1.04273 research note",
+   "via": "research repository, unchanged: the September 30, 2026 revision that added an outline and a term-by-term comparison with Sawin's criterion to the 0.0418235 introduction, and the AI Methodology statement to the 1.04273 research note",
    "research_commit": "e221d03b17745051bcb96121e627da9799ce9bfd"
+  },
+  {
+   "paths": [
+    "papers/0.0358324/preamble.tex",
+    "papers/0.0358324/main.tex",
+    "papers/0.0358324/main.pdf"
+   ],
+   "via": "research repository, unchanged: the September 30, 2026 revision that added the author asterisk and the AI Methodology statement to the historical paper",
+   "research_commit": "1a9976c0ed74883a8b422edd2e03ea65b62f5ccb"
   }
  ],
  "files": {
@@ -86,22 +95,22 @@
    "bytes": 11856
   },
   "papers/0.0358324/main.pdf": {
-   "research_source": "publication/unit-distance-delta-0.0358324-historical/main.pdf",
-   "research_commit": "abf46882f6cf71d515087fbf1d849a64a2a53593",
-   "sha256": "d694b82470ecec5aae8ca8809e9ad2f789c4c15246cb7fa309f3fcac13849a04",
-   "bytes": 620354
+   "research_source": "papers/0.0358324/main.pdf",
+   "research_commit": "1a9976c0ed74883a8b422edd2e03ea65b62f5ccb",
+   "sha256": "a4ec121de98a4bd12a80ca4aefd6a2e293b5bd1ede4e235245150d54f6467a04",
+   "bytes": 652919
   },
   "papers/0.0358324/main.tex": {
-   "research_source": "publication/unit-distance-delta-0.0358324-historical/main.tex",
-   "research_commit": "abf46882f6cf71d515087fbf1d849a64a2a53593",
-   "sha256": "6abd7b4c378d2ac68b4b84dec28ff8879506889450a4009a3b072b224a237ca2",
-   "bytes": 5294
+   "research_source": "papers/0.0358324/main.tex",
+   "research_commit": "1a9976c0ed74883a8b422edd2e03ea65b62f5ccb",
+   "sha256": "6d4e67e0b3788a8e76438bfe855d1784962adeedaff1fe8f87d3fa3c5158a67d",
+   "bytes": 5643
   },
   "papers/0.0358324/preamble.tex": {
-   "research_source": "publication/unit-distance-delta-0.0358324-historical/preamble.tex",
-   "research_commit": "abf46882f6cf71d515087fbf1d849a64a2a53593",
-   "sha256": "8e3c023946768889fbfa984c1fd568719041b25f511ae669d50b5b98b5b4af3a",
-   "bytes": 1402
+   "research_source": "papers/0.0358324/preamble.tex",
+   "research_commit": "1a9976c0ed74883a8b422edd2e03ea65b62f5ccb",
+   "sha256": "6a9439c423167382bef9f83035041bb8114bde63d2d787c54864735c2d2d8e4a",
+   "bytes": 1435
   },
   "papers/0.0358324/references.bib": {
    "research_source": "publication/unit-distance-delta-0.0358324-historical/references.bib",
