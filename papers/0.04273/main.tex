@@ -1,0 +1,93 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array,microtype}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={A Lower Bound with Exponent 1.04273 for the Unit Distance Problem},
+ pdfauthor={Eric Naslund}}
+\numberwithin{equation}{section}
+% Theorems and equations share one counter, so every number is unique.
+\newtheorem{theorem}[equation]{Theorem}
+\newtheorem{proposition}[equation]{Proposition}
+\newtheorem{lemma}[equation]{Lemma}
+\newtheorem{corollary}[equation]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[equation]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[equation]{Remark}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\rd}{rd}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\inv}{inv}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\covol}{covol}
+\newcommand{\Ftwo}{\mathbb F_2}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\deltastar}{0.04273}
+\newcommand{\thetastar}{65535/131072}
+\newcommand{\ceiling}{0.04871285}
+\setcounter{tocdepth}{1}
+\raggedbottom
+\title[The Unit Distance Problem]{A Lower Bound with Exponent 1.04273\\for the Unit Distance Problem}
+\author[Eric Naslund]{Eric Naslund\textsuperscript{*}}
+\email{naslund.math@gmail.com}
+\date{September 30, 2026}
+\begin{document}
+\begin{abstract}
+Let $u(U)$ count the unordered pairs at distance one in a finite planar
+set $U$. We construct finite sets $U_j$ with $|U_j|\to\infty$ and
+$u(U_j)/|U_j|^{1.04273}\to\infty$. The largest exponent previously
+claimed, $1.0418235$, is in the author's unpublished manuscript. The
+method is the number-field construction of OpenAI and Sawin, in the form
+developed there: unit distances come from elements of relative norm one
+in quadratic extensions of mixed signature, and the fields come from an
+infinite pro-$2$ class field tower. The new ingredient is a tower over
+the real quadratic field $\Q(\sqrt{241})$, in which $2$, $3$ and $5$
+split. Its Golod--Shafarevich polynomial contains two copies of the local
+conditions at these primes but only one constant term, and the extra room
+lets the tower avoid ramification at $7$, $11$ and $13$. The root
+discriminant of the fields falls from about $583$ to about $286$. The
+relative zeta value is bounded through the $255$ quadratic Hecke
+$L$-functions of the degree-$512$ field generated over $\Q(\sqrt{241})$ by
+the square roots of its $\{2,3,5\}$-units. Finite facts and numerical
+inequalities are certified by exact computation and interval arithmetic.
+\end{abstract}
+\maketitle
+
+% AI Methodology statement, referenced by the asterisk on the author's name.
+{\noindent\small\textsuperscript{*}\textbf{AI Methodology.} The
+construction over $\Q(\sqrt{241})$, the computations that certify it, the
+Lean formalization of the reduction of Theorem~\ref{thm:main} to one
+explicit zeta inequality (Remark~\ref{an:lean-hypothesis}), and this paper
+were produced with Claude Opus~5.5 (Anthropic), working as an agent in
+Claude Code. The construction adapts the author's previous manuscript
+\cite{Naslund0418235}, which was also written with AI tools. The
+arguments were checked by independent AI referees working in separate
+contexts, and the finite computations are reproducible from the
+supplementary programs described in Section~\ref{intro:code}. The listed
+human author is responsible for having supervised and prompted the AI
+agents that produced this work.\par}
+\medskip
+
+\input{sections/introduction}
+\tableofcontents
+\input{sections/tower}
+\input{sections/genus-field}
+\input{sections/analytic}
+\input{sections/geometry}
+\input{sections/finite-windows}
+\input{sections/profiles}
+\input{sections/certificate}
+
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}

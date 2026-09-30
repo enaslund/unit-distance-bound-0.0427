@@ -8,7 +8,7 @@ bound is asserted for every sufficiently large `n`.
 
 | Result | Source | Status |
 | --- | --- | --- |
-| **Exponent 1.04273** (main result) | [papers/0.04273](papers/0.04273/README.md) | September 29, 2026: the tower of the 1.0418235 construction built over the real quadratic field ℚ(√241). Research note with a computer-assisted certificate and a finite replay; three independent AI referee reviews reported no mathematical error within their scopes. Not yet a self-contained manuscript. |
+| **Exponent 1.04273** (main result) | [PDF](papers/0.04273/main.pdf) · [sources and certificate](papers/0.04273/README.md) | Manuscript of September 30, 2026: the tower of the 1.0418235 construction built over the real quadratic field ℚ(√241), with a computer-assisted certificate and a finite replay. Independent AI referee reviews found no mathematical error; it has not been peer reviewed. |
 | Exponent 1.0418235 | [PDF](papers/0.0418235/main.pdf) · [sources and certificate](papers/0.0418235/README.md) | Manuscript with a computer-assisted certificate. |
 | Exponent 1.0358324 | [PDF](papers/0.0358324/main.pdf) · [sources](papers/0.0358324/README.md) | Historical manuscript, kept for the record. |
 
@@ -57,7 +57,7 @@ Palomar's pinned verifier on this repository's exact commit.
 
 ## Authorship, licensing and provenance
 
-The papers, the research note and the formalization were produced with AI
+The papers and the formalization were produced with AI
 tools under Eric Naslund's direction; each paper carries its own disclosure,
 and [`lean/NOTICE`](lean/NOTICE) credits the formalization's contributors and
 vendored sources. The root [LICENSE](LICENSE) (Apache-2.0) covers the
