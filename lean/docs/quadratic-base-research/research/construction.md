@@ -6,9 +6,8 @@ Eric Naslund\*
 responsible for having supervised and prompted the AI agents that wrote
 this note.
 
-**Superseded.** The self-contained manuscript *A Lower Bound with Exponent
-1.04273 for the Unit Distance Problem* ([../main.pdf](../main.pdf), September 30,
-2026) proves this result; this note is kept as the research record. The
+**Superseded.** The self-contained manuscript *An Exponent of 1.04273 for
+the Unit Distance Problem* ([../main.pdf](../main.pdf), September 30, 2026) proves this result; this note is kept as the research record. The
 manuscript rounds several constants below in the safe direction, for
 example the upper endpoint 0.08264460807138 of the enclosure in §4.2.
 

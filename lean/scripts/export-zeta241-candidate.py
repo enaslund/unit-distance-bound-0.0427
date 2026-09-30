@@ -31,6 +31,7 @@ import importlib.util
 import json
 from pathlib import Path
 import re
+import subprocess
 import sys
 import tomllib
 
@@ -305,7 +306,15 @@ def capture(root, tolerate_missing=False):
 
     research = {}
     research_dir = root.parent / RESEARCH_SOURCE
-    for path in sorted(research_dir.rglob("*")):
+    # Only files tracked by git are exported: build byproducts and generated,
+    # git-ignored data (for example main.log or certificates/lrows241.json)
+    # stay out of the archive.
+    tracked = subprocess.run(["git", "-C", str(root.parent), "ls-files", "-z", "--", RESEARCH_SOURCE.as_posix()],
+                             check=True, capture_output=True).stdout.decode().split("\0")
+    tracked_paths = sorted(root.parent / name for name in tracked if name)
+    if not tracked_paths:
+        raise ValueError(f"No tracked files under {RESEARCH_SOURCE}")
+    for path in tracked_paths:
         relative = path.relative_to(research_dir)
         if any(part in SKIPPED_RESEARCH_PARTS for part in relative.parts):
             continue

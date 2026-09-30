@@ -36,10 +36,10 @@ classification:
   - 11R37
   - 20C05
 sources:
-- title: A lower bound with exponent 1.04273 for the unit distance problem
+- title: An exponent of 1.04273 for the unit distance problem
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/d293700740582b8992d30afb76e9968ea5c61b49/papers/0.04273/main.tex
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/aee1d020ae5b09d0f86c394b6696ac34cecced92/papers/0.04273/main.tex
   type: paper
   location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.04273/ at the cited commit
     (main.tex, sections/, certificates/). The source archive includes these materials under

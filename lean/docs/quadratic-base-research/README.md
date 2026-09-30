@@ -1,9 +1,9 @@
-# A lower bound with exponent 1.04273 for the unit distance problem
+# An exponent of 1.04273 for the unit distance problem
 
 [Read the manuscript](main.pdf) · [LaTeX source](main.tex) · [Bibliography](references.bib)
 
-*A Lower Bound with Exponent 1.04273 for the Unit Distance Problem*, Eric
-Naslund (September 30, 2026). The theorem constructs finite planar sets U_j with
+*An Exponent of 1.04273 for the Unit Distance Problem*, Eric Naslund
+(September 30, 2026). The theorem constructs finite planar sets U_j with
 |U_j| → ∞ and u(U_j)/|U_j|^{1.04273} → ∞, where u counts unordered pairs at
 distance one; so u(n) ≥ n^{1.04273} for arbitrarily large n. This improves the
 exponent 1.0418235 of the [previous manuscript](../0.0418235/README.md).

@@ -80,8 +80,9 @@ Four referees reviewed the integrated draft.
   * The trade-off of the base field is stated precisely.
   * A new subsection gives the location of the programs and the software
     versions.
-* **Title.** It is now *A Lower Bound with Exponent 1.04273 for the Unit
-  Distance Problem*.
+* **Title.** A referee found the working title *A Lower Exponent of 1.04273
+  for Planar Unit Distances* ambiguous; at the author's request the title is
+  *An Exponent of 1.04273 for the Unit Distance Problem*.
 
 ## Round 3: the new tower arguments
 
