@@ -1,0 +1,2 @@
+guarded-build: admitted with 14.9 GiB host available; cgroup headroom 1.86 GiB; timeout 900s
+libc++abi: terminating due to uncaught exception of type lean::memory_exception: excessive memory consumption detected at 'interpreter' (potential solution: increase memory consumption threshold)

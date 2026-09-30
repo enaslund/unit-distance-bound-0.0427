@@ -1,0 +1,23 @@
+✔ [2037/2039] Built UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.MaximalQuotients.ResidualCore (3.6s)
+✔ [2050/2053] Built UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.MaximalQuotients.ResidualQuotient (3.5s)
+✔ [2051/2053] Built UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.MaximalQuotients.UniversalProperty (5.3s)
+✔ [2052/2064] Built UnitDistance.Upstream.Yamaguchi.ProCGroups.Completion.Construction (5.2s)
+✔ [2063/2083] Built UnitDistance.Upstream.Yamaguchi.ProCGroups.FreeProC.Construction (4.9s)
+✔ [2232/2232] Built UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.MinimalEpimorphism (4.8s)
+Build completed successfully (2232 jobs).
+Audited all 2142 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 2142 project declarations selected.
+Axiom audit: beginning ProCGroups.FiniteGroupClass.objectProperty.
+Axiom audit: beginning ProCGroups.Categorical.pullbackLiftCont_injective_of_right_injective.
+Axiom audit: beginning ProCGroups.ProfiniteGrp.eq_one_of_mem_all_openNormalSubgroups.
+Axiom audit: 500/2142 complete transitive axiom closures checked.
+Axiom audit: 1000/2142 complete transitive axiom closures checked.
+Axiom audit: 1500/2142 complete transitive axiom closures checked.
+Axiom audit: 2000/2142 complete transitive axiom closures checked.
+'ProCGroups.FreeProC.exists_finiteFreeProCSource_surjection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassFieldTower.ProP.ker_le_closedPowerCommutator_of_generatorRank_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

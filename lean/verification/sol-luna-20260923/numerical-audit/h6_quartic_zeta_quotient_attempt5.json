@@ -1,0 +1,17 @@
+{
+  "status": "DEFERRED before checker process launch",
+  "attempt": 5,
+  "checker_sha256": "1643a51379688ba6c1df0aee178f1759e16b8b4016e09c1394e648eabeee7905",
+  "guarded_command": "python3 automation/lean-formalization/guarded_build.py --timeout-seconds 900 -- env PYTHONPATH=/tmp/unit-distance-flint python3 lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py",
+  "guard_exit_code": 75,
+  "guard_message": "deferred: shared build lock busy or insufficient available RAM (host needs 10 GiB; cgroup needs 1 GiB)",
+  "log": "h6_quartic_zeta_quotient_attempt5.log",
+  "checker_started": false,
+  "comparison_performed": false,
+  "prior_attempt4_pass_preserved": "h6_quartic_zeta_quotient_attempt4.json",
+  "limits": [
+    "The guard did not admit this provenance-corrected replay.",
+    "Attempt4 remains the only completed comparison.",
+    "No new numerical result is asserted."
+  ]
+}

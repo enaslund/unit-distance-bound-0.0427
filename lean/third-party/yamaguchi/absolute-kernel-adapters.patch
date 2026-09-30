@@ -1,0 +1,396 @@
+--- upstream/Lean4/SawinTotallyRealTowers/AbsoluteRealProPFactor.lean
++++ adapted/Lean4/SawinTotallyRealTowers/AbsoluteProPFactor.lean
+@@ -1,9 +1,13 @@
+-import SawinTotallyRealTowers.AbsoluteRealKernelField
+-import SawinTotallyRealTowers.AbsoluteRealProPRestriction
+-import SawinTotallyRealTowers.FiniteRealPExtension
+-import SawinTotallyRealTowers.MaximalRealProPOutside
++/-
++Adapted from Naganori Yamaguchi, SawinTotallyRealTowers, commit
++3a455e1aa9140dbbe7b7d68f508392a69c86d0f4, under Apache-2.0.
++Source: SawinTotallyRealTowers/AbsoluteRealProPFactor.lean.
++Modified: the kernel field need only satisfy actual finite ramification support; total reality is removed.
++-/
++import SawinTotallyRealTowers.AbsoluteProPRestriction
++import SawinTotallyRealTowers.FinitePExtension
++import SawinTotallyRealTowers.MaximalProPOutside
+ import SawinTotallyRealTowers.RamificationSupport
+-import SawinTotallyRealTowers.RealCompositum
+ import SawinTotallyRealTowers.UnramifiedProPRelationRank.Kummer.AbsoluteDiscreteKernelField
+ import SawinTotallyRealTowers.UnramifiedProPRelationRank.Kummer.AbsoluteMuPTopRep
+ import SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePlaceH2Localization
+@@ -28,10 +32,10 @@
+ set_option autoImplicit false
+ 
+ /-!
+-# Factoring representations through the maximal real pro-p compositum
++# Factoring representations through the maximal pro-p compositum
+ 
+ A discrete p-group representation killing finite inertia outside the chosen
+-support and the real Artin value of negative one has an actual finite Galois
++support has an actual finite Galois
+ kernel field satisfying the defining local conditions. Its inclusion in the
+ constructed compositum gives a continuous factorization through restriction.
+ The target need not be finite, and the argument does not require p to be odd.
+@@ -42,9 +46,9 @@
+ 
+ noncomputable section
+ 
+-namespace ClassFieldTower.Sawin
++namespace UnitDistance.ArithmeticProP
+ 
+-open ClassFieldTower.Martinet.Shafarevich
++open ClassFieldTower.Sawin ClassFieldTower.Martinet.Shafarevich
+ 
+ -- Keep the algebraic-closure and intermediate-field scalar structures
+ -- generic until the two local comparisons have been proved.
+@@ -88,19 +92,18 @@
+   rw [absoluteDiscreteKernelField_fixingSubgroup] at hFixed
+   exact hFixed
+ 
+-/-- Killing the specified finite inertia and real conjugation gives a
+-continuous factor through the actual maximal real pro-p extension. -/
+-theorem exists_maximalRealProPOutside_factor_of_inertia_and_infiniteArtin_trivial
++/-- Killing the specified finite inertia gives a
++continuous factor through the actual maximal pro-p extension. -/
++theorem exists_maximalProPOutside_factor_of_inertia_trivial
+     (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     {Q : Type*} [Group Q] [TopologicalSpace Q] [DiscreteTopology Q]
+     (hP : IsPGroup p Q) (s : Field.absoluteGaloisGroup ℚ →ₜ* Q)
+     (hs : ∀ v : HeightOneSpectrum (𝓞 ℚ), v ∉ T →
+       ∀ σ : finitePlaceAbsoluteInertiaSubgroup ℚ v,
+         s (finitePlaceAbsoluteDecompositionInclusion ℚ v
+-          (finitePlaceAbsoluteInertiaInclusion ℚ v σ)) = 1)
+-    (hInfinity : s (absoluteInfinitePlaceArtinNegOne ℚ Rat.infinitePlace) = 1) :
+-    ∃ t : (maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T) →ₜ* Q,
+-      t.comp (absoluteToMaximalRealProPOutside p T) = s := by
++          (finitePlaceAbsoluteInertiaInclusion ℚ v σ)) = 1) :
++    ∃ t : (maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T) →ₜ* Q,
++      t.comp (absoluteToMaximalProPOutside p T) = s := by
+   let M : IntermediateField ℚ (AlgebraicClosure ℚ) := absoluteDiscreteKernelField ℚ s
+   let : IsGalois ℚ M := absoluteDiscreteKernelField_isGalois ℚ s
+   let : NumberField M := NumberField.of_module_finite ℚ M
+@@ -112,36 +115,29 @@
+       (finitePlaceBelow (K := ℚ) P) P rfl
+     exact discreteKernel_chosenUnramified ℚ s (finitePlaceBelow (K := ℚ) P)
+       (hs (finitePlaceBelow (K := ℚ) P) hPOutside)
+-  have hReal : IsTotallyReal M := by
+-    apply absoluteDiscreteKernelField_isTotallyReal_of_infiniteArtin ℚ s
+-    intro v
+-    rw [Subsingleton.elim v Rat.infinitePlace]
+-    exact hInfinity
+-  have hInfinite : IsUnramifiedAtInfinitePlaces ℚ M :=
+-    (isUnramifiedAtInfinitePlaces_rat_iff_isTotallyReal M).mpr hReal
+   let E : FiniteGaloisIntermediateField ℚ (AlgebraicClosure ℚ) :=
+     { toIntermediateField := M
+       finiteDimensional := inferInstance
+       isGalois := absoluteDiscreteKernelField_isGalois ℚ s }
+-  have hM : M ≤ maximalRealProPOutside p T :=
+-    le_maximalRealProPOutside ⟨E, hPM, hFinite, hInfinite⟩
+-  have hKer : (absoluteToMaximalRealProPOutside p T).toMonoidHom.ker ≤
++  have hM : M ≤ maximalProPOutside p T :=
++    le_maximalProPOutside ⟨E, hPM, hFinite⟩
++  have hKer : (absoluteToMaximalProPOutside p T).toMonoidHom.ker ≤
+       s.toMonoidHom.ker := by
+     intro σ hσ
+-    rw [absoluteToMaximalRealProPOutside_ker] at hσ
++    rw [absoluteToMaximalProPOutside_ker] at hσ
+     apply discreteKernel_eq_one_of_fixes ℚ s σ
+     intro x
+     exact hσ ⟨x, hM x.property⟩
+   let q : (Field.absoluteGaloisGroup ℚ ⧸
+-      (absoluteToMaximalRealProPOutside p T).toMonoidHom.ker) →ₜ* Q :=
++      (absoluteToMaximalProPOutside p T).toMonoidHom.ker) →ₜ* Q :=
+     ProCGroups.QuotientGroup.liftₜ
+-      (absoluteToMaximalRealProPOutside p T).toMonoidHom.ker s hKer
+-  let e := absoluteRealProPOutsideQuotientEquiv p T
++      (absoluteToMaximalProPOutside p T).toMonoidHom.ker s hKer
++  let e := absoluteProPOutsideQuotientEquiv p T
+   refine ⟨q.comp e.symm, ?_⟩
+   ext σ
+-  change q (e.symm (absoluteToMaximalRealProPOutside p T σ)) = s σ
+-  rw [← absoluteRealProPOutsideQuotientEquiv_mk p T σ, e.symm_apply_apply]
++  change q (e.symm (absoluteToMaximalProPOutside p T σ)) = s σ
++  rw [← absoluteProPOutsideQuotientEquiv_mk p T σ, e.symm_apply_apply]
+   exact ProCGroups.QuotientGroup.liftₜ_apply_mk
+-    (absoluteToMaximalRealProPOutside p T).toMonoidHom.ker s hKer σ
++    (absoluteToMaximalProPOutside p T).toMonoidHom.ker s hKer σ
+ 
+-end ClassFieldTower.Sawin
++end UnitDistance.ArithmeticProP
+--- upstream/Lean4/SawinTotallyRealTowers/RealCentralLiftCorrection.lean
++++ adapted/Lean4/SawinTotallyRealTowers/CentralLiftCorrection.lean
+@@ -1,3 +1,9 @@
++/-
++Adapted from Naganori Yamaguchi, SawinTotallyRealTowers, commit
++3a455e1aa9140dbbe7b7d68f508392a69c86d0f4, under Apache-2.0.
++Source: SawinTotallyRealTowers/RealCentralLiftCorrection.lean.
++Modified: only finite inertia is corrected; the global character is allowed arbitrary real behavior and no real-place hypothesis is used.
++-/
+ import ValuedFieldTheory.Ramification.HilbertRamification.DecompositionField
+ import GaloisCohomology.ProP.H2CocycleExtension
+ import GaloisCohomology.ProP.QuotientRestriction
+@@ -5,7 +11,6 @@
+ import GaloisCohomology.ProP.H2CocycleExtensionPullback
+ import GaloisCohomology.ProP.H2CocycleExtensionLinearLifts
+ import GaloisCohomology.ProP.H2CocycleExtensionLiftDifference
+-import SawinTotallyRealTowers.AbsoluteRealKernelField
+ import SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePlaceH2Localization
+ import SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePlaceUnramifiedH1
+ import SawinTotallyRealTowers.RealCharacterInertiaExistence
+@@ -16,13 +21,13 @@
+ set_option autoImplicit false
+ 
+ /-!
+-# Removing unwanted inertia and real conjugation from cocycle lifts
++# Removing unwanted inertia from cocycle lifts
+ 
+ Local unramified degree-two vanishing constructs the reference lifts. The
+ actual absolute lift has finite ramification support; its differences from
+ these reference lifts are genuine local characters. Prime three absorbs the
+ rational radical obstruction, and a global character corrects all outside
+-inertia and the real value without changing the projected homomorphism.
++inertia without changing the projected homomorphism.
+ -/
+ 
+ open scoped NumberField Topology
+@@ -30,9 +35,9 @@
+ 
+ noncomputable section
+ 
+-namespace ClassFieldTower.Sawin
++namespace UnitDistance.ArithmeticProP
+ 
+-open ClassFieldTower.Cohomology ClassFieldTower.ProP
++open ClassFieldTower.Sawin ClassFieldTower.Cohomology ClassFieldTower.ProP
+ open ClassFieldTower.Martinet.Shafarevich ProCGroups
+ 
+ /-- The actual unramified local quotient supplies an inertia-trivial solution
+@@ -86,8 +91,8 @@
+   · exact hs
+ 
+ /-- Finite ramification of an actual absolute lift permits a global character
+-correction killing all prescribed outside inertia and real conjugation. -/
+-theorem exists_character_corrected_absolute_cocycle_lift
++correction killing all prescribed outside inertia. -/
++theorem exists_inertia_corrected_absolute_cocycle_lift
+     (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (hThree : (Rat.HeightOneSpectrum.primesEquiv (R := 𝓞 ℚ)).symm
+       (⟨3, Nat.prime_three⟩ : Nat.Primes) ∈ T)
+@@ -98,15 +103,12 @@
+     (hs : (H2CocycleExtension.projection z).comp s = q)
+     (hInertia : ∀ (v : HeightOneSpectrum (𝓞 ℚ)), v ∉ T →
+       ∀ σ : finitePlaceAbsoluteInertiaSubgroup ℚ v,
+-        q (finitePlaceAbsoluteDecompositionInclusion ℚ v σ.1) = 1)
+-    (hReal : q (absoluteInfinitePlaceArtinNegOne ℚ Rat.infinitePlace) = 1) :
++        q (finitePlaceAbsoluteDecompositionInclusion ℚ v σ.1) = 1) :
+     ∃ γ : Field.absoluteGaloisGroup ℚ →ₜ* Multiplicative (ZMod 2),
+       (∀ (v : HeightOneSpectrum (𝓞 ℚ)), v ∉ T →
+         ∀ σ : finitePlaceAbsoluteInertiaSubgroup ℚ v,
+           H2CocycleExtension.twistByCharacter z s γ
+-            (finitePlaceAbsoluteDecompositionInclusion ℚ v σ.1) = 1) ∧
+-      H2CocycleExtension.twistByCharacter z s γ
+-        (absoluteInfinitePlaceArtinNegOne ℚ Rat.infinitePlace) = 1 := by
++            (finitePlaceAbsoluteDecompositionInclusion ℚ v σ.1) = 1) := by
+   classical
+   let : DiscreteTopology (H2CocycleExtension z) :=
+     (H2CocycleExtension.toProdHomeomorph z).symm.discreteTopology
+@@ -138,11 +140,9 @@
+         (s.comp (finitePlaceAbsoluteDecompositionInclusion ℚ v.1))
+         (t v.1 hv) (hProjection v.1 hv)
+     else 1
+-  let ε := Multiplicative.ofAdd
+-    (s (absoluteInfinitePlaceArtinNegOne ℚ Rat.infinitePlace)).left.down
+-  obtain ⟨γ, hγReal, hγInside, hγOutside⟩ :=
+-    exists_absoluteCharacter_with_prescribed_inertia_and_real_value T hThree S χ ε
+-  refine ⟨γ, ?_, ?_⟩
++  obtain ⟨γ, _hγReal, hγInside, hγOutside⟩ :=
++    exists_absoluteCharacter_with_prescribed_inertia_and_real_value T hThree S χ 1
++  refine ⟨γ, ?_⟩
+   · intro v hv σ
+     apply twist_eq_one_at z s γ _
+     · exact (DFunLike.congr_fun hs _).trans (hInertia v hv σ)
+@@ -164,8 +164,5 @@
+           exact hS (hFinite.mem_toFinset.mpr ⟨σ, hh⟩)
+         rw [hsσ]
+         exact hγOutside v hS hv σ
+-  · apply twist_eq_one_at z s γ _
+-    · exact (DFunLike.congr_fun hs _).trans hReal
+-    · exact hγReal Rat.infinitePlace
+ 
+-end ClassFieldTower.Sawin
++end UnitDistance.ArithmeticProP
+--- upstream/Lean4/SawinTotallyRealTowers/RealProTwoH2AbsoluteKernel.lean
++++ adapted/Lean4/SawinTotallyRealTowers/ProTwoH2AbsoluteKernel.lean
+@@ -1,14 +1,19 @@
++/-
++Adapted from Naganori Yamaguchi, SawinTotallyRealTowers, commit
++3a455e1aa9140dbbe7b7d68f508392a69c86d0f4, under Apache-2.0.
++Source: SawinTotallyRealTowers/RealProTwoH2AbsoluteKernel.lean.
++Modified: finite-inertia correction and actual unrestricted maximal pro-two factorization replace all real-place conditions.
++-/
+ import SawinTotallyRealTowers.FiniteKummerContinuousKernel
+-import SawinTotallyRealTowers.RealProPOpenNormalStage
+-import SawinTotallyRealTowers.RealProPStageRestriction
+-import SawinTotallyRealTowers.RealCentralLiftCorrection
+-import SawinTotallyRealTowers.AbsoluteRealKernelField
++import SawinTotallyRealTowers.ProPOpenNormalStage
++import SawinTotallyRealTowers.ProPStageRestriction
++import SawinTotallyRealTowers.CentralLiftCorrection
+ import SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePlaceH2Localization
+ import SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePlaceUnramifiedH1
+-import SawinTotallyRealTowers.AbsoluteRealProPFactor
+-import SawinTotallyRealTowers.AbsoluteRealProPRestriction
+-import SawinTotallyRealTowers.AbsoluteRealProPUnramified
+-import SawinTotallyRealTowers.MaximalRealProPOutside
++import SawinTotallyRealTowers.AbsoluteProPFactor
++import SawinTotallyRealTowers.AbsoluteProPRestriction
++import SawinTotallyRealTowers.AbsoluteProPUnramified
++import SawinTotallyRealTowers.MaximalProPOutside
+ import GaloisCohomology.ProP.H2CocycleExtension
+ import GaloisCohomology.ProP.H2CocycleExtensionLinearLifts
+ import GaloisCohomology.ProP.H2CocycleExtensionPullback
+@@ -22,12 +27,12 @@
+ set_option autoImplicit false
+ 
+ /-!
+-# Descending absolute degree-two vanishing to the actual real pro-two group
++# Descending absolute degree-two vanishing to the actual maximal pro-two group
+ 
+ An actual absolute cocycle lift is corrected at its finite ramification
+-support and at real conjugation. Its kernel field is an admissible finite
+-real two-extension, so the corrected lift factors through the constructed
+-maximal real pro-two compositum. Thus vanishing after absolute inflation
++support. Its kernel field is an admissible finite
++two-extension, so the corrected lift factors through the constructed
++maximal pro-two compositum. Thus vanishing after absolute inflation
+ already implies vanishing after inflation into this maximal group.
+ -/
+ 
+@@ -36,92 +41,88 @@
+ 
+ noncomputable section
+ 
+-namespace ClassFieldTower.Sawin
++namespace UnitDistance.ArithmeticProP
+ 
+-open ClassFieldTower.Cohomology ClassFieldTower.ProP
+-open ClassFieldTower.Martinet.Shafarevich
++open ClassFieldTower.Sawin ClassFieldTower.Cohomology ClassFieldTower.ProP
++open ClassFieldTower.Sawin ClassFieldTower.Martinet.Shafarevich
+ 
+ /-- Every absolute solution of a finite two-group cocycle embedding problem
+-comes from an actual solution on the maximal real pro-two group. -/
+-theorem exists_maximalRealProTwo_cocycle_lift_of_absolute_lift
++comes from an actual solution on the maximal pro-two group. -/
++theorem exists_maximalProTwo_cocycle_lift_of_absolute_lift
+     (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (hThree : (Rat.HeightOneSpectrum.primesEquiv (R := 𝓞 ℚ)).symm
+       (⟨3, Nat.prime_three⟩ : Nat.Primes) ∈ T)
+     {Q : Type} [Group Q] [TopologicalSpace Q] [DiscreteTopology Q] [Finite Q]
+     (hQ : IsPGroup 2 Q)
+-    (q : (maximalRealProPOutside 2 T ≃ₐ[ℚ] maximalRealProPOutside 2 T) →ₜ* Q)
++    (q : (maximalProPOutside 2 T ≃ₐ[ℚ] maximalProPOutside 2 T) →ₜ* Q)
+     (z : trivialZModPCocyclesLifted 2 Q 2)
+     (s : Field.absoluteGaloisGroup ℚ →ₜ* H2CocycleExtension z)
+     (hs : (H2CocycleExtension.projection z).comp s =
+-      q.comp (absoluteToMaximalRealProPOutside 2 T)) :
+-    ∃ t : (maximalRealProPOutside 2 T ≃ₐ[ℚ] maximalRealProPOutside 2 T) →ₜ*
++      q.comp (absoluteToMaximalProPOutside 2 T)) :
++    ∃ t : (maximalProPOutside 2 T ≃ₐ[ℚ] maximalProPOutside 2 T) →ₜ*
+         H2CocycleExtension z,
+       (H2CocycleExtension.projection z).comp t = q := by
+-  obtain ⟨γ, hInertia, hReal⟩ := exists_character_corrected_absolute_cocycle_lift
+-    T hThree (q.comp (absoluteToMaximalRealProPOutside 2 T)) z s hs
++  obtain ⟨γ, hInertia⟩ := exists_inertia_corrected_absolute_cocycle_lift
++    T hThree (q.comp (absoluteToMaximalProPOutside 2 T)) z s hs
+     (by
+       intro v hv σ
+-      change q (absoluteToMaximalRealProPOutside 2 T
++      change q (absoluteToMaximalProPOutside 2 T
+         (finitePlaceAbsoluteDecompositionInclusion ℚ v σ.1)) = 1
+-      rw [absoluteToMaximalRealProPOutside_inertia 2 T v hv σ, map_one])
+-    (by
+-      change q (absoluteToMaximalRealProPOutside 2 T
+-        (absoluteInfinitePlaceArtinNegOne ℚ Rat.infinitePlace)) = 1
+-      rw [absoluteToMaximalRealProPOutside_infiniteArtin, map_one])
++      rw [absoluteToMaximalProPOutside_inertia 2 T v hv σ, map_one])
+   obtain ⟨t, ht⟩ :=
+-    exists_maximalRealProPOutside_factor_of_inertia_and_infiniteArtin_trivial
++    exists_maximalProPOutside_factor_of_inertia_trivial
+       2 T (H2CocycleExtension.isPGroup z hQ)
+-      (H2CocycleExtension.twistByCharacter z s γ) hInertia hReal
++      (H2CocycleExtension.twistByCharacter z s γ) hInertia
+   refine ⟨t, ?_⟩
+   ext g
+-  obtain ⟨σ, rfl⟩ := absoluteToMaximalRealProPOutside_surjective 2 T g
++  obtain ⟨σ, rfl⟩ := absoluteToMaximalProPOutside_surjective 2 T g
+   have htσ := DFunLike.congr_fun ht σ
+   have hp := DFunLike.congr_fun
+     ((H2CocycleExtension.twistByCharacter_projection z s γ).trans hs) σ
+   exact (congrArg (H2CocycleExtension.projection z) htσ).trans hp
+ 
+ /-- At every actual finite two-group stage, the kernel of absolute inflation
+-is contained in the kernel of inflation to the maximal real pro-two group. -/
+-theorem maximalRealProTwo_H2_eq_zero_of_absolute_inflation_eq_zero
++is contained in the kernel of inflation to the maximal pro-two group. -/
++theorem maximalProTwo_H2_eq_zero_of_absolute_inflation_eq_zero
+     (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (hThree : (Rat.HeightOneSpectrum.primesEquiv (R := 𝓞 ℚ)).symm
+       (⟨3, Nat.prime_three⟩ : Nat.Primes) ∈ T)
+     {Q : Type} [Group Q] [TopologicalSpace Q] [DiscreteTopology Q] [Finite Q]
+     (hQ : IsPGroup 2 Q)
+-    (q : (maximalRealProPOutside 2 T ≃ₐ[ℚ] maximalRealProPOutside 2 T) →ₜ* Q)
++    (q : (maximalProPOutside 2 T ≃ₐ[ℚ] maximalProPOutside 2 T) →ₜ* Q)
+     (x : continuousCohomologyZModPLifted 2 Q 2)
+     (hx : (continuousCohomologyZModPMapLifted 2
+-      (q.comp (absoluteToMaximalRealProPOutside 2 T)) 2).hom x = 0) :
++      (q.comp (absoluteToMaximalProPOutside 2 T)) 2).hom x = 0) :
+     (continuousCohomologyZModPMapLifted 2 q 2).hom x = 0 := by
+-  let : IsGalois ℚ (maximalRealProPOutside 2 T) :=
+-    maximalRealProPOutside_isGalois 2 T
++  let : IsGalois ℚ (maximalProPOutside 2 T) :=
++    maximalProPOutside_isGalois 2 T
+   let z := degreeTwoCocycleRepresentative x
+   obtain ⟨s, hs⟩ := H2CocycleExtension.exists_lift_of_restriction_eq_zero
+-    (q.comp (absoluteToMaximalRealProPOutside 2 T)) z
++    (q.comp (absoluteToMaximalProPOutside 2 T)) z
+     (by simpa only [z, degreeTwoCocycleRepresentative_π] using hx)
+   obtain ⟨t, ht⟩ :=
+-    exists_maximalRealProTwo_cocycle_lift_of_absolute_lift T hThree hQ q z s hs
++    exists_maximalProTwo_cocycle_lift_of_absolute_lift T hThree hQ q z s hs
+   have h := H2CocycleExtension.restriction_eq_zero_of_lift q z t ht
+   simpa only [z, degreeTwoCocycleRepresentative_π] using h
+ 
+ /-- The finite Kummer kernel dies under actual inflation from every constructed
+-arithmetic stage to the maximal real pro-two group. -/
+-theorem finiteKummerContinuousH2Map_ker_le_realProPStageInflation_ker
++arithmetic stage to the maximal pro-two group. -/
++theorem finiteKummerContinuousH2Map_ker_le_proPStageInflation_ker
+     (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (hThree : (Rat.HeightOneSpectrum.primesEquiv (R := 𝓞 ℚ)).symm
+       (⟨3, Nat.prime_three⟩ : Nat.Primes) ∈ T)
+     (U : OpenNormalSubgroup
+-      (maximalRealProPOutside 2 T ≃ₐ[ℚ] maximalRealProPOutside 2 T))
++      (maximalProPOutside 2 T ≃ₐ[ℚ] maximalProPOutside 2 T))
+     (hmu : (primitiveRoots 2 ℚ).Nonempty) :
+-    (finiteKummerContinuousH2Map ℚ (2 : ℕ+) (realProPOpenNormalStage 2 T U).val hmu).ker ≤
++    (finiteKummerContinuousH2Map ℚ (2 : ℕ+) (proPOpenNormalStage 2 T U).val hmu).ker ≤
+       (continuousCohomologyZModPMapLifted 2
+-        (realProPOpenNormalStageRestriction 2 T U) 2).hom.toLinearMap.toAddMonoidHom.ker := by
++        (proPOpenNormalStageRestriction 2 T U) 2).hom.toLinearMap.toAddMonoidHom.ker := by
+   intro x hx
+-  apply maximalRealProTwo_H2_eq_zero_of_absolute_inflation_eq_zero T hThree
+-    (realProPOpenNormalStage 2 T U).property.1
+-    (realProPOpenNormalStageRestriction 2 T U) x
+-  rw [realProPOpenNormalStageRestriction_comp_absolute]
++  apply maximalProTwo_H2_eq_zero_of_absolute_inflation_eq_zero T hThree
++    (proPOpenNormalStage 2 T U).property.1
++    (proPOpenNormalStageRestriction 2 T U) x
++  rw [proPOpenNormalStageRestriction_comp_absolute]
+   exact finiteKummerContinuousH2Map_ker_le_absoluteInflation_ker ℚ (2 : ℕ+)
+-    (realProPOpenNormalStage 2 T U).val hmu hx
++    (proPOpenNormalStage 2 T U).val hmu hx
+ 
+-end ClassFieldTower.Sawin
++end UnitDistance.ArithmeticProP

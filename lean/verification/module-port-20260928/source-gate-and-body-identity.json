@@ -1,0 +1,7 @@
+{
+  "scope": "Current actual Palomar source_issues and exact inverse-insertion/body identity; no compilation or kernel replay",
+  "files_checked": 2165,
+  "identity_files_checked": 2164,
+  "issues": [],
+  "passed": true
+}

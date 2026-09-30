@@ -1,0 +1,173 @@
+\section{The Rational Witness}
+\label{sec:certificate}
+
+We apply Proposition~\ref{fw:transfer} with the following rational
+parameters and weights. Every parameter and weight written as a finite
+decimal is exact. The displayed inequalities are rounded outwards from
+more precise enclosures.
+
+\subsection{Parameters and Local Weights}
+Set
+\[
+ \delta=\frac{83647}{2000000},\quad p=\frac2{1+\delta},\quad
+ C=\frac{42161819}{10^9},\quad
+ \theta_* =\frac{4095}{8192},\quad \varepsilon=10^{-9}.
+\]
+The real-place Gaussian is $f_C(z)^p=e^{-a_C|z|^2}$ with $a_C=2p\delta$.
+At a complex pair, use the polynomial profile and coefficient matrix in
+\eqref{pf:bernstein-witness}, with $s=1.14600585$ and
+$a=0.0000128633241758$. For the Fourier estimate, take $\rho=10^{-3}$.
+For the mass integral, use an $8\times8$ rational subdivision and
+binomial degree $N=18$ (indices $0,\ldots,18$). For the overlap, retain
+orders zero and one with the signed remainder proved above.
+
+At each selected rational prime $r$, let $Q=r^{f_r}$ and use identical
+six-shell profiles on the two local coordinates, with weights
+$w_{r,0},\ldots,w_{r,5}$. All $w_{r,0}=1$. The absolute local indices
+and additive periods are
+\[
+\begin{array}{c|rrrrrrrrrrr}
+r&2&3&5&7&11&13&17&19&23&29&31\\\hline
+e_r&8&2&2&2&2&2&1&1&1&1&1\\
+f_r&4&2&2&4&4&4&4&4&4&4&4\\
+k_r&7&9&6&2&2&1&1&1&1&1&1
+\end{array}
+\]
+The weights in Tables~\ref{tab:weights123} and~\ref{tab:weights45} are
+strictly positive and nonincreasing. Rational comparisons verify these
+properties and positivity of the Bernstein coefficients. The finite
+local factor is
+\begin{equation}\label{cert:finite-factor}
+ \log\mathcal F_{\delta,r}
+ =-\delta k_r\log Q+
+ \log\big((k_r+1)B_r^2+2B_rR_r\big)-2(1+\delta)\log A_r,
+\end{equation}
+where $A_r=\sum_i m_iw_{r,i}^p$, $B_r=\sum_i m_iw_{r,i}^2$,
+$R_r=\sum_{i,j}D_{ij}w_{r,i}w_{r,j}$, and the rational shell masses
+$m_i$ and matrix $D$ are those of Section~\ref{fw:section}.
+Expanding the shell weights into a nonnegative sum of ball indicators
+gives a second calculation of \eqref{cert:finite-factor}. The overlap
+numerators agree exactly as rational numbers.
+
+\input{sections/finite-witness}
+
+\subsection{Certified Enclosures}
+Let $q=sp-1$, and let $T,U$ be independent with density
+$qt^{q-1}\,dt$ on $(0,1)$. The mass and overlap formulas of
+Section~\ref{pf:section} give
+\begin{align}
+38.9687816563247549
+ &<\mathbb E[P(T,U)^p]<38.9687816563247561,
+ \label{cert:mass}\\
+348.4186894704059951
+ &<Z_*<348.4186894704059952.
+ \label{cert:overlap}
+\end{align}
+Here $Z_*$ is the lower expression for the overlap used in
+\eqref{pf:collected-functional}. The upper endpoint in
+\eqref{cert:overlap} bounds this expression and gives no upper bound
+for the overlap integral. Write $J_D^*$ for the right side of
+\eqref{pf:collected-functional} with the certified mass allowance. Thus
+$J_D\ge J_D^*$. The finite terms satisfy
+\[
+ 1.0335669225039939710
+ <\sum_r\frac{\log\mathcal F_{\delta,r}}{e_rf_r}
+ <1.0335669225039939712.
+\]
+The rational polynomial tube bound satisfies $q_0<0.026<1$.
+The Fourier and period calculation yields
+\[
+ \log K_D<0.04916819,\qquad \sigma_D>1.7518755,
+ \qquad \mu>26497.47.
+\]
+Here $\sigma_D=2\pi\rho/\sqrt a$, and $K_D$ is the Fourier prefactor
+in \eqref{pf:polynomial-fourier-contract}. Together with the Gaussian
+bound, these inequalities imply \eqref{fw:fourier-condition}.
+The endpoint moments are finite and the common energy window is
+compact by Sections~\ref{geo:section}, \ref{fw:section}
+and~\ref{pf:section}.
+
+Define the conservative margin
+\begin{align*}
+ M_*(\theta)={}&\sum_r\frac{\log\mathcal F_{\delta,r}}{e_rf_r}
+ -(1/2-\delta)\ell-C+(1-\delta)\log2+(1-\theta)\log\pi\\
+ &+(1-2\theta)J_C+\theta J_D^*.
+\end{align*}
+Since $\theta\ge0$, this is a lower bound on
+\eqref{fw:margin}. Its signature slope is
+$-\log\pi-2J_C+J_D^*>0.6492390240$. It suffices to evaluate the margin
+at the smallest permitted signature. Directed interval arithmetic gives
+\begin{align}
+ M_*(\theta_*)&>0.00000533604359816794,
+ \label{cert:margin}\\
+ M_*(\theta_*)-4\varepsilon
+ &>0.00000533204359816794>0.
+ \label{cert:final-margin}
+\end{align}
+These evaluations use the exact inputs and full interval expressions.
+The abbreviated decimal bounds displayed here are not substituted into
+later calculations.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Theorem~\ref{tw:field-family} gives finite Galois fields $K_j$ of unbounded
+degree with the prescribed root discriminant and local indices. Their
+actual complex conjugations define quadratic extensions $K_j/F_j$
+unramified at every finite place, with all selected primes split and
+$\theta_j\ge\theta_*$. Theorem~\ref{an:ceiling} gives
+$d_j^{-1}\log L_{F_j}(1)<C$ for all sufficiently large $j$.
+
+The profiles above satisfy the positivity, period, moment and Fourier
+conditions of Proposition~\ref{fw:transfer}. Their margin is at least
+$M_*(\theta_*)$, and \eqref{cert:final-margin} is positive. The
+proposition gives finite planar sets whose unordered edge ratio and
+cardinalities tend to infinity, proving Theorem~\ref{thm:main}.
+\end{proof}
+
+\subsection{The Supplementary Certificate}
+The rational witness is \path{certificates/witness.json}. The source and arithmetic
+data are distributed as the three parts
+\path{certificates/data.tar.gz.part00} through \path{part02}.
+The replay script verifies and joins the parts. The part and
+member SHA-256 index is \path{certificates/data-manifest.json}.
+The archive includes the
+coefficient generators and complete retained moment tables, actual-field
+arithmetic receipts, and the prime census through $10^{12}$. Its internal
+directory names record computational provenance. The proofs are given
+in this manuscript.
+
+Finite-field linear algebra verifies the quadratic forms, ranks and
+representation counts. Exact Euler recurrences enumerate signed and
+absolute coefficients. Integer bin moments, the explicit kernel
+remainders, and outward arithmetic enclose the Hecke values. A prime
+sieve supplies the finite Frobenius correction. Rational polynomial
+operations and the mass and overlap remainders of
+Section~\ref{pf:section} enclose the geometric score. The preceding
+sections justify these calculations. The verifier evaluates the fixed
+witness and contains no optimizer.
+
+The supplied Python driver extracts a private working copy, so a replay
+does not alter the distributed inputs. The default command
+\begin{verbatim}
+python3 certificates/reproduce.py
+\end{verbatim}
+checks the retained input identities and recomputes the final geometric
+witness. Adding \texttt{--analytic} evaluates
+every Hecke factor at $12001/12000$, checks the independent prime-census
+prefix and full finite correction, and reassembles the Euler ceiling.
+Adding \texttt{--moments} also recompiles all five newest sparse producers
+and regenerates their 64 complete sector files, comparing every integer
+bin. These contain 103012 bins and 5515960 integer moments. Earlier
+moment tables and actual-field arithmetic receipts remain supplied
+finite data in these modes. Neither the default command nor these
+extended commands repeats the full $10^{12}$ prime sieve, whose source
+is included.
+
+The arithmetic software uses PARI/GP for exact field and Euler
+computations, Arb for ball arithmetic, and MPFR and mpmath intervals for
+directed enclosures \cite{PARI,Johansson2017,MPFR,Mpmath}.
+The package README gives dependency versions and build commands.
+The manifest checker follows every manuscript \verb|\input| and
+\verb|\bibliography| transitively, binds their bytes together with the
+certificate archive, and rejects a changed dependency closure. These
+checks establish source identity. The mathematical proofs and the
+finite computations remain separate obligations.

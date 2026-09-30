@@ -1,14 +1,19 @@
-# Rebuildable TeX products. PDFs are publication inputs and remain tracked.
-*.aux
-*.bbl
-*.blg
-*.log
-*.out
-*.toc
-*.fls
-*.fdb_latexmk
+# Paper build intermediates; PDFs, sources and evidence are tracked.
+/papers/*/*.aux
+/papers/*/*.bbl
+/papers/*/*.blg
+/papers/*/*.log
+/papers/*/*.out
+/papers/*/*.toc
+/papers/*/*.fls
+/papers/*/*.fdb_latexmk
+
+# Python and Lean build products.
 __pycache__/
 *.py[cod]
 .venv/
 .lake/
-papers/0.0418235/certificates/data.tar.gz
+
+# The 0.0418235 supplementary archive is tracked as parts below GitHub's file
+# limit; its replay joins them into this file.
+/papers/0.0418235/certificates/data.tar.gz

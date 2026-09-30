@@ -1,0 +1,4 @@
+error: SolutionZeta.lean:18:22: Unknown constant `instCommCStarAlgebraComplex`
+Some required targets logged failures:
+- SolutionZeta
+error: build failed

@@ -1,0 +1,25 @@
+{
+  "kummer": "PASS local vectors reproduced",
+  "cup_products": "PASS rank 7, rank 7 off the first dyadic place",
+  "lie_layers": "PASS L2=15, L3=26, |G/D4|=2^49, class(c1)=2^15, local groups retained",
+  "golod_shafarevich": {
+    "t": "34/117",
+    "P_B": "-187433948535241/88772225460489675"
+  },
+  "lfunction_rows": "PASS 22 sampled rows match PARI (conductor, gamma type, 400 coefficients)",
+  "Y_E": [
+    "[0.08264460177456168451844203343076857570898583942616234580366686408849121286770 +/- 4.04e-78]",
+    "[0.08264460807137072398172233317287806719881347233021508017866686408849121286770 +/- 4.04e-78]"
+  ],
+  "analytic_ceiling": {
+    "C_upper": "[0.048712842890336985523808060535854129837929012382509769251960 +/- 1.49e-61]",
+    "used": "0.04871285",
+    "C_minus_Bsel": "[0.00704438 +/- 4.89e-9]"
+  },
+  "geometry": {
+    "delta": "0.04273",
+    "margin_after_concentration_lower": "0.00017672603353"
+  },
+  "status": "PASS finite replay for delta = 0.04273 (exponent 1.04273); mathematical transfer to base Q(sqrt 241) per research/construction.md",
+  "seconds": 226.1284147389233
+}

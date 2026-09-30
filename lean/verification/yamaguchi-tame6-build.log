@@ -1,0 +1,7 @@
+✔ [2177/2274] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.RealLowerGroups (6.1s)
+✔ [2628/2634] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.Polynomial (2.3s)
+✔ [2630/2634] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.UniqueExtensionIntegralClosure (5.4s)
+✔ [2632/2637] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.Monogeneity (11s)
+✔ [2634/2646] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.UniformizerGradedHom (15s)
+✔ [2646/2646] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.CompleteDVF (9.6s)
+Build completed successfully (2646 jobs).

@@ -1,0 +1,117 @@
+{
+  "status": "PASS exact finite replay and rational row-savings aggregate; external computation, not Lean proof",
+  "version": "h7-central-finite-replay-v2",
+  "checker_source_sha256": "355ffb18c6111e971a1ccf51929042f3450fc05ba8086d4630e6af6f2bbf06c5",
+  "python_optimization_level": 0,
+  "debug_assertions_enabled": true,
+  "input_hashes": {
+    "prime_list": "6e87d9e9a3f8cf4a77223a04b618128f373d00f923a7c679b6bf01ad43f9bb18",
+    "arithmetic": "e26483aaaaa3caf0ca10f3872632b7653e000b85c5040bcb3100a013820e134c",
+    "archive": "43669734971ae82bdf2980bbacd869a65224fe3cececb121cf2fbc14936813f2",
+    "threshold_manifest": "82d4071437dbef99016cfd160549e7dae4094cd2195f2e2ed050f922774ecffd"
+  },
+  "lean_table_row_hashes": {
+    "lean-formalization/UnitDistance/CentralCensusBins00Astra.lean": "9b49f70fc40ed842032119a1fc956c8188b5491f3ce54e64876b3762a6ba274f",
+    "lean-formalization/UnitDistance/CentralCensusBins01Astra.lean": "eab6e8969a598e9728de739e2e91ebb9f40b3cfed52231204321cccf3f3ecc9b",
+    "lean-formalization/UnitDistance/CentralCensusBins02Astra.lean": "e10fbdbabf13e7fc4bb24800ab5082da44892a0ddab58799979e7f1ea8a80f2d",
+    "lean-formalization/UnitDistance/CentralCensusBins03Astra.lean": "e74a6cdf891cc612e888568bbcb9a2524e5a179495d42a98d1dcd18be2b32cc5",
+    "lean-formalization/UnitDistance/CentralCensusBins04Astra.lean": "cfdfe795a42fa152513e22c107be818abfd7c0e87532f1f45e3fe81b35eb9081",
+    "lean-formalization/UnitDistance/CentralCensusBins05Astra.lean": "fdcad35fda5cb9a73c3be29213a0ca024bb0d3e3dd834ce75ad9bf50c7e9cb5e",
+    "lean-formalization/UnitDistance/CentralCensusBins06Astra.lean": "21e0f9b6b5032cf07c8084710676d7633c6a348a34c7036f5867e76798d5cd6b",
+    "lean-formalization/UnitDistance/CentralCensusBins07Astra.lean": "ad5275a7e4f9a437b82a85cceca9beecffb4100a860ae2e693cd83c66ef1dc67",
+    "lean-formalization/UnitDistance/CentralCensusBins08Astra.lean": "cec2a6391784c237250559fc161c69d85a7d42726f638cffa9af6abe4c3094f1",
+    "lean-formalization/UnitDistance/CentralCensusBins09Astra.lean": "65abe7d9d0dd1f5b515cb6d56976443c4610f14a1f7562d72733b72b80061b73",
+    "lean-formalization/UnitDistance/CentralCensusBins10Astra.lean": "f32f7d2da9ff29eba52492272df00107271c8f379fb4922de69d7e24b5cc3dcb",
+    "lean-formalization/UnitDistance/CentralCensusBins11Astra.lean": "9b43edc0749a8019e11383667b31c2831db059f350c05f691a353e6ca91989fe",
+    "lean-formalization/UnitDistance/CentralCensusBins12Astra.lean": "ab01e2aed3dd470f9aaf7aabf462db49a7b7914106af51e1dc4b92a429cdac78",
+    "lean-formalization/UnitDistance/CentralCensusBins13Astra.lean": "3260c798e58bec79a807ab03dfbf4f7fdd4a6df5dad58aa7e687431c5d286196",
+    "lean-formalization/UnitDistance/CentralCensusBins14Astra.lean": "1f2a65ea9ee3c8853643fd8232e8f4f55336373d3c79cb523a98de53b96b7214",
+    "lean-formalization/UnitDistance/CentralCensusBins15Astra.lean": "9067c704b883fe81495b5bc758c8749843c329cedc0422500c7357b7ad58a856",
+    "lean-formalization/UnitDistance/CentralCensusBins16Astra.lean": "c59d304ebe7c5d197837b0d677c82379a83ba4bcb3cdc69fd6c449f7bb988acc",
+    "lean-formalization/UnitDistance/CentralCensusBins17Astra.lean": "36d7fadfb2ccda2029b4f0fd85cf6d7d3c39b056e5a001aec3676a5ccfe09951",
+    "lean-formalization/UnitDistance/CentralCensusBins18Astra.lean": "4eb434b069ac634e425232556f881dd8ba0bdd65f41c04c508f8ca0438d4b786",
+    "lean-formalization/UnitDistance/CentralCensusBins19Astra.lean": "0b1a64a0433712e6f3b388040789336647be7ccbe36d6e73a4c26576443accb2",
+    "lean-formalization/UnitDistance/CentralCensusBins20Astra.lean": "ec4f8e3c0f4a63075643f9cd4ea70bf35c759aa6923752e4a28eefa4d6a17de6",
+    "lean-formalization/UnitDistance/CentralCensusBins21Astra.lean": "c11503a6d16a0340f5ade766864c575af55bcad058525a570bc4db02022422e1",
+    "lean-formalization/UnitDistance/CentralCensusBins22Astra.lean": "349bb7ea34d028f08f86c2e2b1332231cb4a0a9e4547700d6b9ad757690dc869",
+    "lean-formalization/UnitDistance/CentralCensusBins23Astra.lean": "a4ad32f0edad7e062da28eb81190b12c6e90377d22f2e8b35f8e1574807955ba",
+    "lean-formalization/UnitDistance/CentralCensusBins24Astra.lean": "5e07dced7e62982829985587d31138ee1c15a49844b85856c5435026cb9d58cc",
+    "lean-formalization/UnitDistance/CentralCensusBins25Astra.lean": "7fe9b15de42172d220bef7aa80d0b00c251562133443a3d4cce83c3dfed88bb2",
+    "lean-formalization/UnitDistance/CentralCensusBins26Astra.lean": "9154de6c87d997654026fddacb09a47ac3447e6cdb644aa8a2c44aaf0247b762",
+    "lean-formalization/UnitDistance/CentralCensusBins27Astra.lean": "2ad4a6d51826e54d5cef6dfd9e0695022fadd947ee95f9cd7d23e4ddd4e72b82",
+    "lean-formalization/UnitDistance/CentralCensusBins28Astra.lean": "d1370960c63ed2c8925d65ebf6cbc45019f4fd2c2cbc1a7025f30579363c837d",
+    "lean-formalization/UnitDistance/CentralCensusBins29Astra.lean": "1910429542f3ad8870fd2143d7c2fc930b4f4754446b896116162e68e292a53b",
+    "lean-formalization/UnitDistance/CentralCensusBins30Astra.lean": "728eb587b93100abaaf38d207667a8fd4e5e153ac22ce651b6688138071c1af1",
+    "lean-formalization/UnitDistance/CentralCensusBins31Astra.lean": "b07e3b5c46c325733b671ec38b4f15315e9919ea33862d014dab5db8b5b8b86d",
+    "lean-formalization/UnitDistance/CentralCensusBins32Astra.lean": "7837cb42c6cb075d257942f7cd61cafc61170f9dd4543406a3b34f2d5210b153",
+    "lean-formalization/UnitDistance/CentralCensusBins33Astra.lean": "b2fb27725726b7add305478d1f9b925d127c5fb0c8cdbccbc3ce236551a058cb"
+  },
+  "chunk_receipts": [
+    {
+      "file": "chunk-000000-001000.json",
+      "sha256": "7e1906b26d425b0d8ec0f75f90dad4c10f5281791fc91ab4ec3286c20b1f1592",
+      "start": 0,
+      "stop_exclusive": 1000,
+      "elapsed_seconds": 0.48327255714684725
+    },
+    {
+      "file": "chunk-001000-101000.json",
+      "sha256": "5b6ec56a5494bd8bd438f19f0f3d856f509f5a61f7a2939cf620c668937558a6",
+      "start": 1000,
+      "stop_exclusive": 101000,
+      "elapsed_seconds": 53.37348464876413
+    },
+    {
+      "file": "chunk-101000-201000.json",
+      "sha256": "2298fd817f59a121fb78e232e035b337300ec6e9127e17a7b58d0cb51d09eb2b",
+      "start": 101000,
+      "stop_exclusive": 201000,
+      "elapsed_seconds": 55.75741450302303
+    },
+    {
+      "file": "chunk-201000-301000.json",
+      "sha256": "28111d3c2c801b1e283f43d932ce4a9eea4017cc9b98e682ff6c93227e9e8dd4",
+      "start": 201000,
+      "stop_exclusive": 301000,
+      "elapsed_seconds": 57.260171895846725
+    },
+    {
+      "file": "chunk-301000-387955.json",
+      "sha256": "37b05cd84d6a7e6da4a91c5ab8660f8a0542dce5af42b48e7f9a79c246a473aa",
+      "start": 301000,
+      "stop_exclusive": 387955,
+      "elapsed_seconds": 50.545455447398126
+    }
+  ],
+  "support_count": 387955,
+  "whole_input_complement_count": 387956,
+  "support_endpoint": 163137359449,
+  "omitted_whole_bin_prime": 163137534121,
+  "prime_predicate": "deterministic primality and exact raw finite-field predicate replayed per support prime in chunk receipts",
+  "table_rows": 6716,
+  "last_row_expected_count_and_floor_reciprocal_sum": [
+    347,
+    2128105626586272086514
+  ],
+  "last_row_adjusted_datum": [
+    163138186075,
+    37,
+    2581789,
+    1002153806951,
+    2128105626586272086514,
+    2123531948714460306391
+  ],
+  "floor_reciprocal_total": 38076205721896677243304421,
+  "rowwise_lower_numerator_total": 38016743749819487316929750,
+  "rowwise_saving_fraction": "152066974999277949267719/4000000000000000000000000000",
+  "required_saving_fraction": "48661213036396746910923/1280000000000000000000000000",
+  "required_saving_strict_margin_fraction": "5474084304921368677/32000000000000000000000000000",
+  "required_saving_strict_margin_decimal": "1.7106513452879276e-10",
+  "direct_lean_threshold_fraction": "1900837/50000000000",
+  "direct_lean_threshold_strict_margin_fraction": "14999277949267719/4000000000000000000000000000",
+  "direct_lean_threshold_strict_margin_decimal": "3.74981948731693e-12",
+  "elapsed_seconds": 0.9395384639501572,
+  "worker_cpu_seconds": null,
+  "worker_peak_rss_kib": null,
+  "proof_boundary": "finite exact external replay only; the Lean kernel still requires prime proofs, raw Certificate terms, explicit supports, and the actual-field defect bridge"
+}

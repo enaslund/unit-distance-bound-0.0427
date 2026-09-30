@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/logical-intelligence/erdos-unit-distance",
+  "commit": "b6493074dd103ca32ea4f5e9b0bc9cb3a0379f2e",
+  "source_file": "ErdosUnitDistance/Internal/ClassFieldTheory/Witness.lean",
+  "source_sha256": "f6cda3b59fe58b35bdee487ff593a13bd0f970364e09df5cf1cf6a6914dc7367",
+  "scope": "Selected openNormalChain and finite-Galois-field construction proofs only; no upstream tower hypothesis or full main theorem imported.",
+  "local_files": {
+    "UnitDistance/ProfiniteQuotientTower.lean": "a1f0bcd64a032b523f15fc600482d9a74e8786c1f1ce9f1a35e442f0a98a4dbf",
+    "UnitDistance/GaloisQuotientTower.lean": "0df757cccac480da6b1530d474a2ea7403469ff225a615d100e3835af0ae382a"
+  }
+}

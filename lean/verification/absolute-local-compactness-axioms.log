@@ -1,0 +1,14 @@
+Audited all 38 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 38 project declarations selected.
+Axiom audit: beginning UnitDistance.ArithmeticProP.absoluteToMaximalProPOutside._proof_1.
+Axiom audit: beginning UnitDistance.ArithmeticProP.finitePlaceAbsoluteInertia_compactSpace.
+Axiom audit: beginning UnitDistance.ArithmeticProP.absoluteProPOutsideQuotientEquiv._proof_2.
+'UnitDistance.ArithmeticProP.finitePlaceAbsoluteInertiaDecomposition_compactSpace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'UnitDistance.ArithmeticProP.finitePlaceInertiaToMaximalProPOutside' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

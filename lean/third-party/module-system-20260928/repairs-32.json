@@ -1,0 +1,26 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "The unchanged UnitQuotientGalois regression baseline failed on private characteristic instances for its concrete ambient bracket. Exact DivisionPolynomial import-all candidate passes with stable direct artifacts. Existing public import retained; statements, assumptions, proof bodies and heartbeats byte-preserved.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/UnitQuotientGalois.lean",
+      "original_sha256": "d17e7a6e5f291bb4c2393807af0c4e346d1fa23761e070402bf1874f1738326d",
+      "migrated_sha256": "181e5b9c9e4e69f34a22fb4fd1479a5bda40b23120e19361acc83b1e60cd5fc2",
+      "insertions": [
+        {
+          "offset": 9613,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "failed_baseline": "verification/module-port-20260928/repair-pilot-32/UnitQuotientGalois/baseline/result.json",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-32/UnitQuotientGalois/candidate/result.json"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "upstream_commit": "3a455e1aa9140dbbe7b7d68f508392a69c86d0f4",
+  "license": "Apache-2.0",
+  "adaptation": "Remove only the infinite-place condition; preserve actual finite ramification, finite Galois fields and p-groups. Add actual six-prime support and retained-field inclusion.",
+  "modules": [
+    {
+      "module": "UnitDistance.FinitePExtension",
+      "sha256": "c4a28f3e884cc3feaa298eb0e5e3401479716ab87134868deebcd52b40f10b58",
+      "private_checked_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/FinitePExtension.lean"
+    },
+    {
+      "module": "UnitDistance.FinitePExtensionSupport",
+      "sha256": "2d88e61b9c15096e4ebcb296c7bb54b1cd45d6b40fab38995edc2811e5549ff0",
+      "private_checked_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/FinitePExtensionSupport.lean"
+    },
+    {
+      "module": "UnitDistance.MaximalProPOutside",
+      "sha256": "06650b3a244a569cf4c07f17c46c3eaffcf0632efa0d2ae6a091317e0d325e14",
+      "private_checked_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/MaximalProPOutside.lean"
+    },
+    {
+      "module": "UnitDistance.MaximalProPGroup",
+      "sha256": "b80051dc405426fc91445598817bae463325be590c8eeb71356c3e803319f32a",
+      "private_checked_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/MaximalProPGroup.lean"
+    },
+    {
+      "module": "UnitDistance.MaximalProTwoSigma",
+      "sha256": "8acc6cda0380862becedda2a3dad5e4821fd1e5ac4ff79cf249e0f20e637a28f",
+      "private_checked_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/MaximalProTwoSigma.lean"
+    },
+    {
+      "module": "UnitDistance.SigmaRamification",
+      "sha256": "8773749b3e479606e5de4b41dc37f6f83e3c2c5296ce9ebdcc61db05975fbbe5",
+      "private_checked_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/SigmaRamification.lean"
+    },
+    {
+      "module": "UnitDistance.SigmaFiniteFieldInclusion",
+      "sha256": "e8b13cee1c52a1071694a0f2d95092e4cc306bb8fb903aeabfacebce5f40f9c3",
+      "private_checked_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/SigmaFiniteFieldInclusion.lean"
+    }
+  ],
+  "private_axiom_audit_declarations": 50,
+  "private_axioms": [
+    "Quot.sound",
+    "Classical.choice",
+    "propext"
+  ],
+  "normal_build": {
+    "log": "verification/maximal-sigma-build.log",
+    "jobs": 4473,
+    "status": "passed"
+  },
+  "normal_axiom_audit": {
+    "log": "verification/maximal-sigma-axioms.log",
+    "declarations": 50,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "status": "passed"
+  }
+}

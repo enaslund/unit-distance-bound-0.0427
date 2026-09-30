@@ -1,0 +1,94 @@
+{
+  "purpose": "Consistent original upstream module labels for the isolated actual arithmetic presentation check; proof text unchanged, all affected ancestors recompiled. Public normal verification remains separately recorded.",
+  "modules": [
+    {
+      "module": "UnitDistance.ArithmeticQuadraticClassification",
+      "checked_source_sha256": "8b183f69519313629f1319e3dd65c6702cf0b46919092b043dd37b9c2eef826e",
+      "check_log": ".cache/yamaguchi-unified/UnitDistance.ArithmeticQuadraticClassification.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaQuadraticClassification",
+      "checked_source_sha256": "be7161fd7ba352b4fcbe74a3ddb8005a32b5f10b7e5d38a2d7c167d470f366ae",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaQuadraticClassification.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaGeneratorRank",
+      "checked_source_sha256": "9745dc10a65f8b804b2a5ff675b164b2d2da820a1b014e5467390b1012c19dcb",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaGeneratorRank.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaGenusGenerators",
+      "checked_source_sha256": "42e378faf3de60d69979880d825e42eac20beb854a43f44c6feba90d9cce2aa6",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaGenusGenerators.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaFreeSource",
+      "checked_source_sha256": "d55af66505bd2f9c599914e9bc5755f4e89200054683d25fa59ade124a6178a2",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaFreeSource.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaRetainedProjection",
+      "checked_source_sha256": "d7dcacde28088c8ef2524c062f517cc6c4ad1e0b80bccb8e87687d3ec8c6fde0",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaRetainedProjection.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaComplexConjugation",
+      "checked_source_sha256": "941d881f84496e44eefd3e9e1082b6d3b6c56eb715e48f5fec1f0bae7a0c0931",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaComplexConjugation.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaFreeRetained",
+      "checked_source_sha256": "a179b252a2e45bd24b62e8b121c895e252e475e3893d3ce1565673924929e99d",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaFreeRetained.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaOddRelationWitness",
+      "checked_source_sha256": "5eb2018800136c640e201daa2f386b3e672047c8f58ba0bd023df18f20814999",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaOddRelationWitness.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaAbsoluteLocalRestriction",
+      "checked_source_sha256": "b177e60981098fba3bc3711847c3f481f647043889ee7994e7b1088276af88fe",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaAbsoluteLocalRestriction.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaAbsoluteOddRelations",
+      "checked_source_sha256": "7a0bc623a84613c0a9be450d925543df307799d34438cc6fddd4b48ab23d902e",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaAbsoluteOddRelations.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaAbsoluteOddGeneration",
+      "checked_source_sha256": "37d7004c8cb13c86ba1f0bb5940550391930956f472b7b7f6bb27ec8a61e9ac3",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaAbsoluteOddGeneration.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaOriginalRelators",
+      "checked_source_sha256": "8470afc67fa335f16f909e1afd591359d49a839102b994398d86912f1780df65",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaOriginalRelators.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaRelatorGeneration",
+      "checked_source_sha256": "931ac7db8162ed1713622a646dcd60fb8f0535c1603da028b4b6960ee52ffa36",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaRelatorGeneration.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaPresentation",
+      "checked_source_sha256": "705fa05754f658785ad24e272abaf993e3f27ec2247862e1ec61f2c83800db32",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaPresentation.log"
+    },
+    {
+      "module": "UnitDistance.ProTwoCompletedConsequence",
+      "checked_source_sha256": "0237f948e07dea039ab57c4f66579495c87c76b3785f4f8a8756083b82beb05a",
+      "check_log": ".cache/yamaguchi-unified/UnitDistance.ProTwoCompletedConsequence.log"
+    },
+    {
+      "module": "SawinTotallyRealTowers.SigmaCompletedPresentation",
+      "checked_source_sha256": "7b32e8cc6def4b21adc573ab09347c8ae84adf2cd165192574b1bb23c6b17b88",
+      "check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaCompletedPresentation.log"
+    }
+  ],
+  "updated": "2026-09-19T05:17:00Z",
+  "actual_presentation_audit_declarations": 534,
+  "completed_presentation_audit_declarations": 564,
+  "strong_local_choice_refresh": "Actual absolute inertia/decomposition witnesses with generation in every finite quotient, recompiled through completed Fox containment"
+}

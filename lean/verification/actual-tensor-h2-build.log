@@ -1,0 +1,99 @@
+✔ [2385/2405] Built UnitDistance.CoinducedH2Transport (3.2s)
+⚠ [2406/2520] Replayed UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.Cardinality
+warning: UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/Herbrand/HerbrandLowDegree/Cardinality.lean:62:27: This simp argument is unused:
+  Rep.hom_comm_apply
+
+Hint: Omit it from the simp argument list.
+  simp [Rep.FiniteCyclicGroup.subCompNormHom, Rep.norm, Representation.norm, R̵e̵p̵.̵h̵o̵m̵_̵c̵o̵m̵m̵_̵a̵p̵p̵l̵y̵,̵ ̵hf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [3703/3705] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.MultiplicativeInducedShapiro (3.7s)
+⚠ [3704/3759] Built UnitDistance.LocalTensorH2Evaluation (21s)
+warning: UnitDistance/LocalTensorH2Evaluation.lean:105:8: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.localFieldToGlobalAut_apply`:
+  [FiniteDimensional K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [3799/3801] Built UnitDistance.TensorBaseChangeH2 (6.9s)
+✔ [3800/3809] Built UnitDistance.TensorEvaluationH2 (5.9s)
+✔ [4039/4041] Built UnitDistance.LocalTowerRestriction (29s)
+⚠ [4040/4088] Built UnitDistance.ActualLocalTensorH2 (14s)
+warning: UnitDistance/ActualLocalTensorH2.lean:41:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.actualLocalTensorEvaluation_eq`:
+  [IsGalois K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsGalois K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [4382/4393] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Completion.AdicCompletionMap (5.3s)
+✔ [4385/4394] Built UnitDistance.FiniteLocalTowerEmbedding (11s)
+✔ [4390/4395] Built UnitDistance.TensorH2CoefficientChange (3.9s)
+⚠ [4391/4395] Built UnitDistance.TensorUnitCohomologyNorm (5.2s)
+warning: UnitDistance/TensorUnitCohomologyNorm.lean:20:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.scalarTensorConjugation_eq_scalarConjugation`:
+  [FiniteDimensional K L]
+  [IsGalois K L]
+  [Infinite K]
+  [Nontrivial A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional K L] [IsGalois K L] [Infinite K] [Nontrivial A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/TensorUnitCohomologyNorm.lean:36:44: This simp argument is unused:
+  ← ofMul_prod
+
+Hint: Omit it from the simp argument list.
+  simp only [Rep.norm_apply, ̲Representation.norm, ̲LinearMap.sum_apply,
+      Rep.ofMulDistribMulAction_ρ_apply_apply,̵←̵o̵f̵M̵u̵l̵_̵p̵r̵o̵d̵]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4392/4395] Built UnitDistance.FiniteTensorBaseChangeH2 (4.7s)
+warning: UnitDistance/FiniteTensorBaseChangeH2.lean:29:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.fieldUnitsRestrictionH2_eq_tower`:
+  [NumberField K]
+  [NumberField F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField K] [NumberField F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4393/4395] Built UnitDistance.FieldUnitsH2LocalInflation (5.5s)
+warning: UnitDistance/FieldUnitsH2LocalInflation.lean:29:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.fieldUnitsH2Inflation_evaluation`:
+  [Algebra K A]
+  [IsScalarTower K A B]
+  [IsScalarTower K A C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra K A] [IsScalarTower K A B] [IsScalarTower K A C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4395/4402] Built UnitDistance.FiniteTensorInflationH2 (14s)
+warning: UnitDistance/FiniteTensorInflationH2.lean:25:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.finiteFieldUnitsTensor_eq_zero_of_inflation_eq_zero`:
+  [NumberField F]
+  [NumberField L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField F] [NumberField L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4402/4402] Built UnitDistance.FieldTensorCyclicH2 (6.9s)
+warning: UnitDistance/FieldTensorCyclicH2.lean:84:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.fieldUnits_rep_norm`:
+  [IsCyclic Gal(L/K)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsCyclic Gal(L/K)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/FieldTensorCyclicH2.lean:90:44: This simp argument is unused:
+  ← ofMul_prod
+
+Hint: Omit it from the simp argument list.
+  simp only [Rep.norm_apply, ̲Representation.norm, ̲LinearMap.sum_apply,
+      Rep.ofMulDistribMulAction_ρ_apply_apply,̵←̵o̵f̵M̵u̵l̵_̵p̵r̵o̵d̵]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: UnitDistance/FieldTensorCyclicH2.lean:122:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.fieldScalarUnitH2_tensor`:
+  [IsGalois K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsGalois K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (4402 jobs).

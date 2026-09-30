@@ -1,0 +1,26 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "ExtensionBehavior failed in integration205316 because the body of public completionMap is not exposed. The exact Mathlib owner import-all candidate passes with stable direct artifacts. Statement and proof bodies byte-preserved.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/NormTopology/ExtensionBehavior.lean",
+      "original_sha256": "756f25e944cbcf90756061646d59d8e707a5a6fe59507118b3765c3900ed5dfa",
+      "migrated_sha256": "7edd43ba526cd96b22db88d91630220f678b07104262583f1acad04fa11fae89",
+      "insertions": [
+        {
+          "offset": 584,
+          "text": "import all Mathlib.NumberTheory.NumberField.Completion.LiesOverInstances\n"
+        }
+      ],
+      "added_imports": [
+        "Mathlib.NumberTheory.NumberField.Completion.LiesOverInstances"
+      ],
+      "added_options": [],
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-21/ExtensionBehavior/candidate/observed-failure.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-21/ExtensionBehavior/candidate/result.json"
+    }
+  ]
+}

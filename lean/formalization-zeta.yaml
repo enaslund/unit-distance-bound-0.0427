@@ -1,0 +1,395 @@
+version: v0.4
+project:
+  name: Planar unit distances from one fixed zeta inequality
+  description: >-
+    Conditional theorem on unit distances in the Euclidean plane. Let K be the
+    number field of degree 524288 = 2^19 generated over Q by square roots of
+    -1, 2, 3, 5, 7, 11 and 13 and by square roots of twelve explicit products
+    of elements x_i + y_i g(m_i) of that multiquadratic field. Hypothesis (H)
+    is one displayed numerical inequality for the Dedekind zeta function of K:
+    log(Re zeta_K(1 + 1/12000))/524288
+    + (1/12000)((L - gamma - log(4 pi))/4 - Re((zeta_K'/zeta_K)(2))/524288)
+    < 42165819/10^9, where L = (9/4) log 2 + (1/2) log 15015 and gamma is
+    Euler's constant. The compared theorem proves that (H) implies the
+    existence of finite sets U_j in the plane with |U_j| -> infinity such that
+    the number of unordered pairs of points of U_j at distance one, divided by
+    |U_j|^(2083647/2000000), tends to infinity. The exponent is exactly
+    2083647/2000000 = 1.0418235. The conclusion is a sequence statement only;
+    no bound at every sufficiently large cardinality is asserted. The infinite
+    pro-2 field family, its root-discriminant bound, the analytic transfer, the
+    pair-integral certificates and the planar construction are proved in Lean
+    over Mathlib; (H) itself is not proved. The hypothesis is motivated by the
+    manuscript's computer-assisted certificate, which bounds its left-hand side
+    by 0.0421618189 outside Lean; that computation is not part of the formal
+    proof.
+  authors:
+  - Eric Naslund
+  responsible_maintainers:
+  - Eric Naslund
+  license: Apache-2.0
+classification:
+  arxiv:
+  - math.CO
+  - math.NT
+  msc2020:
+  - 52C10
+  - 11R37
+  - 20C05
+sources:
+- title: A lower exponent of 1.0418235 for planar unit distances
+  authors:
+  - Eric Naslund
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/d1b7a7c488cf95d0b5ae67459fa7b8494de3170e/papers/0.0418235/main.tex
+  type: paper
+  location: 'Public repository: papers/0.0418235/ at the cited commit. Exported
+    formalization package: docs/manuscript/; especially sections/tower.tex, analytic.tex,
+    geometry.tex and finite-windows.tex'
+  relationship: adapts
+  author_endorsement: participated
+  note: >-
+    The manuscript claims the unconditional planar sequence theorem with exponent
+    2083647/2000000 by a computer-assisted certificate. This formalization adapts it:
+    the exact sequence conclusion is derived subject to one displayed fixed-field
+    zeta/logarithmic-derivative inequality (H) that remains unproved, and the sufficient
+    pair-integral bound uses threshold 0.042165819 in place of the manuscript's
+    0.042161819. The manuscript is an unrefereed preprint; its title note states that
+    it was entirely written with AI tools and that the listed human author is
+    responsible for having supervised and prompted the AI agents that wrote it. It has
+    not been peer reviewed. A copy (main.tex, sections/, references.bib, main.pdf) is
+    included in the exported formalization package under docs/manuscript/;
+    the public manuscript is available at the immutable identifier above.
+    Historical research provenance remains enaslund/unit-distance-bound, commit
+    eec70fd25ebe045c5df1c98370d613eaa3719c0c; that research repository was private
+    on 2026-09-22. author_endorsement participated records only
+    that the manuscript's sole author is the owner who commissioned and directed this
+    autonomous formalization. On 2026-09-27 the owner authorized publication in
+    enaslund/unit-distance-bound-0.0418. This authorization does not assert owner
+    proof review or authorize Palomar submission or registration.
+- title: An explicit lower bound for the unit distance problem
+  authors:
+  - Will Sawin
+  id: arXiv:2605.20579v1
+  type: paper
+  relationship: background
+  note: Explicit unconditional unit-distance exponent from number fields with controlled
+    discriminants and small primes. The manuscript refines this mechanism. Context only;
+    not an input to the Lean proof.
+- title: Remarks on the disproof of the unit distance conjecture
+  authors:
+  - Noga Alon
+  - Thomas F. Bloom
+  - W. T. Gowers
+  - Daniel Litt
+  - Will Sawin
+  - Arul Shankar
+  - Jacob Tsimerman
+  - Victor Wang
+  - Melanie Matchett Wood
+  id: arXiv:2605.20695v1
+  type: paper
+  relationship: background
+  note: Exposition of the arithmetic approach to power-law unit-distance lower bounds.
+    Context only; not an input to the Lean proof.
+- title: Optimizing Explicit Unit-Distance Lower-Bound Certificates
+  authors:
+  - Michael T. M. Emmerich
+  id: arXiv:2606.03419
+  type: paper
+  relationship: background
+  note: Reoptimizes Sawin's explicit certificate; context for explicit unconditional
+    unit-distance exponents. Cited as background by the manuscript; not an input to the Lean proof.
+- title: 'What is the unit distance exponent? (MathOverflow question 511514) and the
+    answer by Eric Naslund'
+  authors:
+  - Eric Naslund
+  contributors:
+  - name: Dustin G. Mixon
+    role: question-poser
+  id: https://mathoverflow.net/q/511514
+  type: web discussion
+  location: https://mathoverflow.net/a/511576
+  relationship: background
+  note: The manuscript's introduction cites this answer as the origin of its refinement
+    of Sawin's construction. It is an informal, unrefereed forum post revised through
+    June 2026. Context only; not an input to the Lean proof.
+related_formalizations:
+- id: https://github.com/leanprover-community/mathlib4/tree/065356127b1dc0016f66b7283ce0ce2c4055aa55
+  relationship: builds-on
+  note: Matched dependency target for Lean v4.35.0-rc2, Apache-2.0. Exact selected-build
+    and archive-verification outcomes require receipts for the corresponding source
+    and archive digests. Its own pinned dependencies remain external public dependencies.
+- id: https://github.com/mathlib-initiative/sum_product/tree/80e4127a67742659d521466204c6d2d7e0ca2b3f
+  relationship: adapts
+  note: Formal Frontier Team, Apache-2.0. Its multidimensional Poisson summation module
+    (DedekindZeta/PoissonSummation.lean) is version-ported, with original copyright/license
+    and explicit modification provenance, to UnitDistance/ThirdParty/PoissonSummation.lean;
+    the full source file compiled against the present pinned Mathlib, and PoissonBound
+    derives translated finite lattice bounds from actual dual Fourier tails. The
+    ideal-series, geometric-product and factorization sections of
+    DedekindZeta/Statements.lean are ported into DedekindEuler, and selected trace-dual
+    proofs from DedekindZeta/Theta.lean into MinkowskiTrace; those two modules carry the
+    sum_product adaptations in this package. EulerBound.lean through its divisor-series
+    theorem is ported into IdealCounting in the research repository, but the IdealCounting
+    port named in NOTICE is not in this package's selected import closure. Original
+    copyright and license are preserved and modifications and the new full Euler-product
+    assembly are recorded in docs/SUBMISSION_PROVENANCE.md and NOTICE. The whole upstream
+    project was not rebuilt; other code was audited at source level. Its field tower is an
+    explicit hypothesis. License retained under third-party/sum_product/LICENSE. No
+    registration of that project is claimed.
+- id: https://github.com/CBirkbeck/AINTLIB/tree/a302aeacd86053f9d5f991fbbf664e1cc1051d08
+  relationship: adapts
+  note: Chris Birkbeck, Apache-2.0. Completed Dedekind zeta and explicit-formula
+    foundations are ported as an attributed source port under UnitDistance/Upstream/AINTLIB.
+    Copyright, license, exact source hashes and version modifications are recorded in
+    third-party/aintlib. Completed zeta continuation and functional equation are actual
+    theorems; relative Hecke entireness is not assumed to follow.
+- id: https://github.com/n-yamaguchi-0729/SawinTotallyRealTowers/tree/3a455e1aa9140dbbe7b7d68f508392a69c86d0f4
+  relationship: adapts
+  note: Naganori Yamaguchi, Apache-2.0. Profinite presentations and continuous pro-p
+    cohomology; 1,287 of the 1,309 manifest files are shipped and imported under
+    UnitDistance/Upstream/Yamaguchi (the 22 others are not imported by the compared theorem
+    and are not shipped), retaining original declaration namespaces and mathematical
+    statements. License, original/local source hashes, compatibility patch and exact
+    verification scope are in third-party/yamaguchi. All dependency closures passed
+    isolated Lean checks. The 886-module relocated closure passed 4988 normal build jobs
+    and a 25791-declaration imported audit using only standard axioms; the complete
+    isolated 1262-module closure passed a 34273-declaration imported audit. The build and
+    audit records referenced here are included under verification/ in this package. New
+    local arithmetic proofs assemble the complex pro-two six-relation bound and growing
+    field family; those conclusions are not supplied as upstream assumptions.
+- id: https://github.com/logical-intelligence/erdos-unit-distance/tree/b6493074dd103ca32ea4f5e9b0bc9cb3a0379f2e
+  relationship: adapts
+  note: Erdős unit-distance formalization contributors, Apache-2.0. Selected openNormalChain
+    and fixed-field construction proofs from
+    ErdosUnitDistance/Internal/ClassFieldTheory/Witness.lean are adapted in
+    ProfiniteQuotientTower and GaloisQuotientTower. License, NOTICE, hashes and modifications
+    are retained under third-party/erdos-unit-distance. The whole upstream project was not
+    rebuilt. No upstream arithmetic tower or headline theorem is assumed; its
+    unspecified-exponent theorem and explicit odd-prime Shafarevich and Golod-Shafarevich
+    inputs do not supply the present dyadic tower. No registration of that project is claimed.
+- id: https://github.com/alejandrozu/RiemannHypothesis-Formalization/tree/753938937e624d1c8bbe4c208517660a672d1b8e
+  relationship: adapts
+  note: Tristen Harr, Apache-2.0. Twelve generic entire-function and canonical Hadamard
+    product modules and a selected negation-pairing section are ported, with original
+    headers and exact provenance under third-party/entire-hadamard. No xi-specific module
+    or Riemann Hypothesis assumption is imported. New local compositions derive
+    paired-product monotonicity from actual entire divisor, summability and growth data.
+- id: https://github.com/kim-em/erdos-unit-distance-comparator/tree/6f54548da16c3f243d7e300716795906b955271a
+  relationship: independent
+  note: Registered in the Palomar registry as PALOMAR-2026-08-08-000001 (2026-08-08); a
+    Comparator wrapper for the library kim-em/erdos-unit-distance at
+    34b4587bbd0740efb9c06a519a8ee14a3eff8cd7. It proves the uniform-constant form of the
+    disproof of the Erdős unit-distance conjecture (for every C > 0, arbitrarily large n
+    admit n-point planar sets with more than n^(1 + C/log log n) unit-distance pairs), a
+    different and weaker statement than the fixed exponent here. No code or theorem from it
+    is used.
+- id: https://github.com/plby/Erdos90
+  relationship: independent
+  note: Independent Lean formalization of the fixed-power (unspecified-exponent) planar
+    unit-distance statement, as described in the Palomar record PALOMAR-2026-08-08-000001.
+    No code or theorem from it is used, and no comparison of exponents is claimed.
+status:
+  scope: Exact planar sequence theorem conditional on one displayed fixed-field zeta/logarithmic-derivative
+    inequality with ceiling 0.042165819. The conditional implication is the compared result.
+    Verification receipts cited by this package are included under verification/; they identify
+    exact source archives and do not prove the numerical hypothesis.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Quot.sound
+  - Classical.choice
+  main_results:
+  - declaration: UnitDistanceZetaSubmission.target_of_canonical_zeta_bound
+    file: SolutionZeta.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Quot.sound
+    - Classical.choice
+    comparator_config: comparator-zeta.json
+automation:
+  methods:
+  - method: autonomous
+    models:
+    - GPT-6 Astra
+    framework: Codex
+    tool_setup: >-
+      Historical pre-migration setup: owner-requested primary GPT-6 Astra with
+      Ultra reasoning and inherited model and effort for bounded collaborating agents.
+      Lean 4.32.0, pinned Mathlib, kernel-checkable tactics
+      and finite certificate generation. Public source audits, policy-pinned Comparator, matched
+      lean4export, real Landrun and independent NanoDa checks are recorded in the verification
+      ledger of the research repository; the receipts this package cites are included under
+      verification/. No native_decide in proof production.
+    prompting_notes: Autonomous run requested to pursue the exact Euclidean sequence theorem persistently,
+      preserve existing research, distinguish finite numerical inputs from unproved structure
+      and analytics, and prepare a locally reviewable compact package without publishing it.
+    cost:
+      spend_usd: not available to the agent
+  - method: autonomous
+    models:
+    - GPT-6 Astra
+    - GPT-5.6 Sol
+    framework: Codex
+    tool_setup: Configured GPT-6 Astra Ultra lead and at most three GPT-5.6 Sol Max workers with
+      fresh task context. Lean 4.32.0 and pinned public Mathlib; no native_decide in the proof
+      closure.
+    prompting_notes: 'Eight-hour continuation on 2026-09-20: configured GPT-6 Astra Ultra lead
+      and at most three GPT-5.6 Sol Max workers, all worker tasks started with fresh context.
+      The lead prepared the independent one-hypothesis Challenge and local package. Prior run
+      contributions and source licenses are preserved; launch-baseline hashes distinguish inherited
+      work.'
+  - method: autonomous
+    models:
+    - GPT-6 Astra
+    framework: Codex
+    tool_setup: Single agent at the user-requested Max reasoning setting on 2026-09-21; no other
+      AI agents launched. Pinned Lean and Palomar tools. Public dependency downloads and local
+      verification only.
+    prompting_notes: Prepare the explicit conditional implication as the completion target, check
+      definitions and dependencies, preserve inherited work, improve exposition and packaging,
+      and run reproducible verification without remote publication or submission.
+  - method: autonomous
+    models:
+    - Claude Fable 5.1
+    framework: Claude Code
+    tool_setup: >-
+      Multi-agent audit and packaging session on 2026-09-22 (Anthropic Claude Fable 5.1
+      through Claude Code with subagents) under the owner's direction: independent audit of
+      the statement, proof route, certificate bridge and policy compliance; corrections to
+      metadata, narrative, provenance records and the export script; a fresh replay of the
+      manuscript's analytic certificate; and a local run of the pinned Palomar verifier. No
+      Lean proof text was changed; only comments and documentation.
+    prompting_notes: Requested to audit the repository against the current Palomar policy and
+      to move the package toward submission without changing the mathematics.
+    cost:
+      spend_usd: not available to the agent
+  - method: autonomous
+    models:
+    - GPT-6 Sol
+    - GPT-6 Luna
+    framework: Codex
+    tool_setup: >-
+      Eight-hour research and verification continuation on 2026-09-23, led by
+      GPT-6 Sol at Ultra reasoning with at most seven concurrently active
+      GPT-6 Luna workers, initially at High reasoning. Initial endpoint
+      workers and later independent reviewers received fresh task context and owned
+      independent Lean, numerical and review endpoints. Expensive jobs used
+      a shared guarded lock with a four-GiB cgroup cap and serial Lean checks.
+      The new research modules are outside the selected conditional proof
+      closure. A full 128-character genus replay, three strict single-row AFE
+      replays, a full finite-moment replay of one H7 mixed-octic row, and an
+      exact external 387,955-prime finite-support replay are numerical
+      evidence, not Lean proofs of the fixed-field hypothesis. A fourth AFE
+      row passed its internal checks but exceeded its frozen individual upper
+      endpoint; its wider upper bound still passed a separate H6 aggregate
+      comparison. The selected package migration targets Lean v4.35.0-rc2 and
+      Mathlib 065356127b1dc0016f66b7283ce0ce2c4055aa55; selected checks remained
+      in progress at that run's endpoint. The PalomarSubmission source head at
+      that time, 1703d7babd984ccc3831cdf89c28221abe34808f, required the same
+      Lean minimum. No
+      candidate 18 had been exported by that endpoint, and no current Palomar
+      verification pass was claimed in that run.
+    prompting_notes: >-
+      Strengthen evidence for the exact exponent, advance the open fixed-field
+      zeta mathematics, preserve the selected proof and sealed archives, and
+      prepare an accurate local conditional candidate without remote submission.
+    cost:
+      spend_usd: not available to the agent
+  - method: autonomous
+    models:
+    - GPT-6 Sol
+    - GPT-6 Astra
+    - GPT-6 Luna
+    framework: Codex
+    tool_setup: >-
+      September 24 continuation under the owner's direction: a GPT-6 Sol
+      lead, one GPT-6 Astra Ultra specialist, two GPT-6 Sol collaborators,
+      and GPT-6 Luna collaborators on independent migration, provenance,
+      policy, and package tasks. The selected proof source passed a full
+      Lean v4.35.0-rc2 build with canonical Mathlib commit
+      065356127b1dc0016f66b7283ce0ce2c4055aa55; the source-bound
+      September 24 selected-build receipt records 2,163 modules and the
+      exact digest. Archive preparation and current full verifier execution
+      have separate statuses.
+      The current PalomarSubmission source is pinned to
+      1703d7babd984ccc3831cdf89c28221abe34808f. Host-only verifier
+      bootstrap and archive-17 negative-control preparation are local
+      infrastructure evidence, not a verifier pass or a proof of H. No
+      remote submission or registration has occurred.
+    prompting_notes: >-
+      Complete and verify the supported-toolchain conditional package while
+      preserving sealed archives and the exact unproved fixed-field premise;
+      prepare a reviewable local candidate before any remote action.
+  - method: autonomous
+    models:
+    - GPT-6 Sol
+    - GPT-6 Astra
+    - GPT-6 Luna
+    framework: Codex
+    tool_setup: >-
+      September 27 twelve-hour continuation: GPT-6 Sol lead, one GPT-6 Astra
+      Ultra mathematics worker, two GPT-6 Sol Ultra Lean workers, and GPT-6
+      Luna High research and independent-review workers. Candidate20 retry2
+      was infrastructure-stopped at 148,000/149,249 con-ron checks when host
+      available memory reached 3.423931 GiB, below the 3.5 GiB stop threshold;
+      it exited 75 with no cgroup OOM or kernel verdict. Candidate21's sealed
+      archive gate failed metadata because its wrapper omitted the policy
+      revision. Candidate22 and candidate23 deterministic exports and
+      archive-only metadata gates passed for PalomarSubmission revision
+      a59f25bd8a66bf6faf3a4f4260d412989c0185ea. Candidate23 archive SHA-256
+      is a8b47796a275a598e2be85c9f6d4e28b560782047b4b7d6e8ea6c5c3f3d7132d.
+      No candidate23 full-verifier result or proof of H is claimed at this
+      package checkpoint.
+    prompting_notes: >-
+      Advance the remaining proof and examine criticism while preserving the
+      exact single hypothesis H, sealed candidate archives, separate
+      verification workdirs and the shared build reservation. Prepare a
+      locally reviewable conditional candidate; no remote push or submission
+      was authorized.
+  notes: The Lean code, proof development, supporting scripts and documentation are AI-produced
+    under Eric Naslund's direction. Human authorship here identifies the responsible directing
+    owner, not a claim of manual proof writing. Agents independently audited portions of the statements
+    and normalizations; a separate multi-agent audit on 2026-09-22 (Claude Fable 5.1) re-derived
+    the Challenge field tables, the certificate bridge to (H) and the local indices of the field,
+    and found no error; a September 23 GPT-6 Sol/Luna source review found no
+    concrete selected-proof mismatch within its documented scope. September 27
+    fresh-context source reviews examined the direct selected endpoint,
+    transfer chain and the signed analytic reduction without finding a
+    concrete defect in their stated scopes. These are not human peer review
+    or author verification, and H remains open.
+fidelity:
+  divergences: One displayed scalar zeta/logarithmic-derivative inequality on a fixed independently
+    defined field remains unproved. The exact exponent 2083647/2000000, ordinary Euclidean plane,
+    unordered unit pairs and both sequence limits are preserved. No structural or asymptotic assertion
+    is packaged as a numerical input, and no theorem for every sufficiently large cardinality
+    is asserted.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: >-
+    Self-assessed. The preparing agent (2026-09-21) checked the independent Challenge, the
+    actual definitions and the proof dependencies. A separate audit on 2026-09-22 by 19
+    adversarial verifier agents (Claude Fable 5.1) confirmed statement fidelity, the
+    Comparator semantics of the Challenge, the bridge from the manuscript's computer-assisted
+    certificate to hypothesis (H), the mass identity and the geometric margin numerically,
+    and the Tsfasman–Vlăduţ input. No human peer review, owner proof verification, official
+    Palomar report, editorial outcome, publication or registration is claimed. Hypothesis (H)
+    remains unproved; novelty of the conditional reduction is unknown. A
+    September 23 GPT-6 Sol/Luna review found no concrete mismatch in the
+    conditional proof or the external-to-(H) normalization within its stated
+    source-level scope. Its numerical replays do not discharge (H).
+alignment:
+  namespace: UnitDistanceZetaSubmission
+  statements:
+  - source: 'Main theorem of the manuscript: ordinary planar sequence, unordered unit pairs, exponent
+      2083647/2000000'
+    lean: UnitDistanceZetaSubmission.target_of_canonical_zeta_bound
+    module: SolutionZeta
+    status: adapted
+    note: The conclusion is exact, including both limits. One explicit scalar inequality for a
+      fixed independently defined number field remains a hypothesis. There is no assertion at
+      every sufficiently large cardinality.
+acknowledgements: Mathlib and Lean contributors; authors of the audited related formalizations;
+  Comparator, lean4export, NanoDa and Landrun developers.

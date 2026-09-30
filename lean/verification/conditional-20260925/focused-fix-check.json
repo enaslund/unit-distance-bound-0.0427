@@ -1,0 +1,23 @@
+{
+  "scope": "Focused Lean 4.35 compilation and exact Lake.Check.compareAt dependency comparison. Reuses prior imported artifacts; not a fresh build, exported-proof comparison, axiom audit, or independent kernel replay.",
+  "checked_at": "2026-09-25T17:23:20.120001+00:00",
+  "comparator_result": "PASS: theorem statement and complete structural dependency comparison",
+  "fixed_modules": {
+    "ChallengeZeta.lean": {
+      "sha256": "331bcc0fb6021b1379f106d4c82b3058fb6e03c11e695c3e66eebb8227ecce9a",
+      "matches_checked_source_except_comment_and_print": true
+    },
+    "SolutionZeta.lean": {
+      "sha256": "ae277cc525c0cb6c29f05daaf28e241d4ce1b2a74843915d64d9a5b5eb34c53a",
+      "matches_checked_source_except_comment_and_print": true
+    }
+  },
+  "diagnostic_files": {
+    "diagnostics/SolutionCheck.lean": "363546ac3d3a52d3423e5a8007d699d369166c7071276f274918c571a01b545c",
+    "diagnostics/CompareCheck.lean": "8640a0d2d77e370707858475aff2b849cb3b04ac1906564ed7f086cb16e33d11",
+    "diagnostics/ChallengeCheck.lean": "cf8174a71c57025b5241d7f7ee3cff2f72daf0b830d03c18581bf9e571c471b8",
+    "structural-comparison.log": "0a4f97c4b8603af2318ff5099a08a19f07a2cd0a91c0a0a51ab09ff340223628",
+    "finite-challenge-local-priority.log": "622da22200c6a94fff92cbf14762d2e52955a2c3fd332fd652c30b88a56c55f8",
+    "finite-solution-local-priority.log": "757e4d11d98c94e255e537f78e9a1ebcd8cefec891ef21d48ea22663eacd6cc9"
+  }
+}

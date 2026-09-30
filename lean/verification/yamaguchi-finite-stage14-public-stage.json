@@ -1,0 +1,22 @@
+{
+  "before": 842,
+  "after": 856,
+  "added": [
+    "SawinTotallyRealTowers.FiniteKummerAbsoluteKernel",
+    "SawinTotallyRealTowers.FiniteKummerContinuousKernel",
+    "GaloisCohomology.ProP.ContinuousH1CupCochain",
+    "GaloisCohomology.ProP.ContinuousH1CupProduct",
+    "GaloisCohomology.ProP.DiscreteH2CochainComparison",
+    "GaloisCohomology.ProP.DiscreteH2ShortComplexComparison",
+    "GaloisCohomology.ProP.DiscreteH2Comparison",
+    "GaloisCohomology.ProP.DiscreteH2Representatives",
+    "GaloisCohomology.ProP.H2FiniteStageCochain",
+    "GaloisCohomology.ProP.H2FiniteStage",
+    "GaloisCohomology.ProP.H2FiniteStageFamily",
+    "GaloisCohomology.ProP.H2InflationRangeBound",
+    "GaloisCohomology.ProP.H2InflationRangeCardinality",
+    "ProCGroups.Cohomology.ContinuousMapFiniteStage"
+  ],
+  "previous_sources_unchanged": true,
+  "unchanged_before_import_relocation": true
+}

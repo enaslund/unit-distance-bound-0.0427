@@ -1,0 +1,311 @@
+{
+  "status": "FAIL target-sigma direct upper exceeds target row allowance",
+  "scope": "one conditional H6 mixed-quadratic factor row at sigma 12001/12000; not a proof of global H",
+  "sector_mask": 1586,
+  "twist": 1,
+  "degree": 2,
+  "conductor": 240240,
+  "gamma": [
+    0,
+    1
+  ],
+  "root_number": 1,
+  "sigma": "12001/12000",
+  "N": 3922,
+  "coefficients_reconstructed": 3922,
+  "signed_coefficient_vector_sha256": "245989a787ca8bfa916c030bff304a9337365c62e5d7bd4ed1d7fad2aa1ff489",
+  "nonzero_coefficients": 562,
+  "exact_moment_bins_checked": 184,
+  "precision_bits": 384,
+  "python_flint_version": "0.9.0",
+  "flint_version": "3.6.0",
+  "kernel_piece_count": 1878,
+  "A_pointwise": {
+    "real": {
+      "lower": {
+        "mantissa": "25596581818952428204624649524850548194540166116395129830544303340715381610013642229800758687249149819666109018203523",
+        "exponent": -383
+      },
+      "upper": {
+        "mantissa": "25596581818952428204636835627255374840506834193529167317768957080138062729152197693634898393434718354877670041904515",
+        "exponent": -383
+      },
+      "display": "[1.299252717811849364458 +/- 4.40e-22]"
+    },
+    "imag": {
+      "lower": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "upper": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "display": "0"
+    }
+  },
+  "B_pointwise": {
+    "real": {
+      "lower": {
+        "mantissa": "5587322211371929944439833769703620143690793928523611607113515144887412517264335645301744815906103102159371293427931",
+        "exponent": -384
+      },
+      "upper": {
+        "mantissa": "5587322211371929944452249346358995596759846206873005494972093835408485105377570725053508093352422554973762392426715",
+        "exponent": -384
+      },
+      "display": "[0.141802987988038120896 +/- 5.98e-22]"
+    },
+    "imag": {
+      "lower": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "upper": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "display": "0"
+    }
+  },
+  "A_within_target_center_plus_interpolation": true,
+  "B_within_target_center_plus_interpolation": true,
+  "consistency_checks": {
+    "A_imaginary_interval_contains_zero": true,
+    "B_imaginary_interval_contains_zero": true,
+    "A_within_target_center_plus_interpolation": true,
+    "B_within_target_center_plus_interpolation": true,
+    "interpolation_debit_within_target": false,
+    "tail_overlaps_target": true,
+    "positive_signed_lower_bound": true,
+    "bad_multiplier_overlaps_target": true
+  },
+  "pointwise_interpolation_debit": {
+    "lower": {
+      "mantissa": "15407412572223719044571991091581433577813063092322676068311349628948618598987696935077286067478256003192449604909749",
+      "exponent": -458
+    },
+    "upper": {
+      "mantissa": "15407412572223719044571991091581433577813063092322676068311349628948618598987696935077286067478256003192449604910651",
+      "exponent": -458
+    },
+    "display": "[2.07010177596741008784243652561002146e-23 +/- 1.19e-59]"
+  },
+  "target_interpolation_debit": {
+    "lower": {
+      "mantissa": "962963285763982440285749443223839598613316443270167254269459351809288662436731058442330379217391000199528100306881",
+      "exponent": -454
+    },
+    "upper": {
+      "mantissa": "15407412572223719044571991091581433577813063092322676068311349628948618598987696935077286067478256003192449604910539",
+      "exponent": -458
+    },
+    "display": "[2.0701017759674100878424365256100215e-23 +/- 3.89e-58]"
+  },
+  "one_side_tail": {
+    "lower": {
+      "mantissa": "8754952494845649911372311368098337478024313968728358042521459959700782377172405402334097294475891416628588715822365",
+      "exponent": -447
+    },
+    "upper": {
+      "mantissa": "547184530927853119460769460506146092376519623045522377657591247481298898573275337645881080904743213539286794738907",
+      "exponent": -443
+    },
+    "display": "[2.40904954626082681957523201324861595e-20 +/- 4.43e-56]"
+  },
+  "rankin_beta": "6/5",
+  "signed_finite_sum": {
+    "real": {
+      "lower": {
+        "mantissa": "1774390182789899573552785400604454722756871963470139015224492788165800584951310988756975131040398681386406958059167",
+        "exponent": -379
+      },
+      "upper": {
+        "mantissa": "1774390182789899573553935018779122208822648060131273840985261268771786486954113580531355089916672006307989660880543",
+        "exponent": -379
+      },
+      "display": "[1.441055705799887485354 +/- 7.77e-22]"
+    },
+    "imag": {
+      "lower": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "upper": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "display": "0"
+    }
+  },
+  "bad_multiplier": {
+    "lower": {
+      "mantissa": "15621424199199448264402308881038138065165000953627168472934072419697122050974328740391903023507001867150512537413001",
+      "exponent": -383
+    },
+    "upper": {
+      "mantissa": "7810712099599724132201154440519069032582500476813584236467036209848561025487164370195951511753500933575256268706511",
+      "exponent": -382
+    },
+    "display": "[0.792925320672067841449100288057935343 +/- 4.73e-37]"
+  },
+  "modulus_upper": {
+    "lower": {
+      "mantissa": "28390242924638393177812989813587897761688664736752215468465549030711344526920227702220042194455088411756846454304999",
+      "exponent": -383
+    },
+    "upper": {
+      "mantissa": "28390242924638393177812989813587897761688664736752215468465549030711344526920227702220042194455088411756846454305001",
+      "exponent": -383
+    },
+    "display": "[1.44105570579988748540299894159699990 +/- 3.22e-36]"
+  },
+  "removed_modulus_upper": {
+    "lower": {
+      "mantissa": "22511342474976803075380498732307692493697291220383079683708919207665711135299301058910051837408339204283652677600027",
+      "exponent": -383
+    },
+    "upper": {
+      "mantissa": "22511342474976803075380498732307692493697291220383079683708919207665711135299301058910051837408339204283652677600027",
+      "exponent": -383
+    },
+    "display": "[1.14264955762768883793200835766543577 +/- 2.38e-37]"
+  },
+  "log_L_S_upper": {
+    "lower": {
+      "mantissa": "5254247244364801449641946514444622364599007319314955464370047545343763278192391042275983942521594522681262381545149",
+      "exponent": -384
+    },
+    "upper": {
+      "mantissa": "5254247244364801449641946514444622364599007319314955464370047545343763278192391042275983942521594522681262381545149",
+      "exponent": -384
+    },
+    "display": "[0.133349739050738911508179782026150081 +/- 1.87e-37]"
+  },
+  "target_log_L_S_upper": {
+    "lower": {
+      "mantissa": "5254247244364801449641944762707633675231667921223272967124230380259357691689641833961696221412502861113335985084099",
+      "exponent": -384
+    },
+    "upper": {
+      "mantissa": "10508494488729602899283889525415267350463335842446545934248460760518715383379283667923392442825005722226671970168313",
+      "exponent": -385
+    },
+    "display": "[0.13334973905073891150817973756808417 +/- 4.87e-36]"
+  },
+  "comparison_diagnostic": {
+    "direct_log_upper_exact_fraction": "5254247244364801449641946514444622364599007319314955464370047545343763278192391042275983942521594522681262381545149/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+    "target_log_upper_exact_fraction": "10508494488729602899283889525415267350463335842446545934248460760518715383379283667923392442825005722226671970168313/78804012392788958424558080200287227610159478540930893335896586808491443542994421222828532509769831281613255980613632",
+    "target_minus_direct_margin_exact_fraction": "-3503473977378734678796183364994491634330168811173005498416628575442218183323135852792921985/78804012392788958424558080200287227610159478540930893335896586808491443542994421222828532509769831281613255980613632",
+    "target_minus_direct_margin_decimal": "-4.4458065915680757e-26",
+    "target_modulus_upper": {
+      "lower": {
+        "mantissa": "28390242924638393177812988551381523753650166946392069671834256855753633803251720838322468839616284993947139351409121",
+        "exponent": -383
+      },
+      "upper": {
+        "mantissa": "28390242924638393177812988551381523753650166946392069671834256855753633803251720838322468839616284993947139351409121",
+        "exponent": -383
+      },
+      "display": "[1.4410557057998874854029988775288726 +/- 2.48e-35]"
+    },
+    "target_removed_modulus_upper": {
+      "lower": {
+        "mantissa": "22511342474976803075380497731496944890714613337161721393959849938393546031460392810465757965237732993259085052140191",
+        "exponent": -383
+      },
+      "upper": {
+        "mantissa": "22511342474976803075380497731496944890714613337161721393959849938393546031460392810465757965237732993259085052140225",
+        "exponent": -383
+      },
+      "display": "[1.1426495576276888379320083068654464 +/- 1.88e-35]"
+    },
+    "signed_center": {
+      "real": {
+        "lower": {
+          "mantissa": "1774390182789899573552785400604454722756871963470139015224492788165800584951310988756975131040398681386406958059167",
+          "exponent": -379
+        },
+        "upper": {
+          "mantissa": "1774390182789899573553935018779122208822648060131273840985261268771786486954113580531355089916672006307989660880543",
+          "exponent": -379
+        },
+        "display": "[1.441055705799887485354 +/- 7.77e-22]"
+      },
+      "imag": {
+        "lower": {
+          "mantissa": "0",
+          "exponent": 0
+        },
+        "upper": {
+          "mantissa": "0",
+          "exponent": 0
+        },
+        "display": "0"
+      }
+    },
+    "combined_two_side_error": {
+      "lower": {
+        "mantissa": "2190618911378920256046760946405880931222120125860351556048860027721698111211923090932044500140881820954411882276503",
+        "exponent": -444
+      },
+      "upper": {
+        "mantissa": "547654727844730064011690236601470232805530031465087889012215006930424527802980772733011125035220455238602970569135",
+        "exponent": -442
+      },
+      "display": "[4.82223929607358845932614889954845195e-20 +/- 1.78e-56]"
+    }
+  },
+  "row_allowance_comparison_passed": false,
+  "all_target_consistency_checks_passed": false,
+  "coefficient_method": "exact quadratic residue/Euler recurrence; complete signed-vector hash matched and every stored exact moment bin checked",
+  "kernel_method": "pointwise coefficient summation using existing pinned nonpositive-afe.py quadratic SplitKernels and explicit Taylor remainder; same python-flint/Arb backend, not a new kernel backend",
+  "target_binding": {
+    "target_receipt": "publication/nonabelian-dyadic-lower-bound/research/h7-inherited-euler-12000.json",
+    "target_receipt_sha256": "b6e87580af03ec9260c9277bfa64d786937d6d087ce9d99a0e4244e4345f625f",
+    "target_stage": "H6-low",
+    "target_sigma": "12001/12000",
+    "target_row_multiplicity": 1,
+    "target_row_dimension": 2,
+    "consolidated_replay_receipt_sha256": "34cad37d9e1fe935549db45b918a66e462f4c18655a84b024ebfc68c22682a9e",
+    "consolidated_table_source_hash": "b6e87580af03ec9260c9277bfa64d786937d6d087ce9d99a0e4244e4345f625f",
+    "consolidated_replay_input_hash": "b6e87580af03ec9260c9277bfa64d786937d6d087ce9d99a0e4244e4345f625f",
+    "all_analytic_factors_reevaluated": true,
+    "target_receipt_in_consolidated_replay": true
+  },
+  "prior_off_sigma_evidence_preserved": {
+    "direct_status": "FAIL direct upper exceeds frozen allowance",
+    "direct_sigma": "6001/6000",
+    "h6_aggregate_status": "PASS exact-rational H6 low-degree aggregate substitution; frozen row endpoint remains FAIL",
+    "note": "This target-sigma check is a new endpoint; it does not modify either prior H6 receipt."
+  },
+  "conditional_assumptions": [
+    "the pinned conductor, gamma=[0,1], and root number +1 describe the intended primitive entire degree-two L-function with its conjugation-compatible functional equation",
+    "the finite-image all-prime coefficient bound |a_n| <= d_2(n) holds globally, yielding zeta(beta)^2 Rankin majorant",
+    "the listed bad-prime Euler denominator polynomials are the complete local factors removed in L_S",
+    "the pinned quadratic Mellin-kernel majorant and Rankin tail inequality apply to this row",
+    "python-flint/Arb outward interval arithmetic and the pinned SplitKernels Taylor remainder derivation are sound"
+  ],
+  "source_sha256": {
+    "h6-low-degree-arithmetic.json": "b0335a1a87f8c3261d4be0bff2108a520964651c8884207f54194923378b7771",
+    "h6-low-degree-moments-1586.json": "a7e65537a05389f11115a8cf64c186ead6b1dc4973a8c5f862f31a34fdeb40f1",
+    "h7-inherited-euler-12000.json": "b6e87580af03ec9260c9277bfa64d786937d6d087ce9d99a0e4244e4345f625f",
+    "analytic-replay-20260922.json": "34cad37d9e1fe935549db45b918a66e462f4c18655a84b024ebfc68c22682a9e",
+    "h6_mixed_quadratic_direct.json": "5ad1872e87f6c9a823fc3d0ad9491b29807a8cfa9ff61b70335130f1a4caabcf",
+    "h6_aggregate_replacement.json": "1df80e3c2ade0134178f35a6d7742f26930ba6d91bdd1b4e6c7ea52451175bf1",
+    "h6-low-degree-euler.py": "9fdee8fe5bd9fcbc90c9b28ccbdd0ec5066d49b8b52757ee3f20cc89af707f38",
+    "h6-low-degree-arithmetic.py": "09cf2aae4e0f67bf3dee34289fd767635b0499801e81d787950f48b53599c14f",
+    "numerics_hecke_coeff_check.py": "3759f993a31a0df05241d8faa546950dcf68b49ad4768339e4f56da4e7846329",
+    "nonpositive-afe.py": "8d6b82b12f7de4a3d53feccde8aaffe0d0fbdf4b623c1447af6ea68ed399cba7",
+    "hecke_afe.py": "21e5c3187ff9e98e4fb42bcb39b6c3ec6ece47ef5eb2807ea2c2fd8daca4b7bd",
+    "exact_group.py": "b336d10f1beb4fb117685c899e938508e1aaf83def27b6b7a072ed6b12bf1b35"
+  },
+  "checker_sha256": "3be6c008e4edcb6471445c27a7d283c3360b5f07e23d808e7c30fc3ab1f5375b",
+  "seconds": 0.41513672284781933,
+  "scope_limitations": [
+    "the exact coefficient vector hash and finite moment checks do not prove the all-n coefficient bound",
+    "this row does not prove the representation-to-factor identity or global hypothesis H",
+    "the replay shares the pinned SplitKernels kernel and Arb/FLINT backend with the target evaluator",
+    "the comparison is performed directly at sigma 12001/12000; no off-sigma endpoint transfer is used"
+  ]
+}

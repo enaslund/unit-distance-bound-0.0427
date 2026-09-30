@@ -1,0 +1,9 @@
+{
+  "upstream_commit": "3a455e1aa9140dbbe7b7d68f508392a69c86d0f4",
+  "license": "Apache-2.0",
+  "source_module": "SawinTotallyRealTowers.RealProPOpenNormalStage",
+  "target_module": "UnitDistance.ProPOpenNormalStage",
+  "adaptation": "Use the actual maximal pro-p extension with unrestricted infinite places. The finite fixed-field construction and quotient action proofs are unchanged apart from declaration/import names.",
+  "source_sha256": "8c2445df8b18993b03d2577ec969adbb0e34c496087fd5fb665b28f8f91b3621",
+  "target_sha256": "103581da8606df61a3c6fec58d686d2d419c8fed16746633249c7ecde7518482"
+}

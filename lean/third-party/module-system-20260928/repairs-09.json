@@ -1,0 +1,43 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-09/result.json",
+      "insertions": [
+        {
+          "offset": 516,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "migrated_sha256": "bba8f60cce5ccff178185a2dfbd2540374f32a76f5e6673b524df6761e96d984",
+      "original_sha256": "192c47cafeaade64a57a33abadc3ac269ee7c7835a6064f1214015bfb21d8e7d",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/FiniteParameters.lean",
+      "reason": "Restores legacy module import/elaboration behavior through a tested header-only compatibility edit. Theorem statements, proof bodies, definitions and assumptions are unchanged."
+    },
+    {
+      "added_imports": [],
+      "added_options": [
+        "backward.proofsInPublic true"
+      ],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-09-finrank/result.json",
+      "insertions": [
+        {
+          "offset": 1006,
+          "text": "set_option backward.proofsInPublic true\n"
+        }
+      ],
+      "migrated_sha256": "58f03f9c540fa3c2203479fa8bdb628044869a9bd66bee4487aff850b4eede92",
+      "original_sha256": "391cb54e42e9d894f568334e4a9db90d039f8009ce2c55dc0f8834ceb195090f",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FiniteResidueFinrankTransfer.lean",
+      "reason": "Restores legacy module import/elaboration behavior through a tested header-only compatibility edit. Theorem statements, proof bodies, definitions and assumptions are unchanged."
+    }
+  ],
+  "schema": "unit-distance-module-port-repair-v2",
+  "scope": "Two tested downstream header repairs: DivisionPolynomial private characteristic instances in FiniteParameters, and backward.proofsInPublic in FiniteResidueFinrankTransfer. No theorem statements, bodies, definitions or assumptions change."
+}

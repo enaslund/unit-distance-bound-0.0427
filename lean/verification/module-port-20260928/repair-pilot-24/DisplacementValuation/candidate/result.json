@@ -1,0 +1,200 @@
+{
+  "inputs": {
+    "compiler": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "compiler_sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "LEAN_PATH": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/plausible/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/importGraph/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/aesop/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Qq/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/batteries/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Cli/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean",
+    "variants": [
+      {
+        "name": "DisplacementValuation",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-24/DisplacementValuation/candidate/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-24/DisplacementValuation/candidate/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-24/DisplacementValuation/candidate/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.olean",
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean",
+        "original_sha256": "78fcfebd4f2af424461c60f4e0c8840ba1a4c9b38ee75a5627322003c2761f42",
+        "migrated_sha256": "77ea567d68b706927970eb6bb6d8cc2e81fa7049b14d6f8bc63236a2c5b00899",
+        "insertions": [
+          {
+            "offset": 816,
+            "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+          }
+        ],
+        "added_imports": [
+          "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+        ],
+        "added_options": []
+      }
+    ],
+    "direct_import_artifact_hashes": [
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/PrimitivePoint.olean",
+        "sha256": "bcc0bfc46f432901fdf6e28f8baba5b9b1a820569dbffbcf500553bcee192316"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/PrimitivePoint.olean.private",
+        "sha256": "79e539e828546c3de0261e6cc429b66ca0fcd72ff7a64f73cdab1faaf548c0b4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/PrimitivePoint.olean.server",
+        "sha256": "09a5dfc1f9fd65cfd96cf607cc5572b4831d985f3b24ebb2e406420c7cee5759"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/PrimitivePoint.ir",
+        "sha256": "58e18f34fc9c9a593e598481b5e0da790845a5bc9a98b6fbd5daa2273c4872ad"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/DiscreteValuationField/PolynomialRootProximity.olean",
+        "sha256": "8e1555f96e0d830623846594fc03332fe55ec7299b203b24dcb013453790adea"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/DiscreteValuationField/PolynomialRootProximity.olean.private",
+        "sha256": "c9b81c68567b8d54f0153521c4388bad0b7bdd00abb61421fd3d5bc587b9408f"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/DiscreteValuationField/PolynomialRootProximity.olean.server",
+        "sha256": "00a51e32c4fe4d900220ccf83bc6fb6b4c719317518598c6420eac1283ee835f"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/DiscreteValuationField/PolynomialRootProximity.ir",
+        "sha256": "c07cc14fb71e96b67789367c3a093fc47a636bbb8b1f7d082522556ac768a2f4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/ValuationKrasner.olean",
+        "sha256": "35fbabb5b42c02e38a4431e19c8cb8d60090030dd2eaf94a137fb917903392e3"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/ValuationKrasner.olean.private",
+        "sha256": "0e5d637fa0abff7b77a5b64f7070b4429b4238b894de4025458faa6a83c84270"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/ValuationKrasner.olean.server",
+        "sha256": "b40592d3796f2ce994a1f118bf4b1dad463d221d67c0e23b823ae7a89c78147e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/ValuationKrasner.ir",
+        "sha256": "7ce0f97ba4f11d14f93a15b8e9cf12c6871e577c6efc1424b5d2a3c7a6547059"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/DivisionPolynomial.olean",
+        "sha256": "17cec824a8d4915ff6147a16ea3cfc29c09493ec4f9c59d082aa14c20ae53a65"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/DivisionPolynomial.olean.private",
+        "sha256": "37e3a6014182900f75d292cdc6c4a96a1728af2202348d2691dc8c6f5a7ef955"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/DivisionPolynomial.olean.server",
+        "sha256": "c6555a2e450760d8d9a4d5b5f19f2bd412b7a54d48fae136c7e3d62551a7f06d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/DivisionPolynomial.ir",
+        "sha256": "986cba6bd6d6c8d43d8e8db7da464c8694eb4ef6bb4605c5972e2d5447b9070a"
+      }
+    ],
+    "integration_attempt": "integration-20260928T213146Z",
+    "wall_seconds": 180,
+    "failure_log_sha256": "3c2150ba35e4c77179ebb23b084152adc8eccf71b359bdc41da97ebfa1576b98",
+    "scope": "Exact private-owner header candidate for observed primary instance errors; isolated outputs,1CPU2GiBzeroSwap8GiBhostguard; unchanged source statements/proofs/heartbeats."
+  },
+  "results": [
+    {
+      "compiler_exit_code": 0,
+      "direct_import_artifact_hashes_after": [
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/PrimitivePoint.olean",
+          "sha256": "bcc0bfc46f432901fdf6e28f8baba5b9b1a820569dbffbcf500553bcee192316"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/PrimitivePoint.olean.private",
+          "sha256": "79e539e828546c3de0261e6cc429b66ca0fcd72ff7a64f73cdab1faaf548c0b4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/PrimitivePoint.olean.server",
+          "sha256": "09a5dfc1f9fd65cfd96cf607cc5572b4831d985f3b24ebb2e406420c7cee5759"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/PrimitivePoint.ir",
+          "sha256": "58e18f34fc9c9a593e598481b5e0da790845a5bc9a98b6fbd5daa2273c4872ad"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/DiscreteValuationField/PolynomialRootProximity.olean",
+          "sha256": "8e1555f96e0d830623846594fc03332fe55ec7299b203b24dcb013453790adea"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/DiscreteValuationField/PolynomialRootProximity.olean.private",
+          "sha256": "c9b81c68567b8d54f0153521c4388bad0b7bdd00abb61421fd3d5bc587b9408f"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/DiscreteValuationField/PolynomialRootProximity.olean.server",
+          "sha256": "00a51e32c4fe4d900220ccf83bc6fb6b4c719317518598c6420eac1283ee835f"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/DiscreteValuationField/PolynomialRootProximity.ir",
+          "sha256": "c07cc14fb71e96b67789367c3a093fc47a636bbb8b1f7d082522556ac768a2f4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/ValuationKrasner.olean",
+          "sha256": "35fbabb5b42c02e38a4431e19c8cb8d60090030dd2eaf94a137fb917903392e3"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/ValuationKrasner.olean.private",
+          "sha256": "0e5d637fa0abff7b77a5b64f7070b4429b4238b894de4025458faa6a83c84270"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/ValuationKrasner.olean.server",
+          "sha256": "b40592d3796f2ce994a1f118bf4b1dad463d221d67c0e23b823ae7a89c78147e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/ValuationKrasner.ir",
+          "sha256": "7ce0f97ba4f11d14f93a15b8e9cf12c6871e577c6efc1424b5d2a3c7a6547059"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/DivisionPolynomial.olean",
+          "sha256": "17cec824a8d4915ff6147a16ea3cfc29c09493ec4f9c59d082aa14c20ae53a65"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/DivisionPolynomial.olean.private",
+          "sha256": "37e3a6014182900f75d292cdc6c4a96a1728af2202348d2691dc8c6f5a7ef955"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/DivisionPolynomial.olean.server",
+          "sha256": "c6555a2e450760d8d9a4d5b5f19f2bd412b7a54d48fae136c7e3d62551a7f06d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/DivisionPolynomial.ir",
+          "sha256": "986cba6bd6d6c8d43d8e8db7da464c8694eb4ef6bb4605c5972e2d5447b9070a"
+        }
+      ],
+      "variant": {
+        "name": "DisplacementValuation",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-24/DisplacementValuation/candidate/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-24/DisplacementValuation/candidate/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-24/DisplacementValuation/candidate/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.olean",
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean",
+        "original_sha256": "78fcfebd4f2af424461c60f4e0c8840ba1a4c9b38ee75a5627322003c2761f42",
+        "migrated_sha256": "77ea567d68b706927970eb6bb6d8cc2e81fa7049b14d6f8bc63236a2c5b00899",
+        "insertions": [
+          {
+            "offset": 816,
+            "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+          }
+        ],
+        "added_imports": [
+          "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+        ],
+        "added_options": []
+      },
+      "command": [
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-R",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-24/DisplacementValuation/candidate/source",
+        "-o",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-24/DisplacementValuation/candidate/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.olean",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-24/DisplacementValuation/candidate/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean"
+      ],
+      "exit_code": 0,
+      "reason": null,
+      "elapsed_total": 67.01844486687332
+    }
+  ],
+  "passed": true
+}

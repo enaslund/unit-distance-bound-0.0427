@@ -1,0 +1,31 @@
+{
+  "command": [
+    "python3",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/automation/lean-formalization/guarded_build.py",
+    "--lock-path",
+    "/tmp/lean-formalization-1000.build.lock",
+    "--wait-seconds",
+    "30",
+    "--timeout-seconds",
+    "300",
+    "--min-available-gib",
+    "4",
+    "--stop-below-gib",
+    "2",
+    "--",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional18-v435-migration/unit-distance-zeta/.toolchain/bin/lean",
+    "--root=.",
+    "-o",
+    "UnitDistance/PairMassDegree3DenseComputationCertificate.olean",
+    "UnitDistance/PairMassDegree3DenseComputationCertificate.lean"
+  ],
+  "cwd": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/candidate20-cell-proof-test",
+  "started_at": "2026-09-26T05:14:37.366677+00:00",
+  "state": "passed",
+  "source_sha256": "6d7b6d6f8f8a3213da3edd4556076da0ea27bb9aa59a9a49c33c3377a82d90d0",
+  "lean_path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/palomar-full-20260925T172715Z/prepare-work/source/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/palomar-full-20260925T172715Z/prepare-work/source/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/palomar-full-20260925T172715Z/prepare-work/source/.lake/packages/Qq/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/palomar-full-20260925T172715Z/prepare-work/source/.lake/packages/aesop/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/palomar-full-20260925T172715Z/prepare-work/source/.lake/packages/batteries/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/palomar-full-20260925T172715Z/prepare-work/source/.lake/packages/importGraph/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/palomar-full-20260925T172715Z/prepare-work/source/.lake/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/palomar-full-20260925T172715Z/prepare-work/source/.lake/packages/plausible/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/palomar-full-20260925T172715Z/prepare-work/source/.lake/packages/proofwidgets/.lake/build/lib/lean",
+  "exit_code": 0,
+  "seconds": 145.24222941789776,
+  "log_sha256": "ab7b958c1daddb859da9a410ccb40c6e7e1aef0348741faad44f23529c76e1dd",
+  "olean_sha256": "7b3c3c1f75dc879d6c017b06e6be450d572b9d79dd58c9f44431947ca3a0732f"
+}

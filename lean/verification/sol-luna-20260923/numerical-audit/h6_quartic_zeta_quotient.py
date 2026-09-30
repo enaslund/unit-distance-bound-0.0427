@@ -1,0 +1,307 @@
+#!/usr/bin/env python3
+"""Finite PARI maximal-order replay for H6 mask 1586, twist +1.
+
+Builds local factors of zeta_K/zeta_B from idealprimedec for
+K=Q[x]/(x^4-34*x^2+429), B=Q(sqrt(-35)), and compares a[1..3922]
+with the pinned quadratic-Hecke recurrence. This is a finite coefficient
+check; it does not prove an all-prime identity or an AFE premise.
+"""
+from __future__ import annotations
+
+import ast
+import hashlib
+import importlib.util
+import json
+import math
+import os
+import shutil
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[3]
+PUB = ROOT / "publication"
+H6 = PUB / "nonabelian-dyadic-lower-bound/research"
+SIX = PUB / "six-dimensional-lower-bound/research"
+UNIT_CERT = PUB / "unit-distance-lower-bound/certificates"
+FIVE = PUB / "five-prime-lower-bound"
+N = 3922
+BAD = (2, 3, 5, 7, 11, 13, 17)
+
+PINNED = {
+    H6 / "h6-low-degree-arithmetic.json": "b0335a1a87f8c3261d4be0bff2108a520964651c8884207f54194923378b7771",
+    H6 / "h6-low-degree-arithmetic.py": "09cf2aae4e0f67bf3dee34289fd767635b0499801e81d787950f48b53599c14f",
+    H6 / "h6-low-degree-euler.py": "9fdee8fe5bd9fcbc90c9b28ccbdd0ec5066d49b8b52757ee3f20cc89af707f38",
+    H6 / "h6-low-degree.md": "09f325e66fb399f463576aaa1314d321611dd92e89c38158851eb84836306b46",
+    SIX / "next-dyadic-h5-single.py": "f9a97f5c41485914e9700a5efcebb9df0ffdbc834a56a666b994d397ab3a3ba6",
+    SIX / "next-dyadic-arithmetic-extensions.json": "729cbff5f8477db075a43cec9a7e3aa20ed077a5d244592d472ac55b4bb97de6",
+    FIVE / "certificates/five_descent.py": "3671cea7925585b7f8a0f83310777b9dbb09c64d039544e7c3333c0d630faf0a",
+    FIVE / "certificates/five_single.py": "fab1dab721b92f3d2713d666e6ad9a394b6f5ff90834609d6190e432e2e0053f",
+    UNIT_CERT / "five_space_data.py": "b11235fa492a91fe2b487e35bcbb46ad87bb09ab1f22ceaf2dc5e7d3b892d4ec",
+    UNIT_CERT / "four_space_odd_local.py": "e3a8488c434b3e0c6978ce06f1ca1fcef76587e1b6a3ab55d21a1622ab67254b",
+    UNIT_CERT / "hecke_coefficients.py": "897f51fa566be6312288f5e48552cd44655051a3967cd2123b4e05f6cb95defe",
+}
+
+
+def sha(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def check_pins() -> dict[str, str]:
+    observed = {}
+    for path, digest in PINNED.items():
+        got = sha(path)
+        if got != digest:
+            raise RuntimeError(f"source hash changed: {path}: {got} != {digest}")
+        observed[str(path.relative_to(PUB))] = got
+    return observed
+
+
+def load_single():
+    path = SIX / "next-dyadic-h5-single.py"
+    spec = importlib.util.spec_from_file_location("h6_zeta_single_reference", path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError("cannot load pinned target coefficient source")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def gp_source(nmax: int) -> str:
+    # idealprimedec returns prime ideals in the maximal order; record both
+    # ramification index and residue degree for every prime ideal.
+    return f"""\\p 80
+K=nfinit(x^4-34*x^2+429);
+B=nfinit(x^2+35);
+if(nfcertify(K)!=[], error(\"quartic maximal-order certificate failed\"));
+if(nfcertify(B)!=[], error(\"quadratic maximal-order certificate failed\"));
+forprime(p=2,{nmax},{{
+  my(dK=idealprimedec(K,p), dB=idealprimedec(B,p));
+  print(\"DECOMP \",[p,vector(#dK,j,[dK[j].e,dK[j].f]),vector(#dB,j,[dB[j].e,dB[j].f])]);
+}});
+quit;
+"""
+
+
+def multiply_poly(a: list[int], b: list[int], nmax: int) -> list[int]:
+    out = [0] * min(nmax + 1, len(a) + len(b) - 1)
+    for i, x in enumerate(a):
+        for j, y in enumerate(b):
+            if i + j < len(out):
+                out[i + j] += x * y
+    return out
+
+
+def zeta_denominator(degrees: list[int], kmax: int) -> list[int]:
+    out = [1]
+    for f in degrees:
+        factor = [0] * (f + 1)
+        factor[0], factor[f] = 1, -1
+        out = multiply_poly(out, factor, kmax)
+    return out + [0] * max(0, kmax + 1 - len(out))
+
+
+def quotient_series(num: list[int], den: list[int], kmax: int) -> list[int]:
+    # Exact formal power series num/den, with den[0]=1.
+    out = [0] * (kmax + 1)
+    for k in range(kmax + 1):
+        out[k] = num[k] if k < len(num) else 0
+        for j in range(1, min(k, len(den) - 1) + 1):
+            out[k] -= den[j] * out[k - j]
+    return out
+
+
+def factor_sieve(n: int) -> list[int]:
+    spf = list(range(n + 1))
+    if n >= 1:
+        spf[1] = 1
+    for p in range(2, math.isqrt(n) + 1):
+        if spf[p] == p:
+            for m in range(p * p, n + 1, p):
+                if spf[m] == m:
+                    spf[m] = p
+    return spf
+
+
+def gp_decompositions(gp: str, nmax: int) -> tuple[dict[int, tuple[list[tuple[int, int]], list[tuple[int, int]]]], str, str]:
+    version = subprocess.run([gp, "--version-short"], capture_output=True, text=True, check=True).stdout.strip()
+    source = gp_source(nmax)
+    started = time.monotonic()
+    proc = subprocess.run([gp, "-fq", "-s", "400000000"], input=source,
+                          text=True, capture_output=True, timeout=120)
+    seconds = time.monotonic() - started
+    if proc.returncode != 0 or proc.stderr.strip():
+        raise RuntimeError(f"PARI/GP decomposition failed: rc={proc.returncode}; stderr={proc.stderr}")
+    answer = {}
+    for line in proc.stdout.splitlines():
+        line = line.strip()
+        if not line.startswith("DECOMP "):
+            continue
+        triple = ast.literal_eval(line[len("DECOMP "):])
+        p, kparts, bparts = triple
+        if p in answer:
+            raise RuntimeError(f"duplicate PARI decomposition for p={p}")
+        answer[int(p)] = ([(int(e), int(f)) for e, f in kparts],
+                          [(int(e), int(f)) for e, f in bparts])
+    if not answer or max(answer) > nmax:
+        raise RuntimeError("PARI returned an incomplete or malformed decomposition table")
+    return answer, version, f"{seconds:.9f}"
+
+
+def python_flint_provenance() -> dict[str, object]:
+    # The inherited recurrence module imports flint indirectly through its
+    # AFE dependencies; no Arb/flint numerical routine is called here.
+    import flint
+
+    root = Path(flint.__file__).resolve().parents[1]
+    files = sorted(p for p in root.rglob("*") if p.is_file())
+    tree = hashlib.sha256()
+    total_bytes = 0
+    for path in files:
+        rel = str(path.relative_to(root)).encode()
+        data = path.read_bytes()
+        total_bytes += len(data)
+        tree.update(len(rel).to_bytes(8, "big"))
+        tree.update(rel)
+        tree.update(hashlib.sha256(data).digest())
+    return {"version": getattr(flint, "__version__", "unknown"),
+            "python_version": sys.version.split()[0],
+            "module_path": str(Path(flint.__file__).resolve()),
+            "PYTHONPATH": os.environ.get("PYTHONPATH", ""),
+            "installation_tree_file_count": len(files),
+            "installation_tree_bytes": total_bytes,
+            "installation_tree_sha256": tree.hexdigest(),
+            "role": "import-only dependency of reference recurrence; no python-flint/Arb arithmetic used"}
+
+
+def pari_quotient_coefficients(decomp, nmax: int) -> tuple[list[int], dict[str, object]]:
+    spf = factor_sieve(nmax)
+    local: dict[int, list[int]] = {}
+    profiles = {}
+    for p, (kparts, bparts) in decomp.items():
+        kmax = 0
+        q = p
+        while q <= nmax:
+            kmax += 1
+            q *= p
+        dk = zeta_denominator([f for _, f in kparts], kmax)
+        db = zeta_denominator([f for _, f in bparts], kmax)
+        local[p] = quotient_series(db, dk, kmax)
+        profiles[str(p)] = {"K_e_f": [list(x) for x in kparts],
+                             "B_e_f": [list(x) for x in bparts],
+                             "K_zeta_denominator": dk,
+                             "B_zeta_denominator": db}
+    coeff = [0] * (nmax + 1)
+    coeff[1] = 1
+    for n in range(2, nmax + 1):
+        p = spf[n]
+        m = n
+        exponent = 0
+        while m % p == 0:
+            m //= p
+            exponent += 1
+        # The Dirichlet coefficients of an Euler product are multiplicative:
+        # a(p^v*m)=c_p(v)*a(m) when gcd(p,m)=1. An additive recurrence
+        # over p-powers would incorrectly count c_p(1)^2 inside a(p^2).
+        coeff[n] = local[p][exponent] * coeff[m]
+    return coeff, profiles
+
+
+def target_coefficients() -> tuple[list[int], str]:
+    arithmetic = json.loads((H6 / "h6-low-degree-arithmetic.json").read_text())
+    sector = next(s for s in arithmetic["sectors"] if s["mask"] == 1586)
+    row = next(r for r in sector["rows"] if r["twist"] == 1)
+    if (row["N"], row["conductor"], row["gamma"], row["root_number"]) != (3922, 240240, [0, 1], 1):
+        raise RuntimeError("pinned target row identity changed")
+    for p in BAD:
+        twisted = row["bad_euler_denominators"][str(p)]
+        if any(int(imag) != 0 for _, imag in twisted):
+            raise RuntimeError(f"target bad factor at p={p} is not real")
+        row_real = [int(real) for real, _ in twisted]
+        positive_real = [int(x) for x in row["positive_bad_euler_denominators"][str(p)]]
+        if row_real != positive_real:
+            raise RuntimeError(f"target twist changed the positive local polynomial at p={p}")
+    recipe = {"base_radicands": [-35, 1], "norm_squareclass": 429,
+              "eta_coefficients": [17, 2, 0, 0], "cyclic_twist_base": 0}
+    sys.path.insert(0, str(UNIT_CERT))
+    sys.path.insert(0, str(FIVE / "certificates"))
+    single = load_single()
+    source_row = dict(row)
+    spf, codes = single.prime_data(recipe, N)
+    pairs = single.coefficients(recipe, source_row, N, (spf, codes))
+    if any(imag for _, imag in pairs[1:]):
+        raise RuntimeError("target recurrence unexpectedly became non-real")
+    return [0] + [int(real) for real, _ in pairs[1:]], sha(SIX / "next-dyadic-h5-single.py")
+
+
+def main() -> int:
+    if not __debug__:
+        raise RuntimeError("assertions required")
+    pins = check_pins()
+    gp = shutil.which("gp")
+    if not gp:
+        raise RuntimeError("PARI/GP executable gp is unavailable")
+    decomp, gp_version, gp_seconds = gp_decompositions(gp, N)
+    actual, profiles = pari_quotient_coefficients(decomp, N)
+    expected, _ = target_coefficients()
+    mismatches = [n for n in range(1, N + 1) if actual[n] != expected[n]]
+    generated_gp_source = gp_source(N)
+    # Test the exact seven pinned denominator polynomials directly against
+    # the maximal-order local quotient factors from PARI.
+    arithmetic = json.loads((H6 / "h6-low-degree-arithmetic.json").read_text())
+    sector = next(s for s in arithmetic["sectors"] if s["mask"] == 1586)
+    row = next(r for r in sector["rows"] if r["twist"] == 1)
+    bad_local = {}
+    for p in BAD:
+        kparts, bparts = decomp[p]
+        kmax = 4
+        dk = zeta_denominator([f for _, f in kparts], kmax)
+        db = zeta_denominator([f for _, f in bparts], kmax)
+        # If row denominator is E, its local series is 1/E; compare the
+        # cross-multiplied polynomial identity E*D_B=D_K.
+        Eraw = row["bad_euler_denominators"][str(p)]
+        E = [int(pair[0]) for pair in Eraw[:5]]
+        product = multiply_poly(E, db, 4)
+        product += [0] * max(0, 5 - len(product))
+        bad_local[str(p)] = {"K_degree_f": [f for _, f in kparts],
+                             "B_degree_f": [f for _, f in bparts],
+                             "target_E_coefficients": E,
+                             "K_D_equals_E_times_B_D": product[:5] == (dk + [0] * max(0, 5-len(dk)))[:5],
+                             "K_D_coefficients": (dk + [0] * max(0, 5-len(dk)))[:5],
+                             "E_times_B_D_coefficients": product[:5]}
+    target_hash = hashlib.sha256(json.dumps(expected).encode()).hexdigest()
+    pari_hash = hashlib.sha256(json.dumps(actual).encode()).hexdigest()
+    result = {
+        "status": "PASS finite coefficient equality" if not mismatches and all(v["K_D_equals_E_times_B_D"] for v in bad_local.values()) else "FAIL",
+        "scope": "exact integer Dirichlet coefficients a_1,...,a_3922 only; no all-prime or analytic conclusion",
+        "field_identity_assumption": "K is the quartic field generated by x^2=17+2*sqrt(-35); B=Q(sqrt(-35)); thus K is the specified relative quadratic extension if irreducibility/field identification hold",
+        "polynomials": {"K": "x^4-34*x^2+429", "B": "x^2+35"},
+        "target": {"sector_mask": 1586, "twist": 1, "N": N, "conductor": 240240,
+                   "gamma": [0, 1], "root_number": 1, "factor_multiplicity": 1,
+                   "norm_squareclass": 429, "bad_primes": list(BAD)},
+        "coefficient_count": N, "maximal_order_decomposition_prime_count": len(decomp),
+        "bad_local_factor_checks": bad_local,
+        "mismatch_count": len(mismatches), "first_mismatches": mismatches[:20],
+        "target_vector_sha256": target_hash, "pari_vector_sha256": pari_hash,
+        "target_and_pari_vectors_equal": actual == expected,
+        "prime_decompositions": profiles,
+        "tool": {"executable": gp, "version": gp_version, "generated_source_sha256": hashlib.sha256(generated_gp_source.encode()).hexdigest(),
+                 "gp_elapsed_seconds": gp_seconds},
+        "python_flint_environment": python_flint_provenance(),
+        "checker_sha256": sha(Path(__file__).resolve()),
+        "source_sha256": pins,
+        "limits": ["finite p,n bound N=3922 only", "no proof of the all-prime field/L-function identity",
+                   "no proof of conductor, root number, functional equation, contour shift or AFE tail"],
+    }
+    dest = HERE / "h6_quartic_zeta_quotient.json"
+    dest.write_text(json.dumps(result, indent=2) + "\n")
+    print(json.dumps({k: result[k] for k in ("status", "coefficient_count", "maximal_order_decomposition_prime_count",
+                                                    "mismatch_count", "target_vector_sha256", "pari_vector_sha256",
+                                                    "tool", "source_sha256")}, indent=2))
+    return 0 if result["status"].startswith("PASS") else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

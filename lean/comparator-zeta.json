@@ -1,0 +1,14 @@
+{
+  "challenge_module": "ChallengeZeta",
+  "solution_module": "SolutionZeta",
+  "theorem_names": [
+    "UnitDistanceZetaSubmission.target_of_canonical_zeta_bound"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

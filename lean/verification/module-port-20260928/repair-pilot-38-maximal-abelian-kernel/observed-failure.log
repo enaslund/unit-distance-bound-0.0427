@@ -1,0 +1,23 @@
+✖ [6809/6832] Building UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.MaximalAbelianKernel (26s)
+trace: .> LEAN_PATH=/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Cli/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/batteries/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Qq/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/aesop/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/proofwidgets/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/importGraph/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/LeanSearchClient/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/plausible/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean /home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.lean -o /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.olean -i /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.ilean -c /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.c --setup /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.setup.json --json
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.lean:221:11: failed to synthesize
+  T2Space Gal(↥(maximalAbelianExtension K)/K)
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.lean:224:26: Type mismatch
+  Homeomorph.continuous h
+has type
+  Continuous ⇑h
+but is expected to have type
+  Continuous e.toFun
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.lean:225:27: Type mismatch
+  Homeomorph.continuous h.symm
+has type
+  Continuous ⇑h.symm
+but is expected to have type
+  Continuous e.invFun

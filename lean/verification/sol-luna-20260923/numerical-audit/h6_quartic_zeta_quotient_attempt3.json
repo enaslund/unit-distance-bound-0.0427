@@ -1,0 +1,23 @@
+{
+  "status": "FAIL after PARI decomposition, before coefficient comparison",
+  "attempt": 3,
+  "failure": "Loading the pinned target recurrence imports five_single.py, which transitively imports flint; the default guarded Python environment does not expose the task-specific python-flint installation.",
+  "checker_sha256": "7139eb656580755af33ece151acb072bdc76ef3d8af60e47b6118cfd22f39a5f",
+  "guarded_command": "python3 automation/lean-formalization/guarded_build.py --timeout-seconds 900 -- python3 lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py",
+  "guard_admission": {
+    "host_available_gib": 16.3,
+    "cgroup_headroom_gib": 1.36,
+    "timeout_seconds": 900
+  },
+  "wrapper_exit_code": 1,
+  "gp_child_exit_code": 0,
+  "observed_wall_seconds_across_tool_polls": 12.797258,
+  "python_error": "ModuleNotFoundError: No module named 'flint'",
+  "comparison_performed": false,
+  "log": "h6_quartic_zeta_quotient_attempt3.log",
+  "limits": [
+    "PARI decomposition subprocess returned successfully but the in-memory table was not written by the failed version.",
+    "No target vector was assembled and no coefficient comparison occurred.",
+    "No analytic conclusion follows."
+  ]
+}

@@ -1,0 +1,463 @@
+--- upstream/FiniteRealPExtension.lean
++++ new/FinitePExtension.lean
+@@ -1,12 +1,17 @@
++/-
++Adapted from Naganori Yamaguchi's SawinTotallyRealTowers, commit
++3a455e1aa9140dbbe7b7d68f508392a69c86d0f4 (Apache-2.0).
++This new development removes the condition at infinite places; all finite
++unramifiedness and actual Galois/p-group conditions are retained.
++-/
+ import SawinTotallyRealTowers.GaloisPCompositum
+ import SawinTotallyRealTowers.RamificationSupportCompositum
+-import SawinTotallyRealTowers.RealCompositum
+ import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
+ 
+ set_option autoImplicit false
+ 
+ /-!
+-# Finite layers of the real tower with prescribed ramification
++# Finite layers with prescribed finite ramification
+ 
+ We select actual finite Galois intermediate fields of the fixed algebraic
+ closure of ℚ. The base field is a member and binary composita remain in the
+@@ -19,19 +24,20 @@
+ 
+ noncomputable section
+ 
+-namespace ClassFieldTower.Sawin
++namespace UnitDistance.ArithmeticProP
++
++open ClassFieldTower.Sawin
+ 
+ private local instance finiteGaloisNumberField
+     (E : FiniteGaloisIntermediateField ℚ (AlgebraicClosure ℚ)) : NumberField E :=
+   NumberField.of_module_finite ℚ E
+ 
+-/-- The finite layers permitted in the initial real pro-p tower. -/
++/-- The finite layers permitted in the initial pro-p tower. -/
+ def IsAdmissibleFiniteLayer (p : ℕ)
+     (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (E : FiniteGaloisIntermediateField ℚ (AlgebraicClosure ℚ)) : Prop :=
+   IsPGroup p (E ≃ₐ[ℚ] E) ∧
+-    IsUnramifiedAtFinitePlacesOutside ℚ E T ∧
+-      IsUnramifiedAtInfinitePlaces ℚ E
++    IsUnramifiedAtFinitePlacesOutside ℚ E T
+ 
+ /-- The identity layer satisfies the arithmetic conditions for every prime
+ parameter and every permitted support. -/
+@@ -40,7 +46,7 @@
+     IsAdmissibleFiniteLayer p T ⊥ := by
+   let : IsGalois ℚ (⊥ : FiniteGaloisIntermediateField ℚ (AlgebraicClosure ℚ)).toIntermediateField :=
+     (⊥ : FiniteGaloisIntermediateField ℚ (AlgebraicClosure ℚ)).isGalois
+-  refine ⟨?_, ?_, ?_⟩
++  refine ⟨?_, ?_⟩
+   · apply IsPGroup.of_card (n := 0)
+     rw [IsGalois.card_aut_eq_finrank ℚ
+       (⊥ : FiniteGaloisIntermediateField ℚ (AlgebraicClosure ℚ))]
+@@ -50,12 +56,8 @@
+       (M := (⊥ : FiniteGaloisIntermediateField ℚ (AlgebraicClosure ℚ)))
+       (IntermediateField.botEquiv ℚ (AlgebraicClosure ℚ)).symm
+       (IsUnramifiedAtFinitePlacesOutside.refl ℚ T)
+-  · apply (isUnramifiedAtInfinitePlaces_rat_iff_isTotallyReal
+-      (⊥ : IntermediateField ℚ (AlgebraicClosure ℚ))).mpr
+-    exact IsTotallyReal.ofRingEquiv
+-      (IntermediateField.botEquiv ℚ (AlgebraicClosure ℚ)).symm.toRingEquiv
+ 
+-/-- Binary composita preserve all three finite-layer conditions, including
++/-- Binary composita preserve both finite-layer conditions, including
+ when the prime parameter is two. -/
+ theorem IsAdmissibleFiniteLayer.sup {p : ℕ}
+     {T : Set (HeightOneSpectrum (𝓞 ℚ))}
+@@ -66,13 +68,11 @@
+   let : Algebra.IsAlgebraic ℚ (AlgebraicClosure ℚ) := AlgebraicClosure.isAlgebraic ℚ
+   exact ⟨isPGroup_galois_sup E.toIntermediateField F.toIntermediateField hE.1 hF.1,
+     IsUnramifiedAtFinitePlacesOutside.sup
+-      E.toIntermediateField F.toIntermediateField T hE.2.1 hF.2.1,
+-    isUnramifiedAtInfinitePlaces_rat_sup
+-      E.toIntermediateField F.toIntermediateField hE.2.2 hF.2.2⟩
++      E.toIntermediateField F.toIntermediateField T hE.2 hF.2⟩
+ 
+ /-- A finite Galois subextension of an admissible layer remains admissible.
+ The restriction map supplies its p-group structure, and the tower descent
+-theorems supply both local conditions. -/
++theorems supply finite local conditions. -/
+ theorem IsAdmissibleFiniteLayer.of_le {p : ℕ}
+     {T : Set (HeightOneSpectrum (𝓞 ℚ))}
+     {E F : FiniteGaloisIntermediateField ℚ (AlgebraicClosure ℚ)}
+@@ -83,37 +83,35 @@
+   let : IsScalarTower ℚ E F := IsScalarTower.of_algebraMap_eq' rfl
+   let : Normal ℚ E.toIntermediateField := E.isGalois.to_normal
+   let : Normal ℚ F.toIntermediateField := F.isGalois.to_normal
+-  refine ⟨?_, IsUnramifiedAtFinitePlacesOutside.bot T hF.2.1, ?_⟩
++  refine ⟨?_, IsUnramifiedAtFinitePlacesOutside.bot T hF.2⟩
+   · exact hF.1.of_surjective (AlgEquiv.restrictNormalHom E)
+       (AlgEquiv.restrictNormalHom_surjective F)
+-  · let : IsUnramifiedAtInfinitePlaces ℚ F := hF.2.2
+-    exact IsUnramifiedAtInfinitePlaces.bot ℚ E F
+ 
+ /-- Actual admissible finite layers, indexed without duplicating Mathlib's
+ finite Galois intermediate-field structure. -/
+-def FiniteRealPExtension (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ))) : Type :=
++def FinitePExtension (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ))) : Type :=
+   {E : FiniteGaloisIntermediateField ℚ (AlgebraicClosure ℚ) //
+     IsAdmissibleFiniteLayer p T E}
+ 
+-namespace FiniteRealPExtension
++namespace FinitePExtension
+ 
+ /-- The bottom layer of the directed family. -/
+ def bot (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ))) :
+-    FiniteRealPExtension p T :=
++    FinitePExtension p T :=
+   ⟨⊥, isAdmissibleFiniteLayer_bot p T⟩
+ 
+ /-- The concrete compositum of two admissible finite layers. -/
+ def sup {p : ℕ} {T : Set (HeightOneSpectrum (𝓞 ℚ))}
+-    (E F : FiniteRealPExtension p T) : FiniteRealPExtension p T :=
++    (E F : FinitePExtension p T) : FinitePExtension p T :=
+   ⟨E.val ⊔ F.val, E.property.sup F.property⟩
+ 
+ /-- Every pair of finite layers is contained in their admissible compositum. -/
+ theorem directed (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ))) :
+     Directed (· ≤ ·)
+-      (fun E : FiniteRealPExtension p T ↦ E.val.toIntermediateField) := by
++      (fun E : FinitePExtension p T ↦ E.val.toIntermediateField) := by
+   intro E F
+   exact ⟨sup E F, le_sup_left, le_sup_right⟩
+ 
+-end FiniteRealPExtension
++end FinitePExtension
+ 
+-end ClassFieldTower.Sawin
++end UnitDistance.ArithmeticProP
+--- upstream/FiniteRealPExtensionSupport.lean
++++ new/FinitePExtensionSupport.lean
+@@ -1,10 +1,16 @@
+-import SawinTotallyRealTowers.FiniteRealPExtension
+-import SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.MaximalEverywhereUnramifiedProPFiniteSupport
++/-
++Adapted from Naganori Yamaguchi's SawinTotallyRealTowers, commit
++3a455e1aa9140dbbe7b7d68f508392a69c86d0f4 (Apache-2.0).
++This new development removes the condition at infinite places; all finite
++unramifiedness and actual Galois/p-group conditions are retained.
++-/
++import SawinTotallyRealTowers.FinitePExtension
++import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
+ 
+ set_option autoImplicit false
+ 
+ /-!
+-# Finite support in the real pro-p tower
++# Finite support in the pro-p tower
+ 
+ Compact intermediate fields contained in the supremum of admissible finite
+ layers lie in one layer, since the family is nonempty and directed. This
+@@ -17,20 +23,32 @@
+ 
+ noncomputable section
+ 
+-namespace ClassFieldTower.Sawin
++namespace UnitDistance.ArithmeticProP
+ 
+-private theorem compact_le_iSup_realPExtension_exists_extension
++open ClassFieldTower.Sawin
++
++/-- Bounded extraction of the generic compactness lemma from upstream
++`MaximalEverywhereUnramifiedProPFiniteSupport`, without its arithmetic imports. -/
++private theorem finiteDimensional_intermediateField_isCompactElement
++    {F E : Type*} [Field F] [Field E] [Algebra F E]
++    (L : IntermediateField F E) [FiniteDimensional F L] : IsCompactElement L := by
++  have hEss : Algebra.EssFiniteType F L := inferInstance
++  obtain ⟨s, hs⟩ := IntermediateField.essFiniteType_iff.mp hEss
++  rw [← hs]
++  exact IntermediateField.adjoin_finset_isCompactElement s
++
++private theorem compact_le_iSup_pExtension_exists_extension
+     (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (L : IntermediateField ℚ (AlgebraicClosure ℚ))
+     (hCompact : IsCompactElement L)
+-    (hL : L ≤ ⨆ E : FiniteRealPExtension p T, E.val.toIntermediateField) :
+-    ∃ C : FiniteRealPExtension p T, L ≤ C.val.toIntermediateField := by
+-  let f : FiniteRealPExtension p T → IntermediateField ℚ (AlgebraicClosure ℚ) :=
++    (hL : L ≤ ⨆ E : FinitePExtension p T, E.val.toIntermediateField) :
++    ∃ C : FinitePExtension p T, L ≤ C.val.toIntermediateField := by
++  let f : FinitePExtension p T → IntermediateField ℚ (AlgebraicClosure ℚ) :=
+     fun E ↦ E.val.toIntermediateField
+   have hNonempty : (Set.range f).Nonempty :=
+-    ⟨f (FiniteRealPExtension.bot p T), ⟨FiniteRealPExtension.bot p T, rfl⟩⟩
++    ⟨f (FinitePExtension.bot p T), ⟨FinitePExtension.bot p T, rfl⟩⟩
+   have hDirected : DirectedOn (· ≤ ·) (Set.range f) :=
+-    (FiniteRealPExtension.directed p T).directedOn_range
++    (FinitePExtension.directed p T).directedOn_range
+   have hLe : L ≤ sSup (Set.range f) := by
+     simpa only [sSup_range] using hL
+   obtain ⟨M, hM, hLM⟩ :=
+@@ -42,31 +60,31 @@
+ 
+ /-- A finite-dimensional intermediate field in the supremum of admissible
+ finite layers is contained in one admissible finite layer. -/
+-theorem finiteDimensional_le_iSup_realPExtension_exists_extension
++theorem finiteDimensional_le_iSup_pExtension_exists_extension
+     (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (L : IntermediateField ℚ (AlgebraicClosure ℚ)) [FiniteDimensional ℚ L]
+-    (hL : L ≤ ⨆ E : FiniteRealPExtension p T, E.val.toIntermediateField) :
+-    ∃ C : FiniteRealPExtension p T, L ≤ C.val.toIntermediateField := by
+-  exact compact_le_iSup_realPExtension_exists_extension p T L
+-    (ClassFieldTower.Martinet.finiteDimensional_intermediateField_isCompactElement L) hL
++    (hL : L ≤ ⨆ E : FinitePExtension p T, E.val.toIntermediateField) :
++    ∃ C : FinitePExtension p T, L ≤ C.val.toIntermediateField := by
++  exact compact_le_iSup_pExtension_exists_extension p T L
++    (finiteDimensional_intermediateField_isCompactElement L) hL
+ 
+ /-- Finitely many elements of the supremum all belong to a single admissible
+ finite layer. -/
+-theorem finset_subset_iSup_realPExtension_exists_extension
++theorem finset_subset_iSup_pExtension_exists_extension
+     (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (s : Finset (AlgebraicClosure ℚ))
+-    (hs : ∀ x ∈ s, x ∈ ⨆ E : FiniteRealPExtension p T, E.val.toIntermediateField) :
+-    ∃ C : FiniteRealPExtension p T, ∀ x ∈ s, x ∈ C.val.toIntermediateField := by
++    (hs : ∀ x ∈ s, x ∈ ⨆ E : FinitePExtension p T, E.val.toIntermediateField) :
++    ∃ C : FinitePExtension p T, ∀ x ∈ s, x ∈ C.val.toIntermediateField := by
+   have hAdjoin : IntermediateField.adjoin ℚ (s : Set (AlgebraicClosure ℚ)) ≤
+-      ⨆ E : FiniteRealPExtension p T, E.val.toIntermediateField :=
++      ⨆ E : FinitePExtension p T, E.val.toIntermediateField :=
+     IntermediateField.adjoin_le_iff.mpr (by
+       intro x hx
+       exact hs x hx)
+-  obtain ⟨C, hC⟩ := compact_le_iSup_realPExtension_exists_extension p T
++  obtain ⟨C, hC⟩ := compact_le_iSup_pExtension_exists_extension p T
+     (IntermediateField.adjoin ℚ (s : Set (AlgebraicClosure ℚ)))
+     (IntermediateField.adjoin_finset_isCompactElement (F := ℚ) s) hAdjoin
+   refine ⟨C, ?_⟩
+   intro x hx
+   exact hC (IntermediateField.subset_adjoin ℚ (s : Set (AlgebraicClosure ℚ)) hx)
+ 
+-end ClassFieldTower.Sawin
++end UnitDistance.ArithmeticProP
+--- upstream/MaximalRealProPOutside.lean
++++ new/MaximalProPOutside.lean
+@@ -1,16 +1,21 @@
+-import SawinTotallyRealTowers.FiniteRealPExtension
+-import SawinTotallyRealTowers.FiniteRealPExtensionSupport
++/-
++Adapted from Naganori Yamaguchi's SawinTotallyRealTowers, commit
++3a455e1aa9140dbbe7b7d68f508392a69c86d0f4 (Apache-2.0).
++This new development removes the condition at infinite places; all finite
++unramifiedness and actual Galois/p-group conditions are retained.
++-/
++import SawinTotallyRealTowers.FinitePExtension
++import SawinTotallyRealTowers.FinitePExtensionSupport
+ import Mathlib.FieldTheory.Normal.Basic
+ import Mathlib.FieldTheory.SeparableClosure
+ 
+ set_option autoImplicit false
+ 
+ /-!
+-# The maximal real compositum with prescribed ramification support
++# The maximal compositum with prescribed ramification support
+ 
+ The field is formed from the concrete directed family of finite layers.
+-Galoisness and total reality follow from the corresponding properties of
+-those layers. The pro-p property and arithmetic rank estimates are separate
++Galoisness follows from the corresponding properties of the finite layers. The pro-p property and arithmetic rank estimates are separate
+ theorems, not inputs to this construction.
+ -/
+ 
+@@ -19,66 +24,51 @@
+ 
+ noncomputable section
+ 
+-namespace ClassFieldTower.Sawin
++namespace UnitDistance.ArithmeticProP
+ 
+-/-- The compositum of all admissible finite real p-extensions of ℚ inside
++open ClassFieldTower.Sawin
++
++/-- The compositum of all admissible finite p-extensions of ℚ inside
+ its fixed algebraic closure. -/
+-def maximalRealProPOutside (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ))) :
++def maximalProPOutside (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ))) :
+     IntermediateField ℚ (AlgebraicClosure ℚ) :=
+-  ⨆ E : FiniteRealPExtension p T, E.val.toIntermediateField
++  ⨆ E : FinitePExtension p T, E.val.toIntermediateField
+ 
+ /-- Every admissible finite layer is contained in the maximal compositum. -/
+-theorem le_maximalRealProPOutside {p : ℕ}
++theorem le_maximalProPOutside {p : ℕ}
+     {T : Set (HeightOneSpectrum (𝓞 ℚ))}
+-    (E : FiniteRealPExtension p T) :
+-    E.val.toIntermediateField ≤ maximalRealProPOutside p T :=
+-  le_iSup (fun F : FiniteRealPExtension p T ↦ F.val.toIntermediateField) E
++    (E : FinitePExtension p T) :
++    E.val.toIntermediateField ≤ maximalProPOutside p T :=
++  le_iSup (fun F : FinitePExtension p T ↦ F.val.toIntermediateField) E
+ 
+ /-- The constructed maximal compositum is Galois over ℚ. -/
+-theorem maximalRealProPOutside_isGalois (p : ℕ)
++theorem maximalProPOutside_isGalois (p : ℕ)
+     (T : Set (HeightOneSpectrum (𝓞 ℚ))) :
+-    IsGalois ℚ (maximalRealProPOutside p T) := by
++    IsGalois ℚ (maximalProPOutside p T) := by
+   change IsGalois ℚ
+-    ((⨆ E : FiniteRealPExtension p T, E.val.toIntermediateField) :
++    ((⨆ E : FinitePExtension p T, E.val.toIntermediateField) :
+       IntermediateField ℚ (AlgebraicClosure ℚ))
+   exact
+     { to_isSeparable := IntermediateField.isSeparable_iSup ℚ (AlgebraicClosure ℚ)
+-        (h := fun E : FiniteRealPExtension p T ↦ E.val.isGalois.to_isSeparable)
++        (h := fun E : FinitePExtension p T ↦ E.val.isGalois.to_isSeparable)
+       to_normal := IntermediateField.normal_iSup ℚ (AlgebraicClosure ℚ)
+-        (fun E : FiniteRealPExtension p T ↦ E.val.toIntermediateField)
+-        (h := fun E : FiniteRealPExtension p T ↦ E.val.isGalois.to_normal) }
+-
+-/-- Total reality is preserved by the full, possibly infinite compositum. -/
+-theorem maximalRealProPOutside_isTotallyReal (p : ℕ)
+-    (T : Set (HeightOneSpectrum (𝓞 ℚ))) :
+-    IsTotallyReal (maximalRealProPOutside p T) := by
+-  let : Algebra.IsAlgebraic ℚ (AlgebraicClosure ℚ) := AlgebraicClosure.isAlgebraic ℚ
+-  let : Nonempty (FiniteRealPExtension p T) := ⟨FiniteRealPExtension.bot p T⟩
+-  let : ∀ E : FiniteRealPExtension p T,
+-      IsTotallyReal E.val.toIntermediateField.toSubfield := fun E ↦
+-    (isUnramifiedAtInfinitePlaces_rat_iff_isTotallyReal E.val).mp E.property.2.2
+-  have hReal : IsTotallyReal
+-      (⨆ E : FiniteRealPExtension p T,
+-        E.val.toIntermediateField.toSubfield : Subfield (AlgebraicClosure ℚ)) :=
+-    NumberField.isTotallyReal_iSup
+-  rw [← IntermediateField.iSup_toSubfield
+-    (fun E : FiniteRealPExtension p T ↦ E.val.toIntermediateField)] at hReal
+-  exact hReal
++        (fun E : FinitePExtension p T ↦ E.val.toIntermediateField)
++        (h := fun E : FinitePExtension p T ↦ E.val.isGalois.to_normal) }
+ 
+ /-- A finite Galois intermediate field lies in the maximal compositum
+ exactly when it satisfies the original arithmetic conditions. Directed
+ finite support and descent rule out additional inadmissible finite layers. -/
+-theorem isAdmissibleFiniteLayer_iff_le_maximalRealProPOutside
++theorem isAdmissibleFiniteLayer_iff_le_maximalProPOutside
+     (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (E : FiniteGaloisIntermediateField ℚ (AlgebraicClosure ℚ)) :
+     IsAdmissibleFiniteLayer p T E ↔
+-      E.toIntermediateField ≤ maximalRealProPOutside p T := by
++      E.toIntermediateField ≤ maximalProPOutside p T := by
+   constructor
+   · intro hE
+-    exact le_maximalRealProPOutside ⟨E, hE⟩
++    exact le_maximalProPOutside ⟨E, hE⟩
+   · intro hE
+-    obtain ⟨C, hEC⟩ := finiteDimensional_le_iSup_realPExtension_exists_extension
++    obtain ⟨C, hEC⟩ := finiteDimensional_le_iSup_pExtension_exists_extension
+       p T E.toIntermediateField hE
+     exact IsAdmissibleFiniteLayer.of_le hEC C.property
+ 
+-end ClassFieldTower.Sawin
++end UnitDistance.ArithmeticProP
+--- upstream/MaximalRealProPGroup.lean
++++ new/MaximalProPGroup.lean
+@@ -1,5 +1,11 @@
+-import SawinTotallyRealTowers.FiniteRealPExtensionSupport
+-import SawinTotallyRealTowers.MaximalRealProPOutside
++/-
++Adapted from Naganori Yamaguchi's SawinTotallyRealTowers, commit
++3a455e1aa9140dbbe7b7d68f508392a69c86d0f4 (Apache-2.0).
++This new development removes the condition at infinite places; all finite
++unramifiedness and actual Galois/p-group conditions are retained.
++-/
++import SawinTotallyRealTowers.FinitePExtensionSupport
++import SawinTotallyRealTowers.MaximalProPOutside
+ import ProCGroups.ProC.InverseLimits.Predicates
+ import ProCGroups.Profinite.OpenSubgroups
+ import Mathlib.FieldTheory.Galois.Infinite
+@@ -8,7 +14,7 @@
+ set_option autoImplicit false
+ 
+ /-!
+-# The Galois group of the maximal real pro-p compositum
++# The Galois group of the maximal pro-p compositum
+ 
+ Every finite normal subextension of the constructed compositum is contained
+ in an admissible finite layer. Restriction therefore makes its Galois group
+@@ -22,18 +28,20 @@
+ 
+ noncomputable section
+ 
+-namespace ClassFieldTower.Sawin
++namespace UnitDistance.ArithmeticProP
+ 
+-/-- A finite normal subextension of the maximal real compositum has a
++open ClassFieldTower.Sawin
++
++/-- A finite normal subextension of the maximal compositum has a
+ p-group Galois group, by restriction from one admissible finite layer. -/
+-theorem isPGroup_galois_of_le_maximalRealProPOutside
++theorem isPGroup_galois_of_le_maximalProPOutside
+     (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (L : IntermediateField ℚ (AlgebraicClosure ℚ))
+     [FiniteDimensional ℚ L] [Normal ℚ L]
+-    (hL : L ≤ maximalRealProPOutside p T) :
++    (hL : L ≤ maximalProPOutside p T) :
+     IsPGroup p (L ≃ₐ[ℚ] L) := by
+   obtain ⟨C, hLC⟩ :=
+-    finiteDimensional_le_iSup_realPExtension_exists_extension p T L hL
++    finiteDimensional_le_iSup_pExtension_exists_extension p T L hL
+   let : Algebra L C.val :=
+     RingHom.toAlgebra (IntermediateField.inclusion hLC).toRingHom
+   let : IsScalarTower ℚ L C.val := IsScalarTower.of_algebraMap_eq' rfl
+@@ -42,25 +50,25 @@
+     (AlgEquiv.restrictNormalHom L)
+     (AlgEquiv.restrictNormalHom_surjective C.val)
+ 
+-/-- The actual Galois group of the maximal real compositum has an
++/-- The actual Galois group of the maximal compositum has an
+ open-normal basis whose finite quotients are p-groups. -/
+-theorem maximalRealProPOutside_galoisGroup_hasPGroupOpenNormalBasis
++theorem maximalProPOutside_galoisGroup_hasPGroupOpenNormalBasis
+     (p : ℕ) [Fact p.Prime] (T : Set (HeightOneSpectrum (𝓞 ℚ))) :
+     ProCGroups.ProC.HasPGroupOpenNormalBasis p
+-      (maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T) := by
+-  let : IsGalois ℚ (maximalRealProPOutside p T) :=
+-    maximalRealProPOutside_isGalois p T
++      (maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T) := by
++  let : IsGalois ℚ (maximalProPOutside p T) :=
++    maximalProPOutside_isGalois p T
+   rw [ProCGroups.ProC.HasPGroupOpenNormalBasis]
+   apply ProCGroups.ProC.HasOpenNormalBasisInClass.of_allOpenNormalQuotients
+   intro U
+   refine ⟨inferInstance, ?_⟩
+   let Uc : ClosedSubgroup
+-      (maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T) :=
++      (maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T) :=
+     ⟨(U : Subgroup
+-      (maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T)),
++      (maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T)),
+       ProCGroups.openNormalSubgroup_isClosed U⟩
+   let hUcNormal : Uc.toSubgroup.Normal := U.isNormal'
+-  let L : IntermediateField ℚ (maximalRealProPOutside p T) :=
++  let L : IntermediateField ℚ (maximalProPOutside p T) :=
+     IntermediateField.fixedField Uc.toSubgroup
+   have hfix : L.fixingSubgroup = Uc.toSubgroup := by
+     dsimp only [L]
+@@ -80,18 +88,18 @@
+       Normal.of_algEquiv (h := hLNormal) (IntermediateField.liftAlgEquiv L)
+     have hLift : IsPGroup p
+         (IntermediateField.lift L ≃ₐ[ℚ] IntermediateField.lift L) :=
+-      isPGroup_galois_of_le_maximalRealProPOutside p T
++      isPGroup_galois_of_le_maximalProPOutside p T
+         (IntermediateField.lift L) (IntermediateField.lift_le L)
+     exact hLift.of_equiv
+       (AlgEquiv.autCongr (IntermediateField.liftAlgEquiv L)).symm
+   let e :
+-      ((maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T) ⧸
++      ((maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T) ⧸
+         Uc.toSubgroup) ≃* (L ≃ₐ[ℚ] L) :=
+     InfiniteGalois.normalAutEquivQuotient
+-      (k := ℚ) (K := maximalRealProPOutside p T) Uc
++      (k := ℚ) (K := maximalProPOutside p T) Uc
+   have hquot : IsPGroup p
+-      ((maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T) ⧸
++      ((maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T) ⧸
+         Uc.toSubgroup) := hL.of_equiv e.symm
+   simpa only [Uc] using hquot
+ 
+-end ClassFieldTower.Sawin
++end UnitDistance.ArithmeticProP

@@ -1,0 +1,227 @@
+{
+  "repository": "https://github.com/CBirkbeck/AINTLIB.git",
+  "commit": "a302aeacd86053f9d5f991fbbf664e1cc1051d08",
+  "upstream_toolchain": "leanprover/lean4:v4.35.0-rc1",
+  "local_toolchain": "leanprover/lean4:v4.32.0",
+  "local_mathlib_commit": "81a5d257c8e410db227a6665ed08f64fea08e997",
+  "license": "Apache-2.0",
+  "source_modification": "Internal import paths relocated under UnitDistance.Upstream.AINTLIB and upstream's bare `public import Mathlib` narrowed to specific Mathlib modules (FourierJordan and GammaSide add specific Mathlib imports instead; NumberFieldEulerProduct's imports are unchanged); proof-only pinned-toolchain API/coercion adaptations for five files are listed in compatibility.patch and the ZeroSummability extraction in zero-summability-extraction.patch; the import changes are not in the patches. Each shipped file carries an in-file change notice in its copyright header (added 2026-09-22). local_sha256 is the hash of the shipped file, notice included. Mathematical statements preserved.",
+  "files": [
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/AuxiliaryFunction.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/AuxiliaryFunction.lean",
+      "upstream_sha256": "daa57c2ab800909bbc285384d38ea694eeef46483b6faaf191be90f453ba43af",
+      "local_sha256": "def99a1d545d10c91bc90ea698e45ba70e797271da4c3e210c0576728348c8b5",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/Chebotarev/CebotarevDensity/NumberFieldEulerProduct.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CebotarevDensity/NumberFieldEulerProduct.lean",
+      "upstream_sha256": "fdf7f716c5036034305e5878df55a3d8ab21e9608d531f7a5775f822be7f5550",
+      "local_sha256": "4ec045d7a8094cb41bb45eadb7b553b13cbeb5020d6bbc2dc36a7217d239899f",
+      "compatibility_patch": true,
+      "pre_v435_local_sha256": "199f6399fb5d5478f5fdff5eec935edb818db70c35694cf5643e8a5d5ea53e05"
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/AnalyticControl.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/AnalyticControl.lean",
+      "upstream_sha256": "e6060d3ffdf0e5f4cf31adb751c15f1f5d789b2a854ca790789874097c2b7a00",
+      "local_sha256": "608b3117c02cf77d0dc8d4b47fbf8f92f61470922b20e37b164d8ca553fbcbec",
+      "compatibility_patch": true,
+      "pre_v435_local_sha256": "f614ccef6619ae3a8821085514134f01164bd1a0d1cc113ebb4f9f69a95a71b7"
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/ClassTheta.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/ClassTheta.lean",
+      "upstream_sha256": "b1fd3386067669c1521274ed83a0f1e3334831e342d8e2e8622b1729c3139a3e",
+      "local_sha256": "bcda734c071999f3ed718d27a446218f9119362ba04874941cd94d08dd5bab87",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/DualLattice.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/DualLattice.lean",
+      "upstream_sha256": "b6d5de34590ca7f30f0a8bb3a3f8a3ecaaf4467e5a3678bde00c4e34935dcb5b",
+      "local_sha256": "581f0e39cf7df78a8bfe65a3f83051375fe219b203722a30de7959f5ee792bf7",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/Existence.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/Existence.lean",
+      "upstream_sha256": "56b8751847b74f38f71d109644501b30f73cba0a68fd74b58127977904e0aeec",
+      "local_sha256": "6d4f4e9c47003ff30fc424cacf1552a3d70191342bc44ecb5c4b8a5c7c034e40",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/FEPair.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/FEPair.lean",
+      "upstream_sha256": "9e1e6d1496ca558472e8d916dc496c2cdf4dd71174caab599b12385837bde808",
+      "local_sha256": "07456eda279bc135a09fcbdb6d04899549947d2187663f1cca4f7aee2be3bf62",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/FunctionalEquation.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/FunctionalEquation.lean",
+      "upstream_sha256": "90817949a891ec375d4c7ecdec75816c808c7d5574f846a2ba6328d37216aa03",
+      "local_sha256": "e16f3ebb2e6c62c951057fba72dee885a4d676fefb4ddeb185013979b6024123",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/GRH.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/GRH.lean",
+      "upstream_sha256": "ee7b4054cab33189b91d8e22aa52730942761427feaaa27ba97ba31e065d290b",
+      "local_sha256": "0348e89ba131d168dc721d566130bbd13568cef0346943e901f3842d8a095186",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/GammaStrip.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/GammaStrip.lean",
+      "upstream_sha256": "787207492227a2f0bc77091f720e40a22f9c854c5004bc677252746278e7d680",
+      "local_sha256": "3b1dccb2243f02665a12abfe817433141e0c8a8e148720ee520337f8e04c354a",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/HeckeTheta.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/HeckeTheta.lean",
+      "upstream_sha256": "6f4c5c888ac74d06e3d003eb18c1b7dcffc44ac5ee1cf2db9a7a2c0ce4c392d0",
+      "local_sha256": "7dfeff8449da5a90800b1a78e83975b3716fc8099b12bd5812fe32e378235cde",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/IdealLattice.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/IdealLattice.lean",
+      "upstream_sha256": "e7288262f4b5254fe68f5cffcf944018eafd2c3e5dab6ffb058e9b0801d739ca",
+      "local_sha256": "3d6daad02eb603ea4134933dead7504b642c84469031aa1c07bdb182240050ed",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/MellinAgreement.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/MellinAgreement.lean",
+      "upstream_sha256": "43a6d1ac106a279328b2cb5277592d61274f5b11bb5781799f50efb7efd1851f",
+      "local_sha256": "b4b4819a0424f8745cabbabbfe8b5b0687bb7b0ac25d4ff70f7497eb3b5065b0",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/Normalisation.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/Normalisation.lean",
+      "upstream_sha256": "5e9811e0ed5e4821497622cfc3950febbfcb758b983952bd80c700ca9e828ff7",
+      "local_sha256": "886ba3c83205399e0cef14b67e7b0a333abc35c956d2d4e29ceb28217c3fa00f",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/PoissonLattice.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/PoissonLattice.lean",
+      "upstream_sha256": "9de63e92a43ec30ee4fd87191066d606a39970a00c508e6d061d9e7325040bed",
+      "local_sha256": "5459cebe6892c69986912a40cecb73ee99209bc746852893fc424eda3443063a",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/PoissonSummation.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/PoissonSummation.lean",
+      "upstream_sha256": "88e6a274b536173772e0a4ff9eac0b67bb48e64600800a00b86713b971ee34c8",
+      "local_sha256": "5781ec8e3454eb4151ba21004b8bba8cf73c9f69652266b4115a63d93f83518c",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/ThetaEstimates.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/ThetaEstimates.lean",
+      "upstream_sha256": "feb1420e2d16344f5c226c6a14ccc43499bea9f54cdd6b6de606a7070ef85e5c",
+      "local_sha256": "a78b063e34217569c513767dc5775d6185d6077af42546263f9d56e6904baad5",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/ThetaLattice.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/CompletedZeta/ThetaLattice.lean",
+      "upstream_sha256": "5618ef52843fb953e3573714ab40c980c6370db1b5f44cf64481f86fc0dbe125",
+      "local_sha256": "ece5d3a1cba17809f57eb1ad9aba3410ed8dbf10c1ce4523294656c214f11068",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/ExplicitFormula/AuxAdmissible.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/ExplicitFormula/AuxAdmissible.lean",
+      "upstream_sha256": "94cc08eae5f62076f745ca66e8279f88ec45f20d5dccceb3f2402cc6f76e9348",
+      "local_sha256": "70e1e1e327e935919975bce16fc5a758862597cb616b9bea1dd1ef5b0c95163f",
+      "compatibility_patch": true,
+      "pre_v435_local_sha256": "238e165b1ee696ab4a09fae2ba67f6494c8c32e20f055f61d8dd02d5ce2461b8"
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/ExplicitFormula/FourierJordan.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/ExplicitFormula/FourierJordan.lean",
+      "upstream_sha256": "b4db6cbcd2752b3ddc78a3f77559de1be749c238b7daaf4461d3c9333299187a",
+      "local_sha256": "eb612c95536f60ea959932ce84b6a7823b70499db50ace8d536337f8ee1fea2d",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/ExplicitFormula/GammaSide.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/ExplicitFormula/GammaSide.lean",
+      "upstream_sha256": "1c13356a11f2017448bedee841e509fcbb5a880719f2b28bea222e16e80edbe8",
+      "local_sha256": "b0439e18dd64ea4387dca0e4e14c0056c2b9408661770bc6b9597a4fd218ee49",
+      "compatibility_patch": true,
+      "pre_v435_local_sha256": "e93885fa6c5044c578d88e6ea54fa840fec04fa6b6a4e3f7700b60b135cc241d"
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/ExplicitFormula/PhiTransform.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/ExplicitFormula/PhiTransform.lean",
+      "upstream_sha256": "cc6ec3455a7d42e10da47549aad62dfec00a778f647ac3111629381b17bb48ce",
+      "local_sha256": "ac06ce59f697dcbe89ed2cff1d1cc186eeb945cc3ad10f9fb2266a63ff065607",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/ExplicitFormula/PrimeSide.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/ExplicitFormula/PrimeSide.lean",
+      "upstream_sha256": "5ca1e81c24d8bf0fc696554d617c9489723395851e6ec6deef9a12137580c134",
+      "local_sha256": "763902c717df094e149c1c4c4ae982f208ab1bad741c96863fe176cbbe2a6d62",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/ExplicitFormula/RectangleContour.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/ExplicitFormula/RectangleContour.lean",
+      "upstream_sha256": "acf8f6cf70836cd541614452c2e10f5a5bb5cb4eba7431d6724101890e54878f",
+      "local_sha256": "a4cf58121768d1f6ae023a16347950c983df49565c7ae30e24cd05faa0ce45bd",
+      "compatibility_patch": true,
+      "pre_v435_local_sha256": "722e25f0791bbbd9f36555288f8efde01e76c507d47296f1f7f1e18bb7df7530"
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/ExplicitFormula/TestFunction.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/ExplicitFormula/TestFunction.lean",
+      "upstream_sha256": "0aab6cf5e31682018f5a32d109b6b0539fa107333e4689153dcdf52be79a71c6",
+      "local_sha256": "47f717d6146fe055e4613af76b7a8592a383b18f06942bc04b42e3962290ad6a",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/ExplicitFormula/WeilAssembly.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/ExplicitFormula/WeilAssembly.lean",
+      "upstream_sha256": "64546f03ea79d594f8f74c42327d026bde614092ef5cdc3f629de531a4f0a8f1",
+      "local_sha256": "7cda78bbaea36e504471280bdcdf22b70e3a7b2aa5bce51baaa70ba23660c0b2",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/ExplicitFormula/ZeroCapture.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/ExplicitFormula/ZeroCapture.lean",
+      "upstream_sha256": "d3629bd8ce23ab52f93bef74b23915e84a639beb343a2003d6e18bce8199308a",
+      "local_sha256": "75bd3229e337b2fe0f4a7b2185355e7b5ccad5ff1f822a4e616b09f7f21eb192",
+      "compatibility_patch": false
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/ExplicitFormula/GRHZeros.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/ExplicitFormula/ZeroSummability.lean",
+      "upstream_sha256": "d80326087224d1f41f86dec9c3c1fb3fd082cd8b81aa0b2f91fa19f2ad00f456",
+      "local_sha256": "6c50a51f86463b3519d5125ae6363e762bde5b94c04fa908a71241fc3ead39be",
+      "compatibility_patch": false,
+      "extraction_patch": "zero-summability-extraction.patch",
+      "extraction": "Unconditional global divisor, finite counts and inverse-square summability; GRH-dependent statements omitted; proofs unchanged."
+    },
+    {
+      "upstream_path": "projects/DedekindResidue/DedekindResidue/Lemma2.lean",
+      "local_path": "UnitDistance/Upstream/AINTLIB/Lemma2.lean",
+      "upstream_sha256": "58613e72bdad1d369855a2842c2876737891059da3303baf639cf021fd8c41a5",
+      "local_sha256": "10f51b5091b8994ca7a8ffa848310254c79a0ecdbafde68951e97b0a05b0348c",
+      "compatibility_patch": false
+    }
+  ],
+  "additional_adapted_proof": {
+    "local_path": "UnitDistance/RelativeHeckeCompletion.lean",
+    "local_theorem": "UnitDistance.NumberFieldAnalysis.completedDedekindEntire_one_sub",
+    "upstream_path": "projects/DedekindResidue/DedekindResidue/CompletedZeta/AnalyticControl.lean",
+    "upstream_theorem": "DedekindResidue.completedDedekindZetaEntire_one_sub"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-10/free-rank-one/result.json",
+      "insertions": [
+        {
+          "offset": 787,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "migrated_sha256": "f59b9d9a5abf6c42901dc6e6622fc9d391174342ce7f6a2e2b282e381088be16",
+      "original_sha256": "c54b0e5fe002d0f43172fc2c920fc3c4ff882fb85de1b208a17a1a8274409a61",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/FreeRankOne.lean",
+      "reason": "Targeted restoration of legacy private-instance availability or proof elaboration. Exact affected module passed isolated compile; all statement and proof-body bytes unchanged."
+    },
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-10/level-automorphisms/result.json",
+      "insertions": [
+        {
+          "offset": 801,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "migrated_sha256": "466751f49f65767ecfb64714436f12d1fee469fac2887162898019e646737e80",
+      "original_sha256": "28d65807442157315e6bff1edcfb04e9f06c031e3816dcc414fe98133dfb682e",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/LevelAutomorphisms.lean",
+      "reason": "Targeted restoration of legacy private-instance availability or proof elaboration. Exact affected module passed isolated compile; all statement and proof-body bytes unchanged."
+    },
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-10/completed-primitive-action/result.json",
+      "insertions": [
+        {
+          "offset": 655,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel\n"
+        }
+      ],
+      "migrated_sha256": "10d1c31c19dc6066fae8becadf10bbaa4c5ad50d13dc906c43e77dda4f451f2d",
+      "original_sha256": "eb0fce6ec49a0a7ec4508a79dfcd2e880c9ae1582482a99e7725438f685e097e",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/CompletedLevel/CompletedPrimitiveAction.lean",
+      "reason": "Targeted restoration of legacy private-instance availability or proof elaboration. Exact affected module passed isolated compile; all statement and proof-body bytes unchanged."
+    },
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-10-unramified/result.json",
+      "insertions": [
+        {
+          "offset": 993,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree\n"
+        }
+      ],
+      "migrated_sha256": "5872bea1e626f0430b06b3e64faffba5fa089660a0fe9873d0160755e8d70d8a",
+      "original_sha256": "c55b524d1f0cc1314352c395093db5c36edb3bb4f9e3a604c7b16f1768bf397c",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/UnramifiedComparison.lean",
+      "reason": "Targeted restoration of legacy private-instance availability or proof elaboration. Exact affected module passed isolated compile; all statement and proof-body bytes unchanged."
+    },
+    {
+      "added_imports": [],
+      "added_options": [
+        "backward.proofsInPublic true"
+      ],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-10-naturality/result.json",
+      "insertions": [
+        {
+          "offset": 963,
+          "text": "set_option backward.proofsInPublic true\n"
+        }
+      ],
+      "migrated_sha256": "aeaf863b32f4ba0fc7549ac6a330f3b5dbe06a31780d113c31af09c4fca5d1c4",
+      "original_sha256": "305ac7436b944bad162ceccdf9874421e98921a0c25387b1f514fb5e644657b4",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldNormResidueNaturality.lean",
+      "reason": "Targeted restoration of legacy private-instance availability or proof elaboration. Exact affected module passed isolated compile; all statement and proof-body bytes unchanged."
+    },
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-10-orderembedding/result.json",
+      "insertions": [
+        {
+          "offset": 858,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "migrated_sha256": "ba97e02dab4eea01ade1a493c394eb93a0ab2162778d4707cfdb57ea8995e0e2",
+      "original_sha256": "cad2314bac2fbd2ad64015705016df34a6782a851b858ca195b9ac0175e5f8b6",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/Existence/NormSubgroupOrderEmbedding.lean",
+      "reason": "Targeted restoration of legacy private-instance availability or proof elaboration. Exact affected module passed isolated compile; all statement and proof-body bytes unchanged."
+    },
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityCanonical",
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-10-intermediate/result.json",
+      "insertions": [
+        {
+          "offset": 880,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityCanonical\n"
+        },
+        {
+          "offset": 880,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "migrated_sha256": "ff6d287cd465d41b9b7d19a7a21d444e494bcfcfa8f537d4f3268591fdaee83b",
+      "original_sha256": "6e193fcc7a511662ba0acd4916f64b79ae9b6deb2e6c9838abc0176555b4d500",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/IntermediateFieldNormResidueNaturality.lean",
+      "reason": "Targeted restoration of legacy private-instance availability or proof elaboration. Exact affected module passed isolated compile; all statement and proof-body bytes unchanged."
+    }
+  ],
+  "schema": "unit-distance-module-port-repair-v2",
+  "scope": "Seven tested downstream header-only repairs found by integration193940. Seven import-all directives restore private characteristic, Galois, topology and finite-quotient instances; one compatibility option restores legacy proof elaboration. No theorem statements, proof bodies, definitions or assumptions change."
+}

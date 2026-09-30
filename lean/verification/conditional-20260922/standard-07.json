@@ -1,0 +1,707 @@
+{
+  "archive": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/conditional-20260922/conditional-source-07.tar.gz",
+  "archive_sha256": "f5bfc2e50e6432af0d6dfccf26801bf1de6d147f42cb6b037478e0b40c3ccd0a",
+  "command": [
+    "/usr/bin/python3",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/upstream/PalomarSubmission-20260918/scripts/verify_submission.py",
+    "execute",
+    "--work-dir",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260922/standard-07",
+    "--output",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260922/standard-07/local-execution.json",
+    "--workflow-url",
+    "local-only:not-an-official-palomar-report",
+    "--execution-budget-seconds",
+    "19800",
+    "--comparator",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260921/tools/comparator",
+    "--lean4export",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260921/tools/lean4export",
+    "--landrun",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260921/tools-standard/landrun",
+    "--nanoda",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260921/tools/nanoda",
+    "--comparator-commit",
+    "575674928e239f5bc452aab72d1dd7b0f1326494",
+    "--landrun-commit",
+    "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+    "--nanoda-commit",
+    "68d5ca9db226849b41a6fff59d796ff19d0a8840"
+  ],
+  "execution_budget_seconds": 19800,
+  "execution_exit_code": 0,
+  "execution_log": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/conditional-20260922/standard-07.log",
+  "execution_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "execution_report": {
+    "challenge": {
+      "bytes": 6513,
+      "canonical_olean_sha256": "bebb8ef22bd88ec8f3cdf0da633e0c877b901f0d1c6a1c264c0f99ad9fbd8384",
+      "dependencies": [
+        {
+          "provenance": "allowlisted",
+          "repository": "leanprover-community/mathlib4"
+        }
+      ],
+      "direct_imports": [
+        "Mathlib.AlgebraicTopology.SimplexCategory.Basic",
+        "Mathlib.Analysis.CStarAlgebra.Classes",
+        "Mathlib.Analysis.Calculus.LogDeriv",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.FieldTheory.IntermediateField.Adjoin.Basic",
+        "Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure",
+        "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+        "Mathlib.NumberTheory.NumberField.DedekindZeta",
+        "Mathlib.Order.Filter.AtTopBot.Tendsto"
+      ],
+      "lines": 130,
+      "module": "ChallengeZeta",
+      "path": "ChallengeZeta.lean",
+      "sha256": "9e0b573c7a89624c8494d38306576428cedd9a1aca109586b724c552965a227a",
+      "transitive_source_count": 12,
+      "trust_level": "high",
+      "untrusted_sources": []
+    },
+    "checked_at": "2026-09-22T11:29:35Z",
+    "comparator": {
+      "challenge_module": "ChallengeZeta",
+      "definition_names": [],
+      "enable_nanoda": true,
+      "path": "comparator-zeta.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "sha256": "70026bf83a196b4199680565eb332f0796a23f3c8b6a143f7369b6e180054b22",
+      "solution_module": "SolutionZeta",
+      "theorem_names": [
+        "UnitDistanceZetaSubmission.target_of_canonical_zeta_bound"
+      ]
+    },
+    "comparator_commit": "575674928e239f5bc452aab72d1dd7b0f1326494",
+    "comparator_log_tail": "itDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.Filtered.AbstractUnramified (39s)\n\u2714 [6592/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.LocalAbsoluteArtinEmbedding (13s)\n\u2714 [6593/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Kummer.LocalReciprocityCharacterFixedField (14s)\n\u2714 [6594/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Radical.FiniteSupportLocalReciprocityIdeleCharacter (14s)\n\u2714 [6595/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.LocalAbsoluteArtinSemilinear (23s)\n\u2714 [6596/6714] Built UnitDistance.PairMassDegree3DenseComputationCertificate (203s)\n\u2714 [6597/6714] Built UnitDistance.PairOverlapRemainderSum (37s)\n\u2714 [6598/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.GlobalNormResidue (54s)\n\u2714 [6599/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.Filtered.InertiaUnramifiedExtension (30s)\n\u2714 [6600/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.FiniteAbelianClassFieldCorrespondence (66s)\n\u2714 [6601/6714] Built UnitDistance.PairOverlapRemainderAssembly (12s)\n\u26a0 [6602/6714] Built UnitDistance.PairMassDegree3DenseRepresentationCertificate (15s)\nwarning: UnitDistance/PairMassDegree3DenseRepresentationCertificate.lean:89:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: UnitDistance/PairMassDegree3DenseRepresentationCertificate.lean:163:8: This simp argument is unused:\n  pairMassDenseOne\n\nHint: Omit it from the simp argument list.\n  simp [pairMassD\u0335e\u0335n\u0335s\u0335e\u0335O\u0335n\u0335e\u0335,\u0335 \u0335p\u0335a\u0335i\u0335r\u0335M\u0335a\u0335s\u0335s\u0335NestedCoeffQ]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n\u2714 [6603/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.SUnitKummerNormRealization (26s)\n\u2714 [6604/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Kummer.LocalUnramifiedArtinKummerRange (19s)\n\u2714 [6605/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.LocalFiniteInertiaUnramified (16s)\n\u2714 [6606/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.LocalGlobalArtinCompatibility.SeparableClosurePadicLift (54s)\n\u2714 [6607/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.TopologicalGlobalNormResidue (67s)\n\u2714 [6608/6714] Built UnitDistance.PairOverlapCoarseLower (11s)\n\u2714 [6609/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePlaceAbsoluteArtinAction (84s)\n\u2714 [6610/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.FiniteAbelianClassFieldCorrespondenceTopology (32s)\n\u2714 [6611/6714] Built UnitDistance.PairMassDegree3DenseCertificate (22s)\n\u2714 [6612/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Kummer.LocalReciprocityUnramifiedValuation (20s)\n\u2714 [6613/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.OrdinaryNormClassField (165s)\n\u2714 [6614/6714] Built UnitDistance.LocalInertiaFiniteImage (15s)\n\u2714 [6615/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.CyclotomicKummerNormDescent (40s)\n\u2714 [6616/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Radical.FinitePlaceAdicInertiaTransport (24s)\n\u2714 [6617/6714] Built UnitDistance.PairMassWideCertificateAstra (7.4s)\n\u2714 [6618/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Kummer.LocalReciprocityUnramifiedUnits (13s)\n\u2714 [6619/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.LocalGlobalArtinCompatibility.FinitePadicCyclicData (32s)\n\u2714 [6620/6714] Built UnitDistance.ArithmeticDyadicInertiaCards (10s)\n\u2714 [6621/6714] Built UnitDistance.ChosenPrimeInertiaImage (27s)\n\u2714 [6622/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePlaceInertiaFixedUnramified (51s)\n\u2714 [6623/6714] Built UnitDistance.PairMassSharperCertificateAstra (7.4s)\n\u2714 [6624/6714] Built UnitDistance.OddAbsoluteFinitePairs (31s)\n\u2714 [6625/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Radical.FinitePlaceReciprocityUnramifiedUnits (10s)\n\u26a0 [6626/6714] Built UnitDistance.AbsolutePrimeIndices (10s)\nwarning: UnitDistance/AbsolutePrimeIndices.lean:15:0: automatically included section variable(s) unused in theorem `UnitDistance.PrimeCompletion.finitePlaceCentre_liesOver_rationalPrime`:\n  [IsGalois \u211a M]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [IsGalois \u211a M] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n\u2714 [6627/6714] Built UnitDistance.RetainedDyadicDifferentInertia (16s)\n\u2714 [6628/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.FiniteIndexNormClassField (33s)\n\u2714 [6629/6714] Built UnitDistance.AbsoluteProPFactor (15s)\n\u26a0 [6630/6714] Built UnitDistance.PairFunctionalSharperCertificateAstra (14s)\nwarning: UnitDistance/PairFunctionalSharperCertificateAstra.lean:15:39: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: UnitDistance/PairFunctionalSharperCertificateAstra.lean:15:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: UnitDistance/PairFunctionalSharperCertificateAstra.lean:15:39: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n\u2714 [6631/6714] Built UnitDistance.SigmaAbsoluteLocalRestriction (11s)\n\u26a0 [6632/6714] Built UnitDistance.RetainedDyadicDifferentGenerator (19s)\nwarning: UnitDistance/RetainedDyadicDifferentGenerator.lean:325:21: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n\u2714 [6633/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.ComplexificationArtin.OverextensionArtin (189s)\n\u26a0 [6634/6714] Built UnitDistance.PairFunctionalSharperThresholdAstra (20s)\nwarning: UnitDistance/PairFunctionalSharperThresholdAstra.lean:15:39: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: UnitDistance/PairFunctionalSharperThresholdAstra.lean:15:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: UnitDistance/PairFunctionalSharperThresholdAstra.lean:15:39: 'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n\u2714 [6635/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.ClosedFiniteIndexClassFieldConstruction (21s)\n\u2714 [6636/6714] Built UnitDistance.SigmaAbsoluteOddRelations (17s)\n\u2714 [6637/6714] Built UnitDistance.SharperPairFixedBaseCoreRun20260920 (7.3s)\n\u2714 [6638/6714] Built UnitDistance.OddAbsoluteFiniteGeneration (46s)\n\u2714 [6639/6714] Built UnitDistance.SharperPairArithmeticRateCoreRun20260920 (11s)\n\u2714 [6640/6714] Built UnitDistance.SigmaAbsoluteOddGeneration (21s)\n\u2714 [6641/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.CyclotomicAbstractFixedFieldArtin (287s)\n\u2714 [6642/6714] Built UnitDistance.SigmaOriginalRelators (21s)\n\u2714 [6643/6714] Built UnitDistance.SigmaOddFiniteGeneration (5.4s)\n\u2714 [6644/6714] Built UnitDistance.SigmaRelatorGeneration (6.6s)\n\u2714 [6645/6714] Built UnitDistance.SigmaCut (7.0s)\n\u26a0 [6646/6714] Built UnitDistance.SigmaOddLocalImage (6.1s)\nwarning: UnitDistance/SigmaOddLocalImage.lean:14:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.sigmaOdd_inertia_base`:\n  [DiscreteTopology P]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DiscreteTopology P] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nwarning: UnitDistance/SigmaOddLocalImage.lean:20:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.sigmaOdd_frobenius_base`:\n  [DiscreteTopology P]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DiscreteTopology P] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nwarning: UnitDistance/SigmaOddLocalImage.lean:27:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.sigmaOdd_image_commute`:\n  [DiscreteTopology P]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DiscreteTopology P] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n\u2714 [6647/6714] Built UnitDistance.SigmaCutDyadic (5.8s)\n\u2714 [6648/6714] Built UnitDistance.SigmaCutCyclic (9.9s)\n\u2714 [6649/6714] Built UnitDistance.SigmaCutDyadicDecomposition (10s)\n\u26a0 [6650/6714] Built UnitDistance.SigmaCutOdd (14s)\nwarning: UnitDistance/SigmaCutOdd.lean:66:80: This simp argument is unused:\n  retained_projection\n\nHint: Omit it from the simp argument list.\n  simp only [\u0335M\u0335o\u0335n\u0335o\u0335i\u0335d\u0335H\u0335o\u0335m\u0335.\u0335c\u0335o\u0335e\u0335_\u0335c\u0335o\u0335m\u0335p\u0335,\u0335F\u0335u\u0335n\u0335c\u0335t\u0335i\u0335o\u0335n\u0335.\u0335c\u0335o\u0335m\u0335p\u0335_\u0335a\u0335p\u0335p\u0335l\u0335y\u0335,\u0335o\u0335d\u0335d\u0335M\u0335a\u0335p\u0335_\u0335i\u0335n\u0335e\u0335r\u0335t\u0335i\u0335a\u0335,\u0335o\u0335d\u0335d\u0335I\u0335n\u0335e\u0335r\u0335t\u0335i\u0335a\u0335,\u0335r\u0335e\u0335t\u0335a\u0335i\u0335n\u0335e\u0335d\u0335_\u0335p\u0335r\u0335o\u0335j\u0335e\u0335c\u0335t\u0335i\u0335o\u0335n\u0335]\u0335[\u0332M\u0332o\u0332n\u0332o\u0332i\u0332d\u0332H\u0332o\u0332m\u0332.\u0332c\u0332o\u0332e\u0332_\u0332c\u0332o\u0332m\u0332p\u0332,\u0332 \u0332F\u0332u\u0332n\u0332c\u0332t\u0332i\u0332o\u0332n\u0332.\u0332c\u0332o\u0332m\u0332p\u0332_\u0332a\u0332p\u0332p\u0332l\u0332y\u0332,\u0332 \u0332o\u0332d\u0332d\u0332M\u0332a\u0332p\u0332_\u0332i\u0332n\u0332e\u0332r\u0332t\u0332i\u0332a\u0332,\u0332 \u0332o\u0332d\u0332d\u0332I\u0332n\u0332e\u0332r\u0332t\u0332i\u0332a\u0332]\u0332\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: UnitDistance/SigmaCutOdd.lean:68:84: This simp argument is unused:\n  retained_projection\n\nHint: Omit it from the simp argument list.\n  simp only [\u0335M\u0335o\u0335n\u0335o\u0335i\u0335d\u0335H\u0335o\u0335m\u0335.\u0335c\u0335o\u0335e\u0335_\u0335c\u0335o\u0335m\u0335p\u0335,\u0335F\u0335u\u0335n\u0335c\u0335t\u0335i\u0335o\u0335n\u0335.\u0335c\u0335o\u0335m\u0335p\u0335_\u0335a\u0335p\u0335p\u0335l\u0335y\u0335,\u0335o\u0335d\u0335d\u0335M\u0335a\u0335p\u0335_\u0335f\u0335r\u0335o\u0335b\u0335e\u0335n\u0335i\u0335u\u0335s\u0335,\u0335o\u0335d\u0335d\u0335F\u0335r\u0335o\u0335b\u0335e\u0335n\u0335i\u0335u\u0335s\u0335,\u0335r\u0335e\u0335t\u0335a\u0335i\u0335n\u0335e\u0335d\u0335_\u0335p\u0335r\u0335o\u0335j\u0335e\u0335c\u0335t\u0335i\u0335o\u0335n\u0335]\u0335[\u0332M\u0332o\u0332n\u0332o\u0332i\u0332d\u0332H\u0332o\u0332m\u0332.\u0332c\u0332o\u0332e\u0332_\u0332c\u0332o\u0332m\u0332p\u0332,\u0332 \u0332F\u0332u\u0332n\u0332c\u0332t\u0332i\u0332o\u0332n\u0332.\u0332c\u0332o\u0332m\u0332p\u0332_\u0332a\u0332p\u0332p\u0332l\u0332y\u0332,\u0332 \u0332o\u0332d\u0332d\u0332M\u0332a\u0332p\u0332_\u0332f\u0332r\u0332o\u0332b\u0332e\u0332n\u0332i\u0332u\u0332s\u0332,\u0332 \u0332o\u0332d\u0332d\u0332F\u0332r\u0332o\u0332b\u0332e\u0332n\u0332i\u0332u\u0332s\u0332]\u0332\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n\u26a0 [6651/6714] Built UnitDistance.SigmaCutExtraDecomposition (7.7s)\nwarning: UnitDistance/SigmaCutExtraDecomposition.lean:51:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.SigmaCut.extra_inertia_killed`:\n  [DiscreteTopology H]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DiscreteTopology H] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nwarning: UnitDistance/SigmaCutExtraDecomposition.lean:60:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.SigmaCut.extra_finiteMap_injective`:\n  [DiscreteTopology H]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DiscreteTopology H] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n\u2714 [6652/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.ClosedFiniteIndexClassFieldNormRange (87s)\n\u2714 [6653/6714] Built UnitDistance.SigmaCutDyadicInertia (11s)\n\u2714 [6654/6714] Built UnitDistance.SigmaCutLocalFamily (8.7s)\n\u2714 [6655/6714] Built UnitDistance.SigmaCutOddDecomposition (8.7s)\n\u2714 [6656/6714] Built UnitDistance.SigmaCutLocalGenus (6.9s)\n\u2714 [6657/6714] Built UnitDistance.SigmaDyadicInertiaCard (9.3s)\n\u2714 [6658/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.AbstractFixedFieldGlobalNormResidue (282s)\n\u2714 [6659/6714] Built UnitDistance.SigmaCutAbsoluteGenus (9.9s)\n\u2714 [6660/6714] Built UnitDistance.SigmaCutFiniteLocalData (12s)\n\u2714 [6661/6714] Built UnitDistance.RetainedSelectedLocalData (9.0s)\n\u2714 [6662/6714] Built UnitDistance.SigmaCutFiniteRestriction (9.5s)\n\u2714 [6663/6714] Built UnitDistance.RetainedSelectedIndices (7.7s)\n\u2714 [6664/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.CyclotomicUnramifiedRestriction (32s)\n\u2714 [6665/6714] Built UnitDistance.SigmaCutFiniteArithmetic (8.7s)\n\u26a0 [6666/6714] Built UnitDistance.SigmaCutLocalWords (42s)\nwarning: UnitDistance/SigmaCutLocalWords.lean:59:2: 'all_goals try simp only [map_mul, map_inv, map_pow, FreeGroup.lift_apply_of]' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: UnitDistance/SigmaCutLocalWords.lean:71:2: 'all_goals try simp only [map_mul, map_inv, map_pow, FreeGroup.lift_apply_of]' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: UnitDistance/SigmaCutLocalWords.lean:124:2: 'all_goals try simp only [map_mul, map_inv, map_pow, FreeGroup.lift_apply_of]' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n\u2714 [6667/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.ClosedFiniteIndexClassFieldOriginalField (50s)\n\u2714 [6668/6714] Built UnitDistance.SigmaCutCompletedPresentation (6.0s)\n\u2714 [6669/6714] Built UnitDistance.SigmaCutInfinite (6.7s)\n\u2714 [6670/6714] Built UnitDistance.SigmaCutArithmeticWitness (7.4s)\n\u2714 [6671/6714] Built UnitDistance.SigmaCutFamily (12s)\n\u2714 [6672/6714] Built UnitDistance.SigmaCutFamilyRamification (8.0s)\n\u2714 [6673/6714] Built UnitDistance.SigmaCutFamilyPrimeFreedom (8.6s)\n\u2139 [6674/6714] Built UnitDistance.SigmaCutTarget (9.5s)\ninfo: UnitDistance/SigmaCutTarget.lean:38:0: 'UnitDistance.ArithmeticProP.SigmaCut.target_of_arithmeticPresentation' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n\u2714 [6675/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.CyclotomicUnramifiedGeometricRestriction (65s)\n\u2714 [6676/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.GlobalNormResidueNaturality (118s)\n\u2714 [6677/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.ComplexificationArtin.InfinitePlaceCompatibility (30s)\n\u2714 [6678/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.CyclotomicUnramifiedLocalGlobalCompatibility (38s)\n\u2714 [6679/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.InfiniteLocalGlobalArtinCompatibility (9.4s)\n\u2714 [6680/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.LocalGlobalArtinCompatibility.FinitePadicAuxiliaryField (71s)\n\u2714 [6681/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.LocalGlobalArtinCompatibility.Factorization (19s)\n\u2714 [6682/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.GlobalArtinCompatibility (8.1s)\n\u2714 [6683/6714] Built UnitDistance.OneInfinitePlaceNorm (3.8s)\n\u2714 [6684/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.InfiniteGlobalArtinDescent (5.2s)\n\u2714 [6685/6714] Built UnitDistance.FiniteCyclicFinitePlaceH2 (4.4s)\n\u2714 [6686/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.InfiniteGlobalArtinSurjectivity (5.2s)\n\u2714 [6687/6714] Built UnitDistance.RationalFiniteFieldUnitsH2 (5.4s)\n\u2714 [6688/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.MaximalAbelianGlobalArtin (5.9s)\n\u2714 [6689/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.GlobalReciprocityCharacter (6.3s)\n\u2714 [6690/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.MaximalAbelianFiniteProjection (7.4s)\n\u2714 [6691/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.InfiniteArtinCompatibility (10s)\n\u2714 [6692/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Radical.FinitePlaceAbsoluteArtinCompatibility (12s)\n\u2714 [6693/6714] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.MaximalAbelianKernel (25s)\n\u2714 [6694/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Radical.AbsoluteCharacterRadicalReciprocity (6.3s)\n\u2714 [6695/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.IdeleCharacterGlobalLift (6.1s)\n\u2714 [6696/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.NegativeThreeLocalRadical (6.3s)\n\u2714 [6697/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Radical.FiniteSupportIdeleCorrection (4.5s)\n\u2714 [6698/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Radical.FiniteSupportInertiaCorrection (5.1s)\n\u2714 [6699/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.RealCharacterInertiaCorrection (3.0s)\n\u2714 [6700/6714] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.RealCharacterInertiaExistence (6.6s)\n\u2714 [6701/6714] Built UnitDistance.CentralLiftCorrection (5.6s)\n\u2714 [6702/6714] Built UnitDistance.ProTwoH2AbsoluteKernel (27s)\n\u2714 [6703/6714] Built UnitDistance.MaximalSigmaH2Bound (4.6s)\n\u2714 [6704/6714] Built UnitDistance.SigmaPresentation (6.3s)\n\u2714 [6705/6714] Built UnitDistance.SigmaCutUnconditional (3.0s)\n\u2714 [6706/6714] Built UnitDistance.FullResult (7.8s)\n\u2714 [6707/6714] Built UnitDistance.FullResultReduced (4.8s)\n\u2714 [6708/6714] Built UnitDistance.RetainedDyadicDifferentReduction (4.4s)\n\u26a0 [6709/6714] Built UnitDistance.RetainedDyadicDifferentNorm (8.8s)\nwarning: UnitDistance/RetainedDyadicDifferentNorm.lean:345:4: 'change (Ideal.absNorm J).factorization 2 = 64' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: UnitDistance/RetainedDyadicDifferentNorm.lean:403:2: exponent 2048 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold\nwarning: UnitDistance/RetainedDyadicDifferentNorm.lean:406:6: 'change (2 ^ 64) ^ 2048 = 2 ^ 131072' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n\u2714 [6710/6714] Built UnitDistance.RetainedDyadicDifferentComplement (17s)\n\u2714 [6711/6714] Built UnitDistance.SharperPairFixedBaseBridgeRun20260920 (8.2s)\n\u2714 [6712/6714] Built UnitDistance.CanonicalSharperZetaResultRun20260920 (3.9s)\n\u2714 [6713/6714] Built SolutionZeta (4.5s)\nBuild completed successfully (6714 jobs).\nExporting #[Nat, String, String.mk, Char, Quot, Quot.mk, Quot.lift, Quot.ind, UnitDistanceZetaSubmission.target_of_canonical_zeta_bound, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce] from SolutionZeta\nRunning nanoda kernel on solution\nnanoda kernel accepts the solution\nRunning Lean default kernel on solution.\nLean default kernel accepts the solution\nYour solution is okay!",
+    "errors": [],
+    "lakefile": {
+      "path": "lakefile.toml",
+      "sha256": "9173a8e6aacfc45ef3fa981795bf10921c19fef68032bded2dd6877031b8df66"
+    },
+    "landrun_commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+    "lean_toolchain": "leanprover/lean4:v4.32.0",
+    "lean_toolchain_path": "lean-toolchain",
+    "local_only": true,
+    "mathlib_cache": {
+      "available": true,
+      "required": true
+    },
+    "mathlib_toolchain": [
+      {
+        "revision": "81a5d257c8e410db227a6665ed08f64fea08e997",
+        "toolchain": "leanprover/lean4:v4.32.0"
+      }
+    ],
+    "nanoda_commit": "68d5ca9db226849b41a6fff59d796ff19d0a8840",
+    "official_palomar_report": false,
+    "phase": "verification",
+    "project_dependencies": [
+      {
+        "name": "mathlib",
+        "repository": "leanprover-community/mathlib4",
+        "revision": "81a5d257c8e410db227a6665ed08f64fea08e997",
+        "url": "https://github.com/leanprover-community/mathlib4.git"
+      },
+      {
+        "name": "plausible",
+        "repository": "leanprover-community/plausible",
+        "revision": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+        "url": "https://github.com/leanprover-community/plausible"
+      },
+      {
+        "name": "LeanSearchClient",
+        "repository": "leanprover-community/LeanSearchClient",
+        "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+        "url": "https://github.com/leanprover-community/LeanSearchClient"
+      },
+      {
+        "name": "importGraph",
+        "repository": "leanprover-community/import-graph",
+        "revision": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+        "url": "https://github.com/leanprover-community/import-graph"
+      },
+      {
+        "name": "proofwidgets",
+        "repository": "leanprover-community/ProofWidgets4",
+        "revision": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+        "url": "https://github.com/leanprover-community/ProofWidgets4"
+      },
+      {
+        "name": "aesop",
+        "repository": "leanprover-community/aesop",
+        "revision": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+        "url": "https://github.com/leanprover-community/aesop"
+      },
+      {
+        "name": "Qq",
+        "repository": "leanprover-community/quote4",
+        "revision": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+        "url": "https://github.com/leanprover-community/quote4"
+      },
+      {
+        "name": "batteries",
+        "repository": "leanprover-community/batteries",
+        "revision": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+        "url": "https://github.com/leanprover-community/batteries"
+      },
+      {
+        "name": "Cli",
+        "repository": "leanprover/lean4-cli",
+        "revision": "88679d088c9720c27ebdf2ba4dafe17341747f94",
+        "url": "https://github.com/leanprover/lean4-cli"
+      }
+    ],
+    "resource_usage": [
+      {
+        "elapsed_seconds": 0.007,
+        "max_rss_kib": 13004,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-initial",
+        "returncode": 0,
+        "system_cpu_seconds": 0.006,
+        "user_cpu_seconds": 0.0,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "elapsed_seconds": 0.01,
+        "max_rss_kib": 13048,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-initial",
+        "returncode": 0,
+        "system_cpu_seconds": 0.005,
+        "user_cpu_seconds": 0.005,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "elapsed_seconds": 0.008,
+        "max_rss_kib": 13044,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-initial",
+        "returncode": 1,
+        "system_cpu_seconds": 0.007,
+        "user_cpu_seconds": 0.0,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "cpu_usage_nanoseconds": 80952000,
+        "exec_main_code": "1",
+        "exec_main_status": "1",
+        "memory_events": {
+          "oom": 0,
+          "oom_kill": 0
+        },
+        "memory_peak_bytes": 8912896,
+        "phase": "confinement-initial:cgroup",
+        "supervisor_timeout": false,
+        "systemd_active_state": "failed",
+        "systemd_result": "exit-code"
+      },
+      {
+        "elapsed_seconds": 0.028,
+        "max_rss_kib": 12904,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-initial",
+        "returncode": 0,
+        "system_cpu_seconds": 0.0,
+        "user_cpu_seconds": 0.028,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "elapsed_seconds": 0.042,
+        "max_rss_kib": 12880,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-initial",
+        "returncode": 1,
+        "system_cpu_seconds": 0.009,
+        "user_cpu_seconds": 0.03,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "cpu_usage_nanoseconds": 102976000,
+        "exec_main_code": "1",
+        "exec_main_status": "1",
+        "memory_events": {
+          "oom": 0,
+          "oom_kill": 0
+        },
+        "memory_peak_bytes": 13754368,
+        "phase": "confinement-initial:cgroup",
+        "supervisor_timeout": false,
+        "systemd_active_state": "failed",
+        "systemd_result": "exit-code"
+      },
+      {
+        "elapsed_seconds": 0.036,
+        "max_rss_kib": 12904,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-initial",
+        "returncode": 1,
+        "system_cpu_seconds": 0.011,
+        "user_cpu_seconds": 0.023,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "cpu_usage_nanoseconds": 91689000,
+        "exec_main_code": "1",
+        "exec_main_status": "1",
+        "memory_events": {
+          "oom": 0,
+          "oom_kill": 0
+        },
+        "memory_peak_bytes": 13582336,
+        "phase": "confinement-initial:cgroup",
+        "supervisor_timeout": false,
+        "systemd_active_state": "failed",
+        "systemd_result": "exit-code"
+      },
+      {
+        "elapsed_seconds": 0.026,
+        "max_rss_kib": 13060,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-initial",
+        "returncode": 1,
+        "system_cpu_seconds": 0.011,
+        "user_cpu_seconds": 0.014,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "cpu_usage_nanoseconds": 102918000,
+        "exec_main_code": "1",
+        "exec_main_status": "1",
+        "memory_events": {
+          "oom": 0,
+          "oom_kill": 0
+        },
+        "memory_peak_bytes": 11714560,
+        "phase": "confinement-initial:cgroup",
+        "supervisor_timeout": false,
+        "systemd_active_state": "failed",
+        "systemd_result": "exit-code"
+      },
+      {
+        "elapsed_seconds": 5.203,
+        "max_rss_kib": 842248,
+        "peak_tasks_observed": 1,
+        "phase": "module-resolution",
+        "returncode": 0,
+        "system_cpu_seconds": 0.888,
+        "user_cpu_seconds": 2.949,
+        "workspace_disk_peak_bytes": 11083776
+      },
+      {
+        "elapsed_seconds": 0.291,
+        "max_rss_kib": 88032,
+        "peak_tasks_observed": 1,
+        "phase": "module-resolution",
+        "returncode": 0,
+        "system_cpu_seconds": 0.063,
+        "user_cpu_seconds": 0.125,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "elapsed_seconds": 84.554,
+        "max_rss_kib": 990056,
+        "peak_tasks_observed": 1,
+        "phase": "trusted-cache",
+        "returncode": 0,
+        "system_cpu_seconds": 44.304,
+        "user_cpu_seconds": 91.65,
+        "workspace_disk_peak_bytes": 7818031104
+      },
+      {
+        "elapsed_seconds": 27.421,
+        "max_rss_kib": 960052,
+        "peak_tasks_observed": 1,
+        "phase": "trusted-cache",
+        "returncode": 0,
+        "system_cpu_seconds": 5.753,
+        "user_cpu_seconds": 12.319,
+        "workspace_disk_peak_bytes": 49582080
+      },
+      {
+        "elapsed_seconds": 4.612,
+        "max_rss_kib": 844772,
+        "peak_tasks_observed": 1,
+        "phase": "trusted-cache",
+        "returncode": 0,
+        "system_cpu_seconds": 0.993,
+        "user_cpu_seconds": 3.001,
+        "workspace_disk_peak_bytes": 7802880
+      },
+      {
+        "elapsed_seconds": 50.407,
+        "max_rss_kib": 3507772,
+        "peak_tasks_observed": 1,
+        "phase": "canonical-challenge",
+        "returncode": 0,
+        "system_cpu_seconds": 4.033,
+        "user_cpu_seconds": 3.823,
+        "workspace_disk_peak_bytes": 99667968
+      },
+      {
+        "elapsed_seconds": 0.198,
+        "max_rss_kib": 86036,
+        "peak_tasks_observed": 1,
+        "phase": "canonical-challenge",
+        "returncode": 0,
+        "system_cpu_seconds": 0.102,
+        "user_cpu_seconds": 0.135,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "elapsed_seconds": 0.184,
+        "max_rss_kib": 87172,
+        "peak_tasks_observed": 1,
+        "phase": "canonical-challenge",
+        "returncode": 0,
+        "system_cpu_seconds": 0.087,
+        "user_cpu_seconds": 0.127,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "elapsed_seconds": 0.01,
+        "max_rss_kib": 12792,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-final",
+        "returncode": 0,
+        "system_cpu_seconds": 0.006,
+        "user_cpu_seconds": 0.0,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "elapsed_seconds": 0.008,
+        "max_rss_kib": 12984,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-final",
+        "returncode": 0,
+        "system_cpu_seconds": 0.009,
+        "user_cpu_seconds": 0.0,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "elapsed_seconds": 0.005,
+        "max_rss_kib": 12988,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-final",
+        "returncode": 1,
+        "system_cpu_seconds": 0.005,
+        "user_cpu_seconds": 0.0,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "cpu_usage_nanoseconds": 75705000,
+        "exec_main_code": "1",
+        "exec_main_status": "1",
+        "memory_events": {
+          "oom": 0,
+          "oom_kill": 0
+        },
+        "memory_peak_bytes": 9994240,
+        "phase": "confinement-final:cgroup",
+        "supervisor_timeout": false,
+        "systemd_active_state": "failed",
+        "systemd_result": "exit-code"
+      },
+      {
+        "elapsed_seconds": 0.028,
+        "max_rss_kib": 12888,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-final",
+        "returncode": 0,
+        "system_cpu_seconds": 0.004,
+        "user_cpu_seconds": 0.024,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "elapsed_seconds": 0.029,
+        "max_rss_kib": 13000,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-final",
+        "returncode": 0,
+        "system_cpu_seconds": 0.004,
+        "user_cpu_seconds": 0.024,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "elapsed_seconds": 0.078,
+        "max_rss_kib": 12544,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-final",
+        "returncode": 1,
+        "system_cpu_seconds": 0.011,
+        "user_cpu_seconds": 0.032,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "cpu_usage_nanoseconds": 114948000,
+        "exec_main_code": "1",
+        "exec_main_status": "1",
+        "memory_events": {
+          "oom": 0,
+          "oom_kill": 0
+        },
+        "memory_peak_bytes": 14209024,
+        "phase": "confinement-final:cgroup",
+        "supervisor_timeout": false,
+        "systemd_active_state": "failed",
+        "systemd_result": "exit-code"
+      },
+      {
+        "elapsed_seconds": 0.08,
+        "max_rss_kib": 12952,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-final",
+        "returncode": 1,
+        "system_cpu_seconds": 0.011,
+        "user_cpu_seconds": 0.034,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "cpu_usage_nanoseconds": 113299000,
+        "exec_main_code": "1",
+        "exec_main_status": "1",
+        "memory_events": {
+          "oom": 0,
+          "oom_kill": 0
+        },
+        "memory_peak_bytes": 14200832,
+        "phase": "confinement-final:cgroup",
+        "supervisor_timeout": false,
+        "systemd_active_state": "failed",
+        "systemd_result": "exit-code"
+      },
+      {
+        "elapsed_seconds": 0.033,
+        "max_rss_kib": 12628,
+        "peak_tasks_observed": 1,
+        "phase": "confinement-final",
+        "returncode": 1,
+        "system_cpu_seconds": 0.009,
+        "user_cpu_seconds": 0.018,
+        "workspace_disk_peak_bytes": 0
+      },
+      {
+        "cpu_usage_nanoseconds": 100811000,
+        "exec_main_code": "1",
+        "exec_main_status": "1",
+        "memory_events": {
+          "oom": 0,
+          "oom_kill": 0
+        },
+        "memory_peak_bytes": 12115968,
+        "phase": "confinement-final:cgroup",
+        "supervisor_timeout": false,
+        "systemd_active_state": "failed",
+        "systemd_result": "exit-code"
+      },
+      {
+        "elapsed_seconds": 29.242,
+        "max_rss_kib": 801384,
+        "peak_tasks_observed": 1,
+        "phase": "candidate-configuration",
+        "returncode": 0,
+        "system_cpu_seconds": 1.322,
+        "user_cpu_seconds": 1.269,
+        "workspace_disk_peak_bytes": 60051456
+      },
+      {
+        "elapsed_seconds": 1.927,
+        "max_rss_kib": 802424,
+        "peak_tasks_observed": 1,
+        "phase": "candidate-configuration",
+        "returncode": 0,
+        "system_cpu_seconds": 0.683,
+        "user_cpu_seconds": 1.096,
+        "workspace_disk_peak_bytes": 548864
+      },
+      {
+        "elapsed_seconds": 11046.538,
+        "max_rss_kib": 8127052,
+        "peak_tasks_observed": 1,
+        "phase": "comparator",
+        "returncode": 0,
+        "system_cpu_seconds": 3925.914,
+        "user_cpu_seconds": 34559.01,
+        "workspace_disk_peak_bytes": 16432406528
+      }
+    ],
+    "schema_version": 1,
+    "solution": {
+      "module": "SolutionZeta",
+      "path": "SolutionZeta.lean",
+      "sha256": "dc7a7e94e00a9f829ebec3b736763ebcadea4cf50e03cf4144d9471a5347396a"
+    },
+    "source": {
+      "archive_sha256": "f5bfc2e50e6432af0d6dfccf26801bf1de6d147f42cb6b037478e0b40c3ccd0a",
+      "bytes": 31341244,
+      "commit": "9ddb00376b3ca47bac7292d8704ee3254e4502d8",
+      "kind": "unpublished-local-archive"
+    },
+    "stage": "complete",
+    "status": "pass",
+    "verification_profile": {
+      "id": "palomar-standard-v1",
+      "limits": {
+        "execution_budget_seconds": 19800,
+        "file_size_max_bytes": 1099511627776,
+        "job_timeout_minutes": 350,
+        "memory_high_percent": 95,
+        "memory_max_percent": 98,
+        "minimum_host_memory_bytes": 15032385536,
+        "minimum_workspace_free_bytes": 21474836480,
+        "open_files_max": 1048576,
+        "tasks_max": 32768
+      },
+      "runner": {
+        "architecture": "x86_64",
+        "label": "ubuntu-24.04",
+        "provider": "github-hosted"
+      },
+      "sha256": "4131827553c344dc2bd49853ed3c1e651cdf74c5fb9cb2034ad90a38b9385c99",
+      "trusted_tools": {
+        "comparator_commit": "575674928e239f5bc452aab72d1dd7b0f1326494",
+        "landrun_commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+        "lean4export": "release derived from the submitted Lean toolchain",
+        "nanoda_commit": "68d5ca9db226849b41a6fff59d796ff19d0a8840"
+      }
+    },
+    "warnings": [],
+    "workflow_url": "local-only:not-an-official-palomar-report"
+  },
+  "finished_at": "2026-09-22T11:29:43.033024+00:00",
+  "lean_version": "Lean (version 4.32.0, x86_64-unknown-linux-gnu, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+  "license": {
+    "declared": "Apache-2.0",
+    "detected": "Apache-2.0",
+    "file": "LICENSE",
+    "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+  },
+  "license_detector_performed": true,
+  "local_execution_report": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260922/standard-07/local-execution.json",
+  "manifest_packages": [
+    {
+      "name": "mathlib",
+      "repository": "leanprover-community/mathlib4",
+      "revision": "81a5d257c8e410db227a6665ed08f64fea08e997",
+      "url": "https://github.com/leanprover-community/mathlib4.git"
+    },
+    {
+      "name": "plausible",
+      "repository": "leanprover-community/plausible",
+      "revision": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+      "url": "https://github.com/leanprover-community/plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "repository": "leanprover-community/LeanSearchClient",
+      "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "url": "https://github.com/leanprover-community/LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "repository": "leanprover-community/import-graph",
+      "revision": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+      "url": "https://github.com/leanprover-community/import-graph"
+    },
+    {
+      "name": "proofwidgets",
+      "repository": "leanprover-community/ProofWidgets4",
+      "revision": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+      "url": "https://github.com/leanprover-community/ProofWidgets4"
+    },
+    {
+      "name": "aesop",
+      "repository": "leanprover-community/aesop",
+      "revision": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+      "url": "https://github.com/leanprover-community/aesop"
+    },
+    {
+      "name": "Qq",
+      "repository": "leanprover-community/quote4",
+      "revision": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+      "url": "https://github.com/leanprover-community/quote4"
+    },
+    {
+      "name": "batteries",
+      "repository": "leanprover-community/batteries",
+      "revision": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+      "url": "https://github.com/leanprover-community/batteries"
+    },
+    {
+      "name": "Cli",
+      "repository": "leanprover/lean4-cli",
+      "revision": "88679d088c9720c27ebdf2ba4dafe17341747f94",
+      "url": "https://github.com/leanprover/lean4-cli"
+    }
+  ],
+  "metadata_contract_passed": true,
+  "observed_host": {
+    "architecture": "x86_64",
+    "effective_cpus": 8.0,
+    "memory_bytes": 33658978304,
+    "memory_high_bytes": 31976029388,
+    "memory_max_bytes": 32985798737,
+    "workspace_free_bytes": 141733965824
+  },
+  "official_palomar_report": false,
+  "palomar_submission_commit": "3561d237dcc4b28482558ad28a64d767d7cc8615",
+  "passed": true,
+  "policy_files": {
+    "scripts/__init__.py": "7e0c8455d9e8f146ed94c7bef905f2b2888f9a54b1701e085c2419e43079be6b",
+    "scripts/browser_preflight_policy.py": "f65e67c3a9daa88c5aec9e881c460b535da23dfeb2d6223ba64f6a1264487723",
+    "scripts/landrun_passthrough.py": "b38456d5597e67587c11d37eeeb647db387b0d2556a1db662709c583e527c266",
+    "scripts/measure_resources.py": "132086943f8a5ab1858276d124d85ebba244e7d74f8402b09c1529149e24b4de",
+    "scripts/orcid_validation.py": "2f368bf27a27f150da1a03f502ff0f45845fce1d5ebcf8dcfcf10908b5d360b7",
+    "scripts/render_challenge.py": "07fdff5b114209b8edf58bd1b97fff407780e250edbbfadae5d386f9e3459aa8",
+    "scripts/render_report.py": "c80498ea4cb405cf9fc4e6d87a812723c972296d28c4923382243bb5b2881044",
+    "scripts/smoke_render_module_identity.py": "e48158af0f61697e11b5599d92049fea1e65f4b9053dd7c964ca0e36fe67c129",
+    "scripts/smoke_trusted_challenge.py": "84aa9fa659274b782791458ce242de00a6737868ce160483ae9cb897450bdb96",
+    "scripts/submission_contract.py": "939c33d7011dcc629d1dd1cd22b03ebd407b82811bd371b38a2b43e2b96d539d",
+    "scripts/trusted_download.py": "6f1f74e8006d52d4fc5337df163cf8b4ead641631dfe3b5cdaaa66ae23666426",
+    "scripts/trusted_git_fetch.py": "ad0b3e79afc606d6532d3f7f110feae25eb9a8b0c27159e03fe06f67aa447f5c",
+    "scripts/verification_errors.py": "ce58c4adc2f896a8ce69961d1f49ada7f571d86f9638a196f34197e3293cc776",
+    "scripts/verification_profile.py": "438954dcd76d99b336906e74f45e62481b1546c4b9742bc6c53b7bbcb9a22028",
+    "scripts/verify_submission.py": "9a143923cf8055d473284fd1eeaa91ddffe95b2020921093d7402d4f1c5db36c",
+    "scripts/workflow_report.py": "8f1c4afcae0fab945fb309c04953262da16ba05600ca31869728daaa3f18abc4"
+  },
+  "project_build_outputs_initially_absent": true,
+  "remote_submission": false,
+  "schema": "unit-distance-local-palomar-execution-v1",
+  "scope": "Unpublished local archive; unmodified pinned Palomar execution code. Local preparation is not remote intake. No official report or editorial review.",
+  "seconds": 11378.026,
+  "source_bytes": 31341244,
+  "source_commit": "9ddb00376b3ca47bac7292d8704ee3254e4502d8",
+  "source_snapshot_sha256": "382beb470029ed8fefd9bd7ecc36b6f5254af836cc173d9f1ee9d66e7d0618cd",
+  "sources_unchanged": true,
+  "started_at": "2026-09-22T08:20:05.007008+00:00",
+  "state": "passed",
+  "tools": {
+    "comparator": {
+      "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260921/tools/comparator",
+      "sha256": "f25185592ce22b0d12c5801553c7caa5a5f7731a30a14226de2be68b27382430"
+    },
+    "landrun": {
+      "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260921/tools-standard/landrun",
+      "sha256": "3341367f3cfe62524efc2e7ddf3ed0dc91545f6b84cee372cefaa483c074cccd"
+    },
+    "lean4export": {
+      "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260921/tools/lean4export",
+      "sha256": "e57369980b0b81228580ce08066fb9bd738e717e002673a143f4956d217266b0"
+    },
+    "nanoda": {
+      "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260921/tools/nanoda",
+      "sha256": "3746a7651e37b6437383f35784271640608f08d56294606537b295da9a25ef76"
+    }
+  },
+  "tools_unchanged": true,
+  "work_directory": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/conditional-20260922/standard-07"
+}

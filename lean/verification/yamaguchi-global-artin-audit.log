@@ -1,0 +1,59 @@
+Audited all 25791 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 25791 project declarations selected.
+Axiom audit: beginning _private.UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.RayClass.Rational.0.RayClass.rawRationalIdealGenerator.
+Axiom audit: beginning _private.UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.FiniteGaloisRealization.0.GlobalClassFieldTheory.Reciprocity.numberFieldTowerFiniteNormClassDirectComparisonValue._proof_6.
+Axiom audit: beginning LocalFieldTheory.maximalIdealPowMapOfUnramifiedValuation._proof_8.
+Axiom audit: 500/25791 complete transitive axiom closures checked.
+Axiom audit: 1000/25791 complete transitive axiom closures checked.
+Axiom audit: 1500/25791 complete transitive axiom closures checked.
+Axiom audit: 2000/25791 complete transitive axiom closures checked.
+Axiom audit: 2500/25791 complete transitive axiom closures checked.
+Axiom audit: 3000/25791 complete transitive axiom closures checked.
+Axiom audit: 3500/25791 complete transitive axiom closures checked.
+Axiom audit: 4000/25791 complete transitive axiom closures checked.
+Axiom audit: 4500/25791 complete transitive axiom closures checked.
+Axiom audit: 5000/25791 complete transitive axiom closures checked.
+Axiom audit: 5500/25791 complete transitive axiom closures checked.
+Axiom audit: 6000/25791 complete transitive axiom closures checked.
+Axiom audit: 6500/25791 complete transitive axiom closures checked.
+Axiom audit: 7000/25791 complete transitive axiom closures checked.
+Axiom audit: 7500/25791 complete transitive axiom closures checked.
+Axiom audit: 8000/25791 complete transitive axiom closures checked.
+Axiom audit: 8500/25791 complete transitive axiom closures checked.
+Axiom audit: 9000/25791 complete transitive axiom closures checked.
+Axiom audit: 9500/25791 complete transitive axiom closures checked.
+Axiom audit: 10000/25791 complete transitive axiom closures checked.
+Axiom audit: 10500/25791 complete transitive axiom closures checked.
+Axiom audit: 11000/25791 complete transitive axiom closures checked.
+Axiom audit: 11500/25791 complete transitive axiom closures checked.
+Axiom audit: 12000/25791 complete transitive axiom closures checked.
+Axiom audit: 12500/25791 complete transitive axiom closures checked.
+Axiom audit: 13000/25791 complete transitive axiom closures checked.
+Axiom audit: 13500/25791 complete transitive axiom closures checked.
+Axiom audit: 14000/25791 complete transitive axiom closures checked.
+Axiom audit: 14500/25791 complete transitive axiom closures checked.
+Axiom audit: 15000/25791 complete transitive axiom closures checked.
+Axiom audit: 15500/25791 complete transitive axiom closures checked.
+Axiom audit: 16000/25791 complete transitive axiom closures checked.
+Axiom audit: 16500/25791 complete transitive axiom closures checked.
+Axiom audit: 17000/25791 complete transitive axiom closures checked.
+Axiom audit: 17500/25791 complete transitive axiom closures checked.
+Axiom audit: 18000/25791 complete transitive axiom closures checked.
+Axiom audit: 18500/25791 complete transitive axiom closures checked.
+Axiom audit: 19000/25791 complete transitive axiom closures checked.
+Axiom audit: 19500/25791 complete transitive axiom closures checked.
+Axiom audit: 20000/25791 complete transitive axiom closures checked.
+Axiom audit: 20500/25791 complete transitive axiom closures checked.
+Axiom audit: 21000/25791 complete transitive axiom closures checked.
+Axiom audit: 21500/25791 complete transitive axiom closures checked.
+Axiom audit: 22000/25791 complete transitive axiom closures checked.
+Axiom audit: 22500/25791 complete transitive axiom closures checked.
+Axiom audit: 23000/25791 complete transitive axiom closures checked.
+Axiom audit: 23500/25791 complete transitive axiom closures checked.
+Axiom audit: 24000/25791 complete transitive axiom closures checked.
+Axiom audit: 24500/25791 complete transitive axiom closures checked.
+Axiom audit: 25000/25791 complete transitive axiom closures checked.
+Axiom audit: 25500/25791 complete transitive axiom closures checked.

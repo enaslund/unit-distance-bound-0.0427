@@ -1,0 +1,26 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "Directly import the public complex CStar instance owner in SolutionZeta, matching the protected Challenge import. Preserve the local instance-disable attribute and every definition, statement, proof body, hypothesis and heartbeat setting. Actual sole integration15 failed target used as baseline; full-file isolated candidate passed.",
+  "files": [
+    {
+      "path": "SolutionZeta.lean",
+      "original_sha256": "ae1a25d816bced309b4339f699d2f07903aa43a07f2312362cddf5553179a713",
+      "migrated_sha256": "f738225dbba71174456995af93fb627e1a76e2ee56de3853195f99f7768a63fa",
+      "insertions": [
+        {
+          "offset": 73,
+          "text": "public import Mathlib.Analysis.CStarAlgebra.Classes\n"
+        }
+      ],
+      "added_imports": [
+        "Mathlib.Analysis.CStarAlgebra.Classes"
+      ],
+      "added_options": [],
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-40-solution-cstar-owner/observed-failure.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-40-solution-cstar-owner/result.json"
+    }
+  ]
+}

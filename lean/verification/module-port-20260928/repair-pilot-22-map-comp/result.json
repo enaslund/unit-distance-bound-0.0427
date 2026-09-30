@@ -1,0 +1,232 @@
+{
+  "inputs": {
+    "compiler": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "compiler_sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "LEAN_PATH": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/plausible/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/importGraph/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/aesop/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Qq/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/batteries/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Cli/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean",
+    "scope": "Same-statement tensor embedding composition via Mathlib map_id_comp; no induction or heartbeat change.1CPU/2GiB/zeroSwap/300s/8GiBhostguard;isolated.",
+    "integration_attempt": "integration-20260928T205316Z",
+    "direct_import_artifact_hashes": [
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean",
+        "sha256": "a421ca6daa6c0d668f868ba3a6e38ba61b3f1a9137aa07d888a6cbf61f892c3a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean.private",
+        "sha256": "ac6bfa0e8b217698e45ec9137d119afcf60df53ae406c994a7506242d489cce2"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean.server",
+        "sha256": "e6a76a77ef8286e3faae6a7fed967c46c74f60ded1129989fd887f42f2aec1c4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.ir",
+        "sha256": "66577e4935aca7ae347fe7edc17d89542ce0f71249c5eddba83f0488f63d375e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.ir.sig",
+        "sha256": "46be67fd063663b44596717b5bdc0eedc55061604879ff525f1129f7b23feada"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/NormKernelVanishing.olean",
+        "sha256": "a0a9c09d174aa62703be9e281038b2ee44191a66ffd99cf8fd60e3b42e96a518"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/NormKernelVanishing.olean.private",
+        "sha256": "4f77366f9807d43fc2259a1ee47db617f381b3c89609334b423013e7eccc5662"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/NormKernelVanishing.olean.server",
+        "sha256": "14709d24868a8cbd9c795344a09f424bb94739131850d428b5bbb69b72f6980f"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/NormKernelVanishing.ir",
+        "sha256": "184ce699bf014baed379bdab9e031762b22496f7ca977c3bd8c48f528507e28e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/NormKernelVanishing.ir.sig",
+        "sha256": "d5c003fac2596e1f142f8a39911411308fc8be06b0d97af86f797e2f9dd325d4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Colimit/DirectLimit.olean",
+        "sha256": "7118095800e0b483a68fc2a75a7c9edbb227014126b294f87884ace607f822cc"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Colimit/DirectLimit.olean.private",
+        "sha256": "fbced4f12d6b3bb3e639bf7d72a0ec72311184bc29d5cbd9a5fbd1f875b001a7"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Colimit/DirectLimit.olean.server",
+        "sha256": "33448b15edad2745b194ad674f8087b13e521875b0cb76f4f875e5aa3e6efb38"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Colimit/DirectLimit.ir",
+        "sha256": "0106827aefaa9ff551468bd9eca27f6018b1876cc39a41acd95b7cc01a4b3673"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Colimit/DirectLimit.ir.sig",
+        "sha256": "1782eb3a16133833415e6d49c611c3c09d2f454aa12ad185e3850e8ae737ccb9"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean",
+        "sha256": "1726ec7bf9ad3c391e9a9a492e591f15a5a38bb97abcc962ddaf3bae9936841b"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean.private",
+        "sha256": "16a3bcb83aa719451bb5a4ae8a1fbfd131364a7d2cca3319f630f9ba0e0ac66d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean.server",
+        "sha256": "ff4a59730e468e6a7443f96b513da5a129399361a56136ce94e327fc5a24acf1"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.ir",
+        "sha256": "5a3f7f4eda9239719c1c2764f79e95e5bf47e24355a5dc0e6b0632b9c720c558"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.ir.sig",
+        "sha256": "2ab4139fceb724e4e0aaf6ee58abb02653d24aa80ec42307bfa5ccd8d195ddc1"
+      }
+    ],
+    "variants": [
+      {
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.lean",
+        "original_sha256": "434f87d909aba82c01d32817c4e52a8762b524c286078fabaf7eb9d531b16346",
+        "declaration": "rationalRelativeAdeleEmbedding_comp",
+        "statement": "theorem rationalRelativeAdeleEmbedding_comp\n    {E F H : IntermediateField \u211a (SeparableClosure \u211a)}\n    [NumberField E] [NumberField F] [NumberField H]\n    (hEF : E \u2264 F) (hFH : F \u2264 H)\n    (z : RelativeAdeleRing \u211a E) :\n    RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hFH)\n        (RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hEF) z) =\n      RelativeIdeleGroup.adeleEmbedding\n        (IntermediateField.inclusion (hEF.trans hFH)) z := by",
+        "insertions": [],
+        "added_imports": [],
+        "added_options": [],
+        "name": "library-tensor-map-composition",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-22-map-comp/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-22-map-comp/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-22-map-comp/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.olean",
+        "migrated_sha256": "e7eec55c078649f77e879e136122084c7b67aac285a2804a967ba4f731ce08b8",
+        "replacement": {
+          "offset": 13461,
+          "offset_unit": "utf8-bytes",
+          "before": "theorem rationalRelativeAdeleEmbedding_comp\n    {E F H : IntermediateField \u211a (SeparableClosure \u211a)}\n    [NumberField E] [NumberField F] [NumberField H]\n    (hEF : E \u2264 F) (hFH : F \u2264 H)\n    (z : RelativeAdeleRing \u211a E) :\n    RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hFH)\n        (RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hEF) z) =\n      RelativeIdeleGroup.adeleEmbedding\n        (IntermediateField.inclusion (hEF.trans hFH)) z := by\n  induction z using TensorProduct.induction_on with\n  | zero => simp\n  | tmul a x =>\n      simp only [RelativeIdeleGroup.adeleEmbedding,\n        RelativeIdeleGroup.scalarEmbedding_tmul]\n      congr 1\n  | add x y hx hy =>\n      simp only [map_add, hx, hy]",
+          "after": "theorem rationalRelativeAdeleEmbedding_comp\n    {E F H : IntermediateField \u211a (SeparableClosure \u211a)}\n    [NumberField E] [NumberField F] [NumberField H]\n    (hEF : E \u2264 F) (hFH : F \u2264 H)\n    (z : RelativeAdeleRing \u211a E) :\n    RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hFH)\n        (RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hEF) z) =\n      RelativeIdeleGroup.adeleEmbedding\n        (IntermediateField.inclusion (hEF.trans hFH)) z := by\n  exact DFunLike.congr_fun\n    (Algebra.TensorProduct.map_id_comp\n      (S := NumberField.AdeleRing (\ud835\udcde \u211a) \u211a)\n      (A := NumberField.AdeleRing (\ud835\udcde \u211a) \u211a)\n      (IntermediateField.inclusion hFH)\n      (IntermediateField.inclusion hEF)).symm z"
+        }
+      }
+    ]
+  },
+  "results": [
+    {
+      "compiler_exit_code": 0,
+      "direct_import_artifact_hashes_after": [
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean",
+          "sha256": "a421ca6daa6c0d668f868ba3a6e38ba61b3f1a9137aa07d888a6cbf61f892c3a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean.private",
+          "sha256": "ac6bfa0e8b217698e45ec9137d119afcf60df53ae406c994a7506242d489cce2"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean.server",
+          "sha256": "e6a76a77ef8286e3faae6a7fed967c46c74f60ded1129989fd887f42f2aec1c4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.ir",
+          "sha256": "66577e4935aca7ae347fe7edc17d89542ce0f71249c5eddba83f0488f63d375e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.ir.sig",
+          "sha256": "46be67fd063663b44596717b5bdc0eedc55061604879ff525f1129f7b23feada"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/NormKernelVanishing.olean",
+          "sha256": "a0a9c09d174aa62703be9e281038b2ee44191a66ffd99cf8fd60e3b42e96a518"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/NormKernelVanishing.olean.private",
+          "sha256": "4f77366f9807d43fc2259a1ee47db617f381b3c89609334b423013e7eccc5662"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/NormKernelVanishing.olean.server",
+          "sha256": "14709d24868a8cbd9c795344a09f424bb94739131850d428b5bbb69b72f6980f"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/NormKernelVanishing.ir",
+          "sha256": "184ce699bf014baed379bdab9e031762b22496f7ca977c3bd8c48f528507e28e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/NormKernelVanishing.ir.sig",
+          "sha256": "d5c003fac2596e1f142f8a39911411308fc8be06b0d97af86f797e2f9dd325d4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Colimit/DirectLimit.olean",
+          "sha256": "7118095800e0b483a68fc2a75a7c9edbb227014126b294f87884ace607f822cc"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Colimit/DirectLimit.olean.private",
+          "sha256": "fbced4f12d6b3bb3e639bf7d72a0ec72311184bc29d5cbd9a5fbd1f875b001a7"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Colimit/DirectLimit.olean.server",
+          "sha256": "33448b15edad2745b194ad674f8087b13e521875b0cb76f4f875e5aa3e6efb38"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Colimit/DirectLimit.ir",
+          "sha256": "0106827aefaa9ff551468bd9eca27f6018b1876cc39a41acd95b7cc01a4b3673"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Colimit/DirectLimit.ir.sig",
+          "sha256": "1782eb3a16133833415e6d49c611c3c09d2f454aa12ad185e3850e8ae737ccb9"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean",
+          "sha256": "1726ec7bf9ad3c391e9a9a492e591f15a5a38bb97abcc962ddaf3bae9936841b"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean.private",
+          "sha256": "16a3bcb83aa719451bb5a4ae8a1fbfd131364a7d2cca3319f630f9ba0e0ac66d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean.server",
+          "sha256": "ff4a59730e468e6a7443f96b513da5a129399361a56136ce94e327fc5a24acf1"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.ir",
+          "sha256": "5a3f7f4eda9239719c1c2764f79e95e5bf47e24355a5dc0e6b0632b9c720c558"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.ir.sig",
+          "sha256": "2ab4139fceb724e4e0aaf6ee58abb02653d24aa80ec42307bfa5ccd8d195ddc1"
+        }
+      ],
+      "variant": {
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.lean",
+        "original_sha256": "434f87d909aba82c01d32817c4e52a8762b524c286078fabaf7eb9d531b16346",
+        "declaration": "rationalRelativeAdeleEmbedding_comp",
+        "statement": "theorem rationalRelativeAdeleEmbedding_comp\n    {E F H : IntermediateField \u211a (SeparableClosure \u211a)}\n    [NumberField E] [NumberField F] [NumberField H]\n    (hEF : E \u2264 F) (hFH : F \u2264 H)\n    (z : RelativeAdeleRing \u211a E) :\n    RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hFH)\n        (RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hEF) z) =\n      RelativeIdeleGroup.adeleEmbedding\n        (IntermediateField.inclusion (hEF.trans hFH)) z := by",
+        "insertions": [],
+        "added_imports": [],
+        "added_options": [],
+        "name": "library-tensor-map-composition",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-22-map-comp/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-22-map-comp/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-22-map-comp/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.olean",
+        "migrated_sha256": "e7eec55c078649f77e879e136122084c7b67aac285a2804a967ba4f731ce08b8",
+        "replacement": {
+          "offset": 13461,
+          "offset_unit": "utf8-bytes",
+          "before": "theorem rationalRelativeAdeleEmbedding_comp\n    {E F H : IntermediateField \u211a (SeparableClosure \u211a)}\n    [NumberField E] [NumberField F] [NumberField H]\n    (hEF : E \u2264 F) (hFH : F \u2264 H)\n    (z : RelativeAdeleRing \u211a E) :\n    RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hFH)\n        (RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hEF) z) =\n      RelativeIdeleGroup.adeleEmbedding\n        (IntermediateField.inclusion (hEF.trans hFH)) z := by\n  induction z using TensorProduct.induction_on with\n  | zero => simp\n  | tmul a x =>\n      simp only [RelativeIdeleGroup.adeleEmbedding,\n        RelativeIdeleGroup.scalarEmbedding_tmul]\n      congr 1\n  | add x y hx hy =>\n      simp only [map_add, hx, hy]",
+          "after": "theorem rationalRelativeAdeleEmbedding_comp\n    {E F H : IntermediateField \u211a (SeparableClosure \u211a)}\n    [NumberField E] [NumberField F] [NumberField H]\n    (hEF : E \u2264 F) (hFH : F \u2264 H)\n    (z : RelativeAdeleRing \u211a E) :\n    RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hFH)\n        (RelativeIdeleGroup.adeleEmbedding (IntermediateField.inclusion hEF) z) =\n      RelativeIdeleGroup.adeleEmbedding\n        (IntermediateField.inclusion (hEF.trans hFH)) z := by\n  exact DFunLike.congr_fun\n    (Algebra.TensorProduct.map_id_comp\n      (S := NumberField.AdeleRing (\ud835\udcde \u211a) \u211a)\n      (A := NumberField.AdeleRing (\ud835\udcde \u211a) \u211a)\n      (IntermediateField.inclusion hFH)\n      (IntermediateField.inclusion hEF)).symm z"
+        }
+      },
+      "command": [
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-R",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-22-map-comp/source",
+        "-o",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-22-map-comp/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.olean",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-22-map-comp/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.lean"
+      ],
+      "exit_code": 0,
+      "reason": null,
+      "elapsed_total": 240.33729261998087
+    }
+  ],
+  "passed": true
+}

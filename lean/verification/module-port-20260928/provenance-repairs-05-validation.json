@@ -1,0 +1,46 @@
+{
+  "at": "2026-09-28T19:12:41.047070+00:00",
+  "files_checked": 2164,
+  "helper_sha256": "bc1e9542b49703c62ee22a8e9ebf667ad82a71275c0ac21141f96a29b64b7e55",
+  "module_port_provenance": {
+    "checked_files": 2164,
+    "manifest": "third-party/module-system-20260928/manifest.json",
+    "manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+    "repair_layers": [
+      {
+        "checked_files": 1,
+        "manifest": "third-party/module-system-20260928/repairs-01.json",
+        "manifest_sha256": "af493e3ade2cb9cbd22341786462242550272b234b76e9c75da87410e9580014",
+        "schema": "unit-distance-module-port-repair-v1"
+      },
+      {
+        "checked_files": 1,
+        "manifest": "third-party/module-system-20260928/repairs-02.json",
+        "manifest_sha256": "cc3e725c9695c58604dc5c7ed59b509c429ea62dec3e706d29982291c58c2dd1",
+        "schema": "unit-distance-module-port-repair-v1"
+      },
+      {
+        "checked_files": 3,
+        "manifest": "third-party/module-system-20260928/repairs-03.json",
+        "manifest_sha256": "a1df8cb46cfecf65254e338f8710ede87297e7cbfd764fb18f1a4838155b4f27",
+        "schema": "unit-distance-module-port-repair-v1"
+      },
+      {
+        "checked_files": 7,
+        "manifest": "third-party/module-system-20260928/repairs-04.json",
+        "manifest_sha256": "3c9a833627141aa2f568c15865a98fbf86e3753e75a0c12ac00561853bd8a07e",
+        "schema": "unit-distance-module-port-repair-v2"
+      },
+      {
+        "checked_files": 1,
+        "manifest": "third-party/module-system-20260928/repairs-05.json",
+        "manifest_sha256": "59db58150382ad4fe0a25dcf24547bcc1636550381732d03c7f5757e7e08630b",
+        "schema": "unit-distance-module-port-proof-repair-v1"
+      }
+    ],
+    "reversed_files": 2135
+  },
+  "passed": true,
+  "scope": "Exact reversal of all five explicit repair layers, including one separately recorded same-statement proof repair, and the module layer on all 2164 source records including ZetaAudit. No Lean compilation.",
+  "selection_receipt_sha256": "7dd6815527d17c35c15e60a0a3427e2539543f4b61d73a9b36ebc9fea5739d8d"
+}

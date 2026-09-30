@@ -1,0 +1,43 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "Two direct downstream failures first reproduced from unchanged sources; targeted private-instance owner imports restore prior access. Exact candidates pass isolated compilation with direct artifact hashes stable. No theorem statement or proof body changes.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/CompletedLevel/CompletedFrobeniusFixedFieldPrimitive.lean",
+      "original_sha256": "7dc4105f6258aa952b81e36ddbce4933164ff99f9d13c69cd05e53c66d7fa261",
+      "migrated_sha256": "8bec35f34f5fb92dffeccf2b03b8e954c500bd854c017e2acdc3e0a274e660f2",
+      "insertions": [
+        {
+          "offset": 672,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel"
+      ],
+      "added_options": [],
+      "failed_baseline": "verification/module-port-20260928/repair-pilot-19/CompletedFrobeniusFixedFieldPrimitive/baseline/result.json",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-19/CompletedFrobeniusFixedFieldPrimitive/candidate/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/NormSubgroup/HigherUnitFrobeniusFixed.lean",
+      "original_sha256": "1fed48eab0c11d874ee853ec43246db734b34927a30fefd6d5b7c260969af00d",
+      "migrated_sha256": "f63c158fe5ccd3e916a2fb81bbba383b37870bbf3fbe199710235b8ba3c08066",
+      "insertions": [
+        {
+          "offset": 602,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel"
+      ],
+      "added_options": [],
+      "failed_baseline": "verification/module-port-20260928/repair-pilot-19/HigherUnitFrobeniusFixed/baseline/result.json",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-19/HigherUnitFrobeniusFixed/candidate/result.json"
+    }
+  ]
+}

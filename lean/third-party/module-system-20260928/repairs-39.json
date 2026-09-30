@@ -1,0 +1,26 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "Expose the existing private CompactSpace instance for the absolute Galois group wrapper from AbsoluteUnramifiedGaloisSequence in ProTwoH2AbsoluteKernel. The owner was already an ancestor. Actual sole integration14 failed module used as baseline; one exact-owner import passes the complete file without statement, proof-body, hypothesis, or heartbeat changes.",
+  "files": [
+    {
+      "path": "UnitDistance/ProTwoH2AbsoluteKernel.lean",
+      "original_sha256": "353e9ed75daa63ed7026c3845ded6282e1d8f75012c502e5e663f36abd9b8e66",
+      "migrated_sha256": "dfa81199af855670dcb79659396d3de8aeea73ef64c2c27ee3f137aae2937902",
+      "insertions": [
+        {
+          "offset": 425,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.RelationRank.AbsoluteUnramifiedGaloisSequence\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.RelationRank.AbsoluteUnramifiedGaloisSequence"
+      ],
+      "added_options": [],
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-39-pro-two-absolute-kernel/observed-failure.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-39-pro-two-absolute-kernel/result.json"
+    }
+  ]
+}

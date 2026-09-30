@@ -1,0 +1,12 @@
+{
+  "before": 838,
+  "after": 842,
+  "added": [
+    "ProCGroups.Completion.FiniteQuotientLifts",
+    "SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.ProfiniteIntegerFree",
+    "SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.ProfiniteIntegerH2",
+    "SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.LocalUnramifiedH2Vanishing"
+  ],
+  "previous_sources_unchanged": true,
+  "unchanged_before_import_relocation": true
+}

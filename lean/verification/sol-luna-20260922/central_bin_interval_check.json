@@ -1,0 +1,22 @@
+{
+  "complement_count": 2220060,
+  "completed_count": 291485548,
+  "data_sha256": "43669734971ae82bdf2980bbacd869a65224fe3cececb121cf2fbc14936813f2",
+  "full_count": 293705608,
+  "independent_lower": "420166332037356346271115723633453/10000000000000000000000000000000000000",
+  "independent_upper": "420166367036339729679676101666689/10000000000000000000000000000000000000",
+  "log_series_terms": 35,
+  "lower_exp_degree": 9,
+  "lower_strict_slack": "18600915723633453/10000000000000000000000000000000000000",
+  "matched_complete_prefix_bins": 2307,
+  "nonempty_bins": 13825,
+  "prefix_data_sha256": "fafbdaff49c1317d2606df81ca886fea6fb01200b4da7d490e7550bb84b342b3",
+  "printed_lower": "2100831660186781638351/50000000000000000000000000",
+  "printed_upper": "840332734072679496561/20000000000000000000000000",
+  "scope": "Exact rational enclosure of the full stored bin table; does not regenerate the underlying prime census to 10^12.",
+  "status": "pass",
+  "sum_rounding_grid": 10000000000000000000000000000000000000,
+  "total_grid_bins": 21299,
+  "upper_exp_degree": 8,
+  "upper_strict_slack": "18600823898333311/10000000000000000000000000000000000000"
+}

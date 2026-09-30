@@ -1,0 +1,208 @@
+/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/candidate19-diagnostics/ChallengeCheck.lean:120:8: warning: declaration uses `sorry`
+theorem UnitDistanceZetaSubmission.CanonicalRetained.finite : @Module.Finite.{0, 0} Rat
+  (@Subtype.{1} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+    fun (x : UnitDistanceZetaSubmission.CanonicalRetained.Closure) =>
+    @Membership.mem.{0, 0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (@IntermediateField.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+        (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+        (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+          (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+      (@SetLike.instMembership.{0, 0}
+        (@IntermediateField.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+          (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+          (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+              (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+            (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+        UnitDistanceZetaSubmission.CanonicalRetained.Closure
+        (@IntermediateField.instSetLike.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+          (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+          (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+              (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+            (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero))))
+      UnitDistanceZetaSubmission.CanonicalRetained.Carrier x)
+  Rat.semiring
+  (@AddSubmonoidClass.toAddCommMonoid.{0, 0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+    (@Semiring.toAddCommMonoid.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (@CommSemiring.toSemiring.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+        (@Semifield.toCommSemiring.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Field.toSemifield.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField)))))
+    (@IntermediateField.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+      (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+      (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+        (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+        (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+    (@IntermediateField.instSetLike.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+      (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+      (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+        (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+        (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+    (@AddSubgroupClass.toAddSubmonoidClass.{0, 0}
+      (@IntermediateField.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+        (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+        (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+          (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+      UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (@AddGroup.toSubNegMonoid.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+        (@AddGroupWithOne.toAddGroup.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Ring.toAddGroupWithOne.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@DivisionRing.toRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+              (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+                (@AlgebraicClosure.instField.{0} Rat Rat.instField))))))
+      (@IntermediateField.instSetLike.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+        (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+        (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+          (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+      (@SubringClass.addSubgroupClass.{0, 0}
+        (@IntermediateField.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+          (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+          (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+              (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+            (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+        UnitDistanceZetaSubmission.CanonicalRetained.Closure
+        (@IntermediateField.instSetLike.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+          (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+          (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+              (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+            (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+        (@NonAssocCommRing.toNonAssocRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@CommRing.toNonAssocCommRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@AlgebraicClosure.instCommRing.{0} Rat Rat.instField)))
+        (@SubfieldClass.toSubringClass.{0, 0}
+          (@IntermediateField.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+            (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+              (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+                (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+              (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+          UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+          (@IntermediateField.instSetLike.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+            (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+              (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+                (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+              (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+          (@IntermediateField.instSubfieldClass.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            Rat.instField (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+            (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+              (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+                (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+              (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero))))))
+    UnitDistanceZetaSubmission.CanonicalRetained.Carrier)
+  (@IntermediateField.module'.{0, 0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+    (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+    (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+        (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+      (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero))
+    UnitDistanceZetaSubmission.CanonicalRetained.Carrier Rat Rat.semiring (@instSMulOfMul.{0} Rat Rat.instMul)
+    (@Algebra.toModule.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.commSemiring
+      (@CommSemiring.toSemiring.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+        (@Semifield.toCommSemiring.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Field.toSemifield.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField))))
+      (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+        (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+        (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+    (@IsScalarTower.rat.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (@DivisionRing.toRing.{0} Rat Rat.instDivisionRing)
+      (@Ring.toAddCommGroup.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+        (@DivisionRing.toRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField))))
+      (@Algebra.toModule.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.commSemiring
+        (@CommSemiring.toSemiring.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Semifield.toCommSemiring.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@Field.toSemifield.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+              (@AlgebraicClosure.instField.{0} Rat Rat.instField))))
+        (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+          (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+      (@Semiring.toModule.{0} Rat Rat.semiring)
+      (@Algebra.toModule.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.commSemiring
+        (@CommSemiring.toSemiring.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Semifield.toCommSemiring.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@Field.toSemifield.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+              (@AlgebraicClosure.instField.{0} Rat Rat.instField))))
+        (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+          (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+          (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero))))) :=
+@IntermediateField.finiteDimensional_adjoin.{0, 0} Rat Rat.instField
+  UnitDistanceZetaSubmission.CanonicalRetained.Closure (@AlgebraicClosure.instField.{0} Rat Rat.instField)
+  (@DivisionRing.toRatAlgebra.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+    (@Field.toDivisionRing.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+    (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero))
+  (@Union.union.{0} (Set.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure)
+    (@Set.instUnion.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure)
+    (@Set.range.{0, 1} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7))))
+      UnitDistanceZetaSubmission.CanonicalRetained.genusRoot)
+    (@Set.range.{0, 1} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+      UnitDistanceZetaSubmission.CanonicalRetained.retainedRoot))
+  (@Finite.Set.finite_union.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+    (@Set.range.{0, 1} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7))))
+      UnitDistanceZetaSubmission.CanonicalRetained.genusRoot)
+    (@Set.range.{0, 1} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+      UnitDistanceZetaSubmission.CanonicalRetained.retainedRoot)
+    (@Finite.Set.finite_range.{0, 1} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7))))
+      UnitDistanceZetaSubmission.CanonicalRetained.genusRoot
+      (@Finite.of_fintype.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7))))
+        (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7))))))
+    (@Finite.Set.finite_range.{0, 1} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+      UnitDistanceZetaSubmission.CanonicalRetained.retainedRoot
+      (@Finite.of_fintype.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+        (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))))))
+  fun (x : UnitDistanceZetaSubmission.CanonicalRetained.Closure)
+    (a :
+      @Membership.mem.{0, 0} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+        (Set.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure)
+        (@Set.instMembership.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure)
+        (@Union.union.{0} (Set.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure)
+          (@Set.instUnion.{0} UnitDistanceZetaSubmission.CanonicalRetained.Closure)
+          (@Set.range.{0, 1} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7))))
+            UnitDistanceZetaSubmission.CanonicalRetained.genusRoot)
+          (@Set.range.{0, 1} UnitDistanceZetaSubmission.CanonicalRetained.Closure
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+            UnitDistanceZetaSubmission.CanonicalRetained.retainedRoot))
+        x) =>
+  @IsAlgebraic.isIntegral.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure Rat.instField
+    (@DivisionRing.toRing.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+      (@Field.toDivisionRing.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+        (@AlgebraicClosure.instField.{0} Rat Rat.instField)))
+    (@AlgebraicClosure.instAlgebra.{0, 0} Rat Rat.instField Rat
+      (@CommRing.toCommSemiring.{0} Rat (@Field.toCommRing.{0} Rat Rat.instField))
+      (@Algebra.id.{0} Rat (@CommRing.toCommSemiring.{0} Rat (@Field.toCommRing.{0} Rat Rat.instField))))
+    x
+    (@Algebra.IsAlgebraic.isAlgebraic.{0, 0} Rat UnitDistanceZetaSubmission.CanonicalRetained.Closure
+      (@Field.toCommRing.{0} Rat Rat.instField)
+      (@DivisionRing.toRing.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+        (@Field.toDivisionRing.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+          (@AlgebraicClosure.instField.{0} Rat Rat.instField)))
+      (@AlgebraicClosure.instAlgebra.{0, 0} Rat Rat.instField Rat
+        (@CommRing.toCommSemiring.{0} Rat (@Field.toCommRing.{0} Rat Rat.instField))
+        (@Algebra.id.{0} Rat (@CommRing.toCommSemiring.{0} Rat (@Field.toCommRing.{0} Rat Rat.instField))))
+      (@AlgebraicClosure.isAlgebraic.{0} Rat Rat.instField) x)

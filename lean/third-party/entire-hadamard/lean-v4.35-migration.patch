@@ -1,0 +1,55 @@
+--- a/UnitDistance/Upstream/Hadamard/HadamardProduct/CanonicalProductGrowth.lean
++++ b/UnitDistance/Upstream/Hadamard/HadamardProduct/CanonicalProductGrowth.lean
+@@ -126,11 +126,9 @@
+   rw [norm_prod]
+   calc
+     ∏ i ∈ F, ‖f i‖ ≤ ∏ i ∈ F, Real.exp (b i) := by
+-      apply Finset.prod_le_prod
+-      · intro i _hi
+-        exact norm_nonneg _
+-      · intro i _hi
+-        exact hfb i
++      exact Finset.prod_le_prod₀
++        (fun i _hi => norm_nonneg (f i))
++        (fun i _hi => hfb i)
+     _ = Real.exp (∑ i ∈ F, b i) := (Real.exp_sum F b).symm
+     _ ≤ Real.exp (∑' i, b i) :=
+       Real.exp_le_exp.mpr (hb.sum_le_tsum F fun i _ ↦ hb_nonneg i)
+--- a/UnitDistance/Upstream/Hadamard/HadamardProduct/GenusOne.lean
++++ b/UnitDistance/Upstream/Hadamard/HadamardProduct/GenusOne.lean
+@@ -82,6 +82,7 @@
+     logDerivativeResponse (fun w : ℂ => f w * g w) s
+       = logDerivativeResponse f s + logDerivativeResponse g s := by
+   rw [logDerivativeResponse_eq_logDeriv,
++      show (fun w : ℂ => f w * g w) = f * g from by funext _; rfl,
+       logDeriv_mul s hf_ne hg_ne hf_diff hg_diff,
+       ← logDerivativeResponse_eq_logDeriv (f := f),
+       ← logDerivativeResponse_eq_logDeriv (f := g)]
+--- a/UnitDistance/Upstream/Hadamard/HadamardProduct/InfiniteProducts.lean
++++ b/UnitDistance/Upstream/Hadamard/HadamardProduct/InfiniteProducts.lean
+@@ -44,6 +44,12 @@
+     logDeriv (finiteHadamardProduct zeros) s
+       = ∑ ρ ∈ zeros, logDeriv (hadamardGenus1Factor ρ) s := by
+   unfold finiteHadamardProduct
++  have hprod :
++      (fun s' : ℂ => ∏ ρ ∈ zeros, hadamardGenus1Factor ρ s') =
++        ∏ ρ ∈ zeros, hadamardGenus1Factor ρ := by
++    funext s'
++    simp only [Finset.prod_apply]
++  rw [hprod]
+   exact logDeriv_prod
+     (fun ρ hρ => hadamardGenus1Factor_ne_zero (hρ_ne ρ hρ) (hs_ne ρ hρ))
+     (fun ρ _ => hadamardGenus1Factor_differentiableAt ρ s)
+@@ -131,6 +137,12 @@
+     logDeriv (fun s' : ℂ => indexedFiniteHadamardProduct zeroLoc F s') s
+       = finiteHadamardRegularizedSum zeroLoc F s := by
+   unfold indexedFiniteHadamardProduct finiteHadamardRegularizedSum
++  have hprod :
++      (fun s' : ℂ => ∏ i ∈ F, hadamardGenus1Factor (zeroLoc i) s') =
++        ∏ i ∈ F, (fun s' : ℂ => hadamardGenus1Factor (zeroLoc i) s') := by
++    funext s'
++    simp only [Finset.prod_apply]
++  rw [hprod]
+   rw [logDeriv_prod (f := fun i => fun s' => hadamardGenus1Factor (zeroLoc i) s')
+         (fun i hi => hadamardGenus1Factor_ne_zero (hρ i hi) (hs i hi))
+         (fun i _ => hadamardGenus1Factor_differentiableAt (zeroLoc i) s)]

@@ -1,0 +1,26 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "CyclotomicIdeleClassValuation failed in integration09 on the private NumberField instance for abstractFixedField. Its exact owner import-all candidate passes with stable direct artifacts. Statements, assumptions, proof bodies and heartbeat settings remain unchanged.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean",
+      "original_sha256": "f6e6da232b0a82fd1978bfaba04a3f51ec3b39af9d886b1f67d2b2daf3708b8c",
+      "migrated_sha256": "c24988f7b1e7f9cf07584adf5d29c8cdc2286b32105b1cf39f1492ea3211b51f",
+      "insertions": [
+        {
+          "offset": 1189,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitAbstractFixedField\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitAbstractFixedField"
+      ],
+      "added_options": [],
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-33/observed-failure.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-33/result.json"
+    }
+  ]
+}

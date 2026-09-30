@@ -1,0 +1,553 @@
+✔ [2005/2098] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.GaloisPCompositum (3.9s)
+✔ [3377/3379] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Basic (5.5s)
+✔ [3378/3424] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.PrincipalCore (4.2s)
+✔ [3465/3468] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Extension.BaseChange (9.1s)
+✔ [3466/3484] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Extension.NormProperties (4.6s)
+✔ [3480/3485] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.Basic (15s)
+✔ [3482/3485] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Extension.GaloisNorm (8.4s)
+✔ [3483/3485] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Extension.LocalComponent (9.6s)
+✔ [3484/3502] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Relative.Support (7.5s)
+✔ [3659/3670] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.Nonarchimedean (5.5s)
+✔ [3660/3670] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.Extension (2.2s)
+✔ [3663/3670] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.TateComparison (7.2s)
+✔ [3664/3670] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.Completion (12s)
+✔ [3665/3670] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.TateComparison (8.4s)
+✔ [3666/3670] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.AlgebraicLocalization (8.5s)
+⚠ [3667/3673] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.Cardinality (12s)
+warning: UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/Herbrand/HerbrandLowDegree/Cardinality.lean:62:27: This simp argument is unused:
+  Rep.hom_comm_apply
+
+Hint: Omit it from the simp argument list.
+  simp [Rep.FiniteCyclicGroup.subCompNormHom, Rep.norm, Representation.norm, R̵e̵p̵.̵h̵o̵m̵_̵c̵o̵m̵m̵_̵a̵p̵p̵l̵y̵,̵ ̵hf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [3668/3675] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.Core (5.1s)
+✔ [3670/3681] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.Induced (13s)
+✔ [3679/3683] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.Ostrowski (14s)
+✔ [3692/3695] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.Theory.AbsoluteValues (9.1s)
+✔ [3693/3702] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.SpectralExtension (4.4s)
+✔ [3696/3702] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.Theory.ExponentialValuations (9.8s)
+✔ [3699/3703] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.Theory.Core (10s)
+✔ [3701/3703] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.ValuationSubring (4.6s)
+✔ [3702/3706] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.ResidueField (4.8s)
+✔ [3704/3710] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.Basic (8.9s)
+✔ [3705/3714] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.Henselian (6.1s)
+✔ [3709/3714] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.ValuationTransport (4.9s)
+✔ [3711/3717] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.AdicPower (4.0s)
+✔ [3712/3720] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.Complete (6.4s)
+✔ [3715/3723] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.Extensions (9.4s)
+✔ [3718/3725] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.ValuationExtension (4.5s)
+✔ [3719/3725] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.HenselianFinite (5.8s)
+✔ [3720/3727] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.HenselianValuationExtension (3.1s)
+✔ [3721/3727] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.ChevalleyExtension (13s)
+✔ [3722/3729] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.FiniteExtension.Defectless (4.6s)
+✔ [3723/3729] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.IntegralClosure (62s)
+✔ [3724/3729] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.Completeness (5.9s)
+✔ [3725/3729] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.FiniteExtension.Degree (16s)
+✔ [3726/3729] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.FiniteExtension.Uniqueness (16s)
+✔ [3727/3729] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.FiniteExtension.Core (10s)
+✔ [3728/3733] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.AlgebraicExtension.NormFormula (6.2s)
+✔ [3729/3733] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.Basic (3.8s)
+✔ [3730/3733] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.Truncation (4.7s)
+✔ [3731/3739] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.ErrorPowers (3.2s)
+✔ [3732/3741] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.CoefficientMinimum (2.9s)
+✔ [3733/3743] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.DivisionBounds (2.4s)
+✔ [3734/3745] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.AdicLimits (3.6s)
+✔ [3735/3745] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.DegreeBounds (2.8s)
+✔ [3736/3746] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.IrreduciblePolynomialBounds (7.2s)
+✔ [3737/3746] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.Step (4.2s)
+✔ [3738/3748] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.HenselLemma (4.8s)
+✔ [3739/3748] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.Iteration (3.4s)
+✔ [3740/3748] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.PrincipalAdicCompleteness (6.3s)
+✔ [3741/3758] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.FiniteApproximation (3.1s)
+✔ [3742/3759] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.InfiniteApproximation (17s)
+✔ [3744/3759] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.AlgebraicExtension.UniqueValuationSubring (4.6s)
+✔ [3745/3759] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.PrincipalLimits (3.6s)
+✔ [3746/3759] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.WeakLimits (3.3s)
+✔ [3747/3760] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.UniqueRing (4.0s)
+✔ [3748/3760] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.Assembly (3.5s)
+✔ [3749/3760] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.UniqueExtensionReduction (8.7s)
+✔ [3750/3760] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Factorization.Complete (3.7s)
+✔ [3751/3760] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.IrreduciblePolynomialLifting (5.0s)
+✔ [3752/3760] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Core (5.1s)
+✔ [3753/3766] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.AlgebraicExtension.NormFormulaCoefficients (4.9s)
+✔ [3754/3769] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.AlgebraicExtension.NormFormulaIntegralClosure (5.0s)
+✔ [3756/3769] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.AlgebraicExtension.NormFormulaAbsoluteValue (3.0s)
+✔ [3758/3769] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.PrimitiveReduction (5.5s)
+✔ [3759/3769] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.LocalRingEquiv (3.2s)
+✔ [3760/3774] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.AlgebraicExtension.NormFormulaExtension (4.8s)
+✔ [3761/3774] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.PrimitiveFactorization (8.0s)
+✔ [3762/3775] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.AlgebraicExtension.Core (7.8s)
+✔ [3763/3779] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.MonicFactorization (15s)
+✔ [3764/3779] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.AlgebraicExtension.UniqueExtensionCoefficients (6.3s)
+✔ [3765/3779] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.AlgebraicExtension.FiniteNormExtension (11s)
+✔ [3766/3779] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.UniqueExtensionPrimitive (5.4s)
+✔ [3767/3779] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.ValuationSubring (10s)
+✔ [3768/3780] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.UniqueAlgebraicExtensions (5.1s)
+✔ [3769/3783] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.AlgebraicExtension.RamificationInvariants (26s)
+✔ [3771/3785] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Unramified.Definitions (12s)
+✔ [3773/3786] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Unramified.HenselianAlgebraicExtension (7.8s)
+✔ [3774/3786] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.PolynomialFactors (7.8s)
+✔ [3775/3789] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.BaseChangeAdjoinRoot (8.5s)
+✔ [3776/3789] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.AbsoluteValue.ExponentialValuation (8.1s)
+✔ [3777/3789] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.PolynomialCRT (6.2s)
+✔ [3778/3789] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.SeparablePolynomialFactors (5.8s)
+✔ [3779/3790] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.AbsoluteValueExtensions (31s)
+✔ [3780/3790] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.AbsoluteValueConjugacy (5.5s)
+✔ [3781/3790] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.FiniteLocalization (16s)
+✔ [3782/3792] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.TateH0.Invariants (3.7s)
+✔ [3783/3792] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.DecompositionGroup (4.4s)
+✔ [3784/3792] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.CanonicalTensorMap (12s)
+✔ [3785/3792] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.ExtensionFactorClassification (34s)
+✔ [3786/3792] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NormUnits (3.7s)
+✔ [3787/3792] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.AlgebraicLocalization (19s)
+✔ [3788/3796] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.TensorProductDecomposition (19s)
+✔ [3789/3797] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.NormQuotient (5.0s)
+✔ [3790/3797] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalBlocks.Induced (8.7s)
+✔ [3792/3799] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalBlocks.Tensor (82s)
+✔ [3795/3799] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.TateH0.NormImage (6.9s)
+✔ [3797/3799] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.TateH0.Main (5.0s)
+✔ [3798/3802] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.ValuedTopology (3.9s)
+✔ [3799/3803] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.GaloisCohomology (4.0s)
+✔ [3800/3803] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.NormKernelVanishing (5.9s)
+✔ [3801/3803] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.Hilbert90 (7.5s)
+✔ [3802/3805] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.CohomologyBridge (11s)
+✔ [3804/3806] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandFiniteness (14s)
+✔ [3805/3894] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.Units (9.5s)
+✔ [3971/3978] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.GroupTheory.IntegerMultipleSubgroup (4.3s)
+✔ [3972/3978] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.ValuativeExtension (4.4s)
+✔ [3973/3979] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.Norm.Basic (9.2s)
+✔ [3974/3980] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.Norm.Quotients (21s)
+✔ [3976/3980] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValueGroup (5.7s)
+✔ [3977/3980] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.NormFiltration (15s)
+✔ [3979/3991] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.FieldNorm (20s)
+✔ [3983/3999] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.Basic (7.1s)
+✔ [3984/3999] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.PrincipalUnits (8.4s)
+✔ [3985/3999] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.Norm (7.1s)
+✔ [3986/3999] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.AdditiveEquiv (4.2s)
+✔ [3987/3999] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.PrincipalUnitQuotients (32s)
+✔ [3988/3999] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.Valuation (4.0s)
+✔ [3989/3999] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.ResidueUnits (7.0s)
+✔ [3990/3999] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.PrincipalUnitActions (15s)
+✔ [3991/4001] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.IdealQuotients (12s)
+✔ [3992/4001] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.ResidueExtension (21s)
+✔ [3993/4005] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.ValuationExactSequence (7.1s)
+✔ [3994/4005] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.NormalBasisLattice (41s)
+✔ [3995/4005] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.GaloisIntegerRing (14s)
+✔ [3996/4005] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.PrincipalUnits.QuotientReps (4.6s)
+✔ [3997/4005] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.Valuation (8.9s)
+✔ [3998/4007] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.PrincipalUnits.QuotientTower (11s)
+✔ [3999/4007] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.NormalBasisGaloisAction (13s)
+✔ [4000/4007] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.ValueGroupCohomology (4.6s)
+✔ [4001/4008] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.NormalBasisInfiniteProduct (9.2s)
+✔ [4002/4008] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.NormalBasisFiniteQuotient (6.0s)
+✔ [4003/4014] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.ValuationHerbrand (6.0s)
+✔ [4004/4014] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.FilteredLiftingSequence (4.0s)
+✔ [4005/4014] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.NormalBasis (21s)
+✔ [4006/4014] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.IntegerUnitsHerbrand (8.7s)
+✔ [4007/4014] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.FieldUnitsHerbrand (4.8s)
+✔ [4008/4014] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.PrincipalUnitGraded (7.5s)
+✔ [4009/4016] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.NormalBasisGradedLifting (12s)
+✔ [4010/4016] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.BaseChange (14s)
+✔ [4011/4018] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.NormalBasisRecursiveLifting (16s)
+✔ [4012/4018] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.LocalizationDensity (25s)
+✔ [4013/4018] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.DecompositionField (4.8s)
+✔ [4014/4018] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.NormalBasisCohomology (6.2s)
+✔ [4015/4018] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.DecompositionFieldExtension (4.9s)
+✔ [4016/4019] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.Main (5.1s)
+✔ [4017/4022] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.FiniteExtensionClassFieldAxiom (7.2s)
+✔ [4018/4026] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.BaseChangeNormTrace (3.7s)
+✔ [4019/4027] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.FiniteProductNormTrace (4.8s)
+✔ [4020/4027] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.Complete (3.8s)
+✔ [4021/4028] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.TensorProductProductFormulas (3.4s)
+✔ [4022/4030] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.DegreeNormTrace (9.4s)
+✔ [4023/4031] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Completion.ExtensionInvariants (9.9s)
+✔ [4024/4032] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.DecompositionFieldLocalization (26s)
+✔ [4025/4034] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalizedCompletionCohomology.CompMulEquiv (9.5s)
+✔ [4026/4036] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalizedCompletionCohomology.Algebra (19s)
+✔ [4027/4036] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalizedCompletionCohomology.Generator (7.5s)
+✔ [4028/4036] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Extension.LocalNorm (13s)
+✔ [4029/4036] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalizedCompletionCohomology.HerbrandEquiv (17s)
+✔ [4030/4036] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalizedCompletionCohomology.Finite (8.5s)
+✔ [4031/4036] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalizedCompletionCohomology.Cardinality.H0 (9.7s)
+✔ [4032/4036] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalizedCompletionCohomology.Cardinality.HMinusOne (7.9s)
+✔ [4033/4036] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalizedCompletionCohomology.Cardinality.Trivial (7.8s)
+✔ [4034/4038] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalizedCompletionCohomology.Cardinality.Quotient (7.8s)
+✔ [4035/4039] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalBlocks.TensorNorm (22s)
+✔ [4037/4039] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.IdealMap (8.6s)
+✔ [4038/4042] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.EquivariantEquiv (5.8s)
+✔ [4039/4042] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Extension.ClassGroup (9.5s)
+✔ [4040/4047] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.Concrete.GaloisCohomology (4.3s)
+✔ [4041/4047] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Extension.GaloisDescent (12s)
+✔ [4042/4050] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.Product (9.9s)
+✔ [4043/4050] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.Product (4.1s)
+✔ [4044/4050] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.ClassGroup.Tower (35s)
+✔ [4045/4056] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.Permutation.Module (8.6s)
+✔ [4046/4056] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.ClassGroup.BaseChange (28s)
+✔ [4047/4056] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.Herbrand (36s)
+✔ [4048/4057] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Topology (5.4s)
+✔ [4050/4057] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Principal (9.1s)
+✔ [4051/4057] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.SPlaces (4.9s)
+✔ [4052/4057] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.LocallyCompact (8.6s)
+✔ [4053/4060] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.ClassGroup.Core (7.5s)
+✔ [4054/4060] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.PrincipalTopology (5.4s)
+✔ [4056/4060] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.RayClass.Basic (6.9s)
+✔ [4057/4060] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.NormCore (5.8s)
+✔ [4058/4062] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.RayClass.FullModulus (7.7s)
+✔ [4059/4065] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.PrincipalNorm (8.4s)
+✔ [4154/4158] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.NormOneCompact (12s)
+✔ [4158/4165] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.RayClass.Topology (19s)
+✔ [4163/4165] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.RayClass.Ideal (20s)
+✔ [4164/4166] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.RayClass.Approximation (7.0s)
+✔ [4165/4168] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.IntegralRepUniverse (491ms)
+✔ [4166/4169] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.GroupTheory.QuotientTower (3.2s)
+✔ [4167/4192] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Degree.Indices (4.1s)
+✔ [4183/4194] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProfiniteIntegers.TopologicalGeneration (3.4s)
+✔ [4184/4194] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Topology.TotallyDisconnectedQuotients (3.5s)
+✔ [4185/4194] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProfiniteIntegers.ProfiniteIntegerCore (4.5s)
+✔ [4186/4194] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProfiniteIntegers.ProfiniteInteger (4.9s)
+✔ [4187/4194] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Degree.Fields (10s)
+✔ [4188/4194] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Degree.Frobenius (5.8s)
+✔ [4189/4194] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Degree.FrobeniusLift (4.9s)
+✔ [4190/4194] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Degree.FrobeniusFixedField (11s)
+✔ [4191/4194] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FrobeniusField (6.2s)
+✔ [4192/4194] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FrobeniusSemigroup (3.9s)
+✔ [4193/4203] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FrobeniusDescent (4.9s)
+✔ [4195/4207] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.Abstract.KummerCyclicOperator (5.8s)
+✔ [4196/4207] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.Abstract.KummerFixedField (4.1s)
+✔ [4197/4209] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.Abstract.KummerGlobalOperator (4.1s)
+✔ [4198/4209] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.Abstract.KummerAbelianCyclicFactors (5.5s)
+✔ [4199/4212] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.Abstract.KummerAbelianAssembly (5.0s)
+✔ [4200/4216] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.Abstract.KummerDelta (4.1s)
+✔ [4201/4216] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Degree.Norm (4.2s)
+✔ [4202/4219] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Degree.Valuation (6.5s)
+✔ [4203/4220] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Degree.NormLaws (6.9s)
+✔ [4204/4220] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Degree.ValuationLaws (4.4s)
+✔ [4205/4220] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Degree.NormConjugation (5.9s)
+✔ [4206/4225] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Degree.PrimeElements (4.5s)
+✔ [4207/4225] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.UnitCohomologyAxiom (7.4s)
+✔ [4208/4225] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.PrimeChoice (3.7s)
+✔ [4209/4230] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.NormSubgroup (6.6s)
+✔ [4211/4230] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FiniteNormQuotient (5.8s)
+✔ [4212/4233] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.ReciprocityDefinition (5.4s)
+✔ [4213/4233] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.FiniteGaloisSubextension (7.2s)
+✔ [4214/4235] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.ReciprocityIndependence (6.7s)
+✔ [4216/4236] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FiniteIntermediateCompositum (3.8s)
+✔ [4217/4236] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.TransferOrbitClosure (3.0s)
+✔ [4218/4237] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.RelativeNormDoubleCoset (5.6s)
+✔ [4219/4237] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.CoreFrobeniusNorm (12s)
+✔ [4220/4237] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.UniversalNormDescent (6.2s)
+✔ [4221/4237] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FrobeniusClosureCommutation (6.3s)
+✔ [4222/4241] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FiniteIntermediateFieldCompositum (4.9s)
+✔ [4223/4241] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FrobeniusQuotientDescent (8.9s)
+✔ [4224/4241] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FrobeniusFixedFieldAction (9.0s)
+✔ [4225/4241] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FrobeniusPowerFixedField (8.2s)
+✔ [4226/4242] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.UnramifiedNormQuotient (5.8s)
+✔ [4227/4242] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FrobeniusFixedFieldTower (6.1s)
+✔ [4228/4242] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.CanonicalUnramifiedNormQuotient (5.4s)
+✔ [4229/4246] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FiniteFieldUnitMaps (4.8s)
+✔ [4230/4246] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FixedTowerUnitCorrection (6.8s)
+✔ [4231/4247] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.FixedTowerUnitDescent (12s)
+✔ [4232/4253] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.InfiniteUnitDescent (6.2s)
+✔ [4234/4253] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.InfiniteUnitNormSubgroup (4.5s)
+✔ [4236/4254] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.TransferNaturality (4.0s)
+✔ [4237/4254] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.Universal (20s)
+✔ [4238/4255] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.DoubleCosetOrbitGeometry (5.6s)
+✔ [4239/4255] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.ClassFieldAxiom (3.6s)
+✔ [4240/4257] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.ChosenDegreeOneFrobenius (3.5s)
+✔ [4241/4257] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainMultiplicativity.FrobeniusActionRemainder (7.5s)
+✔ [4242/4257] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.FieldRepresentation (4.2s)
+✔ [4243/4257] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainMultiplicativity.PrimeUnitDifferences (4.4s)
+✔ [4244/4257] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainMultiplicativity.NormClassRelation (5.2s)
+✔ [4245/4257] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainMultiplicativity.FrobeniusPowerSumRelation (4.7s)
+✔ [4246/4257] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainMultiplicativity.CorrectionSum (4.3s)
+✔ [4247/4257] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainMultiplicativity.ConjugatePrimeNorm (5.1s)
+✔ [4248/4259] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.CyclicNormQuotient (10s)
+✔ [4249/4259] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainMultiplicativity.FiniteStageCorrections (6.3s)
+✔ [4250/4262] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.IntermediateExtension (5.8s)
+✔ [4251/4262] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainMultiplicativity.ReciprocityMapMul (9.7s)
+✔ [4253/4265] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainFiniteReciprocity (11s)
+✔ [4255/4266] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainNaturality (19s)
+✔ [4256/4268] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainTransferFrobeniusGeometry (184s)
+✔ [4257/4270] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainTransferFrobenius (22s)
+✔ [4258/4270] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Construction.MainTransfer (13s)
+✔ [4259/4270] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Core (16s)
+✔ [4260/4270] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.TotallyRamified (9.8s)
+✔ [4261/4270] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Reduction (8.9s)
+✔ [4262/4275] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.TotallyRamifiedCase.RestrictionCosets (6.0s)
+✔ [4263/4275] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.TotallyRamifiedCase.FrobeniusLift (5.5s)
+✔ [4264/4279] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Sylow (4.6s)
+✔ [4266/4279] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.TotallyRamifiedCase.RestrictionEquiv (4.3s)
+✔ [4267/4279] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.GaloisValuation.ClosedFixingSubgroup (4.1s)
+✔ [4268/4280] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.TotallyRamifiedCase.FrobeniusNorms (6.6s)
+✔ [4269/4280] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.AbsoluteUnitsFixedField (4.6s)
+✔ [4270/4283] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.TotallyRamifiedCase.FixedSource (14s)
+✔ [4271/4283] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.GaloisExtensionQuotient (4.4s)
+✔ [4272/4283] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.TotallyRamifiedCase.Conclusion (5.0s)
+✔ [4273/4283] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.TateTransport (5.7s)
+✔ [4274/4283] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.SeparableUnitsNorm (9.4s)
+✔ [4275/4283] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.IntrinsicAbsoluteData (3.9s)
+✔ [4276/4283] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.FiniteGaloisRealization (8.6s)
+✔ [4277/4283] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.Main (14s)
+✔ [4278/4283] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.FiniteAbstractFixedField (20s)
+✔ [4279/4285] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport (9.5s)
+✔ [4280/4285] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.AbstractFixedFieldUnits (15s)
+✔ [4281/4288] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityCanonical (28s)
+✔ [4283/4292] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.LocalClassFieldAxiom (14s)
+✔ [4288/4295] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.ResidueGalois (15s)
+✔ [4289/4295] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.FiniteUnramified (26s)
+✔ [4290/4295] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.SeparableNormProduct (3.2s)
+✔ [4291/4295] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.SeparableNormValuation (68s)
+✔ [4292/4295] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.SeparableFixedFieldNorm (6.6s)
+✔ [4293/4295] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.HenselianValuationBase (8.0s)
+✔ [4294/4298] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.AbstractFixedFieldNorm (10s)
+✔ [4296/4301] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.FiniteResidueFrobenius (6.3s)
+✔ [4297/4301] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAbsoluteFrobenius (7.4s)
+✔ [4300/4303] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAbsoluteDegree (7.1s)
+✔ [4301/4303] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.NonmonicReduction (6.1s)
+✔ [4302/4304] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.Henselian.ValuationExtensionCriterion (6.2s)
+✔ [4303/4306] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.GaloisValuation.RamificationQuotients (6.1s)
+✔ [4304/4307] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.PrincipalUnits.Filtration (4.9s)
+✔ [4305/4308] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.PrincipalUnits.AutomorphismTransport (5.1s)
+✔ [4306/4309] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.PrincipalUnits.ResidueRoots (6.5s)
+✔ [4307/4318] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.PrincipalUnits.ResidueQuotient (4.4s)
+✔ [4308/4318] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.PrincipalUnits.TeichmullerLift (6.2s)
+✔ [4309/4320] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.PrincipalUnits.TeichmullerDecomposition (16s)
+✔ [4310/4320] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.PrincipalUnits.Core (16s)
+✔ [4311/4321] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.RamificationGroup (6.2s)
+✔ [4312/4321] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.GaloisValuation.Ramification (13s)
+✔ [4313/4327] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.ClosedSubgroups (3.9s)
+✔ [4315/4327] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.GaloisValuation.AbsoluteGalois.FiniteLevelValuationRestriction (6.4s)
+✔ [4317/4330] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.GaloisValuation.AbsoluteGalois.AbsoluteRamification (11s)
+✔ [4319/4330] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.GaloisValuation.AbsoluteGalois.InfiniteGaloisCorrespondence (35s)
+✔ [4322/4330] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.GaloisValuation.AbsoluteGalois.FiniteExtensionCorrespondence (21s)
+✔ [4323/4330] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree (11s)
+✔ [4324/4335] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.DiscreteValuationField.FiniteIntegralClosure (14s)
+✔ [4325/4335] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.ProfiniteInvariant (5.8s)
+✔ [4326/4339] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicallyClosed (7.0s)
+✔ [4328/4340] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.ResidueExactSequence (10s)
+✔ [4329/4340] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueDatum (6.2s)
+✔ [4330/4349] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.FiniteResidueValuationComparison (4.0s)
+✔ [4331/4349] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Valuation.ValuedAdicComplete (4.5s)
+✔ [4332/4350] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.NormContinuity (3.9s)
+✔ [4333/4350] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueActionIndex (4.6s)
+✔ [4334/4350] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.UnitTopology (3.4s)
+✔ [4335/4350] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.FiniteExtensionCompleteDVF (4.7s)
+✔ [4336/4350] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.LocalResidueDatum (19s)
+✔ [4337/4355] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.FiniteSubgroupResidueDegree (24s)
+✔ [4338/4355] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.FiniteResidueFinrankTransfer (25s)
+✔ [4339/4355] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.Coordinates (5.2s)
+✔ [4340/4355] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.LocalHenselianValuation (11s)
+✔ [4341/4356] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.LocalComponents (4.9s)
+✔ [4342/4356] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.Main (4.5s)
+✔ [4343/4356] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.RestrictedProduct (9.5s)
+✔ [4345/4360] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.TopologicalReciprocity (8.3s)
+✔ [4346/4360] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.RestrictedAction (8.7s)
+✔ [4347/4363] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.NormApproximation.FinitePlaces (23s)
+✔ [4349/4364] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Relative.FinitePlaceTensorNorm (9.5s)
+✔ [4351/4364] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.Permutation.Lattice (9.8s)
+✔ [4352/4365] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.AbsoluteValue (7.7s)
+✔ [4353/4365] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.NormalClosure (3.9s)
+✔ [4354/4365] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.SUnit.Rank (10s)
+✔ [4355/4365] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.Permutation.LatticeHerbrand (18s)
+✔ [4356/4365] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.Lattice (6.3s)
+✔ [4357/4365] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.Dedekind.Basic (7.4s)
+✔ [4358/4369] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.SUnit.LogLattice (17s)
+✔ [4359/4369] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.Localization (6.0s)
+✔ [4360/4369] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.FinitePlaceCompletion (13s)
+✔ [4361/4369] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.SUnit.GaloisAction (31s)
+✔ [4362/4369] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.Dedekind.FixedFields (5.1s)
+✔ [4363/4375] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.LocalTensorDecomposition (25s)
+✔ [4364/4375] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.Dedekind.FixedFieldTower (8.9s)
+✔ [4365/4375] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.IdeleSupport (5.1s)
+✔ [4367/4375] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.Dedekind.PrimeContractions (5.9s)
+✔ [4368/4382] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralLocalFactor (29s)
+✔ [4370/4382] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Completion.ExtensionIndex (18s)
+✔ [4372/4383] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.Dedekind.OrbitCardinality (4.5s)
+✔ [4373/4383] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.Dedekind.TowerInvariants (3.9s)
+✔ [4374/4383] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.NumberField.FiniteUnramifiedTower (4.0s)
+✔ [4375/4383] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.Dedekind.NumberFieldPrimes (7.9s)
+✔ [4376/4386] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.RamificationSupport (5.1s)
+✔ [4377/4386] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.HilbertRamification.Dedekind.CompositumUnramified (8.2s)
+✔ [4378/4387] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.RamificationSupportTransport (4.7s)
+✔ [4380/4387] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.RamificationSupportCompositum (7.1s)
+✔ [4383/4388] Built UnitDistance.FinitePExtension (6.5s)
+✔ [4385/4392] Built UnitDistance.FinitePExtensionSupport (5.5s)
+✔ [4387/4400] Built UnitDistance.MaximalProPOutside (5.6s)
+✔ [4405/4414] Built UnitDistance.MaximalProPGroup (9.3s)
+✔ [4411/4448] Built UnitDistance.MaximalProTwoSigma (4.4s)
+⚠ [4413/4448] Replayed UnitDistance.KummerInvariantRadicand
+warning: UnitDistance/KummerInvariantRadicand.lean:59:53: This simp argument is unused:
+  map_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵_̵m̵u̵l̵,̵i̵m̵_̵m̵u̵l̵,̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵m̵u̵l̵,̵m̵a̵p̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲r̲e̲_̲m̲u̲l̲,̲ ̲i̲m̲_̲m̲u̲l̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲m̲a̲p̲_̲m̲u̲l̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: UnitDistance/KummerInvariantRadicand.lean:64:49: This simp argument is unused:
+  AlgEquiv.commutes
+
+Hint: Omit it from the simp argument list.
+  simp [Algebra.algebraMap_eq_smul_one,̵A̵l̵g̵E̵q̵u̵i̵v̵.̵c̵o̵m̵m̵u̵t̵e̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4443/4448] Replayed UnitDistance.QuadraticRamification
+warning: UnitDistance/QuadraticRamification.lean:15:0: automatically included section variable(s) unused in theorem `UnitDistance.QuadraticRamification.minpoly_integral_sqrt`:
+  [NumberField K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/QuadraticRamification.lean:125:8: automatically included section variable(s) unused in theorem `UnitDistance.QuadraticRamification.integralSqrt_sq`:
+  [NumberField F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/QuadraticRamification.lean:132:0: automatically included section variable(s) unused in theorem `UnitDistance.QuadraticRamification.integralSqrt_adjoin`:
+  [NumberField F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [4448/4473] Built UnitDistance.SigmaRamification (6.8s)
+⚠ [4450/4473] Replayed UnitDistance.IndependentQuadraticTower
+warning: UnitDistance/IndependentQuadraticTower.lean:22:0: automatically included section variable(s) unused in theorem `UnitDistance.Multiquadratic.squareKernel_self`:
+  [DecidableEq ι]
+  [CharZero E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [CharZero E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/IndependentQuadraticTower.lean:24:8: This simp argument is unused:
+  SquareKernel
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵S̵q̵u̵a̵r̵e̵K̵e̵r̵n̵e̵l̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: UnitDistance/IndependentQuadraticTower.lean:28:0: automatically included section variable(s) unused in theorem `UnitDistance.Multiquadratic.squareKernel_extension`:
+  [CharZero E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/IndependentQuadraticTower.lean:58:0: automatically included section variable(s) unused in theorem `UnitDistance.Multiquadratic.nonsquare_next_of_squareKernel`:
+  [CharZero E]
+  [CharZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero E] [CharZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/IndependentQuadraticTower.lean:103:2: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: UnitDistance/IndependentQuadraticTower.lean:98:0: automatically included section variable(s) unused in theorem `UnitDistance.Multiquadratic.ActualTower.isSquare_radical`:
+  [DecidableEq ι]
+  [CharZero E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [CharZero E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4451/4473] Replayed UnitDistance.GeneratedQuadraticTower
+warning: UnitDistance/GeneratedQuadraticTower.lean:24:0: automatically included section variable(s) unused in theorem `UnitDistance.Multiquadratic.adjoin_radicalSet_extension`:
+  [CharZero E]
+  [CharZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero E] [CharZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4452/4473] Replayed UnitDistance.GeneratedQuadraticEmbedding
+warning: UnitDistance/GeneratedQuadraticEmbedding.lean:13:0: automatically included section variable(s) unused in theorem `UnitDistance.Multiquadratic.GeneratedGaloisTower.nonempty_embedding`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4455/4473] Replayed UnitDistance.GeneratedQuadraticGalois
+warning: UnitDistance/GeneratedQuadraticGalois.lean:21:0: automatically included section variable(s) unused in theorem `UnitDistance.Multiquadratic.GeneratedGaloisTower.aut_ext`:
+  [DecidableEq ι]
+  [CharZero E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [CharZero E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4456/4473] Replayed UnitDistance.QuadraticSignLift
+warning: UnitDistance/QuadraticSignLift.lean:23:8: automatically included section variable(s) unused in theorem `UnitDistance.Multiquadratic.binarySign_zero`:
+  [CharZero E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/QuadraticSignLift.lean:54:0: automatically included section variable(s) unused in theorem `UnitDistance.Multiquadratic.root_sq`:
+  [CharZero E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4457/4473] Replayed UnitDistance.QuadraticRationalSignLift
+warning: UnitDistance/QuadraticRationalSignLift.lean:18:8: automatically included section variable(s) unused in theorem `UnitDistance.Multiquadratic.rational_map_binarySign`:
+  [CharZero E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4458/4473] Replayed UnitDistance.ArithmeticChosenGenusField
+warning: UnitDistance/ArithmeticChosenGenusField.lean:35:2: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [4460/4473] Replayed UnitDistance.QuadraticGeneratedRootFamily
+warning: UnitDistance/QuadraticGeneratedRootFamily.lean:21:0: automatically included section variable(s) unused in theorem `UnitDistance.Multiquadratic.actualRootCharacter_action`:
+  [CharZero E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/QuadraticGeneratedRootFamily.lean:29:32: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp [actualRootCharacter,h̵e̵,̵ ̲binarySign, ̲binarySignInteger, ̲h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: UnitDistance/QuadraticGeneratedRootFamily.lean:80:33: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵c̵a̵r̵d̵_̵e̵q̵_̵f̵i̵n̵t̵y̵p̵e̵_̵c̵a̵r̵d̵,̵F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵f̵u̵n̵,̵Z̵M̵o̵d̵.̵c̵a̵r̵d̵]̵[̲N̲a̲t̲.̲c̲a̲r̲d̲_̲e̲q̲_̲f̲i̲n̲t̲y̲p̲e̲_̲c̲a̲r̲d̲,̲ ̲Z̲M̲o̲d̲.̲c̲a̲r̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4461/4473] Replayed UnitDistance.QuadraticRootFamilyGalois
+warning: UnitDistance/QuadraticRootFamilyGalois.lean:33:33: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵c̵a̵r̵d̵_̵e̵q̵_̵f̵i̵n̵t̵y̵p̵e̵_̵c̵a̵r̵d̵,̵F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵f̵u̵n̵,̵Z̵M̵o̵d̵.̵c̵a̵r̵d̵]̵[̲N̲a̲t̲.̲c̲a̲r̲d̲_̲e̲q̲_̲f̲i̲n̲t̲y̲p̲e̲_̲c̲a̲r̲d̲,̲ ̲Z̲M̲o̲d̲.̲c̲a̲r̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4464/4473] Replayed UnitDistance.CatalogSquareclassData
+warning: UnitDistance/CatalogSquareclassData.lean:150:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4467/4473] Replayed UnitDistance.ArithmeticRetainedSquareclasses
+warning: UnitDistance/ArithmeticRetainedSquareclasses.lean:104:4: Try `simp at hh` instead of `simpa using hh`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [4468/4473] Replayed UnitDistance.CatalogCompletedSquareclassData
+warning: UnitDistance/CatalogCompletedSquareclassData.lean:72:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4470/4473] Replayed UnitDistance.ArithmeticCompletedSquareclasses
+warning: UnitDistance/ArithmeticCompletedSquareclasses.lean:105:4: Try `simp at hh` instead of `simpa using hh`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [4473/4473] Built UnitDistance.SigmaFiniteFieldInclusion (5.4s)
+Build completed successfully (4473 jobs).

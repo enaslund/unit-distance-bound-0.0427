@@ -1,0 +1,531 @@
+\section{An Explicit Retained Field and Its Hecke Factors}\label{ar:field}
+The analytic estimate uses a fixed subfield of every sufficiently large
+field in Theorem~\ref{tw:field-family}. We construct this subfield by
+Kummer theory and express its zeta function as a product of Dirichlet and
+Hecke functions. Exact local calculations then determine the conductors
+and Euler polynomials needed to evaluate these factors.
+
+\subsection{A Catalog of Norm Extensions}\label{ar:catalog}
+Retain $V=\operatorname{Gal}(E/\mathbb Q)=\mathbb F_2^7$ with the
+coordinates of Section~\ref{tw:tower}. For a rational squareclass $A$
+supported on $-1,2,3,5,7,11,13$, write $\chi_A\in V^*$ for its Kummer
+character. Define $\alpha_i=x_i+y_i\sqrt{A_i}$ by the following seventeen rows.
+Each row satisfies
+$N_{\mathbb Q(\sqrt{A_i})/\mathbb Q}(\alpha_i)=B_i z_i^2$.
+\begin{equation}\label{ar:norm-table}
+\begin{array}{r|r|r|r|r|r}
+ i&A_i&B_i&x_i&y_i&z_i\\\hline
+0&-1&65&4&7&1\\
+1&-55&91&6&1&1\\
+2&-2&33&1&4&1\\
+3&-55&14&1&1&2\\
+4&-55&26&7&1&2\\
+5&-7&2&1&1&2\\
+6&-10&1001&1&10&1\\
+7&22&273&19&2&1\\
+8&-39&55&4&1&1\\
+9&-35&429&1&7&2\\
+10&-143&42&5&1&2\\
+11&-3&13&1&2&1\\
+12&-26&105&1&2&1\\
+13&-6&385&1&8&1\\
+14&-14&65&3&2&1\\
+15&-11&5&3&1&2\\
+16&-1&13&-2&3&1
+\end{array}
+\end{equation}
+All these numbers are integral. Their base discriminants and norms are
+supported on $\Sigma=\{2,3,5,7,11,13\}$, so their Galois closures are
+unramified outside $\Sigma$. An individual catalog field need not survive
+all the cuts in $G$. We will check retention for the products used in
+the construction.
+
+For a nonnegative integer $a<2^{17}$ define
+\[
+ \beta(a)=\prod_{i=0}^{16}\alpha_i^{a_i},\qquad
+ q_a(v)=\sum_{i=0}^{16}a_i\chi_{A_i}(v)\chi_{B_i}(v),
+ \quad a=\sum_i2^ia_i.
+\]
+Products and signs in the second formula are taken in $\mathbb F_2$.
+The norm identities determine the central extension associated to each
+product.
+\begin{lemma}\label{ar:kummer}
+For any catalog word $a$, the field $E(\sqrt{\beta(a)})$ is Galois over
+$\mathbb Q$, and its invariant Kummer class has transgression $q_a$. When this form
+is nonzero, the field is a central extension of $V$ by $C_2$ with
+that quadratic form. Products of the catalog radicands add their extension classes.
+On the space of invariant Kummer classes in the maximal pro-$2$
+$\Sigma$-unramified extension above $E$, this class map is injective.
+\end{lemma}
+\begin{proof}
+Choose the square roots of the positive rational numbers $B_i$ compatibly
+inside $E$. If $v\in V$ changes the sign of $\sqrt{A_i}$, put
+\[
+ u_{i,v}=\frac{z_i\sqrt{B_i}}{\alpha_i}.
+\]
+Otherwise put $u_{i,v}=1$. The norm identity gives
+\[
+ \alpha_i u_{i,v}^2=v(\alpha_i),\qquad
+ u_{i,v}v(u_{i,v})=(-1)^{\chi_{A_i}(v)\chi_{B_i}(v)}.
+\]
+Thus $v$ lifts to an automorphism by sending
+$\sqrt{\alpha_i}$ to $u_{i,v}\sqrt{\alpha_i}$. For a product radicand
+use $u_v=\prod_i u_{i,v}^{a_i}$. It satisfies
+\begin{equation}\label{ar:kummer-lifts}
+ \beta(a)u_v^2=v(\beta(a)),\qquad
+ u_vv(u_v)=(-1)^{q_a(v)}.
+\end{equation}
+The kernel over $E$ is central of exponent two. The squares of lifted
+elements are given by $q_a$, and their commutators by its
+polar form $B_{q_a}(v,w)=q_a(v+w)+q_a(v)+q_a(w)$. These squares and
+commutators determine the central extension, since every word can be
+collected into an ordered product of the seven lifted basis elements and
+a central sign. Applying the same calculation to a product of radicands
+gives the addition rule.
+
+For injectivity let $\mathcal H$ be the subgroup of $\mathcal G$ fixing
+$E$. The five-term sequence contains
+\[
+ H^1(\mathcal G,\mathbb F_2)\longrightarrow
+ H^1(\mathcal H,\mathbb F_2)^V
+ \xrightarrow{\mathrm{trg}} H^2(V,\mathbb F_2).
+\]
+Every quadratic character of $\mathcal G$ factors through $E$, by the
+Kummer computation in Lemma~\ref{tw:complete-global-presentation}.
+The first arrow is zero, so transgression is injective.
+The calculation of squares and commutators above identifies this
+transgression with the indicated quadratic form. In particular a
+nonzero form cannot come from a square radicand in $E$, and independent
+forms give independent Kummer classes.
+\end{proof}
+
+\subsection{The Completed Field and the Full Quadratic Quotient}
+Define two lists of raw catalog words
+\begin{align}
+ \mathcal A&=(17,27184,6220,2,32768,39508,132),
+       \label{ar:completed-words}\\
+ \mathcal B&=(2,256,512,4096,9,65,132,2052,24576,37,32768,65536).
+       \label{ar:full-words}
+\end{align}
+Set
+\[
+ N=E\bigl(\sqrt{\beta(a)}:a\in\mathcal A\bigr),\qquad
+ M=E\bigl(\sqrt{\beta(b)}:b\in\mathcal B\bigr).
+\]
+For example, writing $\eta=\alpha_{13}\alpha_{14}$, the seven defining
+radicands of $N$ are
+\begin{align*}
+ \gamma_1&=\alpha_0\alpha_4,&
+ \gamma_2&=\alpha_4\alpha_5\alpha_9\alpha_{11}\eta,\\
+ \gamma_3&=\alpha_2\alpha_3\alpha_6\alpha_{11}\alpha_{12},&
+ \gamma_4&=\alpha_1,\\
+ \gamma_5&=3+\sqrt{-11},&
+ \gamma_6&=\alpha_2\alpha_4\alpha_6\alpha_9\alpha_{11}\alpha_{12}\gamma_5,\\
+ \gamma_7&=(1+4\sqrt{-2})(19+2\sqrt{22}).
+\end{align*}
+
+These products give two subfields of the tower.
+\begin{proposition}\label{ar:central-fields}
+The fields $N$ and $M$ are contained in every field $K$ of
+Theorem~\ref{tw:field-family}. Their degrees are
+\[
+ [N:\mathbb Q]=2^{14}=16384,\qquad [M:\mathbb Q]=2^{19},\qquad N\subset M.
+\]
+The field $M$ is exactly the field corresponding to $G/D_3G$.
+\end{proposition}
+\begin{proof}
+Use the 28-coordinate convention dual to the restricted quadratic basis
+in Section~\ref{tw:tower}: the first seven coordinates encode $v_i^2$
+and the remaining 21 encode $v_iv_j$ for lexicographically ordered
+$i<j$. In this convention the forms for $\mathcal A$ and $\mathcal B$
+have hexadecimal masks
+\begin{equation}\label{ar:central-masks}
+\begin{array}{c|l}
+\mathcal A&
+\texttt{9014280},\ \texttt{af24500},\ \texttt{6830680},\ \texttt{b401400},\\
+&\texttt{800200},\ \texttt{acf0980},\ \texttt{a138900}\\[2pt]
+\mathcal B&
+\texttt{b401400},\ \texttt{9140a00},\ \texttt{78c1900},\ \texttt{520e700},\\
+&\texttt{2415680},\ \texttt{1c38e00},\ \texttt{a138900},\ \texttt{213900},\\
+&\texttt{45f9c00},\ \texttt{1bb80},\ \texttt{800200},\ \texttt{1000}.
+\end{array}
+\end{equation}
+To obtain these masks, expand each product of linear characters from
+\eqref{ar:norm-table}, writing a diagonal term as $v_i^2$.
+Binary elimination gives ranks seven and twelve, respectively, and
+shows that the first span is contained in the second. Taking the binary
+scalar product with each of the sixteen displayed relation rows in
+Section~\ref{tw:tower} gives zero for every form in the second list.
+The rows have rank 16 in dimension 28, so these twelve independent forms
+span their entire annihilator.
+
+Lemma~\ref{ar:kummer} now proves the asserted Kummer degrees and the
+containment. Each extension has central kernel of exponent two over the
+exponent-two group $V$, and hence class at most two and exponent at most
+four. Its third Zassenhaus subgroup is thus trivial. Evaluating a defining
+relator of $G$ in this group depends only on its quadratic initial, and
+the higher-degree relators vanish. Since the forms annihilate every
+quadratic relation, these number fields satisfy all the defining
+relations of $G$, including the local cuts. Finally
+$G/D_3G$ has the same order $2^{19}$ as $M$, by
+Lemma~\ref{tw:new-retained-quotient}, which proves equality. Since the
+fields $K$ retain $G/D_4G$, they retain both $M$ and $N$.
+\end{proof}
+
+\subsection{The Complete Representation Inventory}
+For a quadratic form $q$ on $V$, write $R_q=\operatorname{rad}(B_q)$
+and $g(q)=\sum_{v\in V}(-1)^{q(v)}$. The space of forms defining $N$
+will be denoted $\mathcal Q=\langle q_a:a\in\mathcal A\rangle$.
+To count the irreducible representations and their gamma factors, we
+examine the polar forms and the action of complex conjugation.
+\begin{lemma}\label{ar:representations}
+The irreducible representations of $\operatorname{Gal}(N/\mathbb Q)$
+comprise 128 of degree one, 256 of degree two, 456 of degree four, and
+124 of degree eight. Exactly eight of the degree-four representations
+are pure at infinity: four have gamma vector $(0,0,0,0)$ and four have
+$(1,1,1,1)$. Every other nonlinear representation is mixed, with equal
+numbers of zeros and ones in its gamma vector.
+\end{lemma}
+\begin{proof}
+Fix a nontrivial character of $\operatorname{Gal}(N/E)$ and let
+$q\in\mathcal Q\setminus\{0\}$ be its central form. Suppose
+$\operatorname{rank}B_q=2m$. The corresponding central pushout has
+commutator pairing $B_q$, and its center above $V$ is the inverse image
+of $R_q$. There are $|R_q|=128/2^{2m}$ central characters extending the
+chosen nontrivial kernel character. Each gives one irreducible
+representation of dimension $2^m$.
+To construct these representations, choose a maximal isotropic subspace
+of $V$ for $B_q$, of dimension $7-m$ and containing $R_q$. Its inverse image is abelian.
+Extend the chosen central character to it and induce to the full group.
+Nondegeneracy of the induced pairing on $V/R_q$ shows, by the usual
+intertwiner criterion for induction, that no element outside that
+subgroup intertwines its character. The induced representation is
+irreducible and has degree $2^m$. Changing the extension inside this
+subgroup only conjugates the character, while changing its restriction
+to the center gives distinct representations. Their squared dimensions
+sum to 128, so this accounts for the entire central sector.
+The trivial central character gives the 128 linear characters of $E$.
+
+Enumeration of the 127 nonzero sums of the seven masks in
+\eqref{ar:central-masks} gives
+\[
+\begin{array}{c|rrr}
+ \operatorname{rank}B_q&2&4&6\\\hline
+ \#q&8&57&62\\
+ \#\{q:g(q)>0\}&5&34&48\\
+ \#\{q:g(q)=0\}&3&23&14.
+\end{array}
+\]
+The positive sums are respectively 64, 32, and 16. No negative Gauss
+sum occurs. For this enumeration, evaluate each quadratic polynomial on the 128
+binary vectors and compute the rank of its $7$ by $7$ polar matrix.
+The resulting dimension count is
+\[
+ 128+256\cdot2^2+456\cdot4^2+124\cdot8^2=16384.
+\]
+
+The linear map $q\mapsto B_q(c,\cdot)$ on $\mathcal Q$, where
+$c=e_0$, has rank six. Its only nonzero kernel form has rank four
+and is represented by $\alpha_4\alpha_6\alpha_9\alpha_{10}\alpha_{11}$.
+Every form satisfies $q(c)=0$, as it annihilates the infinity square.
+If $B_q(c,\cdot)\ne0$, an element conjugating $c$ to its product with
+the nontrivial central sign shows that the trace of $c$ in the
+representation is zero. Because $c^2=1$, its $+1$ and $-1$ eigenspaces
+then have equal dimensions. For the unique remaining sector $c$ is
+central in the pushout, hence acts scalarly. Its eight genus twists
+split equally between the two signs. The explicit description below
+identifies the even and odd twists. The dimensions of these eigenspaces
+give the asserted real gamma factors.
+\end{proof}
+
+The regular representation gives the exact Artin factorization
+\begin{equation}\label{ar:artin-factorization}
+ \zeta_N(s)=\prod_{\rho\in\operatorname{Irr}(\operatorname{Gal}(N/\mathbb Q))}
+                     L(s,\rho)^{\dim\rho}.
+\end{equation}
+This follows prime by prime by decomposing the regular representation
+and taking the determinant on inertia invariants. We next identify every
+nonlinear factor with an entire Hecke function,
+which allows us to use this identity without an Artin holomorphy
+assumption.
+
+\subsection{Descent to Quadratic Hecke Characters}\label{ar:descent}
+We construct the inducing characters by descending the catalog radicands
+to suitable subfields of $E$. The descent gives exact identities for the
+Artin functions in the analytic calculation.
+
+If $g(q)>0$ and $\operatorname{rank}B_q=2m$, then $q$ vanishes on its
+radical and the induced nondegenerate quadratic form has Arf invariant
+zero. Equivalently it has a totally singular subspace $U$ of dimension
+$7-m$ containing $R_q$. We may find such a subspace by enumerating the subspaces of $V$ and
+testing $q(u)=0$ on each vector. Put $B=E^U$, so
+$[B:\mathbb Q]=2^m$, and choose a catalog product $\beta$ representing $q$.
+Let $u_v$ be the exact lifts from \eqref{ar:kummer-lifts}. On $E$ define
+$T_vP=u_vv(P)$. For $v\in U$ these are commuting involutions: their
+squares and commutators are respectively $(-1)^{q(v)}$ and
+$(-1)^{B_q(v,w)}$.
+
+Starting from $P=1$, take a basis $v_1,\ldots,v_{7-m}$ of $U$ and
+successively replace
+\begin{equation}\label{ar:projectors}
+ P\longmapsto P+T_{v_j}P
+ \quad\hbox{or, if this is zero,}\quad P-T_{v_j}P.
+\end{equation}
+At least one choice is nonzero in characteristic zero. Commutativity
+preserves the eigenspaces already selected, so the final nonzero $P$
+satisfies $T_vP=\pm P$ for every $v\in U$. Consequently
+\[
+ \eta=\beta P^2\in B,
+ \qquad E(\sqrt\eta)=E(\sqrt\beta).
+\]
+Every operation is rational arithmetic in the basis
+$\prod_i\sqrt{a_i}^{\epsilon_i}$ of $E$. At a step, if
+$\eta_0=\beta P^2$, the element
+$h=\beta u_vP v(P)$ satisfies
+\[
+ h^2=\eta_0v(\eta_0),\qquad
+ \beta(P\pm T_vP)^2=\eta_0+v(\eta_0)\pm2h.
+\]
+At each descent step, these identities verify the new radicand, while
+the nonzero test and the invariance under the processed subgroup verify
+the chosen projector.
+
+Let $L=B(\sqrt\eta)$ and let $\lambda$ be its nontrivial quadratic
+Hecke character over $B$. The inverse image of $U$ in the central
+pushout is the elementary abelian subgroup used in the representation
+proof. Its character selecting $\sqrt\eta$ induces the required
+irreducible representation. Thus
+\begin{equation}\label{ar:quadratic-induction}
+ L(s,\rho)=L_B(s,\lambda)=\frac{\zeta_L(s)}{\zeta_B(s)}.
+\end{equation}
+This is an entire nontrivial Hecke function. Its completed functional
+equation has root number $+1$, because the completed Dedekind zeta
+functions in the quotient have root number $+1$.
+The remaining representations in this sector are obtained by multiplying
+$\eta$ by rational squareclasses $D$ representing
+$V^*/B_q(V)$. There are $|R_q|$ such twists. Here $B_q(V)$ denotes the
+image of $v\mapsto B_q(v,\cdot)$. Twisting by a character in this image
+conjugates the inducing representation, while the quotient distinguishes
+its central characters.
+
+If $g(q)=0$, choose $p\in\{5,13\}$ so that $g(q+\chi_p)>0$.
+For this seven-dimensional space, exact Gauss-sum evaluation gives
+26 sectors permitting either choice, nine requiring $p=5$, and five
+requiring $p=13$. Thus a suitable choice exists in every sector. Put
+\[
+ \beta_5=-10-2\sqrt5,\qquad \beta_{13}=-26-6\sqrt{13}.
+\]
+Their norms are $16p$ and their central forms are $\chi_p$.
+To identify these as the cyclic quartic extensions of conductor $p$,
+we use their defining polynomials
+\[
+ f_5(X)=X^4+20X^2+80,\qquad f_{13}(X)=X^4+52X^2+208.
+\]
+If $r^2=\beta_p$, the conjugation rule $r\mapsto4\sqrt p/r$ has
+square $r\mapsto-r$, and gives their cyclic Galois group of order four.
+The following integral bases have trace-pairing discriminants $5^3$
+and $13^3$, respectively:
+\[
+\begin{split}
+ p=5:\quad &1,\quad r^2/8-r/4+3/2,\quad-r^2/8-r/4-3/2,\quad
+ r^3/16-r^2/8+3r/4-1;\\
+ p=13:\quad &1,\quad r^2/24-r/4+5/6,\quad-r^2/24-r/4-5/6,\quad
+ r^3/48-r^2/24+11r/12-4/3.
+\end{split}
+\]
+Integrality and the discriminants follow by substitution in $f_p$ and
+rational trace-matrix arithmetic. These orders are maximal. The field is
+unramified outside $p$, and its
+quadratic subfield $\mathbb Q(\sqrt p)$ is ramified at $p$. Hence inertia
+is the full cyclic group of order four. Tame ramification gives
+discriminant exponent three, which agrees with the computed order
+discriminant.
+The conductor--discriminant formula gives conductor $p$ for both faithful
+quartic characters, identifying them with $\xi_p$ and
+$\overline{\xi_p}$ under global reciprocity.
+Descend $\beta\beta_p$ by the positive construction. If $\rho'$ is
+its quadratic induction and $\xi_p$ is the primitive quartic Dirichlet
+character normalized by $\xi_p(2)=i$, use $\rho'\otimes\xi_p$.
+The two quadratic forms add to
+$(q+\chi_p)+\chi_p=q$, so this is a representation of the actual
+original central field. This can also be seen directly on the two
+Kummer square roots: the extra central sign from $\beta_p$ occurs
+in both factors and cancels in their tensor product. Its genus twists
+again give every representation in the sector. Since
+$\overline{\xi_p}=\xi_p\chi_p$ and $\rho'$ is real, the genus twists
+pair the complex representation with its conjugate. The resulting
+functions are entire Hecke functions with root numbers of modulus one.
+The bounds below do not require their phases to be known.
+
+\subsection{The Pure Quartic Field}
+The unique pure form in Lemma~\ref{ar:representations} is represented
+by $\beta=\alpha_4\alpha_6\alpha_9\alpha_{10}\alpha_{11}$.
+Five projector steps give
+\[
+ B_0=\mathbb Q(\sqrt{30},\sqrt{65}),\qquad
+ \eta_0=393911-10360\sqrt{30}+23013\sqrt{65}-2400\sqrt{1950}.
+\]
+To verify this squareclass identity, start with $P_0=1$ and the
+multipliers $u_v$ for this $\beta$. Apply
+$P_j=P_{j-1}+\epsilon_jT_{v_j}P_{j-1}$ with
+\[
+ (v_1,\ldots,v_5)=(1,16,32,6,74),\qquad
+ (\epsilon_1,\ldots,\epsilon_5)=(1,1,1,-1,-1).
+\]
+Exact multiplication in $E$ gives $\eta_0=\beta P_5^2/256$.
+The five vectors span the simultaneous kernels of $\chi_{30}$ and
+$\chi_{65}$, so their fixed field is $B_0$. All four real values are
+positive: using $\sqrt{30}<6$, $\sqrt{65}<9$, and $\sqrt{1950}<45$,
+each is larger than
+$393911-10360\cdot6-23013\cdot9-2400\cdot45=16634$. The eight factors are
+\begin{equation}\label{ar:pure-factors}
+ L_D(s)=\frac{\zeta_{B_0(\sqrt{D\eta_0})}(s)}{\zeta_{B_0}(s)},
+ \qquad D\in\{\pm1,\pm2,\pm3,\pm5\}.
+\end{equation}
+The base discriminant is
+$120\cdot65\cdot312=2433600$. For every listed $D$, the maximal-order
+discriminant of $B_0(\sqrt{D\eta_0})$ is
+\[
+ 2^{14}3^4 5^4 7^2 11^2 13^4=140455850895360000.
+\]
+The ratio is $240240^2$, giving the conductor of each factor by the
+conductor--discriminant formula. Positive $D$ have four even gamma
+factors, negative $D$ four odd ones, and every root number is $+1$.
+The discriminants here are those of maximal orders, as required by the
+formula below.
+
+\subsection{Exact Local Data}
+The inducing characters determine the completed functions used in the
+analytic estimate.
+\begin{proposition}\label{ar:hecke-data}
+All irreducible factors of $\zeta_N$ are the actual Dirichlet factors
+and Hecke inductions just constructed. The gamma inventory is the one
+in Lemma~\ref{ar:representations}. Their conductors and exceptional
+Euler denominators are given by the following finite local algorithms,
+with exact inducing-field, radicand, twist, and projector data in the
+supplement. In particular no conjectural Artin holomorphy, conductor
+identification from a truncated Euler product, or guessed root number
+is used.
+\end{proposition}
+\begin{proof}
+The preceding constructions give every irreducible representation in
+the regular representation. To compute its Hecke data in a positive
+sector with twist $D$, compute the maximal orders of
+$B$ and $L_D=B(\sqrt{D\eta})$. The conductor-discriminant formula gives
+\begin{equation}\label{ar:conductor-ratio}
+ Q_\rho=\frac{|\Delta_{L_D}|}{|\Delta_B|}
+       =|\Delta_B|\,N_{B/\mathbb Q}(\mathfrak d_{L_D/B}).
+\end{equation}
+For a prime $p$, factor $p$ in both maximal orders. With
+$f(\mathfrak p/p)$ denoting residue degrees, put
+\[
+ D_{B,p}(T)=\prod_{\mathfrak p\mid p}(1-T^{f(\mathfrak p/p)}),
+ \qquad
+ D_{L_D,p}(T)=\prod_{\mathfrak P\mid p}(1-T^{f(\mathfrak P/p)}).
+\]
+The exact local denominator of \eqref{ar:quadratic-induction} is
+\begin{equation}\label{ar:denominator-ratio}
+ D_{\rho,p}(T)=D_{L_D,p}(T)/D_{B,p}(T).
+\end{equation}
+This quotient is a polynomial: above each prime of $B$, quadratic
+splitting contributes $1-T^f$, inertia degree two contributes $1+T^f$,
+and ramification contributes 1. Its degree is at most $\dim\rho$.
+At a real place its character is even or odd according as $D\eta$
+is positive or negative. At a complex place the induction contributes
+one even and one odd real gamma factor.
+
+We can also compute these data locally, including in the sectors with a
+quartic twist. At an odd prime of $B$, first remove the
+even valuation of the quadratic radicand by a square. An odd remaining
+valuation is ramified with conductor exponent one. For valuation zero,
+the residue quadratic character determines splitting, giving the
+unramified value of the quadratic character on a uniformizer. At a
+dyadic place, use the finite unit quotient and square test: a unit
+$1+u$ with valuation $v(u)>2v(2)$ is a square by Hensel's lemma. Thus
+squareclass and quadratic-character computations reduce to a finite
+quotient of the local integer ring. Its ramification and conductor can
+be determined by testing the character on the descending unit groups.
+The quadratic norm criterion determines each character value. All these tests
+use exact finite-ring arithmetic.
+
+For $\rho=\operatorname{Ind}_{B}^{\mathbb Q}\lambda\otimes\xi_p$, apply
+these tests to the local character
+\[
+ \lambda_{\mathfrak p}\,\bigl(\xi_{p,\ell}\circ
+ N_{B_{\mathfrak p}/\mathbb Q_\ell}\bigr)
+ \qquad(\mathfrak p\mid\ell).
+\]
+The local component of a primitive Dirichlet character is normalized to
+have the usual Frobenius value away from its modulus. At its modulus,
+its restriction to units is the inverse of the finite Dirichlet
+character, and its value on the rational uniformizer is one.
+For each local character, its conductor exponent is the least integer
+$n$ for which it is trivial on $1+\mathfrak p^n$, with exponent zero
+for an unramified character. The search is finite: its conductor is no
+larger than the maximum of the two known factor conductors. Induction
+then gives
+\[
+ a_\ell(\rho)=\sum_{\mathfrak p\mid\ell}
+ f(\mathfrak p/\ell)\bigl(a_{\mathfrak p}(\lambda\xi_p\circ N)
+                         +d_{B_{\mathfrak p}/\mathbb Q_\ell}\bigr),
+\]
+where $d_{B_{\mathfrak p}/\mathbb Q_\ell}$ is the exponent of the local
+different. If a local inducing character is ramified it contributes no
+Euler factor. If it is unramified, with uniformizer value $\varepsilon$,
+it contributes $1-\varepsilon T^{f(\mathfrak p/\ell)}$. Multiplication over
+$\mathfrak p\mid\ell$ supplies the target denominator with its actual
+complex phase.
+
+At the cancelling odd prime this calculation has a particularly short
+form. Write a local uniformizer as $\pi^2=pr$, let $u$ be the normalized
+quadratic radicand unit, and write $f$ for the residue degree. The
+cancelled character is unramified and its value is
+\begin{equation}\label{ar:cancelled-value}
+ \varepsilon=(u/\mathbb F_{p^f})\,
+       \xi_p((-r)^f)^{-1}.
+\end{equation}
+The first factor is the value of the unramified quadratic character,
+and the second comes from the unit part of the norm of $\pi$. The
+inverse is required by the local normalization at the modulus. This
+determines each complex Euler polynomial separately.
+
+The finite arithmetic records specify the rational defining data,
+projector identities, primitive character values, and exceptional
+polynomials. The supplementary checks apply the displayed identities
+and local operations to these records. Independent maximal-order and
+prime-factorization computations check the discriminant ratios and
+local polynomials a second time. The identification of the infinite
+Euler products follows from the inducing characters constructed above.
+\end{proof}
+
+\subsection{Frobenius Tests for the Prime Budget}\label{ar:frobenius}
+For an ordinary prime $p\notin\Sigma$, let $v_p\in V$ be its genus
+Frobenius vector. If $v_p\ne0$, a lift in either central field has square
+measured by the corresponding quadratic forms. Consequently
+\begin{equation}\label{ar:nonsplit-test}
+ \begin{aligned}
+ f_N(p)=4&\ \Longleftrightarrow\ q_a(v_p)=1\text{ for some }a\in\mathcal A,\\
+ f_M(p)=4&\ \Longleftrightarrow\ q_b(v_p)=1\text{ for some }b\in\mathcal B.
+ \end{aligned}
+\end{equation}
+If no form detects the square, the residue degree is two, since the
+genus vector is nonzero. In particular a prime with $f_N(p)=2$ and
+$f_M(p)=4$ has residue degree at least four in every field $K$.
+
+If $v_p=0$, choose any square root $s_i$ of $A_i$ modulo $p$ and set
+\[
+ \varepsilon_i(p)=\left(\frac{x_i+y_i s_i}{p}\right)\in\{\pm1\}.
+\]
+The norm identity shows both that the argument is nonzero and that the
+sign is independent of the choice of $s_i$: the product with its
+conjugate is the nonzero square $B_i z_i^2$ modulo $p$.
+For a raw word $a$, its central Frobenius sign is
+$\prod_i\varepsilon_i(p)^{a_i}$. The prime splits completely in $N$
+exactly when every word in \eqref{ar:completed-words} has sign $+1$.
+The analogous test for $M$ uses \eqref{ar:full-words}. Any detected
+central sign gives residue degree two in that field. Since $N\subset M$,
+the completed-field detections are a subset of the full-field detections.
+Order the seven completed predicates before the twelve full predicates,
+and assign each prime to its first nonzero predicate. This gives
+disjoint sets of primes detected in the two fields, which we will use
+for the finite prime corrections in the analytic estimate.

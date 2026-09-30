@@ -1,0 +1,18 @@
+✔ [1804/1827] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.ProTwoFrattini (7.2s)
+✔ [2322/2322] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.FixedFieldIntersection (2.0s)
+Build completed successfully (2322 jobs).
+Audited all 1532 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 1532 project declarations selected.
+Axiom audit: beginning ProCGroups.FiniteGroupClass.objectProperty.
+Axiom audit: beginning ProCGroups.Categorical.pullbackLiftCont_injective_of_right_injective.
+Axiom audit: beginning ProCGroups.ProfiniteGrp.eq_one_of_mem_all_openNormalSubgroups.
+Axiom audit: 500/1532 complete transitive axiom closures checked.
+Axiom audit: 1000/1532 complete transitive axiom closures checked.
+Axiom audit: 1500/1532 complete transitive axiom closures checked.
+'ClassFieldTower.Sawin.profiniteFrattini_eq_iInf_openNormal_index_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ClassFieldTower.Sawin.fixedField_iInf_eq_iSup_of_isClosed' depends on axioms: [propext, Classical.choice, Quot.sound]

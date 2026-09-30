@@ -1,0 +1,63 @@
+✖ [6688/6832] Building UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.FixedFieldIntrinsicReciprocity.PrimeComparison (620s)
+trace: .> LEAN_PATH=/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Cli/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/batteries/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Qq/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/aesop/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/proofwidgets/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/importGraph/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/LeanSearchClient/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/plausible/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean /home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.lean -o /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.olean -i /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.ilean -c /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.c --setup /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.setup.json --json
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.lean:294:7: failed to synthesize
+  T2Space
+    Gal(SeparableClosure
+        ↥(abstractFixedField K (SeparableClosure K) H.field)/↥(abstractFixedField K (SeparableClosure K) H.field))
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.lean:378:7: failed to synthesize
+  T2Space Gal(SeparableClosure K/K)
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.lean:446:7: failed to synthesize
+  T2Space Gal(SeparableClosure K/K)
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.lean:632:4: failed to synthesize
+  T2Space
+    Gal(SeparableClosure
+        ↥(abstractFixedField K (SeparableClosure K) H.field)/↥(abstractFixedField K (SeparableClosure K) H.field))
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.lean:656:6: failed to synthesize
+  T2Space
+    Gal(SeparableClosure
+        ↥(abstractFixedField K (SeparableClosure K) H.field)/↥(abstractFixedField K (SeparableClosure K) H.field))
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.lean:720:4: failed to synthesize
+  T2Space Gal(SeparableClosure K/K)
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.lean:782:20: declaration uses `sorry`

@@ -1,0 +1,46 @@
+{
+  "schema": "h6-plus-quartic-pari-receipt-v1",
+  "status": "PASS",
+  "command": "python3 automation/lean-formalization/guarded_build.py --timeout-seconds 900 --lock-path /tmp/lean-formalization-1000.build.lock --min-available-gib 10 --stop-below-gib 6 --min-cgroup-available-gib 1 --stop-cgroup-below-gib 0.5 -- gp -q lean-formalization/verification/sol-luna-20260923/factor-inventory/h6-plus-quartic-local-factors.gp",
+  "exit_code": 0,
+  "guard": {
+    "admission": "admitted",
+    "host_available_gib": 16.3,
+    "cgroup_headroom_gib": 1.49,
+    "timeout_seconds": 900,
+    "lock_path": "/tmp/lean-formalization-1000.build.lock"
+  },
+  "checker_source": "lean-formalization/verification/sol-luna-20260923/factor-inventory/h6-plus-quartic-local-factors.gp",
+  "checker_source_sha256": "17f9fb721f8e4e042a1da98e66f4138fec46fcd4b770699ef2759a0fd8b07048",
+  "checker_source_sha256_note": "Exact source bytes used for the recorded PASS run. The current source has a refreshed status comment only; executable GP statements are unchanged.",
+  "current_checker_source_sha256": "39036ede6205251b0e7a18306dce8c17d61738f04eecc9833c74771308a4a258",
+  "stdout_log": "lean-formalization/verification/sol-luna-20260923/factor-inventory/h6-plus-quartic-pari-run-20260923.log",
+  "stdout_log_sha256": "bea094c59b94f7b89e1c2dc82c3004b71f47e77ffb7d17934aee0802e9b14765",
+  "pari_version": "GP/PARI 2.17.2",
+  "runtime_seconds": null,
+  "runtime_note": "The command completed well within the 900-second guard timeout; subsecond process runtime was not separately instrumented.",
+  "results": {
+    "polynomial": "x^4 - 34*x^2 + 429",
+    "polynomial_discriminant": 2152550400,
+    "field_discriminant": 8408400,
+    "power_order_index": 16,
+    "nfcertify_base": [],
+    "nfcertify_quartic": [],
+    "quartic_signature": [0, 2],
+    "local_quotients": {
+      "2": "1",
+      "3": "1-T",
+      "5": "1+T",
+      "7": "1+T",
+      "11": "1-T",
+      "13": "1+T",
+      "17": "(1-T)^2"
+    },
+    "all_seven_match_expected_h6_twist_plus_one_row": true
+  },
+  "limits": [
+    "This is finite exact PARI evidence for the specified maximal orders and seven rational primes.",
+    "It does not establish an all-prime Artin row identity or a functional equation.",
+    "It is not a Lean theorem or an independently formalized local-factor identification."
+  ]
+}

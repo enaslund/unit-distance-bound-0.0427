@@ -1,0 +1,1316 @@
+{
+  "absent_lean_source_pins": [],
+  "checker_sha256": "a3200ec3b0ce2a3f73efb4c840043dfa0484318d3b4372e9d3f00330d90857ef",
+  "conductor_sum_expected_from_Lean": 677376,
+  "flint_conrey_check": {
+    "coefficients_checked": 677376,
+    "python_flint_version": "0.9.0",
+    "reason": null,
+    "source": "lean-formalization/verification/sol-luna-20260923/genus-all-characters/genus_full_direct.py",
+    "status": "pass"
+  },
+  "input_source_sha256": {
+    "lean-formalization/UnitDistance/GenusDirichletCharacterBridge.lean": "399a31a76e810e985ad291211f3695e5b2a212880ae121176cb563f227d41da7",
+    "lean-formalization/UnitDistance/GenusDirichletConductorsActualRun20260920.lean": "00fdfac7a71cd2348463bb006e9accdf027ae669ccd5d5b4f3d74619a8e210a0",
+    "lean-formalization/UnitDistance/GenusDirichletConductorsRun20260920.lean": "da1f113fb627a0e64651d1b5998f453f7d0e452771ea0a1f18ada752ca9b3a77",
+    "lean-formalization/UnitDistance/GenusDirichletDatumCompositionRun20260920b.lean": "9302950c7b0a465624236ce334820508732d6fa9522c504f3b61ceb89da2310e",
+    "lean-formalization/UnitDistance/GenusDirichletPrimitiveActualRun20260920.lean": "d277084222814aad0f4660c38e334d91d083cfbc82ad183affb1912fb0811ad4",
+    "lean-formalization/UnitDistance/GenusDirichletPrimitiveRun20260920.lean": "6621fce9ac5c04a855c8e79d9ca0005d6c63a18cd87ca6b14e68bbc166fff99e",
+    "lean-formalization/UnitDistance/GenusDirichletReciprocityRun20260920.lean": "d270209e203897aa51cdc4065128d6f1556d15df2b9b713266fb50fc0645fb98",
+    "lean-formalization/UnitDistance/GenusDirichletRootNumbersActualRun20260920b.lean": "44c6cdc22b22b71390493d2cf8e237eabdffcc96f05120f99e39dd84dec72e21",
+    "lean-formalization/UnitDistance/GenusDirichletRowDataRun20260920.lean": "98710e5b067f57192358b66401c14cc59314bf6d734da81f79c47af5b09b86aa",
+    "lean-formalization/UnitDistance/GenusDirichletTwoPrimaryGaussRun20260920b.lean": "98f86a062f6bc8da34b1aa2dd0507927bd936d1bd8c373afc7f480c1be17a4b2",
+    "lean-formalization/verification/sol-luna-20260923/genus-all-characters/genus_full_direct.py": "24f0a4cfa2b6eb4b3ad390ce62571b1a23b7978d6d660733e1328dd1b1f299e5",
+    "lean-formalization/verification/sol-luna-20260923/genus-all-characters/kronecker-factorization-argument.md": "066ae9d25aff094abcae2820d6524cd59ce6037e5532731501b1c1327677a3b7"
+  },
+  "lean_source_pin_coverage": "all pinned Lean sources verified",
+  "masks_checked": 128,
+  "python": "3.13.5",
+  "residue_classes_checked": 677376,
+  "rows": [
+    {
+      "D": 1,
+      "atom_digest_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+      "conductor": 1,
+      "conrey_digest_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+      "conrey_number_from_reference": 1,
+      "mask": 0,
+      "residue_classes_checked": 1,
+      "zero_values_checked": 0
+    },
+    {
+      "D": -4,
+      "atom_digest_sha256": "78fcafd6eb07895c571a6c1a7c036e56e409f62f813dcc91c684dc80f222bb5a",
+      "conductor": 4,
+      "conrey_digest_sha256": "78fcafd6eb07895c571a6c1a7c036e56e409f62f813dcc91c684dc80f222bb5a",
+      "conrey_number_from_reference": 3,
+      "mask": 1,
+      "residue_classes_checked": 4,
+      "zero_values_checked": 2
+    },
+    {
+      "D": 8,
+      "atom_digest_sha256": "37c2dae7851f4b2e7bc12a2549659ea5b7d092b3cbfc28fa3df2976632e2f1f6",
+      "conductor": 8,
+      "conrey_digest_sha256": "37c2dae7851f4b2e7bc12a2549659ea5b7d092b3cbfc28fa3df2976632e2f1f6",
+      "conrey_number_from_reference": 5,
+      "mask": 2,
+      "residue_classes_checked": 8,
+      "zero_values_checked": 4
+    },
+    {
+      "D": -8,
+      "atom_digest_sha256": "511a3e09cda02096eedda04cf97012275c71f27b3ef79e5476a635e8d257bcb7",
+      "conductor": 8,
+      "conrey_digest_sha256": "511a3e09cda02096eedda04cf97012275c71f27b3ef79e5476a635e8d257bcb7",
+      "conrey_number_from_reference": 3,
+      "mask": 3,
+      "residue_classes_checked": 8,
+      "zero_values_checked": 4
+    },
+    {
+      "D": 12,
+      "atom_digest_sha256": "b3e983a2ae83872c690b985aef760fc02487eac6658f2a7e5a704f148e453096",
+      "conductor": 12,
+      "conrey_digest_sha256": "b3e983a2ae83872c690b985aef760fc02487eac6658f2a7e5a704f148e453096",
+      "conrey_number_from_reference": 11,
+      "mask": 4,
+      "residue_classes_checked": 12,
+      "zero_values_checked": 8
+    },
+    {
+      "D": -3,
+      "atom_digest_sha256": "d7b3d4012540102c40a23acdeee417e06a42a74a5d66c7efe59f4e4aa0537c5c",
+      "conductor": 3,
+      "conrey_digest_sha256": "d7b3d4012540102c40a23acdeee417e06a42a74a5d66c7efe59f4e4aa0537c5c",
+      "conrey_number_from_reference": 2,
+      "mask": 5,
+      "residue_classes_checked": 3,
+      "zero_values_checked": 1
+    },
+    {
+      "D": 24,
+      "atom_digest_sha256": "b94a29596694c289434cb884fdbe85fe5dad8b2ef356b4b9e07bcd648cf0d144",
+      "conductor": 24,
+      "conrey_digest_sha256": "b94a29596694c289434cb884fdbe85fe5dad8b2ef356b4b9e07bcd648cf0d144",
+      "conrey_number_from_reference": 11,
+      "mask": 6,
+      "residue_classes_checked": 24,
+      "zero_values_checked": 16
+    },
+    {
+      "D": -24,
+      "atom_digest_sha256": "861cd517813745bb7506bde412136c3410a81f5ee541335a34c549b8c1b8511b",
+      "conductor": 24,
+      "conrey_digest_sha256": "861cd517813745bb7506bde412136c3410a81f5ee541335a34c549b8c1b8511b",
+      "conrey_number_from_reference": 5,
+      "mask": 7,
+      "residue_classes_checked": 24,
+      "zero_values_checked": 16
+    },
+    {
+      "D": 5,
+      "atom_digest_sha256": "059bb9884be3a691ce3f523e87780ae032cda27a89e4f9f2fd30e0048030dfbc",
+      "conductor": 5,
+      "conrey_digest_sha256": "059bb9884be3a691ce3f523e87780ae032cda27a89e4f9f2fd30e0048030dfbc",
+      "conrey_number_from_reference": 4,
+      "mask": 8,
+      "residue_classes_checked": 5,
+      "zero_values_checked": 1
+    },
+    {
+      "D": -20,
+      "atom_digest_sha256": "e237ce314e7d7f02963087ebdc46a8732f29d7c0042aaf2fe0fd760b7e6f5062",
+      "conductor": 20,
+      "conrey_digest_sha256": "e237ce314e7d7f02963087ebdc46a8732f29d7c0042aaf2fe0fd760b7e6f5062",
+      "conrey_number_from_reference": 19,
+      "mask": 9,
+      "residue_classes_checked": 20,
+      "zero_values_checked": 12
+    },
+    {
+      "D": 40,
+      "atom_digest_sha256": "56626a04d53ad0b3d2c5700c5bc5f7bb890d1c979be923ae824d0ac48ba8ce6a",
+      "conductor": 40,
+      "conrey_digest_sha256": "56626a04d53ad0b3d2c5700c5bc5f7bb890d1c979be923ae824d0ac48ba8ce6a",
+      "conrey_number_from_reference": 29,
+      "mask": 10,
+      "residue_classes_checked": 40,
+      "zero_values_checked": 24
+    },
+    {
+      "D": -40,
+      "atom_digest_sha256": "89a15278fd9c99269f7182a6ea1329296fa1bf6f5ea35ceb18b68166f98d64a2",
+      "conductor": 40,
+      "conrey_digest_sha256": "89a15278fd9c99269f7182a6ea1329296fa1bf6f5ea35ceb18b68166f98d64a2",
+      "conrey_number_from_reference": 19,
+      "mask": 11,
+      "residue_classes_checked": 40,
+      "zero_values_checked": 24
+    },
+    {
+      "D": 60,
+      "atom_digest_sha256": "6ef0b410696d52df94ef8762fe19a8751e317b32db76542ee3116961b6e370ec",
+      "conductor": 60,
+      "conrey_digest_sha256": "6ef0b410696d52df94ef8762fe19a8751e317b32db76542ee3116961b6e370ec",
+      "conrey_number_from_reference": 59,
+      "mask": 12,
+      "residue_classes_checked": 60,
+      "zero_values_checked": 44
+    },
+    {
+      "D": -15,
+      "atom_digest_sha256": "d64f4c607d6fe1e40231c48247062de16a6e4714a8b60e8edec06286ad87cc95",
+      "conductor": 15,
+      "conrey_digest_sha256": "d64f4c607d6fe1e40231c48247062de16a6e4714a8b60e8edec06286ad87cc95",
+      "conrey_number_from_reference": 14,
+      "mask": 13,
+      "residue_classes_checked": 15,
+      "zero_values_checked": 7
+    },
+    {
+      "D": 120,
+      "atom_digest_sha256": "7651444834ec175272bdcceeda30a417c790107e6095fa51a73f9aa30ab069fa",
+      "conductor": 120,
+      "conrey_digest_sha256": "7651444834ec175272bdcceeda30a417c790107e6095fa51a73f9aa30ab069fa",
+      "conrey_number_from_reference": 59,
+      "mask": 14,
+      "residue_classes_checked": 120,
+      "zero_values_checked": 88
+    },
+    {
+      "D": -120,
+      "atom_digest_sha256": "80b6bebd75dd767352f148e48aee44b940e329e802c48de52793ab2559ae692f",
+      "conductor": 120,
+      "conrey_digest_sha256": "80b6bebd75dd767352f148e48aee44b940e329e802c48de52793ab2559ae692f",
+      "conrey_number_from_reference": 29,
+      "mask": 15,
+      "residue_classes_checked": 120,
+      "zero_values_checked": 88
+    },
+    {
+      "D": 28,
+      "atom_digest_sha256": "15ecc813a5ef7b59200163edb3a60d0757cbdf241f79d73a7d2c580957fcd727",
+      "conductor": 28,
+      "conrey_digest_sha256": "15ecc813a5ef7b59200163edb3a60d0757cbdf241f79d73a7d2c580957fcd727",
+      "conrey_number_from_reference": 27,
+      "mask": 16,
+      "residue_classes_checked": 28,
+      "zero_values_checked": 16
+    },
+    {
+      "D": -7,
+      "atom_digest_sha256": "430af535b266bc3d0c4c8d8c43cbf8e9ae0ae0e09fa2641337e3fcb43c87f127",
+      "conductor": 7,
+      "conrey_digest_sha256": "430af535b266bc3d0c4c8d8c43cbf8e9ae0ae0e09fa2641337e3fcb43c87f127",
+      "conrey_number_from_reference": 6,
+      "mask": 17,
+      "residue_classes_checked": 7,
+      "zero_values_checked": 1
+    },
+    {
+      "D": 56,
+      "atom_digest_sha256": "202a1feb5389be8e9f95c53b24eb98dbf1eebe8060cad71959853f22b4aeb41e",
+      "conductor": 56,
+      "conrey_digest_sha256": "202a1feb5389be8e9f95c53b24eb98dbf1eebe8060cad71959853f22b4aeb41e",
+      "conrey_number_from_reference": 27,
+      "mask": 18,
+      "residue_classes_checked": 56,
+      "zero_values_checked": 32
+    },
+    {
+      "D": -56,
+      "atom_digest_sha256": "cf28c1f7f7b34b47081dcdb0fd6f6b53560fbff388f0f82bec2f3989343d8acf",
+      "conductor": 56,
+      "conrey_digest_sha256": "cf28c1f7f7b34b47081dcdb0fd6f6b53560fbff388f0f82bec2f3989343d8acf",
+      "conrey_number_from_reference": 13,
+      "mask": 19,
+      "residue_classes_checked": 56,
+      "zero_values_checked": 32
+    },
+    {
+      "D": 21,
+      "atom_digest_sha256": "014fb7f404cf04ae33e4167bcb6310c00d65f50c8412efdc605fdd30d4cd043c",
+      "conductor": 21,
+      "conrey_digest_sha256": "014fb7f404cf04ae33e4167bcb6310c00d65f50c8412efdc605fdd30d4cd043c",
+      "conrey_number_from_reference": 20,
+      "mask": 20,
+      "residue_classes_checked": 21,
+      "zero_values_checked": 9
+    },
+    {
+      "D": -84,
+      "atom_digest_sha256": "8768ef84ffe2b3d102bd2cd3e5e97fab3a3508dd75bbe036dbcdd5124b679c2d",
+      "conductor": 84,
+      "conrey_digest_sha256": "8768ef84ffe2b3d102bd2cd3e5e97fab3a3508dd75bbe036dbcdd5124b679c2d",
+      "conrey_number_from_reference": 83,
+      "mask": 21,
+      "residue_classes_checked": 84,
+      "zero_values_checked": 60
+    },
+    {
+      "D": 168,
+      "atom_digest_sha256": "2ad361d0abdf8288c79dfec64533616aad6d8309626e524ddbcfbcf68df9ed27",
+      "conductor": 168,
+      "conrey_digest_sha256": "2ad361d0abdf8288c79dfec64533616aad6d8309626e524ddbcfbcf68df9ed27",
+      "conrey_number_from_reference": 125,
+      "mask": 22,
+      "residue_classes_checked": 168,
+      "zero_values_checked": 120
+    },
+    {
+      "D": -168,
+      "atom_digest_sha256": "836797b85477ae69812f5ffd32fc47537e826eb4e9a6731b29c7eec97e35fd88",
+      "conductor": 168,
+      "conrey_digest_sha256": "836797b85477ae69812f5ffd32fc47537e826eb4e9a6731b29c7eec97e35fd88",
+      "conrey_number_from_reference": 83,
+      "mask": 23,
+      "residue_classes_checked": 168,
+      "zero_values_checked": 120
+    },
+    {
+      "D": 140,
+      "atom_digest_sha256": "934b0f5f0e898ce968ccea1898b28de4fd82b21df8f3ba451a2e6b0fddf539be",
+      "conductor": 140,
+      "conrey_digest_sha256": "934b0f5f0e898ce968ccea1898b28de4fd82b21df8f3ba451a2e6b0fddf539be",
+      "conrey_number_from_reference": 139,
+      "mask": 24,
+      "residue_classes_checked": 140,
+      "zero_values_checked": 92
+    },
+    {
+      "D": -35,
+      "atom_digest_sha256": "7981b3f43a1882a38ddbb4f7cf06ed68007301ae9c0288a5b642b795b10d6612",
+      "conductor": 35,
+      "conrey_digest_sha256": "7981b3f43a1882a38ddbb4f7cf06ed68007301ae9c0288a5b642b795b10d6612",
+      "conrey_number_from_reference": 34,
+      "mask": 25,
+      "residue_classes_checked": 35,
+      "zero_values_checked": 11
+    },
+    {
+      "D": 280,
+      "atom_digest_sha256": "742705fc58c349bbde02caaf9ca4dc218a5558609169b89b9510cdde638ad3d9",
+      "conductor": 280,
+      "conrey_digest_sha256": "742705fc58c349bbde02caaf9ca4dc218a5558609169b89b9510cdde638ad3d9",
+      "conrey_number_from_reference": 139,
+      "mask": 26,
+      "residue_classes_checked": 280,
+      "zero_values_checked": 184
+    },
+    {
+      "D": -280,
+      "atom_digest_sha256": "62d13db994f467cd3c75d3219bd82bba990c6200d912e583fb214911c101d90c",
+      "conductor": 280,
+      "conrey_digest_sha256": "62d13db994f467cd3c75d3219bd82bba990c6200d912e583fb214911c101d90c",
+      "conrey_number_from_reference": 69,
+      "mask": 27,
+      "residue_classes_checked": 280,
+      "zero_values_checked": 184
+    },
+    {
+      "D": 105,
+      "atom_digest_sha256": "04a901ef651fef6eff61580c808d6d9af7ff2d1f49cf4816501cb40f3b5bb78f",
+      "conductor": 105,
+      "conrey_digest_sha256": "04a901ef651fef6eff61580c808d6d9af7ff2d1f49cf4816501cb40f3b5bb78f",
+      "conrey_number_from_reference": 104,
+      "mask": 28,
+      "residue_classes_checked": 105,
+      "zero_values_checked": 57
+    },
+    {
+      "D": -420,
+      "atom_digest_sha256": "1ff7abedc6cbb09af4ef24969ce4426071cbb17ea3f966ddb8394726775737e3",
+      "conductor": 420,
+      "conrey_digest_sha256": "1ff7abedc6cbb09af4ef24969ce4426071cbb17ea3f966ddb8394726775737e3",
+      "conrey_number_from_reference": 419,
+      "mask": 29,
+      "residue_classes_checked": 420,
+      "zero_values_checked": 324
+    },
+    {
+      "D": 840,
+      "atom_digest_sha256": "88d9316aa177d008b11134fc17002fd4f6c0960f40f70ae3322c92590ab71207",
+      "conductor": 840,
+      "conrey_digest_sha256": "88d9316aa177d008b11134fc17002fd4f6c0960f40f70ae3322c92590ab71207",
+      "conrey_number_from_reference": 629,
+      "mask": 30,
+      "residue_classes_checked": 840,
+      "zero_values_checked": 648
+    },
+    {
+      "D": -840,
+      "atom_digest_sha256": "633feafc4bca57919c3b242863168c48f016a558e662cf04ef27b12ca894e320",
+      "conductor": 840,
+      "conrey_digest_sha256": "633feafc4bca57919c3b242863168c48f016a558e662cf04ef27b12ca894e320",
+      "conrey_number_from_reference": 419,
+      "mask": 31,
+      "residue_classes_checked": 840,
+      "zero_values_checked": 648
+    },
+    {
+      "D": 44,
+      "atom_digest_sha256": "d83ac52db228a7fbbc446dfdd9dda583468e92e40438d73a7657c38da977b91a",
+      "conductor": 44,
+      "conrey_digest_sha256": "d83ac52db228a7fbbc446dfdd9dda583468e92e40438d73a7657c38da977b91a",
+      "conrey_number_from_reference": 43,
+      "mask": 32,
+      "residue_classes_checked": 44,
+      "zero_values_checked": 24
+    },
+    {
+      "D": -11,
+      "atom_digest_sha256": "407330f31fdcf61a671f372d33d565b56ccf279a7b5a661867cd49aed607ff25",
+      "conductor": 11,
+      "conrey_digest_sha256": "407330f31fdcf61a671f372d33d565b56ccf279a7b5a661867cd49aed607ff25",
+      "conrey_number_from_reference": 10,
+      "mask": 33,
+      "residue_classes_checked": 11,
+      "zero_values_checked": 1
+    },
+    {
+      "D": 88,
+      "atom_digest_sha256": "dd9fdd122cf5fb40082637e1838e7fd086e437be3e568a38f0b733ea2dd5fb5b",
+      "conductor": 88,
+      "conrey_digest_sha256": "dd9fdd122cf5fb40082637e1838e7fd086e437be3e568a38f0b733ea2dd5fb5b",
+      "conrey_number_from_reference": 43,
+      "mask": 34,
+      "residue_classes_checked": 88,
+      "zero_values_checked": 48
+    },
+    {
+      "D": -88,
+      "atom_digest_sha256": "bae247d370ef152ebe831690ec0484e4488ee5f4d0a5f5ede570cadc52276ea8",
+      "conductor": 88,
+      "conrey_digest_sha256": "bae247d370ef152ebe831690ec0484e4488ee5f4d0a5f5ede570cadc52276ea8",
+      "conrey_number_from_reference": 21,
+      "mask": 35,
+      "residue_classes_checked": 88,
+      "zero_values_checked": 48
+    },
+    {
+      "D": 33,
+      "atom_digest_sha256": "b79cc3f3f7587a8c74e3258f56089c9904a7977923b81689e4cdfb69595df2a6",
+      "conductor": 33,
+      "conrey_digest_sha256": "b79cc3f3f7587a8c74e3258f56089c9904a7977923b81689e4cdfb69595df2a6",
+      "conrey_number_from_reference": 32,
+      "mask": 36,
+      "residue_classes_checked": 33,
+      "zero_values_checked": 13
+    },
+    {
+      "D": -132,
+      "atom_digest_sha256": "011b4da26816938fc443dbc40f135063a3054ce66bab1bf8764f18b902bb1460",
+      "conductor": 132,
+      "conrey_digest_sha256": "011b4da26816938fc443dbc40f135063a3054ce66bab1bf8764f18b902bb1460",
+      "conrey_number_from_reference": 131,
+      "mask": 37,
+      "residue_classes_checked": 132,
+      "zero_values_checked": 92
+    },
+    {
+      "D": 264,
+      "atom_digest_sha256": "7a034a392c8b583cd421bbdd96d81799813392153c3f39a369ac43c04cb921b0",
+      "conductor": 264,
+      "conrey_digest_sha256": "7a034a392c8b583cd421bbdd96d81799813392153c3f39a369ac43c04cb921b0",
+      "conrey_number_from_reference": 197,
+      "mask": 38,
+      "residue_classes_checked": 264,
+      "zero_values_checked": 184
+    },
+    {
+      "D": -264,
+      "atom_digest_sha256": "cc153ab4d929406b13a183fdce0d658fd28f2f511b0c52f3acb76324f1405dfe",
+      "conductor": 264,
+      "conrey_digest_sha256": "cc153ab4d929406b13a183fdce0d658fd28f2f511b0c52f3acb76324f1405dfe",
+      "conrey_number_from_reference": 131,
+      "mask": 39,
+      "residue_classes_checked": 264,
+      "zero_values_checked": 184
+    },
+    {
+      "D": 220,
+      "atom_digest_sha256": "7bb94ae783fbeacad9b4c5a00f229b980894d9c9c46368658b24a0a6bf4be6bf",
+      "conductor": 220,
+      "conrey_digest_sha256": "7bb94ae783fbeacad9b4c5a00f229b980894d9c9c46368658b24a0a6bf4be6bf",
+      "conrey_number_from_reference": 219,
+      "mask": 40,
+      "residue_classes_checked": 220,
+      "zero_values_checked": 140
+    },
+    {
+      "D": -55,
+      "atom_digest_sha256": "7768fb3e3536a0537a60a35b7cd982c1d2cf02e823dc21fa606daf1f0a3dcc5e",
+      "conductor": 55,
+      "conrey_digest_sha256": "7768fb3e3536a0537a60a35b7cd982c1d2cf02e823dc21fa606daf1f0a3dcc5e",
+      "conrey_number_from_reference": 54,
+      "mask": 41,
+      "residue_classes_checked": 55,
+      "zero_values_checked": 15
+    },
+    {
+      "D": 440,
+      "atom_digest_sha256": "74965f5912e66e859ce97f301cf4ea3f990e0131a90b0ec06bf7d25caf40d8fd",
+      "conductor": 440,
+      "conrey_digest_sha256": "74965f5912e66e859ce97f301cf4ea3f990e0131a90b0ec06bf7d25caf40d8fd",
+      "conrey_number_from_reference": 219,
+      "mask": 42,
+      "residue_classes_checked": 440,
+      "zero_values_checked": 280
+    },
+    {
+      "D": -440,
+      "atom_digest_sha256": "c32eef4b8a366316f9b2e1de557321b63c12e4cae815a49e76917eb74cacc740",
+      "conductor": 440,
+      "conrey_digest_sha256": "c32eef4b8a366316f9b2e1de557321b63c12e4cae815a49e76917eb74cacc740",
+      "conrey_number_from_reference": 109,
+      "mask": 43,
+      "residue_classes_checked": 440,
+      "zero_values_checked": 280
+    },
+    {
+      "D": 165,
+      "atom_digest_sha256": "1447300e4033cc7bb66a3e4f0a9474c02d0a8a0b77b777568170190e8d062b10",
+      "conductor": 165,
+      "conrey_digest_sha256": "1447300e4033cc7bb66a3e4f0a9474c02d0a8a0b77b777568170190e8d062b10",
+      "conrey_number_from_reference": 164,
+      "mask": 44,
+      "residue_classes_checked": 165,
+      "zero_values_checked": 85
+    },
+    {
+      "D": -660,
+      "atom_digest_sha256": "7cf710932a207a3e2ec13ee06fac69b8edacbf19ecf892863c6ce907a5625fc3",
+      "conductor": 660,
+      "conrey_digest_sha256": "7cf710932a207a3e2ec13ee06fac69b8edacbf19ecf892863c6ce907a5625fc3",
+      "conrey_number_from_reference": 659,
+      "mask": 45,
+      "residue_classes_checked": 660,
+      "zero_values_checked": 500
+    },
+    {
+      "D": 1320,
+      "atom_digest_sha256": "3718959dba62c0c618818c648c1453bb2d5342b3fe69ef52138515fd428e20cc",
+      "conductor": 1320,
+      "conrey_digest_sha256": "3718959dba62c0c618818c648c1453bb2d5342b3fe69ef52138515fd428e20cc",
+      "conrey_number_from_reference": 989,
+      "mask": 46,
+      "residue_classes_checked": 1320,
+      "zero_values_checked": 1000
+    },
+    {
+      "D": -1320,
+      "atom_digest_sha256": "4c09f343a957909f40f56cb18da10005d42fe11288888f766a3316c59dff8db2",
+      "conductor": 1320,
+      "conrey_digest_sha256": "4c09f343a957909f40f56cb18da10005d42fe11288888f766a3316c59dff8db2",
+      "conrey_number_from_reference": 659,
+      "mask": 47,
+      "residue_classes_checked": 1320,
+      "zero_values_checked": 1000
+    },
+    {
+      "D": 77,
+      "atom_digest_sha256": "523b8ef270098cab0e4e325730fa5e2c7e152b08f52faa7779c3ff80740cd648",
+      "conductor": 77,
+      "conrey_digest_sha256": "523b8ef270098cab0e4e325730fa5e2c7e152b08f52faa7779c3ff80740cd648",
+      "conrey_number_from_reference": 76,
+      "mask": 48,
+      "residue_classes_checked": 77,
+      "zero_values_checked": 17
+    },
+    {
+      "D": -308,
+      "atom_digest_sha256": "6a9ac2dd944b5ba84eca73c29f7350af3a96718998fc101faab730680b689b10",
+      "conductor": 308,
+      "conrey_digest_sha256": "6a9ac2dd944b5ba84eca73c29f7350af3a96718998fc101faab730680b689b10",
+      "conrey_number_from_reference": 307,
+      "mask": 49,
+      "residue_classes_checked": 308,
+      "zero_values_checked": 188
+    },
+    {
+      "D": 616,
+      "atom_digest_sha256": "f0b19c6ea22206ac5e4a50f041a47df315c7f83f5d3c1a99196a143e9ea2dd6d",
+      "conductor": 616,
+      "conrey_digest_sha256": "f0b19c6ea22206ac5e4a50f041a47df315c7f83f5d3c1a99196a143e9ea2dd6d",
+      "conrey_number_from_reference": 461,
+      "mask": 50,
+      "residue_classes_checked": 616,
+      "zero_values_checked": 376
+    },
+    {
+      "D": -616,
+      "atom_digest_sha256": "5e6035b25e8d3b3febd4ab4da9c81cb2f3deed15a78b7491b722c780f60a685e",
+      "conductor": 616,
+      "conrey_digest_sha256": "5e6035b25e8d3b3febd4ab4da9c81cb2f3deed15a78b7491b722c780f60a685e",
+      "conrey_number_from_reference": 307,
+      "mask": 51,
+      "residue_classes_checked": 616,
+      "zero_values_checked": 376
+    },
+    {
+      "D": 924,
+      "atom_digest_sha256": "ec0a11f7fcc384a46dbde6717f6a1b99835951892050992487a8eec16f79f25c",
+      "conductor": 924,
+      "conrey_digest_sha256": "ec0a11f7fcc384a46dbde6717f6a1b99835951892050992487a8eec16f79f25c",
+      "conrey_number_from_reference": 923,
+      "mask": 52,
+      "residue_classes_checked": 924,
+      "zero_values_checked": 684
+    },
+    {
+      "D": -231,
+      "atom_digest_sha256": "29025af56d507c8a5237b0e7f14bf76a725c2b144ffb946b41097c0f211b106c",
+      "conductor": 231,
+      "conrey_digest_sha256": "29025af56d507c8a5237b0e7f14bf76a725c2b144ffb946b41097c0f211b106c",
+      "conrey_number_from_reference": 230,
+      "mask": 53,
+      "residue_classes_checked": 231,
+      "zero_values_checked": 111
+    },
+    {
+      "D": 1848,
+      "atom_digest_sha256": "6a789f2b8892229fbd204cb9703a82a10e612dc43731df47adaba21455841ff0",
+      "conductor": 1848,
+      "conrey_digest_sha256": "6a789f2b8892229fbd204cb9703a82a10e612dc43731df47adaba21455841ff0",
+      "conrey_number_from_reference": 923,
+      "mask": 54,
+      "residue_classes_checked": 1848,
+      "zero_values_checked": 1368
+    },
+    {
+      "D": -1848,
+      "atom_digest_sha256": "e1ea1092a27f75e9dd992aba5b03228562ecb8beb9d65d731c2da0f2af1f9dd1",
+      "conductor": 1848,
+      "conrey_digest_sha256": "e1ea1092a27f75e9dd992aba5b03228562ecb8beb9d65d731c2da0f2af1f9dd1",
+      "conrey_number_from_reference": 461,
+      "mask": 55,
+      "residue_classes_checked": 1848,
+      "zero_values_checked": 1368
+    },
+    {
+      "D": 385,
+      "atom_digest_sha256": "2959d4ae786e04f538eb00fd67addf31e6b3809ebba6a1bb31f2a1b912bc5184",
+      "conductor": 385,
+      "conrey_digest_sha256": "2959d4ae786e04f538eb00fd67addf31e6b3809ebba6a1bb31f2a1b912bc5184",
+      "conrey_number_from_reference": 384,
+      "mask": 56,
+      "residue_classes_checked": 385,
+      "zero_values_checked": 145
+    },
+    {
+      "D": -1540,
+      "atom_digest_sha256": "69604c94a62c685c2a355b4b9047d1fe7d710104b435713ac0f167451136fe54",
+      "conductor": 1540,
+      "conrey_digest_sha256": "69604c94a62c685c2a355b4b9047d1fe7d710104b435713ac0f167451136fe54",
+      "conrey_number_from_reference": 1539,
+      "mask": 57,
+      "residue_classes_checked": 1540,
+      "zero_values_checked": 1060
+    },
+    {
+      "D": 3080,
+      "atom_digest_sha256": "d21080acb6034f6aaf1dab93727c5eae32aa44e0ec4d669cf6127d5245aef5ae",
+      "conductor": 3080,
+      "conrey_digest_sha256": "d21080acb6034f6aaf1dab93727c5eae32aa44e0ec4d669cf6127d5245aef5ae",
+      "conrey_number_from_reference": 2309,
+      "mask": 58,
+      "residue_classes_checked": 3080,
+      "zero_values_checked": 2120
+    },
+    {
+      "D": -3080,
+      "atom_digest_sha256": "68bbf87b9dc94a545a5c28ded8dae724183182354718d94dbe28e3f8c17c31b6",
+      "conductor": 3080,
+      "conrey_digest_sha256": "68bbf87b9dc94a545a5c28ded8dae724183182354718d94dbe28e3f8c17c31b6",
+      "conrey_number_from_reference": 1539,
+      "mask": 59,
+      "residue_classes_checked": 3080,
+      "zero_values_checked": 2120
+    },
+    {
+      "D": 4620,
+      "atom_digest_sha256": "fbd704b7341be16236772de1396149c43b0f3162c1eaee0dc542eb8d5334832c",
+      "conductor": 4620,
+      "conrey_digest_sha256": "fbd704b7341be16236772de1396149c43b0f3162c1eaee0dc542eb8d5334832c",
+      "conrey_number_from_reference": 4619,
+      "mask": 60,
+      "residue_classes_checked": 4620,
+      "zero_values_checked": 3660
+    },
+    {
+      "D": -1155,
+      "atom_digest_sha256": "3f38f60bd2b066b5d268275812100bc34c83b4d692024bde8378ed5f9810378c",
+      "conductor": 1155,
+      "conrey_digest_sha256": "3f38f60bd2b066b5d268275812100bc34c83b4d692024bde8378ed5f9810378c",
+      "conrey_number_from_reference": 1154,
+      "mask": 61,
+      "residue_classes_checked": 1155,
+      "zero_values_checked": 675
+    },
+    {
+      "D": 9240,
+      "atom_digest_sha256": "d5d6b8829758a90f5893af449f7db9077f101e8721841123c9824f5f7ccf8be1",
+      "conductor": 9240,
+      "conrey_digest_sha256": "d5d6b8829758a90f5893af449f7db9077f101e8721841123c9824f5f7ccf8be1",
+      "conrey_number_from_reference": 4619,
+      "mask": 62,
+      "residue_classes_checked": 9240,
+      "zero_values_checked": 7320
+    },
+    {
+      "D": -9240,
+      "atom_digest_sha256": "31ec424c074bd4d0f34e6f6451c8145dbee85882f51e165bf7fd0714da4bdb1b",
+      "conductor": 9240,
+      "conrey_digest_sha256": "31ec424c074bd4d0f34e6f6451c8145dbee85882f51e165bf7fd0714da4bdb1b",
+      "conrey_number_from_reference": 2309,
+      "mask": 63,
+      "residue_classes_checked": 9240,
+      "zero_values_checked": 7320
+    },
+    {
+      "D": 13,
+      "atom_digest_sha256": "ffeb60062115c8f922925a114a5b8c7ea2a4383e5e111ea6fea41eba6c5cfec3",
+      "conductor": 13,
+      "conrey_digest_sha256": "ffeb60062115c8f922925a114a5b8c7ea2a4383e5e111ea6fea41eba6c5cfec3",
+      "conrey_number_from_reference": 12,
+      "mask": 64,
+      "residue_classes_checked": 13,
+      "zero_values_checked": 1
+    },
+    {
+      "D": -52,
+      "atom_digest_sha256": "ffcf606e1e8cda4d2d56898e4202832bb073e2795c04ad03f927c48f75e7a755",
+      "conductor": 52,
+      "conrey_digest_sha256": "ffcf606e1e8cda4d2d56898e4202832bb073e2795c04ad03f927c48f75e7a755",
+      "conrey_number_from_reference": 51,
+      "mask": 65,
+      "residue_classes_checked": 52,
+      "zero_values_checked": 28
+    },
+    {
+      "D": 104,
+      "atom_digest_sha256": "617971ad57a564ed6498d150d72a3fd337641d6fb9c7cd378241cded000123b8",
+      "conductor": 104,
+      "conrey_digest_sha256": "617971ad57a564ed6498d150d72a3fd337641d6fb9c7cd378241cded000123b8",
+      "conrey_number_from_reference": 77,
+      "mask": 66,
+      "residue_classes_checked": 104,
+      "zero_values_checked": 56
+    },
+    {
+      "D": -104,
+      "atom_digest_sha256": "0ccd5364ed99f8f2b8e99708e59b1ee664ba48632347e10803c8e7d7c5587913",
+      "conductor": 104,
+      "conrey_digest_sha256": "0ccd5364ed99f8f2b8e99708e59b1ee664ba48632347e10803c8e7d7c5587913",
+      "conrey_number_from_reference": 51,
+      "mask": 67,
+      "residue_classes_checked": 104,
+      "zero_values_checked": 56
+    },
+    {
+      "D": 156,
+      "atom_digest_sha256": "fe3f8b92c751f437f1389d681029f4682cf61ec9bda10f5806a345428ba98317",
+      "conductor": 156,
+      "conrey_digest_sha256": "fe3f8b92c751f437f1389d681029f4682cf61ec9bda10f5806a345428ba98317",
+      "conrey_number_from_reference": 155,
+      "mask": 68,
+      "residue_classes_checked": 156,
+      "zero_values_checked": 108
+    },
+    {
+      "D": -39,
+      "atom_digest_sha256": "c766c21ae518ba8010109f62f4b9f26cff3bca5c25dbc7da095a17e43014b015",
+      "conductor": 39,
+      "conrey_digest_sha256": "c766c21ae518ba8010109f62f4b9f26cff3bca5c25dbc7da095a17e43014b015",
+      "conrey_number_from_reference": 38,
+      "mask": 69,
+      "residue_classes_checked": 39,
+      "zero_values_checked": 15
+    },
+    {
+      "D": 312,
+      "atom_digest_sha256": "850e4bf80d951357a18222cea36a96a2b7def886d3094d7b306609f197941b97",
+      "conductor": 312,
+      "conrey_digest_sha256": "850e4bf80d951357a18222cea36a96a2b7def886d3094d7b306609f197941b97",
+      "conrey_number_from_reference": 155,
+      "mask": 70,
+      "residue_classes_checked": 312,
+      "zero_values_checked": 216
+    },
+    {
+      "D": -312,
+      "atom_digest_sha256": "02b61f7a90fa12cc2064c2801e4ae69eb6f3b984534754152e6a8e7477328127",
+      "conductor": 312,
+      "conrey_digest_sha256": "02b61f7a90fa12cc2064c2801e4ae69eb6f3b984534754152e6a8e7477328127",
+      "conrey_number_from_reference": 77,
+      "mask": 71,
+      "residue_classes_checked": 312,
+      "zero_values_checked": 216
+    },
+    {
+      "D": 65,
+      "atom_digest_sha256": "072c9ea58c018946111c519e3418933bd4e4d83294210ef9a57ab0f14f0cc60f",
+      "conductor": 65,
+      "conrey_digest_sha256": "072c9ea58c018946111c519e3418933bd4e4d83294210ef9a57ab0f14f0cc60f",
+      "conrey_number_from_reference": 64,
+      "mask": 72,
+      "residue_classes_checked": 65,
+      "zero_values_checked": 17
+    },
+    {
+      "D": -260,
+      "atom_digest_sha256": "1c7dc10431fd14171810da0bc2120f6756bca24d14c5e5c10e7ae442021eb525",
+      "conductor": 260,
+      "conrey_digest_sha256": "1c7dc10431fd14171810da0bc2120f6756bca24d14c5e5c10e7ae442021eb525",
+      "conrey_number_from_reference": 259,
+      "mask": 73,
+      "residue_classes_checked": 260,
+      "zero_values_checked": 164
+    },
+    {
+      "D": 520,
+      "atom_digest_sha256": "e295d6a4ae3c60021e3a6555a497ebaab66926ee05fa9a78078ceb2ed660ae55",
+      "conductor": 520,
+      "conrey_digest_sha256": "e295d6a4ae3c60021e3a6555a497ebaab66926ee05fa9a78078ceb2ed660ae55",
+      "conrey_number_from_reference": 389,
+      "mask": 74,
+      "residue_classes_checked": 520,
+      "zero_values_checked": 328
+    },
+    {
+      "D": -520,
+      "atom_digest_sha256": "cd9be4080dd427b874c462038b02057f0278923e2535290a912ca7491ab06b62",
+      "conductor": 520,
+      "conrey_digest_sha256": "cd9be4080dd427b874c462038b02057f0278923e2535290a912ca7491ab06b62",
+      "conrey_number_from_reference": 259,
+      "mask": 75,
+      "residue_classes_checked": 520,
+      "zero_values_checked": 328
+    },
+    {
+      "D": 780,
+      "atom_digest_sha256": "9203bcc1b0c6e6d0e3cf958718f8737c606d2d37947d899d20a4dbd0c0ebb25a",
+      "conductor": 780,
+      "conrey_digest_sha256": "9203bcc1b0c6e6d0e3cf958718f8737c606d2d37947d899d20a4dbd0c0ebb25a",
+      "conrey_number_from_reference": 779,
+      "mask": 76,
+      "residue_classes_checked": 780,
+      "zero_values_checked": 588
+    },
+    {
+      "D": -195,
+      "atom_digest_sha256": "f8dee37f5937517ff65753e186bf63b4fef4cf8c8c73a12e3881ba9fc91a7706",
+      "conductor": 195,
+      "conrey_digest_sha256": "f8dee37f5937517ff65753e186bf63b4fef4cf8c8c73a12e3881ba9fc91a7706",
+      "conrey_number_from_reference": 194,
+      "mask": 77,
+      "residue_classes_checked": 195,
+      "zero_values_checked": 99
+    },
+    {
+      "D": 1560,
+      "atom_digest_sha256": "35ec7f81aa3569bdb6042c5c0160f6757b2316879bf7649193cd6e0fe0a4aa8a",
+      "conductor": 1560,
+      "conrey_digest_sha256": "35ec7f81aa3569bdb6042c5c0160f6757b2316879bf7649193cd6e0fe0a4aa8a",
+      "conrey_number_from_reference": 779,
+      "mask": 78,
+      "residue_classes_checked": 1560,
+      "zero_values_checked": 1176
+    },
+    {
+      "D": -1560,
+      "atom_digest_sha256": "ba3fe2af453e4838eca49c49a5c8853829719e5d57eae9a3130c2e987d013c40",
+      "conductor": 1560,
+      "conrey_digest_sha256": "ba3fe2af453e4838eca49c49a5c8853829719e5d57eae9a3130c2e987d013c40",
+      "conrey_number_from_reference": 389,
+      "mask": 79,
+      "residue_classes_checked": 1560,
+      "zero_values_checked": 1176
+    },
+    {
+      "D": 364,
+      "atom_digest_sha256": "4b7ae6f21d406c0eac582839aadca3eb8b0bccfb34ce2a17956d70c9572db352",
+      "conductor": 364,
+      "conrey_digest_sha256": "4b7ae6f21d406c0eac582839aadca3eb8b0bccfb34ce2a17956d70c9572db352",
+      "conrey_number_from_reference": 363,
+      "mask": 80,
+      "residue_classes_checked": 364,
+      "zero_values_checked": 220
+    },
+    {
+      "D": -91,
+      "atom_digest_sha256": "48bfce36e986365ff3cbf5b0f5794b7c40f58a1620f33116265307e9a63556f2",
+      "conductor": 91,
+      "conrey_digest_sha256": "48bfce36e986365ff3cbf5b0f5794b7c40f58a1620f33116265307e9a63556f2",
+      "conrey_number_from_reference": 90,
+      "mask": 81,
+      "residue_classes_checked": 91,
+      "zero_values_checked": 19
+    },
+    {
+      "D": 728,
+      "atom_digest_sha256": "66d90248b90fb5abcb654a16060b87d6e354094ebae35e48bac653698a262706",
+      "conductor": 728,
+      "conrey_digest_sha256": "66d90248b90fb5abcb654a16060b87d6e354094ebae35e48bac653698a262706",
+      "conrey_number_from_reference": 363,
+      "mask": 82,
+      "residue_classes_checked": 728,
+      "zero_values_checked": 440
+    },
+    {
+      "D": -728,
+      "atom_digest_sha256": "26d056bd624e729de64a76a29dd3808962ab855f0c7073283d9a97d4b182c791",
+      "conductor": 728,
+      "conrey_digest_sha256": "26d056bd624e729de64a76a29dd3808962ab855f0c7073283d9a97d4b182c791",
+      "conrey_number_from_reference": 181,
+      "mask": 83,
+      "residue_classes_checked": 728,
+      "zero_values_checked": 440
+    },
+    {
+      "D": 273,
+      "atom_digest_sha256": "c540c15ff25362c2e31b42687b20fb123d11164c1a3175e95ce510223a0bc4e0",
+      "conductor": 273,
+      "conrey_digest_sha256": "c540c15ff25362c2e31b42687b20fb123d11164c1a3175e95ce510223a0bc4e0",
+      "conrey_number_from_reference": 272,
+      "mask": 84,
+      "residue_classes_checked": 273,
+      "zero_values_checked": 129
+    },
+    {
+      "D": -1092,
+      "atom_digest_sha256": "6045ad9b233dd126f178c3ce08cf9a79bbbce54d4fc39269f8d58553155c5538",
+      "conductor": 1092,
+      "conrey_digest_sha256": "6045ad9b233dd126f178c3ce08cf9a79bbbce54d4fc39269f8d58553155c5538",
+      "conrey_number_from_reference": 1091,
+      "mask": 85,
+      "residue_classes_checked": 1092,
+      "zero_values_checked": 804
+    },
+    {
+      "D": 2184,
+      "atom_digest_sha256": "4302a8db7625835dfbfca4c0c2379f6647cee5bb45612ddb95ad1c8fd24c3b13",
+      "conductor": 2184,
+      "conrey_digest_sha256": "4302a8db7625835dfbfca4c0c2379f6647cee5bb45612ddb95ad1c8fd24c3b13",
+      "conrey_number_from_reference": 1637,
+      "mask": 86,
+      "residue_classes_checked": 2184,
+      "zero_values_checked": 1608
+    },
+    {
+      "D": -2184,
+      "atom_digest_sha256": "d060af017f111e6543887999196732ac103acc1298cb65c2d0ac6750aaf8c911",
+      "conductor": 2184,
+      "conrey_digest_sha256": "d060af017f111e6543887999196732ac103acc1298cb65c2d0ac6750aaf8c911",
+      "conrey_number_from_reference": 1091,
+      "mask": 87,
+      "residue_classes_checked": 2184,
+      "zero_values_checked": 1608
+    },
+    {
+      "D": 1820,
+      "atom_digest_sha256": "138ecbebd62c9639c843766d8da5b231c20578676c797e0df9d9106ccd3a3acc",
+      "conductor": 1820,
+      "conrey_digest_sha256": "138ecbebd62c9639c843766d8da5b231c20578676c797e0df9d9106ccd3a3acc",
+      "conrey_number_from_reference": 1819,
+      "mask": 88,
+      "residue_classes_checked": 1820,
+      "zero_values_checked": 1244
+    },
+    {
+      "D": -455,
+      "atom_digest_sha256": "c97f44c156549a1fbdf5bdb44e1a00be29292bece14c9f737d7029b6f5f228e1",
+      "conductor": 455,
+      "conrey_digest_sha256": "c97f44c156549a1fbdf5bdb44e1a00be29292bece14c9f737d7029b6f5f228e1",
+      "conrey_number_from_reference": 454,
+      "mask": 89,
+      "residue_classes_checked": 455,
+      "zero_values_checked": 167
+    },
+    {
+      "D": 3640,
+      "atom_digest_sha256": "0fceaa4b6278b52a9e07e0f2c4c5d4c7f843f6b2fe1d810ee733a1867b930f81",
+      "conductor": 3640,
+      "conrey_digest_sha256": "0fceaa4b6278b52a9e07e0f2c4c5d4c7f843f6b2fe1d810ee733a1867b930f81",
+      "conrey_number_from_reference": 1819,
+      "mask": 90,
+      "residue_classes_checked": 3640,
+      "zero_values_checked": 2488
+    },
+    {
+      "D": -3640,
+      "atom_digest_sha256": "ec2105db303f1e8153b1589cc5532617451cf715c6f39cec2170fc8c4621d5eb",
+      "conductor": 3640,
+      "conrey_digest_sha256": "ec2105db303f1e8153b1589cc5532617451cf715c6f39cec2170fc8c4621d5eb",
+      "conrey_number_from_reference": 909,
+      "mask": 91,
+      "residue_classes_checked": 3640,
+      "zero_values_checked": 2488
+    },
+    {
+      "D": 1365,
+      "atom_digest_sha256": "81892c9871ed851979b586e8436f0e2e883e10eb44f57b3739d04d52bb6947ec",
+      "conductor": 1365,
+      "conrey_digest_sha256": "81892c9871ed851979b586e8436f0e2e883e10eb44f57b3739d04d52bb6947ec",
+      "conrey_number_from_reference": 1364,
+      "mask": 92,
+      "residue_classes_checked": 1365,
+      "zero_values_checked": 789
+    },
+    {
+      "D": -5460,
+      "atom_digest_sha256": "022229357d0216e962b8eb7b19e07aa5de3cb0ea268d974e0d2754f8beabf56d",
+      "conductor": 5460,
+      "conrey_digest_sha256": "022229357d0216e962b8eb7b19e07aa5de3cb0ea268d974e0d2754f8beabf56d",
+      "conrey_number_from_reference": 5459,
+      "mask": 93,
+      "residue_classes_checked": 5460,
+      "zero_values_checked": 4308
+    },
+    {
+      "D": 10920,
+      "atom_digest_sha256": "9549c3a048261e075fae0f291b8bcf014401bfc016078c943008aa67c281e63c",
+      "conductor": 10920,
+      "conrey_digest_sha256": "9549c3a048261e075fae0f291b8bcf014401bfc016078c943008aa67c281e63c",
+      "conrey_number_from_reference": 8189,
+      "mask": 94,
+      "residue_classes_checked": 10920,
+      "zero_values_checked": 8616
+    },
+    {
+      "D": -10920,
+      "atom_digest_sha256": "d9f3d864da9478aee02b3841b0db959916631bc6488e0556f81195d578dd1682",
+      "conductor": 10920,
+      "conrey_digest_sha256": "d9f3d864da9478aee02b3841b0db959916631bc6488e0556f81195d578dd1682",
+      "conrey_number_from_reference": 5459,
+      "mask": 95,
+      "residue_classes_checked": 10920,
+      "zero_values_checked": 8616
+    },
+    {
+      "D": 572,
+      "atom_digest_sha256": "4c7e9220b2e3f4267baa6c50ebfca7bd26d4875cb8dd24917e4b7b9176cfb9f2",
+      "conductor": 572,
+      "conrey_digest_sha256": "4c7e9220b2e3f4267baa6c50ebfca7bd26d4875cb8dd24917e4b7b9176cfb9f2",
+      "conrey_number_from_reference": 571,
+      "mask": 96,
+      "residue_classes_checked": 572,
+      "zero_values_checked": 332
+    },
+    {
+      "D": -143,
+      "atom_digest_sha256": "eab7b3f984a101443f9caaa87738def6d4bb80c7e71e4bfbd8c3924b32ae2818",
+      "conductor": 143,
+      "conrey_digest_sha256": "eab7b3f984a101443f9caaa87738def6d4bb80c7e71e4bfbd8c3924b32ae2818",
+      "conrey_number_from_reference": 142,
+      "mask": 97,
+      "residue_classes_checked": 143,
+      "zero_values_checked": 23
+    },
+    {
+      "D": 1144,
+      "atom_digest_sha256": "bbc55c32cb77754c78e7d01d627eb1f4a4b63371a33f5ea3901d1b0806153628",
+      "conductor": 1144,
+      "conrey_digest_sha256": "bbc55c32cb77754c78e7d01d627eb1f4a4b63371a33f5ea3901d1b0806153628",
+      "conrey_number_from_reference": 571,
+      "mask": 98,
+      "residue_classes_checked": 1144,
+      "zero_values_checked": 664
+    },
+    {
+      "D": -1144,
+      "atom_digest_sha256": "b6ae81e1496a77c8395dfa403d6ff62ba252a245e2ecf29314aef3e79dce0f07",
+      "conductor": 1144,
+      "conrey_digest_sha256": "b6ae81e1496a77c8395dfa403d6ff62ba252a245e2ecf29314aef3e79dce0f07",
+      "conrey_number_from_reference": 285,
+      "mask": 99,
+      "residue_classes_checked": 1144,
+      "zero_values_checked": 664
+    },
+    {
+      "D": 429,
+      "atom_digest_sha256": "4fe2369ce57bc5c68587442bf4af282aa7d1410b443241dc6d047fb0522661d4",
+      "conductor": 429,
+      "conrey_digest_sha256": "4fe2369ce57bc5c68587442bf4af282aa7d1410b443241dc6d047fb0522661d4",
+      "conrey_number_from_reference": 428,
+      "mask": 100,
+      "residue_classes_checked": 429,
+      "zero_values_checked": 189
+    },
+    {
+      "D": -1716,
+      "atom_digest_sha256": "ffee53d80aeb2ff06e500fb4790b7b6f1107691dc00c7fdfa727e26b50ca97a6",
+      "conductor": 1716,
+      "conrey_digest_sha256": "ffee53d80aeb2ff06e500fb4790b7b6f1107691dc00c7fdfa727e26b50ca97a6",
+      "conrey_number_from_reference": 1715,
+      "mask": 101,
+      "residue_classes_checked": 1716,
+      "zero_values_checked": 1236
+    },
+    {
+      "D": 3432,
+      "atom_digest_sha256": "b8e4450bc2686625da32dc79c3c35ad2065fa0c583286d9ae7b67f7bfe769482",
+      "conductor": 3432,
+      "conrey_digest_sha256": "b8e4450bc2686625da32dc79c3c35ad2065fa0c583286d9ae7b67f7bfe769482",
+      "conrey_number_from_reference": 2573,
+      "mask": 102,
+      "residue_classes_checked": 3432,
+      "zero_values_checked": 2472
+    },
+    {
+      "D": -3432,
+      "atom_digest_sha256": "99097647aa96307cf40a14bfddcfbc541e02b7ddd3b872df2dc5f5b6577e31ae",
+      "conductor": 3432,
+      "conrey_digest_sha256": "99097647aa96307cf40a14bfddcfbc541e02b7ddd3b872df2dc5f5b6577e31ae",
+      "conrey_number_from_reference": 1715,
+      "mask": 103,
+      "residue_classes_checked": 3432,
+      "zero_values_checked": 2472
+    },
+    {
+      "D": 2860,
+      "atom_digest_sha256": "e6cf2f5e80e17cb7b92fefdefa0401ba6ccf94df23b10c2b20aac287e11f3998",
+      "conductor": 2860,
+      "conrey_digest_sha256": "e6cf2f5e80e17cb7b92fefdefa0401ba6ccf94df23b10c2b20aac287e11f3998",
+      "conrey_number_from_reference": 2859,
+      "mask": 104,
+      "residue_classes_checked": 2860,
+      "zero_values_checked": 1900
+    },
+    {
+      "D": -715,
+      "atom_digest_sha256": "0f873dfd40093c242a59e64cc6bbad40fc65aa89495465a493a7f1db92f7ac91",
+      "conductor": 715,
+      "conrey_digest_sha256": "0f873dfd40093c242a59e64cc6bbad40fc65aa89495465a493a7f1db92f7ac91",
+      "conrey_number_from_reference": 714,
+      "mask": 105,
+      "residue_classes_checked": 715,
+      "zero_values_checked": 235
+    },
+    {
+      "D": 5720,
+      "atom_digest_sha256": "9e6b84a91cfc96101e1087a06b1f9cb2859753460c33edd95f91048b7927e362",
+      "conductor": 5720,
+      "conrey_digest_sha256": "9e6b84a91cfc96101e1087a06b1f9cb2859753460c33edd95f91048b7927e362",
+      "conrey_number_from_reference": 2859,
+      "mask": 106,
+      "residue_classes_checked": 5720,
+      "zero_values_checked": 3800
+    },
+    {
+      "D": -5720,
+      "atom_digest_sha256": "bdaf868b7a1fb59003dacb97f90dc21c44dc13644fd356a365270b2a30749269",
+      "conductor": 5720,
+      "conrey_digest_sha256": "bdaf868b7a1fb59003dacb97f90dc21c44dc13644fd356a365270b2a30749269",
+      "conrey_number_from_reference": 1429,
+      "mask": 107,
+      "residue_classes_checked": 5720,
+      "zero_values_checked": 3800
+    },
+    {
+      "D": 2145,
+      "atom_digest_sha256": "17ec60dd55b9f2c697452f5897f5e0114d020e72588bce48439ff311913aaf52",
+      "conductor": 2145,
+      "conrey_digest_sha256": "17ec60dd55b9f2c697452f5897f5e0114d020e72588bce48439ff311913aaf52",
+      "conrey_number_from_reference": 2144,
+      "mask": 108,
+      "residue_classes_checked": 2145,
+      "zero_values_checked": 1185
+    },
+    {
+      "D": -8580,
+      "atom_digest_sha256": "7c7f0f691a06828ad1c1c2cf7773ad165d450d02f4095f640e1a5ae7b5a85e3e",
+      "conductor": 8580,
+      "conrey_digest_sha256": "7c7f0f691a06828ad1c1c2cf7773ad165d450d02f4095f640e1a5ae7b5a85e3e",
+      "conrey_number_from_reference": 8579,
+      "mask": 109,
+      "residue_classes_checked": 8580,
+      "zero_values_checked": 6660
+    },
+    {
+      "D": 17160,
+      "atom_digest_sha256": "8e14e05db55b26bd052369f4cddcc6e0f9ca2e3f75907dad2434d78d55334a63",
+      "conductor": 17160,
+      "conrey_digest_sha256": "8e14e05db55b26bd052369f4cddcc6e0f9ca2e3f75907dad2434d78d55334a63",
+      "conrey_number_from_reference": 12869,
+      "mask": 110,
+      "residue_classes_checked": 17160,
+      "zero_values_checked": 13320
+    },
+    {
+      "D": -17160,
+      "atom_digest_sha256": "03731175d5a801ddad7c23af5793ab650204e93d7de51ffd7a1f1002bc595dcf",
+      "conductor": 17160,
+      "conrey_digest_sha256": "03731175d5a801ddad7c23af5793ab650204e93d7de51ffd7a1f1002bc595dcf",
+      "conrey_number_from_reference": 8579,
+      "mask": 111,
+      "residue_classes_checked": 17160,
+      "zero_values_checked": 13320
+    },
+    {
+      "D": 1001,
+      "atom_digest_sha256": "b07a4c4c6c6020d09df53ea4162b0611dbc67bc7d07ef0dbb8f82e81a07e0687",
+      "conductor": 1001,
+      "conrey_digest_sha256": "b07a4c4c6c6020d09df53ea4162b0611dbc67bc7d07ef0dbb8f82e81a07e0687",
+      "conrey_number_from_reference": 1000,
+      "mask": 112,
+      "residue_classes_checked": 1001,
+      "zero_values_checked": 281
+    },
+    {
+      "D": -4004,
+      "atom_digest_sha256": "4e1ca18e5bbd5116e1976785758d937ab70beb94b3a5fda2bffe59f6eea4bc8e",
+      "conductor": 4004,
+      "conrey_digest_sha256": "4e1ca18e5bbd5116e1976785758d937ab70beb94b3a5fda2bffe59f6eea4bc8e",
+      "conrey_number_from_reference": 4003,
+      "mask": 113,
+      "residue_classes_checked": 4004,
+      "zero_values_checked": 2564
+    },
+    {
+      "D": 8008,
+      "atom_digest_sha256": "8f3250a3ce3257f78f08558e021643f587c28bfb4ba2a27a264a010e612beed8",
+      "conductor": 8008,
+      "conrey_digest_sha256": "8f3250a3ce3257f78f08558e021643f587c28bfb4ba2a27a264a010e612beed8",
+      "conrey_number_from_reference": 6005,
+      "mask": 114,
+      "residue_classes_checked": 8008,
+      "zero_values_checked": 5128
+    },
+    {
+      "D": -8008,
+      "atom_digest_sha256": "bb902d5109858a69000200cfac326a56df20422d7a26f347a1a42044084d4dfb",
+      "conductor": 8008,
+      "conrey_digest_sha256": "bb902d5109858a69000200cfac326a56df20422d7a26f347a1a42044084d4dfb",
+      "conrey_number_from_reference": 4003,
+      "mask": 115,
+      "residue_classes_checked": 8008,
+      "zero_values_checked": 5128
+    },
+    {
+      "D": 12012,
+      "atom_digest_sha256": "d6781f736d7b415bd0eef19426a78c8d0944bcb8e82d4a81d1cc2b6764459bd8",
+      "conductor": 12012,
+      "conrey_digest_sha256": "d6781f736d7b415bd0eef19426a78c8d0944bcb8e82d4a81d1cc2b6764459bd8",
+      "conrey_number_from_reference": 12011,
+      "mask": 116,
+      "residue_classes_checked": 12012,
+      "zero_values_checked": 9132
+    },
+    {
+      "D": -3003,
+      "atom_digest_sha256": "128bf6d0efc2b59dab2e73bbafd71dd34c7acc6af250cb391cbc553e42829ff7",
+      "conductor": 3003,
+      "conrey_digest_sha256": "128bf6d0efc2b59dab2e73bbafd71dd34c7acc6af250cb391cbc553e42829ff7",
+      "conrey_number_from_reference": 3002,
+      "mask": 117,
+      "residue_classes_checked": 3003,
+      "zero_values_checked": 1563
+    },
+    {
+      "D": 24024,
+      "atom_digest_sha256": "68173673413748cac5993590d3b3245edbebce49af3ce8915a5853398c14d02a",
+      "conductor": 24024,
+      "conrey_digest_sha256": "68173673413748cac5993590d3b3245edbebce49af3ce8915a5853398c14d02a",
+      "conrey_number_from_reference": 12011,
+      "mask": 118,
+      "residue_classes_checked": 24024,
+      "zero_values_checked": 18264
+    },
+    {
+      "D": -24024,
+      "atom_digest_sha256": "bea49721b236b81325109d929e9553d754b15e02287923d99a712b4117af16de",
+      "conductor": 24024,
+      "conrey_digest_sha256": "bea49721b236b81325109d929e9553d754b15e02287923d99a712b4117af16de",
+      "conrey_number_from_reference": 6005,
+      "mask": 119,
+      "residue_classes_checked": 24024,
+      "zero_values_checked": 18264
+    },
+    {
+      "D": 5005,
+      "atom_digest_sha256": "efef4b520dc286807737d35e869ddb020b090c5d9ca02f94060837bd83d8c463",
+      "conductor": 5005,
+      "conrey_digest_sha256": "efef4b520dc286807737d35e869ddb020b090c5d9ca02f94060837bd83d8c463",
+      "conrey_number_from_reference": 5004,
+      "mask": 120,
+      "residue_classes_checked": 5005,
+      "zero_values_checked": 2125
+    },
+    {
+      "D": -20020,
+      "atom_digest_sha256": "146922a38e70c751ceff9256ded5aea9e331fa0ad5146d0df8db8472a15e7c36",
+      "conductor": 20020,
+      "conrey_digest_sha256": "146922a38e70c751ceff9256ded5aea9e331fa0ad5146d0df8db8472a15e7c36",
+      "conrey_number_from_reference": 20019,
+      "mask": 121,
+      "residue_classes_checked": 20020,
+      "zero_values_checked": 14260
+    },
+    {
+      "D": 40040,
+      "atom_digest_sha256": "791d65c3df6e5a7f35fab94ffc6cb8bdb9f29ea87be406a66fc13bbd0d62dc0a",
+      "conductor": 40040,
+      "conrey_digest_sha256": "791d65c3df6e5a7f35fab94ffc6cb8bdb9f29ea87be406a66fc13bbd0d62dc0a",
+      "conrey_number_from_reference": 30029,
+      "mask": 122,
+      "residue_classes_checked": 40040,
+      "zero_values_checked": 28520
+    },
+    {
+      "D": -40040,
+      "atom_digest_sha256": "ba450377fc1d539ab2016d8fe4d0f925b8f4ca54e68e2b3d154dac9d149f4bde",
+      "conductor": 40040,
+      "conrey_digest_sha256": "ba450377fc1d539ab2016d8fe4d0f925b8f4ca54e68e2b3d154dac9d149f4bde",
+      "conrey_number_from_reference": 20019,
+      "mask": 123,
+      "residue_classes_checked": 40040,
+      "zero_values_checked": 28520
+    },
+    {
+      "D": 60060,
+      "atom_digest_sha256": "362fbaab83cb06eb30946c90f5a924b331b36b782a28d64c7e7fce9c2bf30f73",
+      "conductor": 60060,
+      "conrey_digest_sha256": "362fbaab83cb06eb30946c90f5a924b331b36b782a28d64c7e7fce9c2bf30f73",
+      "conrey_number_from_reference": 60059,
+      "mask": 124,
+      "residue_classes_checked": 60060,
+      "zero_values_checked": 48540
+    },
+    {
+      "D": -15015,
+      "atom_digest_sha256": "6a7d61288184b99467c126926a3fbb0fd361b12ead49cf0daa5f22bbccc27248",
+      "conductor": 15015,
+      "conrey_digest_sha256": "6a7d61288184b99467c126926a3fbb0fd361b12ead49cf0daa5f22bbccc27248",
+      "conrey_number_from_reference": 15014,
+      "mask": 125,
+      "residue_classes_checked": 15015,
+      "zero_values_checked": 9255
+    },
+    {
+      "D": 120120,
+      "atom_digest_sha256": "7cd91a8394821e4ec7f1655673bf5b649dc64ff82f79061b8a8ad38c788baaff",
+      "conductor": 120120,
+      "conrey_digest_sha256": "7cd91a8394821e4ec7f1655673bf5b649dc64ff82f79061b8a8ad38c788baaff",
+      "conrey_number_from_reference": 60059,
+      "mask": 126,
+      "residue_classes_checked": 120120,
+      "zero_values_checked": 97080
+    },
+    {
+      "D": -120120,
+      "atom_digest_sha256": "e2a9f62f65bdc815ae583b2b9ebbb0100d0195c40e0881030c845d28cb532ff8",
+      "conductor": 120120,
+      "conrey_digest_sha256": "e2a9f62f65bdc815ae583b2b9ebbb0100d0195c40e0881030c845d28cb532ff8",
+      "conrey_number_from_reference": 30029,
+      "mask": 127,
+      "residue_classes_checked": 120120,
+      "zero_values_checked": 97080
+    }
+  ],
+  "scope": "Exact finite check of the explicit 2-primary times selected odd Legendre atom formula against an independent Kronecker routine for every residue in all 128 conductor periods. This is finite evidence, not the missing Lean theorem or analytic verification.",
+  "status": "pass",
+  "wall_seconds": 4.261,
+  "zero_character_values_checked": 512211
+}

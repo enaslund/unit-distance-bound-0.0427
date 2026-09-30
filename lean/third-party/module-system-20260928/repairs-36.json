@@ -1,0 +1,26 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "Expose existing private tower-relative class-group operations from IdeleClassDirectLimitExtension for NormQuotient. Actual sole integration11 failed module used as baseline; one exact-owner import passes the complete file without statement, proof-body, hypothesis, or heartbeat changes.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean",
+      "original_sha256": "d5c0f43b6ad4d6f5d37b2f6e986e5fdb40945d84af708063fdd8a83d83c5a4d3",
+      "migrated_sha256": "59b145fa42325e58a3557a8254a2ce960d836c1005b3fcd7c76c8560c49106e7",
+      "insertions": [
+        {
+          "offset": 479,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitExtension\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitExtension"
+      ],
+      "added_options": [],
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-36-norm-quotient/observed-failure.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-36-norm-quotient/result.json"
+    }
+  ]
+}

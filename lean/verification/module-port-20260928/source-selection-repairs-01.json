@@ -1,0 +1,68 @@
+{
+  "added_packaged_lean": [],
+  "added_project_modules": [],
+  "baseline_archive": "dist/conditional-candidate24-20260927/conditional-source-24-final.tar.gz",
+  "baseline_archive_sha256": "bb973e41a5bd4937eee6413fe459340d0009dbd049737b945951b29f18d284b0",
+  "baseline_import_graph_sha256": "3e0ac0a1ff06d4326824419501b2011e5351d7af148923b4fb11c1ca0ad97c08",
+  "baseline_packaged_lean_count": 2168,
+  "baseline_project_module_count": 2163,
+  "baseline_snapshot_sha256": "b14d950fdfd782334385ff6b68aa326fb81329bb5df5c7bd3c418da4970ac5c3",
+  "changed_explicit_imports": {
+    "UnitDistance.StudentSchwartzGrowth": {
+      "after": [
+        "UnitDistance.StudentProfiles",
+        "Mathlib.Analysis.Distribution.TemperateGrowth",
+        "Mathlib.Analysis.Calculus.IteratedDeriv.Defs",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv"
+      ],
+      "before": [
+        "UnitDistance.StudentProfiles",
+        "Mathlib.Analysis.Distribution.TemperateGrowth"
+      ]
+    }
+  },
+  "changed_packaged_lean_count": 2136,
+  "current_import_graph_sha256": "f4f394bc87865b8843ae1450d4c6fa8e563ccfa1d5caa9d9838719052e725e73",
+  "current_packaged_lean_count": 2165,
+  "current_packaged_nonclosure_lean": [
+    "UnitDistance.lean",
+    "verification/ZetaAudit.lean"
+  ],
+  "current_project_module_count": 2163,
+  "module_port_provenance": {
+    "checked_files": 2163,
+    "manifest": "third-party/module-system-20260928/manifest.json",
+    "manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+    "repair_layers": [
+      {
+        "checked_files": 1,
+        "manifest": "third-party/module-system-20260928/repairs-01.json",
+        "manifest_sha256": "af493e3ade2cb9cbd22341786462242550272b234b76e9c75da87410e9580014"
+      }
+    ],
+    "reversed_files": 2134
+  },
+  "original_source_recovery_mismatches": [],
+  "passed": true,
+  "recorded_header_import_repairs": [
+    {
+      "added_imports": [
+        "Mathlib.Analysis.Calculus.IteratedDeriv.Defs",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv"
+      ],
+      "manifest": "third-party/module-system-20260928/repairs-01.json",
+      "path": "UnitDistance/StudentSchwartzGrowth.lean",
+      "reason": "Module-system compiler reported missing rpow and iterated derivative names; these explicit imports contain the referenced public declarations."
+    }
+  ],
+  "recovered_import_graph_sha256": "3e0ac0a1ff06d4326824419501b2011e5351d7af148923b4fb11c1ca0ad97c08",
+  "removed_packaged_lean": [
+    "verification/conditional-20260925/diagnostics/ChallengeCheck.lean",
+    "verification/conditional-20260925/diagnostics/CompareCheck.lean",
+    "verification/conditional-20260925/diagnostics/SolutionCheck.lean"
+  ],
+  "removed_project_modules": [],
+  "schema": "unit-distance-module-port-selection-v1",
+  "scope": "Source selection and explicit imports only; no compilation or kernel replay.",
+  "unexpected_changed_explicit_imports": {}
+}

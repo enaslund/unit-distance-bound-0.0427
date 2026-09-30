@@ -1,0 +1,882 @@
+{
+  "inputs": {
+    "compiler": "/home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "compiler_sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "LEAN_PATH": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Cli/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/batteries/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Qq/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/aesop/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/proofwidgets/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/importGraph/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/LeanSearchClient/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/plausible/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean",
+    "scope": "Expose existing private CompactSpace instance for absolute Galois wrapper; import-only; all proof bodies, statements, hypotheses and heartbeat options unchanged. Isolated1CPU2GiB noSwap600s8GiB guard.",
+    "integration_attempt": "integration-20260929T000207Z",
+    "integration_build_log_sha256": "646a818adfb68d0190bac3ee4dddd03599cf2288290068fc713cf2e532846f3d",
+    "integration_terminal_result_sha256": "0b6326c8edf1fa75350bcc72c92259e621a6109a64cfad710840318165e17a92",
+    "owner_ancestor_chain": [
+      "UnitDistance.ProTwoH2AbsoluteKernel",
+      "UnitDistance.AbsoluteProPUnramified",
+      "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.RelationRank.FinitePlaceAbsoluteInertiaKernel",
+      "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.RelationRank.AbsoluteUnramifiedGaloisSequence"
+    ],
+    "direct_import_artifact_hashes": [
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean",
+        "sha256": "1726ec7bf9ad3c391e9a9a492e591f15a5a38bb97abcc962ddaf3bae9936841b"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean.private",
+        "sha256": "16a3bcb83aa719451bb5a4ae8a1fbfd131364a7d2cca3319f630f9ba0e0ac66d"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean.server",
+        "sha256": "ff4a59730e468e6a7443f96b513da5a129399361a56136ce94e327fc5a24acf1"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.ir",
+        "sha256": "5a3f7f4eda9239719c1c2764f79e95e5bf47e24355a5dc0e6b0632b9c720c558"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.ir.sig",
+        "sha256": "2ab4139fceb724e4e0aaf6ee58abb02653d24aa80ec42307bfa5ccd8d195ddc1"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/PGroup.olean",
+        "sha256": "4cfd46aeaa72f54a65956c30de0c9cebc2d579342e76d9533d4c2917c2d5d478"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/PGroup.olean.private",
+        "sha256": "b91f64ba21071a3d1d291ef5db8e7a5f7518e917344868a220d758bf58836c7e"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/PGroup.olean.server",
+        "sha256": "f4f6a64c67c52e8c41a44aa9114acdeccb0205c5bbef0af178383e1a51bafe48"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/PGroup.ir",
+        "sha256": "6f29bf7a7a307ce58dd18dc60dd26dbe847a626db1d83cbc060556a42020846b"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/PGroup.ir.sig",
+        "sha256": "e9b06b1f9d013838eb120bf1071d0e04f1e4cbae02ac557adaca20f861c6c8cc"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/Padics/HeightOneSpectrum.olean",
+        "sha256": "7bda82e3f33c208c5bf93afb83799bd727831811b055e594d86ec2f5814e62e4"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/Padics/HeightOneSpectrum.olean.private",
+        "sha256": "e21a80f3177a99ee55b881c0c70e1f9f98a4a8f27030f7eb45a1489a840a5fd7"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/Padics/HeightOneSpectrum.olean.server",
+        "sha256": "31f2fb021764dc035654e206fa76a4c9203fe857ae664d825e084b71cbc750c2"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/Padics/HeightOneSpectrum.ir",
+        "sha256": "fe9d448c8c9a59863b99720128a3150f5a922b6725d6ee452269e12b4437a028"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/Padics/HeightOneSpectrum.ir.sig",
+        "sha256": "8ae34293f37e77787dbe38355b08380eb7bd37fbc44890dcd06f725dbf0632cf"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.olean",
+        "sha256": "72fc23fc3190a94e79ab15147a06d96bb3a8497bdf47b0be97f7222c689c2802"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.olean.private",
+        "sha256": "ea064546d555580b069f9b9cfb156cf8372713ec979ce72d6f566a15ab3117fc"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.olean.server",
+        "sha256": "864c1a906460387ef802dee87de9ee0d22fd1ed69bdbfdcb268b7e89886c680a"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.ir",
+        "sha256": "064c3c025bfdf3ab266846691bc687ec7eb92dc2e03fe30aa63aef413fbe13c4"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.ir.sig",
+        "sha256": "3fdf2dc6c7fbf6219d0163aa6a1915c41a7649e5dd589b069b5d57c5946e794a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPFactor.olean",
+        "sha256": "1fc80701966eff88dc5eb5d57619031db9ad90555bee062e34e19228e0a0821e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPFactor.olean.private",
+        "sha256": "cea36ce015146558e28a9869b9bb1acb06f978903d3be7ab7e99ef411b6c2682"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPFactor.olean.server",
+        "sha256": "de4e911b44c3588afc7e38a2d22c5a67e9d9db1c402205adc87c41320d63e8ad"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPFactor.ir",
+        "sha256": "af200a3ae10fd7f3203b8577ccfddf9810f593a8cd70a41a03aba4f9dd46ec8c"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPFactor.ir.sig",
+        "sha256": "365a7125616bff2a46a5974c1d0f49bfa7024ff64646b77fd11f0d4f122baaf0"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPRestriction.olean",
+        "sha256": "fa63c4bc801eed7c27310ffbd76112b6f9f386fbf0c15d46355828b03d48584c"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPRestriction.olean.private",
+        "sha256": "8110dd7a2680c13270fc4635562341eb4f852130acf23780ce6910e784147f8b"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPRestriction.olean.server",
+        "sha256": "977c4870b07b078b1fab5824b2d59f6bd39b78a1fe15d93d3fa0b5b7459ebba2"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPRestriction.ir",
+        "sha256": "7e77d561ba2adba707cbdbbf7a9b90de2d2c28e4dd01af674e97a7adf31b9803"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPRestriction.ir.sig",
+        "sha256": "e9cc331d0ed3eac00c4b552b38f4c7cd7fdc61ab8525857f9fa93287d3b4777d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPUnramified.olean",
+        "sha256": "9c47a645cb54adb46848f637f6bd5a44660a8c4888c5129bf56104d544d4e4cf"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPUnramified.olean.private",
+        "sha256": "47e84047716c0d22546b2e6a923b600997cfe903fbbada5583eadc2d83cdd958"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPUnramified.olean.server",
+        "sha256": "bc830b7c66006edd0a386c295649e6397a9840b3dc2c5d2bd102ca222ffe8d92"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPUnramified.ir",
+        "sha256": "a2c9e6d126ab79a4ae6edd1a14305f70202649b9f0e51a942f7730b3bcbfd5a3"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPUnramified.ir.sig",
+        "sha256": "f4ffe065d79ea2fe4e7ed9560958d67f1032a34e83bc881a7fe2ea2b5550985e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CentralLiftCorrection.olean",
+        "sha256": "ee91481d93674a9ae4cc1b9226fee55c1903f54f9ef41d9f45c009cf953c2d74"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CentralLiftCorrection.olean.private",
+        "sha256": "840e523321da601e2043dcfb03f77750b091d090fadf60f45cf266d655dc5b4e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CentralLiftCorrection.olean.server",
+        "sha256": "980cae91af04cb60295fd2714ff0dc197cdc5ffa9cb826e2a63540071b5a5e22"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CentralLiftCorrection.ir",
+        "sha256": "97b06105d6ff266324d8c5623e7f4f253164234c15a374568a967ce5f08bbad1"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CentralLiftCorrection.ir.sig",
+        "sha256": "f3d2fcb0e4903660816e9a297e5798ba6ecc88f36f10d2bc7efbd64a8da4f096"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/MaximalProPOutside.olean",
+        "sha256": "25dbb643a233e5d582418363edc28542917199c802011ae2e01be3d76c69b460"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/MaximalProPOutside.olean.private",
+        "sha256": "85a7005fd71026ddda4c7ea464e0a0637402dd5be21668c613bdfe4366869209"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/MaximalProPOutside.olean.server",
+        "sha256": "1085b340a34f226d032d278c2dd9ce28a2fe95cdeba152fbce3c6904f76f0f87"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/MaximalProPOutside.ir",
+        "sha256": "f39bb78e7a4d32777a4f9a9f1f1df47060e92c3618be96895c8c397af4cf71d7"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/MaximalProPOutside.ir.sig",
+        "sha256": "262b0398fd88bf6351cb8430da12818bb171dc0d4f646478dbc2b18f395b793e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPOpenNormalStage.olean",
+        "sha256": "0a973007f27f150c03e5567a2cdfb111026f94e034d99f5feb2a1ad327f3eca3"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPOpenNormalStage.olean.private",
+        "sha256": "6a04551da4cb29f2c03c8fca7c8970b43badc6802bc01090d243574271f5f5bb"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPOpenNormalStage.olean.server",
+        "sha256": "55309e4a8427f439d40666b49f3939c122653788505f035a3d36b48c6c6a23d4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPOpenNormalStage.ir",
+        "sha256": "b55f7ade5942daa3ee69f1fd20c7c405013855889abed3135a9ebd3e2f2bd958"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPOpenNormalStage.ir.sig",
+        "sha256": "c8d0d12ab39f42f6c18407035313fb5f39f2ebc8f8e4c29fa17e2295b2d1fadd"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPStageRestriction.olean",
+        "sha256": "59ef0132058ea34a50e6509c720a5160dc57a2ece55c3eecf9ac12bf6a91034d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPStageRestriction.olean.private",
+        "sha256": "3d3c075fd43f1e6d65c512c937872bf663d28f7b68ba5ebbd58880d9a3016e26"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPStageRestriction.olean.server",
+        "sha256": "19c6f032a06d710d7f017901810cde57ba11c5e0794b68d7651fd83e61fa5a1d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPStageRestriction.ir",
+        "sha256": "1657dfba7901d43b86a81db35e9eedbc3af53d3a9d574214c99e5eb8f3023fa5"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPStageRestriction.ir.sig",
+        "sha256": "01221dca78aed84a65637ec3eaeda0b097e65ae85646af6a0fe4da86d5342109"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CentralExtensionClass.olean",
+        "sha256": "b2f064327cae8df166170ee76a849edc6412e3131615c9d13d752a5d4d6c78df"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CentralExtensionClass.olean.private",
+        "sha256": "66cef186d4a27b8d79d9a107ee540017cd6a28f3dcc26e5bf1fc2bd465ab07b6"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CentralExtensionClass.olean.server",
+        "sha256": "874a991289705bb9fa819b5459bbf2c92118deaccd1ff7f7f6e9ccc80fab4e08"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CentralExtensionClass.ir",
+        "sha256": "feb1da278c4e60e9789321a7c26e4991353122606f51d7c934d805f738128cce"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CentralExtensionClass.ir.sig",
+        "sha256": "a8c8838e1600487c396fe819989c4c956af8a00e299c8dbfc45aca5b04f6d6cf"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtension.olean",
+        "sha256": "972b2d751ec40d24d88380278a7acea1450fbea934a354c6ed98054bdecf757c"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtension.olean.private",
+        "sha256": "267b6a1ad1703b5d4c2b8479dbda09f987ace93928fc62ecc9fb3e19413e45d0"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtension.olean.server",
+        "sha256": "8e3006cf7ca4846484b336a8b55be2b57ac6357a5c1f7e6d6e39269d65c92dcd"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtension.ir",
+        "sha256": "5c2bab0ff9facb7adc0b26444dfdc2cd8b179884919af8e826c5a6694b7dd76a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtension.ir.sig",
+        "sha256": "7ffc4534fed17999833f590498a9a8661be91bd128e69202cf6973ce4c2838bb"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionLinearLifts.olean",
+        "sha256": "a54fc7780a3a1054d9a76ce912f1a34a9f594a25492f35df97ccc8325995c737"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionLinearLifts.olean.private",
+        "sha256": "87576300712f68d4ffe288d685497c9a15108bb3c45453243103a7bb6fe7188a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionLinearLifts.olean.server",
+        "sha256": "169edfbccaf4db067f9c58c7589ed7d36d9aa8f6e7d242eeca8002564cd6da7d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionLinearLifts.ir",
+        "sha256": "d9af9e43e3fb5e32f8b199caa411e906a83f4706122ded27978199fa8d206584"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionLinearLifts.ir.sig",
+        "sha256": "7c5c14bdbfbb2aa44bf670fd5ab9d4c263fb8cc1c4afa183aacd0d75322523d8"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionPullback.olean",
+        "sha256": "66cdf95edbcfcc9484c9c0b40e3070edda72bd1780cebe104ce7fc60b2e0bc05"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionPullback.olean.private",
+        "sha256": "b8ccca951d87bb2a2e9e8979b96fc3ca4ac5fafca712dc93cb0b30ddcf7aec19"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionPullback.olean.server",
+        "sha256": "c28c4b47f5d1e637f5c9c430ceb338f7291e041ed5a0ac1608b3bce548e8b8d2"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionPullback.ir",
+        "sha256": "529f67457bbe563506f19674d9515849009626aaa6fc17d8e815bfca6f18f0fd"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionPullback.ir.sig",
+        "sha256": "36ce16fdba3514a1675cfb312bcd42bbe03e68b38143e9d4fd5fd9f49a3afd2c"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/TrivialZModP.olean",
+        "sha256": "b809000c05cef2b28c914a04fb6c0ebc159e816f68958b94c66c22972ef4eb46"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/TrivialZModP.olean.private",
+        "sha256": "827e77c356f2f298d2abf3d50a74b2120eb5a151b5a17b3af2e4a8400c58295d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/TrivialZModP.olean.server",
+        "sha256": "d24af9a4d3a497fe2603c77eaaf31d4232b3d3848f7b422c104e64a36bec024e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/TrivialZModP.ir",
+        "sha256": "1abebdfe7cdc23269e7b8a1dff16af20969d9e3e621efd47f23dfa10ec3fcbf7"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/TrivialZModP.ir.sig",
+        "sha256": "5aae5311cdf6f761b2a823327edddfa79313fb06767a16ce7b48d0f8621da322"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/FiniteKummerContinuousKernel.olean",
+        "sha256": "d11d37a21cae679a44365517d8a5d670759f3208811de68df8c529f1bd0df26c"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/FiniteKummerContinuousKernel.olean.private",
+        "sha256": "f58be4bae178473e5af107043fe3c77b4c3afe67567398a80723998c0389a115"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/FiniteKummerContinuousKernel.olean.server",
+        "sha256": "2c2a6d0387c3560f7a44aed4487d9f6243a7c4fc07bffffb676ff985b77aa138"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/FiniteKummerContinuousKernel.ir",
+        "sha256": "ca6dd27833c6f4257c24606c29e71e551395d18ca4725413fccd75e553e990ba"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/FiniteKummerContinuousKernel.ir.sig",
+        "sha256": "ba67ed518a8fe743874bbca2a670c2be80c23193737f205f4ba27d5c913bee32"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean",
+        "sha256": "1d4500a39575d56d84edda665d91dae779efd665cd7cb23b70281e54db289b13"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean.private",
+        "sha256": "7f4cdc1625caba7a53a14a00a174d219fd0654bda4f3ab7f5354acbfe4a4d050"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean.server",
+        "sha256": "6a921e58658eedb7ce8aed87de63a084c29e70554498f7c3948155e637f541ed"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.ir",
+        "sha256": "d80fb3a1317e75f6526a7a005d6a88cedb3221624a73113729bbe3a555e37dc1"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.ir.sig",
+        "sha256": "87ac440b2e54921e0d378e8dd2ebfce4ad9e658eb140ecdb69970eab47afb020"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceUnramifiedH1.olean",
+        "sha256": "01f582740cb67eac00cff45c7c628ac62474e88ceb3212da6af9675610930967"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceUnramifiedH1.olean.private",
+        "sha256": "bf96faec198ffb3511868c7d695bd8872bb0f4ab6de2c0eff1a7031c4ec30a65"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceUnramifiedH1.olean.server",
+        "sha256": "e98ba7a9b63e206199757977bd6b95d80d99466c722c39d72dfb7f13e194ac4a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceUnramifiedH1.ir",
+        "sha256": "dadc6aec4f775243aea9db044ac58c56cc86f8db32bcb31b13666849c03d5e80"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceUnramifiedH1.ir.sig",
+        "sha256": "4d41ffd4c43b6ae4fd178ccf59aecaa9e39874efc12ec4e7424696e96d6ba30e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/RelationRank/AbsoluteUnramifiedGaloisSequence.olean",
+        "sha256": "bdc7002d76aae5539994ee2505a8ec33cdca02fd74ad43193d3b2d3de6220dff"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/RelationRank/AbsoluteUnramifiedGaloisSequence.olean.private",
+        "sha256": "c0471c60c48f4cf67dc674e3a5767278cb69156a10e7fa088860c5c9e1bb7969"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/RelationRank/AbsoluteUnramifiedGaloisSequence.olean.server",
+        "sha256": "44f53f854138eb86452c3abaec7f1326fe47b688ae7f5ec9ac42cb1062360809"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/RelationRank/AbsoluteUnramifiedGaloisSequence.ir",
+        "sha256": "253fa90a96d04974098a54fb58fe88398d49b991d5e30838f700e86254bc35bb"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/RelationRank/AbsoluteUnramifiedGaloisSequence.ir.sig",
+        "sha256": "9aad75597027246fbd1868d96dc98549aeea01f824a9a16c8c1da9f6b550360c"
+      }
+    ],
+    "variants": [
+      {
+        "path": "UnitDistance/ProTwoH2AbsoluteKernel.lean",
+        "original_sha256": "353e9ed75daa63ed7026c3845ded6282e1d8f75012c502e5e663f36abd9b8e66",
+        "migrated_sha256": "dfa81199af855670dcb79659396d3de8aeea73ef64c2c27ee3f137aae2937902",
+        "insertions": [
+          {
+            "offset": 425,
+            "text": "import all UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.RelationRank.AbsoluteUnramifiedGaloisSequence\n"
+          }
+        ],
+        "added_imports": [
+          "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.RelationRank.AbsoluteUnramifiedGaloisSequence"
+        ],
+        "added_options": [],
+        "observed_failure_log": "verification/module-port-20260928/repair-pilot-39-pro-two-absolute-kernel/observed-failure.log",
+        "focused_compile": "verification/module-port-20260928/repair-pilot-39-pro-two-absolute-kernel/result.json",
+        "name": "explicit-compactness-owner",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-39-pro-two-absolute-kernel/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-39-pro-two-absolute-kernel/source/UnitDistance/ProTwoH2AbsoluteKernel.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-39-pro-two-absolute-kernel/lib/UnitDistance/ProTwoH2AbsoluteKernel.olean"
+      }
+    ]
+  },
+  "results": [
+    {
+      "compiler_exit_code": 0,
+      "direct_import_artifact_hashes_after": [
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean",
+          "sha256": "1726ec7bf9ad3c391e9a9a492e591f15a5a38bb97abcc962ddaf3bae9936841b"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean.private",
+          "sha256": "16a3bcb83aa719451bb5a4ae8a1fbfd131364a7d2cca3319f630f9ba0e0ac66d"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.olean.server",
+          "sha256": "ff4a59730e468e6a7443f96b513da5a129399361a56136ce94e327fc5a24acf1"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.ir",
+          "sha256": "5a3f7f4eda9239719c1c2764f79e95e5bf47e24355a5dc0e6b0632b9c720c558"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Profinite.ir.sig",
+          "sha256": "2ab4139fceb724e4e0aaf6ee58abb02653d24aa80ec42307bfa5ccd8d195ddc1"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/PGroup.olean",
+          "sha256": "4cfd46aeaa72f54a65956c30de0c9cebc2d579342e76d9533d4c2917c2d5d478"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/PGroup.olean.private",
+          "sha256": "b91f64ba21071a3d1d291ef5db8e7a5f7518e917344868a220d758bf58836c7e"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/PGroup.olean.server",
+          "sha256": "f4f6a64c67c52e8c41a44aa9114acdeccb0205c5bbef0af178383e1a51bafe48"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/PGroup.ir",
+          "sha256": "6f29bf7a7a307ce58dd18dc60dd26dbe847a626db1d83cbc060556a42020846b"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/PGroup.ir.sig",
+          "sha256": "e9b06b1f9d013838eb120bf1071d0e04f1e4cbae02ac557adaca20f861c6c8cc"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/Padics/HeightOneSpectrum.olean",
+          "sha256": "7bda82e3f33c208c5bf93afb83799bd727831811b055e594d86ec2f5814e62e4"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/Padics/HeightOneSpectrum.olean.private",
+          "sha256": "e21a80f3177a99ee55b881c0c70e1f9f98a4a8f27030f7eb45a1489a840a5fd7"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/Padics/HeightOneSpectrum.olean.server",
+          "sha256": "31f2fb021764dc035654e206fa76a4c9203fe857ae664d825e084b71cbc750c2"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/Padics/HeightOneSpectrum.ir",
+          "sha256": "fe9d448c8c9a59863b99720128a3150f5a922b6725d6ee452269e12b4437a028"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/Padics/HeightOneSpectrum.ir.sig",
+          "sha256": "8ae34293f37e77787dbe38355b08380eb7bd37fbc44890dcd06f725dbf0632cf"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.olean",
+          "sha256": "72fc23fc3190a94e79ab15147a06d96bb3a8497bdf47b0be97f7222c689c2802"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.olean.private",
+          "sha256": "ea064546d555580b069f9b9cfb156cf8372713ec979ce72d6f566a15ab3117fc"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.olean.server",
+          "sha256": "864c1a906460387ef802dee87de9ee0d22fd1ed69bdbfdcb268b7e89886c680a"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.ir",
+          "sha256": "064c3c025bfdf3ab266846691bc687ec7eb92dc2e03fe30aa63aef413fbe13c4"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.ir.sig",
+          "sha256": "3fdf2dc6c7fbf6219d0163aa6a1915c41a7649e5dd589b069b5d57c5946e794a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPFactor.olean",
+          "sha256": "1fc80701966eff88dc5eb5d57619031db9ad90555bee062e34e19228e0a0821e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPFactor.olean.private",
+          "sha256": "cea36ce015146558e28a9869b9bb1acb06f978903d3be7ab7e99ef411b6c2682"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPFactor.olean.server",
+          "sha256": "de4e911b44c3588afc7e38a2d22c5a67e9d9db1c402205adc87c41320d63e8ad"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPFactor.ir",
+          "sha256": "af200a3ae10fd7f3203b8577ccfddf9810f593a8cd70a41a03aba4f9dd46ec8c"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPFactor.ir.sig",
+          "sha256": "365a7125616bff2a46a5974c1d0f49bfa7024ff64646b77fd11f0d4f122baaf0"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPRestriction.olean",
+          "sha256": "fa63c4bc801eed7c27310ffbd76112b6f9f386fbf0c15d46355828b03d48584c"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPRestriction.olean.private",
+          "sha256": "8110dd7a2680c13270fc4635562341eb4f852130acf23780ce6910e784147f8b"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPRestriction.olean.server",
+          "sha256": "977c4870b07b078b1fab5824b2d59f6bd39b78a1fe15d93d3fa0b5b7459ebba2"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPRestriction.ir",
+          "sha256": "7e77d561ba2adba707cbdbbf7a9b90de2d2c28e4dd01af674e97a7adf31b9803"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPRestriction.ir.sig",
+          "sha256": "e9cc331d0ed3eac00c4b552b38f4c7cd7fdc61ab8525857f9fa93287d3b4777d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPUnramified.olean",
+          "sha256": "9c47a645cb54adb46848f637f6bd5a44660a8c4888c5129bf56104d544d4e4cf"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPUnramified.olean.private",
+          "sha256": "47e84047716c0d22546b2e6a923b600997cfe903fbbada5583eadc2d83cdd958"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPUnramified.olean.server",
+          "sha256": "bc830b7c66006edd0a386c295649e6397a9840b3dc2c5d2bd102ca222ffe8d92"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPUnramified.ir",
+          "sha256": "a2c9e6d126ab79a4ae6edd1a14305f70202649b9f0e51a942f7730b3bcbfd5a3"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/AbsoluteProPUnramified.ir.sig",
+          "sha256": "f4ffe065d79ea2fe4e7ed9560958d67f1032a34e83bc881a7fe2ea2b5550985e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CentralLiftCorrection.olean",
+          "sha256": "ee91481d93674a9ae4cc1b9226fee55c1903f54f9ef41d9f45c009cf953c2d74"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CentralLiftCorrection.olean.private",
+          "sha256": "840e523321da601e2043dcfb03f77750b091d090fadf60f45cf266d655dc5b4e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CentralLiftCorrection.olean.server",
+          "sha256": "980cae91af04cb60295fd2714ff0dc197cdc5ffa9cb826e2a63540071b5a5e22"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CentralLiftCorrection.ir",
+          "sha256": "97b06105d6ff266324d8c5623e7f4f253164234c15a374568a967ce5f08bbad1"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CentralLiftCorrection.ir.sig",
+          "sha256": "f3d2fcb0e4903660816e9a297e5798ba6ecc88f36f10d2bc7efbd64a8da4f096"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/MaximalProPOutside.olean",
+          "sha256": "25dbb643a233e5d582418363edc28542917199c802011ae2e01be3d76c69b460"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/MaximalProPOutside.olean.private",
+          "sha256": "85a7005fd71026ddda4c7ea464e0a0637402dd5be21668c613bdfe4366869209"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/MaximalProPOutside.olean.server",
+          "sha256": "1085b340a34f226d032d278c2dd9ce28a2fe95cdeba152fbce3c6904f76f0f87"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/MaximalProPOutside.ir",
+          "sha256": "f39bb78e7a4d32777a4f9a9f1f1df47060e92c3618be96895c8c397af4cf71d7"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/MaximalProPOutside.ir.sig",
+          "sha256": "262b0398fd88bf6351cb8430da12818bb171dc0d4f646478dbc2b18f395b793e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPOpenNormalStage.olean",
+          "sha256": "0a973007f27f150c03e5567a2cdfb111026f94e034d99f5feb2a1ad327f3eca3"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPOpenNormalStage.olean.private",
+          "sha256": "6a04551da4cb29f2c03c8fca7c8970b43badc6802bc01090d243574271f5f5bb"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPOpenNormalStage.olean.server",
+          "sha256": "55309e4a8427f439d40666b49f3939c122653788505f035a3d36b48c6c6a23d4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPOpenNormalStage.ir",
+          "sha256": "b55f7ade5942daa3ee69f1fd20c7c405013855889abed3135a9ebd3e2f2bd958"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPOpenNormalStage.ir.sig",
+          "sha256": "c8d0d12ab39f42f6c18407035313fb5f39f2ebc8f8e4c29fa17e2295b2d1fadd"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPStageRestriction.olean",
+          "sha256": "59ef0132058ea34a50e6509c720a5160dc57a2ece55c3eecf9ac12bf6a91034d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPStageRestriction.olean.private",
+          "sha256": "3d3c075fd43f1e6d65c512c937872bf663d28f7b68ba5ebbd58880d9a3016e26"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPStageRestriction.olean.server",
+          "sha256": "19c6f032a06d710d7f017901810cde57ba11c5e0794b68d7651fd83e61fa5a1d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPStageRestriction.ir",
+          "sha256": "1657dfba7901d43b86a81db35e9eedbc3af53d3a9d574214c99e5eb8f3023fa5"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/ProPStageRestriction.ir.sig",
+          "sha256": "01221dca78aed84a65637ec3eaeda0b097e65ae85646af6a0fe4da86d5342109"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CentralExtensionClass.olean",
+          "sha256": "b2f064327cae8df166170ee76a849edc6412e3131615c9d13d752a5d4d6c78df"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CentralExtensionClass.olean.private",
+          "sha256": "66cef186d4a27b8d79d9a107ee540017cd6a28f3dcc26e5bf1fc2bd465ab07b6"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CentralExtensionClass.olean.server",
+          "sha256": "874a991289705bb9fa819b5459bbf2c92118deaccd1ff7f7f6e9ccc80fab4e08"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CentralExtensionClass.ir",
+          "sha256": "feb1da278c4e60e9789321a7c26e4991353122606f51d7c934d805f738128cce"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CentralExtensionClass.ir.sig",
+          "sha256": "a8c8838e1600487c396fe819989c4c956af8a00e299c8dbfc45aca5b04f6d6cf"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtension.olean",
+          "sha256": "972b2d751ec40d24d88380278a7acea1450fbea934a354c6ed98054bdecf757c"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtension.olean.private",
+          "sha256": "267b6a1ad1703b5d4c2b8479dbda09f987ace93928fc62ecc9fb3e19413e45d0"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtension.olean.server",
+          "sha256": "8e3006cf7ca4846484b336a8b55be2b57ac6357a5c1f7e6d6e39269d65c92dcd"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtension.ir",
+          "sha256": "5c2bab0ff9facb7adc0b26444dfdc2cd8b179884919af8e826c5a6694b7dd76a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtension.ir.sig",
+          "sha256": "7ffc4534fed17999833f590498a9a8661be91bd128e69202cf6973ce4c2838bb"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionLinearLifts.olean",
+          "sha256": "a54fc7780a3a1054d9a76ce912f1a34a9f594a25492f35df97ccc8325995c737"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionLinearLifts.olean.private",
+          "sha256": "87576300712f68d4ffe288d685497c9a15108bb3c45453243103a7bb6fe7188a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionLinearLifts.olean.server",
+          "sha256": "169edfbccaf4db067f9c58c7589ed7d36d9aa8f6e7d242eeca8002564cd6da7d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionLinearLifts.ir",
+          "sha256": "d9af9e43e3fb5e32f8b199caa411e906a83f4706122ded27978199fa8d206584"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionLinearLifts.ir.sig",
+          "sha256": "7c5c14bdbfbb2aa44bf670fd5ab9d4c263fb8cc1c4afa183aacd0d75322523d8"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionPullback.olean",
+          "sha256": "66cdf95edbcfcc9484c9c0b40e3070edda72bd1780cebe104ce7fc60b2e0bc05"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionPullback.olean.private",
+          "sha256": "b8ccca951d87bb2a2e9e8979b96fc3ca4ac5fafca712dc93cb0b30ddcf7aec19"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionPullback.olean.server",
+          "sha256": "c28c4b47f5d1e637f5c9c430ceb338f7291e041ed5a0ac1608b3bce548e8b8d2"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionPullback.ir",
+          "sha256": "529f67457bbe563506f19674d9515849009626aaa6fc17d8e815bfca6f18f0fd"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtensionPullback.ir.sig",
+          "sha256": "36ce16fdba3514a1675cfb312bcd42bbe03e68b38143e9d4fd5fd9f49a3afd2c"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/TrivialZModP.olean",
+          "sha256": "b809000c05cef2b28c914a04fb6c0ebc159e816f68958b94c66c22972ef4eb46"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/TrivialZModP.olean.private",
+          "sha256": "827e77c356f2f298d2abf3d50a74b2120eb5a151b5a17b3af2e4a8400c58295d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/TrivialZModP.olean.server",
+          "sha256": "d24af9a4d3a497fe2603c77eaaf31d4232b3d3848f7b422c104e64a36bec024e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/TrivialZModP.ir",
+          "sha256": "1abebdfe7cdc23269e7b8a1dff16af20969d9e3e621efd47f23dfa10ec3fcbf7"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/TrivialZModP.ir.sig",
+          "sha256": "5aae5311cdf6f761b2a823327edddfa79313fb06767a16ce7b48d0f8621da322"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/FiniteKummerContinuousKernel.olean",
+          "sha256": "d11d37a21cae679a44365517d8a5d670759f3208811de68df8c529f1bd0df26c"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/FiniteKummerContinuousKernel.olean.private",
+          "sha256": "f58be4bae178473e5af107043fe3c77b4c3afe67567398a80723998c0389a115"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/FiniteKummerContinuousKernel.olean.server",
+          "sha256": "2c2a6d0387c3560f7a44aed4487d9f6243a7c4fc07bffffb676ff985b77aa138"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/FiniteKummerContinuousKernel.ir",
+          "sha256": "ca6dd27833c6f4257c24606c29e71e551395d18ca4725413fccd75e553e990ba"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/FiniteKummerContinuousKernel.ir.sig",
+          "sha256": "ba67ed518a8fe743874bbca2a670c2be80c23193737f205f4ba27d5c913bee32"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean",
+          "sha256": "1d4500a39575d56d84edda665d91dae779efd665cd7cb23b70281e54db289b13"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean.private",
+          "sha256": "7f4cdc1625caba7a53a14a00a174d219fd0654bda4f3ab7f5354acbfe4a4d050"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean.server",
+          "sha256": "6a921e58658eedb7ce8aed87de63a084c29e70554498f7c3948155e637f541ed"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.ir",
+          "sha256": "d80fb3a1317e75f6526a7a005d6a88cedb3221624a73113729bbe3a555e37dc1"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.ir.sig",
+          "sha256": "87ac440b2e54921e0d378e8dd2ebfce4ad9e658eb140ecdb69970eab47afb020"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceUnramifiedH1.olean",
+          "sha256": "01f582740cb67eac00cff45c7c628ac62474e88ceb3212da6af9675610930967"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceUnramifiedH1.olean.private",
+          "sha256": "bf96faec198ffb3511868c7d695bd8872bb0f4ab6de2c0eff1a7031c4ec30a65"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceUnramifiedH1.olean.server",
+          "sha256": "e98ba7a9b63e206199757977bd6b95d80d99466c722c39d72dfb7f13e194ac4a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceUnramifiedH1.ir",
+          "sha256": "dadc6aec4f775243aea9db044ac58c56cc86f8db32bcb31b13666849c03d5e80"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceUnramifiedH1.ir.sig",
+          "sha256": "4d41ffd4c43b6ae4fd178ccf59aecaa9e39874efc12ec4e7424696e96d6ba30e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/RelationRank/AbsoluteUnramifiedGaloisSequence.olean",
+          "sha256": "bdc7002d76aae5539994ee2505a8ec33cdca02fd74ad43193d3b2d3de6220dff"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/RelationRank/AbsoluteUnramifiedGaloisSequence.olean.private",
+          "sha256": "c0471c60c48f4cf67dc674e3a5767278cb69156a10e7fa088860c5c9e1bb7969"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/RelationRank/AbsoluteUnramifiedGaloisSequence.olean.server",
+          "sha256": "44f53f854138eb86452c3abaec7f1326fe47b688ae7f5ec9ac42cb1062360809"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/RelationRank/AbsoluteUnramifiedGaloisSequence.ir",
+          "sha256": "253fa90a96d04974098a54fb58fe88398d49b991d5e30838f700e86254bc35bb"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/RelationRank/AbsoluteUnramifiedGaloisSequence.ir.sig",
+          "sha256": "9aad75597027246fbd1868d96dc98549aeea01f824a9a16c8c1da9f6b550360c"
+        }
+      ],
+      "variant": {
+        "path": "UnitDistance/ProTwoH2AbsoluteKernel.lean",
+        "original_sha256": "353e9ed75daa63ed7026c3845ded6282e1d8f75012c502e5e663f36abd9b8e66",
+        "migrated_sha256": "dfa81199af855670dcb79659396d3de8aeea73ef64c2c27ee3f137aae2937902",
+        "insertions": [
+          {
+            "offset": 425,
+            "text": "import all UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.RelationRank.AbsoluteUnramifiedGaloisSequence\n"
+          }
+        ],
+        "added_imports": [
+          "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.RelationRank.AbsoluteUnramifiedGaloisSequence"
+        ],
+        "added_options": [],
+        "observed_failure_log": "verification/module-port-20260928/repair-pilot-39-pro-two-absolute-kernel/observed-failure.log",
+        "focused_compile": "verification/module-port-20260928/repair-pilot-39-pro-two-absolute-kernel/result.json",
+        "name": "explicit-compactness-owner",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-39-pro-two-absolute-kernel/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-39-pro-two-absolute-kernel/source/UnitDistance/ProTwoH2AbsoluteKernel.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-39-pro-two-absolute-kernel/lib/UnitDistance/ProTwoH2AbsoluteKernel.olean"
+      },
+      "command": [
+        "/home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-R",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-39-pro-two-absolute-kernel/source",
+        "-o",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-39-pro-two-absolute-kernel/lib/UnitDistance/ProTwoH2AbsoluteKernel.olean",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-39-pro-two-absolute-kernel/source/UnitDistance/ProTwoH2AbsoluteKernel.lean"
+      ],
+      "exit_code": 0,
+      "reason": null,
+      "elapsed_total": 27.887266299687326
+    }
+  ],
+  "passed": true
+}

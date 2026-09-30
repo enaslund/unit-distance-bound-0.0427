@@ -1,0 +1,144 @@
+✔ [3412/3415] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.FiniteKummerAbsoluteKernel (5.4s)
+✔ [3413/3420] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.ContinuousH1CupCochain (10s)
+✔ [3414/3420] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.ContinuousH1CupProduct (3.9s)
+✔ [3415/3420] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.DiscreteH2CochainComparison (5.1s)
+✔ [3416/3420] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.DiscreteH2ShortComplexComparison (7.7s)
+✔ [3417/3421] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.DiscreteH2Comparison (9.6s)
+✔ [3418/3421] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.DiscreteH2Representatives (6.5s)
+✔ [3420/3490] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.FiniteKummerContinuousKernel (6.8s)
+⚠ [3963/3980] Replayed UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.Cardinality
+warning: UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/Herbrand/HerbrandLowDegree/Cardinality.lean:62:27: This simp argument is unused:
+  Rep.hom_comm_apply
+
+Hint: Omit it from the simp argument list.
+  simp [Rep.FiniteCyclicGroup.subCompNormHom, Rep.norm, Representation.norm, R̵e̵p̵.̵h̵o̵m̵_̵c̵o̵m̵m̵_̵a̵p̵p̵l̵y̵,̵ ̵hf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4596/4720] Replayed UnitDistance.SupportedIdeleCocycles
+warning: UnitDistance/SupportedIdeleCocycles.lean:37:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.exists_supportedIdele_cocycle`:
+  [IsGalois K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsGalois K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4622/4720] Replayed UnitDistance.SupportedIdeleLocalization
+warning: UnitDistance/SupportedIdeleLocalization.lean:26:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.supportedIdeleH2_localization_eq`:
+  [IsGalois K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsGalois K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4624/4720] Replayed UnitDistance.FieldUnitsIdeleDetection
+warning: UnitDistance/FieldUnitsIdeleDetection.lean:31:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.fieldUnitsIdeleHom_finite_factor`:
+  [NumberField L]
+  [FiniteDimensional K L]
+  [IsGalois K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField L] [FiniteDimensional K L] [IsGalois K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4873/4945] Replayed UnitDistance.TotallyComplexFieldUnitsH2
+warning: UnitDistance/TotallyComplexFieldUnitsH2.lean:39:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.chosenInfinitePlace_isUnramified_of_totallyComplex`:
+  [NumberField K]
+  [NumberField L]
+  [FiniteDimensional K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField K] [NumberField L] [FiniteDimensional K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4882/4945] Replayed UnitDistance.FiniteTensorBaseChangeH2
+warning: UnitDistance/FiniteTensorBaseChangeH2.lean:29:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.fieldUnitsRestrictionH2_eq_tower`:
+  [NumberField K]
+  [NumberField F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField K] [NumberField F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4885/4945] Replayed UnitDistance.LocalTensorH2Evaluation
+warning: UnitDistance/LocalTensorH2Evaluation.lean:105:8: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.localFieldToGlobalAut_apply`:
+  [FiniteDimensional K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4887/4945] Replayed UnitDistance.ActualLocalTensorH2
+warning: UnitDistance/ActualLocalTensorH2.lean:41:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.actualLocalTensorEvaluation_eq`:
+  [IsGalois K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsGalois K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4891/4945] Replayed UnitDistance.FieldUnitsH2LocalInflation
+warning: UnitDistance/FieldUnitsH2LocalInflation.lean:29:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.fieldUnitsH2Inflation_evaluation`:
+  [Algebra K A]
+  [IsScalarTower K A B]
+  [IsScalarTower K A C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra K A] [IsScalarTower K A B] [IsScalarTower K A C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4893/4945] Replayed UnitDistance.FiniteTensorGaloisInflationH2
+warning: UnitDistance/FiniteTensorGaloisInflationH2.lean:26:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.finiteFieldUnitsTensor_inflation_eq_zero_iff`:
+  [NumberField F]
+  [NumberField L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField F] [NumberField L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4897/4945] Replayed UnitDistance.KummerInvariantRadicand
+warning: UnitDistance/KummerInvariantRadicand.lean:59:53: This simp argument is unused:
+  map_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵_̵m̵u̵l̵,̵i̵m̵_̵m̵u̵l̵,̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵m̵u̵l̵,̵m̵a̵p̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲r̲e̲_̲m̲u̲l̲,̲ ̲i̲m̲_̲m̲u̲l̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲m̲a̲p̲_̲m̲u̲l̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: UnitDistance/KummerInvariantRadicand.lean:64:49: This simp argument is unused:
+  AlgEquiv.commutes
+
+Hint: Omit it from the simp argument list.
+  simp [Algebra.algebraMap_eq_smul_one,̵A̵l̵g̵E̵q̵u̵i̵v̵.̵c̵o̵m̵m̵u̵t̵e̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4899/4945] Replayed UnitDistance.QuadraticRamification
+warning: UnitDistance/QuadraticRamification.lean:15:0: automatically included section variable(s) unused in theorem `UnitDistance.QuadraticRamification.minpoly_integral_sqrt`:
+  [NumberField K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/QuadraticRamification.lean:125:8: automatically included section variable(s) unused in theorem `UnitDistance.QuadraticRamification.integralSqrt_sq`:
+  [NumberField F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/QuadraticRamification.lean:132:0: automatically included section variable(s) unused in theorem `UnitDistance.QuadraticRamification.integralSqrt_adjoin`:
+  [NumberField F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4905/4945] Replayed UnitDistance.SupportedIdeleOutsideH2
+warning: UnitDistance/SupportedIdeleOutsideH2.lean:54:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.supportedIdeleIntegralRepHom_factor`:
+  [NumberField L]
+  [IsGalois K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField L] [IsGalois K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [4936/4947] Built UnitDistance.Upstream.Yamaguchi.ProCGroups.Cohomology.ContinuousMapFiniteStage (2.8s)
+✔ [4939/4949] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.H2FiniteStageCochain (15s)
+✔ [4941/4949] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.H2FiniteStage (5.5s)
+✔ [4944/4949] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.H2FiniteStageFamily (3.6s)
+✔ [4946/4949] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.H2InflationRangeBound (3.7s)
+⚠ [4947/4949] Replayed UnitDistance.RationalFiniteKummerReduction
+warning: UnitDistance/RationalFiniteKummerReduction.lean:36:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.rationalKummerSupported_tensor_factor`:
+  [IsGalois ℚ L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsGalois ℚ L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [4948/4949] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.H2InflationRangeCardinality (3.3s)
+✔ [4949/4949] Built UnitDistance.MaximalSigmaH2Reduction (14s)
+Build completed successfully (4949 jobs).

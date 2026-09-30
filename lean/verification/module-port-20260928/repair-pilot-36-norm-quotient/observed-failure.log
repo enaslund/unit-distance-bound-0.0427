@@ -1,0 +1,62 @@
+✖ [6760/6832] Building UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitNormQuotient (106s)
+trace: .> LEAN_PATH=/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Cli/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/batteries/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Qq/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/aesop/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/proofwidgets/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/importGraph/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/LeanSearchClient/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/plausible/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean /home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean -o /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.olean -i /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.ilean -c /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.c --setup /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.setup.json --json
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:132:11: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ F E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:158:9: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ F E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:166:7: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ F E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:458:4: Private declaration `rationalRelativeFixedFieldIdeleClassAdditiveType` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:566:5: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ ↥F ↥E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:612:7: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ ↥F ↥E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:626:25: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ ↥F ↥E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:628:2: 'change' tactic failed, pattern
+  (((eAmbient.trans eFixed.symm).trans eRelative.symm).trans eTower) (eAmbient.symm (eUpper c)) = Additive.ofMul dF
+is not definitionally equal to target
+  (rationalRelativeFixedFieldNormPreimageComparison K L hLK hnormal c).1 =
+    (rationalRelativeFixedFieldNormPreimageComparison K L hLK hnormal c).2
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:780:9: Private declaration `rationalRelativeFixedFieldIdeleClassAdditiveType` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:783:22: Private declaration `rationalRelativeFixedFieldNormComparison` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:766:4: declaration uses `sorry`
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:978:6: Private declaration `rationalOrdinaryNormQuotientAdditiveType` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:1003:4: Private declaration `rationalNormQuotientAbstractFixedFieldNumberField` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:1006:4: Private declaration `rationalNormQuotientAbstractRelativeFixedFieldNumberField` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:1014:4: Private declaration `rationalNormQuotientIdeleClassCommGroup` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:1029:8: Private declaration `addEquivTransQuotientOfEquivMapEq` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:1039:18: Private declaration `rationalFiniteNormQuotientConcreteStep` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.lean:1113:6: Private declaration `rationalFiniteNormQuotientClassValue` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.

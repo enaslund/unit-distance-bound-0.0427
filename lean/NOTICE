@@ -1,0 +1,213 @@
+Arithmetic field families and planar unit distances
+
+New formalization code, proof development and documentation were produced by
+Codex under Eric Naslund's direction, September 2026. Earlier proof work used
+GPT-6 Astra with Ultra reasoning; the September 24 selected-tree migration
+was led by GPT-6 Sol with a GPT-6 Astra Ultra specialist, two GPT-6 Sol
+collaborators and GPT-6 Luna collaborators. The source mathematics is Eric
+Naslund's manuscript
+"A lower exponent of 1.0418235 for planar unit distances", research commit
+eec70fd25ebe045c5df1c98370d613eaa3719c0c. This is a partial, conditional
+formalization; it does not prove the manuscript's complete main theorem.
+
+The accepted selected source tree pins Mathlib commit
+065356127b1dc0016f66b7283ce0ce2c4055aa55, matched to Lean
+`v4.35.0-rc2`, under Apache-2.0
+(https://github.com/leanprover-community/mathlib4/tree/065356127b1dc0016f66b7283ce0ce2c4055aa55).
+The full selected Lean 4.35 source build passed on the exact digest in
+verification/conditional-20260924/accepted-selected-build-20260924.md;
+archive and current full verifier results require separate receipts. Dated
+historical archive receipts retain their own dependency pins. Lean and all
+pinned dependencies retain their upstream licenses.
+
+The multidimensional Poisson summation source, when included under
+UnitDistance/ThirdParty/PoissonSummation.lean, is adapted from:
+  mathlib-initiative/sum_product, DedekindZeta/PoissonSummation.lean
+  commit 80e4127a67742659d521466204c6d2d7e0ca2b3f
+  Copyright (c) 2026 Formal Frontier Team. All rights reserved.
+  Released under Apache 2.0 license.
+The original copyright notice is preserved in that file, with an explicit
+notice of the version port and its modifications. Its license is retained
+under third-party/sum_product/LICENSE.
+
+In this package the sum_product adaptations are carried by
+UnitDistance/DedekindEuler.lean and UnitDistance/MinkowskiTrace.lean,
+described below. UnitDistance/IdealCounting.lean, which adapts the same
+project's SumProduct/EulerBound.lean at that commit (retaining the original
+Formal Frontier Team copyright and Apache-2.0 notice and the coefficient,
+factorization and Dirichlet-series proofs through
+LSeriesSummable_and_LSeries_zeta_pow, with a project namespace and Lean 4.32
+inertia-degree API updates), is a research-tree module that is not in this
+package.
+
+UnitDistance/DedekindEuler.lean adapts the ideal-series and Euler helper
+sections of DedekindZeta/Statements.lean from the same source and commit,
+with its original copyright/license. The port strengthens the sum-over-ideals
+identity to HasSum, uses the new RelativeZeta summability proof, exposes
+factorization helpers, and develops a full Euler-product assembly separately.
+
+UnitDistance/ProfiniteQuotientTower.lean and GaloisQuotientTower.lean adapt
+selected profinite separation and fixed-field construction proofs from:
+  logical-intelligence/erdos-unit-distance
+  commit b6493074dd103ca32ea4f5e9b0bc9cb3a0379f2e
+  ErdosUnitDistance/Internal/ClassFieldTheory/Witness.lean
+  Copyright 2026 The Erdős unit-distance formalization contributors.
+The upstream Apache-2.0 license and NOTICE are retained under
+third-party/erdos-unit-distance, with exact source hashes and modification
+scope. The upstream main theorem and its arithmetic hypotheses are not
+imported as mathematical inputs.
+
+UnitDistance/MinkowskiTrace.lean selectively ports the trace-form and full
+trace-dual identification from DedekindZeta/Theta.lean at the same pinned
+sum_product commit. The original copyright/license are preserved. The port
+separates algebraic trace duality from weighted theta coordinates; the new
+EuclideanIdealDual development supplies ordinary Euclidean normalization.
+
+The completed Dedekind zeta and explicit-formula source under
+UnitDistance/Upstream/AINTLIB is ported from Chris Birkbeck's AINTLIB:
+  https://github.com/CBirkbeck/AINTLIB
+  commit a302aeacd86053f9d5f991fbbf664e1cc1051d08
+Original copyright/license headers are preserved. The Apache-2.0 license,
+original/local file hashes, provenance and version modifications are recorded
+under third-party/aintlib. New Tsfasman-Vladut kernel code that follows
+upstream elementary reductions identifies those references in its headers.
+
+The generic entire-function and canonical-product source under
+UnitDistance/Upstream/Hadamard, and the selected pairing section in
+UnitDistance/HadamardPairing.lean, and the generic divisor adaptations in
+UnitDistance/CanonicalEntireDivisor.lean, are ported from:
+  https://github.com/alejandrozu/RiemannHypothesis-Formalization
+  commit 753938937e624d1c8bbe4c208517660a672d1b8e
+  Copyright (c) 2026 Tristen Harr. Authors: Tristen Harr.
+Original copyright and author headers are preserved. The Apache-2.0 license,
+exact source/local hashes and modification scope are retained under
+third-party/entire-hadamard. No xi function or Riemann Hypothesis assumption is imported.
+
+The profinite and continuous-cohomology source under
+UnitDistance/Upstream/Yamaguchi is ported from Naganori Yamaguchi:
+  https://github.com/n-yamaguchi-0729/SawinTotallyRealTowers
+  commit 3a455e1aa9140dbbe7b7d68f508392a69c86d0f4
+Original source headers are retained, and every ported file states its local
+import relocation and version adaptation. 1,287 of the 1,309 manifest files
+are shipped in this package; the 22 others are not imported by the compared
+theorem and are not shipped. The upstream Apache-2.0 license, exact source
+hashes and compatibility patch are in third-party/yamaguchi.
+The ported group/cohomology slice does not assert the required arithmetic
+six-relation bound or the existence of the manuscript's infinite tower.
+
+September 21 conditional-submission preparation used a single GPT-6 Astra
+agent at the user-requested Max reasoning setting, with no additional AI
+agents. Earlier Astra/Sol contributions are inherited and remain credited in
+formalization.yaml. No human proof review or remote submission is claimed.
+
+September 22 audit and packaging edits were made by Anthropic's Claude
+Fable 5.1 through Claude Code with subagents, under Eric Naslund's
+direction. They changed no Lean proof text; only comments and documentation
+were edited. No human proof review or remote submission is claimed.
+
+September 28 module-system compatibility edits were made with AI tools under
+Eric Naslund's direction. Public imports, exposed public sections and Lean's
+private-declaration compatibility option preserve the earlier mathematical
+bodies and import graph in the base port. Subsequent header repairs 01–04 add
+five explicit Mathlib imports formerly visible through private dependencies,
+three targeted import-all declarations for private instances, and Lean's
+backward.proofsInPublic compatibility option in five files to retain legacy
+proof elaboration. These repairs leave theorem statements and proof bodies
+unchanged and add no axioms.
+Repair 05 replaces one simplifier-based commutativity step with an explicit
+composition using mul_comm; its theorem statement and assumptions are unchanged.
+Header repairs 06–07 add four targeted import-all declarations in three
+downstream files to restore the same private-instance visibility. They retain
+all existing theorem statements and proof bodies.
+Repair 08 applies the same explicit commutativity step to the direct-theta
+identity, preserving its theorem statement and assumptions.
+Header repair 09 restores the private characteristic instances in
+FiniteParameters and legacy proof elaboration in FiniteResidueFinrankTransfer,
+without changing either mathematical body.
+Header repair 10 restores private instances in six downstream modules and
+legacy proof elaboration in FixedFieldNormResidueNaturality; all seven
+retain their existing statements and proof bodies.
+Header repair 11 restores the generic algebraic-closure and rational-completion
+algebra instances from their private owners. Proof repair 12 supplies
+Mathlib's krullTopology_t2 directly for an unchanged Hausdorff-instance
+statement. Neither layer adds an assumption or axiom.
+Header repair 13 restores private-instance visibility in twelve modules and
+legacy proof elaboration in FixedFieldContinuousNaturality. Header repair 14
+restores the completion-algebra instances used by AdeleBaseChange. All fourteen
+files pass focused compilation with their mathematical bodies unchanged.
+Header repair 16 restores the same private characteristic/Hausdorff instances
+for three directly downstream files after their unchanged baselines failed.
+All three exact repaired files pass; seven other direct consumers pass unchanged.
+The numbered 15 baseline checks required no source repair or manifest.
+Header repair 17 restores DivisionPolynomial's private characteristic instances
+for Ramification.PrimitivePoint after its unchanged baseline failed. The exact
+header-only candidate passes; mathematical statements and proof bodies remain
+unchanged.
+Header repair 19 restores CompletedLevel's existing private characteristic
+instances in CompletedFrobeniusFixedFieldPrimitive and HigherUnitFrobeniusFixed.
+Both exact header-only candidates pass after failed unchanged baselines; no
+mathematical statements or proof bodies were edited.
+Header repair 20 restores ConcreteReciprocityTransport's private Hausdorff
+instances in AmbientPrimeWitnessComparison. Its exact candidate passes with
+unchanged heartbeat limits, statements and proof bodies.
+Header repair 21 restores access to the non-exposed completionMap definition
+body in Mathlib's LiesOverInstances, allowing the unchanged ExtensionBehavior
+proof to unfold it. Its exact candidate passes without a proof edit.
+Proof repair 22 applies Mathlib's Algebra.TensorProduct.map_id_comp directly
+to rationalRelativeAdeleEmbedding_comp. Its complete theorem statement and
+hypotheses remain unchanged; the exact revised file passes compilation without
+raising heartbeat limits.
+Header repair 24 restores DivisionPolynomial's characteristic instances for
+DisplacementValuation and ConcreteReciprocityTransport's Hausdorff instance for
+PrimeComparison. Both exact files pass with unchanged statements, assumptions,
+proof bodies and heartbeat settings.
+Header repair 32 restores DivisionPolynomial's private characteristic instances
+for UnitQuotientGalois after a failed unchanged baseline. The exact header-only
+candidate passes with unchanged statements, assumptions, proof bodies and
+heartbeat settings; its parent RealIndexSteps passes unchanged.
+Header repair 33 restores IdeleClassDirectLimitAbstractFixedField's private
+NumberField instance in CyclotomicIdeleClassValuation. The exact file passes
+focused compilation with statements, assumptions, proof bodies and heartbeat
+settings unchanged.
+Header repair 37 restores legacy public-proof elaboration in
+FiniteGaloisRealizationCore using backward.proofsInPublic. The exact file passes
+focused compilation with imports, statements, hypotheses, proof bodies and
+heartbeat settings unchanged.
+Repair 38 adds a local Prop-valued Hausdorff instance, proved by Mathlib's
+krullTopology_t2, to ideleClassComponentQuotientEquivMaximalAbelianGalois.
+The declaration type and underlying equivalence remain unchanged. This fifth
+recorded proof-code repair passes focused compilation and is restricted to the
+exact reviewed definition by the reversible instance-proof whitelist.
+Header repair 39 restores the existing private compactness instance from
+AbsoluteUnramifiedGaloisSequence in ProTwoH2AbsoluteKernel. The owner was already
+an ancestor; the exact file passes focused compilation with statements,
+hypotheses, proof bodies and heartbeat settings unchanged.
+Header repair 40 directly imports Mathlib.Analysis.CStarAlgebra.Classes in
+SolutionZeta, matching the existing Challenge import. The complete file passes
+focused compilation with its local instance-suppression attribute, definitions,
+proof and hypotheses unchanged; no project module is added to the closure.
+The reversible base and repair layers are recorded under
+third-party/module-system-20260928; older vendor manifests and patches remain
+unchanged. Source-format checks are distinct from a fresh proof verification.
+
+The ℚ(√241) development of September 29, 2026 (UnitDistance/Sqrt241 and
+UnitDistance/Sqrt241.lean, ChallengeZeta241.lean, SolutionZeta241.lean,
+scripts/sqrt241, docs/sqrt241/SUBMISSION.md) was made by Anthropic's Claude Opus 5.5 through
+Claude Code with subagents, under Eric Naslund's direction. Its source
+mathematics is papers/0.04273 (a research note, not a
+self-contained manuscript). It proves a conditional statement: the inequality H
+for the genus field is an explicit hypothesis. It imports the ℚ package unchanged
+and vendors no further third-party source. The ten modules under
+UnitDistance/Sqrt241/ProP and the modules Relation/AbsoluteKernel,
+LiftCorrection and Reduction retype to a general number-field base ℚ package
+modules that are adapted from Naganori Yamaguchi's SawinTotallyRealTowers, commit
+3a455e1aa9140dbbe7b7d68f508392a69c86d0f4 (Apache-2.0); Relation/KummerCount,
+SqrtCharacter and RadicalReciprocity adapt further arguments from the same
+commit. Each of these files keeps an attribution header naming the upstream
+project, commit and license. Base/Completion adapts the proof of Mathlib's
+Padic.withValRingEquiv (Yakov Pechersky, Apache-2.0, at the pinned Mathlib
+commit) and says so in its header. The 79 generated modules under
+UnitDistance/Sqrt241/Geometry are copies of ℚ package modules produced by
+scripts/sqrt241/regenerate_geometry.sh; none of their originals carries a
+third-party attribution header. No human proof review or remote submission is
+claimed.

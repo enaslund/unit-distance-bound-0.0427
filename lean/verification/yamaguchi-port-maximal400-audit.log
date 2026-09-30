@@ -1,0 +1,67 @@
+'ClassFieldTower.Sawin.isPGroup_galois_of_le_maximalRealProPOutside' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Audited all 869 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 869 project declarations selected.
+Axiom audit: beginning ProCGroups.FiniteGroupClass.objectProperty.
+Axiom audit: beginning ProCGroups.ProfiniteGrp.eq_one_of_mem_all_openNormalSubgroups.
+Axiom audit: beginning ProCGroups.ProC.OpenNormalSubgroupInClass.comap._proof_3.
+Axiom audit: 500/869 complete transitive axiom closures checked.
+Audited all 1182 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 1182 project declarations selected.
+Axiom audit: beginning CyclicCohomology.permutationRepresentation_mul.
+Axiom audit: beginning ClassFormation.zHatMulProfiniteGrp._proof_1.
+Axiom audit: beginning CyclicCohomology.baseIntegerScalarMulSubmodule._proof_1.
+Axiom audit: 500/1182 complete transitive axiom closures checked.
+Axiom audit: 1000/1182 complete transitive axiom closures checked.
+Audited all 5305 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 5305 project declarations selected.
+Axiom audit: beginning RelativeBaseIntegerLocalization._proof_1.
+Axiom audit: beginning LocalClassFieldTheory.finiteResidueFrobeniusExponentHom_injective.
+Axiom audit: beginning relativeIdeleToLocalData.
+Axiom audit: 500/5305 complete transitive axiom closures checked.
+Axiom audit: 1000/5305 complete transitive axiom closures checked.
+Axiom audit: 1500/5305 complete transitive axiom closures checked.
+Axiom audit: 2000/5305 complete transitive axiom closures checked.
+Axiom audit: 2500/5305 complete transitive axiom closures checked.
+Axiom audit: 3000/5305 complete transitive axiom closures checked.
+Axiom audit: 3500/5305 complete transitive axiom closures checked.
+Axiom audit: 4000/5305 complete transitive axiom closures checked.
+Axiom audit: 4500/5305 complete transitive axiom closures checked.
+Axiom audit: 5000/5305 complete transitive axiom closures checked.
+Audited all 5590 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 5590 project declarations selected.
+Axiom audit: beginning LocalFieldTheory.maximalIdealPowMapOfUnramifiedValuation._proof_8.
+Axiom audit: beginning AlgebraicNumberTheory.Valuations.absoluteValueExtension_embeddingCompletionMap._proof_5.
+Axiom audit: beginning LocalFieldTheory.integerUnitsModPrincipalUnitsResidueNorm_residue.
+Axiom audit: 500/5590 complete transitive axiom closures checked.
+Axiom audit: 1000/5590 complete transitive axiom closures checked.
+Axiom audit: 1500/5590 complete transitive axiom closures checked.
+Axiom audit: 2000/5590 complete transitive axiom closures checked.
+Axiom audit: 2500/5590 complete transitive axiom closures checked.
+Axiom audit: 3000/5590 complete transitive axiom closures checked.
+Axiom audit: 3500/5590 complete transitive axiom closures checked.
+Axiom audit: 4000/5590 complete transitive axiom closures checked.
+Axiom audit: 4500/5590 complete transitive axiom closures checked.
+Axiom audit: 5000/5590 complete transitive axiom closures checked.
+Axiom audit: 5500/5590 complete transitive axiom closures checked.
+Audited all 107 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 107 project declarations selected.
+Axiom audit: beginning ClassFieldTower.Martinet.maximalEverywhereUnramifiedProP_eq_iSup_extension.
+Axiom audit: beginning ClassFieldTower.Sawin.finiteDimensional_le_iSup_realPExtension_exists_extension.
+Axiom audit: beginning ClassFieldTower.Martinet.FiniteEverywhereUnramifiedProPExtension.sup._proof_4.

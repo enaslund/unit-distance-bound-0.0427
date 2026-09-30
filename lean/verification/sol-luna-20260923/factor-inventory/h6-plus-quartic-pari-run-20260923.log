@@ -1,0 +1,14 @@
+guarded-build: admitted with 16.3 GiB host available; cgroup headroom 1.49 GiB; timeout 900s
+P = x^4 - 34*x^2 + 429
+polynomial discriminant = 2152550400
+field discriminant = 8408400
+power-order index = 16
+integral basis = [1, 1/4*x^2 - 15/4, -x, 1/4*x^3 - 19/4*x]
+p = 2; base residue degrees = [2]; quartic residue degrees = [2]; Q_p(T) = 1
+p = 3; base residue degrees = [1, 1]; quartic residue degrees = [1, 1, 1]; Q_p(T) = -T + 1
+p = 5; base residue degrees = [1]; quartic residue degrees = [2]; Q_p(T) = T + 1
+p = 7; base residue degrees = [1]; quartic residue degrees = [2]; Q_p(T) = T + 1
+p = 11; base residue degrees = [1, 1]; quartic residue degrees = [1, 1, 1]; Q_p(T) = -T + 1
+p = 13; base residue degrees = [1, 1]; quartic residue degrees = [1, 2]; Q_p(T) = T + 1
+p = 17; base residue degrees = [1, 1]; quartic residue degrees = [1, 1, 1, 1]; Q_p(T) = T^2 - 2*T + 1
+PASS: seven exact local quotient polynomials match the pinned H6 twist+1 row.

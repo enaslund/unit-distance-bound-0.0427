@@ -1,0 +1,30 @@
+Audited all 9635 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 9635 project declarations selected.
+Axiom audit: beginning LocalFieldTheory.maximalIdealPowMapOfUnramifiedValuation._proof_8.
+Axiom audit: beginning LocalFieldTheory.integerUnitsModPrincipalUnitsResidueNorm_residue.
+Axiom audit: beginning LocalClassFieldTheory.finiteResidueFrobeniusExponentHom_injective.
+Axiom audit: 500/9635 complete transitive axiom closures checked.
+Axiom audit: 1000/9635 complete transitive axiom closures checked.
+Axiom audit: 1500/9635 complete transitive axiom closures checked.
+Axiom audit: 2000/9635 complete transitive axiom closures checked.
+Axiom audit: 2500/9635 complete transitive axiom closures checked.
+Axiom audit: 3000/9635 complete transitive axiom closures checked.
+Axiom audit: 3500/9635 complete transitive axiom closures checked.
+Axiom audit: 4000/9635 complete transitive axiom closures checked.
+Axiom audit: 4500/9635 complete transitive axiom closures checked.
+Axiom audit: 5000/9635 complete transitive axiom closures checked.
+Axiom audit: 5500/9635 complete transitive axiom closures checked.
+Axiom audit: 6000/9635 complete transitive axiom closures checked.
+Axiom audit: 6500/9635 complete transitive axiom closures checked.
+Axiom audit: 7000/9635 complete transitive axiom closures checked.
+Axiom audit: 7500/9635 complete transitive axiom closures checked.
+Axiom audit: 8000/9635 complete transitive axiom closures checked.
+Axiom audit: 8500/9635 complete transitive axiom closures checked.
+Axiom audit: 9000/9635 complete transitive axiom closures checked.
+Axiom audit: 9500/9635 complete transitive axiom closures checked.
+'UnitDistance.ArithmeticProP.finiteAbsoluteInertiaImage_le_residueInertia' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

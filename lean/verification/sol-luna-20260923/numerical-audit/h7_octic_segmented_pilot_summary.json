@@ -1,0 +1,43 @@
+{
+  "status": "PASS pilot independent segmented coefficient and exact moment replay",
+  "scope": "captured pilot summary; the full-row replay independently passed all 544 bins afterward",
+  "mode": "pilot",
+  "sector_mask": 1824,
+  "twist": 1,
+  "degree": 8,
+  "gamma": [0, 0, 0, 0, 1, 1, 1, 1],
+  "root_number": 1,
+  "conductor": 208190684989647360000,
+  "sigma": "6001/6000",
+  "N_checked": 39746,
+  "bins_checked": 256,
+  "full_bins": 544,
+  "nonzero_coefficients_checked": 263,
+  "moment_degree": 20,
+  "exact_signed_and_absolute_moments_per_bin": 21,
+  "first128_coefficients_match": true,
+  "all_selected_bins_match": true,
+  "mismatches": [],
+  "guard_admission": {
+    "host_available_gib": 14.1,
+    "cgroup_headroom_gib": 1.46,
+    "timeout_seconds": 900,
+    "measured_peak_rss": null
+  },
+  "seconds_including_python_and_core_compile": 3.1623630691319704,
+  "binary_sha256": "cd5bda9679a0837791e7e7e5868db2d3c451cfe011ce8d7ce2fd964b8f616203",
+  "metadata_sha256": "82c0fc1a9d0f9d72391d0b211771801fd42e6af41b7efb873f6609451839babe",
+  "bin_layout_sha256": "6529153b16272c961e80fcdb3d953948421edc0eb475fe61ad6e9a16ae760663",
+  "raw_output_sha256": "976324d4a2eda5afec164676b7ea7e425226f390a53a46c5ad72727c3a856f6d",
+  "source_sha256": {
+    "lean-formalization/verification/sol-luna-20260923/numerical-audit/h7_octic_segmented_direct.py": "80a77de8c41a4f92f4fcd0bb9670dcdb6483fd9801d4be19212b4423ac1285da",
+    "publication/nonabelian-dyadic-lower-bound/research/octic-arithmetic-h7-274.json": "2c8d752f6206b6793b37d91ca9ad343b6c3c4ff92f61fed9ade9e307f0013836",
+    "publication/nonabelian-dyadic-lower-bound/research/h7-octic-moments-1824.json": "e61657ff8a8d112f1ac76941264bc74b98a2f30b8ed0d3c0fbf953a21b0f128d",
+    "publication/nonabelian-dyadic-lower-bound/research/h7-octic-moments.py": "429283aa8a909d554438da03c7c1edb6a4d62309809c4d0366c49ce9402d5e2c",
+    "publication/nonabelian-dyadic-lower-bound/research/octic-sparse-moments.cpp": "e886396848f72df09a78d3124de6cb1f08056dbdac644b630adf1354404bd755",
+    "publication/nonabelian-dyadic-lower-bound/research/octic-sparse-tail.py": "293ebc05500c0c8557f8bc76e3c8fd3b0b3857b440e3648866288ce45cf20e85",
+    "lean-formalization/verification/sol-luna-20260923/numerical-audit/h7_octic_segmented.cpp": "170c443cc85821ea2bd1252df0b05b4322c20762692a410d8f9640cd721595bb"
+  },
+  "at_run_success_receipt_sha256": "925196065e88f3a4e4d8a1df917c9229768aac2b5417d3c6675308e4021ae34d",
+  "preservation_note": "The original successful pilot JSON at the wrapper's default output path was overwritten by the subsequent full-run JSON. This summary preserves the captured pilot metrics and hashes; its at-run receipt hash is retained, but the original byte-for-byte pilot JSON is unavailable. The first failed-at-assertion receipt is preserved byte-for-byte as h7_octic_segmented_pilot_attempt1.json."
+}

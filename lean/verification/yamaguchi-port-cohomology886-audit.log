@@ -1,0 +1,89 @@
+Audited all 215 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 215 project declarations selected.
+Axiom audit: beginning ProCGroups.FiniteGroupClass.objectProperty.
+Axiom audit: beginning ProCGroups.FiniteGroupClass.ulift_mem_iff.
+Axiom audit: beginning ProCGroups.FiniteGroupClass.MelnikovFormation.recOn.
+Audited all 2173 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 2173 project declarations selected.
+Axiom audit: beginning KummerTheory.finiteSupportNthPowersSubgroup.
+Axiom audit: beginning CyclicCohomology.permutationRepresentation_mul.
+Axiom audit: beginning ClassFormation.zHatMulProfiniteGrp._proof_1.
+Axiom audit: 500/2173 complete transitive axiom closures checked.
+Axiom audit: 1000/2173 complete transitive axiom closures checked.
+Axiom audit: 1500/2173 complete transitive axiom closures checked.
+Axiom audit: 2000/2173 complete transitive axiom closures checked.
+Audited all 13770 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 13770 project declarations selected.
+Axiom audit: beginning GlobalClassFieldTheory.Reciprocity.globalNormResidueMonoidHomOfEmbedding_abstractFixedFieldInclusion.
+Axiom audit: beginning RelativeBaseIntegerLocalization._proof_1.
+Axiom audit: beginning LocalClassFieldTheory.finiteResidueFrobeniusExponentHom_injective.
+Axiom audit: 500/13770 complete transitive axiom closures checked.
+Axiom audit: 1000/13770 complete transitive axiom closures checked.
+Axiom audit: 1500/13770 complete transitive axiom closures checked.
+Axiom audit: 2000/13770 complete transitive axiom closures checked.
+Axiom audit: 2500/13770 complete transitive axiom closures checked.
+Axiom audit: 3000/13770 complete transitive axiom closures checked.
+Axiom audit: 3500/13770 complete transitive axiom closures checked.
+Axiom audit: 4000/13770 complete transitive axiom closures checked.
+Axiom audit: 4500/13770 complete transitive axiom closures checked.
+Axiom audit: 5000/13770 complete transitive axiom closures checked.
+Axiom audit: 5500/13770 complete transitive axiom closures checked.
+Axiom audit: 6000/13770 complete transitive axiom closures checked.
+Axiom audit: 6500/13770 complete transitive axiom closures checked.
+Axiom audit: 7000/13770 complete transitive axiom closures checked.
+Axiom audit: 7500/13770 complete transitive axiom closures checked.
+Axiom audit: 8000/13770 complete transitive axiom closures checked.
+Axiom audit: 8500/13770 complete transitive axiom closures checked.
+Axiom audit: 9000/13770 complete transitive axiom closures checked.
+Axiom audit: 9500/13770 complete transitive axiom closures checked.
+Axiom audit: 10000/13770 complete transitive axiom closures checked.
+Axiom audit: 10500/13770 complete transitive axiom closures checked.
+Axiom audit: 11000/13770 complete transitive axiom closures checked.
+Axiom audit: 11500/13770 complete transitive axiom closures checked.
+Axiom audit: 12000/13770 complete transitive axiom closures checked.
+Axiom audit: 12500/13770 complete transitive axiom closures checked.
+Axiom audit: 13000/13770 complete transitive axiom closures checked.
+Axiom audit: 13500/13770 complete transitive axiom closures checked.
+Audited all 9265 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 9265 project declarations selected.
+Axiom audit: beginning LocalFieldTheory.maximalIdealPowMapOfUnramifiedValuation._proof_8.
+Axiom audit: beginning AlgebraicNumberTheory.Valuations.absoluteValueExtension_embeddingCompletionMap._proof_5.
+Axiom audit: beginning LocalFieldTheory.DiscreteValuationField.CompleteDVF.higherPrincipalUnitGroup.Internal.principalUnitQuotientCarrierZModModule.
+Axiom audit: 500/9265 complete transitive axiom closures checked.
+Axiom audit: 1000/9265 complete transitive axiom closures checked.
+Axiom audit: 1500/9265 complete transitive axiom closures checked.
+Axiom audit: 2000/9265 complete transitive axiom closures checked.
+Axiom audit: 2500/9265 complete transitive axiom closures checked.
+Axiom audit: 3000/9265 complete transitive axiom closures checked.
+Axiom audit: 3500/9265 complete transitive axiom closures checked.
+Axiom audit: 4000/9265 complete transitive axiom closures checked.
+Axiom audit: 4500/9265 complete transitive axiom closures checked.
+Axiom audit: 5000/9265 complete transitive axiom closures checked.
+Axiom audit: 5500/9265 complete transitive axiom closures checked.
+Axiom audit: 6000/9265 complete transitive axiom closures checked.
+Axiom audit: 6500/9265 complete transitive axiom closures checked.
+Axiom audit: 7000/9265 complete transitive axiom closures checked.
+Axiom audit: 7500/9265 complete transitive axiom closures checked.
+Axiom audit: 8000/9265 complete transitive axiom closures checked.
+Axiom audit: 8500/9265 complete transitive axiom closures checked.
+Axiom audit: 9000/9265 complete transitive axiom closures checked.
+Audited all 368 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 368 project declarations selected.
+Axiom audit: beginning _private.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePGroupLocalUnitsH2.0.ClassFieldTower.Martinet.Shafarevich.finiteCyclicLocalUnitsH2_finite_card.
+Axiom audit: beginning ClassFieldTower.Sawin.exists_int_linear_combination_of_half_quadraticGenerator.
+Axiom audit: beginning ClassFieldTower.Sawin.quadraticIntegerBasisOfModFourNeOne.eq_1.

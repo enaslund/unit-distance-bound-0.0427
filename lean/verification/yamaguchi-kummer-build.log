@@ -1,0 +1,37 @@
+⚠ [2403/2499] Replayed UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.Cardinality
+warning: UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/Herbrand/HerbrandLowDegree/Cardinality.lean:62:27: This simp argument is unused:
+  Rep.hom_comm_apply
+
+Hint: Omit it from the simp argument list.
+  simp [Rep.FiniteCyclicGroup.subCompNormHom, Rep.norm, Representation.norm, R̵e̵p̵.̵h̵o̵m̵_̵c̵o̵m̵m̵_̵a̵p̵p̵l̵y̵,̵ ̵hf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [4453/4517] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Kummer.FiniteRootIdeleSupport (5.5s)
+✔ [4764/4774] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Kummer.FiniteKummerSPlaceLocalization (8.1s)
+✔ [4773/4787] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FiniteCyclicLocalUnitsH2 (4.4s)
+✔ [4780/4790] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.UnramifiedNormComparison (7.5s)
+✔ [4781/4790] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.UnramifiedBaseUnitNorm (5.0s)
+✔ [4782/4790] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.GroupTheory.PGroupGaloisTower (4.1s)
+✔ [4783/4790] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.FiniteCyclicBaseUnitsH2 (4.8s)
+✔ [4784/4793] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePGroupLocalUnitsH2 (7.4s)
+✔ [4785/4793] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.FiniteTowerBaseUnitsH2 (2.9s)
+✔ [4786/4793] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.NormTopology (4.4s)
+✔ [4787/4794] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.FiniteGaloisTowerBaseUnitsH2Naturality (4.0s)
+✔ [4788/4794] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.UnramifiedBaseUnitsH2 (4.6s)
+✔ [4789/4794] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.ValuationContinuity (5.1s)
+✔ [4790/4794] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FiniteCyclicUnramifiedTowerH2Restriction (5.0s)
+✔ [4791/4794] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.UnramifiedDegreeBaseChange (3.7s)
+✔ [4792/4794] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.RelativeUnramifiedFixedField (58s)
+✔ [4794/4805] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePGroupLocalUnitsH2Cyclic (6.1s)
+✔ [4795/4805] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.ClassFieldCandidate (5.4s)
+✔ [4796/4805] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Existence.UnramifiedNormContainment (8.1s)
+✔ [4797/4805] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AbstractClassFieldTheory.Reciprocity.FiniteAbelianClassification (6.9s)
+✔ [4798/4805] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Existence.LocalAbsoluteData (4.8s)
+✔ [4799/4805] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Existence.NormSubgroupOrderEmbedding (9.4s)
+✔ [4800/4805] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Existence.FiniteUnramifiedField (10s)
+✔ [4801/4805] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.UnramifiedFixedFieldCompositum (4.8s)
+✔ [4802/4805] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.UnramifiedCommonExtension (45s)
+✔ [4803/4805] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePGroupLocalUnitsH2Structure (30s)
+✔ [4804/4805] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.FinitePlaceFieldUnitsH2 (32s)
+✔ [4805/4805] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Kummer.FiniteKummerSPlaceCardinality (5.2s)
+Build completed successfully (4805 jobs).

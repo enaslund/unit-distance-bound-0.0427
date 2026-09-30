@@ -1,0 +1,121 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [],
+      "added_options": [
+        "backward.proofsInPublic true"
+      ],
+      "insertions": [
+        {
+          "offset": 180,
+          "text": "set_option backward.proofsInPublic true\n"
+        }
+      ],
+      "migrated_sha256": "959b9c60ce292a36b3f297f5091dc2c1c49dcda477343666cee8ae471c78616f",
+      "original_sha256": "53f73954797d9c587162e552c46eeaf2ba0511a41f1a9dbb723398439d6c5ea2",
+      "path": "UnitDistance/GaloisPrimeNormCounts.lean",
+      "reason": "proof-elaboration-compatibility; isolated exact-module compile passed in repair-triage-04/result.json."
+    },
+    {
+      "added_imports": [],
+      "added_options": [
+        "backward.proofsInPublic true"
+      ],
+      "insertions": [
+        {
+          "offset": 863,
+          "text": "set_option backward.proofsInPublic true\n"
+        }
+      ],
+      "migrated_sha256": "8b2cf7e355d99cbb628283adf52cdcff96e37648f06d4e05d096c84448b91969",
+      "original_sha256": "aa845e7c851749a6a2b4825639e5efd730bd5a86c3294aa9e6f8e07e48194065",
+      "path": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/Herbrand/HerbrandLowDegree/Basic.lean",
+      "reason": "proof-elaboration-compatibility; isolated exact-module compile passed in repair-triage-04/result.json."
+    },
+    {
+      "added_imports": [],
+      "added_options": [
+        "backward.proofsInPublic true"
+      ],
+      "insertions": [
+        {
+          "offset": 811,
+          "text": "set_option backward.proofsInPublic true\n"
+        }
+      ],
+      "migrated_sha256": "2a70fd1ec5aa1d35859d6a0343384f136b31082f5da44aa724d412770ef41c05",
+      "original_sha256": "1ee62df05739054e958a9790a9375c6ccf35a6c62e31fea0630f8644e4652efe",
+      "path": "UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/OrbitPolynomialIdeal.lean",
+      "reason": "proof-elaboration-compatibility; isolated exact-module compile passed in repair-triage-04/result.json."
+    },
+    {
+      "added_imports": [],
+      "added_options": [
+        "backward.proofsInPublic true"
+      ],
+      "insertions": [
+        {
+          "offset": 947,
+          "text": "set_option backward.proofsInPublic true\n"
+        }
+      ],
+      "migrated_sha256": "ee4b8f911fa70773842255ea6468fd555a780d7b7315675d4924073fb148ecaa",
+      "original_sha256": "25ebbed0730615dc525f7adb2bde982fac2b5ea950e2c1196e44f30680dc2119",
+      "path": "UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/Padic/UnitDecomposition.lean",
+      "reason": "proof-elaboration-compatibility; isolated exact-module compile passed in repair-triage-04/result.json."
+    },
+    {
+      "added_imports": [],
+      "added_options": [
+        "backward.proofsInPublic true"
+      ],
+      "insertions": [
+        {
+          "offset": 807,
+          "text": "set_option backward.proofsInPublic true\n"
+        }
+      ],
+      "migrated_sha256": "c220e1b6e4e5406e5be9a3e8f26cba326aa9ab40acd6e4995997517c45a4cec8",
+      "original_sha256": "1b990075161b20fc03730f9ab89028abd996225f078afec62e2f3aa0e86aea20",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/Padic/CompletedChangedUniformizerFixedField.lean",
+      "reason": "proof-elaboration-compatibility; isolated exact-module compile passed in repair-triage-04/result.json."
+    },
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "insertions": [
+        {
+          "offset": 720,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "migrated_sha256": "410f1011a026572757811c7c73d7db93f622f279dde86f458f5cadad8b73f06d",
+      "original_sha256": "42e0ed1bdc89033d91357e5a180cac4bf19bc0d9f909776d92fdf355695ca944",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ConcreteReciprocityCanonical.lean",
+      "reason": "private-instance-import; isolated exact-module compile passed in repair-triage-04/result.json."
+    },
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "insertions": [
+        {
+          "offset": 518,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "migrated_sha256": "e5adc3f433080e76c880c51a1d7dd8f0163c9d8f7b016e47555f45af0d0f7fc1",
+      "original_sha256": "822d4a85b9ec63699e75b505c88284d8d26cea8c77e999193a8c9f16fb46d0f8",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/PrimitiveTorsion.lean",
+      "reason": "private-instance-import; isolated exact-module compile passed in repair-triage-04/result.json."
+    }
+  ],
+  "schema": "unit-distance-module-port-repair-v2",
+  "scope": "Seven tested header-only compatibility repairs. Existing theorem statements and proof bodies are byte-for-byte unchanged. Five restore legacy elaboration behavior using the pinned Lean compatibility option; two restore imported private instance registration. No axioms or mathematical hypotheses are added."
+}

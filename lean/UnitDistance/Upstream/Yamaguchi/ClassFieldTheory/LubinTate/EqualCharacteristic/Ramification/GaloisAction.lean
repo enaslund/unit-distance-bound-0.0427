@@ -1,0 +1,82 @@
+/-
+Ported from Naganori Yamaguchi, SawinTotallyRealTowers, commit
+3a455e1aa9140dbbe7b7d68f508392a69c86d0f4, under Apache-2.0.
+Modified: project-local imports relocated; Lean 4.32 compatibility changes
+are recorded in third-party/yamaguchi/compatibility.patch.
+Original declaration namespaces and mathematical statements are retained.
+-/
+
+module
+
+public import UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.LevelAbelian
+public import UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.Basic
+
+@[expose] public section
+set_option backward.privateInPublic true
+
+
+set_option autoImplicit false
+
+/-!
+# Galois action at an equal-characteristic Lubin--Tate level
+
+This module identifies the action of every finite-level Galois automorphism on
+the chosen primitive division point with the corresponding truncated
+Lubin--Tate bracket.
+-/
+
+noncomputable section
+
+open scoped LaurentSeries
+
+namespace LubinTate
+
+open LocalFieldTheory.DiscreteValuationField
+open LubinTate.EqualCharacteristic
+
+universe u v
+
+variable {K : Type u} [Field K]
+
+/-- Equal-characteristic Lubin--Tate action frontier: every automorphism of
+the explicit level-`n+1` field acts on
+the primitive generator through a unique visible unit-parameter bracket. -/
+theorem equalCharacteristicLubinTate_galoisAction_eq_bracket_unique
+    (F : LocalField.{u, v} K)
+    [CharP K F.residueCharacteristic]
+    (n : ℕ)
+    (σ : Gal((equalCharacteristicLubinTateLevelField F n) /
+      F.residueField⸨X⸩)) :
+    ∃! a : equalCharacteristicLubinTateUnitParameter F n,
+      σ (equalCharacteristicLubinTateLevelPowerBasis F n).gen =
+        equalCharacteristicLubinTateLevelBracket F n (n + 1)
+          (equalCharacteristicLubinTateUnitParameterSeries F n a)
+          (equalCharacteristicLubinTateLevelPowerBasis F n).gen := by
+  obtain ⟨a, hσ⟩ :=
+    equalCharacteristicLubinTateLevelField_exists_unitParameter F n σ
+  have ha :
+      σ (equalCharacteristicLubinTateLevelPowerBasis F n).gen =
+        equalCharacteristicLubinTateLevelBracket F n (n + 1)
+          (equalCharacteristicLubinTateUnitParameterSeries F n a)
+          (equalCharacteristicLubinTateLevelPowerBasis F n).gen := by
+    calc
+      σ (equalCharacteristicLubinTateLevelPowerBasis F n).gen =
+          equalCharacteristicLubinTateUnitParameterAlgEquiv F n a
+            (equalCharacteristicLubinTateLevelPowerBasis F n).gen := by
+              rw [hσ]
+      _ = equalCharacteristicLubinTateUnitParameterLevelRoot F n a :=
+        equalCharacteristicLubinTateUnitParameterAlgEquiv_apply_gen F n a
+      _ = equalCharacteristicLubinTateLevelBracket F n (n + 1)
+          (equalCharacteristicLubinTateUnitParameterSeries F n a)
+          (equalCharacteristicLubinTateLevelPowerBasis F n).gen :=
+        (equalCharacteristicLubinTateLevelBracket_gen F n a).symm
+  refine ⟨a, ha, ?_⟩
+  intro b hb
+  apply equalCharacteristicLubinTateUnitParameterLevelRoot_injective F n
+  rw [← equalCharacteristicLubinTateLevelBracket_gen F n b,
+    ← equalCharacteristicLubinTateLevelBracket_gen F n a]
+  exact hb.symm.trans ha
+
+end LubinTate
+
+end

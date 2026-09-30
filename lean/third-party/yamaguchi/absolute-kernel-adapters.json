@@ -1,0 +1,44 @@
+{
+  "upstream_pin": "3a455e1aa9140dbbe7b7d68f508392a69c86d0f4",
+  "modules": {
+    "AbsoluteProPFactor": {
+      "original_file": "SawinTotallyRealTowers/AbsoluteRealProPFactor.lean",
+      "original_sha256": "3bd562c2c400a6d96fe9e79f1d05eea2b0381fc8e3eb68663653d9e3ec142dc8",
+      "private_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/AbsoluteProPFactor.lean",
+      "private_sha256": "658b9e9e4792abf3ea4cb8bedb7b9e5bd40541f877683fa7593ffc553150f64b",
+      "file": "UnitDistance/AbsoluteProPFactor.lean",
+      "sha256": "27f7ca2e34aec5759eb1b5f7eb85be5864b53f9604d13eef839a50ca47eaf5d6",
+      "isolated_check": "passed",
+      "public_check": "pending"
+    },
+    "CentralLiftCorrection": {
+      "original_file": "SawinTotallyRealTowers/RealCentralLiftCorrection.lean",
+      "original_sha256": "20886036f5eea61c822e9253f53fb8898fefcec90d24db304ddb545c818bac20",
+      "private_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/CentralLiftCorrection.lean",
+      "private_sha256": "832b4ae7ef4df9ee69af8416656d464483c810272c92932c9f19d96043fabc07",
+      "file": "UnitDistance/CentralLiftCorrection.lean",
+      "sha256": "2029a530f44a36e1934cf2e8d3990deb878427160fec1641f257e37112c781ff",
+      "isolated_check": "passed",
+      "public_check": "pending"
+    },
+    "ProTwoH2AbsoluteKernel": {
+      "original_file": "SawinTotallyRealTowers/RealProTwoH2AbsoluteKernel.lean",
+      "original_sha256": "02fd83b82e13d38851cdb5eaae3f52c58fb5119b4978f8981b2a362b4994f106",
+      "private_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/ProTwoH2AbsoluteKernel.lean",
+      "private_sha256": "ac89b879ca5f725a67013ac965f018c87cac8ae134bc5c995b0181dadd0d8179",
+      "file": "UnitDistance/ProTwoH2AbsoluteKernel.lean",
+      "sha256": "2fd8e997afa29acce61b4b4fc92f7792bde6432cd175f34da8883620491ee4f7",
+      "isolated_check": "passed",
+      "public_check": "pending"
+    }
+  },
+  "private_audit": {
+    "declarations": 68,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "log": "verification/absolute-kernel-direct-audit.log"
+  }
+}

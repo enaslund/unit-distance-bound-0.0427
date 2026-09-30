@@ -1,0 +1,173 @@
+{
+  "inputs": {
+    "compiler": "/home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "compiler_sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "LEAN_PATH": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Cli/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/batteries/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Qq/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/aesop/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/proofwidgets/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/importGraph/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/LeanSearchClient/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/plausible/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean",
+    "scope": "Direct public import of the public CStar instance owner, matching protected Challenge header; preserve instance-disable attribute, all definitions/statements/proofs/hypotheses/heartbeats.1CPU2GiB noSwap600s8GiBguard.",
+    "integration_attempt": "integration-20260929T000915Z",
+    "integration_build_log_sha256": "99d8c89f4f9322beffeafc4c5cba54cdea4f2f8426b139244b8bb90e4f7d3a29",
+    "integration_terminal_result_sha256": "f3b054b8d828d3716387eab667db8bf1a8720bc4920d064df52f696484b6d7a6",
+    "owner_ancestor_chain": [
+      "SolutionZeta",
+      "UnitDistance.CanonicalSharperZetaResultRun20260920",
+      "UnitDistance.SharperPairFixedBaseBridgeRun20260920",
+      "UnitDistance.RelativeResidueFixedBase",
+      "UnitDistance.RelativeResiduePrimeBudget",
+      "UnitDistance.TsfasmanVladutPrimeSubsequence",
+      "UnitDistance.TsfasmanVladutBasicInequality",
+      "UnitDistance.TsfasmanVladutPrimeSideRegroup",
+      "UnitDistance.TsfasmanVladutPrimeSide",
+      "UnitDistance.TsfasmanVladutRegularity",
+      "Mathlib.MeasureTheory.Function.L2Space",
+      "Mathlib.Analysis.InnerProductSpace.GramMatrix",
+      "Mathlib.Analysis.Matrix.Order",
+      "Mathlib.Analysis.CStarAlgebra.Matrix",
+      "Mathlib.Analysis.CStarAlgebra.Classes"
+    ],
+    "direct_import_artifact_hashes": [
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/Classes.olean",
+        "sha256": "61904f8f7adc53c534ab93be159d3e80dc2c9ba8400e1e4af1cc562435a88d0f"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/Classes.olean.private",
+        "sha256": "663911e53c403bafdd187ce7c8ab5c925689ece14f55e79f3aa3721c926f28dc"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/Classes.olean.server",
+        "sha256": "339cb3cc5d0b6af776032841d7863ab2dbcc4cd60a38be579986d7b2bba287e1"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/Classes.ir",
+        "sha256": "2b6f3f2fa48d501a03863390927581de1a9a7d17e5d8f6eab9516e20ea4bd795"
+      },
+      {
+        "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/Classes.ir.sig",
+        "sha256": "5fa7d3ab6ecc253a6728ec9d893731b7dec42cd100af24dfee23c10d3351fc1a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CanonicalSharperZetaResultRun20260920.olean",
+        "sha256": "50ecb017d8695838624db7a067cf85f448d0c4757e15405d86e37848436bd649"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CanonicalSharperZetaResultRun20260920.olean.private",
+        "sha256": "1fadc5f0859736d107acbc425bb886460ab60ddcfe7e26226b5b9fe0c85d3889"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CanonicalSharperZetaResultRun20260920.olean.server",
+        "sha256": "071a5da3936609e7cbdd52909020cc7eb4ffb670bed7f9aff266265104bc107b"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CanonicalSharperZetaResultRun20260920.ir",
+        "sha256": "294f616c86551787508ea550fc0596bb68a2fd6dde7c69ed525cca0d17154ddd"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CanonicalSharperZetaResultRun20260920.ir.sig",
+        "sha256": "23f67cddf769b83e1541cb6f75ceb308489c4a2d73678009553a4d8361102f44"
+      }
+    ],
+    "variants": [
+      {
+        "path": "SolutionZeta.lean",
+        "original_sha256": "ae1a25d816bced309b4339f699d2f07903aa43a07f2312362cddf5553179a713",
+        "migrated_sha256": "f738225dbba71174456995af93fb627e1a76e2ee56de3853195f99f7768a63fa",
+        "insertions": [
+          {
+            "offset": 73,
+            "text": "public import Mathlib.Analysis.CStarAlgebra.Classes\n"
+          }
+        ],
+        "added_imports": [
+          "Mathlib.Analysis.CStarAlgebra.Classes"
+        ],
+        "added_options": [],
+        "observed_failure_log": "verification/module-port-20260928/repair-pilot-40-solution-cstar-owner/observed-failure.log",
+        "focused_compile": "verification/module-port-20260928/repair-pilot-40-solution-cstar-owner/result.json",
+        "name": "explicit-public-cstar-owner",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-40-solution-cstar-owner/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-40-solution-cstar-owner/source/SolutionZeta.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-40-solution-cstar-owner/lib/SolutionZeta.olean"
+      }
+    ]
+  },
+  "results": [
+    {
+      "compiler_exit_code": 0,
+      "direct_import_artifact_hashes_after": [
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/Classes.olean",
+          "sha256": "61904f8f7adc53c534ab93be159d3e80dc2c9ba8400e1e4af1cc562435a88d0f"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/Classes.olean.private",
+          "sha256": "663911e53c403bafdd187ce7c8ab5c925689ece14f55e79f3aa3721c926f28dc"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/Classes.olean.server",
+          "sha256": "339cb3cc5d0b6af776032841d7863ab2dbcc4cd60a38be579986d7b2bba287e1"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/Classes.ir",
+          "sha256": "2b6f3f2fa48d501a03863390927581de1a9a7d17e5d8f6eab9516e20ea4bd795"
+        },
+        {
+          "path": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/Classes.ir.sig",
+          "sha256": "5fa7d3ab6ecc253a6728ec9d893731b7dec42cd100af24dfee23c10d3351fc1a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CanonicalSharperZetaResultRun20260920.olean",
+          "sha256": "50ecb017d8695838624db7a067cf85f448d0c4757e15405d86e37848436bd649"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CanonicalSharperZetaResultRun20260920.olean.private",
+          "sha256": "1fadc5f0859736d107acbc425bb886460ab60ddcfe7e26226b5b9fe0c85d3889"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CanonicalSharperZetaResultRun20260920.olean.server",
+          "sha256": "071a5da3936609e7cbdd52909020cc7eb4ffb670bed7f9aff266265104bc107b"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CanonicalSharperZetaResultRun20260920.ir",
+          "sha256": "294f616c86551787508ea550fc0596bb68a2fd6dde7c69ed525cca0d17154ddd"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/CanonicalSharperZetaResultRun20260920.ir.sig",
+          "sha256": "23f67cddf769b83e1541cb6f75ceb308489c4a2d73678009553a4d8361102f44"
+        }
+      ],
+      "variant": {
+        "path": "SolutionZeta.lean",
+        "original_sha256": "ae1a25d816bced309b4339f699d2f07903aa43a07f2312362cddf5553179a713",
+        "migrated_sha256": "f738225dbba71174456995af93fb627e1a76e2ee56de3853195f99f7768a63fa",
+        "insertions": [
+          {
+            "offset": 73,
+            "text": "public import Mathlib.Analysis.CStarAlgebra.Classes\n"
+          }
+        ],
+        "added_imports": [
+          "Mathlib.Analysis.CStarAlgebra.Classes"
+        ],
+        "added_options": [],
+        "observed_failure_log": "verification/module-port-20260928/repair-pilot-40-solution-cstar-owner/observed-failure.log",
+        "focused_compile": "verification/module-port-20260928/repair-pilot-40-solution-cstar-owner/result.json",
+        "name": "explicit-public-cstar-owner",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-40-solution-cstar-owner/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-40-solution-cstar-owner/source/SolutionZeta.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-40-solution-cstar-owner/lib/SolutionZeta.olean"
+      },
+      "command": [
+        "/home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-R",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-40-solution-cstar-owner/source",
+        "-o",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-40-solution-cstar-owner/lib/SolutionZeta.olean",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-40-solution-cstar-owner/source/SolutionZeta.lean"
+      ],
+      "exit_code": 0,
+      "reason": null,
+      "elapsed_total": 7.483699073083699
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,227 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "Thirteen observed integration200108 failures repaired using twelve targeted private-instance owner import additions and one backward.proofsInPublic compatibility option. Every theorem statement and proof body is byte-preserved. Each candidate independently compiled with stable imported artifacts under 1CPU/2GiB/zeroSwap bounds.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/UnramifiedNormalization.lean",
+      "original_sha256": "0886587155b3f9a2e9e0b8a8954a17f7cc295dea370cc60c6454c092837f9a01",
+      "migrated_sha256": "e855abd1ee30bcfa719b32b07f808c6833f90efc74989bef8dcbe235c967b474",
+      "insertions": [
+        {
+          "offset": 1414,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/UnramifiedNormalization/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/Existence/NormSubgroupSurjectivity.lean",
+      "original_sha256": "1d36f623f1b7847807e704e3e9e4dbf5c31971d02a15465a3338c00aabb2cca9",
+      "migrated_sha256": "2d6f4c8d908a4edf0b0c15f890b71fac8aa8153abdd20c5c4845fa7fb61b16d9",
+      "insertions": [
+        {
+          "offset": 846,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/NormSubgroupSurjectivity/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/AmbientPrimeNormTransport.lean",
+      "original_sha256": "0be68d8cc102f8272de7ca280292b19e02e67060f32bed55dc1d5f0118a1df07",
+      "migrated_sha256": "39f56a352444ba93c66e7b7a229d639f44765ae98b878a6f2a1acde6d39b50f8",
+      "insertions": [
+        {
+          "offset": 561,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/AmbientPrimeNormTransport/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/IntrinsicFrobeniusQuotientTransport.lean",
+      "original_sha256": "de9cdc6097e902a2b5b38be9e9b2fcde098a7ed937c7a2a56d1b4a28525d184b",
+      "migrated_sha256": "f202b83ad16ea9d87b6d0ad3cb9011d246abaf93d1e19f5927eda50479758143",
+      "insertions": [
+        {
+          "offset": 561,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/IntrinsicFrobeniusQuotientTransport/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/Existence/OrderReversal.lean",
+      "original_sha256": "e158794062c18328c1bc4d7ad0f6ed7e4857feee5deb410037611a5fc8842949",
+      "migrated_sha256": "06cb4a6c10f2e0e07171cc10b09027b5f4d123be08d1776f5e681f4bb8cf62b5",
+      "insertions": [
+        {
+          "offset": 1106,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/OrderReversal/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FormalModule/DivisionModuleEndomorphisms.lean",
+      "original_sha256": "b18606933fbd588efa028bfc0bd4deb5e7b9001a8f4620332dd5532ae9134d4a",
+      "migrated_sha256": "7f6158500d3aa5317143cf63f8a8562864937ad10583d5c12787892e3a3c5bf0",
+      "insertions": [
+        {
+          "offset": 579,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/DivisionModuleEndomorphisms/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/LevelFieldTower.lean",
+      "original_sha256": "91337c8a113a411311b1971e846965d8c5f0f090e94ff13dacb0056dcd9f96c8",
+      "migrated_sha256": "e099b2c333f16667decb4177704695ba6e925d2693bb756b0ac2c54cbdc8a063",
+      "insertions": [
+        {
+          "offset": 537,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/LevelFieldTower/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/LevelAbelian.lean",
+      "original_sha256": "cd20d07a67c7b4964036828e1393b74d9687a40214e6d93ac84579b5cf4522f1",
+      "migrated_sha256": "188268188feeded921953dfcb42acb4bad93801c5fcef09381100768349c9f83",
+      "insertions": [
+        {
+          "offset": 568,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/LevelAbelian/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/CompletedLevel/DirectBracketAtCompletedLevel.lean",
+      "original_sha256": "bde566469dabddfa7e2daebc112a838c98d05577fb0b1c4ebb9d47d019c72694",
+      "migrated_sha256": "38f98e763692621461e075f8a47ca9a7ddede9a7f0497a0ab256ee806f075533",
+      "insertions": [
+        {
+          "offset": 756,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/DirectBracketAtCompletedLevel/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/CompletedLevel/DirectTargetLevelEmbedding.lean",
+      "original_sha256": "02c6bd58af3fdf44eb5231eb450f62a461c86e51ad4d04f7c94ebf287ab6660a",
+      "migrated_sha256": "0a7d959bb3666fd72068c73372daadde0a64b2b52ba3f12268edfcc9336bcacc",
+      "insertions": [
+        {
+          "offset": 752,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/DirectTargetLevelEmbedding/result.json"
+    },
+    {
+      "path": "UnitDistance/LocalArtinRestriction.lean",
+      "original_sha256": "05e493d8d1381220cdeb8a01d01d6d09f84a5c7bac06611b5901ffccadf00f21",
+      "migrated_sha256": "9fb0a5dd8f6b2b3af78a53c39da84a9973db09446ad9492a63115f58cb278de7",
+      "insertions": [
+        {
+          "offset": 704,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityCanonical\n"
+        },
+        {
+          "offset": 704,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityCanonical",
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/LocalArtinRestriction/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/GeneralTowerNaturality.lean",
+      "original_sha256": "526eb6159a8052aa9a59259092b2c1bb91d0dae2a11a9c35e8699db9fd3d5d8d",
+      "migrated_sha256": "1d276f4537ca0c55504af4589db6556530a0257f179d675711d966900d594b0d",
+      "insertions": [
+        {
+          "offset": 774,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityCanonical\n"
+        },
+        {
+          "offset": 774,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityCanonical",
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/GeneralTowerNaturality/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldContinuousNaturality.lean",
+      "original_sha256": "1ee70f34fda03181514ccd22f5e600dad58c8854761a3cc1dd4a39dd01327b47",
+      "migrated_sha256": "d810a1f9fd61c9623016598a6c5988f468c76e1e576e6bb67a92772a4e01f965",
+      "insertions": [
+        {
+          "offset": 810,
+          "text": "set_option backward.proofsInPublic true\n"
+        }
+      ],
+      "added_imports": [],
+      "added_options": [
+        "backward.proofsInPublic true"
+      ],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-13/FixedFieldContinuousNaturality/result.json"
+    }
+  ]
+}

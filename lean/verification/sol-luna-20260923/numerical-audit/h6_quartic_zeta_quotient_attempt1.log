@@ -1,0 +1,28 @@
+Command:
+python3 automation/lean-formalization/guarded_build.py --timeout-seconds 900 -- python3 lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py
+
+guarded-build: admitted with 15.9 GiB host available; cgroup headroom 1.33 GiB; timeout 900s
+Traceback (most recent call last):
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py", line 274, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py", line 214, in main
+    decomp, gp_version, gp_seconds = gp_decompositions(gp, N)
+                                     ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py", line 136, in gp_decompositions
+    raise RuntimeError(f"PARI/GP decomposition failed: rc={proc.returncode}; stderr={proc.stderr}")
+RuntimeError: PARI/GP decomposition failed: rc=0; stderr=  ***   syntax error, unexpected end of file, expecting )-> or ',' or ')': 
+  ***   forprime(p=2,3922,
+  ***                    ^-
+  ***   at top-level: my(dK=idealprimedec(K,p),dB=idealprimedec(B,p)
+  ***                       ^----------------------------------------
+  *** idealprimedec: incorrect type in idealprimedec (t_POL).
+  ***   at top-level: ...OMP ",[p,vector(#dK,j,[dK[j].e,dK[j].f]),vecto
+  ***                                             ^---------------------
+  ***   incorrect type in _[_] OCcompo1 [not a vector] (t_POL).
+  ***   syntax error, unexpected ')', expecting end of file: );
+  ***                                                        ^--
+
+Guarded wrapper process exit: 1
+Wrapper-observed elapsed time: 0.926951777 seconds
+No prime decomposition was successfully parsed and no coefficient comparison was performed.

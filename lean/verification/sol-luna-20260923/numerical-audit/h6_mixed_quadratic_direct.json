@@ -1,0 +1,275 @@
+{
+  "status": "FAIL direct upper exceeds frozen allowance",
+  "scope": "one conditional H6 mixed-quadratic factor row; not a proof of global H",
+  "sector_mask": 1586,
+  "twist": 1,
+  "degree": 2,
+  "conductor": 240240,
+  "gamma": [
+    0,
+    1
+  ],
+  "root_number": 1,
+  "sigma": "6001/6000",
+  "N": 3922,
+  "coefficients_reconstructed": 3922,
+  "signed_coefficient_vector_sha256": "245989a787ca8bfa916c030bff304a9337365c62e5d7bd4ed1d7fad2aa1ff489",
+  "nonzero_coefficients": 562,
+  "exact_moment_bins_checked": 184,
+  "precision_bits": 384,
+  "python_flint_version": "0.9.0",
+  "flint_version": "3.6.0",
+  "kernel_piece_count": 1878,
+  "A_pointwise": {
+    "real": {
+      "lower": {
+        "mantissa": "6398932013293679642992295467917970520392352408491449843216017295028052706889305258526240360609313321266685374713231",
+        "exponent": -381
+      },
+      "upper": {
+        "mantissa": "6398932013293679642995341275034743405551476922637489747784654221629408004274455026629466419680388997634443831233935",
+        "exponent": -381
+      },
+      "display": "[1.299209381654119012273 +/- 6.16e-22]"
+    },
+    "imag": {
+      "lower": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "upper": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "display": "0"
+    }
+  },
+  "B_pointwise": {
+    "real": {
+      "lower": {
+        "mantissa": "22339984662474896413243241051704438334243794778328632804225434211824100347648547159039006056074625522583182994202247",
+        "exponent": -386
+      },
+      "upper": {
+        "mantissa": "22339984662474896413292889750318883883733007915079443438274511725176964507674569013350491426783166328396259366952583",
+        "exponent": -386
+      },
+      "display": "[0.141743954299712405940 +/- 5.03e-22]"
+    },
+    "imag": {
+      "lower": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "upper": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "display": "0"
+    }
+  },
+  "A_within_frozen_center_plus_interpolation": true,
+  "B_within_frozen_center_plus_interpolation": true,
+  "pointwise_interpolation_debit": {
+    "lower": {
+      "mantissa": "30805120491640391063723490971496290763450973500302777013445269627705478829024691305039972059813411158291846725886865",
+      "exponent": -459
+    },
+    "upper": {
+      "mantissa": "30805120491640391063723490971496290763450973500302777013445269627705478829024691305039972059813411158291846725888669",
+      "exponent": -459
+    },
+    "display": "[2.06944982941516313691499000033876718e-23 +/- 1.14e-59]"
+  },
+  "frozen_interpolation_debit": {
+    "lower": {
+      "mantissa": "90528112785807919222362727153374807847575056209327371079014243393418495770055",
+      "exponent": -331
+    },
+    "upper": {
+      "mantissa": "90528112785807919222362727153374807847575056209327371079014243393418495771037",
+      "exponent": -331
+    },
+    "display": "[2.0694498294151631369149900003387672e-23 +/- 2.12e-58]"
+  },
+  "one_side_tail": {
+    "lower": {
+      "mantissa": "35008781031607443838888814135527057892858634604736837349662348273736396672205651236859326427083654542909915541152997",
+      "exponent": -449
+    },
+    "upper": {
+      "mantissa": "35008781031607443838888814135527057892858634604736837349662348273736396672205651236859326427083654542909915541153585",
+      "exponent": -449
+    },
+    "display": "[2.40829085334818349778486292343412845e-20 +/- 3.81e-56]"
+  },
+  "rankin_beta": "6/5",
+  "signed_finite_sum": {
+    "real": {
+      "lower": {
+        "mantissa": "7097056533996020155906146750775963542768568079030541770720768038520986215397113799161202050222689751706589009289347",
+        "exponent": -381
+      },
+      "upper": {
+        "mantissa": "7097056533996020155910744079739979202487036336267400202858026788667757772495493866381676526406318562537647770443907",
+        "exponent": -381
+      },
+      "display": "[1.440953335953831418213 +/- 5.06e-22]"
+    },
+    "imag": {
+      "lower": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "upper": {
+        "mantissa": "0",
+        "exponent": 0
+      },
+      "display": "0"
+    }
+  },
+  "bad_multiplier": {
+    "lower": {
+      "mantissa": "31244015819921918814332757319288758534053510238089690215271847070189458716571423482495771668863460574932194907892019",
+      "exponent": -384
+    },
+    "upper": {
+      "mantissa": "31244015819921918814332757319288758534053510238089690215271847070189458716571423482495771668863460574932194907892063",
+      "exponent": -384
+    },
+    "display": "[0.792954949151318451577322291920207031 +/- 3.26e-37]"
+  },
+  "modulus_upper": {
+    "lower": {
+      "mantissa": "28388226135984080624592706634973386989545618983196344568322273468006403114147960374630639970206678363037265910126045",
+      "exponent": -383
+    },
+    "upper": {
+      "mantissa": "28388226135984080624592706634973386989545618983196344568322273468006403114147960374630639970206678363037265910126047",
+      "exponent": -383
+    },
+    "display": "[1.44095333595383141826171319402437108 +/- 6.73e-37]"
+  },
+  "removed_modulus_upper": {
+    "lower": {
+      "mantissa": "5627646103038846534602445013163804208368073306457582712845950823405147979758786934484916174840340477861467049005581",
+      "exponent": -381
+    },
+    "upper": {
+      "mantissa": "5627646103038846534602445013163804208368073306457582712845950823405147979758786934484916174840340477861467049005581",
+      "exponent": -381
+    },
+    "display": "[1.14261107924069308621402531460965184 +/- 3.27e-36]"
+  },
+  "log_L_S_upper": {
+    "lower": {
+      "mantissa": "21011681484323351391967320576986826046327192639015375762183084975161273834541145703283455597711668090485770593858455",
+      "exponent": -386
+    },
+    "upper": {
+      "mantissa": "21011681484323351391967320576986826046327192639015375762183084975161273834541145703283455597711668090485770593858455",
+      "exponent": -386
+    },
+    "display": "[0.133316063778537035184834794656877152 +/- 2.30e-37]"
+  },
+  "printed_log_L_S_upper": {
+    "lower": {
+      "mantissa": "30873891107624195425374130310922912158583826342413713141119913921807717377561",
+      "exponent": -257
+    },
+    "upper": {
+      "mantissa": "7718472776906048856343532577730728039645956585603428285279978480451929344419",
+      "exponent": -255
+    },
+    "display": "[0.13331606377853703518483475021043415 +/- 8.68e-37]"
+  },
+  "comparison_diagnostic": {
+    "direct_log_upper_exact_fraction": "21011681484323351391967320576986826046327192639015375762183084975161273834541145703283455597711668090485770593858455/157608024785577916849116160400574455220318957081861786671793173616982887085988842445657065019539662563226511961227264",
+    "printed_log_upper_exact_fraction": "7718472776906048856343532577730728039645956585603428285279978480451929344419/57896044618658097711785492504343953926634992332820282019728792003956564819968",
+    "printed_minus_direct_margin_exact_fraction": "-7005116090117154657445144649082733208853741511058407447513099466229153108410827576630145943/157608024785577916849116160400574455220318957081861786671793173616982887085988842445657065019539662563226511961227264",
+    "printed_minus_direct_margin_decimal": "-4.444644300090337e-26",
+    "source_modulus_upper": {
+      "lower": {
+        "mantissa": "83425498631787255472911251876915258126001629707060146504726261944638496188951",
+        "exponent": -255
+      },
+      "upper": {
+        "mantissa": "83425498631787255472911251876915258126001629707060146504726261944638496188951",
+        "exponent": -255
+      },
+      "display": "[1.4409533359538314182617131299789236 +/- 4.94e-35]"
+    },
+    "source_removed_modulus_upper": {
+      "lower": {
+        "mantissa": "33076331012746125108700189773993132005569886909533934523875581581110649321509",
+        "exponent": -254
+      },
+      "upper": {
+        "mantissa": "16538165506373062554350094886996566002784943454766967261937790790555324660763",
+        "exponent": -253
+      },
+      "display": "[1.1426110792406930862140252638246536 +/- 3.76e-35]"
+    },
+    "signed_center": {
+      "real": {
+        "lower": {
+          "mantissa": "7097056533996020155906146750775963542768568079030541770720768038520986215397113799161202050222689751706589009289347",
+          "exponent": -381
+        },
+        "upper": {
+          "mantissa": "7097056533996020155910744079739979202487036336267400202858026788667757772495493866381676526406318562537647770443907",
+          "exponent": -381
+        },
+        "display": "[1.440953335953831418213 +/- 5.06e-22]"
+      },
+      "imag": {
+        "lower": {
+          "mantissa": "0",
+          "exponent": 0
+        },
+        "upper": {
+          "mantissa": "0",
+          "exponent": 0
+        },
+        "display": "0"
+      }
+    },
+    "combined_two_side_error": {
+      "lower": {
+        "mantissa": "8759716039271890352071745401794727434826829299011431695084885229964300700968655165490476131199579019311046230680311",
+        "exponent": -446
+      },
+      "upper": {
+        "mantissa": "8759716039271890352071745401794727434826829299011431695084885229964300700968655165490476131199579019311046230680459",
+        "exponent": -446
+      },
+      "display": "[4.82072060635519732184355582686893444e-20 +/- 1.98e-56]"
+    }
+  },
+  "row_allowance_comparison_passed": false,
+  "coefficient_method": "exact quadratic residue/Euler recurrence; complete signed-vector hash matched and every stored exact moment bin checked",
+  "kernel_method": "pointwise coefficient summation using existing pinned nonpositive-afe.py quadratic SplitKernels and explicit Taylor remainder; same python-flint/Arb backend, not a new kernel backend",
+  "conditional_assumptions": [
+    "the pinned conductor, gamma=[0,1], and root number +1 describe the intended primitive entire degree-two L-function with its conjugation-compatible functional equation",
+    "the finite-image all-prime coefficient bound |a_n| <= d_2(n) holds globally, yielding zeta(beta)^2 Rankin majorant",
+    "the listed bad-prime Euler denominator polynomials are the complete local factors removed in L_S",
+    "the pinned quadratic Mellin-kernel majorant and Rankin tail inequality apply to this row",
+    "python-flint/Arb outward interval arithmetic and the pinned SplitKernels Taylor remainder derivation are sound"
+  ],
+  "source_sha256": {
+    "h6-low-degree-arithmetic.json": "b0335a1a87f8c3261d4be0bff2108a520964651c8884207f54194923378b7771",
+    "h6-low-degree-moments-1586.json": "a7e65537a05389f11115a8cf64c186ead6b1dc4973a8c5f862f31a34fdeb40f1",
+    "h6-low-degree-euler-6000.json": "bd9c19c7b128a17fd1ea84afae062f812bb2915b4fe2dfea813bfb074496d459",
+    "h6-low-degree-euler.py": "9fdee8fe5bd9fcbc90c9b28ccbdd0ec5066d49b8b52757ee3f20cc89af707f38",
+    "h6-low-degree-arithmetic.py": "09cf2aae4e0f67bf3dee34289fd767635b0499801e81d787950f48b53599c14f",
+    "numerics_hecke_coeff_check.py": "3759f993a31a0df05241d8faa546950dcf68b49ad4768339e4f56da4e7846329",
+    "nonpositive-afe.py": "8d6b82b12f7de4a3d53feccde8aaffe0d0fbdf4b623c1447af6ea68ed399cba7",
+    "hecke_afe.py": "21e5c3187ff9e98e4fb42bcb39b6c3ec6ece47ef5eb2807ea2c2fd8daca4b7bd",
+    "exact_group.py": "b336d10f1beb4fb117685c899e938508e1aaf83def27b6b7a072ed6b12bf1b35"
+  },
+  "scope_limitations": [
+    "the exact coefficient vector hash and finite moment checks do not prove the all-n coefficient bound",
+    "this row does not prove the representation-to-factor identity or global hypothesis H",
+    "the replay shares the pinned SplitKernels kernel and Arb/FLINT backend with the frozen evaluator"
+  ]
+}

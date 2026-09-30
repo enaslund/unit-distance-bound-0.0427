@@ -1,0 +1,57 @@
+Audited all 23040 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 23040 project declarations selected.
+Axiom audit: beginning UnitDistance.ArithmeticProP.prime_dvd_sigma_product_iff.
+Axiom audit: beginning LocalFieldTheory.maximalIdealPowMapOfUnramifiedValuation._proof_8.
+Axiom audit: beginning AlgebraicNumberTheory.Valuations.absoluteValueExtension_embeddingCompletionMap._proof_5.
+Axiom audit: 500/23040 complete transitive axiom closures checked.
+Axiom audit: 1000/23040 complete transitive axiom closures checked.
+Axiom audit: 1500/23040 complete transitive axiom closures checked.
+Axiom audit: 2000/23040 complete transitive axiom closures checked.
+Axiom audit: 2500/23040 complete transitive axiom closures checked.
+Axiom audit: 3000/23040 complete transitive axiom closures checked.
+Axiom audit: 3500/23040 complete transitive axiom closures checked.
+Axiom audit: 4000/23040 complete transitive axiom closures checked.
+Axiom audit: 4500/23040 complete transitive axiom closures checked.
+Axiom audit: 5000/23040 complete transitive axiom closures checked.
+Axiom audit: 5500/23040 complete transitive axiom closures checked.
+Axiom audit: 6000/23040 complete transitive axiom closures checked.
+Axiom audit: 6500/23040 complete transitive axiom closures checked.
+Axiom audit: 7000/23040 complete transitive axiom closures checked.
+Axiom audit: 7500/23040 complete transitive axiom closures checked.
+Axiom audit: 8000/23040 complete transitive axiom closures checked.
+Axiom audit: 8500/23040 complete transitive axiom closures checked.
+Axiom audit: 9000/23040 complete transitive axiom closures checked.
+Axiom audit: 9500/23040 complete transitive axiom closures checked.
+Axiom audit: 10000/23040 complete transitive axiom closures checked.
+Axiom audit: 10500/23040 complete transitive axiom closures checked.
+Axiom audit: 11000/23040 complete transitive axiom closures checked.
+Axiom audit: 11500/23040 complete transitive axiom closures checked.
+Axiom audit: 12000/23040 complete transitive axiom closures checked.
+Axiom audit: 12500/23040 complete transitive axiom closures checked.
+Axiom audit: 13000/23040 complete transitive axiom closures checked.
+Axiom audit: 13500/23040 complete transitive axiom closures checked.
+Axiom audit: 14000/23040 complete transitive axiom closures checked.
+Axiom audit: 14500/23040 complete transitive axiom closures checked.
+Axiom audit: 15000/23040 complete transitive axiom closures checked.
+Axiom audit: 15500/23040 complete transitive axiom closures checked.
+Axiom audit: 16000/23040 complete transitive axiom closures checked.
+Axiom audit: 16500/23040 complete transitive axiom closures checked.
+Axiom audit: 17000/23040 complete transitive axiom closures checked.
+Axiom audit: 17500/23040 complete transitive axiom closures checked.
+Axiom audit: 18000/23040 complete transitive axiom closures checked.
+Axiom audit: 18500/23040 complete transitive axiom closures checked.
+Axiom audit: 19000/23040 complete transitive axiom closures checked.
+Axiom audit: 19500/23040 complete transitive axiom closures checked.
+Axiom audit: 20000/23040 complete transitive axiom closures checked.
+Axiom audit: 20500/23040 complete transitive axiom closures checked.
+Axiom audit: 21000/23040 complete transitive axiom closures checked.
+Axiom audit: 21500/23040 complete transitive axiom closures checked.
+Axiom audit: 22000/23040 complete transitive axiom closures checked.
+Axiom audit: 22500/23040 complete transitive axiom closures checked.
+Axiom audit: 23000/23040 complete transitive axiom closures checked.
+'UnitDistance.ArithmeticProP.maximalSigmaProTwoH2_finiteDimensional_finrank_le_of_finite_inputs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,293 @@
+# Metadata for local verification of the 1.0427 conditional theorem.
+# Local Git identifiers describe provenance; they do not assert public availability.
+# Publication, submission, registration and owner proof review are not claimed.
+version: v0.4
+project:
+  name: Planar unit distances at exponent 1.0427 from one genus-field zeta inequality
+  description: 'Conditional theorem on unit distances in the Euclidean plane. Let B = Q(sqrt 241) and
+    let E be the number field of degree 512 generated over Q by sqrt 241 and square roots of the eight
+    elements -1, -71011068 + 4574225 sqrt 241, (-6101 - 393 sqrt 241)/2, (6101 - 393 sqrt 241)/2, 31 -
+    2 sqrt 241, 31 + 2 sqrt 241, 326 - 21 sqrt 241 and 326 + 21 sqrt 241 of B (a basis of the {2,3,5}-units
+    of B modulo squares; E is the maximal elementary abelian 2-extension of B unramified outside 2, 3,
+    5 and the infinite places). Hypothesis (H) is one displayed numerical inequality for the Dedekind
+    zeta function of E: log(Re zeta_E(1 + 1/300))/512 + (1/300)((L - gamma - log(4 pi))/4 - Re((zeta_E''/zeta_E)(2))/512)
+    < 852/10000, where L = (9/4) log 2 + (1/2) log 3615 and gamma is Euler''s constant. The compared theorem
+    proves that (H) implies the existence of finite sets U_j in the plane with |U_j| -> infinity such
+    that the number of unordered pairs of points of U_j at distance one, divided by |U_j|^(10427/10000),
+    tends to infinity. The exponent is exactly 10427/10000 = 1.0427. The conclusion is a sequence statement
+    only; no bound at every sufficiently large cardinality is asserted. The infinite pro-2 tower over
+    B (generators, relation bound, presentation, Golod-Shafarevich infinitude, local data), its retained
+    field and growing Galois fields, the root-discriminant bound, the passage from (H) to the analytic
+    ceiling, the numerical margin and the planar construction are proved in Lean over Mathlib; (H) itself
+    is not proved. Outside Lean, a rigorous computation (certified approximate functional equations for
+    the 255 quadratic Hecke L-functions of E/B and an Euler product with explicit tail) bounds the left
+    side of (H) by 0.0848336; that computation is not part of the formal proof.'
+  authors:
+  - Eric Naslund
+  responsible_maintainers:
+  - Eric Naslund
+  license: Apache-2.0
+classification:
+  arxiv:
+  - math.CO
+  - math.NT
+  msc2020:
+  - 52C10
+  - 11R37
+  - 20C05
+sources:
+- title: A tower over Q(sqrt 241) and the exponent 1.04273 (research note)
+  authors:
+  - Eric Naslund
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/tree/d1b7a7c488cf95d0b5ae67459fa7b8494de3170e/papers/0.04273
+  type: research note
+  location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.04273/ at the cited commit
+    (research/construction.md, certificates/, research/review-20260929.md). The source archive includes
+    these materials under docs/quadratic-base-research/.'
+  relationship: adapts
+  note: 'Research note (not yet a self-contained manuscript) for the tower over Q(sqrt 241): construction,
+    analytic ceiling via the genus field, geometric margin and certified replay. It claims 1.04273 unconditionally
+    by a computer-assisted certificate; the formalization proves the exponent 1.0427 conditional on the
+    displayed hypothesis (H). Three independent AI referee reviews reported no mathematical error within
+    their stated scopes. It is an unrefereed research note produced with AI tools under Eric Naslund''s
+    direction, published in the repository cited above; it is not a peer-reviewed publication. His role
+    as directing author and responsible maintainer does not assert human proof review. No registry action
+    is claimed by this metadata.'
+- title: A lower exponent of 1.0418235 for planar unit distances
+  authors:
+  - Eric Naslund
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/d1b7a7c488cf95d0b5ae67459fa7b8494de3170e/papers/0.0418235/main.tex
+  type: paper
+  location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.0418235/ at the cited commit
+    (first published in enaslund/unit-distance-bound-0.0418 at f6139fc7). Exported formalization package:
+    docs/manuscript/; especially sections/tower.tex, analytic.tex, geometry.tex and finite-windows.tex'
+  relationship: adapts
+  author_endorsement: participated
+  note: 'The manuscript''s construction over Q and its conditional formalization (exponent 1.0418235,
+    in the same repository) are the templates that this development adapts to the base Q(sqrt 241): the
+    tower (sections/tower.tex), the analytic transfer (analytic.tex) and the geometric construction (geometry.tex,
+    finite-windows.tex) are reused with new data. The manuscript is an unrefereed preprint written with
+    AI tools under the owner''s direction. The inherited participated value records the author''s directing
+    role in that development; it does not assert owner proof review or authorize a new remote action.'
+- title: An explicit lower bound for the unit distance problem
+  authors:
+  - Will Sawin
+  id: arXiv:2605.20579v1
+  type: paper
+  relationship: background
+  note: Explicit unconditional unit-distance exponent from number fields with controlled discriminants
+    and small primes. The manuscript refines this mechanism. Context only; not an input to the Lean proof.
+- title: Remarks on the disproof of the unit distance conjecture
+  authors:
+  - Noga Alon
+  - Thomas F. Bloom
+  - W. T. Gowers
+  - Daniel Litt
+  - Will Sawin
+  - Arul Shankar
+  - Jacob Tsimerman
+  - Victor Wang
+  - Melanie Matchett Wood
+  id: arXiv:2605.20695v1
+  type: paper
+  relationship: background
+  note: Exposition of the arithmetic approach to power-law unit-distance lower bounds. Context only; not
+    an input to the Lean proof.
+- title: Optimizing Explicit Unit-Distance Lower-Bound Certificates
+  authors:
+  - Michael T. M. Emmerich
+  id: arXiv:2606.03419
+  type: paper
+  relationship: background
+  note: Reoptimizes Sawin's explicit certificate; context for explicit unconditional unit-distance exponents.
+    Cited as background by the manuscript; not an input to the Lean proof.
+- title: What is the unit distance exponent? (MathOverflow question 511514) and the answer by Eric Naslund
+  authors:
+  - Eric Naslund
+  contributors:
+  - name: Dustin G. Mixon
+    role: question-poser
+  id: https://mathoverflow.net/q/511514
+  type: web discussion
+  location: https://mathoverflow.net/a/511576
+  relationship: background
+  note: The manuscript's introduction cites this answer as the origin of its refinement of Sawin's construction.
+    It is an informal, unrefereed forum post revised through June 2026. Context only; not an input to
+    the Lean proof.
+related_formalizations:
+- id: 'local-git:enaslund/unit-distance-bound@ed01a1ea90e59c61e13c0e8cdc7392a15db0979f:lean-formalization'
+  relationship: builds-on
+  note: 'The library of the verified conditional 1.0418235 package (Lean v4.35.0-rc2) is reused unchanged:
+    generic geometry, analysis, class field theory ports and pro-p machinery are imported; witness-dependent
+    modules are copied into UnitDistance/Sqrt241 with the new data (generator scripts in scripts/sqrt241/),
+    and the Q tower is rebuilt over Q(sqrt 241). This identifies the local research revision merged into
+    this branch. Its selected 1.0418235 archive passed two bounded full local runs; those passes do not
+    verify the new 1.0427 theorem. The 1.0418235 theorem remains in the same Lean project
+    (ChallengeZeta/SolutionZeta). Its public-layout candidate was prepared locally and remains
+    unpublished and unregistered; this 1.0427 package is the intended submission. No public identifier
+    for that formalization is asserted here.'
+- id: https://github.com/leanprover-community/mathlib4/tree/065356127b1dc0016f66b7283ce0ce2c4055aa55
+  relationship: builds-on
+  note: Matched dependency target for Lean v4.35.0-rc2, Apache-2.0. Exact selected-build and archive-verification
+    outcomes require receipts for the corresponding source and archive digests. Its own pinned dependencies
+    remain external public dependencies.
+- id: https://github.com/mathlib-initiative/sum_product/tree/80e4127a67742659d521466204c6d2d7e0ca2b3f
+  relationship: adapts
+  note: Formal Frontier Team, Apache-2.0. Its multidimensional Poisson summation module (DedekindZeta/PoissonSummation.lean)
+    is version-ported, with original copyright/license and explicit modification provenance, to UnitDistance/ThirdParty/PoissonSummation.lean;
+    the full source file compiled against the present pinned Mathlib, and PoissonBound derives translated
+    finite lattice bounds from actual dual Fourier tails. The ideal-series, geometric-product and factorization
+    sections of DedekindZeta/Statements.lean are ported into DedekindEuler, and selected trace-dual proofs
+    from DedekindZeta/Theta.lean into MinkowskiTrace; those two modules carry the sum_product adaptations
+    in this package. EulerBound.lean through its divisor-series theorem is ported into IdealCounting in
+    the research repository, but the IdealCounting port named in NOTICE is not in this package's selected
+    import closure. Original copyright and license are preserved and modifications and the new full Euler-product
+    assembly are recorded in docs/SUBMISSION_PROVENANCE.md and NOTICE. The whole upstream project was
+    not rebuilt; other code was audited at source level. Its field tower is an explicit hypothesis. License
+    retained under third-party/sum_product/LICENSE. No registration of that project is claimed.
+- id: https://github.com/CBirkbeck/AINTLIB/tree/a302aeacd86053f9d5f991fbbf664e1cc1051d08
+  relationship: adapts
+  note: Chris Birkbeck, Apache-2.0. Completed Dedekind zeta and explicit-formula foundations are ported
+    as an attributed source port under UnitDistance/Upstream/AINTLIB. Copyright, license, exact source
+    hashes and version modifications are recorded in third-party/aintlib. Completed zeta continuation
+    and functional equation are actual theorems; relative Hecke entireness is not assumed to follow.
+- id: https://github.com/n-yamaguchi-0729/SawinTotallyRealTowers/tree/3a455e1aa9140dbbe7b7d68f508392a69c86d0f4
+  relationship: adapts
+  note: Naganori Yamaguchi, Apache-2.0. Selected profinite presentations and continuous pro-p cohomology
+    are imported under UnitDistance/Upstream/Yamaguchi, retaining original declaration namespaces and
+    mathematical statements. The selected archive inventory records which files of the larger historical
+    port are shipped. License, original/local source hashes, compatibility patches and dated verification
+    scope are in third-party/yamaguchi. Historical build and imported-axiom-query records retain their
+    original scope and are not a verifier result for the new theorem. New local arithmetic proofs assemble
+    the seven-relation bound over Q(sqrt 241) and the growing field family; those conclusions are not
+    supplied as upstream assumptions.
+- id: https://github.com/logical-intelligence/erdos-unit-distance/tree/b6493074dd103ca32ea4f5e9b0bc9cb3a0379f2e
+  relationship: adapts
+  note: Erdős unit-distance formalization contributors, Apache-2.0. Selected openNormalChain and fixed-field
+    construction proofs from ErdosUnitDistance/Internal/ClassFieldTheory/Witness.lean are adapted in ProfiniteQuotientTower
+    and GaloisQuotientTower. License, NOTICE, hashes and modifications are retained under third-party/erdos-unit-distance.
+    The whole upstream project was not rebuilt. No upstream arithmetic tower or headline theorem is assumed;
+    its unspecified-exponent theorem and explicit odd-prime Shafarevich and Golod-Shafarevich inputs do
+    not supply the present dyadic tower. No registration of that project is claimed.
+- id: https://github.com/alejandrozu/RiemannHypothesis-Formalization/tree/753938937e624d1c8bbe4c208517660a672d1b8e
+  relationship: adapts
+  note: Tristen Harr, Apache-2.0. Twelve generic entire-function and canonical Hadamard product modules
+    and a selected negation-pairing section are ported, with original headers and exact provenance under
+    third-party/entire-hadamard. No xi-specific module or Riemann Hypothesis assumption is imported. New
+    local compositions derive paired-product monotonicity from actual entire divisor, summability and
+    growth data.
+- id: https://github.com/kim-em/erdos-unit-distance-comparator/tree/6f54548da16c3f243d7e300716795906b955271a
+  relationship: independent
+  note: Registered in the Palomar registry as PALOMAR-2026-08-08-000001 (2026-08-08); a Comparator wrapper
+    for the library kim-em/erdos-unit-distance at 34b4587bbd0740efb9c06a519a8ee14a3eff8cd7. It proves
+    the uniform-constant form of the disproof of the Erdős unit-distance conjecture (for every C > 0,
+    arbitrarily large n admit n-point planar sets with more than n^(1 + C/log log n) unit-distance pairs),
+    a different and weaker statement than the fixed exponent here. No code or theorem from it is used.
+- id: https://github.com/plby/Erdos90
+  relationship: independent
+  note: Independent Lean formalization of the fixed-power (unspecified-exponent) planar unit-distance
+    statement, as described in the Palomar record PALOMAR-2026-08-08-000001. No code or theorem from it
+    is used, and no comparison of exponents is claimed.
+status:
+  scope: 'Exact planar sequence theorem at exponent 10427/10000 conditional on one displayed genus-field
+    zeta/logarithmic-derivative inequality with ceiling 852/10000. The conditional implication is the
+    selected result and H remains unproved. Candidate 4 of this development (research commit
+    697c3cd7801431d594c01785f2b3e88dd248576d) passed the complete pinned local pipeline under the
+    16-CPU/32-GiB profile. The present sources add proof-internal certificate splits for the
+    4-CPU/16-GiB profile; con-ron, NanoDa and the Lean kernel each accepted their Solution export
+    within 4 CPUs and 16 GiB, and imported axiom queries over the 57,394 project and 32 submission
+    declarations of the closure report only the three permitted axioms. Imported collectAxioms queries
+    on Lean 4.35.0-rc2 have the limitation documented by Lean issue 15226; they are reported query
+    results rather than an independent exhaustive axiom audit. This archive needs its own complete
+    verification; no earlier result establishes that run or proves H. The axiom lists below specify
+    the selected permitted policy. The archive also contains the earlier conditional theorem at
+    exponent 2083647/2000000 (ChallengeZeta/SolutionZeta, comparator-zeta.json, formalization-zeta.yaml)
+    as an unselected companion. See README.md for the current verification state and
+    docs/sqrt241/SUBMISSION.md for the development account.'
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Quot.sound
+  - Classical.choice
+  main_results:
+  - declaration: UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound
+    file: SolutionZeta241.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Quot.sound
+    - Classical.choice
+    comparator_config: comparator-zeta241.json
+automation:
+  methods:
+  - method: autonomous
+    models:
+    - Claude Opus 5.5
+    framework: Claude Code
+    tool_setup: 'Session of 2026-09-29 under the owner''s direction: one Claude Opus 5.5 coordinator with
+      parallel Claude subagents (fresh task context), each owning a work package (numerics, geometric
+      port, genus field and analytic bridge, base field, relation bound, bridge/generators/presentation,
+      local maps, group data/cut, retained field/levels, root discriminant) and two independent fresh-context
+      reviews (statement, code). Lean v4.35.0-rc2 and Mathlib 065356127b1dc0016f66b7283ce0ce2c4055aa55,
+      incremental on the verified integration build; no native_decide; finite certificates checked by
+      decide +kernel; generators in scripts/sqrt241/. Later that day, a subagent split the pair-mass and
+      four group-data certificates so that con-ron, NanoDa and the Lean kernel fit 4 CPUs and 16 GiB, and
+      the coordinator merged this work with the candidate-4 verification and reorganized the repository.'
+    prompting_notes: Formalize the new 1.0427 bound until the formalization is as complete as the conditional
+      1.0418235 package, suitable for a Palomar submission; preserve the verified package; no remote publication
+      or submission.
+    cost:
+      spend_usd: not available to the agent
+  - method: autonomous
+    framework: Codex
+    tool_setup: >-
+      September 29 local verification preparation under Eric Naslund's direction:
+      separate agents inspect source scope, prepare a theorem-specific deterministic
+      archive, and correct metadata for the pinned official loader. The existing
+      trusted Lean v4.35.0-rc2 runtime and unchanged PalomarSubmission revision
+      65f0154ed776cd26c224254aa57b379137f28b0d are reused for local verification.
+      Source intake required a module-system repair of the auxiliary analysis
+      utility, with byte-identical analysis output. A subsequent NanoDa memory
+      failure was isolated to the dyadic certificate's eightfold multiplication
+      proof. That proof now uses explicit intermediate powers, separately
+      checked multiplication identities, congruence and transitivity. Its public
+      statement, original model data, final theorem and explicit hypothesis are
+      unchanged. New execution results are identified by their source archive
+      and separate receipts.
+    prompting_notes: >-
+      Fully verify the merged sqrt241 conditional theorem locally, preserve the
+      existing proofs and historical evidence, and use accurate provenance without
+      publication, registry submission or new owner endorsement claims.
+  notes: >-
+    Lean proof development, supporting generators and documentation were produced
+    with AI tools under Eric Naslund's direction. Earlier contributions and
+    attributed ports remain credited in NOTICE and the inherited provenance files.
+    Responsible authorship here identifies the directing owner, not manual proof
+    authorship or human proof verification.
+fidelity:
+  divergences: >-
+    The research note's externally computer-assisted exponent is 1.04273. This
+    formalization proves the sequence implication at exact exponent 10427/10000
+    = 1.0427 from one explicit numerical inequality on the independently defined
+    degree-512 genus field. That inequality remains unproved in Lean. Ordinary
+    Euclidean distance, unordered unit pairs and both sequence limits are retained;
+    no conclusion for every sufficiently large cardinality is asserted.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: >-
+    Earlier fresh-context AI reviews of the statement and code reported no blocking
+    issue within their scopes, recorded in docs/sqrt241/REVIEWS.md. The retained
+    239-module leanchecker log is distinct from protected-export comparison,
+    export-based axiom checks, con-ron and NanoDa. The new full local verification
+    has its own archive-bound terminal report. No human peer review, owner proof
+    review, official Palomar report, editorial acceptance, publication, registration
+    or proof of H is claimed by this metadata.
+alignment:
+  namespace: UnitDistanceSqrt241Submission
+  statements:
+  - source: 'Quadratic-base research construction: ordinary planar sequence and unordered unit pairs'
+    lean: UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound
+    module: SolutionZeta241
+    status: adapted

@@ -1,0 +1,147 @@
+--- upstream/SawinTotallyRealTowers/RealProPOpenNormalStage.lean
++++ UnitDistance/ProPOpenNormalStage.lean
+@@ -1,12 +1,19 @@
+-import SawinTotallyRealTowers.MaximalRealProPOutside
++/-
++Adapted from Naganori Yamaguchi, SawinTotallyRealTowers, commit
++3a455e1aa9140dbbe7b7d68f508392a69c86d0f4, under Apache-2.0.
++Source: SawinTotallyRealTowers/RealProPOpenNormalStage.lean.
++Modified: actual finite-stage construction for the maximal pro-p extension
++with unrestricted infinite places, using the proved complex-extension adapter.
++-/
++import UnitDistance.MaximalProPOutside
+ import Mathlib.FieldTheory.Galois.Infinite
+ import Mathlib.FieldTheory.Galois.GaloisClosure
+-import ProCGroups.Profinite.OpenSubgroups
++import UnitDistance.Upstream.Yamaguchi.ProCGroups.Profinite.OpenSubgroups
+ 
+ set_option autoImplicit false
+ 
+ /-!
+-# Finite arithmetic stages of the real pro-p compositum
++# Finite arithmetic stages of the pro-p compositum
+ 
+ An open normal subgroup determines an actual finite Galois fixed field.
+ Lifting it to the chosen algebraic closure gives an admissible finite layer.
+@@ -21,7 +28,7 @@
+ 
+ universe u v
+ 
+-namespace ClassFieldTower.Sawin
++namespace UnitDistance.ArithmeticProP
+ 
+ /-- The finite Galois fixed field supplied by an open normal subgroup. -/
+ def openNormalFiniteGaloisField
+@@ -74,19 +81,19 @@
+   rw [InfiniteGalois.normalAutEquivQuotient_apply]
+   exact AlgEquiv.restrictNormalHom_apply (IntermediateField.fixedField Uc.toSubgroup) σ x
+ 
+-private local instance realCompositumGalois
++private local instance compositumGalois
+     (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ))) :
+-    IsGalois ℚ (maximalRealProPOutside p T) := maximalRealProPOutside_isGalois p T
++    IsGalois ℚ (maximalProPOutside p T) := maximalProPOutside_isGalois p T
+ 
+ /-- The concrete arithmetic layer attached to an open normal subgroup of the
+-maximal real compositum. Its local conditions follow from containment. -/
+-def realProPOpenNormalStage
++maximal compositum. Its local conditions follow from containment. -/
++def proPOpenNormalStage
+     (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (U : OpenNormalSubgroup
+-      (maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T)) :
+-    FiniteRealPExtension p T := by
+-  let L : FiniteGaloisIntermediateField ℚ (maximalRealProPOutside p T) :=
+-    openNormalFiniteGaloisField ℚ (maximalRealProPOutside p T) U
++      (maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T)) :
++    FinitePExtension p T := by
++  let L : FiniteGaloisIntermediateField ℚ (maximalProPOutside p T) :=
++    openNormalFiniteGaloisField ℚ (maximalProPOutside p T) U
+   let e : L.toIntermediateField ≃ₐ[ℚ] IntermediateField.lift L.toIntermediateField :=
+     IntermediateField.liftAlgEquiv L.toIntermediateField
+   letI : IsGalois ℚ L.toIntermediateField := L.isGalois
+@@ -94,57 +101,57 @@
+     { toIntermediateField := IntermediateField.lift L.toIntermediateField
+       finiteDimensional := e.toLinearEquiv.finiteDimensional
+       isGalois := IsGalois.of_algEquiv e }
+-  exact ⟨D, (isAdmissibleFiniteLayer_iff_le_maximalRealProPOutside p T D).mpr
++  exact ⟨D, (isAdmissibleFiniteLayer_iff_le_maximalProPOutside p T D).mpr
+     (IntermediateField.lift_le L.toIntermediateField)⟩
+ 
+ /-- The stage is the lift of the finite fixed field, with no auxiliary choice. -/
+-theorem realProPOpenNormalStage_field
++theorem proPOpenNormalStage_field
+     (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (U : OpenNormalSubgroup
+-      (maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T)) :
+-    (realProPOpenNormalStage p T U).val.toIntermediateField =
++      (maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T)) :
++    (proPOpenNormalStage p T U).val.toIntermediateField =
+       IntermediateField.lift
+         (IntermediateField.fixedField
+           (U : Subgroup
+-            (maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T))) := rfl
++            (maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T))) := rfl
+ 
+ /-- The quotient group is the Galois group of the constructed admissible layer. -/
+-def realProPOpenNormalQuotientEquivStage
++def proPOpenNormalQuotientEquivStage
+     (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (U : OpenNormalSubgroup
+-      (maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T)) :
+-    ((maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T) ⧸
++      (maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T)) :
++    ((maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T) ⧸
+       (U : Subgroup
+-        (maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T))) ≃*
+-      ((realProPOpenNormalStage p T U).val ≃ₐ[ℚ] (realProPOpenNormalStage p T U).val) := by
+-  let L : FiniteGaloisIntermediateField ℚ (maximalRealProPOutside p T) :=
+-    openNormalFiniteGaloisField ℚ (maximalRealProPOutside p T) U
+-  exact (openNormalQuotientEquivFiniteGaloisField ℚ (maximalRealProPOutside p T) U).trans
++        (maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T))) ≃*
++      ((proPOpenNormalStage p T U).val ≃ₐ[ℚ] (proPOpenNormalStage p T U).val) := by
++  let L : FiniteGaloisIntermediateField ℚ (maximalProPOutside p T) :=
++    openNormalFiniteGaloisField ℚ (maximalProPOutside p T) U
++  exact (openNormalQuotientEquivFiniteGaloisField ℚ (maximalProPOutside p T) U).trans
+     (AlgEquiv.autCongr (IntermediateField.liftAlgEquiv L.toIntermediateField))
+ 
+ /-- The quotient action on the arithmetic stage is the restriction of the
+ original automorphism, transported through the canonical lift. -/
+-theorem realProPOpenNormalQuotientEquivStage_apply
++theorem proPOpenNormalQuotientEquivStage_apply
+     (p : ℕ) (T : Set (HeightOneSpectrum (𝓞 ℚ)))
+     (U : OpenNormalSubgroup
+-      (maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T))
+-    (σ : maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T)
+-    (x : (realProPOpenNormalStage p T U).val) :
+-    ((realProPOpenNormalQuotientEquivStage p T U
++      (maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T))
++    (σ : maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T)
++    (x : (proPOpenNormalStage p T U).val) :
++    ((proPOpenNormalQuotientEquivStage p T U
+       (QuotientGroup.mk' (U : Subgroup
+-        (maximalRealProPOutside p T ≃ₐ[ℚ] maximalRealProPOutside p T)) σ) x :
+-          (realProPOpenNormalStage p T U).val) : AlgebraicClosure ℚ) =
++        (maximalProPOutside p T ≃ₐ[ℚ] maximalProPOutside p T)) σ) x :
++          (proPOpenNormalStage p T U).val) : AlgebraicClosure ℚ) =
+       (σ ⟨(x : AlgebraicClosure ℚ),
+-        le_maximalRealProPOutside (realProPOpenNormalStage p T U) x.property⟩ :
++        le_maximalProPOutside (proPOpenNormalStage p T U) x.property⟩ :
+           AlgebraicClosure ℚ) := by
+-  let L : FiniteGaloisIntermediateField ℚ (maximalRealProPOutside p T) :=
+-    openNormalFiniteGaloisField ℚ (maximalRealProPOutside p T) U
++  let L : FiniteGaloisIntermediateField ℚ (maximalProPOutside p T) :=
++    openNormalFiniteGaloisField ℚ (maximalProPOutside p T) U
+   let e : L.toIntermediateField ≃ₐ[ℚ] IntermediateField.lift L.toIntermediateField :=
+     IntermediateField.liftAlgEquiv L.toIntermediateField
+   change (e ((openNormalQuotientEquivFiniteGaloisField ℚ
+-    (maximalRealProPOutside p T) U σ) (e.symm x)) : AlgebraicClosure ℚ) = _
++    (maximalProPOutside p T) U σ) (e.symm x)) : AlgebraicClosure ℚ) = _
+   have hAction := openNormalQuotientEquivFiniteGaloisField_apply ℚ
+-    (maximalRealProPOutside p T) U σ (e.symm x)
+-  exact congrArg (fun y : maximalRealProPOutside p T ↦ (y : AlgebraicClosure ℚ)) hAction
++    (maximalProPOutside p T) U σ (e.symm x)
++  exact congrArg (fun y : maximalProPOutside p T ↦ (y : AlgebraicClosure ℚ)) hAction
+ 
+-end ClassFieldTower.Sawin
++end UnitDistance.ArithmeticProP

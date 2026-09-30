@@ -1,0 +1,205 @@
+--- upstream/SawinTotallyRealTowers/RealProTwoH2Bound.lean
++++ UnitDistance/MaximalSigmaH2Reduction.lean
+@@ -1,19 +1,24 @@
+-import SawinTotallyRealTowers.SixPrimeSupport
+-import SawinTotallyRealTowers.FiniteKummerContinuousKernel
+-import SawinTotallyRealTowers.RealProPOpenNormalStage
+-import SawinTotallyRealTowers.MaximalRealProPOutside
+-import SawinTotallyRealTowers.RealProTwoH2AbsoluteKernel
+-import SawinTotallyRealTowers.RealProPStageRestriction
+-import SawinTotallyRealTowers.RealProPStageLocalConditions
+-import SawinTotallyRealTowers.MaximalRealProPGroup
+-import SawinTotallyRealTowers.SixPrimeFiniteSupport
+-import SawinTotallyRealTowers.UnramifiedProPRelationRank.Kummer.FiniteKummerSPlaceCardinality
+-import GaloisCohomology.ProP.TrivialZModP
+-import GaloisCohomology.ProP.H2FiniteStageFamily
+-import GaloisCohomology.ProP.H2InflationRangeCardinality
+-import GaloisCohomology.ProP.PresentationQuotientEquiv
+-import GaloisCohomology.ProP.DiscreteH2Comparison
+-import GaloisCohomology.Kummer.FiniteKummerCoefficientH2
++/- Adapted from Yamaguchi/Sawin RealProTwoH2Bound at commit
++3a455e1aa9140dbbe7b7d68f508392a69c86d0f4 (Apache-2.0). The actual maximal
++extension allows complex places; the finite image bound is supplied by the
++proved rational finite-place detector, not an infinite-unramified premise.
++Private conditional reduction: the cyclic detection and actual stage-kernel
++inclusion are explicit inputs, to be discharged by the separate arithmetic proofs. -/
++import UnitDistance.SigmaPrimeSupport
++import UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.FiniteKummerContinuousKernel
++import UnitDistance.ProPOpenNormalStage
++import UnitDistance.MaximalProPOutside
++import UnitDistance.ProPStageRestriction
++import UnitDistance.ProPStageLocalConditions
++import UnitDistance.MaximalProPGroup
++import UnitDistance.SigmaFinitePrimeSupport
++import UnitDistance.RationalFiniteKummerReduction
++import UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.TrivialZModP
++import UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.H2FiniteStageFamily
++import UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.H2InflationRangeCardinality
++import UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.PresentationQuotientEquiv
++import UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.DiscreteH2Comparison
++import UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.FiniteKummerCoefficientH2
+ import Mathlib.Algebra.Module.Submodule.Range
+ import Mathlib.NumberTheory.NumberField.Basic
+ import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+@@ -24,9 +29,10 @@
+ set_option autoImplicit false
+ 
+ /-!
+-# Six-dimensional degree two for the initial real pro-two group
++# Six-dimensional degree two for the initial pro-two group
+ 
+-At every actual finite arithmetic stage the field-unit Kummer image has
++Under the two explicitly supplied arithmetic inputs, at every actual
++finite arithmetic stage the field-unit Kummer image has
+ at most 64 elements. Its kernel is killed by inflation to the constructed
+ maximal group. Discrete comparison and the finite-stage Galois equivalence
+ therefore give a surjection from that Kummer image onto the stage inflation
+@@ -39,9 +45,9 @@
+ 
+ noncomputable section
+ 
+-namespace ClassFieldTower.Sawin
++namespace UnitDistance.ArithmeticProP
+ 
+-open ClassFieldTower.Cohomology ClassFieldTower.ProP
++open ClassFieldTower.Cohomology ClassFieldTower.ProP ClassFieldTower.Sawin
+ open ClassFieldTower.Martinet.Shafarevich ProCGroups ProCGroups.ProC
+ 
+ private theorem natCard_le_range_of_ker_le
+@@ -56,39 +62,49 @@
+     (hq.comp e.surjective)
+ 
+ private theorem initialStage_inflationRange_natCard_le
++    (hcyc : ImaginaryFieldUnitsFiniteDetection)
++    (hkernel : ∀ (U : OpenNormalSubgroup
++      (maximalProPOutside 2 sigmaPrimeSupport ≃ₐ[ℚ]
++        maximalProPOutside 2 sigmaPrimeSupport))
++      (hmu : (primitiveRoots 2 ℚ).Nonempty),
++      (finiteKummerContinuousH2Map ℚ (2 : ℕ+)
++        (proPOpenNormalStage 2 sigmaPrimeSupport U).val hmu).ker ≤
++      (continuousCohomologyZModPMapLifted 2
++        (proPOpenNormalStageRestriction 2 sigmaPrimeSupport U) 2).hom.toLinearMap.toAddMonoidHom.ker)
+     (U : OpenNormalSubgroupInClass (FiniteGroupClass.pGroup 2)
+-      (maximalRealProPOutside 2 sawinRationalPrimeSupport ≃ₐ[ℚ]
+-        maximalRealProPOutside 2 sawinRationalPrimeSupport)) :
++      (maximalProPOutside 2 sigmaPrimeSupport ≃ₐ[ℚ]
++        maximalProPOutside 2 sigmaPrimeSupport)) :
+     Nat.card (degreeTwoInflationRange (p := 2) U) ≤ 2 ^ 6 := by
+-  let T := sawinRationalPrimeSupport
+-  let M : IntermediateField ℚ (AlgebraicClosure ℚ) := maximalRealProPOutside 2 T
++  let T := sigmaPrimeSupport
++  let M : IntermediateField ℚ (AlgebraicClosure ℚ) := maximalProPOutside 2 T
+   let G : Type := M ≃ₐ[ℚ] M
+   let E : FiniteGaloisIntermediateField ℚ (AlgebraicClosure ℚ) :=
+-    (realProPOpenNormalStage 2 T U.1).val
+-  let : IsGalois ℚ M := maximalRealProPOutside_isGalois 2 T
++    (proPOpenNormalStage 2 T U.1).val
++  let : IsGalois ℚ M := maximalProPOutside_isGalois 2 T
+   let : NumberField E := NumberField.of_module_finite ℚ E
+   let : IsGalois ℚ E.toIntermediateField := E.isGalois
+   have hThree : (Rat.HeightOneSpectrum.primesEquiv (R := 𝓞 ℚ)).symm
+       (⟨3, Nat.prime_three⟩ : Nat.Primes) ∈ T := by
+-    apply (rationalPrime_mem_sawinRationalPrimeSupport_iff _).mpr
++    change (Rat.HeightOneSpectrum.primesEquiv
++      ((Rat.HeightOneSpectrum.primesEquiv (R := 𝓞 ℚ)).symm
++        (⟨3, Nat.prime_three⟩ : Nat.Primes)) : ℕ) ∈ sigmaRationalPrimes
++    rw [Equiv.apply_symm_apply]
+     decide
+   have hmu : (primitiveRoots 2 ℚ).Nonempty :=
+     ⟨-1, (mem_primitiveRoots (by decide : 0 < 2)).mpr
+       (IsPrimitiveRoot.neg_one 0 (by decide))⟩
+   let f := (finiteKummerCoefficientH2Map ℚ E (2 : ℕ+) hmu).hom.toAddMonoidHom
+-  have hfield := finiteKummerCoefficientH2Map_range_finite_natCard_le_of_unramified_outside
+-    ℚ E sawinFinitePrimeSupport (2 : ℕ+) hmu
+-    (realProPOpenNormalStage 2 T U.1).property.1
++  have hfield := rationalFiniteKummerH2_range_finite_natCard_le_of_imaginary_detection
++    E hcyc sigmaFinitePrimeSupport hmu
++    (proPOpenNormalStage 2 T U.1).property.1
+     (by
+       intro v hv
+-      exact finiteRealPExtension_chosenFinitePlaceIsUnramified 2 T
+-        (realProPOpenNormalStage 2 T U.1) v
+-        (fun h => hv ((mem_sawinFinitePrimeSupport_iff v).mpr h)))
+-    (finiteRealPExtension_chosenInfinitePlaceIsUnramified 2 T
+-      (realProPOpenNormalStage 2 T U.1))
++      exact finitePExtension_chosenFinitePlaceIsUnramified 2 T
++        (proPOpenNormalStage 2 T U.1) v
++        (fun h => hv ((mem_sigmaFinitePrimeSupport_iff v).mpr h)))
+   let : Finite f.range := hfield.1
+   let e : (G ⧸ (U.1 : Subgroup G)) ≃ₜ* Gal(E/ℚ) :=
+-    realProPOpenNormalQuotientContinuousEquivStage 2 T U.1
++    proPOpenNormalQuotientContinuousEquivStage 2 T U.1
+   let he : continuousCohomologyZModPLifted 2 Gal(E/ℚ) 2 ≃ₗ[ZMod 2]
+       continuousCohomologyZModPLifted 2 (G ⧸ (U.1 : Subgroup G)) 2 :=
+     continuousCohomologyZModPLiftedLinearEquiv e 2
+@@ -101,10 +117,10 @@
+       (OpenNormalSubgroupInClass.quotientProj U) 2).hom.toLinearMap
+   have hMap (x : continuousCohomologyZModPLifted 2 Gal(E/ℚ) 2) :
+       I (he x) = (continuousCohomologyZModPMapLifted 2
+-        (realProPOpenNormalStageRestriction 2 T U.1) 2).hom x := by
++        (proPOpenNormalStageRestriction 2 T U.1) 2).hom x := by
+     let eHom : (G ⧸ (U.1 : Subgroup G)) →ₜ* Gal(E/ℚ) := e
+     have hDef : eHom.comp (OpenNormalSubgroupInClass.quotientProj U) =
+-        realProPOpenNormalStageRestriction 2 T U.1 := by rfl
++        proPOpenNormalStageRestriction 2 T U.1 := by rfl
+     have h := continuousCohomologyZModPMapLifted_comp 2 eHom
+       (OpenNormalSubgroupInClass.quotientProj U) 2
+     rw [hDef] at h
+@@ -118,32 +134,41 @@
+     have hc : (finiteKummerContinuousH2Map ℚ (2 : ℕ+) E hmu) (dc.symm x) = 0 := by
+       change f (dc (dc.symm x)) = 0
+       exact (congrArg f (dc.apply_symm_apply x)).trans hx
+-    have hzero := finiteKummerContinuousH2Map_ker_le_realProPStageInflation_ker
+-      T hThree U.1 hmu hc
++    have hzero := hkernel U.1 hmu hc
+     apply Subtype.ext
+     change I (he (dc.symm x)) = 0
+     exact (hMap _).trans hzero
+   have hcard : Nat.card I.range ≤ Nat.card f.range :=
+     natCard_le_range_of_ker_le f g hker hg
+-  have hfcard : Nat.card f.range ≤ 2 ^ sawinFinitePrimeSupport.card := hfield.2
+-  rw [sawinFinitePrimeSupport_card] at hfcard
++  have hfcard : Nat.card f.range ≤ 2 ^ sigmaFinitePrimeSupport.card := hfield.2
++  rw [sigmaFinitePrimeSupport_card] at hfcard
+   exact hcard.trans hfcard
+ 
+-/-- The initial maximal real pro-two group has finite continuous H²,
+-and its dimension over F₂ is at most six. -/
+-theorem sawinInitialProTwoH2_finiteDimensional_finrank_le :
++/-- The two stated arithmetic inputs imply finite continuous H² of the
++actual maximal group and dimension at most six. -/
++theorem maximalSigmaProTwoH2_finiteDimensional_finrank_le_of_finite_inputs
++    (hcyc : ImaginaryFieldUnitsFiniteDetection)
++    (hkernel : ∀ (U : OpenNormalSubgroup
++      (maximalProPOutside 2 sigmaPrimeSupport ≃ₐ[ℚ]
++        maximalProPOutside 2 sigmaPrimeSupport))
++      (hmu : (primitiveRoots 2 ℚ).Nonempty),
++      (finiteKummerContinuousH2Map ℚ (2 : ℕ+)
++        (proPOpenNormalStage 2 sigmaPrimeSupport U).val hmu).ker ≤
++      (continuousCohomologyZModPMapLifted 2
++        (proPOpenNormalStageRestriction 2 sigmaPrimeSupport U) 2).hom.toLinearMap.toAddMonoidHom.ker)
++    :
+     FiniteDimensional (ZMod 2)
+       (continuousCohomologyZModPLifted 2
+-        (maximalRealProPOutside 2 sawinRationalPrimeSupport ≃ₐ[ℚ]
+-          maximalRealProPOutside 2 sawinRationalPrimeSupport) 2) ∧
++        (maximalProPOutside 2 sigmaPrimeSupport ≃ₐ[ℚ]
++          maximalProPOutside 2 sigmaPrimeSupport) 2) ∧
+     Module.finrank (ZMod 2)
+       (continuousCohomologyZModPLifted 2
+-        (maximalRealProPOutside 2 sawinRationalPrimeSupport ≃ₐ[ℚ]
+-          maximalRealProPOutside 2 sawinRationalPrimeSupport) 2) ≤ 6 := by
+-  let : IsGalois ℚ (maximalRealProPOutside 2 sawinRationalPrimeSupport) :=
+-    maximalRealProPOutside_isGalois 2 sawinRationalPrimeSupport
++        (maximalProPOutside 2 sigmaPrimeSupport ≃ₐ[ℚ]
++          maximalProPOutside 2 sigmaPrimeSupport) 2) ≤ 6 := by
++  let : IsGalois ℚ (maximalProPOutside 2 sigmaPrimeSupport) :=
++    maximalProPOutside_isGalois 2 sigmaPrimeSupport
+   exact finiteDimensional_and_finrank_degree_two_le_of_inflationRange_natCard 6
+-    (maximalRealProPOutside_galoisGroup_hasPGroupOpenNormalBasis
+-      2 sawinRationalPrimeSupport) initialStage_inflationRange_natCard_le
++    (maximalProPOutside_galoisGroup_hasPGroupOpenNormalBasis
++      2 sigmaPrimeSupport) (initialStage_inflationRange_natCard_le hcyc hkernel)
+ 
+-end ClassFieldTower.Sawin
++end UnitDistance.ArithmeticProP

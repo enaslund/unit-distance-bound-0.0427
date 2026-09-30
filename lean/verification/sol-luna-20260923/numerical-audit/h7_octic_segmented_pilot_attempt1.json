@@ -1,0 +1,41 @@
+{
+  "status": "FAIL segmented C++ process",
+  "mode": "pilot",
+  "sector_mask": 1824,
+  "twist": 1,
+  "conductor": 208190684989647360000,
+  "N_checked": 39746,
+  "bins_requested": 256,
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O3",
+    "-I/tmp/unit-distance-deps/usr/include",
+    "-I/tmp/unit-distance-deps/usr/include/x86_64-linux-gnu",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/h7_octic_segmented.cpp",
+    "-L/tmp/unit-distance-deps/usr/lib/x86_64-linux-gnu",
+    "-Wl,-rpath,/tmp/unit-distance-deps/usr/lib/x86_64-linux-gnu",
+    "-lgmpxx",
+    "-lgmp",
+    "-o",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/h7-octic-segmented-r0ejwq8h/h7_octic_segmented"
+  ],
+  "binary_sha256": "b45ce3cc7d7ff4a0e8058975c9ec502d3b738e36dedb24b486ef7eacb5ed2a2d",
+  "returncode": -6,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_prefix": "",
+  "stderr": "h7_octic_segmented: /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/h7_octic_segmented.cpp:108: int main(int, char**): Assertion `row.mask==1824 && row.Q==mpz_class(\"208190684989647360000\")' failed.\n",
+  "compiler_stdout": "",
+  "compiler_stderr": "In file included from /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/h7_octic_segmented.cpp:5:\n/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/../../../../publication/nonabelian-dyadic-lower-bound/research/octic-sparse-moments.cpp: In function \u2018int frozen_sparse_main_unused(int, char**)\u2019:\n/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/../../../../publication/nonabelian-dyadic-lower-bound/research/octic-sparse-moments.cpp:157:1: warning: control reaches end of non-void function [-Wreturn-type]\n  157 | }\n      | ^\n",
+  "source_sha256": {
+    "lean-formalization/verification/sol-luna-20260923/numerical-audit/h7_octic_segmented_direct.py": "80a77de8c41a4f92f4fcd0bb9670dcdb6483fd9801d4be19212b4423ac1285da",
+    "publication/nonabelian-dyadic-lower-bound/research/octic-arithmetic-h7-274.json": "2c8d752f6206b6793b37d91ca9ad343b6c3c4ff92f61fed9ade9e307f0013836",
+    "publication/nonabelian-dyadic-lower-bound/research/h7-octic-moments-1824.json": "e61657ff8a8d112f1ac76941264bc74b98a2f30b8ed0d3c0fbf953a21b0f128d",
+    "publication/nonabelian-dyadic-lower-bound/research/h7-octic-moments.py": "429283aa8a909d554438da03c7c1edb6a4d62309809c4d0366c49ce9402d5e2c",
+    "publication/nonabelian-dyadic-lower-bound/research/octic-sparse-moments.cpp": "e886396848f72df09a78d3124de6cb1f08056dbdac644b630adf1354404bd755",
+    "publication/nonabelian-dyadic-lower-bound/research/octic-sparse-tail.py": "293ebc05500c0c8557f8bc76e3c8fd3b0b3857b440e3648866288ce45cf20e85",
+    "lean-formalization/verification/sol-luna-20260923/numerical-audit/h7_octic_segmented.cpp": "b771729669a1411a548ee0e9d223c4073776316f2bd838d7425c594d513b3cd0"
+  },
+  "metadata_sha256": "82c0fc1a9d0f9d72391d0b211771801fd42e6af41b7efb873f6609451839babe",
+  "bin_layout_sha256": "6529153b16272c961e80fcdb3d953948421edc0eb475fe61ad6e9a16ae760663"
+}

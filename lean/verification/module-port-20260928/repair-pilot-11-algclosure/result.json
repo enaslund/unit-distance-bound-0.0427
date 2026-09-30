@@ -1,0 +1,262 @@
+{
+  "inputs": {
+    "compiler": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "compiler_sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "LEAN_PATH": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/plausible/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/importGraph/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/aesop/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Qq/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/batteries/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Cli/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean",
+    "scope": "Single isolated header-only private-instance import repair. Existing compiled dependency artifacts read only, outputs separate. OneCPU2GiBzeroSwap;120s;8GiBhostguard. Concurrent focused pilot requires parent explicit clearance; no shared heavy lock wait.",
+    "variants": [
+      {
+        "name": "generic-algclosure-instance",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-11-algclosure/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-11-algclosure/source/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceAlgebraicLocalizationAlgClosure.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-11-algclosure/lib/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceAlgebraicLocalizationAlgClosure.olean",
+        "path": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceAlgebraicLocalizationAlgClosure.lean",
+        "original_sha256": "eb3148e7173d0487bb1cf8936886d2090862f56542fe9c4c02ac832f13b98f19",
+        "migrated_sha256": "85564244d9565569990978a335a85aea907dd41eea7ed18095e4643701a98b20",
+        "insertions": [
+          {
+            "offset": 818,
+            "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree\n"
+          }
+        ],
+        "added_imports": [
+          "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree"
+        ],
+        "added_options": []
+      }
+    ],
+    "direct_import_artifact_hashes": [
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/AlgebraicLocalizationTopology.olean",
+        "sha256": "c28320dfeb2e61a1fee52c77b460a2e85f074a7463c09ff7fc23c8ab8cdf0c49"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/AlgebraicLocalizationTopology.olean.private",
+        "sha256": "1ba5290356e06bc52b962fac02175f08a268992cc204432d1c7a9e778be812fb"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/AlgebraicLocalizationTopology.olean.server",
+        "sha256": "c8b70bc9983e6b2272b8ee127f2fef14134d0f56838164876b8d31c13779786a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/AlgebraicLocalizationTopology.ir",
+        "sha256": "3c0ec8433125c6e633f280a89147532eb1d1dd0cb21c7be58c0f7624ed57e02e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean",
+        "sha256": "1d4500a39575d56d84edda665d91dae779efd665cd7cb23b70281e54db289b13"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean.private",
+        "sha256": "7f4cdc1625caba7a53a14a00a174d219fd0654bda4f3ab7f5354acbfe4a4d050"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean.server",
+        "sha256": "6a921e58658eedb7ce8aed87de63a084c29e70554498f7c3948155e637f541ed"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.ir",
+        "sha256": "d80fb3a1317e75f6526a7a005d6a88cedb3221624a73113729bbe3a555e37dc1"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/LocalizedValuation.olean",
+        "sha256": "a7ba913ec0100a0a8458d37b763f46112775ab0fe906a017d0271e5c2b0a32d3"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/LocalizedValuation.olean.private",
+        "sha256": "1661eb640bbb0b88208bd7e4e429f881627257fed18061248e85e147cd66c401"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/LocalizedValuation.olean.server",
+        "sha256": "4569842ea2a35afd4381fe7ab424b3cfc4a4e08d9fe982696ad2105922c8c31b"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/LocalizedValuation.ir",
+        "sha256": "0471c47d1c552536f617310bf80f0b8f38614e619680f6da10e075a9e19fe9db"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Normed/Field/Dense.olean",
+        "sha256": "a2f9c250c582fd268c6ed8f957746a5523f3ceb7b9cf6617ef903f72b2ef4569"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Normed/Field/Dense.olean.private",
+        "sha256": "436f2801857178b052c5211109b8d0d359dace571de9a2e9442f41e0ffcb6bf7"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Normed/Field/Dense.olean.server",
+        "sha256": "c5efe910fb67528f34a7070c2de77439816a28c975b0416061e36205b66bb0b4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Normed/Field/Dense.ir",
+        "sha256": "a28eda80b445d92344bce1914f1b4b69dd748f55911208e875da37ba850d6f6e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/AlgebraicClosure.olean",
+        "sha256": "8acf3eb0dbe75a0e44f2626562c4432c291a10a2bdc9f159103482db9be75470"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/AlgebraicClosure.olean.private",
+        "sha256": "168e18992b470d9f027682201af58c0dcccd84dfa56d8faddeebc3c6ffe501df"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/AlgebraicClosure.olean.server",
+        "sha256": "30521be08263ca844aa9b1886e705713b50bc61745e1f765a05c4654c3ccc06c"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/AlgebraicClosure.ir",
+        "sha256": "7d8998faf712a297915aa2bdf9f143c79a6b49a014d56987a34e83ec88f45500"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ResidueAlgebraicClosureDegree.olean",
+        "sha256": "b2c8cb6f359af1f2a38c5b392e6be4ee4b0e1533d349ce343bc078783988ba0d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ResidueAlgebraicClosureDegree.olean.private",
+        "sha256": "4871df13a9d99aba02c21d90c3c384ebfeb6f33a1bff77d05ba4a2c447782953"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ResidueAlgebraicClosureDegree.olean.server",
+        "sha256": "1671fcad588326525205ac865d498451e40b05d710bb5585c9097d8e451785e9"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ResidueAlgebraicClosureDegree.ir",
+        "sha256": "ed673a80ca0adb6397843f964809016f216b1594245fdca84c69b0557b4215f8"
+      }
+    ],
+    "integration_attempt": "integration-20260928T193940Z"
+  },
+  "results": [
+    {
+      "compiler_exit_code": 0,
+      "direct_import_artifact_hashes_after": [
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/AlgebraicLocalizationTopology.olean",
+          "sha256": "c28320dfeb2e61a1fee52c77b460a2e85f074a7463c09ff7fc23c8ab8cdf0c49"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/AlgebraicLocalizationTopology.olean.private",
+          "sha256": "1ba5290356e06bc52b962fac02175f08a268992cc204432d1c7a9e778be812fb"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/AlgebraicLocalizationTopology.olean.server",
+          "sha256": "c8b70bc9983e6b2272b8ee127f2fef14134d0f56838164876b8d31c13779786a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Ramification/HilbertRamification/AlgebraicLocalizationTopology.ir",
+          "sha256": "3c0ec8433125c6e633f280a89147532eb1d1dd0cb21c7be58c0f7624ed57e02e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean",
+          "sha256": "1d4500a39575d56d84edda665d91dae779efd665cd7cb23b70281e54db289b13"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean.private",
+          "sha256": "7f4cdc1625caba7a53a14a00a174d219fd0654bda4f3ab7f5354acbfe4a4d050"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.olean.server",
+          "sha256": "6a921e58658eedb7ce8aed87de63a084c29e70554498f7c3948155e637f541ed"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceH2Localization.ir",
+          "sha256": "d80fb3a1317e75f6526a7a005d6a88cedb3221624a73113729bbe3a555e37dc1"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/LocalizedValuation.olean",
+          "sha256": "a7ba913ec0100a0a8458d37b763f46112775ab0fe906a017d0271e5c2b0a32d3"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/LocalizedValuation.olean.private",
+          "sha256": "1661eb640bbb0b88208bd7e4e429f881627257fed18061248e85e147cd66c401"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/LocalizedValuation.olean.server",
+          "sha256": "4569842ea2a35afd4381fe7ab424b3cfc4a4e08d9fe982696ad2105922c8c31b"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/LocalizedValuation.ir",
+          "sha256": "0471c47d1c552536f617310bf80f0b8f38614e619680f6da10e075a9e19fe9db"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Normed/Field/Dense.olean",
+          "sha256": "a2f9c250c582fd268c6ed8f957746a5523f3ceb7b9cf6617ef903f72b2ef4569"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Normed/Field/Dense.olean.private",
+          "sha256": "436f2801857178b052c5211109b8d0d359dace571de9a2e9442f41e0ffcb6bf7"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Normed/Field/Dense.olean.server",
+          "sha256": "c5efe910fb67528f34a7070c2de77439816a28c975b0416061e36205b66bb0b4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Normed/Field/Dense.ir",
+          "sha256": "a28eda80b445d92344bce1914f1b4b69dd748f55911208e875da37ba850d6f6e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/AlgebraicClosure.olean",
+          "sha256": "8acf3eb0dbe75a0e44f2626562c4432c291a10a2bdc9f159103482db9be75470"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/AlgebraicClosure.olean.private",
+          "sha256": "168e18992b470d9f027682201af58c0dcccd84dfa56d8faddeebc3c6ffe501df"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/AlgebraicClosure.olean.server",
+          "sha256": "30521be08263ca844aa9b1886e705713b50bc61745e1f765a05c4654c3ccc06c"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/AlgebraicClosure.ir",
+          "sha256": "7d8998faf712a297915aa2bdf9f143c79a6b49a014d56987a34e83ec88f45500"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ResidueAlgebraicClosureDegree.olean",
+          "sha256": "b2c8cb6f359af1f2a38c5b392e6be4ee4b0e1533d349ce343bc078783988ba0d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ResidueAlgebraicClosureDegree.olean.private",
+          "sha256": "4871df13a9d99aba02c21d90c3c384ebfeb6f33a1bff77d05ba4a2c447782953"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ResidueAlgebraicClosureDegree.olean.server",
+          "sha256": "1671fcad588326525205ac865d498451e40b05d710bb5585c9097d8e451785e9"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ResidueAlgebraicClosureDegree.ir",
+          "sha256": "ed673a80ca0adb6397843f964809016f216b1594245fdca84c69b0557b4215f8"
+        }
+      ],
+      "variant": {
+        "name": "generic-algclosure-instance",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-11-algclosure/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-11-algclosure/source/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceAlgebraicLocalizationAlgClosure.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-11-algclosure/lib/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceAlgebraicLocalizationAlgClosure.olean",
+        "path": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceAlgebraicLocalizationAlgClosure.lean",
+        "original_sha256": "eb3148e7173d0487bb1cf8936886d2090862f56542fe9c4c02ac832f13b98f19",
+        "migrated_sha256": "85564244d9565569990978a335a85aea907dd41eea7ed18095e4643701a98b20",
+        "insertions": [
+          {
+            "offset": 818,
+            "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree\n"
+          }
+        ],
+        "added_imports": [
+          "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree"
+        ],
+        "added_options": []
+      },
+      "command": [
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-R",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-11-algclosure/source",
+        "-o",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-11-algclosure/lib/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceAlgebraicLocalizationAlgClosure.olean",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-11-algclosure/source/UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceAlgebraicLocalizationAlgClosure.lean"
+      ],
+      "exit_code": 0,
+      "reason": null,
+      "elapsed_total": 39.86000872310251
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,6 @@
+/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-26-descent-endpoint-baseline/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescent.lean:190:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DirectedSystem (fun E => RelativeIdeleGroup.ClassGroup ℚ ↥E.toIntermediateField) fun x1 x2 x3 =>
+    ⇑(rationalRelativeIdeleClassTransition x3)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-26-descent-endpoint-baseline/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescent.lean:189:9: error: Tactic `rcases` failed: `x✝ : ?m.49` is not an inductive datatype

@@ -1,0 +1,36 @@
+{
+  "at": "2026-09-28T18:29:53.114418+00:00",
+  "files_checked": 2164,
+  "helper_sha256": "4fb436e4bfcc95291967e7c746e7b2d5652c841984db857980a912efadb3489b",
+  "module_port_provenance": {
+    "checked_files": 2164,
+    "manifest": "third-party/module-system-20260928/manifest.json",
+    "manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+    "repair_layers": [
+      {
+        "checked_files": 1,
+        "manifest": "third-party/module-system-20260928/repairs-01.json",
+        "manifest_sha256": "af493e3ade2cb9cbd22341786462242550272b234b76e9c75da87410e9580014"
+      },
+      {
+        "checked_files": 1,
+        "manifest": "third-party/module-system-20260928/repairs-02.json",
+        "manifest_sha256": "cc3e725c9695c58604dc5c7ed59b509c429ea62dec3e706d29982291c58c2dd1"
+      },
+      {
+        "checked_files": 3,
+        "manifest": "third-party/module-system-20260928/repairs-03.json",
+        "manifest_sha256": "a1df8cb46cfecf65254e338f8710ede87297e7cbfd764fb18f1a4838155b4f27"
+      },
+      {
+        "checked_files": 7,
+        "manifest": "third-party/module-system-20260928/repairs-04.json",
+        "manifest_sha256": "3c9a833627141aa2f568c15865a98fbf86e3753e75a0c12ac00561853bd8a07e"
+      }
+    ],
+    "reversed_files": 2135
+  },
+  "passed": true,
+  "scope": "Exact header repairs and module-layer reversal on all2164 ported source records including ZetaAudit. No Lean compilation.",
+  "selection_receipt_sha256": "2939ee00a3ad418d04b02b9b83c65cdb309a71729dd6c19946c4a815a7158a07"
+}

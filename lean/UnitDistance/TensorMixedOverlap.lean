@@ -1,0 +1,233 @@
+module
+
+public import UnitDistance.TensorFiniteOverlap
+public import UnitDistance.TensorOverlapMoments
+
+@[expose] public section
+set_option backward.privateInPublic true
+
+
+/-!
+# Mixed archimedean and finite supported overlap concentration
+
+The actual Gaussian/Student law and the actual finite-shell laws form one
+normalized product density. Its endpoint means add and its variances admit
+one fixed dimension-linear bound. Concentration is for the same total energy
+at both endpoints, including the finite-place profile support.
+-/
+
+noncomputable section
+open MeasureTheory ProbabilityTheory
+open scoped Classical BigOperators ENNReal
+
+namespace UnitDistance.Witness
+
+/-- One fixed variance constant for all archimedean and selected finite blocks. -/
+def mixedEnergyVarianceConstant : ℝ :=
+  tensorEnergyVarianceConstant + (69/32:ℝ)*finiteEnergyVarianceConstant
+
+theorem mixedEnergyVarianceConstant_nonneg : 0 ≤ mixedEnergyVarianceConstant := by
+  unfold mixedEnergyVarianceConstant
+  positivity [tensorEnergyVarianceConstant_nonneg, finiteEnergyVarianceConstant_nonneg]
+
+variable {β γ ι : Type*} [Fintype β] [Fintype γ] [Fintype ι] {G U : ι → Type*}
+  [∀ i, AddCommGroup (G i)] [∀ i, MeasurableSpace (G i)]
+  [∀ i, MeasurableAdd₂ (G i)] [∀ i, MeasurableNeg (G i)]
+  [∀ i, MeasurableSpace (U i)]
+  (v : ι → Fin 11) (μ : (i : ι) → Measure (G i))
+  [∀ i, SigmaFinite (μ i)] [∀ i, (μ i).IsAddRightInvariant]
+  [∀ i, (μ i).IsAddLeftInvariant] [∀ i, (μ i).IsNegInvariant]
+  (B : (i : ι) → Local.BallSystem (G i) (μ i) (residueCard (v i)))
+  (S : (i : ι) → (B i).ReciprocalSteps (U i))
+  (ν : (i : ι) → Measure (U i)) [∀ i, IsProbabilityMeasure (ν i)]
+
+instance tensorEndpointCoordinates_sigmaFinite :
+    SigmaFinite (volume : Measure (TensorEndpointCoordinates β γ)) := by
+  letI : SigmaFinite (volume : Measure (β → ℂ)) := inferInstance
+  letI : SigmaFinite (volume : Measure (γ → ℝ × (ℂ × ℂ))) := inferInstance
+  change SigmaFinite ((volume : Measure (β → ℂ)).prod (volume : Measure (γ → ℝ × (ℂ × ℂ))))
+  infer_instance
+
+abbrev MixedEndpointCoordinates (β γ : Type*) (G U : ι → Type*) :=
+  TensorEndpointCoordinates β γ × FiniteEndpointCoordinates G U
+
+/-- The summed first-endpoint energy of all actual local factors. -/
+def mixedFirstEnergy (z : MixedEndpointCoordinates β γ G U) : ℝ :=
+  tensorFirstEnergy z.1 + tensorFiniteFirstEnergy v μ B z.2
+
+/-- The summed second-endpoint energy of all actual local factors. -/
+def mixedSecondEnergy (z : MixedEndpointCoordinates β γ G U) : ℝ :=
+  tensorSecondEnergy z.1 + tensorFiniteSecondEnergy v μ B S z.2
+
+def mixedOverlapBase : Measure (MixedEndpointCoordinates β γ G U) :=
+  volume.prod (tensorFiniteOverlapBase v μ B S ν)
+
+def mixedOverlapMass (β γ : Type*) [Fintype β] [Fintype γ] : ℝ :=
+  tensorOverlapMass β γ*tensorFiniteOverlapMass v
+
+theorem mixedOverlapMass_pos : 0 < mixedOverlapMass v β γ :=
+  mul_pos tensorOverlapMass_pos (tensorFiniteOverlapMass_pos v)
+
+def mixedOverlapLaw : Measure (MixedEndpointCoordinates β γ G U) :=
+  overlapLaw (mixedOverlapBase (β := β) (γ := γ) v μ B S ν)
+    (mixedFirstEnergy v μ B) (mixedSecondEnergy v μ B S) (mixedOverlapMass v β γ)
+
+def mixedEnergyMean (β γ : Type*) [Fintype β] [Fintype γ] : ℝ :=
+  tensorEnergyMean β γ+tensorFiniteEnergyMean v μ B S ν
+
+theorem measurable_mixedFirstEnergy : Measurable (mixedFirstEnergy (β := β) (γ := γ) (U := U) v μ B) :=
+  (measurable_tensorFirstEnergy.comp measurable_fst).add
+    ((measurable_tensorFiniteFirstEnergy v μ B).comp measurable_snd)
+
+theorem measurable_mixedSecondEnergy (hs : ∀ i n, Measurable ((S i).step n)) :
+    Measurable (mixedSecondEnergy (β := β) (γ := γ) v μ B S) :=
+  (measurable_tensorSecondEnergy.comp measurable_fst).add
+    ((measurable_tensorFiniteSecondEnergy v μ B S hs).comp measurable_snd)
+
+theorem mixedOverlapLaw_eq_product (hs : ∀ i n, Measurable ((S i).step n)) :
+    mixedOverlapLaw (β := β) (γ := γ) v μ B S ν =
+      (tensorProductOverlapLaw (β := β) (γ := γ)).prod (tensorFiniteOverlapLaw v μ B S ν) := by
+  change overlapLaw (volume.prod (tensorFiniteOverlapBase v μ B S ν))
+    (fun z => tensorFirstEnergy z.1+tensorFiniteFirstEnergy v μ B z.2)
+    (fun z => tensorSecondEnergy z.1+tensorFiniteSecondEnergy v μ B S z.2)
+    (tensorOverlapMass β γ*tensorFiniteOverlapMass v) = _
+  rw [prod_overlapLaw volume (tensorFiniteOverlapBase v μ B S ν)
+    _ _ _ _ measurable_tensorFirstEnergy measurable_tensorSecondEnergy
+    (measurable_tensorFiniteFirstEnergy v μ B) (measurable_tensorFiniteSecondEnergy v μ B S hs)
+    _ _ tensorOverlapMass_pos (tensorFiniteOverlapMass_pos v)]
+  rw [← tensorGroupedOverlapLaw_eq_product]
+  rfl
+
+theorem mixedOverlap_exp_integrable (hs : ∀ i n, Measurable ((S i).step n)) :
+    Integrable (fun z : MixedEndpointCoordinates β γ G U =>
+      Real.exp (-(mixedFirstEnergy v μ B z+mixedSecondEnergy v μ B S z)))
+      (mixedOverlapBase v μ B S ν) := by
+  change Integrable _ ((volume : Measure (TensorEndpointCoordinates β γ)).prod
+    (tensorFiniteOverlapBase v μ B S ν))
+  convert (integrable_tensorOverlapIntegrand (β := β) (γ := γ)).mul_prod
+    (tensorFiniteOverlap_exp_integrable v μ B S ν hs) using 1
+  funext z
+  rw [tensorOverlapIntegrand_eq_energy, ← Real.exp_add]
+  congr 1
+  dsimp [mixedFirstEnergy, mixedSecondEnergy]
+  ring
+
+theorem mixedOverlap_exp_integral (hs : ∀ i n, Measurable ((S i).step n)) :
+    (∫ z : MixedEndpointCoordinates β γ G U,
+      Real.exp (-(mixedFirstEnergy v μ B z+mixedSecondEnergy v μ B S z))
+      ∂mixedOverlapBase v μ B S ν) = mixedOverlapMass v β γ := by
+  have heq (z : MixedEndpointCoordinates β γ G U) :
+      Real.exp (-(mixedFirstEnergy v μ B z+mixedSecondEnergy v μ B S z)) =
+        tensorOverlapIntegrand z.1 *
+          Real.exp (-(tensorFiniteFirstEnergy v μ B z.2+tensorFiniteSecondEnergy v μ B S z.2)) := by
+    rw [tensorOverlapIntegrand_eq_energy, ← Real.exp_add]
+    congr 1
+    dsimp [mixedFirstEnergy, mixedSecondEnergy]
+    ring
+  simp_rw [heq]
+  rw [mixedOverlapBase, integral_prod_mul
+    (μ := (volume : Measure (TensorEndpointCoordinates β γ)))
+    (ν := tensorFiniteOverlapBase v μ B S ν) tensorOverlapIntegrand
+    (fun z : FiniteEndpointCoordinates G U =>
+      Real.exp (-(tensorFiniteFirstEnergy v μ B z+tensorFiniteSecondEnergy v μ B S z))),
+    integral_tensorOverlapIntegrand,
+    tensorFiniteOverlap_exp_integral v μ B S ν hs]
+  rfl
+
+theorem mixedOverlapLaw_probability (hs : ∀ i n, Measurable ((S i).step n)) :
+    IsProbabilityMeasure (mixedOverlapLaw (β := β) (γ := γ) v μ B S ν) :=
+  overlapLaw_probability _ _ _ (mixedOverlapMass_pos v)
+    (mixedOverlap_exp_integrable v μ B S ν hs) (mixedOverlap_exp_integral v μ B S ν hs)
+
+theorem mixed_endpoint_moments (hs : ∀ i n, Measurable ((S i).step n)) :
+    MemLp (mixedFirstEnergy v μ B) 2 (mixedOverlapLaw (β := β) (γ := γ) v μ B S ν) ∧
+    MemLp (mixedSecondEnergy v μ B S) 2 (mixedOverlapLaw (β := β) (γ := γ) v μ B S ν) ∧
+    (∫ z : MixedEndpointCoordinates β γ G U, mixedFirstEnergy v μ B z
+      ∂mixedOverlapLaw v μ B S ν) = mixedEnergyMean v μ B S ν β γ ∧
+    (∫ z : MixedEndpointCoordinates β γ G U, mixedSecondEnergy v μ B S z
+      ∂mixedOverlapLaw v μ B S ν) = mixedEnergyMean v μ B S ν β γ ∧
+    variance (mixedFirstEnergy v μ B) (mixedOverlapLaw (β := β) (γ := γ) v μ B S ν) ≤
+      tensorEnergyVarianceConstant*((Fintype.card β:ℝ)+2*Fintype.card γ)+
+        (Fintype.card ι:ℝ)*finiteEnergyVarianceConstant ∧
+    variance (mixedSecondEnergy v μ B S) (mixedOverlapLaw (β := β) (γ := γ) v μ B S ν) ≤
+      tensorEnergyVarianceConstant*((Fintype.card β:ℝ)+2*Fintype.card γ)+
+        (Fintype.card ι:ℝ)*finiteEnergyVarianceConstant := by
+  letI : IsProbabilityMeasure (tensorProductOverlapLaw (β := β) (γ := γ)) := by
+    rw [← tensorGroupedOverlapLaw_eq_product]
+    exact tensorGroupedOverlapLaw_probability
+  letI : IsProbabilityMeasure (tensorFiniteOverlapLaw v μ B S ν) :=
+    tensorFiniteOverlapLaw_probability v μ B S ν hs
+  obtain ⟨hX, hY, hmX, hmY, hvX, hvY⟩ := tensorFinite_endpoint_moments v μ B S ν hs
+  rw [mixedOverlapLaw_eq_product v μ B S ν hs]
+  have hAX := tensor_product_first_memLp (β := β) (γ := γ)
+  have hAY := tensor_product_second_memLp (β := β) (γ := γ)
+  have hX₁ := hAX.comp_fst (tensorFiniteOverlapLaw v μ B S ν)
+  have hX₂ := hX.comp_snd (tensorProductOverlapLaw (β := β) (γ := γ))
+  have hY₁ := hAY.comp_fst (tensorFiniteOverlapLaw v μ B S ν)
+  have hY₂ := hY.comp_snd (tensorProductOverlapLaw (β := β) (γ := γ))
+  refine ⟨hX₁.add hX₂, hY₁.add hY₂, ?_, ?_, ?_, ?_⟩
+  · dsimp only [mixedFirstEnergy]
+    rw [integral_add (hX₁.integrable (by norm_num)) (hX₂.integrable (by norm_num)),
+      integral_fun_fst, integral_fun_snd]
+    simp only [measureReal_def, measure_univ, ENNReal.toReal_one, one_smul,
+      tensor_product_first_integral, hmX, mixedEnergyMean]
+  · dsimp only [mixedSecondEnergy]
+    rw [integral_add (hY₁.integrable (by norm_num)) (hY₂.integrable (by norm_num)),
+      integral_fun_fst, integral_fun_snd]
+    simp only [measureReal_def, measure_univ, ENNReal.toReal_one, one_smul,
+      tensor_product_second_integral, hmY, mixedEnergyMean]
+  · calc
+      _ = variance tensorFirstEnergy (tensorProductOverlapLaw (β := β) (γ := γ)) +
+          variance (tensorFiniteFirstEnergy v μ B) (tensorFiniteOverlapLaw v μ B S ν) :=
+        variance_add_prod hAX hX
+      _ ≤ _ := by
+        rw [tensor_product_first_variance]
+        exact add_le_add tensorEnergyVariance_le_dimension hvX
+  · calc
+      _ = variance tensorSecondEnergy (tensorProductOverlapLaw (β := β) (γ := γ)) +
+          variance (tensorFiniteSecondEnergy v μ B S) (tensorFiniteOverlapLaw v μ B S ν) :=
+        variance_add_prod hAY hY
+      _ ≤ _ := by
+        rw [tensor_product_second_variance]
+        exact add_le_add tensorEnergyVariance_le_dimension hvY
+
+/-- Integrability of the actual overlap density gives finiteness of every
+common upper-energy event in the supported base measure. -/
+theorem mixed_energyEvent_finite (hs : ∀ i n, Measurable ((S i).step n)) (T : ℝ) :
+    (mixedOverlapBase (β := β) (γ := γ) v μ B S ν)
+      {z | mixedFirstEnergy v μ B z ≤ T ∧ mixedSecondEnergy v μ B S z ≤ T} ≠ ∞ := by
+  have hsub : {z : MixedEndpointCoordinates β γ G U |
+      mixedFirstEnergy v μ B z ≤ T ∧ mixedSecondEnergy v μ B S z ≤ T} ⊆
+      {z | Real.exp (-2*T) ≤ Real.exp (-(mixedFirstEnergy v μ B z+mixedSecondEnergy v μ B S z))} := by
+    intro z hz
+    apply Real.exp_le_exp.mpr
+    linarith [hz.1, hz.2]
+  exact (lt_of_le_of_lt (measure_mono hsub)
+    ((mixedOverlap_exp_integrable v μ B S ν hs).measure_ge_lt_top (Real.exp_pos (-2*T)))).ne
+
+/-- Concentration of the actual common mixed energy window. The only size
+and place-count inputs are the displayed elementary inequalities. -/
+theorem mixed_concentrated_energyEvent (hs : ∀ i n, Measurable ((S i).step n))
+    (hcount : (Fintype.card ι:ℝ) ≤ (69/32:ℝ)*((Fintype.card β:ℝ)+2*Fintype.card γ))
+    {ε : ℝ} (hε : 0 < ε) (hd : 0 < (Fintype.card β:ℝ)+2*Fintype.card γ)
+    (hlarge : 4*mixedEnergyVarianceConstant ≤ ε^2*((Fintype.card β:ℝ)+2*Fintype.card γ)) :
+    let d : ℝ := (Fintype.card β:ℝ)+2*Fintype.card γ
+    let mean := mixedEnergyMean v μ B S ν β γ
+    (1/2:ℝ)*mixedOverlapMass v β γ*Real.exp (2*(mean-ε*d)) ≤
+      (mixedOverlapBase (β := β) (γ := γ) v μ B S ν).real
+        {z | mixedFirstEnergy v μ B z ≤ mean+ε*d ∧ mixedSecondEnergy v μ B S z ≤ mean+ε*d} := by
+  obtain ⟨hX, hY, hmX, hmY, hvX, hvY⟩ := mixed_endpoint_moments (β := β) (γ := γ) v μ B S ν hs
+  have hv : tensorEnergyVarianceConstant*((Fintype.card β:ℝ)+2*Fintype.card γ)+
+      (Fintype.card ι:ℝ)*finiteEnergyVarianceConstant ≤
+        mixedEnergyVarianceConstant*((Fintype.card β:ℝ)+2*Fintype.card γ) := by
+    have h := mul_le_mul_of_nonneg_right hcount finiteEnergyVarianceConstant_nonneg
+    dsimp only [mixedEnergyVarianceConstant]
+    nlinarith
+  exact common_energy_window_overlap (mixedOverlapBase v μ B S ν)
+    (mixedFirstEnergy v μ B) (mixedSecondEnergy v μ B S) (mixedOverlapMass_pos v)
+    (mixedOverlap_exp_integrable v μ B S ν hs) (mixedOverlap_exp_integral v μ B S ν hs)
+    (measurable_mixedFirstEnergy v μ B) (measurable_mixedSecondEnergy v μ B S hs)
+    hX hY hmX hmY hε hd (hvX.trans hv) (hvY.trans hv) hlarge
+    (mixed_energyEvent_finite v μ B S ν hs _)
+
+end UnitDistance.Witness

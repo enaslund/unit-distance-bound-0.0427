@@ -1,0 +1,8 @@
+guarded-build: admitted with 14.0 GiB available; timeout 900s
+Traceback (most recent call last):
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260922/numerics_afe_pure_quartic_direct.py", line 219, in <module>
+    main()
+    ~~~~^^
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260922/numerics_afe_pure_quartic_direct.py", line 155, in main
+    raise AssertionError("direct primary finite sum does not overlap the printed AFE interval")
+AssertionError: direct primary finite sum does not overlap the printed AFE interval

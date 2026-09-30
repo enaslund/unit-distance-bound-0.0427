@@ -1,0 +1,24 @@
+guarded-build: admitted with 16.3 GiB host available; cgroup headroom 1.36 GiB; timeout 900s
+Traceback (most recent call last):
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py", line 280, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py", line 222, in main
+    expected, _ = target_coefficients()
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py", line 204, in target_coefficients
+    single = load_single()
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py", line 68, in load_single
+    spec.loader.exec_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/publication/six-dimensional-lower-bound/research/next-dyadic-h5-single.py", line 17, in <module>
+    import five_single as real
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/publication/five-prime-lower-bound/certificates/five_single.py", line 46, in <module>
+    from second_hecke import Kernels,evaluate
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/publication/unit-distance-lower-bound/certificates/second_hecke.py", line 14, in <module>
+    from hecke_afe import enclosure,zero_to,symmetric,horner,integral_sum
+  File "/home/naslund_eric/src/enaslund/unit-distance-bound/master/publication/unit-distance-lower-bound/certificates/hecke_afe.py", line 20, in <module>
+    from flint import arb, ctx
+ModuleNotFoundError: No module named 'flint'

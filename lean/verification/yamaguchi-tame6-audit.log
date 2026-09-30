@@ -1,0 +1,10 @@
+Audited all 1029 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 1029 project declarations selected.
+Axiom audit: beginning ValuationTheory.DiscreteValuationField.Valuation.chevalley_hasSomeExtensionTo.
+Axiom audit: beginning ValuationTheory.DiscreteValuationField.CompleteDVF.mk.injEq.
+Axiom audit: beginning RamificationTheory.HilbertRamification.Higher.uniformizerGradedHom.
+Axiom audit: 500/1029 complete transitive axiom closures checked.
+Axiom audit: 1000/1029 complete transitive axiom closures checked.

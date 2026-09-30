@@ -1,0 +1,17 @@
+{
+  "margin_after_relaxed_ceiling_lower": "2178026654746585869453/12800000000000000000000000000",
+  "margin_after_relaxed_ceiling_lower_decimal": "1.70158332402077e-07",
+  "margin_minus_four_epsilon_lower": "53378026654746585869453/12800000000000000000000000000",
+  "margin_minus_four_epsilon_lower_decimal": "4.17015833240208e-06",
+  "scope": "Exact scalar recombination of named Lean endpoint bounds; no independent proof of the underlying integral, field, or zeta bounds.",
+  "source_sha256": {
+    "FiniteFunctionalCertificate.lean": "db5a85db1791a10cac472af0706e68e8a1fc5ae47142bea114567b4393f9ff9a",
+    "LogBounds.lean": "6d3990f7581431dd6f0992df30e137302c620d60896763ccd8efd2e7e0ae5735",
+    "NumericalReduction.lean": "8a2ecc9030f90b383471be7424b801bb0d27748baaa0aa4d7e2a5c7c2dbefb36",
+    "PairFunctionalSharperThresholdAstra.lean": "3d0e8a47cfed55c0c9daf09bea91aa82d97830fdcd83e413e553eceb867b5ad0",
+    "Target.lean": "65d3e569c5b97c52ba9fff5285d895e96e8a3fd5bf63f83c9045501679f3c2fb",
+    "Witness.lean": "56143fbf788d3d1a0e3fb0e8f4de76e5a8403b35fa74c22cfae43605ab7f8c81"
+  },
+  "status": "pass",
+  "theta_slope_lower": "12984733993611996517/20000000000000000000"
+}

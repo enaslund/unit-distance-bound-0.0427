@@ -1,0 +1,25 @@
+guarded-build: admitted with 13.3 GiB available; timeout 900s
+exit=0; elapsed=5.96s (combined current-source and standalone-package replay)
+fixture=numerics_hecke_family_fixture.json
+fixture_sha256=5fd9c83deb0fcdef56d314657ae8e1c7408c5508e652834e32cdabc3de234200
+mixed_quadratic: mask=1586; twist=-1; degree=2; N=981; conductor=15015
+  comparison=complete signed coefficient vector hash
+  expected_sha256=baec4879c9e60ab3f2e657ff9f4d9cac64a39eebc3aa123495844f19e3ef654c
+mixed_quartic: mask=274; twist=-1; degree=4; n=1..128; conductor=9234441216
+  comparison=all 128 recorded complex coefficients exact
+mixed_octic: mask=307; twist=-1; degree=8; n=1..128; conductor=3331050959834357760000
+  comparison=all 128 recorded complex coefficients exact
+existing pure_quartic: mask=1920; twist=-1; degree=4; n=1..128; conductor=57715257600
+  comparison=all 128 recorded complex coefficients exact
+current_checkout_source_audit=all copied fields matched the six full source JSON files;
+  all six source file hashes matched the fixture bindings
+standalone_package=endpoint checker, 10^7 census-prefix checker, and Hecke checker all passed
+standalone_family_mode=compact hash-pinned fixture (full research tables absent)
+
+Pinned family source hashes:
+h6-low-degree-arithmetic.json b0335a1a87f8c3261d4be0bff2108a520964651c8884207f54194923378b7771
+h6-low-degree-moments-1586.json a7e65537a05389f11115a8cf64c186ead6b1dc4973a8c5f862f31a34fdeb40f1
+h7-low-arithmetic.json 4453a7fe7549ec3e189817e9081bb24c1d3244c3b1249604ab811ab289bf554f
+h7-low-moments-274.json 0777fc81c8a9a6bcff795371e3f7f42095d86e268f141c0dba72777b40e82227
+h7-octic-arithmetic.json 2c8d752f6206b6793b37d91ca9ad343b6c3c4ff92f61fed9ade9e307f0013836
+h7-octic-moments-307.json 1249e9d714685fb0b92ce09c78578248b5d7a1d2a4dfab68252056ed7887063d

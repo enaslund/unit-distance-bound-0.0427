@@ -1,0 +1,101 @@
+module
+
+public import UnitDistance.TensorEnergy
+public import UnitDistance.StudentMoments
+
+@[expose] public section
+set_option backward.privateInPublic true
+
+
+/-!
+# Actual local overlap laws and dimension-independent energy moments
+
+The Gaussian law is normalized by the independently defined compact overlap.
+Its endpoint symmetry is the actual Haar-preserving reflection `z ↦ -z-1`.
+Together with the existing actual Student law this defines fixed finite local
+means and variances for tensor concentration.
+-/
+
+noncomputable section
+open MeasureTheory ProbabilityTheory
+
+namespace UnitDistance.Witness
+
+theorem compactEnergy_overlap_weight (z : ℂ) :
+    Real.exp (-(compactEnergy z+compactEnergy (z+1))) =
+      compactProfile z*compactProfile (z+1) := by
+  calc
+    _ = Real.exp (-1*compactEnergy z)*Real.exp (-1*compactEnergy (z+1)) := by
+      rw [← Real.exp_add]
+      congr 1
+      ring
+    _ = _ := by rw [compactEnergy_weight, compactEnergy_weight, Real.rpow_one, Real.rpow_one]
+
+theorem integrable_compactEnergy_overlap :
+    Integrable (fun z : ℂ => Real.exp (-(compactEnergy z+compactEnergy (z+1)))) := by
+  simpa only [compactEnergy_overlap_weight] using compactOverlap_integrable
+
+theorem compactEnergy_overlap_mass :
+    (∫ z : ℂ, Real.exp (-(compactEnergy z+compactEnergy (z+1)))) = compactOverlap := by
+  simp only [compactEnergy_overlap_weight, compactOverlap]
+
+/-- The independently normalized actual compact-coordinate overlap law. -/
+def compactOverlapLaw : Measure ℂ :=
+  overlapLaw volume compactEnergy (fun z => compactEnergy (z+1)) compactOverlap
+
+theorem compactOverlapLaw_probability : IsProbabilityMeasure compactOverlapLaw :=
+  overlapLaw_probability volume _ _ compactOverlap_pos
+    integrable_compactEnergy_overlap compactEnergy_overlap_mass
+
+/-- The actual compact Gaussian endpoints have finite second moments and
+identical first and second centered moments. -/
+theorem compact_endpoint_moments :
+    MemLp compactEnergy 2 compactOverlapLaw ∧
+    MemLp (fun z => compactEnergy (z+1)) 2 compactOverlapLaw ∧
+    (∫ z, compactEnergy (z+1) ∂compactOverlapLaw) = (∫ z, compactEnergy z ∂compactOverlapLaw) ∧
+    variance (fun z => compactEnergy (z+1)) compactOverlapLaw = variance compactEnergy compactOverlapLaw := by
+  have hm := compact_endpoint_memLp
+  change MemLp compactEnergy 2 compactOverlapLaw ∧
+    MemLp (fun z => compactEnergy (z+1)) 2 compactOverlapLaw at hm
+  let τ : ℂ ≃ᵐ ℂ :=
+    { toFun := fun z => -z-1
+      invFun := fun z => -z-1
+      left_inv := by intro z; ring
+      right_inv := by intro z; ring
+      measurable_toFun := by change Measurable (fun z : ℂ => -z-1); fun_prop
+      measurable_invFun := by change Measurable (fun z : ℂ => -z-1); fun_prop }
+  have hτ : MeasurePreserving τ volume volume := by
+    change MeasurePreserving (fun z : ℂ => -z-1) volume volume
+    simpa only [Function.comp_def, sub_eq_add_neg] using
+      (measurePreserving_add_right (volume : Measure ℂ) (-1)).comp
+        (Measure.measurePreserving_neg (volume : Measure ℂ))
+  have hXY (z : ℂ) : compactEnergy (τ z) = compactEnergy (z+1) := by
+    change compactEnergy (-z-1) = _
+    rw [show -z-1 = -(z+1) by ring, compactEnergy_neg]
+  have hYX (z : ℂ) : compactEnergy (τ z+1) = compactEnergy z := by
+    change compactEnergy ((-z-1)+1) = _
+    rw [sub_add_cancel, compactEnergy_neg]
+  refine ⟨hm.1, hm.2, ?_, ?_⟩
+  · exact endpoint_means_equal volume compactEnergy (fun z => compactEnergy (z+1))
+      compactOverlap τ hτ hXY hYX
+  · exact endpoint_variances_equal volume compactEnergy (fun z => compactEnergy (z+1))
+      compactOverlap τ hτ hXY hYX hm.1.aemeasurable
+
+/-- The actual local overlap-law energy means. -/
+def compactEnergyMean : ℝ := ∫ z, compactEnergy z ∂compactOverlapLaw
+
+def pairEnergyMean : ℝ := ∫ w : ℝ × (ℂ × ℂ), pairEnergy w.2 ∂pairOverlapLaw
+
+/-- The actual local overlap-law energy variances. -/
+def compactEnergyVariance : ℝ := variance compactEnergy compactOverlapLaw
+
+def pairEnergyVariance : ℝ := variance (fun w : ℝ × (ℂ × ℂ) => pairEnergy w.2) pairOverlapLaw
+
+/-- A single independently defined constant bounds both local variances. -/
+def tensorEnergyVarianceConstant : ℝ := max compactEnergyVariance pairEnergyVariance
+
+theorem tensorEnergyVarianceConstant_nonneg : 0 ≤ tensorEnergyVarianceConstant := by
+  have hc : 0 ≤ compactEnergyVariance := variance_nonneg _ _
+  exact hc.trans (le_max_left _ _)
+
+end UnitDistance.Witness

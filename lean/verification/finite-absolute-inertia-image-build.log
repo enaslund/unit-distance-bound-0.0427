@@ -1,0 +1,19 @@
+✔ [4127/4137] Built UnitDistance.Upstream.Yamaguchi.ProCGroups.Completion.FiniteQuotientLifts (3.9s)
+✔ [4132/4137] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.ProfiniteIntegerFree (4.4s)
+✔ [4134/4137] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.ProfiniteIntegerH2 (4.8s)
+✔ [4135/4137] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.LocalUnramifiedH2Vanishing (8.7s)
+✔ [4136/4137] Built UnitDistance.LocalAbsoluteInertiaRestriction (4.6s)
+⚠ [4137/4137] Built UnitDistance.FiniteAbsoluteInertiaImage (4.7s)
+warning: UnitDistance/FiniteAbsoluteInertiaImage.lean:22:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.finiteAbsoluteRestriction_surjective`:
+  [FiniteDimensional K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: UnitDistance/FiniteAbsoluteInertiaImage.lean:32:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.finiteAbsoluteRestriction_commutes`:
+  [FiniteDimensional K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (4137 jobs).

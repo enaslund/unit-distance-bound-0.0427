@@ -1,0 +1,106 @@
+Audited all 1805 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 1805 project declarations selected.
+Axiom audit: beginning ProCGroups.FiniteGroupClass.objectProperty.
+Axiom audit: beginning ProCGroups.ProfiniteGrp.eq_one_of_mem_all_openNormalSubgroups.
+Axiom audit: beginning ProCGroups.Generation.chainUpperBoundOfNonempty._proof_3.
+Axiom audit: 500/1805 complete transitive axiom closures checked.
+Axiom audit: 1000/1805 complete transitive axiom closures checked.
+Axiom audit: 1500/1805 complete transitive axiom closures checked.
+Audited all 2927 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 2927 project declarations selected.
+Axiom audit: beginning KummerTheory.finiteSupportNthPowersSubgroup.
+Axiom audit: beginning CyclicCohomology.permutationRepresentation_mul.
+Axiom audit: beginning ClassFormation.zHatMulProfiniteGrp._proof_1.
+Axiom audit: 500/2927 complete transitive axiom closures checked.
+Axiom audit: 1000/2927 complete transitive axiom closures checked.
+Axiom audit: 1500/2927 complete transitive axiom closures checked.
+Axiom audit: 2000/2927 complete transitive axiom closures checked.
+Axiom audit: 2500/2927 complete transitive axiom closures checked.
+Audited all 17534 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 17534 project declarations selected.
+Axiom audit: beginning GlobalClassFieldTheory.Reciprocity.globalNormResidueMonoidHomOfEmbedding_abstractFixedFieldInclusion.
+Axiom audit: beginning RelativeBaseIntegerLocalization._proof_1.
+Axiom audit: beginning LocalClassFieldTheory.finiteResidueFrobeniusExponentHom_injective.
+Axiom audit: 500/17534 complete transitive axiom closures checked.
+Axiom audit: 1000/17534 complete transitive axiom closures checked.
+Axiom audit: 1500/17534 complete transitive axiom closures checked.
+Axiom audit: 2000/17534 complete transitive axiom closures checked.
+Axiom audit: 2500/17534 complete transitive axiom closures checked.
+Axiom audit: 3000/17534 complete transitive axiom closures checked.
+Axiom audit: 3500/17534 complete transitive axiom closures checked.
+Axiom audit: 4000/17534 complete transitive axiom closures checked.
+Axiom audit: 4500/17534 complete transitive axiom closures checked.
+Axiom audit: 5000/17534 complete transitive axiom closures checked.
+Axiom audit: 5500/17534 complete transitive axiom closures checked.
+Axiom audit: 6000/17534 complete transitive axiom closures checked.
+Axiom audit: 6500/17534 complete transitive axiom closures checked.
+Axiom audit: 7000/17534 complete transitive axiom closures checked.
+Axiom audit: 7500/17534 complete transitive axiom closures checked.
+Axiom audit: 8000/17534 complete transitive axiom closures checked.
+Axiom audit: 8500/17534 complete transitive axiom closures checked.
+Axiom audit: 9000/17534 complete transitive axiom closures checked.
+Axiom audit: 9500/17534 complete transitive axiom closures checked.
+Axiom audit: 10000/17534 complete transitive axiom closures checked.
+Axiom audit: 10500/17534 complete transitive axiom closures checked.
+Axiom audit: 11000/17534 complete transitive axiom closures checked.
+Axiom audit: 11500/17534 complete transitive axiom closures checked.
+Axiom audit: 12000/17534 complete transitive axiom closures checked.
+Axiom audit: 12500/17534 complete transitive axiom closures checked.
+Axiom audit: 13000/17534 complete transitive axiom closures checked.
+Axiom audit: 13500/17534 complete transitive axiom closures checked.
+Axiom audit: 14000/17534 complete transitive axiom closures checked.
+Axiom audit: 14500/17534 complete transitive axiom closures checked.
+Axiom audit: 15000/17534 complete transitive axiom closures checked.
+Axiom audit: 15500/17534 complete transitive axiom closures checked.
+Axiom audit: 16000/17534 complete transitive axiom closures checked.
+Axiom audit: 16500/17534 complete transitive axiom closures checked.
+Axiom audit: 17000/17534 complete transitive axiom closures checked.
+Axiom audit: 17500/17534 complete transitive axiom closures checked.
+Audited all 10098 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 10098 project declarations selected.
+Axiom audit: beginning LocalFieldTheory.maximalIdealPowMapOfUnramifiedValuation._proof_8.
+Axiom audit: beginning AlgebraicNumberTheory.Valuations.absoluteValueExtension_embeddingCompletionMap._proof_5.
+Axiom audit: beginning LocalFieldTheory.DiscreteValuationField.CompleteDVF.higherPrincipalUnitGroup.Internal.principalUnitQuotientCarrierZModModule.
+Axiom audit: 500/10098 complete transitive axiom closures checked.
+Axiom audit: 1000/10098 complete transitive axiom closures checked.
+Axiom audit: 1500/10098 complete transitive axiom closures checked.
+Axiom audit: 2000/10098 complete transitive axiom closures checked.
+Axiom audit: 2500/10098 complete transitive axiom closures checked.
+Axiom audit: 3000/10098 complete transitive axiom closures checked.
+Axiom audit: 3500/10098 complete transitive axiom closures checked.
+Axiom audit: 4000/10098 complete transitive axiom closures checked.
+Axiom audit: 4500/10098 complete transitive axiom closures checked.
+Axiom audit: 5000/10098 complete transitive axiom closures checked.
+Axiom audit: 5500/10098 complete transitive axiom closures checked.
+Axiom audit: 6000/10098 complete transitive axiom closures checked.
+Axiom audit: 6500/10098 complete transitive axiom closures checked.
+Axiom audit: 7000/10098 complete transitive axiom closures checked.
+Axiom audit: 7500/10098 complete transitive axiom closures checked.
+Axiom audit: 8000/10098 complete transitive axiom closures checked.
+Axiom audit: 8500/10098 complete transitive axiom closures checked.
+Axiom audit: 9000/10098 complete transitive axiom closures checked.
+Axiom audit: 9500/10098 complete transitive axiom closures checked.
+Axiom audit: 10000/10098 complete transitive axiom closures checked.
+Audited all 1909 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 1909 project declarations selected.
+Axiom audit: beginning ClassFieldTower.Martinet.Shafarevich.algebraicClosureAlgEquivSeparableClosure._proof_1.
+Axiom audit: beginning _private.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.ProfiniteIntegerFree.0.ClassFieldTower.Cohomology.ProfiniteInteger.reductionMul.
+Axiom audit: beginning ClassFieldTower.Martinet.Shafarevich.finitePlaceCompletionSeparableGalois_conjugation.
+Axiom audit: 500/1909 complete transitive axiom closures checked.
+Axiom audit: 1000/1909 complete transitive axiom closures checked.
+Axiom audit: 1500/1909 complete transitive axiom closures checked.

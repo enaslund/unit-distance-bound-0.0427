@@ -1,0 +1,13 @@
+Audited all 2 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 2 project declarations selected.
+Axiom audit: beginning UnitDistance.ArithmeticProP.finiteResidueInertia_restrictNormal_eq_one_of_unramified.
+Axiom audit: beginning UnitDistance.ArithmeticProP.finiteResidueInertia_restrictNormal_mem.
+'UnitDistance.ArithmeticProP.finiteResidueInertia_restrictNormal_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'UnitDistance.ArithmeticProP.finiteResidueInertia_restrictNormal_eq_one_of_unramified' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

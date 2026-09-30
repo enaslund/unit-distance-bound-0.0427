@@ -1,0 +1,64 @@
+{
+  "status": "PASS independent direct-kernel upper",
+  "sigma": "12001/12000",
+  "mask": 1586,
+  "twist": -1,
+  "degree": 2,
+  "conductor": 15015,
+  "N": 981,
+  "precision_bits": 256,
+  "python_flint_version": "0.9.0",
+  "flint_version": "3.6.0",
+  "source_mode": "full research tables verified",
+  "coefficient_vector_sha256": "baec4879c9e60ab3f2e657ff9f4d9cac64a39eebc3aa123495844f19e3ef654c",
+  "primary_finite": {
+    "mantissa": "31328508489137737905664441938104263381891895395606434876771122223512325739603",
+    "exponent": -255,
+    "display": "[0.54111655978380140082580113538172911 +/- 1.80e-36]"
+  },
+  "dual_finite": {
+    "mantissa": "87348623368272324893587831115135199477942448033178754798959300303595814822823",
+    "exponent": -260,
+    "display": "[0.047147339653991327808423560511313549 +/- 1.91e-37]"
+  },
+  "finite_intervals_overlap_printed": true,
+  "primary_tail_upper": {
+    "mantissa": "94558066881229211631198322550804969156574151641427162252852467776211679572447",
+    "exponent": -328,
+    "display": "[1.7292588510283369619614091510322739e-22 +/- 3.45e-58]"
+  },
+  "dual_tail_upper": {
+    "mantissa": "47278955195243362974943714798028502385595556881283795894255692067457076905791",
+    "exponent": -327,
+    "display": "[1.7292559891572087453988819977733517e-22 +/- 2.14e-58]"
+  },
+  "L_upper": {
+    "mantissa": "68116305938792496117218170186804811438030096205942771675309922787702841444071",
+    "exponent": -256,
+    "display": "[0.58826389943779272863457054737706122 +/- 4.45e-36]"
+  },
+  "bad_multiplier_upper": {
+    "mantissa": "51641456341789497206581728209623140912912683240415651778523581266585056609793",
+    "exponent": -254,
+    "display": "[1.7839372855929801848133896557979754 +/- 2.79e-35]"
+  },
+  "log_L_S_upper": {
+    "mantissa": "89378999432481043611149362575072813015969718630390823852292967222212704702751",
+    "exponent": -260,
+    "display": "[0.048243256524037312536687462524286013 +/- 7.90e-38]"
+  },
+  "printed_log_L_S_upper": {
+    "lower": {
+      "mantissa": "15207048739954932604118704376168157803668370720358482512541816838400848427083546290461778463141797612626490565501921",
+      "exponent": -387
+    },
+    "upper": {
+      "mantissa": "15207048739954932604118704376168157803668370720358482512541816838400848427083546290461778463141797612626490565502465",
+      "exponent": -387
+    },
+    "display": "[0.048243256524037312591956533323098958 +/- 3.33e-39]"
+  },
+  "comparison_below_printed_allowance": true,
+  "method": "direct Arb expint weights plus elementary d2(n)<=2sqrt(n) exponential tail bounds",
+  "scope": "phase-free AFE bound conditional on the row identity, conductor, bad factors, unit-modulus root number, and |a_n|<=d2(n) for all n"
+}

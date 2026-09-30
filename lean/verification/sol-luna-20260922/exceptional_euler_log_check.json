@@ -1,0 +1,50 @@
+{
+  "analytic_source_sha256": "e088cd4e8664218e023a7c8abbb7fba30839f53eada2b6c60c196c3225ae36db",
+  "exceptional_upper": "104317557877246963552389/2500000000000000000000000",
+  "exceptional_upper_decimal": "0.0417270231508987854209556",
+  "exp_polynomial_degree": 8,
+  "factor_rounding_grid": 10000000000000000000000000,
+  "factors": [
+    [
+      2,
+      4,
+      32
+    ],
+    [
+      3,
+      2,
+      4
+    ],
+    [
+      5,
+      2,
+      4
+    ],
+    [
+      7,
+      4,
+      8
+    ],
+    [
+      11,
+      4,
+      8
+    ],
+    [
+      13,
+      4,
+      8
+    ],
+    [
+      17,
+      4,
+      4
+    ]
+  ],
+  "log_series_terms": 35,
+  "negative_log_series_terms": 25,
+  "printed_allowance": "20863511575449393/500000000000000000",
+  "scope": "Exact rational upper enclosure for the seven displayed exceptional factors; local residue indices are mathematical inputs from the manuscript, not proved here.",
+  "status": "pass",
+  "strict_slack": "1447611/2500000000000000000000000"
+}

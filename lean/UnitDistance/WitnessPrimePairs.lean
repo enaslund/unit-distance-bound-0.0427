@@ -1,0 +1,75 @@
+module
+
+public import UnitDistance.ConjugatePrimePairs
+public import UnitDistance.GaloisPrimeNormCounts
+public import UnitDistance.Witness
+
+@[expose] public section
+set_option backward.privateInPublic true
+
+
+/-! The eleven exact paired-prime multiplicities from actual local degrees. -/
+noncomputable section
+open NumberField IsDedekindDomain
+open scoped Classical
+namespace UnitDistance.Witness
+open RelativeIdealCosets NumberFieldAnalysis
+
+/-- The eleven independently specified integer residue-field cardinalities. -/
+def primeNorm (a : Fin 11) : ℕ := primes a ^ residueDegree a
+
+theorem primeNorm_injective : Function.Injective primeNorm := by decide +kernel
+
+theorem primes_prime (a : Fin 11) : (primes a).Prime := by
+  have h : ∀a : Fin 11, (primes a).Prime := by decide +kernel
+  exact h a
+
+theorem residueDegree_pos (a : Fin 11) : 0 < residueDegree a := by
+  have h : ∀a : Fin 11, 0 < residueDegree a := by decide +kernel
+  exact h a
+
+@[simp] theorem primeNorm_cast (a : Fin 11) : (primeNorm a : ℝ) = residueCard a := by
+  simp [primeNorm,residueCard]
+
+variable {F K : Type} [Field F] [NumberField F] [Field K] [NumberField K]
+  [IsGalois ℚ K] [Algebra F K] [Algebra.IsQuadraticExtension F K]
+variable (ι : K ≃ₐ[F] K) (hι : ι ≠ 1)
+
+abbrev ActualPrimePairIndex := PrimePairIndex ι hι primeNorm
+
+def actualPrimePairs : PrimePairFamily ι (ActualPrimePairIndex ι hι) :=
+  normPrimePairFamily ι hι primeNorm primeNorm_injective
+
+@[simp] theorem actualPrimePairs_norm (s : ActualPrimePairIndex ι hι) :
+    (Ideal.absNorm ((actualPrimePairs ι hι).prime (s,false)).asIdeal : ℝ) =
+      residueCard s.1 := by
+  unfold actualPrimePairs
+  rw [normPrimePairFamily_norm,primeNorm_cast]
+
+/-- This is the requested pair multiplicity, derived from actual local
+ramification/residue degrees and a free conjugation action on the prime fiber. -/
+theorem actualPrimePairs_multiplicity (a : Fin 11)
+    (he : (rationalPrimeIdeal (primes a)).ramificationIdxIn (𝓞 K) = ramification a)
+    (hf : (rationalPrimeIdeal (primes a)).inertiaDegIn (𝓞 K) = residueDegree a)
+    (hfree : ∀P : PrimeNormFiber K (primeNorm a),
+      conjugateIdeal ι P.1.asIdeal ≠ P.1.asIdeal) :
+    (Fintype.card {s : ActualPrimePairIndex ι hι // s.1 = a} : ℝ) *
+      ((ramification a : ℝ)*residueDegree a) = Module.finrank ℚ F := by
+  have hpair := primePairIndexFiber_card_mul_two ι hι primeNorm a hfree
+  have hcount := primeNormCount_mul_ramification_residue K (primes a) (primes_prime a)
+    (ramification a) (residueDegree a) (residueDegree_pos a) he hf
+  have hdegree : Module.finrank ℚ K = Module.finrank ℚ F * 2 := by
+    rw [← Module.finrank_mul_finrank ℚ F K,Algebra.IsQuadraticExtension.finrank_eq_two F K]
+  have hpairR : (Fintype.card {s : ActualPrimePairIndex ι hι // s.1 = a} : ℝ)*2 =
+      (primeNormCount K (primeNorm a) : ℝ) := by
+    simp only [← Nat.card_eq_fintype_card] at hpair ⊢
+    exact_mod_cast hpair
+  have hcountR : (primeNormCount K (primeNorm a) : ℝ)*
+      ((ramification a : ℝ)*residueDegree a) = (Module.finrank ℚ K : ℝ) := by
+    exact_mod_cast hcount
+  have hdegreeR : (Module.finrank ℚ K : ℝ) = (Module.finrank ℚ F : ℝ)*2 := by
+    exact_mod_cast hdegree
+  have hm := congrArg (fun x : ℝ => x*((ramification a : ℝ)*residueDegree a)) hpairR
+  nlinarith
+
+end UnitDistance.Witness

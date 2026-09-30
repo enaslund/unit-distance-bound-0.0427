@@ -1,0 +1,105 @@
+{
+  "checked_by": "Claude Fable 5.1 (Anthropic) through Claude Code, under the owner's direction; no Lean proof text was changed",
+  "checked_on": "2026-09-22",
+  "method": "Unauthenticated GitHub REST API reads of the branch heads and pull requests, and raw file fetches at the observed commits, compared with the locally pinned policy tree. No Palomar pipeline run, verification, submission or registration was performed or is claimed.",
+  "observed_at_utc": "Tue, 22 Sep 2026 08:01:35 GMT (GitHub API response Date header; the three head/PR reads were answered within two seconds of each other)",
+  "palomar_policy": {
+    "branch": "main",
+    "changed_since_pin": false,
+    "head_committer_date": "2026-09-17T05:26:21Z",
+    "head_sha": "792c7c0b9e798bd02719e795ef11fa2b5929e067",
+    "head_subject": "Merge pull request #98 from PalomarRegistry/operator-reliability",
+    "pinned_locally": "792c7c0b9e798bd02719e795ef11fa2b5929e067",
+    "repository": "PalomarRegistry/PalomarPolicy"
+  },
+  "palomar_submission": {
+    "branch": "main",
+    "changed_since_pin": true,
+    "default_execution_profile_at_main": "palomar-standard-v1",
+    "execution_budget_seconds_at_main": 19800,
+    "execution_profiles_at_main": [
+      "palomar-namespace-16x32-v1"
+    ],
+    "files_compared_pinned_versus_main": {
+      "execution-profiles.json": {
+        "identical": true,
+        "sha256_main_0b068c1f": "320ff10a90541edc3f339bed7bb048c8f808e050a181dc59d68f200a23d4b785",
+        "sha256_pinned_3561d237": "320ff10a90541edc3f339bed7bb048c8f808e050a181dc59d68f200a23d4b785"
+      },
+      "formalization-profile.json": {
+        "identical": true,
+        "sha256_main_0b068c1f": "d695b838bbab69236f6e43afda6bd4d719a91099412351f89c3c2cfeb26d5131",
+        "sha256_pinned_3561d237": "d695b838bbab69236f6e43afda6bd4d719a91099412351f89c3c2cfeb26d5131"
+      },
+      "toolchains.json": {
+        "identical": true,
+        "sha256_main_0b068c1f": "b9b749bd4c0c3fb485cbf53870d8fb791ae0e3e071db611b9ea6228d1c051bad",
+        "sha256_pinned_3561d237": "b9b749bd4c0c3fb485cbf53870d8fb791ae0e3e071db611b9ea6228d1c051bad"
+      },
+      "verification-profile.json": {
+        "identical": true,
+        "sha256_main_0b068c1f": "4131827553c344dc2bd49853ed3c1e651cdf74c5fb9cb2034ad90a38b9385c99",
+        "sha256_pinned_3561d237": "4131827553c344dc2bd49853ed3c1e651cdf74c5fb9cb2034ad90a38b9385c99"
+      }
+    },
+    "head_committer_date": "2026-09-22T06:35:50Z",
+    "head_sha": "0b068c1fcda0c9fd8148b8f294450d1961532232",
+    "head_subject": "Merge pull request #146 from PalomarRegistry/supervisor-activate",
+    "local_pinned_verifier": "3561d237dcc4b28482558ad28a64d767d7cc8615",
+    "local_policy_tree": ".cache/upstream/PalomarSubmission-20260918",
+    "merged_pull_requests_since_pin": [
+      {
+        "base_sha": "3561d237dcc4b28482558ad28a64d767d7cc8615",
+        "created_at": "2026-09-21T04:52:59Z",
+        "head_sha": "e17e5a86b4e9f4e54abd515049d83c656daf4c09",
+        "merge_commit_sha": "d8436312008e887a2baa5a8c8dad4fef6fd56da9",
+        "merged": true,
+        "merged_at": "2026-09-22T06:08:55Z",
+        "note": "Adds the cgroup-v2 supervisor and bubblewrap policy, inactive (per the 2026-09-22 audit).",
+        "number": 144,
+        "state": "closed",
+        "title": "feat: add the cgroup supervisor and bubblewrap policy, inactive",
+        "updated_at": "2026-09-22T06:08:58Z"
+      },
+      {
+        "base_sha": "d8436312008e887a2baa5a8c8dad4fef6fd56da9",
+        "created_at": "2026-09-22T06:09:47Z",
+        "head_sha": "2dbccf893ea47fa03e036e8d666e5c4224aa766a",
+        "merge_commit_sha": "0b068c1fcda0c9fd8148b8f294450d1961532232",
+        "merged": true,
+        "merged_at": "2026-09-22T06:35:50Z",
+        "note": "Activates the cgroup-v2 supervisor and bubblewrap confinement, replacing systemd transient units and the outer landrun (per the 2026-09-22 audit).",
+        "number": 146,
+        "state": "closed",
+        "title": "feat: activate the cgroup supervisor and the bubblewrap policy",
+        "updated_at": "2026-09-22T06:35:52Z"
+      }
+    ],
+    "open_pull_requests": [
+      {
+        "base_sha": "0b068c1fcda0c9fd8148b8f294450d1961532232",
+        "created_at": "2026-09-22T06:36:03Z",
+        "head_sha": "3d12bb962445bf3eead17f0f48b76b0b43c20462",
+        "merge_commit_sha": "c8cf9ecc602532666ddbd2d27bfc3b364d4d708f",
+        "merged": false,
+        "merged_at": null,
+        "note": "At its head commit, execution-profiles.json sets default = 'palomar-namespace-16x32-v1' (profiles: ['palomar-namespace-16x32-v1']); verification-profile.json there keeps limits.execution_budget_seconds = 19800 and the same trusted_tools pins.",
+        "number": 147,
+        "state": "open",
+        "title": "feat: make the Namespace profile the default execution profile",
+        "updated_at": "2026-09-22T06:36:03Z"
+      }
+    ],
+    "repository": "PalomarRegistry/PalomarSubmission",
+    "trusted_tools_at_main": {
+      "comparator_commit": "575674928e239f5bc452aab72d1dd7b0f1326494",
+      "landrun_commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+      "lean4export": "release derived from the submitted Lean toolchain",
+      "nanoda_commit": "68d5ca9db226849b41a6fff59d796ff19d0a8840"
+    },
+    "trusted_tools_unchanged_since_pin": true
+  },
+  "schema": "unit-distance-policy-recheck-v1",
+  "scope": "Public-head recheck only. Not a Palomar verification, report, registration or editorial outcome.",
+  "summary": "PalomarPolicy main is still 792c7c0b (unchanged). PalomarSubmission main moved to 0b068c1f (merged PRs #144 and #146); PR #147 is open and would make palomar-namespace-16x32-v1 the default execution profile with the same 19800 s budget. At main the default is still palomar-standard-v1 with a 19800 s budget; verification-profile.json, execution-profiles.json, toolchains.json and formalization-profile.json are byte-identical to the pinned 3561d237 tree, so the trusted tool pins (Comparator, NanoDa, Landrun) are unchanged. The local runner keeps the pinned verifier 3561d237; a receipt from it does not speak for the newer supervisor and confinement code."
+}

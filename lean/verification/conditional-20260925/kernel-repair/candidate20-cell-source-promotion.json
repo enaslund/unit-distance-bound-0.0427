@@ -1,0 +1,8 @@
+{
+  "promoted_at": "2026-09-26T05:17:28.226294+00:00",
+  "source": "UnitDistance/PairMassDegree3DenseComputationCertificate.lean",
+  "before_sha256": "bf3d067c3a282430310dca82c33e6f4d92f78c7b0d5e4a67090a57a9060d5edc",
+  "after_sha256": "6d7b6d6f8f8a3213da3edd4556076da0ea27bb9aa59a9a49c33c3377a82d90d0",
+  "scope": "Only64private scalar radius lemmas and proof of unchanged public radius equality replaced; all bracket proofs and other definitions byte-identical.",
+  "compile_receipt": "candidate20-cell-module-compile.json"
+}

@@ -1,0 +1,476 @@
+{
+  "inputs": {
+    "compiler": "/home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "compiler_sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "LEAN_PATH": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Cli/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/batteries/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Qq/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/aesop/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/proofwidgets/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/importGraph/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/LeanSearchClient/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/plausible/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean",
+    "scope": "Supported module-system public-proof elaboration compatibility option only; no statement/proof-body/hypothesis/heartbeat changes;1CPU2GiB noSwap600s8GiBguard.",
+    "integration_attempt": "integration-20260928T232707Z",
+    "integration_build_log_sha256": "8db9e5dd6b7a31ea1a658ce9466e3b85b67d1720066b33002fd0a06e840e339e",
+    "integration_terminal_result_sha256": "7ddc5f2208778cdfc34358c83659e533e6a1f102e47223450eef2f170eb40081",
+    "direct_import_artifact_hashes": [
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean",
+        "sha256": "a421ca6daa6c0d668f868ba3a6e38ba61b3f1a9137aa07d888a6cbf61f892c3a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean.private",
+        "sha256": "ac6bfa0e8b217698e45ec9137d119afcf60df53ae406c994a7506242d489cce2"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean.server",
+        "sha256": "e6a76a77ef8286e3faae6a7fed967c46c74f60ded1129989fd887f42f2aec1c4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.ir",
+        "sha256": "66577e4935aca7ae347fe7edc17d89542ce0f71249c5eddba83f0488f63d375e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.ir.sig",
+        "sha256": "46be67fd063663b44596717b5bdc0eedc55061604879ff525f1129f7b23feada"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Galois/FixedFieldLattice.olean",
+        "sha256": "9d8ac56d6346b6f25bae2a3cfcade98df0cc0909cc45664bb52232a69877b681"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Galois/FixedFieldLattice.olean.private",
+        "sha256": "59b48de79e42fd3bcf2599da136cfdc5840b89aa4b3fc9a5ff8dabaf7813fe88"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Galois/FixedFieldLattice.olean.server",
+        "sha256": "aad91501752530d7f7c27a8670a2c4f096eaf29861a9eabd33cfc1a8ab5c4b87"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Galois/FixedFieldLattice.ir",
+        "sha256": "6a5e68e4da8db3e875e873b599d01227598c711b97890b6e0c58b48440df42c4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Galois/FixedFieldLattice.ir.sig",
+        "sha256": "7bfba751128a31f5c28524ab9d7c448509c88cfeb184b37cfb8e9d37c9b061f7"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.olean",
+        "sha256": "dcbfec501dbb254076f7ac9f6eafdabdb159cd00f631f70ff9fb7eaa79e9c1f3"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.olean.private",
+        "sha256": "276fa3c563de5c1ba4acbc0b465e6a2b78ee24fab782d3582cd04a49c2ba14a6"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.olean.server",
+        "sha256": "6b2c2e1d43e13e2a02f40981de82bb5e26b5b21de453aba02af132d380418985"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.ir",
+        "sha256": "57d707e6544b436b66e64945b27085baba9888c157de2d3a9a6487ed205d2cb0"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.ir.sig",
+        "sha256": "5e5551f75fb4d269b2adda52d6d3f7e6235c86723883e834851ed02413c8291f"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.olean",
+        "sha256": "97f2f5f3296c940d635c8589b26f18d186a8151ed52b8166a62e7118f49f0f1c"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.olean.private",
+        "sha256": "cd2eb3d8d42bbfcc452c7c687024eba112c3e62f5dfc65a1683abf0956bb88f8"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.olean.server",
+        "sha256": "ed6a228c1ab77b98d0314bde8bd84753301fd7c01bf95386dedc8627960bd954"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.ir",
+        "sha256": "31a044c1df97ac9273e859cc3d990e01c25012350b5be968429862bc2c7d3db4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.ir.sig",
+        "sha256": "3e742fce24ebfd7fa1c6f065ffd096d7c5bb67cb13ca5cb9a0ed63a657ede083"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedExtensionQuotient.olean",
+        "sha256": "ddc979f58386ad399bf5dd61712c84eeedc9ec1b4948f92552b7fd02377402cf"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedExtensionQuotient.olean.private",
+        "sha256": "b8e8265aff39737493cf12c4c6a29682fd325711b952cd24d18434dcd0ccbaae"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedExtensionQuotient.olean.server",
+        "sha256": "bf258437a7cb6dd150e9309710cadd11a85eb8bfa59e7a6da4fda253275a813a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedExtensionQuotient.ir",
+        "sha256": "73d900eb4725f37c4882df7750d4c15bb1829325a180b2730ccdbe775c9e5f94"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedExtensionQuotient.ir.sig",
+        "sha256": "d6f6c96ee1d18f25f7e0bc92587808d9fd23bb3f776da9e4d624198863285063"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedInertiaComparison.olean",
+        "sha256": "c60152b794ff3cf22cd4a576038ebbb8e8f4acf0245867904b067ee277d6d53e"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedInertiaComparison.olean.private",
+        "sha256": "905e0870735712e0681c556c156d1aa46693acc8a7aac72e369a48811e554d2a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedInertiaComparison.olean.server",
+        "sha256": "d2e8d384969692fb16da3e3657ff1e2e42670e2858df62ac77d1e267e746171d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedInertiaComparison.ir",
+        "sha256": "b35f3f3390d7f485e87563eae31b045f83708c275381fcd0ec931c6f3741c99c"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedInertiaComparison.ir.sig",
+        "sha256": "f1889480571d9233aafdf94b788345774ccb4f6d8c98405fa493f921dfd9bd5d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldNormQuotient.olean",
+        "sha256": "1f4e91b1953f70c521a371c2364f714952ce99fdeda14c212131d324bf6e06a1"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldNormQuotient.olean.private",
+        "sha256": "3b494659e8f1e24177feab4440a983ba344815412bb10a87ac7f4261c9c28809"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldNormQuotient.olean.server",
+        "sha256": "6d326329734621a172da00a74316bc5ff27272c815b055fd3809c59f79eac713"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldNormQuotient.ir",
+        "sha256": "3f90014d64aec4924c42663cf5449a86b5c5d4ef13a42e076365c421f7ba56d0"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldNormQuotient.ir.sig",
+        "sha256": "cf8df1949ad2c8988f9e5e23adaa7ce6511b6172d4e68e074eeff2759eb57063"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldSpecialization.olean",
+        "sha256": "56f2399d49901cf72ada5df351f66f7a5ccf715edb16d7771c8430fedfb633a2"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldSpecialization.olean.private",
+        "sha256": "de188b0b95847f6ebb3a82e88f24a131c6ae470224936f906ce574c1da8ab5a9"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldSpecialization.olean.server",
+        "sha256": "36024487d4e83f9c14d7c8cf26a2f0c88ec07263235dafb8445d319f3d98e1fe"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldSpecialization.ir",
+        "sha256": "9f7706b8d63f4cf30e2a227e398175fd7f94a76fa9aa97701eea62646e658395"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldSpecialization.ir.sig",
+        "sha256": "ddefc1cf665f594ec97984dbfe0cf9e1e15d44c4c2a30045ee9970743f125fac"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/IntrinsicBaseEquivalence.olean",
+        "sha256": "33d69e607483b8713713371fd0af013f2d5af23651a5bb8e6f242c13fc0f0f6b"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/IntrinsicBaseEquivalence.olean.private",
+        "sha256": "101f8071b3ec210644884d918a2c4e1b28bff72a043235375b82e2d4c122182f"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/IntrinsicBaseEquivalence.olean.server",
+        "sha256": "9e65f34391165170e6379d8c4a35430f5d8bc406446e25f4e2b565c373e43f97"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/IntrinsicBaseEquivalence.ir",
+        "sha256": "2b5855207f67f6f60cbb1cf9518aec9d9a7052dcd0ff610b851b9e3ebaf3d5b8"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/IntrinsicBaseEquivalence.ir.sig",
+        "sha256": "093bd215f719aea00c7385c1ea5c41b7bd56e220ff9a7b8a8a63fad54e63bb85"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.olean",
+        "sha256": "a181aca13923f0e01bfb59cb34757213f27804f43584a08cc9b968b3d733c2e1"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.olean.private",
+        "sha256": "eb708507665f89fb230275f1fedbd84a1e4ae4dab0a7e7b4a22a425111e86cd5"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.olean.server",
+        "sha256": "dcb85bd354f4db21464160d09b0c0eb15647716c30ccaa037498fe8b870f09c7"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.ir",
+        "sha256": "4d985d3f395996391b15d88535af44a6b7847958358b798ebe278962b10d56a5"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.ir.sig",
+        "sha256": "b21771948106755b1e4fc07a92f07a5248c3ed87d42d91143d33f541920bb9ea"
+      }
+    ],
+    "variants": [
+      {
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.lean",
+        "original_sha256": "fed343e99d46e16c3342bf9197ecc50d69f5012bc3f2611af6cfbe9e1797fd9d",
+        "migrated_sha256": "e4bc33014b24e5666c7b3768595b6d1a54da59c8ae7f741fa0af7e6183faa88a",
+        "insertions": [
+          {
+            "offset": 1898,
+            "text": "set_option backward.proofsInPublic true\n"
+          }
+        ],
+        "added_imports": [],
+        "added_options": [
+          "backward.proofsInPublic true"
+        ],
+        "observed_failure_log": "verification/module-port-20260928/repair-pilot-37-finite-galois-core/observed-failure.log",
+        "focused_compile": "verification/module-port-20260928/repair-pilot-37-finite-galois-core/result.json",
+        "name": "public-proof-elaboration-option",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-37-finite-galois-core/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-37-finite-galois-core/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-37-finite-galois-core/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.olean"
+      }
+    ]
+  },
+  "results": [
+    {
+      "compiler_exit_code": 0,
+      "direct_import_artifact_hashes_after": [
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean",
+          "sha256": "a421ca6daa6c0d668f868ba3a6e38ba61b3f1a9137aa07d888a6cbf61f892c3a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean.private",
+          "sha256": "ac6bfa0e8b217698e45ec9137d119afcf60df53ae406c994a7506242d489cce2"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.olean.server",
+          "sha256": "e6a76a77ef8286e3faae6a7fed967c46c74f60ded1129989fd887f42f2aec1c4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.ir",
+          "sha256": "66577e4935aca7ae347fe7edc17d89542ce0f71249c5eddba83f0488f63d375e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/AlgEquiv.ir.sig",
+          "sha256": "46be67fd063663b44596717b5bdc0eedc55061604879ff525f1129f7b23feada"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Galois/FixedFieldLattice.olean",
+          "sha256": "9d8ac56d6346b6f25bae2a3cfcade98df0cc0909cc45664bb52232a69877b681"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Galois/FixedFieldLattice.olean.private",
+          "sha256": "59b48de79e42fd3bcf2599da136cfdc5840b89aa4b3fc9a5ff8dabaf7813fe88"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Galois/FixedFieldLattice.olean.server",
+          "sha256": "aad91501752530d7f7c27a8670a2c4f096eaf29861a9eabd33cfc1a8ab5c4b87"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Galois/FixedFieldLattice.ir",
+          "sha256": "6a5e68e4da8db3e875e873b599d01227598c711b97890b6e0c58b48440df42c4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Galois/FixedFieldLattice.ir.sig",
+          "sha256": "7bfba751128a31f5c28524ab9d7c448509c88cfeb184b37cfb8e9d37c9b061f7"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.olean",
+          "sha256": "dcbfec501dbb254076f7ac9f6eafdabdb159cd00f631f70ff9fb7eaa79e9c1f3"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.olean.private",
+          "sha256": "276fa3c563de5c1ba4acbc0b465e6a2b78ee24fab782d3582cd04a49c2ba14a6"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.olean.server",
+          "sha256": "6b2c2e1d43e13e2a02f40981de82bb5e26b5b21de453aba02af132d380418985"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.ir",
+          "sha256": "57d707e6544b436b66e64945b27085baba9888c157de2d3a9a6487ed205d2cb0"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.ir.sig",
+          "sha256": "5e5551f75fb4d269b2adda52d6d3f7e6235c86723883e834851ed02413c8291f"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.olean",
+          "sha256": "97f2f5f3296c940d635c8589b26f18d186a8151ed52b8166a62e7118f49f0f1c"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.olean.private",
+          "sha256": "cd2eb3d8d42bbfcc452c7c687024eba112c3e62f5dfc65a1683abf0956bb88f8"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.olean.server",
+          "sha256": "ed6a228c1ab77b98d0314bde8bd84753301fd7c01bf95386dedc8627960bd954"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.ir",
+          "sha256": "31a044c1df97ac9273e859cc3d990e01c25012350b5be968429862bc2c7d3db4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitNormQuotient.ir.sig",
+          "sha256": "3e742fce24ebfd7fa1c6f065ffd096d7c5bb67cb13ca5cb9a0ed63a657ede083"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedExtensionQuotient.olean",
+          "sha256": "ddc979f58386ad399bf5dd61712c84eeedc9ec1b4948f92552b7fd02377402cf"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedExtensionQuotient.olean.private",
+          "sha256": "b8e8265aff39737493cf12c4c6a29682fd325711b952cd24d18434dcd0ccbaae"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedExtensionQuotient.olean.server",
+          "sha256": "bf258437a7cb6dd150e9309710cadd11a85eb8bfa59e7a6da4fda253275a813a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedExtensionQuotient.ir",
+          "sha256": "73d900eb4725f37c4882df7750d4c15bb1829325a180b2730ccdbe775c9e5f94"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedExtensionQuotient.ir.sig",
+          "sha256": "d6f6c96ee1d18f25f7e0bc92587808d9fd23bb3f776da9e4d624198863285063"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedInertiaComparison.olean",
+          "sha256": "c60152b794ff3cf22cd4a576038ebbb8e8f4acf0245867904b067ee277d6d53e"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedInertiaComparison.olean.private",
+          "sha256": "905e0870735712e0681c556c156d1aa46693acc8a7aac72e369a48811e554d2a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedInertiaComparison.olean.server",
+          "sha256": "d2e8d384969692fb16da3e3657ff1e2e42670e2858df62ac77d1e267e746171d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedInertiaComparison.ir",
+          "sha256": "b35f3f3390d7f485e87563eae31b045f83708c275381fcd0ec931c6f3741c99c"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/EmbeddedInertiaComparison.ir.sig",
+          "sha256": "f1889480571d9233aafdf94b788345774ccb4f6d8c98405fa493f921dfd9bd5d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldNormQuotient.olean",
+          "sha256": "1f4e91b1953f70c521a371c2364f714952ce99fdeda14c212131d324bf6e06a1"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldNormQuotient.olean.private",
+          "sha256": "3b494659e8f1e24177feab4440a983ba344815412bb10a87ac7f4261c9c28809"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldNormQuotient.olean.server",
+          "sha256": "6d326329734621a172da00a74316bc5ff27272c815b055fd3809c59f79eac713"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldNormQuotient.ir",
+          "sha256": "3f90014d64aec4924c42663cf5449a86b5c5d4ef13a42e076365c421f7ba56d0"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldNormQuotient.ir.sig",
+          "sha256": "cf8df1949ad2c8988f9e5e23adaa7ce6511b6172d4e68e074eeff2759eb57063"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldSpecialization.olean",
+          "sha256": "56f2399d49901cf72ada5df351f66f7a5ccf715edb16d7771c8430fedfb633a2"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldSpecialization.olean.private",
+          "sha256": "de188b0b95847f6ebb3a82e88f24a131c6ae470224936f906ce574c1da8ab5a9"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldSpecialization.olean.server",
+          "sha256": "36024487d4e83f9c14d7c8cf26a2f0c88ec07263235dafb8445d319f3d98e1fe"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldSpecialization.ir",
+          "sha256": "9f7706b8d63f4cf30e2a227e398175fd7f94a76fa9aa97701eea62646e658395"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/FixedFieldSpecialization.ir.sig",
+          "sha256": "ddefc1cf665f594ec97984dbfe0cf9e1e15d44c4c2a30045ee9970743f125fac"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/IntrinsicBaseEquivalence.olean",
+          "sha256": "33d69e607483b8713713371fd0af013f2d5af23651a5bb8e6f242c13fc0f0f6b"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/IntrinsicBaseEquivalence.olean.private",
+          "sha256": "101f8071b3ec210644884d918a2c4e1b28bff72a043235375b82e2d4c122182f"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/IntrinsicBaseEquivalence.olean.server",
+          "sha256": "9e65f34391165170e6379d8c4a35430f5d8bc406446e25f4e2b565c373e43f97"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/IntrinsicBaseEquivalence.ir",
+          "sha256": "2b5855207f67f6f60cbb1cf9518aec9d9a7052dcd0ff610b851b9e3ebaf3d5b8"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/BaseComparison/IntrinsicBaseEquivalence.ir.sig",
+          "sha256": "093bd215f719aea00c7385c1ea5c41b7bd56e220ff9a7b8a8a63fad54e63bb85"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.olean",
+          "sha256": "a181aca13923f0e01bfb59cb34757213f27804f43584a08cc9b968b3d733c2e1"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.olean.private",
+          "sha256": "eb708507665f89fb230275f1fedbd84a1e4ae4dab0a7e7b4a22a425111e86cd5"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.olean.server",
+          "sha256": "dcb85bd354f4db21464160d09b0c0eb15647716c30ccaa037498fe8b870f09c7"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.ir",
+          "sha256": "4d985d3f395996391b15d88535af44a6b7847958358b798ebe278962b10d56a5"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.ir.sig",
+          "sha256": "b21771948106755b1e4fc07a92f07a5248c3ed87d42d91143d33f541920bb9ea"
+        }
+      ],
+      "variant": {
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.lean",
+        "original_sha256": "fed343e99d46e16c3342bf9197ecc50d69f5012bc3f2611af6cfbe9e1797fd9d",
+        "migrated_sha256": "e4bc33014b24e5666c7b3768595b6d1a54da59c8ae7f741fa0af7e6183faa88a",
+        "insertions": [
+          {
+            "offset": 1898,
+            "text": "set_option backward.proofsInPublic true\n"
+          }
+        ],
+        "added_imports": [],
+        "added_options": [
+          "backward.proofsInPublic true"
+        ],
+        "observed_failure_log": "verification/module-port-20260928/repair-pilot-37-finite-galois-core/observed-failure.log",
+        "focused_compile": "verification/module-port-20260928/repair-pilot-37-finite-galois-core/result.json",
+        "name": "public-proof-elaboration-option",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-37-finite-galois-core/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-37-finite-galois-core/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-37-finite-galois-core/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.olean"
+      },
+      "command": [
+        "/home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-R",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-37-finite-galois-core/source",
+        "-o",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-37-finite-galois-core/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.olean",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-37-finite-galois-core/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.lean"
+      ],
+      "exit_code": 0,
+      "reason": null,
+      "elapsed_total": 26.311116963624954
+    }
+  ],
+  "passed": true
+}

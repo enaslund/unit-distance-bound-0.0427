@@ -1,0 +1,18 @@
+⚠ [3368/3447] Replayed UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.Cardinality
+warning: UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/Herbrand/HerbrandLowDegree/Cardinality.lean:62:27: This simp argument is unused:
+  Rep.hom_comm_apply
+
+Hint: Omit it from the simp argument list.
+  simp [Rep.FiniteCyclicGroup.subCompNormHom, Rep.norm, Representation.norm, R̵e̵p̵.̵h̵o̵m̵_̵c̵o̵m̵m̵_̵a̵p̵p̵l̵y̵,̵ ̵hf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [4114/4124] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.Ramification.GaloisValuation.IntermediateFieldRestriction (3.8s)
+✔ [4118/4125] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.IntermediateFieldNormResidueNaturality (16s)
+✔ [4120/4125] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.NormResidue (4.0s)
+✔ [4122/4127] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityPrimeNorm (12s)
+✔ [4123/4127] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.NormResidueNaturality (6.1s)
+✔ [4126/4133] Built UnitDistance.LocalArtinRestriction (9.0s)
+✔ [4130/4133] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.UnramifiedReciprocity (6.7s)
+✔ [4132/4133] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.UnramifiedNormalization (8.8s)
+✔ [4133/4133] Built UnitDistance.LocalArtinUnitContainment (7.2s)
+Build completed successfully (4133 jobs).

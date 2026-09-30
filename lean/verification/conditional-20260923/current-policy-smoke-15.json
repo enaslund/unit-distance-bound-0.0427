@@ -1,0 +1,13 @@
+{
+  "schema": "unit-distance-candidate15-current-policy-smoke-v1",
+  "archive_sha256": "7585c6dcd7806503237142df9a8544561a08d2cb9291e684991981d6b6cf4632",
+  "current_policy_head": "e48a86d0495356b5131a92c9406aa6e27cf99e56",
+  "metadata_contract_passed": true,
+  "project": "Planar unit distances from one fixed zeta inequality",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "toolchain_policy": {
+    "passed": false,
+    "code": "toolchain.unsupported",
+    "message": "Lean toolchain leanprover/lean4:v4.32.0 is older than the minimum Palomar supports (v4.35.0-rc2)"
+  }
+}

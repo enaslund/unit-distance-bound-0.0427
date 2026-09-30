@@ -1,0 +1,20 @@
+{
+  "archive": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/conditional-20260922/conditional-source-07.tar.gz",
+  "archive_bytes": 5959498,
+  "archive_sha256": "f5bfc2e50e6432af0d6dfccf26801bf1de6d147f42cb6b037478e0b40c3ccd0a",
+  "external_zeta_records": 6,
+  "files": 2299,
+  "manuscript_files": 14,
+  "missing_references": [],
+  "missing_references_tolerated": false,
+  "project_modules": 2163,
+  "proof_verification_performed": false,
+  "referenced_records": 62,
+  "references_ignored": [
+    "scripts/verify_submission.py"
+  ],
+  "remote_submission": false,
+  "selected_configuration": "comparator-zeta.json",
+  "snapshot_sha256": "382beb470029ed8fefd9bd7ecc36b6f5254af836cc173d9f1ee9d66e7d0618cd",
+  "source_bytes": 31341244
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "Expose exact existing private DirectedSystem/action instances from IdeleClassDirectLimitCore and the NumberField instance from IdeleClassDirectLimitAbstractFixedField. Unchanged baseline and Core-only candidate failures preserved; the two-owner import-only candidate passes the complete Extension file. Statements, proof bodies, and heartbeat limits preserved.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtension.lean",
+      "original_sha256": "612ec9c6ddfbe2a511f08efd4fa0ceace81fd0ef9d7f3606b95f0cda9c98f33a",
+      "migrated_sha256": "488a707db7b22e9c49f7d7eabdfe62995892eb93c8579f6cd7b8ed28d0ca8d64",
+      "insertions": [
+        {
+          "offset": 596,
+          "text": "\nimport all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitCore\n"
+        },
+        {
+          "offset": 596,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitAbstractFixedField\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitCore",
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitAbstractFixedField"
+      ],
+      "added_options": [],
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-31-extension-baseline/unchanged-extension.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-31-extension-both-owners/result.json"
+    }
+  ]
+}

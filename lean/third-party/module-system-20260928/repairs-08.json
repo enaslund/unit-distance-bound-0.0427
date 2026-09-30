@@ -1,0 +1,26 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [],
+      "added_options": [],
+      "declaration": "equalCharacteristicDirectThetaAfterBracketCoefficient_zero",
+      "insertions": [],
+      "migrated_sha256": "d643a5271fbb2a900c67e05d31c340644ae43cbbfcc45e739a3d8fdf8c867a43",
+      "original_sha256": "14afb5258953405e2c9557dd59d6d2ace27dde44fc6652deaf7da6f223d209ea",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/CompletedLevel/DirectThetaFirstIdentity.lean",
+      "reason": "Explicitly composes multiplication commutativity with hsemi.symm instead of relying on simp orientation; theorem statement and all other source bytes unchanged.",
+      "replacement": {
+        "after": "    equalCharacteristicCompletedDirectBracketCoefficient] using\n    (mul_comm _ _).trans hsemi.symm\n",
+        "before": "    equalCharacteristicCompletedDirectBracketCoefficient,\n    mul_comm] using hsemi.symm\n",
+        "offset": 3180,
+        "offset_unit": "utf8-bytes"
+      },
+      "statement": "theorem equalCharacteristicDirectThetaAfterBracketCoefficient_zero\n    (u : k\u27e6X\u27e7\u02e3) :\n    equalCharacteristicDirectThetaAfterBracketCoefficient u 0 =\n      equalCharacteristicPowerSeriesFrobenius k\n        (equalCharacteristicDirectThetaCoefficient u 0) := by\n"
+    }
+  ],
+  "schema": "unit-distance-module-port-proof-repair-v1",
+  "scope": "One direct-theta proof-only compatibility repair, the explicit multiplication swap used in repair05. Exact theorem statement and assumptions are unchanged; no axioms added."
+}

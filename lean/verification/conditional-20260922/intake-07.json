@@ -1,0 +1,122 @@
+{
+  "archive_sha256": "f5bfc2e50e6432af0d6dfccf26801bf1de6d147f42cb6b037478e0b40c3ccd0a",
+  "challenge": {
+    "bytes": 6513,
+    "lines": 130
+  },
+  "checked_at": "2026-09-22T08:20:26.174337+00:00",
+  "classification": {
+    "arxiv": {
+      "math.CO": "Combinatorics",
+      "math.NT": "Number Theory"
+    },
+    "msc2020": {
+      "11R37": "Class field theory",
+      "20C05": "Group rings of finite groups and their modules (group-theoretic aspects)",
+      "52C10": "Erd\u0151s problems and related topics of discrete geometry"
+    }
+  },
+  "deferred_remote_actions": [
+    "Publish an exact public repository commit",
+    "Authenticate repository access and submitter authorization",
+    "Request official mechanical and editorial review",
+    "Choose whether to register after review"
+  ],
+  "lakefile": {
+    "bytes": 376,
+    "path": "lakefile.toml"
+  },
+  "license_detection_scope": "Exact detector is recorded separately in the execution receipt",
+  "license_file": {
+    "name": "LICENSE",
+    "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+  },
+  "manifest_packages": [
+    {
+      "name": "mathlib",
+      "repository": "leanprover-community/mathlib4",
+      "revision": "81a5d257c8e410db227a6665ed08f64fea08e997",
+      "url": "https://github.com/leanprover-community/mathlib4.git"
+    },
+    {
+      "name": "plausible",
+      "repository": "leanprover-community/plausible",
+      "revision": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+      "url": "https://github.com/leanprover-community/plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "repository": "leanprover-community/LeanSearchClient",
+      "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "url": "https://github.com/leanprover-community/LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "repository": "leanprover-community/import-graph",
+      "revision": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+      "url": "https://github.com/leanprover-community/import-graph"
+    },
+    {
+      "name": "proofwidgets",
+      "repository": "leanprover-community/ProofWidgets4",
+      "revision": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+      "url": "https://github.com/leanprover-community/ProofWidgets4"
+    },
+    {
+      "name": "aesop",
+      "repository": "leanprover-community/aesop",
+      "revision": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+      "url": "https://github.com/leanprover-community/aesop"
+    },
+    {
+      "name": "Qq",
+      "repository": "leanprover-community/quote4",
+      "revision": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+      "url": "https://github.com/leanprover-community/quote4"
+    },
+    {
+      "name": "batteries",
+      "repository": "leanprover-community/batteries",
+      "revision": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+      "url": "https://github.com/leanprover-community/batteries"
+    },
+    {
+      "name": "Cli",
+      "repository": "leanprover/lean4-cli",
+      "revision": "88679d088c9720c27ebdf2ba4dafe17341747f94",
+      "url": "https://github.com/leanprover/lean4-cli"
+    }
+  ],
+  "orcid_validation": {
+    "checked_at": "2026-09-22T08:20:26Z",
+    "records": [],
+    "registry": "https://orcid.org",
+    "schema_version": 1
+  },
+  "palomar_submission_commit": "3561d237dcc4b28482558ad28a64d767d7cc8615",
+  "passed": true,
+  "paths_are_contained_regular_files": true,
+  "payload_hashes_match": true,
+  "provenance_contract_passed": true,
+  "resolved_lean4export_commit": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+  "result_origin": "source-based",
+  "schema": "unit-distance-applicable-local-intake-v1",
+  "scope": "Applicable local intake checks, using pinned public verifier functions. No proof compilation or replay; no remote intake or official report.",
+  "selected_configuration": {
+    "challenge_module": "ChallengeZeta",
+    "definition_names": [],
+    "enable_nanoda": true,
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "solution_module": "SolutionZeta",
+    "theorem_names": [
+      "UnitDistanceZetaSubmission.target_of_canonical_zeta_bound"
+    ]
+  },
+  "source_bytes": 31370891,
+  "source_snapshot_sha256": "382beb470029ed8fefd9bd7ecc36b6f5254af836cc173d9f1ee9d66e7d0618cd",
+  "supported_toolchain": "v4.32.0"
+}

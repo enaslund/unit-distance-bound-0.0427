@@ -1,0 +1,26 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [],
+      "added_options": [],
+      "declaration": "MaxEverywhereUnramifiedProPGaloisGroup.instT2Space",
+      "insertions": [],
+      "migrated_sha256": "6dec4ec646a9532d9ab86d3ff6123c52aeb8bcd13d6cf4c57845852514ea6e41",
+      "original_sha256": "4aadd23752a61386ef3d62d28afd906bd55100ae42a542c95f10d9edf9bcb9cf",
+      "path": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Global/MaximalEverywhereUnramifiedProPGalois.lean",
+      "reason": "Use Mathlib krullTopology_t2 directly for the existing Hausdorff instance, with identical statement and assumptions, rather than a private generic instance-search route.",
+      "replacement": {
+        "after": " by\n  change T2Space (maximalEverywhereUnramifiedProP F p \u2243\u2090[F]\n    maximalEverywhereUnramifiedProP F p)\n  exact krullTopology_t2\n",
+        "before": "\n  inferInstanceAs\n    (T2Space (maximalEverywhereUnramifiedProP F p \u2243\u2090[F]\n      maximalEverywhereUnramifiedProP F p))\n",
+        "offset": 6231,
+        "offset_unit": "utf8-bytes"
+      },
+      "statement": "instance MaxEverywhereUnramifiedProPGaloisGroup.instT2Space\n    (F : Type u) [Field F] [NumberField F]\n    (p : \u2115) [Fact (Nat.Prime p)] :\n    T2Space (MaxEverywhereUnramifiedProPGaloisGroup F p) :="
+    }
+  ],
+  "schema": "unit-distance-module-port-instance-proof-repair-v1",
+  "scope": "One exact same-statement Prop-instance proof repair. No new theorem assumption, definition data or axiom; only the instance proof term changes to an existing Mathlib theorem."
+}

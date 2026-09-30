@@ -1,0 +1,154 @@
+module
+
+public import UnitDistance.TensorMixedCoordinates
+public import UnitDistance.TensorFunctional
+public import UnitDistance.GeometryEnergy
+
+@[expose] public section
+set_option backward.privateInPublic true
+
+
+/-! # Exact mixed p-mass and volume bounds
+
+The supported exponential of the summed energy is the literal product of
+the archimedean and finite Poisson weights. Its integral, window volume bound,
+and normalized functional follow without additional analytic assumptions.
+-/
+
+noncomputable section
+open MeasureTheory Set
+open scoped Classical BigOperators ENNReal
+namespace UnitDistance.Witness
+
+variable {β γ ι : Type*} [Fintype β] [Fintype γ] [Fintype ι] {G : ι → Type*}
+  [∀ i, AddCommGroup (G i)] [∀ i, MeasurableSpace (G i)]
+  (v : ι → Fin 11) (μ : (i : ι) → Measure (G i)) [∀ i, SigmaFinite (μ i)]
+  (B : (i : ι) → Local.BallSystem (G i) (μ i) (residueCard (v i)))
+
+def mixedPositionWeight (x : MixedPositionCoordinates β γ G) : ℝ :=
+  tensorWeight x.1*tensorFiniteWeight v μ B x.2
+
+def mixedPositionMass (β γ : Type*) [Fintype β] [Fintype γ] : ℝ :=
+  (compactMass^Fintype.card β*pairMass^Fintype.card γ)*tensorFiniteMass v
+
+theorem mixedPositionMass_pos : 0 < mixedPositionMass v β γ := by
+  unfold mixedPositionMass
+  positivity [compactMass_pos, pairMass_pos, tensorFiniteMass_pos v]
+
+theorem mixedPositionWeight_nonneg (x : MixedPositionCoordinates β γ G) :
+    0 ≤ mixedPositionWeight v μ B x :=
+  mul_nonneg (tensorWeight_pos x.1).le (tensorFiniteWeight_nonneg v μ B x.2)
+
+theorem mixedPositionEnergy_weight {x : MixedPositionCoordinates β γ G}
+    (hx : x ∈ mixedPositionSupport v μ B) :
+    Real.exp (-p*mixedPositionEnergy v μ B x) = mixedPositionWeight v μ B x := by
+  have hi (i : ι) : x.2 i ∈ Function.support (localShellProfile (v i) (B i)) := by
+    exact (Finset.prod_ne_zero_iff.mp hx) i (Finset.mem_univ i)
+  rw [mixedPositionEnergy, mul_add, Real.exp_add, tensorPositionEnergy_weight_p]
+  unfold mixedPositionWeight tensorFiniteWeight
+  congr 1
+  rw [Finset.mul_sum, Real.exp_sum]
+  apply Finset.prod_congr rfl
+  intro i _
+  exact (B i).shellEnergy_weight _ _ _ (fun ij _ =>
+    mul_nonneg (shellWeightNat_nonneg (v i) ij.1) (shellWeightNat_nonneg (v i) ij.2)) p (hi i)
+
+theorem mixedPositionWeight_eq_zero {x : MixedPositionCoordinates β γ G}
+    (hx : x ∉ mixedPositionSupport v μ B) : mixedPositionWeight v μ B x = 0 := by
+  have hx' : tensorFiniteProfile v μ B x.2 = 0 := not_not.mp hx
+  simp [mixedPositionWeight, tensorFiniteWeight_eq_rpow, hx',
+    Real.zero_rpow (ne_of_gt witness_basic.2.2.1)]
+
+theorem mixedPositionWeight_eq_indicator :
+    mixedPositionWeight (β := β) (γ := γ) v μ B =
+      (mixedPositionSupport v μ B).indicator
+        (fun x => Real.exp (-p*mixedPositionEnergy v μ B x)) := by
+  funext x
+  by_cases hx : x ∈ mixedPositionSupport v μ B
+  · rw [Set.indicator_of_mem hx, mixedPositionEnergy_weight v μ B hx]
+  · rw [Set.indicator_of_notMem hx, mixedPositionWeight_eq_zero v μ B hx]
+
+theorem mixedPositionWeight_integrable :
+    Integrable (mixedPositionWeight (β := β) (γ := γ) v μ B) (mixedPositionMeasure μ) :=
+  integrable_tensorWeight.mul_prod (tensorFiniteWeight_integrable v μ B)
+
+theorem mixedPositionWeight_integral :
+    (∫ x : MixedPositionCoordinates β γ G, mixedPositionWeight v μ B x
+      ∂mixedPositionMeasure μ) = mixedPositionMass v β γ := by
+  change (∫ x : MixedPositionCoordinates β γ G,
+    tensorWeight x.1*tensorFiniteWeight v μ B x.2
+    ∂(volume.prod (Measure.pi (fun i => (μ i).prod (μ i))))) = _
+  rw [integral_prod_mul]
+  rw [integral_tensorWeight, tensorFiniteWeight_integral]
+  rfl
+
+theorem mixedPositionEnergy_integrable :
+    Integrable (fun x : MixedPositionCoordinates β γ G =>
+      Real.exp (-p*mixedPositionEnergy v μ B x))
+      ((mixedPositionMeasure μ).restrict (mixedPositionSupport v μ B)) := by
+  have hS : MeasurableSet (mixedPositionSupport (β := β) (γ := γ) v μ B) :=
+    (measurableSet_support (tensorFiniteProfile_measurable v μ B)).preimage measurable_snd
+  apply (integrable_indicator_iff hS).mp
+  rw [← mixedPositionWeight_eq_indicator]
+  exact mixedPositionWeight_integrable v μ B
+
+theorem mixedPositionEnergy_integral :
+    (∫ x : MixedPositionCoordinates β γ G in mixedPositionSupport v μ B,
+      Real.exp (-p*mixedPositionEnergy v μ B x) ∂mixedPositionMeasure μ) =
+      mixedPositionMass v β γ := by
+  have hS : MeasurableSet (mixedPositionSupport (β := β) (γ := γ) v μ B) :=
+    (measurableSet_support (tensorFiniteProfile_measurable v μ B)).preimage measurable_snd
+  rw [← integral_indicator hS,
+    ← mixedPositionWeight_eq_indicator, mixedPositionWeight_integral]
+
+/-- The exact ratio of overlap mass and p-mass factors into the two actual functionals. -/
+theorem mixedFunctional_eq :
+    mixedOverlapMass v β γ/(mixedPositionMass v β γ)^(1+increment) =
+      tensorFunctional β γ*tensorFiniteFunctional v := by
+  rw [mixedOverlapMass, mixedPositionMass,
+    Real.mul_rpow (by positivity [compactMass_pos, pairMass_pos]) (tensorFiniteMass_pos v).le]
+  exact div_mul_div_comm _ _ _ _ |>.symm
+
+variable [∀ i, MeasurableAdd₂ (G i)] [∀ i, MeasurableNeg (G i)]
+  [∀ i, (μ i).IsAddRightInvariant] [∀ i, (μ i).IsAddLeftInvariant] [∀ i, (μ i).IsNegInvariant]
+
+theorem mixed_supportedWindow_finite (T : ℝ) :
+    mixedPositionMeasure (β := β) (γ := γ) μ
+      (supportedWindow (mixedPositionSupport v μ B) (mixedPositionEnergy v μ B) T) ≠ ∞ :=
+  supported_energy_window_finite _ _ _ _ _ witness_basic.2.2.1.le
+    (measurable_mixedPositionEnergy v μ B) (mixedPositionEnergy_integrable v μ B)
+
+theorem mixed_supportedWindow_volume_bound (T : ℝ) :
+    (mixedPositionMeasure (β := β) (γ := γ) μ).real
+      (supportedWindow (mixedPositionSupport v μ B) (mixedPositionEnergy v μ B) T) ≤
+      Real.exp (p*T)*mixedPositionMass v β γ := by
+  have h := supported_energy_window_volume
+    (mixedPositionMeasure (β := β) (γ := γ) μ) (mixedPositionSupport v μ B)
+    (mixedPositionEnergy v μ B) p T witness_basic.2.2.1.le
+    (measurable_mixedPositionEnergy v μ B) (mixedPositionEnergy_integrable v μ B)
+    (mixed_supportedWindow_finite v μ B T)
+  rwa [mixedPositionEnergy_integral] at h
+
+variable {U : ι → Type*} [∀ i, MeasurableSpace (U i)]
+  (S : (i : ι) → (B i).ReciprocalSteps (U i))
+  (ν : (i : ι) → Measure (U i)) [∀ i, IsProbabilityMeasure (ν i)]
+
+theorem mixed_supportedWindowOverlap_finite (hs : ∀ i n, Measurable ((S i).step n)) (T : ℝ) :
+    supportedWindowOverlap (mixedDisplacementMeasure (γ := γ) ν)
+      (mixedPositionMeasure (β := β) (γ := γ) μ) (mixedStep v μ B S)
+      (mixedPositionSupport v μ B) (mixedPositionEnergy v μ B) T ≠ ∞ := by
+  rw [mixed_supportedWindowOverlap_eq v μ B S ν hs]
+  exact mixed_energyEvent_finite v μ B S ν hs T
+
+theorem mixed_supportedWindow_volume_positive (hs : ∀ i n, Measurable ((S i).step n))
+    (hcount : (Fintype.card ι:ℝ) ≤ (69/32:ℝ)*((Fintype.card β:ℝ)+2*Fintype.card γ))
+    {ε : ℝ} (hε : 0 < ε) (hd : 0 < (Fintype.card β:ℝ)+2*Fintype.card γ)
+    (hlarge : 4*mixedEnergyVarianceConstant ≤ ε^2*((Fintype.card β:ℝ)+2*Fintype.card γ)) :
+    mixedPositionMeasure (β := β) (γ := γ) μ
+      (supportedWindow (mixedPositionSupport v μ B) (mixedPositionEnergy v μ B)
+        (mixedEnergyMean v μ B S ν β γ+ε*((Fintype.card β:ℝ)+2*Fintype.card γ))) ≠ 0 := by
+  apply window_measure_ne_zero_of_overlap_pos (mixedDisplacementMeasure ν) _ _ (mixedStep v μ B S)
+  exact lt_of_lt_of_le (by positivity [mixedOverlapMass_pos (β := β) (γ := γ) v])
+    (mixed_concentrated_supportedWindowOverlap v μ B S ν hs hcount hε hd hlarge)
+
+end UnitDistance.Witness

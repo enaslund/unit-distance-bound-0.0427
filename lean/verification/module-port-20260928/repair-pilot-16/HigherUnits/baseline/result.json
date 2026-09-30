@@ -1,0 +1,152 @@
+{
+  "inputs": {
+    "compiler": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "compiler_sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "LEAN_PATH": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/plausible/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/importGraph/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/aesop/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Qq/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/batteries/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Cli/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean",
+    "variants": [
+      {
+        "name": "HigherUnits",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-16/HigherUnits/baseline/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-16/HigherUnits/baseline/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/NormSubgroup/HigherUnits.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-16/HigherUnits/baseline/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/NormSubgroup/HigherUnits.olean",
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/NormSubgroup/HigherUnits.lean",
+        "original_sha256": "f61b3976f7a7d2ed9df4916a6c0846e578f94c95b0eefb33b2c265d84966e4c6",
+        "migrated_sha256": "f61b3976f7a7d2ed9df4916a6c0846e578f94c95b0eefb33b2c265d84966e4c6",
+        "insertions": [],
+        "added_imports": [],
+        "added_options": []
+      }
+    ],
+    "direct_import_artifact_hashes": [
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FormalModule/DivisionModuleEndomorphisms.olean",
+        "sha256": "515a7a4118aa7ac8e957a286a2c3702bd820286ac6fd8b73579bbee643aa39fd"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FormalModule/DivisionModuleEndomorphisms.olean.private",
+        "sha256": "36738e154d6aabfcd2fea9e05c4c7df9f856a7ed3ebbbb10bffc6fb164887d61"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FormalModule/DivisionModuleEndomorphisms.olean.server",
+        "sha256": "d61f0cfca3858c8e556187a759821ee195ca2927b8b5019d7fb95a841d89d0a4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FormalModule/DivisionModuleEndomorphisms.ir",
+        "sha256": "6c5809b47edd8625626308aa04b6b264641e0013c8cd24b8d4b62cb6d2f7800a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Existence/LaurentLocalField.olean",
+        "sha256": "898f694893ece93b60c46d618f412f44411f470a9ed1eafdeb350c05bb28ff31"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Existence/LaurentLocalField.olean.private",
+        "sha256": "0a0b88a64445890a17c97eec7ea151008fb2d82b6025e9f8189376551bded4f4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Existence/LaurentLocalField.olean.server",
+        "sha256": "dc64ab16afbd4b53208e980090ac7cc39d21d6461265000e18877e7c06083b6a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Existence/LaurentLocalField.ir",
+        "sha256": "bab6ad69ecbfc4d6bf97d3125b166851bb8067aff74f62cdf453721d9d2d5c29"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/StandardOpenSubgroups.olean",
+        "sha256": "7a3c64e43ab496348d85325821b9a2cbdf67b416b0bc84b833f338cc5370c7b0"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/StandardOpenSubgroups.olean.private",
+        "sha256": "3443f3f412c044c085a39b9204d75ace481f6a3de50d2829f6e1317270a4cc39"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/StandardOpenSubgroups.olean.server",
+        "sha256": "a1959d2e87d732fd911f0d624478f64b7ff2daaf1b3496df66297a865258a621"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/StandardOpenSubgroups.ir",
+        "sha256": "9234d0200a22d74de93c355ea8b5f3e8992c05321a922e6c12fdbf1a4e63d9d2"
+      }
+    ],
+    "integration_attempt": "integration-20260928T200108Z plus passed repair13 isolated outputs",
+    "scope": "Unchanged downstream baseline with separate artifacts; 1CPU/2GiB/zeroSwap,180s,8GiBhostguard."
+  },
+  "results": [
+    {
+      "compiler_exit_code": 1,
+      "direct_import_artifact_hashes_after": [
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FormalModule/DivisionModuleEndomorphisms.olean",
+          "sha256": "515a7a4118aa7ac8e957a286a2c3702bd820286ac6fd8b73579bbee643aa39fd"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FormalModule/DivisionModuleEndomorphisms.olean.private",
+          "sha256": "36738e154d6aabfcd2fea9e05c4c7df9f856a7ed3ebbbb10bffc6fb164887d61"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FormalModule/DivisionModuleEndomorphisms.olean.server",
+          "sha256": "d61f0cfca3858c8e556187a759821ee195ca2927b8b5019d7fb95a841d89d0a4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FormalModule/DivisionModuleEndomorphisms.ir",
+          "sha256": "6c5809b47edd8625626308aa04b6b264641e0013c8cd24b8d4b62cb6d2f7800a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Existence/LaurentLocalField.olean",
+          "sha256": "898f694893ece93b60c46d618f412f44411f470a9ed1eafdeb350c05bb28ff31"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Existence/LaurentLocalField.olean.private",
+          "sha256": "0a0b88a64445890a17c97eec7ea151008fb2d82b6025e9f8189376551bded4f4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Existence/LaurentLocalField.olean.server",
+          "sha256": "dc64ab16afbd4b53208e980090ac7cc39d21d6461265000e18877e7c06083b6a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Existence/LaurentLocalField.ir",
+          "sha256": "bab6ad69ecbfc4d6bf97d3125b166851bb8067aff74f62cdf453721d9d2d5c29"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/StandardOpenSubgroups.olean",
+          "sha256": "7a3c64e43ab496348d85325821b9a2cbdf67b416b0bc84b833f338cc5370c7b0"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/StandardOpenSubgroups.olean.private",
+          "sha256": "3443f3f412c044c085a39b9204d75ace481f6a3de50d2829f6e1317270a4cc39"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/StandardOpenSubgroups.olean.server",
+          "sha256": "a1959d2e87d732fd911f0d624478f64b7ff2daaf1b3496df66297a865258a621"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair13-overlay/UnitDistance/Upstream/Yamaguchi/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/StandardOpenSubgroups.ir",
+          "sha256": "9234d0200a22d74de93c355ea8b5f3e8992c05321a922e6c12fdbf1a4e63d9d2"
+        }
+      ],
+      "variant": {
+        "name": "HigherUnits",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-16/HigherUnits/baseline/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-16/HigherUnits/baseline/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/NormSubgroup/HigherUnits.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-16/HigherUnits/baseline/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/NormSubgroup/HigherUnits.olean",
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/NormSubgroup/HigherUnits.lean",
+        "original_sha256": "f61b3976f7a7d2ed9df4916a6c0846e578f94c95b0eefb33b2c265d84966e4c6",
+        "migrated_sha256": "f61b3976f7a7d2ed9df4916a6c0846e578f94c95b0eefb33b2c265d84966e4c6",
+        "insertions": [],
+        "added_imports": [],
+        "added_options": []
+      },
+      "command": [
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-R",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-16/HigherUnits/baseline/source",
+        "-o",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-16/HigherUnits/baseline/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/NormSubgroup/HigherUnits.olean",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-16/HigherUnits/baseline/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/NormSubgroup/HigherUnits.lean"
+      ],
+      "exit_code": 1,
+      "reason": null,
+      "elapsed_total": 9.996747660450637
+    }
+  ],
+  "passed": false
+}

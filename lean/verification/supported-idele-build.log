@@ -1,0 +1,112 @@
+⚠ [3663/3682] Replayed UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.Cardinality
+warning: UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/Herbrand/HerbrandLowDegree/Cardinality.lean:62:27: This simp argument is unused:
+  Rep.hom_comm_apply
+
+Hint: Omit it from the simp argument list.
+  simp [Rep.FiniteCyclicGroup.subCompNormHom, Rep.norm, Representation.norm, R̵e̵p̵.̵h̵o̵m̵_̵c̵o̵m̵m̵_̵a̵p̵p̵l̵y̵,̵ ̵hf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [4341/4359] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.MultiplicativeProductH2 (4.2s)
+✔ [4342/4359] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.MultiplicativeProductH2Evaluation (5.5s)
+✔ [4345/4360] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.MultiplicativeBinaryProductH2Evaluation (4.1s)
+✔ [4347/4361] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicH2TateH0 (3.0s)
+✔ [4350/4363] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.NonarchimedeanLocalField.UnramifiedFrobenius (16s)
+✔ [4352/4366] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Unramified.PrincipalUnits.NormSide (8.7s)
+✔ [4354/4370] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Unramified.PrincipalUnits.Basic (8.5s)
+✔ [4355/4370] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Unramified.PrincipalUnits.Trace (10s)
+✔ [4357/4370] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Existence.UnramifiedNormSubgroup (5.5s)
+✔ [4360/4374] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Unramified.PrincipalUnits.Lift (16s)
+✔ [4362/4374] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Unramified.ResidueNorm (6.0s)
+✔ [4366/4374] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Unramified.Norm (7.7s)
+✔ [4369/4374] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.Unramified.Cohomology (9.7s)
+✔ [4371/4374] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.UnramifiedLocalIntegerUnitsH2 (5.1s)
+✔ [4372/4378] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Relative.SPlaces (26s)
+⚠ [4373/4378] Built UnitDistance.SupportedIdeleCocycles (6.0s)
+warning: UnitDistance/SupportedIdeleCocycles.lean:37:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.exists_supportedIdele_cocycle`:
+  [IsGalois K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsGalois K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [4374/4379] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Completion.LocalizedValuation (30s)
+✔ [4375/4380] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.CompletionTransport (7.8s)
+✔ [4376/4381] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.LocalInduction.Spine (10s)
+✔ [4377/4382] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.LocalInduction.Action (7.3s)
+✔ [4378/4384] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalBlocks.Family.Instances (5.9s)
+✔ [4379/4388] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.LocalInduction.Equiv (13s)
+✔ [4380/4388] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalBlocks.Family.H0 (9.4s)
+✔ [4381/4388] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.LocalInduction.Inclusion (57s)
+✔ [4382/4390] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Completion.ChosenLocalization (31s)
+✔ [4383/4390] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.LocalBlocks.Family.HMinusOne (10s)
+✔ [4384/4395] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.FinitePlaceTensorBlock (21s)
+✔ [4385/4395] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.Decomposition (27s)
+✔ [4386/4395] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.ChosenPlaceAction (41s)
+✔ [4387/4395] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.ChosenPlaceIntegralBlockEquiv (18s)
+✔ [4388/4395] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.ChosenPlaceIntegralBlockTensorSmul (14s)
+✔ [4389/4396] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.ChosenPlaceIntegralBlockInclusion (24s)
+✔ [4390/4396] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.ChosenPlaceIntegralBlockEquivApply (13s)
+✔ [4391/4396] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.ChosenPlaceIntegralBlockInducedSmul (7.5s)
+✔ [4392/4398] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.ArchimedeanHilbert90 (8.9s)
+✔ [4393/4399] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.ChosenPlaceIntegralBlock (18s)
+✔ [4395/4405] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.OutsideIntegralInduced.ChosenPlace (32s)
+✔ [4396/4405] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Adele.InfinitePlaceTensorBlock (18s)
+✔ [4398/4407] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.UnramifiedFinitePlaceIntegralBlockH2 (22s)
+✔ [4401/4407] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.ClassFormation.ArchimedeanNormQuotient (20s)
+✔ [4402/4408] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Idele.Cohomology.SPlaces.LocalBlocks (17s)
+✔ [4403/4408] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.UnramifiedInfinitePlaceBlockH2 (10s)
+✔ [4405/4408] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Local.SupportedSPlaceFactorsH2Localization (14s)
+⚠ [4406/4408] Built UnitDistance.SupportedIdeleLocalization (86s)
+warning: UnitDistance/SupportedIdeleLocalization.lean:26:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.supportedIdeleH2_localization_eq`:
+  [IsGalois K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsGalois K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4407/4443] Built UnitDistance.FieldUnitsIdeleDetection (5.2s)
+warning: UnitDistance/FieldUnitsIdeleDetection.lean:31:0: automatically included section variable(s) unused in theorem `UnitDistance.ArithmeticProP.fieldUnitsIdeleHom_finite_factor`:
+  [NumberField L]
+  [FiniteDimensional K L]
+  [IsGalois K L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField L] [FiniteDimensional K L] [IsGalois K L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [4439/4443] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Completion.Comparison (7.3s)
+✔ [4440/4443] Built UnitDistance.AbsoluteProPRestriction (4.7s)
+✔ [4442/4490] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Completion.AdicCompletionComparison (8.1s)
+✔ [4479/4492] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.Basic (3.0s)
+✔ [4480/4493] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.FormalCoreBase.PowerSeriesComposition (3.4s)
+✔ [4481/4493] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValuationSubringUnits.CyclicValueGroup (3.4s)
+✔ [4482/4493] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValuationSubringUnits.RangeRestriction (4.0s)
+✔ [4483/4493] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.Arithmetic (6.3s)
+✔ [4484/4493] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.FormalCoreBase.ProductArgument (2.8s)
+✔ [4485/4493] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValuationSubringUnits.IntegerValuation (3.0s)
+✔ [4486/4495] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.FormalCoreBase.BasicFactors (3.1s)
+✔ [4487/4495] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValuationSubringUnits.SeriesValuationEstimates (5.5s)
+✔ [4488/4495] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.FormalCoreBase.ChoiceCountSystem (2.7s)
+✔ [4489/4498] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.FieldNormBase (3.0s)
+✔ [4490/4498] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.FormalCoreBase.ExplicitChoiceCounts (3.4s)
+✔ [4491/4499] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValuationSubringUnits.IntegerValuationUniformizer (4.0s)
+✔ [4492/4500] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.RamificationInvariants (5.7s)
+✔ [4493/4501] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.FormalCoreBase.ChoicePositions (3.3s)
+✔ [4494/4502] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.RamificationIdeal (8.1s)
+✔ [4495/4502] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.FormalCore (4.5s)
+✔ [4496/4511] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValuationSubringUnits.ValuationSubringUnitMap (4.3s)
+✔ [4497/4511] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValuationSubringUnits.CompleteRangeRestriction (6.8s)
+✔ [4498/4511] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.FormalProduct (11s)
+✔ [4499/4514] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValuationSubringUnits.ValuedExtensionUnitMap (4.9s)
+✔ [4500/4514] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValuationSubringUnits.RangeRestrictedTopology (9.3s)
+✔ [4502/4518] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValuationSubringUnits.UniformizerIntegerValuation (4.8s)
+✔ [4504/4518] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.ValuationSubringUnits.LocalFieldRangeRestriction (3.7s)
+✔ [4507/4518] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.FieldUnitDecomposition (13s)
+✔ [4509/4518] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.SeriesTerms (13s)
+✔ [4510/4518] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.ExpConvergence (12s)
+✔ [4511/4518] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.LogConvergence (11s)
+✔ [4512/4518] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.InverseEstimates (13s)
+✔ [4513/4518] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.PrincipalUnitExp (17s)
+✔ [4514/4518] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.PrincipalUnitLog (13s)
+✔ [4515/4518] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.Analytic.LogExpSeries.Homomorphisms (17s)
+✔ [4516/4518] Built UnitDistance.Upstream.Yamaguchi.ValuedFieldTheory.LocalField.DiscreteValuationField.PadicField (13s)
+✔ [4517/4518] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Completion.IntegerRingComparison (16s)
+✔ [4518/4518] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.Completion.UnramifiedComparison.IdealToCompletion (92s)
+Build completed successfully (4518 jobs).

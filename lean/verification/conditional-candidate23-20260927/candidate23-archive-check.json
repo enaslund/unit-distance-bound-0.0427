@@ -1,0 +1,59 @@
+{
+  "archive": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/conditional-candidate23-20260927/conditional-source-23-final.tar.gz",
+  "archive_sha256": "a8b47796a275a598e2be85c9f6d4e28b560782047b4b7d6e8ea6c5c3f3d7132d",
+  "checks": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scripts/export-zeta-candidate.py",
+        "--output",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/candidate23-archive-check-20260927/reexport.tar.gz",
+        "--report",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/candidate23-archive-check-20260927/reexport.json"
+      ],
+      "exit_code": 0,
+      "finished_at": "2026-09-27T08:04:56.926275+00:00",
+      "log": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/conditional-candidate23-20260927/candidate23-archive-check-determinism.log",
+      "log_sha256": "075a97a21b461819ac1936089ef30026f4bebed9bc10b5624dc08d3cc1ec5ae9",
+      "pid": 6,
+      "seconds": 3.737,
+      "started_at": "2026-09-27T08:04:53.189107+00:00",
+      "state": "passed"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scripts/check-metadata.py",
+        "--policy-tree",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/upstream/PalomarSubmission-current-20260925-pinned",
+        "--revision",
+        "a59f25bd8a66bf6faf3a4f4260d412989c0185ea"
+      ],
+      "exit_code": 0,
+      "finished_at": "2026-09-27T08:04:57.147105+00:00",
+      "log": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/verification/conditional-candidate23-20260927/candidate23-archive-check-metadata.log",
+      "log_sha256": "e4387474ee21ca6f8f2696af5ec62697bffa92c6c4f7d85a4ad1e89558be0ee7",
+      "pid": 8,
+      "seconds": 0.183,
+      "started_at": "2026-09-27T08:04:56.963436+00:00",
+      "state": "passed"
+    }
+  ],
+  "deterministic_archive": true,
+  "finished_at": "2026-09-27T08:04:57.469744+00:00",
+  "mode": "archive-only",
+  "passed": true,
+  "policy_revision": "a59f25bd8a66bf6faf3a4f4260d412989c0185ea",
+  "policy_tree": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/upstream/PalomarSubmission-current-20260925-pinned",
+  "remote_submission": false,
+  "scope": "Local source archive and pinned metadata contract only. No Lean build, axiom audit, or independent kernel replay. The fixed zeta inequality is not verified.",
+  "seconds": 5.325,
+  "selected_configuration": "comparator-zeta.json",
+  "snapshot_sha256": "2632a4fa81d9c1fcb8acf87c569926dc689451fb8ea24adcce3668a4b3feda79",
+  "sources_unchanged": true,
+  "started_at": "2026-09-27T08:04:52.144944+00:00",
+  "state": "passed",
+  "threads": 2,
+  "timeout_seconds": 19800,
+  "work_directory": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/candidate23-archive-check-20260927"
+}

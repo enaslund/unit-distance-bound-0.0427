@@ -1,0 +1,13 @@
+{
+  "schema": "genus13-lvalue-periodic-source-fixture-v1",
+  "character_modulus": 13,
+  "period_coefficients": [1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, 1, 0],
+  "source_sha256": {
+    "lean-formalization/UnitDistance/GenusDirichletConductorsRun20260920.lean": "da1f113fb627a0e64651d1b5998f453f7d0e452771ea0a1f18ada752ca9b3a77",
+    "lean-formalization/UnitDistance/GenusLunaRun20260922ConductorThirteen.lean": "110cc2883052d0cfa0a18f048c809a91154365cf31039e34a0c8c04e83694950"
+  },
+  "source_binding": [
+    "commonChi13 is defined as commonPrimeQuadraticCharacter 13",
+    "the conductorThirteen_primitive_apply theorem identifies the actual primitive genus character with primeQuadraticCharacter 13"
+  ]
+}

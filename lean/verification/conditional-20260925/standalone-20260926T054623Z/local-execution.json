@@ -1,0 +1,1666 @@
+{
+  "build_log_tail": "tream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/LocalGlobalArtinCompatibility/SeparableClosurePadicLift.lean:488:0: automatically included section variable(s) unused in theorem `GlobalClassFieldTheory.Reciprocity.finitePlaceSeparableClosureDecompositionRestriction_surjective`:\n  [FiniteDimensional K L]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional K L] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nwarning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/LocalGlobalArtinCompatibility/SeparableClosurePadicLift.lean:756:0: automatically included section variable(s) unused in theorem `GlobalClassFieldTheory.Reciprocity.finitePlaceCyclotomicCompositumExtension_base_isEquiv`:\n  [FiniteDimensional K L]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional K L] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nwarning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/LocalGlobalArtinCompatibility/SeparableClosurePadicLift.lean:858:0: automatically included section variable(s) unused in theorem `GlobalClassFieldTheory.Reciprocity.finitePlaceSeparableClosureTopCyclotomicRestriction_surjective`:\n  [FiniteDimensional K L]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional K L] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nwarning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/LocalGlobalArtinCompatibility/SeparableClosurePadicLift.lean:999:0: automatically included section variable(s) unused in theorem `GlobalClassFieldTheory.Reciprocity.finitePlaceSeparableClosureTopCyclotomicRestriction_padicDegree`:\n  [FiniteDimensional K L]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional K L] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n\u2714 [6779/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.CyclotomicKummerNormDescent (59s)\n\u2714 [6780/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.LocalGlobalArtinCompatibility.FinitePadicCyclicData (38s)\n\u26a0 [6781/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.FiniteIndexNormClassField (30s)\nwarning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/FiniteIndexNormClassField.lean:69:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\n\nHint: Replace the deprecated name:\n  i\u0335f\u0335_\u0335n\u0335e\u0335g\u0335i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332r\u0332i\u0332g\u0332h\u0332t\u0332\nwarning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/FiniteIndexNormClassField.lean:83:12: `if_pos` has been deprecated: Use `ite_eq_left` instead\n\nHint: Replace the deprecated name:\n  i\u0335f\u0335_\u0335p\u0335o\u0335s\u0335i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332l\u0332e\u0332f\u0332t\u0332\n\u2714 [6782/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.ComplexificationArtin.OverextensionArtin (129s)\n\u2714 [6783/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.OrdinaryNormClassField (160s)\n\u2714 [6784/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.ClosedFiniteIndexClassFieldConstruction (8.8s)\n\u2714 [6785/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.ClosedFiniteIndexClassFieldNormRange (22s)\n\u2714 [6786/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.GlobalClassFields.ClosedFiniteIndexClassFieldOriginalField (14s)\n\u26a0 [6787/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.AbstractFixedFieldGlobalNormResidue (189s)\nwarning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/AbstractFixedFieldGlobalNormResidue.lean:72:5: `IsSepClosed.surjective_restrictDomain_of_isSeparable` has been deprecated: Use `IsSepClosed.surjective_domRestrict_of_isSeparable` instead\n\nHint: Replace the deprecated name:\n  I\u0335s\u0335S\u0335e\u0335p\u0335C\u0335l\u0335o\u0335s\u0335e\u0335d\u0335.\u0335s\u0335u\u0335r\u0335j\u0335e\u0335c\u0335t\u0335i\u0335v\u0335e\u0335_\u0335r\u0335e\u0335s\u0335t\u0335r\u0335i\u0335c\u0335t\u0335D\u0335o\u0335m\u0335a\u0335i\u0335n\u0335_\u0335o\u0335f\u0335_\u0335i\u0335s\u0335S\u0335e\u0335p\u0335a\u0335r\u0335a\u0335b\u0335l\u0335e\u0335I\u0332s\u0332S\u0332e\u0332p\u0332C\u0332l\u0332o\u0332s\u0332e\u0332d\u0332.\u0332s\u0332u\u0332r\u0332j\u0332e\u0332c\u0332t\u0332i\u0332v\u0332e\u0332_\u0332d\u0332o\u0332m\u0332R\u0332e\u0332s\u0332t\u0332r\u0332i\u0332c\u0332t\u0332_\u0332o\u0332f\u0332_\u0332i\u0332s\u0332S\u0332e\u0332p\u0332a\u0332r\u0332a\u0332b\u0332l\u0332e\u0332\n\u2714 [6788/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.CyclotomicUnramifiedRestriction (19s)\n\u2714 [6789/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.CyclotomicUnramifiedGeometricRestriction (35s)\n\u2714 [6790/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.GlobalNormResidueNaturality (90s)\n\u26a0 [6791/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.ComplexificationArtin.InfinitePlaceCompatibility (26s)\nwarning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/ComplexificationArtin/InfinitePlaceCompatibility.lean:358:5: `IsAlgClosed.surjective_restrictDomain_of_isAlgebraic` has been deprecated: Use `IsAlgClosed.surjective_domRestrict_of_isAlgebraic` instead\n\nHint: Replace the deprecated name:\n  I\u0335s\u0335A\u0335l\u0335g\u0335C\u0335l\u0335o\u0335s\u0335e\u0335d\u0335.\u0335s\u0335u\u0335r\u0335j\u0335e\u0335c\u0335t\u0335i\u0335v\u0335e\u0335_\u0335r\u0335e\u0335s\u0335t\u0335r\u0335i\u0335c\u0335t\u0335D\u0335o\u0335m\u0335a\u0335i\u0335n\u0335_\u0335o\u0335f\u0335_\u0335i\u0335s\u0335A\u0335l\u0335g\u0335e\u0335b\u0335r\u0335a\u0335i\u0335c\u0335I\u0332s\u0332A\u0332l\u0332g\u0332C\u0332l\u0332o\u0332s\u0332e\u0332d\u0332.\u0332s\u0332u\u0332r\u0332j\u0332e\u0332c\u0332t\u0332i\u0332v\u0332e\u0332_\u0332d\u0332o\u0332m\u0332R\u0332e\u0332s\u0332t\u0332r\u0332i\u0332c\u0332t\u0332_\u0332o\u0332f\u0332_\u0332i\u0332s\u0332A\u0332l\u0332g\u0332e\u0332b\u0332r\u0332a\u0332i\u0332c\u0332\nwarning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/ComplexificationArtin/InfinitePlaceCompatibility.lean:374:27: `AlgHom.restrictDomain` has been deprecated: Use `AlgHom.domRestrict` instead\nwarning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/ComplexificationArtin/InfinitePlaceCompatibility.lean:377:5: `IsAlgClosed.surjective_restrictDomain_of_isAlgebraic` has been deprecated: Use `IsAlgClosed.surjective_domRestrict_of_isAlgebraic` instead\n\nHint: Replace the deprecated name:\n  I\u0335s\u0335A\u0335l\u0335g\u0335C\u0335l\u0335o\u0335s\u0335e\u0335d\u0335.\u0335s\u0335u\u0335r\u0335j\u0335e\u0335c\u0335t\u0335i\u0335v\u0335e\u0335_\u0335r\u0335e\u0335s\u0335t\u0335r\u0335i\u0335c\u0335t\u0335D\u0335o\u0335m\u0335a\u0335i\u0335n\u0335_\u0335o\u0335f\u0335_\u0335i\u0335s\u0335A\u0335l\u0335g\u0335e\u0335b\u0335r\u0335a\u0335i\u0335c\u0335I\u0332s\u0332A\u0332l\u0332g\u0332C\u0332l\u0332o\u0332s\u0332e\u0332d\u0332.\u0332s\u0332u\u0332r\u0332j\u0332e\u0332c\u0332t\u0332i\u0332v\u0332e\u0332_\u0332d\u0332o\u0332m\u0332R\u0332e\u0332s\u0332t\u0332r\u0332i\u0332c\u0332t\u0332_\u0332o\u0332f\u0332_\u0332i\u0332s\u0332A\u0332l\u0332g\u0332e\u0332b\u0332r\u0332a\u0332i\u0332c\u0332\nwarning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/ComplexificationArtin/InfinitePlaceCompatibility.lean:606:4: `AlgHom.restrictDomain` has been deprecated: Use `AlgHom.domRestrict` instead\n\nHint: Replace the deprecated name:\n  A\u0335l\u0335g\u0335H\u0335o\u0335m\u0335.\u0335r\u0335e\u0335s\u0335t\u0335r\u0335i\u0335c\u0335t\u0335D\u0335o\u0335m\u0335a\u0335i\u0335n\u0335A\u0332l\u0332g\u0332H\u0332o\u0332m\u0332.\u0332d\u0332o\u0332m\u0332R\u0332e\u0332s\u0332t\u0332r\u0332i\u0332c\u0332t\u0332\n\u26a0 [6792/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.InfiniteLocalGlobalArtinCompatibility (5.6s)\nwarning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/InfiniteLocalGlobalArtinCompatibility.lean:186:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead\n\nHint: Replace the deprecated name:\n  d\u0335i\u0335f\u0335_\u0335p\u0335o\u0335s\u0335d\u0332i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332l\u0332e\u0332f\u0332t\u0332\n\u2714 [6793/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.CyclotomicUnramifiedLocalGlobalCompatibility (36s)\n\u2714 [6794/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.LocalGlobalArtinCompatibility.FinitePadicAuxiliaryField (33s)\n\u2714 [6795/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.LocalGlobalArtinCompatibility.Factorization (14s)\n\u2714 [6796/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.GlobalArtinCompatibility (6.3s)\n\u2714 [6797/6828] Built UnitDistance.OneInfinitePlaceNorm (4.1s)\n\u2714 [6798/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.InfiniteGlobalArtinDescent (4.2s)\n\u2714 [6799/6828] Built UnitDistance.FiniteCyclicFinitePlaceH2 (4.3s)\n\u2714 [6800/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.InfiniteGlobalArtinSurjectivity (4.3s)\n\u2714 [6801/6828] Built UnitDistance.RationalFiniteFieldUnitsH2 (4.1s)\n\u2714 [6802/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.MaximalAbelianGlobalArtin (5.6s)\n\u2714 [6803/6828] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.MaximalAbelianFiniteProjection (6.8s)\n\u2714 [6804/6828] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.GlobalReciprocityCharacter (7.0s)\n\u2714 [6805/6828] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.MaximalAbelianKernel (15s)\n\u2714 [6806/6828] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Radical.FinitePlaceAbsoluteArtinCompatibility (12s)\n\u2714 [6807/6828] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.IdeleCharacterGlobalLift (6.6s)\n\u2714 [6808/6828] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.InfiniteArtinCompatibility (14s)\n\u2714 [6809/6828] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Radical.AbsoluteCharacterRadicalReciprocity (3.0s)\n\u2714 [6810/6828] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Radical.FiniteSupportIdeleCorrection (5.4s)\n\u26a0 [6811/6828] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.NegativeThreeLocalRadical (5.4s)\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/NegativeThreeLocalRadical.lean:65:2: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/NegativeThreeLocalRadical.lean:66:2: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/NegativeThreeLocalRadical.lean:92:10: `if_pos` has been deprecated: Use `ite_eq_left` instead\n\nHint: Replace the deprecated name:\n  i\u0335f\u0335_\u0335p\u0335o\u0335s\u0335i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332l\u0332e\u0332f\u0332t\u0332\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/NegativeThreeLocalRadical.lean:93:10: `if_neg` has been deprecated: Use `ite_eq_right` instead\n\nHint: Replace the deprecated name:\n  i\u0335f\u0335_\u0335n\u0335e\u0335g\u0335i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332r\u0332i\u0332g\u0332h\u0332t\u0332\n\u2714 [6812/6828] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Radical.FiniteSupportInertiaCorrection (4.2s)\n\u2714 [6813/6828] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.RealCharacterInertiaCorrection (3.2s)\n\u26a0 [6814/6828] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.RealCharacterInertiaExistence (5.5s)\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/RealCharacterInertiaExistence.lean:249:10: `if_pos` has been deprecated: Use `ite_eq_left` instead\n\nHint: Replace the deprecated name:\n  i\u0335f\u0335_\u0335p\u0335o\u0335s\u0335i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332l\u0332e\u0332f\u0332t\u0332\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/RealCharacterInertiaExistence.lean:249:21: `if_pos` has been deprecated: Use `ite_eq_left` instead\n\nHint: Replace the deprecated name:\n  i\u0335f\u0335_\u0335p\u0335o\u0335s\u0335i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332l\u0332e\u0332f\u0332t\u0332\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/RealCharacterInertiaExistence.lean:250:10: `if_neg` has been deprecated: Use `ite_eq_right` instead\n\nHint: Replace the deprecated name:\n  i\u0335f\u0335_\u0335n\u0335e\u0335g\u0335i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332r\u0332i\u0332g\u0332h\u0332t\u0332\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/RealCharacterInertiaExistence.lean:250:21: `if_neg` has been deprecated: Use `ite_eq_right` instead\n\nHint: Replace the deprecated name:\n  i\u0335f\u0335_\u0335n\u0335e\u0335g\u0335i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332r\u0332i\u0332g\u0332h\u0332t\u0332\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/RealCharacterInertiaExistence.lean:254:10: `if_pos` has been deprecated: Use `ite_eq_left` instead\n\nHint: Replace the deprecated name:\n  i\u0335f\u0335_\u0335p\u0335o\u0335s\u0335i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332l\u0332e\u0332f\u0332t\u0332\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/RealCharacterInertiaExistence.lean:256:12: `if_neg` has been deprecated: Use `ite_eq_right` instead\n\nHint: Replace the deprecated name:\n  i\u0335f\u0335_\u0335n\u0335e\u0335g\u0335i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332r\u0332i\u0332g\u0332h\u0332t\u0332\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/RealCharacterInertiaExistence.lean:302:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\n\nHint: Replace the deprecated name:\n  i\u0335f\u0335_\u0335n\u0335e\u0335g\u0335i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332r\u0332i\u0332g\u0332h\u0332t\u0332\nwarning: UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/RealCharacterInertiaExistence.lean:309:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead\n\nHint: Replace the deprecated name:\n  d\u0335i\u0335f\u0335_\u0335p\u0335o\u0335s\u0335d\u0332i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332l\u0332e\u0332f\u0332t\u0332\n\u26a0 [6815/6828] Built UnitDistance.CentralLiftCorrection (4.2s)\nwarning: UnitDistance/CentralLiftCorrection.lean:152:12: `dif_pos` has been deprecated: Use `dite_eq_left` instead\n\nHint: Replace the deprecated name:\n  d\u0335i\u0335f\u0335_\u0335p\u0335o\u0335s\u0335d\u0332i\u0332t\u0332e\u0332_\u0332e\u0332q\u0332_\u0332l\u0332e\u0332f\u0332t\u0332\n\u2714 [6816/6828] Built UnitDistance.ProTwoH2AbsoluteKernel (23s)\n\u2714 [6817/6828] Built UnitDistance.MaximalSigmaH2Bound (3.1s)\n\u26a0 [6818/6828] Built UnitDistance.SigmaPresentation (3.2s)\nwarning: UnitDistance/SigmaPresentation.lean:15:2: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\n\u2714 [6819/6828] Built UnitDistance.SigmaCutUnconditional (2.9s)\n\u2714 [6820/6828] Built UnitDistance.FullResult (3.2s)\n\u2714 [6821/6828] Built UnitDistance.FullResultReduced (3.3s)\n\u2714 [6822/6828] Built UnitDistance.RetainedDyadicDifferentReduction (3.6s)\n\u26a0 [6823/6828] Built UnitDistance.RetainedDyadicDifferentNorm (5.9s)\nwarning: UnitDistance/RetainedDyadicDifferentNorm.lean:343:4: Unused tactic linter: `change (Ideal.absNorm J).factorization 2 = 64` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: UnitDistance/RetainedDyadicDifferentNorm.lean:397:2: exponent 2048 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold\nwarning: UnitDistance/RetainedDyadicDifferentNorm.lean:400:6: Unused tactic linter: `change (2 ^ 64) ^ 2048 = 2 ^ 131072` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n\u26a0 [6824/6828] Built UnitDistance.RetainedDyadicDifferentComplement (11s)\nwarning: UnitDistance/RetainedDyadicDifferentComplement.lean:474:2: Try this: \n  haveI\u0335\n\nThe goal is a proposition, so `have` is preferred over `haveI`.\nThe difference between `have` and `haveI` is that `haveI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/RetainedDyadicDifferentComplement.lean:485:2: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/RetainedDyadicDifferentComplement.lean:489:4: Try this: \n  haveI\u0335\n\nThe goal is a proposition, so `have` is preferred over `haveI`.\nThe difference between `have` and `haveI` is that `haveI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/RetainedDyadicDifferentComplement.lean:490:4: Try this: \n  haveI\u0335\n\nThe goal is a proposition, so `have` is preferred over `haveI`.\nThe difference between `have` and `haveI` is that `haveI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/RetainedDyadicDifferentComplement.lean:502:4: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/RetainedDyadicDifferentComplement.lean:503:4: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/RetainedDyadicDifferentComplement.lean:504:4: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\n\u26a0 [6825/6828] Built UnitDistance.SharperPairFixedBaseBridgeRun20260920 (6.1s)\nwarning: UnitDistance/SharperPairFixedBaseBridgeRun20260920.lean:187:2: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/SharperPairFixedBaseBridgeRun20260920.lean:190:2: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/SharperPairFixedBaseBridgeRun20260920.lean:192:2: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/SharperPairFixedBaseBridgeRun20260920.lean:294:2: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nwarning: UnitDistance/SharperPairFixedBaseBridgeRun20260920.lean:364:2: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\n\u2714 [6826/6828] Built UnitDistance.CanonicalSharperZetaResultRun20260920 (3.2s)\n\u2714 [6827/6828] Built SolutionZeta (3.6s)\nBuild completed successfully (6828 jobs).",
+  "bwrap_source_tag": "v0.12.0",
+  "challenge": {
+    "bytes": 6674,
+    "canonical_olean_sha256": "b1aed12671d524d0461a92de7d6276f4238a7eb1fc72670b78f419138f0d1a4d",
+    "dependencies": [
+      {
+        "provenance": "allowlisted",
+        "repository": "leanprover-community/mathlib4"
+      }
+    ],
+    "direct_imports": [
+      "Mathlib.AlgebraicTopology.SimplexCategory.Basic",
+      "Mathlib.Analysis.CStarAlgebra.Classes",
+      "Mathlib.Analysis.Calculus.LogDeriv",
+      "Mathlib.Analysis.Complex.Basic",
+      "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+      "Mathlib.Data.Finset.Prod",
+      "Mathlib.FieldTheory.IntermediateField.Adjoin.Basic",
+      "Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure",
+      "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+      "Mathlib.NumberTheory.NumberField.DedekindZeta",
+      "Mathlib.Order.Filter.AtTopBot.Tendsto"
+    ],
+    "lines": 132,
+    "module": "ChallengeZeta",
+    "path": "ChallengeZeta.lean",
+    "sha256": "331bcc0fb6021b1379f106d4c82b3058fb6e03c11e695c3e66eebb8227ecce9a",
+    "transitive_source_count": 12,
+    "trust_level": "high",
+    "untrusted_sources": []
+  },
+  "checked_at": "2026-09-26T05:46:26Z",
+  "classification": {
+    "arxiv": [
+      {
+        "code": "math.CO",
+        "name": "Combinatorics"
+      },
+      {
+        "code": "math.NT",
+        "name": "Number Theory"
+      }
+    ],
+    "msc2020": [
+      {
+        "code": "52C10",
+        "name": "Erd\u0151s problems and related topics of discrete geometry"
+      },
+      {
+        "code": "11R37",
+        "name": "Class field theory"
+      },
+      {
+        "code": "20C05",
+        "name": "Group rings of finite groups and their modules (group-theoretic aspects)"
+      }
+    ]
+  },
+  "comparator": {
+    "challenge_module": "ChallengeZeta",
+    "definition_names": [],
+    "path": "comparator-zeta.json",
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "sha256": "70026bf83a196b4199680565eb332f0796a23f3c8b6a143f7369b6e180054b22",
+    "solution_module": "SolutionZeta",
+    "theorem_names": [
+      "UnitDistanceZetaSubmission.target_of_canonical_zeta_bound"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "provider.resource_exhausted",
+      "explanation": "worker resource ceiling reached while running lake (exit 137, result oom-kill)",
+      "next_action": "Inspect the reported resource limit and build usage. If the workload repeatedly exceeds the worker's capacity, reduce its resource use or arrange sufficient capacity before retrying. Retry an unchanged commit only after addressing the reported condition. Normal submission cooldowns still apply.",
+      "owner": "provider",
+      "repairable": false,
+      "retryable": true,
+      "stage": "resource-exhausted",
+      "summary": "worker resource ceiling reached while running lake (exit 137, result oom-kill)"
+    }
+  ],
+  "diagnostics_schema_version": 1,
+  "error_kind": "infrastructure/resource-exhausted",
+  "errors": [
+    "worker resource ceiling reached while running lake (exit 137, result oom-kill)"
+  ],
+  "existing_id": null,
+  "formalization": {
+    "automation_method_count": 6,
+    "path": "formalization.yaml",
+    "project_name": "Planar unit distances from one fixed zeta inequality",
+    "review_status": "self-assessed",
+    "sha256": "aa5c5987aadf05b545deef2bfe9c96c9ee3c0c8bea58cc1cd27cc9a83d70ac9f",
+    "source_count": 5
+  },
+  "formalization_profile_version": 4,
+  "kernels": [
+    {
+      "argv": [
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/nanoda_bin"
+      ],
+      "name": "nanoda"
+    },
+    {
+      "argv": [
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/con-ron"
+      ],
+      "name": "con-ron"
+    }
+  ],
+  "lake_manifest": {
+    "path": "lake-manifest.json",
+    "sha256": "66e692fad41bf0fb95f43659f47145ca4b1aed36100d15e6d5c1f425049e7b47"
+  },
+  "lakefile": {
+    "format": "toml",
+    "path": "lakefile.toml",
+    "sha256": "8c44caeba8f3ae9c07a19898d4de22e6eb9f21601da3fce1c4b4e63fb92589d7"
+  },
+  "last_active_stage": "comparator",
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "lean_toolchain_path": "lean-toolchain",
+  "license": {
+    "declared_identifier": "Apache-2.0",
+    "detected_identifier": "Apache-2.0",
+    "path": "LICENSE",
+    "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+  },
+  "local_only": true,
+  "mathlib_cache": {
+    "available": true,
+    "required": true
+  },
+  "mathlib_toolchain": [
+    {
+      "revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "toolchain": "leanprover/lean4:v4.35.0-rc2"
+    }
+  ],
+  "official_palomar_report": false,
+  "orcid_validation": {
+    "checked_at": "2026-09-26T05:46:27Z",
+    "records": [],
+    "registry": "https://orcid.org",
+    "schema_version": 1
+  },
+  "phase": "verification",
+  "project_dependencies": [
+    {
+      "name": "mathlib",
+      "repository": "leanprover-community/mathlib4",
+      "revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "url": "https://github.com/leanprover-community/mathlib4.git"
+    },
+    {
+      "name": "plausible",
+      "repository": "leanprover-community/plausible",
+      "revision": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+      "url": "https://github.com/leanprover-community/plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "repository": "leanprover-community/LeanSearchClient",
+      "revision": "95e037bfdc31d3916ac615446847fb01960e2719",
+      "url": "https://github.com/leanprover-community/LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "repository": "leanprover-community/import-graph",
+      "revision": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+      "url": "https://github.com/leanprover-community/import-graph"
+    },
+    {
+      "name": "proofwidgets",
+      "repository": "leanprover-community/ProofWidgets4",
+      "revision": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+      "url": "https://github.com/leanprover-community/ProofWidgets4"
+    },
+    {
+      "name": "aesop",
+      "repository": "leanprover-community/aesop",
+      "revision": "75d936c7af167cc93fac0d31237682fc2204591d",
+      "url": "https://github.com/leanprover-community/aesop"
+    },
+    {
+      "name": "Qq",
+      "repository": "leanprover-community/quote4",
+      "revision": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+      "url": "https://github.com/leanprover-community/quote4"
+    },
+    {
+      "name": "batteries",
+      "repository": "leanprover-community/batteries",
+      "revision": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+      "url": "https://github.com/leanprover-community/batteries"
+    },
+    {
+      "name": "Cli",
+      "repository": "leanprover/lean4-cli",
+      "revision": "2842b9871b04862f944c032e34052cb9448ccb71",
+      "url": "https://github.com/leanprover/lean4-cli"
+    }
+  ],
+  "protected_config": "{\n  \"challenge_module\": \"PalomarCanonical509456784dadd01be704203f.Challenge\",\n  \"definition_names\": [],\n  \"external_kernels\": {\n    \"con-ron\": [\n      \"/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/con-ron\"\n    ],\n    \"nanoda\": [\n      \"/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/nanoda_bin\"\n    ]\n  },\n  \"permitted_axioms\": [\n    \"propext\",\n    \"Quot.sound\",\n    \"Classical.choice\"\n  ],\n  \"solution_module\": \"SolutionZeta\",\n  \"theorem_names\": [\n    \"UnitDistanceZetaSubmission.target_of_canonical_zeta_bound\"\n  ]\n}\n",
+  "protected_config_sha256": "9b8a105a6bfd348f813b562ce996ff515bf4626a7d719dc28201ee974e0c57d3",
+  "provenance": {
+    "mathematical_sources": [
+      {
+        "author_endorsement": "participated",
+        "authors": [
+          {
+            "name": "Eric Naslund"
+          }
+        ],
+        "identifier": "docs/manuscript/main.tex in this repository (no public identifier yet); research provenance enaslund/unit-distance-bound, commit eec70fd25ebe045c5df1c98370d613eaa3719c0c",
+        "location": "docs/manuscript/ in this repository; especially sections/tower.tex, analytic.tex, geometry.tex and finite-windows.tex",
+        "note": "The manuscript claims the unconditional planar sequence theorem with exponent 2083647/2000000 by a computer-assisted certificate. This formalization adapts it: the exact sequence conclusion is derived subject to one displayed fixed-field zeta/logarithmic-derivative inequality (H) that remains unproved, and the sufficient pair-integral bound uses threshold 0.042165819 in place of the manuscript's 0.042161819. The manuscript is an unrefereed preprint; its title note states that it was entirely written with AI tools and that the listed human author is responsible for having supervised and prompted the AI agents that wrote it. It has not been peer reviewed. A copy (main.tex, sections/, references.bib, main.pdf) is included in this repository under docs/manuscript/ because the manuscript has no public identifier: the GitHub repository enaslund/unit-distance-bound from which it is taken was private on 2026-09-22, so the citation is source provenance, not independently confirmed public literature, and no novelty, priority or research-interest claim rests on it. author_endorsement participated records only that the manuscript's sole author is the owner who commissioned and directed this autonomous formalization; no owner proof review, approval to publish, or registration is claimed.",
+        "relationship": "adapts",
+        "title": "A lower exponent of 1.0418235 for planar unit distances",
+        "type": "paper"
+      },
+      {
+        "authors": [
+          {
+            "name": "Will Sawin"
+          }
+        ],
+        "identifier": "arXiv:2605.20579v1",
+        "note": "Explicit unconditional unit-distance exponent from number fields with controlled discriminants and small primes. The manuscript refines this mechanism. Context only; not an input to the Lean proof.",
+        "relationship": "background",
+        "title": "An explicit lower bound for the unit distance problem",
+        "type": "paper"
+      },
+      {
+        "authors": [
+          {
+            "name": "Noga Alon"
+          },
+          {
+            "name": "Thomas F. Bloom"
+          },
+          {
+            "name": "W. T. Gowers"
+          },
+          {
+            "name": "Daniel Litt"
+          },
+          {
+            "name": "Will Sawin"
+          },
+          {
+            "name": "Arul Shankar"
+          },
+          {
+            "name": "Jacob Tsimerman"
+          },
+          {
+            "name": "Victor Wang"
+          },
+          {
+            "name": "Melanie Matchett Wood"
+          }
+        ],
+        "identifier": "arXiv:2605.20695v1",
+        "note": "Exposition of the arithmetic approach to power-law unit-distance lower bounds. Context only; not an input to the Lean proof.",
+        "relationship": "background",
+        "title": "Remarks on the disproof of the unit distance conjecture",
+        "type": "paper"
+      },
+      {
+        "authors": [
+          {
+            "name": "Michael T. M. Emmerich"
+          }
+        ],
+        "identifier": "arXiv:2606.03419",
+        "note": "Reoptimizes Sawin's explicit certificate; context for explicit unconditional unit-distance exponents. Not cited by the manuscript and not an input to the Lean proof.",
+        "relationship": "background",
+        "title": "Optimizing Explicit Unit-Distance Lower-Bound Certificates",
+        "type": "paper"
+      },
+      {
+        "authors": [
+          {
+            "name": "Eric Naslund"
+          }
+        ],
+        "contributors": [
+          {
+            "name": "Dustin G. Mixon",
+            "role": "question-poser"
+          }
+        ],
+        "identifier": "https://mathoverflow.net/q/511514",
+        "location": "https://mathoverflow.net/a/511576",
+        "note": "The manuscript's introduction cites this answer as the origin of its refinement of Sawin's construction. It is an informal, unrefereed forum post revised through June 2026. Context only; not an input to the Lean proof.",
+        "relationship": "background",
+        "title": "What is the unit distance exponent? (MathOverflow question 511514) and the answer by Eric Naslund",
+        "type": "web discussion"
+      }
+    ],
+    "related_formalizations": [
+      {
+        "identifier": "https://github.com/leanprover-community/mathlib4/tree/065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "note": "Matched dependency target for Lean v4.35.0-rc2, Apache-2.0. Exact selected-build and archive-verification outcomes require receipts for the corresponding source and archive digests. Its own pinned dependencies remain external public dependencies.",
+        "relationship": "builds-on"
+      },
+      {
+        "identifier": "https://github.com/mathlib-initiative/sum_product/tree/80e4127a67742659d521466204c6d2d7e0ca2b3f",
+        "note": "Formal Frontier Team, Apache-2.0. Its multidimensional Poisson summation module (DedekindZeta/PoissonSummation.lean) is version-ported, with original copyright/license and explicit modification provenance, to UnitDistance/ThirdParty/PoissonSummation.lean; the full source file compiled against the present pinned Mathlib, and PoissonBound derives translated finite lattice bounds from actual dual Fourier tails. The ideal-series, geometric-product and factorization sections of DedekindZeta/Statements.lean are ported into DedekindEuler, and selected trace-dual proofs from DedekindZeta/Theta.lean into MinkowskiTrace; those two modules carry the sum_product adaptations in this package. EulerBound.lean through its divisor-series theorem is ported into IdealCounting in the research repository, but the IdealCounting port named in NOTICE is not in this package's selected import closure. Original copyright and license are preserved and modifications and the new full Euler-product assembly are recorded in docs/SUBMISSION_PROVENANCE.md and NOTICE. The whole upstream project was not rebuilt; other code was audited at source level. Its field tower is an explicit hypothesis. License retained under third-party/sum_product/LICENSE. No registration of that project is claimed.",
+        "relationship": "adapts"
+      },
+      {
+        "identifier": "https://github.com/CBirkbeck/AINTLIB/tree/a302aeacd86053f9d5f991fbbf664e1cc1051d08",
+        "note": "Chris Birkbeck, Apache-2.0. Completed Dedekind zeta and explicit-formula foundations are ported as an attributed source port under UnitDistance/Upstream/AINTLIB. Copyright, license, exact source hashes and version modifications are recorded in third-party/aintlib. Completed zeta continuation and functional equation are actual theorems; relative Hecke entireness is not assumed to follow.",
+        "relationship": "adapts"
+      },
+      {
+        "identifier": "https://github.com/n-yamaguchi-0729/SawinTotallyRealTowers/tree/3a455e1aa9140dbbe7b7d68f508392a69c86d0f4",
+        "note": "Naganori Yamaguchi, Apache-2.0. Profinite presentations and continuous pro-p cohomology; 1,287 of the 1,309 manifest files are shipped and imported under UnitDistance/Upstream/Yamaguchi (the 22 others are not imported by the compared theorem and are not shipped), retaining original declaration namespaces and mathematical statements. License, original/local source hashes, compatibility patch and exact verification scope are in third-party/yamaguchi. All dependency closures passed isolated Lean checks. The 886-module relocated closure passed 4988 normal build jobs and a 25791-declaration imported audit using only standard axioms; the complete isolated 1262-module closure passed a 34273-declaration imported audit. The build and audit records referenced here are included under verification/ in this package. New local arithmetic proofs assemble the complex pro-two six-relation bound and growing field family; those conclusions are not supplied as upstream assumptions.",
+        "relationship": "adapts"
+      },
+      {
+        "identifier": "https://github.com/logical-intelligence/erdos-unit-distance/tree/b6493074dd103ca32ea4f5e9b0bc9cb3a0379f2e",
+        "note": "Erd\u0151s unit-distance formalization contributors, Apache-2.0. Selected openNormalChain and fixed-field construction proofs from ErdosUnitDistance/Internal/ClassFieldTheory/Witness.lean are adapted in ProfiniteQuotientTower and GaloisQuotientTower. License, NOTICE, hashes and modifications are retained under third-party/erdos-unit-distance. The whole upstream project was not rebuilt. No upstream arithmetic tower or headline theorem is assumed; its unspecified-exponent theorem and explicit odd-prime Shafarevich and Golod-Shafarevich inputs do not supply the present dyadic tower. No registration of that project is claimed.",
+        "relationship": "adapts"
+      },
+      {
+        "identifier": "https://github.com/alejandrozu/RiemannHypothesis-Formalization/tree/753938937e624d1c8bbe4c208517660a672d1b8e",
+        "note": "Tristen Harr, Apache-2.0. Twelve generic entire-function and canonical Hadamard product modules and a selected negation-pairing section are ported, with original headers and exact provenance under third-party/entire-hadamard. No xi-specific module or Riemann Hypothesis assumption is imported. New local compositions derive paired-product monotonicity from actual entire divisor, summability and growth data.",
+        "relationship": "adapts"
+      },
+      {
+        "identifier": "https://github.com/kim-em/erdos-unit-distance-comparator/tree/6f54548da16c3f243d7e300716795906b955271a",
+        "note": "Registered in the Palomar registry as PALOMAR-2026-08-08-000001 (2026-08-08); a Comparator wrapper for the library kim-em/erdos-unit-distance at 34b4587bbd0740efb9c06a519a8ee14a3eff8cd7. It proves the uniform-constant form of the disproof of the Erd\u0151s unit-distance conjecture (for every C > 0, arbitrarily large n admit n-point planar sets with more than n^(1 + C/log log n) unit-distance pairs), a different and weaker statement than the fixed exponent here. No code or theorem from it is used.",
+        "relationship": "independent"
+      },
+      {
+        "identifier": "https://github.com/plby/Erdos90",
+        "note": "Independent Lean formalization of the fixed-power (unspecified-exponent) planar unit-distance statement, as described in the Palomar record PALOMAR-2026-08-08-000001. No code or theorem from it is used, and no comparison of exponents is claimed.",
+        "relationship": "independent"
+      }
+    ],
+    "repository_role": "substantive-development",
+    "responsible_maintainers": [
+      {
+        "name": "Eric Naslund"
+      }
+    ],
+    "result_origin": "source-based"
+  },
+  "resource_usage": [
+    {
+      "elapsed_seconds": 0.031,
+      "max_rss_kib": 13188,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-initial",
+      "returncode": 0,
+      "system_cpu_seconds": 0.025,
+      "user_cpu_seconds": 0.064,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 99810000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 8019968,
+      "phase": "confinement-initial:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.089,
+      "max_rss_kib": 13264,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-initial",
+      "returncode": 0,
+      "system_cpu_seconds": 0.036,
+      "user_cpu_seconds": 0.084,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 129649000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 12234752,
+      "phase": "confinement-initial:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.034,
+      "max_rss_kib": 13208,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-initial",
+      "returncode": 1,
+      "system_cpu_seconds": 0.038,
+      "user_cpu_seconds": 0.046,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 94646000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "1",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 8388608,
+      "phase": "confinement-initial:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "failed",
+      "systemd_result": "exit-code"
+    },
+    {
+      "elapsed_seconds": 0.059,
+      "max_rss_kib": 13232,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-initial",
+      "returncode": 0,
+      "system_cpu_seconds": 0.022,
+      "user_cpu_seconds": 0.087,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 118310000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 12140544,
+      "phase": "confinement-initial:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.095,
+      "max_rss_kib": 13500,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-initial",
+      "returncode": 1,
+      "system_cpu_seconds": 0.069,
+      "user_cpu_seconds": 0.065,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 145922000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "1",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 13844480,
+      "phase": "confinement-initial:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "failed",
+      "systemd_result": "exit-code"
+    },
+    {
+      "elapsed_seconds": 0.099,
+      "max_rss_kib": 13316,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-initial",
+      "returncode": 1,
+      "system_cpu_seconds": 0.045,
+      "user_cpu_seconds": 0.081,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 135115000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "1",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 13549568,
+      "phase": "confinement-initial:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "failed",
+      "systemd_result": "exit-code"
+    },
+    {
+      "elapsed_seconds": 0.075,
+      "max_rss_kib": 13188,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-initial",
+      "returncode": 1,
+      "system_cpu_seconds": 0.027,
+      "user_cpu_seconds": 0.085,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 120731000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "1",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 11833344,
+      "phase": "confinement-initial:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "failed",
+      "systemd_result": "exit-code"
+    },
+    {
+      "elapsed_seconds": 0.428,
+      "max_rss_kib": 77680,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "comparator-preflight",
+      "returncode": 0,
+      "system_cpu_seconds": 0.164,
+      "user_cpu_seconds": 0.276,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 450516000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 79564800,
+      "phase": "comparator-preflight:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.861,
+      "max_rss_kib": 351980,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "comparator-preflight",
+      "returncode": 0,
+      "system_cpu_seconds": 0.341,
+      "user_cpu_seconds": 0.558,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 909352000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 360448000,
+      "phase": "comparator-preflight:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.437,
+      "max_rss_kib": 77700,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "comparator-preflight",
+      "returncode": 0,
+      "system_cpu_seconds": 0.166,
+      "user_cpu_seconds": 0.289,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 465111000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 79585280,
+      "phase": "comparator-preflight:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.83,
+      "max_rss_kib": 351840,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "comparator-preflight",
+      "returncode": 0,
+      "system_cpu_seconds": 0.326,
+      "user_cpu_seconds": 0.543,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 878626000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 360304640,
+      "phase": "comparator-preflight:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.423,
+      "max_rss_kib": 77988,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "comparator-preflight",
+      "returncode": 0,
+      "system_cpu_seconds": 0.153,
+      "user_cpu_seconds": 0.302,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 464989000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 79880192,
+      "phase": "comparator-preflight:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.87,
+      "max_rss_kib": 351860,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "comparator-preflight",
+      "returncode": 0,
+      "system_cpu_seconds": 0.336,
+      "user_cpu_seconds": 0.547,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 893691000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 360325120,
+      "phase": "comparator-preflight:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 14.861,
+      "max_rss_kib": 155940,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "comparator-preflight",
+      "returncode": 0,
+      "system_cpu_seconds": 0.312,
+      "user_cpu_seconds": 14.29,
+      "workspace_disk_peak_bytes": 12288
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 14612388000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 159703040,
+      "phase": "comparator-preflight:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.248,
+      "max_rss_kib": 32396,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "comparator-preflight",
+      "returncode": 1,
+      "system_cpu_seconds": 0.056,
+      "user_cpu_seconds": 0.215,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 280260000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "1",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 33193984,
+      "phase": "comparator-preflight:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "failed",
+      "systemd_result": "exit-code"
+    },
+    {
+      "elapsed_seconds": 13.243,
+      "max_rss_kib": 149072,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "comparator-preflight",
+      "returncode": 1,
+      "system_cpu_seconds": 0.212,
+      "user_cpu_seconds": 12.899,
+      "workspace_disk_peak_bytes": 97878016
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 13121681000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "1",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 152670208,
+      "phase": "comparator-preflight:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "failed",
+      "systemd_result": "exit-code"
+    },
+    {
+      "elapsed_seconds": 4.914,
+      "max_rss_kib": 227584,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "module-resolution",
+      "returncode": 0,
+      "system_cpu_seconds": 0.821,
+      "user_cpu_seconds": 3.05,
+      "workspace_disk_peak_bytes": 745472
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 3881477000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 233066496,
+      "phase": "module-resolution:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.127,
+      "max_rss_kib": 22748,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "module-resolution",
+      "returncode": 0,
+      "system_cpu_seconds": 0.054,
+      "user_cpu_seconds": 0.109,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 175019000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 23314432,
+      "phase": "module-resolution:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 99.104,
+      "max_rss_kib": 9035896,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "trusted-cache",
+      "returncode": 0,
+      "system_cpu_seconds": 43.953,
+      "user_cpu_seconds": 113.51,
+      "workspace_disk_peak_bytes": 7896801280
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 157473316000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 9252777984,
+      "phase": "trusted-cache:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 11.221,
+      "max_rss_kib": 305864,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "trusted-cache",
+      "returncode": 0,
+      "system_cpu_seconds": 2.927,
+      "user_cpu_seconds": 9.863,
+      "workspace_disk_peak_bytes": 1515520
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 12799907000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 313225216,
+      "phase": "trusted-cache:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 4.912,
+      "max_rss_kib": 162168,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "trusted-cache",
+      "returncode": 0,
+      "system_cpu_seconds": 0.955,
+      "user_cpu_seconds": 3.742,
+      "workspace_disk_peak_bytes": 745472
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 4706340000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 166080512,
+      "phase": "trusted-cache:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 4.654,
+      "max_rss_kib": 388456,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "canonical-challenge",
+      "returncode": 0,
+      "system_cpu_seconds": 1.177,
+      "user_cpu_seconds": 3.755,
+      "workspace_disk_peak_bytes": 8192
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 4944078000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 397799424,
+      "phase": "canonical-challenge:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.11,
+      "max_rss_kib": 22648,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "canonical-challenge",
+      "returncode": 0,
+      "system_cpu_seconds": 0.037,
+      "user_cpu_seconds": 0.095,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 141223000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 23212032,
+      "phase": "canonical-challenge:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.105,
+      "max_rss_kib": 22616,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "canonical-challenge",
+      "returncode": 0,
+      "system_cpu_seconds": 0.029,
+      "user_cpu_seconds": 0.116,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 156540000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 23179264,
+      "phase": "canonical-challenge:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.049,
+      "max_rss_kib": 13320,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-final",
+      "returncode": 0,
+      "system_cpu_seconds": 0.03,
+      "user_cpu_seconds": 0.051,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 91602000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 8302592,
+      "phase": "confinement-final:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.06,
+      "max_rss_kib": 13192,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-final",
+      "returncode": 0,
+      "system_cpu_seconds": 0.021,
+      "user_cpu_seconds": 0.099,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 130383000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 12148736,
+      "phase": "confinement-final:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.033,
+      "max_rss_kib": 13136,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-final",
+      "returncode": 1,
+      "system_cpu_seconds": 0.032,
+      "user_cpu_seconds": 0.04,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 81211000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "1",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 8163328,
+      "phase": "confinement-final:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "failed",
+      "systemd_result": "exit-code"
+    },
+    {
+      "elapsed_seconds": 0.098,
+      "max_rss_kib": 13220,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-final",
+      "returncode": 0,
+      "system_cpu_seconds": 0.033,
+      "user_cpu_seconds": 0.079,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 122051000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 12681216,
+      "phase": "confinement-final:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.069,
+      "max_rss_kib": 13196,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-final",
+      "returncode": 0,
+      "system_cpu_seconds": 0.038,
+      "user_cpu_seconds": 0.063,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 109839000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 12062720,
+      "phase": "confinement-final:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 0.091,
+      "max_rss_kib": 13388,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-final",
+      "returncode": 1,
+      "system_cpu_seconds": 0.029,
+      "user_cpu_seconds": 0.1,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 139841000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "1",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 13729792,
+      "phase": "confinement-final:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "failed",
+      "systemd_result": "exit-code"
+    },
+    {
+      "elapsed_seconds": 0.082,
+      "max_rss_kib": 13232,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-final",
+      "returncode": 1,
+      "system_cpu_seconds": 0.029,
+      "user_cpu_seconds": 0.108,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 148078000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "1",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 13549568,
+      "phase": "confinement-final:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "failed",
+      "systemd_result": "exit-code"
+    },
+    {
+      "elapsed_seconds": 0.056,
+      "max_rss_kib": 13220,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 1,
+      "phase": "confinement-final",
+      "returncode": 1,
+      "system_cpu_seconds": 0.042,
+      "user_cpu_seconds": 0.067,
+      "workspace_disk_peak_bytes": 0
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 118761000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "1",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 11759616,
+      "phase": "confinement-final:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "failed",
+      "systemd_result": "exit-code"
+    },
+    {
+      "elapsed_seconds": 2.412,
+      "max_rss_kib": 115572,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "candidate-configuration",
+      "returncode": 0,
+      "system_cpu_seconds": 0.958,
+      "user_cpu_seconds": 1.34,
+      "workspace_disk_peak_bytes": 24576
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 2307772000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 118366208,
+      "phase": "candidate-configuration:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 2.239,
+      "max_rss_kib": 117348,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "candidate-configuration",
+      "returncode": 0,
+      "system_cpu_seconds": 0.933,
+      "user_cpu_seconds": 1.295,
+      "workspace_disk_peak_bytes": 12288
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 2240170000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 120184832,
+      "phase": "candidate-configuration:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 22.93,
+      "max_rss_kib": 884176,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "challenge-export",
+      "returncode": 0,
+      "system_cpu_seconds": 1.952,
+      "user_cpu_seconds": 20.943,
+      "workspace_disk_peak_bytes": 208146432
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 22903802000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 905416704,
+      "phase": "challenge-export:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 9506.774,
+      "max_rss_kib": 13759056,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "solution-build",
+      "returncode": 0,
+      "system_cpu_seconds": 2323.902,
+      "user_cpu_seconds": 28505.196,
+      "workspace_disk_peak_bytes": 10336817152
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 30829106945000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 14089293824,
+      "phase": "solution-build:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "elapsed_seconds": 125.135,
+      "max_rss_kib": 4378688,
+      "memory_source": "cgroup",
+      "peak_tasks_observed": 3,
+      "phase": "solution-export",
+      "returncode": 0,
+      "system_cpu_seconds": 3.304,
+      "user_cpu_seconds": 119.206,
+      "workspace_disk_peak_bytes": 1845444608
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 122516442000,
+      "deadline_fired": false,
+      "exec_main_code": "1",
+      "exec_main_status": "0",
+      "memory_events": {
+        "oom": 0,
+        "oom_kill": 0
+      },
+      "memory_peak_bytes": 4483796992,
+      "phase": "solution-export:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "inactive",
+      "systemd_result": "success"
+    },
+    {
+      "cpu_max_applied": false,
+      "cpu_usage_nanoseconds": 3210191847000,
+      "deadline_fired": false,
+      "exec_main_code": "2",
+      "exec_main_status": "9",
+      "memory_events": {
+        "oom": 2,
+        "oom_kill": 6
+      },
+      "memory_peak_bytes": 21045338112,
+      "phase": "comparator:cgroup",
+      "pids_events_max": 0,
+      "rlimits_applied": {
+        "FSIZE": 1099511627776,
+        "NOFILE": 524288
+      },
+      "supervisor": "cgroup",
+      "supervisor_timeout": false,
+      "systemd_active_state": "failed",
+      "systemd_result": "oom-kill"
+    }
+  ],
+  "retryable": true,
+  "schema_version": 2,
+  "solution": {
+    "module": "SolutionZeta",
+    "path": "SolutionZeta.lean",
+    "sha256": "ae277cc525c0cb6c29f05daaf28e241d4ce1b2a74843915d64d9a5b5eb34c53a"
+  },
+  "source": {
+    "archive_sha256": "2000c21e3fbdc2a6277bebfc8b1bfd762d2a86cede8921a88bbae93bbb3a1f09",
+    "bytes": 37058667,
+    "kind": "unpublished-local-archive",
+    "local_commit": "23f4a35bb75f72878a813d823227a8e2e2b5f59b",
+    "source_snapshot_sha256": "d72e624542d2b6f6d410653f328de772e4f7d1ee2702f5c89f4a335d9585ac86"
+  },
+  "stage": "resource-exhausted",
+  "status": "error",
+  "submission": {
+    "scope": "local-only; no Palomar submission id"
+  },
+  "tool_digests": {
+    "bwrap": "fa90c55ec0900cbedcdd3d18644c5e65f2a98109b2fcab162d86c6fba6e2173a",
+    "con-ron": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef",
+    "lake": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "leanchecker": "9e36e955a251b1313c8eb5b7fa101282d51df109d34d8bb7c1cfdf51985aba29",
+    "leanexport": "c5bc1a10a21e22cbb3671d65987cdef2076833b14182d823ccb2153adf2fa954",
+    "nanoda_bin": "8241c5e6baa29490aa118d382f97961b208ae730fdb96545c2abed74c9ece5a8"
+  },
+  "toolchain_commit": "11acb17ec6b07a8f9e9173e6845197929540936b",
+  "verification_profile": {
+    "id": "palomar-standard-v1",
+    "limits": {
+      "execution_budget_seconds": 19800,
+      "file_size_max_bytes": 1099511627776,
+      "job_timeout_minutes": 350,
+      "memory_high_percent": 95,
+      "memory_max_percent": 98,
+      "minimum_host_memory_bytes": 15032385536,
+      "minimum_workspace_free_bytes": 21474836480,
+      "open_files_max": 1048576,
+      "tasks_max": 32768
+    },
+    "observed_host": {
+      "architecture": "x86_64",
+      "effective_cpus": 4.0,
+      "memory_bytes": 21474836480,
+      "memory_high_bytes": 20401094656,
+      "memory_max_bytes": 21045339750,
+      "workspace_free_bytes": 33622134784
+    },
+    "runner": {
+      "architecture": "x86_64",
+      "label": "ubuntu-24.04",
+      "provider": "github-hosted"
+    },
+    "sha256": "94fcd7906a1b6c076c0036d742e1c5add8625e49bb474818ec8924576dbf0caa",
+    "trusted_tools": {
+      "bwrap_source_tag": "v0.12.0",
+      "toolchain_floor": "v4.35.0-rc2"
+    }
+  },
+  "warnings": [],
+  "workflow_url": "local-only:not-an-official-palomar-report"
+}

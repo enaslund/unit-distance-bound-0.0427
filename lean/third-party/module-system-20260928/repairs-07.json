@@ -1,0 +1,26 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-07/result.json",
+      "insertions": [
+        {
+          "offset": 558,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "migrated_sha256": "cd0837648109334327930de6ee25de25bd46bb6d0f315057417223af381a158d",
+      "original_sha256": "26af95ae9344d019e21236c982d8f8db352c1ecb32c2edebb6b88fd14edabe1c",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/PrimitiveAction.lean",
+      "reason": "Restores the private characteristic instances from their existing DivisionPolynomial owner; theorem statements and proof bodies unchanged."
+    }
+  ],
+  "schema": "unit-distance-module-port-repair-v2",
+  "scope": "One tested header-only private-instance repair for EqualCharacteristic.FiniteLevel.PrimitiveAction. Definitions, statements, proof bodies and assumptions are unchanged."
+}

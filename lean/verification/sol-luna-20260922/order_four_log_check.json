@@ -1,0 +1,14 @@
+{
+  "atanh_polynomial_degree": 5,
+  "euler_sha256": "4f01e9ae1f0f79f6575955745c1bdf6ce349a03b6990e2e4189a5205426088af",
+  "exp_polynomial_degree": 9,
+  "log_series_terms": 35,
+  "prime_count": 45,
+  "printed_threshold": "1862370594772137403723/50000000000000000000000000",
+  "saving_lower": "93118529738606870186166762871/2500000000000000000000000000000000",
+  "saving_lower_decimal": "0.0000372474118954427480744667051484",
+  "scope": "Exact rational transcendental lower bound conditional on the supplied prime list; field_bridge_audit.py independently verifies that list from literal field forms.",
+  "status": "pass",
+  "strict_gap": "16762871/2500000000000000000000000000000000",
+  "term_grid": 10000000000000000000000000000000000
+}

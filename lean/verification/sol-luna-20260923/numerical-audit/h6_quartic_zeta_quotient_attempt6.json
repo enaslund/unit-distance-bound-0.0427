@@ -1,0 +1,20 @@
+{
+  "status": "DEFERRED before checker process launch",
+  "attempt": 6,
+  "checker_sha256": "1643a51379688ba6c1df0aee178f1759e16b8b4016e09c1394e648eabeee7905",
+  "guard_exit_code": 75,
+  "guard_message": "deferred: shared build lock busy or insufficient available RAM (host needs 10 GiB; cgroup needs 1 GiB)",
+  "log": "h6_quartic_zeta_quotient_attempt6.log",
+  "checker_started": false,
+  "comparison_performed": false,
+  "prior_completed_pass": {
+    "attempt": 4,
+    "source_sha256": "7139eb656580755af33ece151acb072bdc76ef3d8af60e47b6118cfd22f39a5f",
+    "receipt_sha256": "5d568a5830300ce24b1bb1411bc35c146f0241d414ba0832bd7db8d1d0d64f41"
+  },
+  "limits": [
+    "Guard deferral is not a numerical failure.",
+    "Attempt4 remains the only completed comparison.",
+    "No new numerical result is asserted."
+  ]
+}

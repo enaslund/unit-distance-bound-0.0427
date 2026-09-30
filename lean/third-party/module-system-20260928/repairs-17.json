@@ -1,0 +1,27 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "baseline_compile": "verification/module-port-20260928/repair-pilot-17-primitive-baseline/result.json",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-17-primitive-fixed/result.json",
+      "insertions": [
+        {
+          "offset": 1744,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "migrated_sha256": "a198818ddaec95285cde66f21186e46fdb1c9f3454c3cefed32248c9a36ba53e",
+      "original_sha256": "e1f5490bab212f00b6fec38b6258e6bf39d6d7f460c596c39830f14f3e72bc07",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/PrimitivePoint.lean",
+      "reason": "Restore DivisionPolynomial private closure-characteristic instance after reproducing four missing CharP failures; complete theorem statements and mathematical body unchanged."
+    }
+  ],
+  "schema": "unit-distance-module-port-repair-v2",
+  "scope": "One tested header-only import repair for the existing characteristic instance. No new assumptions, theorem changes, proof-body edits or integration snapshot modifications."
+}

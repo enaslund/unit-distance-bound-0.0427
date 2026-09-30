@@ -1,0 +1,233 @@
+{
+  "inputs": {
+    "compiler": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "compiler_sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "LEAN_PATH": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/plausible/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/importGraph/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/aesop/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Qq/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/batteries/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Cli/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean",
+    "scope": "Header-only direct owner for reproduced private DirectedSystem and Galois SMul errors; 1 CPU, 2 GiB, zero swap, 300 seconds, 8 GiB host guard.",
+    "direct_import_artifact_hashes": [
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerBaseChange.olean",
+        "sha256": "956c8dfb1f721bd00489781d3d74dce507b44fc6e1c4b4d2a0dc5b697835c493"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerBaseChange.olean.private",
+        "sha256": "8c6c374e0d5c2d4490f6c7f82a7176eac9d417d455128f15c839e2d15efe20d7"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerBaseChange.olean.server",
+        "sha256": "3b31ded840c63fa4cb76cfee6ca2af8ab8b65cb1317c99622975d55aebd98123"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerBaseChange.ir",
+        "sha256": "9b76e29a78f05280dcd7543bfc34dc96ee605422167b1148205aee616524b904"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerBaseChange.ir.sig",
+        "sha256": "12d57c4f32f1ce9123c9b3f3d7657be11be3d4ade35aca327b12778453a71435"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/Cohomology/Herbrand.olean",
+        "sha256": "622b00c543c3e2749c9cce0dccc8093a1b27e3561fe5d6b76af1b290b8aa0956"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/Cohomology/Herbrand.olean.private",
+        "sha256": "1de9490a8f62a0aa7e317094f2a0d7115a43a764b8f5a964c03c3008eb6c5ea2"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/Cohomology/Herbrand.olean.server",
+        "sha256": "6be67e06216b6be146ba059da8c5045a316dbdae7e6fc82bf040fa1c9f0c8c76"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/Cohomology/Herbrand.ir",
+        "sha256": "f869cfbbae4175429146c584f0d1f8b75e01f103b0e0ebdad9b3b648b9d93a54"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/Cohomology/Herbrand.ir.sig",
+        "sha256": "62f7950513b931ab274758e13ce188f5f10497bb1355415d34ef4290fbf6b594"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFiniteLevel.olean",
+        "sha256": "6c100429ee4e7b84483f21f34198a2f9f007509bd9fb977433665e78c9563b5b"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFiniteLevel.olean.private",
+        "sha256": "900474508264613a0a29d008e0aa7b2fe4d049dc4893217e1628137ccaa2e9b9"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFiniteLevel.olean.server",
+        "sha256": "363683eea2af94908da4d67b36248de34abbac159bf300b819f97018263fa5a9"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFiniteLevel.ir",
+        "sha256": "a1a905763e9142ca7edc4355e571fd468e876d2afe92f0d40e83d3ebb77ef7d7"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFiniteLevel.ir.sig",
+        "sha256": "114e5b2635be81f93964d30a1a7a7ff75fd50e2b8d7135a56c3f81bf0d9734e1"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.olean",
+        "sha256": "2224ae6529bfbffda56b1883291e4abcc99462a1502ca8e2210813d179692e26"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.olean.private",
+        "sha256": "ceab4c8ff922f6f9558372b729176e1b1c50d82f8db153060be4a2f9923a1d0b"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.olean.server",
+        "sha256": "b99ea9469cc7f0706ad750a80c92f3cb2b445c2377992f3da7620e5d9238443b"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.ir",
+        "sha256": "c79696d49d8898ace53dbe05366d049b7467da9ff7ca5cbd693d0ae7631ab705"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.ir.sig",
+        "sha256": "37d437e2a4a33e4e6f3241a5ed4c130670a14c7953d6de9fbf1a2dc38a04e5c8"
+      }
+    ],
+    "variants": [
+      {
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescentCore.lean",
+        "original_sha256": "80c78992915ce4e7b926f05f6bacb4571a5694b867e2e3714e3dbf123903ca77",
+        "migrated_sha256": "f418203a7555eaaf5a46159a885e5f5e27b2ad14ba7f6961aab304e97c59ce62",
+        "insertions": [
+          {
+            "offset": 706,
+            "text": "\nimport all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitCore\n"
+          }
+        ],
+        "added_imports": [
+          "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitCore"
+        ],
+        "added_options": [],
+        "observed_failure_log": "verification/module-port-20260928/repair-pilot-25-downstream-complete-overlay/unchanged-fixed-point-descent-core.log",
+        "focused_compile": "verification/module-port-20260928/repair-pilot-26-descent-core/result.json",
+        "name": "private-directed-system-and-action-owner",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-26-descent-core/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-26-descent-core/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescentCore.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-26-descent-core/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescentCore.olean"
+      }
+    ]
+  },
+  "results": [
+    {
+      "compiler_exit_code": 0,
+      "direct_import_artifact_hashes_after": [
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerBaseChange.olean",
+          "sha256": "956c8dfb1f721bd00489781d3d74dce507b44fc6e1c4b4d2a0dc5b697835c493"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerBaseChange.olean.private",
+          "sha256": "8c6c374e0d5c2d4490f6c7f82a7176eac9d417d455128f15c839e2d15efe20d7"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerBaseChange.olean.server",
+          "sha256": "3b31ded840c63fa4cb76cfee6ca2af8ab8b65cb1317c99622975d55aebd98123"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerBaseChange.ir",
+          "sha256": "9b76e29a78f05280dcd7543bfc34dc96ee605422167b1148205aee616524b904"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerBaseChange.ir.sig",
+          "sha256": "12d57c4f32f1ce9123c9b3f3d7657be11be3d4ade35aca327b12778453a71435"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/Cohomology/Herbrand.olean",
+          "sha256": "622b00c543c3e2749c9cce0dccc8093a1b27e3561fe5d6b76af1b290b8aa0956"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/Cohomology/Herbrand.olean.private",
+          "sha256": "1de9490a8f62a0aa7e317094f2a0d7115a43a764b8f5a964c03c3008eb6c5ea2"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/Cohomology/Herbrand.olean.server",
+          "sha256": "6be67e06216b6be146ba059da8c5045a316dbdae7e6fc82bf040fa1c9f0c8c76"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/Cohomology/Herbrand.ir",
+          "sha256": "f869cfbbae4175429146c584f0d1f8b75e01f103b0e0ebdad9b3b648b9d93a54"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/Cohomology/Herbrand.ir.sig",
+          "sha256": "62f7950513b931ab274758e13ce188f5f10497bb1355415d34ef4290fbf6b594"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFiniteLevel.olean",
+          "sha256": "6c100429ee4e7b84483f21f34198a2f9f007509bd9fb977433665e78c9563b5b"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFiniteLevel.olean.private",
+          "sha256": "900474508264613a0a29d008e0aa7b2fe4d049dc4893217e1628137ccaa2e9b9"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFiniteLevel.olean.server",
+          "sha256": "363683eea2af94908da4d67b36248de34abbac159bf300b819f97018263fa5a9"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFiniteLevel.ir",
+          "sha256": "a1a905763e9142ca7edc4355e571fd468e876d2afe92f0d40e83d3ebb77ef7d7"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFiniteLevel.ir.sig",
+          "sha256": "114e5b2635be81f93964d30a1a7a7ff75fd50e2b8d7135a56c3f81bf0d9734e1"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.olean",
+          "sha256": "2224ae6529bfbffda56b1883291e4abcc99462a1502ca8e2210813d179692e26"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.olean.private",
+          "sha256": "ceab4c8ff922f6f9558372b729176e1b1c50d82f8db153060be4a2f9923a1d0b"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.olean.server",
+          "sha256": "b99ea9469cc7f0706ad750a80c92f3cb2b445c2377992f3da7620e5d9238443b"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.ir",
+          "sha256": "c79696d49d8898ace53dbe05366d049b7467da9ff7ca5cbd693d0ae7631ab705"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-complete-overlay/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitCore.ir.sig",
+          "sha256": "37d437e2a4a33e4e6f3241a5ed4c130670a14c7953d6de9fbf1a2dc38a04e5c8"
+        }
+      ],
+      "variant": {
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescentCore.lean",
+        "original_sha256": "80c78992915ce4e7b926f05f6bacb4571a5694b867e2e3714e3dbf123903ca77",
+        "migrated_sha256": "f418203a7555eaaf5a46159a885e5f5e27b2ad14ba7f6961aab304e97c59ce62",
+        "insertions": [
+          {
+            "offset": 706,
+            "text": "\nimport all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitCore\n"
+          }
+        ],
+        "added_imports": [
+          "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitCore"
+        ],
+        "added_options": [],
+        "observed_failure_log": "verification/module-port-20260928/repair-pilot-25-downstream-complete-overlay/unchanged-fixed-point-descent-core.log",
+        "focused_compile": "verification/module-port-20260928/repair-pilot-26-descent-core/result.json",
+        "name": "private-directed-system-and-action-owner",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-26-descent-core/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-26-descent-core/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescentCore.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-26-descent-core/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescentCore.olean"
+      },
+      "command": [
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-R",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-26-descent-core/source",
+        "-o",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-26-descent-core/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescentCore.olean",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-26-descent-core/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescentCore.lean"
+      ],
+      "exit_code": 0,
+      "reason": null,
+      "elapsed_total": 39.32883925270289
+    }
+  ],
+  "passed": true
+}

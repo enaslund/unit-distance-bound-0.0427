@@ -1,0 +1,60 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "Three direct downstream failures first reproduced from unchanged sources; targeted private-instance owner imports restore prior access. Exact candidates pass isolated compilation with direct artifact hashes stable. No theorem statement or proof body changes.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/CompletedLevel/DirectThetaFrobeniusFixed.lean",
+      "original_sha256": "7fb6a936d0a76ffb6bde1205839c2b688fd0947c80db70d14b7855812b578cb5",
+      "migrated_sha256": "8f3d4b7033b2f28423a0c7256ac621e1ab53173f32e1943f39d7f38f39abf398",
+      "insertions": [
+        {
+          "offset": 755,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.CompletedLevel.CompletedLevel"
+      ],
+      "added_options": [],
+      "failed_baseline": "verification/module-port-20260928/repair-pilot-16/DirectThetaFrobeniusFixed/baseline/result.json",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-16/DirectThetaFrobeniusFixed/candidate/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/AmbientPrimeWitness.lean",
+      "original_sha256": "1afa7abd00d99f75ec1386e4299915acf3882e946e87d84b7bd09490cffad6aa",
+      "migrated_sha256": "9e69f7212226048a650d04c8770b9e7a467600d16ca2fa50bb6c7ba27c22fe49",
+      "insertions": [
+        {
+          "offset": 831,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "failed_baseline": "verification/module-port-20260928/repair-pilot-16/AmbientPrimeWitness/baseline/result.json",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-16/AmbientPrimeWitness/candidate/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/NormSubgroup/HigherUnits.lean",
+      "original_sha256": "f61b3976f7a7d2ed9df4916a6c0846e578f94c95b0eefb33b2c265d84966e4c6",
+      "migrated_sha256": "9575762d1052600cb3478178ce915b845ecd9d2dbd5ee14a80549e31bd96f88c",
+      "insertions": [
+        {
+          "offset": 724,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "failed_baseline": "verification/module-port-20260928/repair-pilot-16/HigherUnits/baseline/result.json",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-16/HigherUnits/candidate/result.json"
+    }
+  ]
+}

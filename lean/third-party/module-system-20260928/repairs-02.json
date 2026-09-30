@@ -1,0 +1,24 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [
+        "Mathlib.Analysis.Calculus.ContDiff.Bounds"
+      ],
+      "insertions": [
+        {
+          "offset": 178,
+          "text": "public import Mathlib.Analysis.Calculus.ContDiff.Bounds\n"
+        }
+      ],
+      "migrated_sha256": "7cf56c6b54b7a8fadd9e3ab74b039e2c0d0ed8a65adc215da8c5986bcf2d1595",
+      "original_sha256": "2bb572e6d42553f83f88530f9bfb6c3a3df6775c91feadc8402f5067491e565c",
+      "path": "UnitDistance/StudentSchwartzGaussian.lean",
+      "reason": "Module compiler cannot resolve norm_iteratedFDeriv_comp_le through the private imports of TemperateGrowth/SchwartzSpace.Basic."
+    }
+  ],
+  "schema": "unit-distance-module-port-repair-v1",
+  "scope": "Header-only explicit import of iterated chain-rule derivative bounds, previously reached through a private Mathlib import; mathematical source bodies unchanged."
+}

@@ -1,0 +1,78 @@
+✖ [6762/6832] Building UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.FiniteGaloisRealizationCore (21s)
+trace: .> LEAN_PATH=/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Cli/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/batteries/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Qq/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/aesop/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/proofwidgets/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/importGraph/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/LeanSearchClient/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/plausible/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean /home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.lean -o /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.olean -i /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.ilean -c /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.c --setup /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.setup.json --json
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.lean:448:18: tactic execution is stuck, goal contains metavariables
+  ∀ (x y : Gal(SeparableClosure ℚ/K)),
+    ⟨AlgEquiv.restrictScalars ℚ (x * y), ⋯⟩ = ⟨AlgEquiv.restrictScalars ℚ x, ⋯⟩ * ⟨AlgEquiv.restrictScalars ℚ y, ⋯⟩
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.lean:492:4: Tactic `rfl` failed: The left-hand side
+  ((fun τ =>
+        let __src := ↑τ;
+        { toEquiv := __src.toEquiv, map_mul' := ⋯, map_add' := ⋯, commutes' := ⋯ })
+      ((numberFieldTowerSeparableClosureToBaseSubgroup K L) σ))
+    x
+is not definitionally equal to the right-hand side
+  σ x
+
+case refine_2
+K : Type u_1
+L : Type u_2
+inst✝⁶ : Field K
+inst✝⁵ : NumberField K
+inst✝⁴ : Field L
+inst✝³ : NumberField L
+inst✝² : Algebra K L
+inst✝¹ : FiniteDimensional K L
+inst✝ : IsGalois K L
+this : Algebra K (SeparableClosure ℚ) := numberFieldTowerSeparableClosureBaseAlgebra K L
+σ : Gal(SeparableClosure ℚ/K)
+x : SeparableClosure ℚ
+⊢ ((fun τ =>
+          let __src := ↑τ;
+          { toEquiv := __src.toEquiv, map_mul' := ⋯, map_add' := ⋯, commutes' := ⋯ })
+        ((numberFieldTowerSeparableClosureToBaseSubgroup K L) σ))
+      x =
+    σ x
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.lean:497:4: Tactic `rfl` failed: The left-hand side
+  ↑((numberFieldTowerSeparableClosureToBaseSubgroup K L)
+        ((fun τ =>
+            let __src := ↑τ;
+            { toEquiv := __src.toEquiv, map_mul' := ⋯, map_add' := ⋯, commutes' := ⋯ })
+          τ))
+    x
+is not definitionally equal to the right-hand side
+  ↑τ x
+
+case refine_3
+K : Type u_1
+L : Type u_2
+inst✝⁶ : Field K
+inst✝⁵ : NumberField K
+inst✝⁴ : Field L
+inst✝³ : NumberField L
+inst✝² : Algebra K L
+inst✝¹ : FiniteDimensional K L
+inst✝ : IsGalois K L
+this : Algebra K (SeparableClosure ℚ) := numberFieldTowerSeparableClosureBaseAlgebra K L
+τ : ↥↑(numberFieldTowerBaseSubgroup K L)
+x : SeparableClosure ℚ
+⊢ ↑((numberFieldTowerSeparableClosureToBaseSubgroup K L)
+          ((fun τ =>
+              let __src := ↑τ;
+              { toEquiv := __src.toEquiv, map_mul' := ⋯, map_add' := ⋯, commutes' := ⋯ })
+            τ))
+      x =
+    ↑τ x
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteGaloisRealizationCore.lean:519:2: Tactic `rfl` failed: The left-hand side
+  ↑((numberFieldTowerSeparableClosureToBaseSubgroup K L) σ)
+is not definitionally equal to the right-hand side
+  AlgEquiv.restrictScalars ℚ σ
+
+K : Type u_1
+L : Type u_2
+inst✝⁴ : Field K
+inst✝³ : NumberField K
+inst✝² : Field L
+inst✝¹ : NumberField L
+inst✝ : Algebra K L
+σ : Gal(SeparableClosure ℚ/K)
+this : Algebra K (SeparableClosure ℚ) := numberFieldTowerSeparableClosureBaseAlgebra K L
+⊢ ↑((numberFieldTowerSeparableClosureToBaseSubgroup K L) σ) = AlgEquiv.restrictScalars ℚ σ

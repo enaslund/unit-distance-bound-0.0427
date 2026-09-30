@@ -1,0 +1,21 @@
+guarded-build: admitted with 19.7 GiB available; timeout 900s; exit 0
+command used local dependency path `PYTHONPATH=/tmp/unit-distance-flint`
+current-source mode: full research tables verified
+standalone fixture mode: compact source-hash-bound fixture
+python=3.13.5; executable=/usr/bin/python3
+python-flint=0.9.0; FLINT=3.6.0; precision=256 bits
+case: sigma=12001/12000; mask=1586; twist=-1; degree=2; Q=15015; N=981
+complete coefficient vector SHA256=baec4879c9e60ab3f2e657ff9f4d9cac64a39eebc3aa123495844f19e3ef654c
+finite A/B intervals overlap their printed A_finite/B_finite intervals in both modes
+tail_A_upper=1.7292588510283369619614091510322739e-22
+tail_B_upper=1.7292559891572087453988819977733517e-22
+L_upper=0.58826389943779272863457054737706122
+bad_multiplier_upper=1.7839372855929801848133896557979754
+computed log L^S upper:
+  89378999432481043611149362575072813015969718630390823852292967222212704702751 * 2^-260
+printed log L^S upper:
+  15207048739954932604118704376168157803668370720358482512541816838400848427083546290461778463141797612626490565502465 * 2^-387
+comparison_below_printed_allowance=true in both modes
+
+fixture: 3d05b2be40b3392bf48022b57d352ebeb6c0f48dc288944fba77becc108b7505
+checker: 8bdd6dc80812b735451c8e2a41455dabb132991396dd0df81d995e93da78e622

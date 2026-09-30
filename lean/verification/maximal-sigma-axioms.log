@@ -1,0 +1,17 @@
+Audited all 50 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 50 project declarations selected.
+Axiom audit: beginning UnitDistance.ArithmeticProP.prime_dvd_sigma_product_iff.
+Axiom audit: beginning UnitDistance.ArithmeticProP.mem_sigmaPrimeSupport_iff.
+Axiom audit: beginning UnitDistance.ArithmeticProP.rationalClosureEmbedding._proof_1.
+'UnitDistance.ArithmeticProP.maximalProPOutside_galoisGroup_hasPGroupOpenNormalBasis' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'UnitDistance.ArithmeticProP.retainedFieldEmbeddingMaximalSigmaProTwo' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'UnitDistance.ArithmeticProP.retainedFieldImage_le_maximalSigmaProTwo' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

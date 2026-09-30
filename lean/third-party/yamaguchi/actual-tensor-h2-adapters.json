@@ -1,0 +1,521 @@
+{
+  "upstream": "https://github.com/n-yamaguchi-0729/SawinTotallyRealTowers",
+  "pin": "3a455e1aa9140dbbe7b7d68f508392a69c86d0f4",
+  "license": "Apache-2.0",
+  "scope": "Actual finite tensor H2 comparison and inflation, unconditional rational finite-place H2 detection, finite Kummer image cardinality, and unconditional continuous H2 dimension at most six for the constructed maximal rational pro-two group unramified outside 2,3,5,7,11,13. Also actual absolute-to-finite inertia surjection and Artin integer-unit containment.",
+  "checked_private_audit": {
+    "declarations": 145,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "log": ".cache/yamaguchi-development/ActualTensorH2Audit.log"
+  },
+  "modules": [
+    {
+      "module": "UnitDistance.TensorBaseChangeH2",
+      "source_sha256": "bdbafdab2c37269b7f6dd60e1f1b6b2d2de5bb9dfcc90447ab84a41b8e30cbd2",
+      "private_checked_source_sha256": "78a67e1f18dc93bdc1aaed5967214c92d0ae8483695eff4cb20322226011c7fd",
+      "private_check_log": ".cache/yamaguchi-development/TensorBaseChangeH2.log"
+    },
+    {
+      "module": "UnitDistance.TensorEvaluationH2",
+      "source_sha256": "da214bdaecd65e9179efe37d676e496b277bf30633bcdc5262557371d92c48f0",
+      "private_checked_source_sha256": "268ece1701535610ec67465f91172d1cb1f9357e349d4a6504153e22ff0f0a29",
+      "private_check_log": ".cache/yamaguchi-development/TensorEvaluationH2.log"
+    },
+    {
+      "module": "UnitDistance.TensorUnitCohomologyNorm",
+      "source_sha256": "45cfcee85f397ca637c6b92aab48512dbd2fd6211438872effac7b979651c1fd",
+      "private_checked_source_sha256": "b8b1ddf866ddb56e7e7577506e256f15874dd55579b88328a7264177f552f153",
+      "private_check_log": ".cache/yamaguchi-development/TensorUnitCohomologyNorm.log"
+    },
+    {
+      "module": "UnitDistance.FieldTensorCyclicH2",
+      "source_sha256": "8142b72824d26d3f9e6acfbe7c9b643d748c0b368cbc4b58a9fd08c0b34405ea",
+      "private_checked_source_sha256": "d7401ea4e398d14577456fd6b7da460d0833b904d0ee97492462b784056756c8",
+      "private_check_log": ".cache/yamaguchi-development/FieldTensorCyclicH2.log"
+    },
+    {
+      "module": "UnitDistance.CoinducedH2Transport",
+      "source_sha256": "16462578a146a11057f7c66210d8f315e3e1b42d81b8f2b750623bfa0f31e6f3",
+      "private_checked_source_sha256": "43ce08dd729133d60d5551778ffb4e540ee53706c66efec4d9e3bd097cb24556",
+      "private_check_log": ".cache/yamaguchi-development/CoinducedH2Transport.log"
+    },
+    {
+      "module": "UnitDistance.LocalTensorH2Evaluation",
+      "source_sha256": "8a13ac6aebd94737bbf080827966b6a5b018faa822e1f4ee0c3816f7f6d7e28b",
+      "private_checked_source_sha256": "207e286e332b6eba004f87628a322c37fd567a35aca8702d8b03b972098db399",
+      "private_check_log": ".cache/yamaguchi-development/LocalTensorH2Evaluation.log"
+    },
+    {
+      "module": "UnitDistance.FieldUnitsH2LocalInflation",
+      "source_sha256": "012e1c395af198c888e48317ff0017ec7b2f8c5fcb8221ea70ce2aa7f6271319",
+      "private_checked_source_sha256": "845862e4c600d408c0b46d8802ed58f1c7952a215e98283bb60158e49cee9fc0",
+      "private_check_log": ".cache/yamaguchi-development/FieldUnitsH2LocalInflation.log"
+    },
+    {
+      "module": "UnitDistance.FiniteTensorBaseChangeH2",
+      "source_sha256": "952fc38ab5f16bbc0649dafec3a46c04742a82c2486e982d07d681806d8ad8f3",
+      "private_checked_source_sha256": "8373967b75cee3d470f085c023354c8cb69a5968b2e9920624da032d06a2c661",
+      "private_check_log": ".cache/yamaguchi-development/FiniteTensorBaseChangeH2.log"
+    },
+    {
+      "module": "UnitDistance.LocalTowerRestriction",
+      "source_sha256": "bea782c43424738431ab55262cc49ccb2a5ffd4f9dca8b7c3245e688e0331399",
+      "private_checked_source_sha256": "3ff68d7d951eb9d9515d69d1e259b15ca098a8d98da930712215f7ec6d6dfcdc",
+      "private_check_log": ".cache/yamaguchi-development/LocalTowerRestriction.log"
+    },
+    {
+      "module": "UnitDistance.FiniteLocalTowerEmbedding",
+      "source_sha256": "9ca8cd1cd1c93ec7550a336846875cc73cc160b44c06595817b593909068e55c",
+      "private_checked_source_sha256": "07bbc3f8adeaa16737a6e50fb3d8c89c9b5f1bba109d3479de46562ce7336712",
+      "private_check_log": ".cache/yamaguchi-development/FiniteLocalTowerEmbedding.log"
+    },
+    {
+      "module": "UnitDistance.ActualLocalTensorH2",
+      "source_sha256": "a5b98d2494bbe49b8202f061683fffd6b18a6a553993ee0833d46b48652cf1dd",
+      "private_checked_source_sha256": "6edf5fe375f031dde282d789358f47ee3341ef3253c45a679db6046714dae7bc",
+      "private_check_log": ".cache/yamaguchi-development/ActualLocalTensorH2.log"
+    },
+    {
+      "module": "UnitDistance.TensorH2CoefficientChange",
+      "source_sha256": "68f14a48deb9172ad298c9ad824e846b837b0d6a5f8089c01fd6d8be4da6fe42",
+      "private_checked_source_sha256": "b4d373ce5b804c23d63baa117d2cf798fe3bcc717cca3370b7c077fa065fb24e",
+      "private_check_log": ".cache/yamaguchi-development/TensorH2CoefficientChange.log"
+    },
+    {
+      "module": "UnitDistance.FiniteTensorInflationH2",
+      "source_sha256": "8de4ce9a6d624a52961e9d5e923e23eb621566693281c8664a59ba0597148a8e",
+      "private_checked_source_sha256": "4b3ac23b70ac4c224b03980abd6c1c49af0e7a1dc8faaae49a37aee4b390b8ca",
+      "private_check_log": ".cache/yamaguchi-development/FiniteTensorInflationH2.log"
+    },
+    {
+      "module": "UnitDistance.LocalGaloisTowerRestriction",
+      "source_sha256": "a07e526eaa7a713e7a0a221454ba20973062fc6f6709c8a679e7b82d193e1304",
+      "private_checked_source_sha256": "f936dee4d6901f648e1411df8fec21ecd25b500bb6c261e3a1b8e5c0288adf90",
+      "private_check_log": ".cache/yamaguchi-development/LocalGaloisTowerRestriction.log"
+    },
+    {
+      "module": "UnitDistance.FiniteTensorGaloisInflationH2",
+      "source_sha256": "655714eb78c3e97776881938bee1a77717aa9eb2edce0127ba24eb22a9ea14f8",
+      "private_checked_source_sha256": "0758b327b500e64f53e2895f07cb2aaf9d03d3fe00307d1ac90c823452522b4d",
+      "private_check_log": ".cache/yamaguchi-development/FiniteTensorGaloisInflationH2.log"
+    },
+    {
+      "module": "UnitDistance.ImaginaryQuadraticBase",
+      "source_sha256": "e2f11323eca73deed1f67625d691f69ccf6b36e2e2bed485f6cea9caf451c7ed",
+      "private_checked_source_sha256": "e2f11323eca73deed1f67625d691f69ccf6b36e2e2bed485f6cea9caf451c7ed",
+      "private_check_log": ".cache/yamaguchi-development/ImaginaryQuadraticBase.log"
+    },
+    {
+      "module": "UnitDistance.ImaginaryGaloisEnlargement",
+      "source_sha256": "08ba21024a3578b68dfa4d417c8a2656ad2361319f92798bcc1c5dff9520df25",
+      "private_checked_source_sha256": "f15706c2f21174119af435dc64c84085baf376cee326e9ab418bbc59c4237d75",
+      "private_check_log": ".cache/yamaguchi-development/ImaginaryGaloisEnlargement.log"
+    },
+    {
+      "module": "UnitDistance.SigmaFinitePrimeSupport",
+      "source_sha256": "b2c1ac761e449760e8260ce6930fabfd21ea9567dd86e0fe2b99d8763449aa3f",
+      "private_checked_source_sha256": "b2c1ac761e449760e8260ce6930fabfd21ea9567dd86e0fe2b99d8763449aa3f",
+      "private_check_log": ".cache/yamaguchi-development/SigmaFinitePrimeSupport.log"
+    },
+    {
+      "module": "UnitDistance.FiniteTensorTowerDetection",
+      "source_sha256": "56661269b51737e873806091cda1699b32d1f8e9dea051e0bfc0db96da58265e",
+      "private_checked_source_sha256": "8e8b6f42a0e0b888f0c33762c0898d5efe2aff08f0d79d811f7671c652eb296e",
+      "private_check_log": ".cache/yamaguchi-development/FiniteTensorTowerDetection.log"
+    },
+    {
+      "module": "UnitDistance.RationalFiniteFieldUnitsH2Reduction",
+      "source_sha256": "ec05f347d9a508957896376c583fd99efff8f8e2a10684aa6e39ad9b5323bda9",
+      "private_checked_source_sha256": "529dd2c3b7510e280365ed76c8aace91703753e5fae926294bd0b64da7ab4b93",
+      "private_check_log": ".cache/yamaguchi-development/RationalFiniteFieldUnitsH2Reduction.log"
+    },
+    {
+      "module": "UnitDistance.AbsoluteLocalCompactness",
+      "source_sha256": "95f677cd1ea56a0f522eb1dae4e49b2d195e1a0bbb83fe586ee79e6a1ef9557e",
+      "private_checked_source_sha256": "eb29ff7b6b641a86059c0f0ce74b2a5b5f8938c844ed2fc0f4c407c630e3a1ba",
+      "private_check_log": ".cache/yamaguchi-development/AbsoluteLocalCompactness.log"
+    },
+    {
+      "module": "UnitDistance.FiniteInertiaRestriction",
+      "source_sha256": "80ebfbd28949431b8f5910e8b7bc9e6acbd4c8ccc715a927ece0278ba6759ace",
+      "private_checked_source_sha256": "4ba38794c2aeb138b4342541bbf919bf81dce815ff4c2cdf102b1175aca4d057",
+      "private_check_log": ".cache/yamaguchi-development/FiniteInertiaRestriction.log"
+    },
+    {
+      "module": "UnitDistance.SupportedIdeleOutsideH2",
+      "source_sha256": "eb71ec51859d58c06f86cc2c356e35aa00c07bb5f971339f82b09e896fa40d0c",
+      "private_checked_source_sha256": "3beb2add6455d8ff899e4cc21800fe3d3b075d6d2cef1b1c55cdefafb9ee2e4c",
+      "private_check_log": ".cache/yamaguchi-development/SupportedIdeleOutsideH2.log"
+    },
+    {
+      "module": "UnitDistance.ProPStageLocalConditions",
+      "source_sha256": "b47a6e6853f240493197b83d1ee48d3ed8d8179c4f91e8d29de2f11439f1d3d4",
+      "private_checked_source_sha256": "cb0c52381e779b939687b3150c608c20c5fbfd960ae9541738dbbac393836b71",
+      "private_check_log": ".cache/yamaguchi-development/ProPStageLocalConditions.log"
+    },
+    {
+      "module": "UnitDistance.RationalFiniteKummerReduction",
+      "source_sha256": "f23a6ef92faf9d751e4a60d7d941ec3e6c177742d49bf35291a7761ee6a9af4a",
+      "private_checked_source_sha256": "2e20c53b6aad9f7667204e8be03776c1c4f5a32dfc6aeecc79b4d45f3b9a7b57",
+      "private_check_log": ".cache/yamaguchi-development/RationalFiniteKummerReduction.log"
+    },
+    {
+      "module": "UnitDistance.IntegralClosureValuationTower",
+      "source_sha256": "33da60ecd9193730f7aa5889d97bb478268e28074c76359ba45b024f101de23e",
+      "private_checked_source_sha256": "55e944d7a241c02d8b16d68587d35e1f3e72af2ef0dae7f3e64cb004fae9f267",
+      "private_check_log": ".cache/yamaguchi-development/IntegralClosureValuationTower.log"
+    },
+    {
+      "module": "UnitDistance.FiniteInertiaFixedField",
+      "source_sha256": "b67b40e9ff18c47fb74e66a7310f8ef1fed1573bcb397569f85e9694adf72504",
+      "private_checked_source_sha256": "0972cb23161b691586016452cfbcd837fb9f9697171f3b926ea9d3984735f7ea",
+      "private_check_log": ".cache/yamaguchi-development/FiniteInertiaFixedField.log"
+    },
+    {
+      "module": "UnitDistance.LocalArtinUnitIndex",
+      "source_sha256": "32d670c8c66d6e0b83aa0e844f8b33716e95071aa1a3efa2152e6b42831f1283",
+      "private_checked_source_sha256": "202098e15d644870b7df333262a570434bad72dcdd4efeed8fded06b1f9c4e73",
+      "private_check_log": ".cache/yamaguchi-development/LocalArtinUnitIndex.log"
+    },
+    {
+      "module": "UnitDistance.LocalArtinRestriction",
+      "source_sha256": "e7f85bdb64e5bfcbb7ccb84a814ed8bdfad780490f546e31f21a2087e2c7217f",
+      "private_checked_source_sha256": "90d0ae4c60617e9de8b8a52d31c214982b61e84b75a86e4ab48fac25930f3696",
+      "private_check_log": ".cache/yamaguchi-development/LocalArtinRestriction.log"
+    },
+    {
+      "module": "UnitDistance.LocalArtinUnitContainment",
+      "source_sha256": "d72a091152ab94f21e9efe7d31047747a27ed25ca3bd9e76e11e0f5902d09ab2",
+      "private_checked_source_sha256": "a88116256d5a5389804592e2eaf75817e3ac3686e717d9d1cbc74dfbcc63fbba",
+      "private_check_log": ".cache/yamaguchi-development/LocalArtinUnitContainment.log"
+    },
+    {
+      "module": "UnitDistance.LocalAbsoluteInertiaRestriction",
+      "source_sha256": "dce4761fde31f97ecbfc915610774a0ec3e4bcb516603189b648b4a7fde0a9cb",
+      "private_checked_source_sha256": "b80bcd275be02a6e4abc779437981485b62d0f5b2cb610b278d2464adaf95ea4",
+      "private_check_log": ".cache/yamaguchi-development/LocalAbsoluteInertiaRestriction.log"
+    },
+    {
+      "module": "UnitDistance.FiniteAbsoluteInertiaImage",
+      "source_sha256": "2176656e2d54f16424dc2f6a6dff059657492ea3309cb30eb24d50bfaff8aa84",
+      "private_checked_source_sha256": "2ec81aa42e1227b8b9a97bfa804b1af3f632eabc97aa7e2eb14a56b6241a16da",
+      "private_check_log": ".cache/yamaguchi-development/FiniteAbsoluteInertiaImage.log"
+    },
+    {
+      "module": "UnitDistance.MaximalSigmaH2Reduction",
+      "source_sha256": "ef082feb697ffc4f28c72ebfafb96f21562ffd7cd6dd1f8ceafd5f0deeae441e",
+      "private_checked_source_sha256": "48eafb25a8c2809a85dcc3daa0d90576c7fbab0449fe67ebe754757f8c1f7e00",
+      "private_check_log": ".cache/yamaguchi-development/MaximalSigmaH2Reduction.log",
+      "explicit_inputs": [
+        "ImaginaryFieldUnitsFiniteDetection",
+        "Actual stage Kummer kernel included in inflation kernel"
+      ]
+    },
+    {
+      "module": "UnitDistance.IntrinsicInertiaComparison",
+      "source_sha256": "1a3f335047fc893656f67803a21803c780d2d34f6e1135d2d816e153e71057ef",
+      "private_checked_source_sha256": "0827e73c87e7c55219baca2da99e1adf0c14b16b5c9c71567864f8cde6499934",
+      "private_check_log": ".cache/yamaguchi-development/IntrinsicInertiaComparison.log"
+    },
+    {
+      "module": "UnitDistance.OneInfinitePlaceNorm",
+      "source_sha256": "65d670b62d25ccb0a55d250fdbc39a5b587c942c2f36b630f15a98e2ce2aaa36",
+      "private_checked_source_sha256": "e10888d6de78f8d3b2631d7b67a059e7734e326a13cc8ad8c09816e8e757a7e7",
+      "private_check_log": ".cache/yamaguchi-development/OneInfinitePlaceNorm.log"
+    },
+    {
+      "module": "UnitDistance.FiniteCyclicFinitePlaceH2",
+      "source_sha256": "f4dc1b23548646c3333f6b4fe76a5e1b0af80a102db1d344794c48b3dd5ae312",
+      "private_checked_source_sha256": "69bf878dcfed6a7f802e4104e7b52614218fe9182c02ae242e5e08dcf2a77691",
+      "private_check_log": ".cache/yamaguchi-development/FiniteCyclicFinitePlaceH2.log"
+    },
+    {
+      "module": "UnitDistance.OneInfinitePlaceFieldUnitsH2",
+      "source_sha256": "f4f2a72e0e2d211218276c6ef9239c814e70868be838c4551e068334f948bece",
+      "private_checked_source_sha256": "91d5e7c0c4b93c6d76d5edcf09ef118f924e894fc2eb839becd729efa113b978",
+      "private_check_log": ".cache/yamaguchi-development/OneInfinitePlaceFieldUnitsH2.log"
+    },
+    {
+      "module": "UnitDistance.RationalFiniteFieldUnitsH2",
+      "source_sha256": "c649e1065e6ea3d409f67f430d5d3b6ef9fd4bdba2d7457e1c867f562713dbbe",
+      "private_checked_source_sha256": "5b4337da83d2d50c037eb826803dcc3396ba422f7856e7058ccbc6f373484895",
+      "private_check_log": ".cache/yamaguchi-development/RationalFiniteFieldUnitsH2.log"
+    },
+    {
+      "module": "UnitDistance.RationalFiniteKummerBound",
+      "source_sha256": "0ecbd1c97b95fe79f365b75a5667901138e8d0d3acae6a5302c5261e461f5240",
+      "private_checked_source_sha256": "91e28766e1d83b30d628515d008d816c653dbfea5a3288f878602d6c72129604",
+      "private_check_log": ".cache/yamaguchi-development/RationalFiniteKummerBound.log"
+    },
+    {
+      "module": "UnitDistance.LocalInertiaFiniteImage",
+      "source_sha256": "2b97229d32feb5e417731da686a67b387a353bbfa837f7f3947826ffd64df6af",
+      "private_checked_source_sha256": "46005c7d31dee00083910b670d1645fe85019769c22b882f51c83f20a0845b4a",
+      "private_check_log": ".cache/yamaguchi-development/LocalInertiaFiniteImage.log"
+    },
+    {
+      "module": "UnitDistance.MaximalSigmaH2Bound",
+      "source_sha256": "8322f646651a2406d4b324686e20995a154efec0b96d436d65e14ce4bf9bc36e",
+      "private_checked_source_sha256": "d6bfbf459f6e9e1f7590343eb7491e617c5f29d50d49d9626baf2d48d61da64f",
+      "private_check_log": ".cache/yamaguchi-development/MaximalSigmaH2Bound.log"
+    },
+    {
+      "module": "UnitDistance.SigmaPresentation",
+      "source_sha256": "6b34aeb30c031aefa4535ba9dc27d054fb3ce746ca81e414fe7bfa5a1b4aad6a",
+      "private_checked_source_sha256": "705fa05754f658785ad24e272abaf993e3f27ec2247862e1ec61f2c83800db32",
+      "private_check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaPresentation.log",
+      "import_normalization_plan": ".cache/yamaguchi-unified/plan.json"
+    },
+    {
+      "module": "UnitDistance.ArithmeticDyadicInertiaCards",
+      "source_sha256": "812af7841d0ed94255d6bd7d508a1566e2e480a913c10359c76dd614d634446a",
+      "private_checked_source_sha256": "812af7841d0ed94255d6bd7d508a1566e2e480a913c10359c76dd614d634446a",
+      "private_check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.ArithmeticDyadicInertiaCards.log",
+      "import_normalization_plan": ".cache/yamaguchi-dyadic-unified/plan.json"
+    },
+    {
+      "module": "UnitDistance.SigmaCompletedPresentation",
+      "source_sha256": "d15b58b75bd62cbb1dcfedca8670ae4b74112d08b3830232ccda2de15c482b02",
+      "private_checked_source_sha256": "7b32e8cc6def4b21adc573ab09347c8ae84adf2cd165192574b1bb23c6b17b88",
+      "private_check_log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaCompletedPresentation.log"
+    }
+  ],
+  "further_private_audit": {
+    "declarations": 220,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "log": ".cache/yamaguchi-development/FinitePlaceProgressAudit.log",
+    "scope_note": "Also includes s_adic supported-idele helpers and the still-private SupportedIdeleOutsideH2."
+  },
+  "normal_first13_verification": {
+    "build": "verification/actual-tensor-h2-build.log",
+    "jobs": 4402,
+    "audit": "verification/actual-tensor-h2-axioms.log",
+    "declarations": 145,
+    "status": "passed",
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ]
+  },
+  "normal_galois_verification": {
+    "build": "verification/galois-tensor-h2-build.log",
+    "jobs": 4442,
+    "audit": "verification/galois-tensor-h2-axioms.log",
+    "declarations": 198,
+    "status": "passed",
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ]
+  },
+  "latest_private_audit": {
+    "declarations": 317,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "log": ".cache/yamaguchi-development/LatestH2LocalAudit.log",
+    "scope": "All own checked finite-to-continuous H2 reduction, actual local Artin and inertia bridges; final rational detection and unconditional maximal-Sigma bound remain pending."
+  },
+  "rational_finite_detection_private_audit": {
+    "declarations": 251,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "log": ".cache/yamaguchi-development/RationalFiniteDetectionAudit.log",
+    "status": "passed"
+  },
+  "unconditional_maximal_sigma_private_audit": {
+    "declarations": 332,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "log": ".cache/yamaguchi-development/MaximalSigmaH2BoundAudit.log",
+    "status": "passed"
+  },
+  "absolute_finite_inertia_private_audit": {
+    "declarations": 24,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "log": ".cache/yamaguchi-development/LocalInertiaFiniteImageAudit.log",
+    "status": "passed"
+  },
+  "normal_rational_reduction_verification": {
+    "build": "verification/rational-h2-reduction-build.log",
+    "jobs": 4797,
+    "audit": "verification/rational-h2-reduction-axioms.log",
+    "declarations": 201,
+    "status": "passed",
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ]
+  },
+  "normal_absolute_local_compactness_verification": {
+    "build": "verification/absolute-local-compactness-build.log",
+    "jobs": 4402,
+    "audit": "verification/absolute-local-compactness-axioms.log",
+    "declarations": 38,
+    "status": "passed",
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ]
+  },
+  "sigma_presentation_private_audit": {
+    "declarations": 469,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaPresentationAudit.log",
+    "status": "passed"
+  },
+  "dyadic_inertia_cards_private_audit": {
+    "declarations": 1855,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "log": ".cache/yamaguchi-dyadic-unified/UnitDistance.ArithmeticDyadicInertiaCardsAudit.log",
+    "status": "passed"
+  },
+  "further_normal_verifications": [
+    {
+      "name": "finite-inertia-restriction",
+      "build": "verification/finite-inertia-restriction-build.log",
+      "jobs": 3178,
+      "audit": "verification/finite-inertia-restriction-axioms.log",
+      "declarations": 2,
+      "status": "passed",
+      "axioms": [
+        "Quot.sound",
+        "Classical.choice",
+        "propext"
+      ]
+    },
+    {
+      "name": "rational-kummer-reduction",
+      "build": "verification/rational-kummer-reduction-build.log",
+      "jobs": 4836,
+      "audit": "verification/rational-kummer-reduction-axioms.log",
+      "declarations": 220,
+      "status": "passed",
+      "axioms": [
+        "Quot.sound",
+        "Classical.choice",
+        "propext"
+      ]
+    },
+    {
+      "name": "finite-inertia-fixed-field",
+      "build": "verification/finite-inertia-fixed-field-build.log",
+      "jobs": 3255,
+      "audit": "verification/finite-inertia-fixed-field-axioms.log",
+      "declarations": 4,
+      "status": "passed",
+      "axioms": [
+        "Quot.sound",
+        "Classical.choice",
+        "propext"
+      ]
+    },
+    {
+      "name": "local-artin-unit-index",
+      "build": "verification/local-artin-unit-index-build.log",
+      "jobs": 4113,
+      "audit": "verification/local-artin-unit-index-axioms.log",
+      "declarations": 1,
+      "status": "passed",
+      "axioms": [
+        "Quot.sound",
+        "Classical.choice",
+        "propext"
+      ]
+    },
+    {
+      "name": "local-artin-bridges",
+      "build": "verification/local-artin-bridges-build.log",
+      "jobs": 4133,
+      "audit": "verification/local-artin-bridges-axioms.log",
+      "declarations": 8774,
+      "status": "passed",
+      "axioms": [
+        "Quot.sound",
+        "Classical.choice",
+        "propext"
+      ]
+    },
+    {
+      "name": "finite-absolute-inertia-image",
+      "build": "verification/finite-absolute-inertia-image-build.log",
+      "jobs": 4137,
+      "audit": "verification/finite-absolute-inertia-image-axioms.log",
+      "declarations": 9635,
+      "status": "passed",
+      "axioms": [
+        "Quot.sound",
+        "Classical.choice",
+        "propext"
+      ]
+    },
+    {
+      "name": "maximal-sigma-h2-reduction",
+      "build": "verification/maximal-sigma-h2-reduction-build.log",
+      "jobs": 4949,
+      "audit": "verification/maximal-sigma-h2-reduction-axioms.log",
+      "declarations": 23040,
+      "status": "passed",
+      "axioms": [
+        "Quot.sound",
+        "Classical.choice",
+        "propext"
+      ]
+    },
+    {
+      "name": "intrinsic-inertia-comparison",
+      "build": "verification/intrinsic-inertia-comparison-build.log",
+      "jobs": 3178,
+      "audit": "verification/intrinsic-inertia-comparison-axioms.log",
+      "declarations": 1,
+      "status": "passed",
+      "axioms": [
+        "Quot.sound",
+        "Classical.choice",
+        "propext"
+      ]
+    }
+  ],
+  "sigma_completed_presentation_private_audit": {
+    "declarations": 499,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "log": ".cache/yamaguchi-unified/SawinTotallyRealTowers.SigmaCompletedPresentationAudit.log",
+    "status": "passed"
+  }
+}

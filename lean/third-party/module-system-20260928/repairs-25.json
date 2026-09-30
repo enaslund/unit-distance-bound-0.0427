@@ -1,0 +1,25 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "Expose the exact private DirectedSystem instance from IdeleClassDirectLimitCore, required by DirectLimit.mk_injective in FiniteLevel. Statements and proof bodies byte-preserved; full isolated compile passed.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFiniteLevel.lean",
+      "original_sha256": "dc62e044bc45c427996dbc28f81e5e483f7588bf21f3fc33ab73e8195b1c2b26",
+      "migrated_sha256": "854221440fce51bd14b2115d6efb838fddc0e437c5c1c20d08dd966c3d427423",
+      "insertions": [
+        {
+          "offset": 593,
+          "text": "\nimport all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitCore\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitCore"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-25-finite-level/result.json"
+    }
+  ]
+}

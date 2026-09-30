@@ -1,0 +1,25 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [
+        "Mathlib.Analysis.Calculus.IteratedDeriv.Defs",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv"
+      ],
+      "insertions": [
+        {
+          "offset": 111,
+          "text": "public import Mathlib.Analysis.Calculus.IteratedDeriv.Defs\npublic import Mathlib.Analysis.SpecialFunctions.Pow.Deriv\n"
+        }
+      ],
+      "migrated_sha256": "a0b8a962cb5876a3b61da3c6f3ca3d4f48846d615645e49004b1e0fa56d87b0e",
+      "original_sha256": "4cd77f97284b2b8290cdc6da483d18b9b233ce89198b0f7b05225db31ee62dca",
+      "path": "UnitDistance/StudentSchwartzGrowth.lean",
+      "reason": "Module-system compiler reported missing rpow and iterated derivative names; these explicit imports contain the referenced public declarations."
+    }
+  ],
+  "schema": "unit-distance-module-port-repair-v1",
+  "scope": "Header-only explicit imports replacing dependencies formerly obtained through private Mathlib transitive imports; no theorem or proof-body edits. Compilation remains pending."
+}

@@ -1,0 +1,67 @@
+{
+  "coefficient_helper_sha256": "3759f993a31a0df05241d8faa546950dcf68b49ad4768339e4f56da4e7846329",
+  "coefficient_vector_sha256": "baec4879c9e60ab3f2e657ff9f4d9cac64a39eebc3aa123495844f19e3ef654c",
+  "excluded_ramified_primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13
+  ],
+  "fixture_sha256": "5fd9c83deb0fcdef56d314657ae8e1c7408c5508e652834e32cdabc3de234200",
+  "full_research_sources_compared": true,
+  "good_prime_count": 159,
+  "limit": 981,
+  "mask": 1586,
+  "prime_square_checks": [
+    {
+      "coefficient_p_squared": 3,
+      "nonsquare": 3,
+      "prime": 17,
+      "trace_p": 2,
+      "trace_p_squared_frobenius": 2
+    },
+    {
+      "coefficient_p_squared": 1,
+      "nonsquare": 2,
+      "prime": 19,
+      "trace_p": 0,
+      "trace_p_squared_frobenius": 2
+    },
+    {
+      "coefficient_p_squared": -1,
+      "nonsquare": 5,
+      "prime": 23,
+      "trace_p": 0,
+      "trace_p_squared_frobenius": -2
+    },
+    {
+      "coefficient_p_squared": 3,
+      "nonsquare": 2,
+      "prime": 29,
+      "trace_p": 2,
+      "trace_p_squared_frobenius": 2
+    },
+    {
+      "coefficient_p_squared": -1,
+      "nonsquare": 3,
+      "prime": 31,
+      "trace_p": 0,
+      "trace_p_squared_frobenius": -2
+    }
+  ],
+  "prime_square_count": 5,
+  "quadratic_polynomial": "X^2 - (-35)",
+  "quartic_discriminant": 2152550400,
+  "quartic_polynomial": "X^4 + (34)*X^2 + (429)",
+  "scope": "One selected mixed quadratic row: good-prime a_p traces and all eligible a_(p^2) through N=981 from direct quartic/quadratic polynomial root counts over F_p and F_(p^2); not a global Artin identity or an AFE check.",
+  "selected_deleted_unramified_prime_17_checked": true,
+  "status": "pass",
+  "trace_counts": {
+    "-2": 15,
+    "0": 122,
+    "2": 22
+  },
+  "twist": -1
+}

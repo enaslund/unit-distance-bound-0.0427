@@ -1,0 +1,13 @@
+Audited all 64 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 64 project declarations selected.
+Axiom audit: beginning ClassFieldTower.Sawin.exists_int_linear_combination_of_half_quadraticGenerator.
+Axiom audit: beginning ClassFieldTower.Sawin.quadraticIntegerBasisOfModFourNeOne.eq_1.
+Axiom audit: beginning ClassFieldTower.Sawin.quadraticIntegerGenerator._proof_1.
+'ClassFieldTower.Sawin.exists_squarefree_int_generator_of_isQuadraticExtension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ClassFieldTower.Sawin.numberField_discr_of_mod_four_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClassFieldTower.Sawin.numberField_discr_of_mod_four_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]

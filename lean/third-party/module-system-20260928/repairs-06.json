@@ -1,0 +1,48 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-06/result.json",
+      "insertions": [
+        {
+          "offset": 608,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree\n"
+        }
+      ],
+      "migrated_sha256": "048acdc09ba6fdf3e025e28da47f2d96bf9ca8366c98d7856564a66b6038b16f",
+      "original_sha256": "57497eea7a8b2f0275463152d77cc67a8b545a5b1217bbc2f2e2e44294473245",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FiniteSubgroupResidueDegree.lean",
+      "reason": "Restores the exact previously available private instances through their existing project owners; theorem statements and proof bodies unchanged."
+    },
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport",
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityCanonical"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-06-prime-norm-retry2/result.json",
+      "insertions": [
+        {
+          "offset": 616,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        },
+        {
+          "offset": 616,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityCanonical\n"
+        }
+      ],
+      "migrated_sha256": "524ab74f494bdedd8bdbaab3df45f1f18c4d349da89fb4fac72fa41bec99a848",
+      "original_sha256": "76c73ec3efd290d4a80d06995db1970f8dcaa997e20508723ca5d9d576237dc6",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ConcreteReciprocityPrimeNorm.lean",
+      "reason": "Restores the exact previously available private instances through their existing project owners; theorem statements and proof bodies unchanged."
+    }
+  ],
+  "schema": "unit-distance-module-port-repair-v2",
+  "scope": "Two tested header-only private-instance repairs discovered in the next integration attempt. Three import-all directives restore residue-field IsGalois, intrinsic Galois-group T2Space and the bundled finite-quotient instance. Statements, proof bodies, definitions and assumptions are unchanged."
+}

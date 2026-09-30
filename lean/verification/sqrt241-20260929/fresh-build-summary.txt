@@ -1,0 +1,12 @@
+start 2026-09-29T12:00:34Z
+BUILD_OK
+end 2026-09-29T13:00:15Z
+real	59m41.225s
+user	428m11.110s
+sys	28m40.917s
+Build completed successfully (6960 jobs).
+real	59m41.225s
+user	428m11.110s
+sys	28m40.917s
+warnings: 2433
+errors: 0

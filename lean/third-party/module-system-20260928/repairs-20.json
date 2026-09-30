@@ -1,0 +1,26 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "AmbientPrimeWitnessComparison failed in integration205316 with missing private T2Space instances and cascading diagnostics. Exact import-all owner candidate passes under unchanged heartbeats with stable direct artifacts. Statement and proof bodies byte-preserved.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/AmbientPrimeWitnessComparison.lean",
+      "original_sha256": "3600ab037ddae26624142189105386af687e993fd613c12910392e4ab2937bc5",
+      "migrated_sha256": "63041db5ef5cb369409418f98e27dc949b5e2380476fb8a02506dd3d67983310",
+      "insertions": [
+        {
+          "offset": 810,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-20/AmbientPrimeWitnessComparison/candidate/observed-failure.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-20/AmbientPrimeWitnessComparison/candidate/result.json"
+    }
+  ]
+}

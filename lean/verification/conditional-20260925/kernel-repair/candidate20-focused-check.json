@@ -1,0 +1,38 @@
+{
+  "scope": "Focused exported proof of pairMassBracketScalarsQ_eq_data with its complete dependencies; not a full submission verifier pass.",
+  "recorded_at": "2026-09-26T05:19:44.276943+00:00",
+  "source_sha256": "6d7b6d6f8f8a3213da3edd4556076da0ea27bb9aa59a9a49c33c3377a82d90d0",
+  "export_sha256": "634d86527261cbcba8d12c9e866636a0f803f5d9418614361942872d0814593b",
+  "export_bytes": 39342863,
+  "tool_sha256": {
+    "lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "leanexport": "c5bc1a10a21e22cbb3671d65987cdef2076833b14182d823ccb2153adf2fa954",
+    "nanoda_bin": "8241c5e6baa29490aa118d382f97961b208ae730fdb96545c2abed74c9ece5a8",
+    "con-ron": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef"
+  },
+  "checkers": {
+    "nanoda": {
+      "passed": true,
+      "seconds": 9.09,
+      "receipt": "candidate20-cell-focused-nanoda.json"
+    },
+    "con-ron": {
+      "passed": true,
+      "seconds": 33.1,
+      "receipt": "candidate20-cell-focused-con-ron.json"
+    }
+  },
+  "resources": {
+    "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/palomar-cell-focused-20260926T0518Z.scope",
+    "cpu_affinity": [
+      0,
+      1
+    ],
+    "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "memory_high": "19327352832",
+    "memory_max": "21474836480",
+    "memory_peak_bytes": 661966848,
+    "memory_swap_max": "max",
+    "scope": "Focused diagnostic using unchanged bundled independent checker binaries."
+  }
+}

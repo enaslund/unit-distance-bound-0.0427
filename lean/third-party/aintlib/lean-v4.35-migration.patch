@@ -1,0 +1,124 @@
+--- a/UnitDistance/Upstream/AINTLIB/CebotarevDensity/NumberFieldEulerProduct.lean
++++ b/UnitDistance/Upstream/AINTLIB/CebotarevDensity/NumberFieldEulerProduct.lean
+@@ -136,11 +136,12 @@
+           (span_natCast_sup_span_natCast L hcop).symm
+       _ ≤ Ideal.span {(m : 𝓞 L)} ⊔ L' :=
+           sup_le_sup_left (span_natCast_le_of_absNorm_eq L hL) _
+-  refine le_antisymm (sup_le Ideal.mul_le_right (span_natCast_le_of_absNorm_eq L hJ)) ?_
++  refine le_antisymm (sup_le Ideal.mul_le_left (span_natCast_le_of_absNorm_eq L hJ)) ?_
+   · calc J = J * ⊤ := (Ideal.mul_top J).symm
+       _ = J * (Ideal.span {(m : 𝓞 L)} ⊔ L') := by rw [h_cop_mL_sup]
+       _ = J * Ideal.span {(m : 𝓞 L)} ⊔ J * L' := Ideal.mul_sup _ _ _
+-      _ ≤ Ideal.span {(m : 𝓞 L)} ⊔ J * L' := sup_le_sup_right Ideal.mul_le_left _
++      _ ≤ Ideal.span {(m : 𝓞 L)} ⊔ J * L' :=
++        sup_le_sup_right (by rw [mul_comm]; exact Ideal.mul_le_left) _
+       _ = J * L' ⊔ Ideal.span {(m : 𝓞 L)} := sup_comm _ _
+ 
+ lemma idealNormMultiplicity_mul {m n : ℕ} (hcop : Nat.Coprime m n) :
+--- a/UnitDistance/Upstream/AINTLIB/CompletedZeta/AnalyticControl.lean
++++ b/UnitDistance/Upstream/AINTLIB/CompletedZeta/AnalyticControl.lean
+@@ -2643,7 +2643,7 @@
+     (hzu : ∀ u ∈ F, b ≤ ‖z - u‖) :
+     b ^ (∑ u ∈ F, (D u).toNat) ≤ ‖∏ u ∈ F, (z - u) ^ D u‖ := by
+   rw [norm_prod_sub_zpow hD, ← Finset.prod_pow_eq_pow_sum]
+-  exact Finset.prod_le_prod (fun u _ => by positivity)
++  exact Finset.prod_le_prod₀ (fun u _ => by positivity)
+     (fun u hu => pow_le_pow_left₀ hb (hzu u hu) _)
+ 
+ /-- Upper bound for the norm of a monic-type product: if every factor distance `‖z - u‖`
+@@ -2653,7 +2653,7 @@
+     (hzu : ∀ u ∈ F, ‖z - u‖ ≤ B) :
+     ‖∏ u ∈ F, (z - u) ^ D u‖ ≤ B ^ (∑ u ∈ F, (D u).toNat) := by
+   rw [norm_prod_sub_zpow hD, ← Finset.prod_pow_eq_pow_sum]
+-  exact Finset.prod_le_prod (fun u _ => by positivity)
++  exact Finset.prod_le_prod₀ (fun u _ => by positivity)
+     (fun u hu => pow_le_pow_left₀ (norm_nonneg _) (hzu u hu) _)
+ 
+ /-- **Divisor monotonicity from an open ball to its closed ball.** For an everywhere-analytic
+@@ -3082,8 +3082,13 @@
+   -- the peel product's logarithmic derivative is the partial-fraction sum
+   have hldprod : logDeriv (fun z => ∏ u ∈ F, (z - u) ^ D₁ u) s
+       = ∑ u ∈ F, (D₁ u : ℂ) / (s - u) := by
++    have hprod : (∏ u ∈ F, (fun z : ℂ => (z - u) ^ D₁ u)) =
++        (fun z : ℂ => ∏ u ∈ F, ((fun w : ℂ => w - u) z) ^ D₁ u) := by
++      funext z
++      simp only [Finset.prod_apply]
+     have h1 : logDeriv (fun z => ∏ u ∈ F, (fun w : ℂ => w - u) z ^ D₁ u) s
+         = ∑ u ∈ F, logDeriv (fun z => (fun w : ℂ => w - u) z ^ D₁ u) s := by
++      rw [← hprod]
+       refine logDeriv_prod (𝕜 := ℂ) (𝕜' := ℂ) (s := F)
+         (f := fun u z => (z-u)^D₁ u) (x := s)
+         (fun u hu => hfactor_ne u hu) (fun u hu => ?_)
+--- a/UnitDistance/Upstream/AINTLIB/ExplicitFormula/AuxAdmissible.lean
++++ b/UnitDistance/Upstream/AINTLIB/ExplicitFormula/AuxAdmissible.lean
+@@ -281,12 +281,10 @@
+ /-- The real-part projection is `1`-Lipschitz. -/
+ theorem lipschitzWith_complex_re : LipschitzWith 1 Complex.re := by
+   convert (RCLike.lipschitzWith_re (K := ℂ)) using 1
+-  rfl
+ 
+ /-- The imaginary-part projection is `1`-Lipschitz. -/
+ theorem lipschitzWith_complex_im : LipschitzWith 1 Complex.im := by
+   convert (RCLike.lipschitzWith_im (K := ℂ)) using 1
+-  rfl
+ 
+ /-- **Bounded variation of `F_{s,X}` on the whole line** (for `Re s > 1/2`): the `c = 0`
+ case of `boundedVariationOn_auxF_mul_exp`, with the trivial `e^{0·x} = 1` weight removed. -/
+--- a/UnitDistance/Upstream/AINTLIB/ExplicitFormula/GammaSide.lean
++++ b/UnitDistance/Upstream/AINTLIB/ExplicitFormula/GammaSide.lean
+@@ -2488,7 +2488,10 @@
+       = (∫⁻ x, ((Set.Ioc (-(n:ℝ)) (n:ℝ))ᶜ.indicator (fun y => ‖g y‖ₑ ^ (2:ℝ)) x))
+         ^ (1/(2:ℝ)) := by
+     intro n
+-    rw [eLpNorm_eq_lintegral_rpow_enorm_toReal (p := 2) (by norm_num) (by norm_num)]
++    have hmem : MemLp ((Set.Ioc (-(n:ℝ)) (n:ℝ)).indicator g - g) 2 volume :=
++      (hg.indicator measurableSet_Ioc).sub hg
++    rw [eLpNorm_eq_lintegral_rpow_enorm_toReal (p := 2) (by norm_num) (by norm_num)
++      hmem.aestronglyMeasurable]
+     rw [show ((2:ℝ≥0∞).toReal) = (2:ℝ) by norm_num]
+     congr 1
+     refine lintegral_congr (fun x => ?_)
+@@ -2516,7 +2519,8 @@
+       · rw [Set.indicator_of_notMem hx]
+         exact bot_le
+     · have := hg.eLpNorm_lt_top
+-      rw [eLpNorm_eq_lintegral_rpow_enorm_toReal (p := 2) (by norm_num) (by norm_num),
++      rw [eLpNorm_eq_lintegral_rpow_enorm_toReal (p := 2) (by norm_num) (by norm_num)
++          hg.aestronglyMeasurable,
+         show ((2:ℝ≥0∞).toReal) = (2:ℝ) by norm_num] at this
+       have h1 : (∫⁻ x, ‖g x‖ₑ ^ (2:ℝ)) < ⊤ := by
+         by_contra hcon
+@@ -2624,12 +2628,7 @@
+     exact tendsto_eLpNorm_indicator_truncation hFdiv2
+   have hmeas : TendstoInMeasure volume (fun n : ℕ => 𝓕 (fun x : ℝ => hn n x)) atTop
+       ((𝓕 (hFdiv2.toLp h) : Lp ℂ 2 (volume : Measure ℝ)) : ℝ → ℂ) := by
+-    refine tendstoInMeasure_of_tendsto_eLpNorm (p := 2) (by norm_num) ?_
+-      (MeasureTheory.Lp.aestronglyMeasurable _) heLp
+-    intro n
+-    exact (MeasureTheory.Lp.aestronglyMeasurable
+-      (𝓕 ((hn2 n).toLp (hn n)) : Lp ℂ 2 (volume : Measure ℝ))).congr
+-        (coeFn_fourier_toLp_two (hn1 n) (hn2 n))
++    exact tendstoInMeasure_of_tendsto_eLpNorm (p := 2) (by norm_num) heLp
+   obtain ⟨ns, hns_mono, hns_ae⟩ := hmeas.exists_seq_tendsto_ae
+   have hqmp : Measure.QuasiMeasurePreserving (fun t : ℝ => -t/(2*π))
+       volume volume := by
+--- a/UnitDistance/Upstream/AINTLIB/ExplicitFormula/RectangleContour.lean
++++ b/UnitDistance/Upstream/AINTLIB/ExplicitFormula/RectangleContour.lean
+@@ -548,10 +548,17 @@
+   have hld : logDeriv H ζ = logDeriv (fun z => (∏ u ∈ F, (z - u) ^ d u) * g z) ζ := by
+     rw [logDeriv, logDeriv, Pi.div_apply, Pi.div_apply, hHev.deriv_eq, hHev.eq_of_nhds]
+   rw [hld]
++  change logDeriv ((fun z => ∏ u ∈ F, (z - u) ^ d u) * g) ζ = _
+   rw [logDeriv_mul ζ hPζ hgζ hpolydiff hgdiff]
+   congr 1
+   have h1 : logDeriv (fun z => ∏ u ∈ F, (fun w : ℂ => w - u) z ^ d u) ζ
+       = ∑ u ∈ F, logDeriv (fun z => (fun w : ℂ => w - u) z ^ d u) ζ := by
++    have hprod :
++        (fun z : ℂ => ∏ u ∈ F, (z - u) ^ d u) =
++          ∏ u ∈ F, (fun z : ℂ => (z - u) ^ d u) := by
++      funext z
++      simp only [Finset.prod_apply]
++    rw [hprod]
+     refine logDeriv_prod (𝕜 := ℂ) (𝕜' := ℂ) (s := F)
+       (f := fun u z => (z-u)^d u) (x := ζ) (fun u hu => ?_) (fun u hu => ?_)
+     · exact zpow_ne_zero _ (sub_ne_zero_of_ne (hζne u hu))

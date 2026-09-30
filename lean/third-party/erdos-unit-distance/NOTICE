@@ -1,0 +1,33 @@
+Erdős unit-distance formalization
+Copyright 2026 The Erdős unit-distance formalization contributors
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+================================================================================
+
+This project depends on (and gratefully acknowledges) the following third-party
+software:
+
+* **Mathlib4**
+  Licensed under the Apache License, Version 2.0.
+  https://github.com/leanprover-community/mathlib4
+
+* **PrimeNumberTheoremAnd**
+  Licensed under the Apache License, Version 2.0.
+  https://github.com/AlexKontorovich/PrimeNumberTheoremAnd
+
+  We use this project's formalization of the Wiener–Ikehara theorem
+  (`WienerIkeharaTheorem''`) in `PrimeNumberTheoremAnd/Wiener.lean` to
+  discharge the analytic number theory step that bounds the partial
+  sums of `log p` over primes `p ≡ 1 (mod 3)`.  The wiring is in
+  `ErdosUnitDistance/TierD/PrimesCongOneMod3_proved.lean`.
+
+  We thank Alex Kontorovich and the PrimeNumberTheoremAnd contributors
+  for making this foundational analytic number theory infrastructure
+  available to the Lean community.
+
+================================================================================
+
+The subject paper formalized by this project is:
+
+  OpenAI (2026).  *Disproof of Erdős's planar unit-distance conjecture.*

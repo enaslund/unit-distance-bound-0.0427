@@ -25,15 +25,43 @@ The 0.04273 replay reuses certified modules from the 0.0418235 data archive;
 it needs PARI/GP and the Python packages in
 [papers/0.04273/requirements.txt](papers/0.04273/requirements.txt).
 
-## Formalization
+## Lean formalization
 
-A Lean formalization of the main result, conditional on one explicit
-numerical inequality, is described in
-[docs/FORMALIZATION_STATUS.md](docs/FORMALIZATION_STATUS.md).
+[`lean/`](lean/README.md) is a Lean 4 project with Mathlib. It proves the
+planar sequence theorem at exponent **10427/10000 = 1.0427**, conditional on
+one explicit numerical inequality H241 for the Dedekind zeta function of a
+fixed degree-512 number field over ℚ(√241). The proof uses only Lean's
+standard axioms `propext`, `Quot.sound` and `Classical.choice`. **H241 is not
+proved in Lean**; outside Lean, the certificate of the 1.04273 paper bounds
+its left side by 0.0848335 against the ceiling 0.0852. The statement is
+[`lean/ChallengeZeta241.lean`](lean/ChallengeZeta241.lean) and the proof
+[`lean/SolutionZeta241.lean`](lean/SolutionZeta241.lean).
 
-## Authorship and provenance
+The project also contains the earlier conditional theorem at exponent
+1.0418235, the formalization of the 0.0418235 paper, for reference.
 
-The papers and the research note were written with AI tools under Eric
-Naslund's direction; each carries its own disclosure. The
+```sh
+cd lean
+lake build                          # the 1.0427 theorem
+lake build SolutionZeta ChallengeZeta  # the 1.0418235 theorem
+```
+
+This repository is prepared as the Palomar submission of the 1.0427 theorem
+(project `lean`, metadata `lean/formalization.yaml`, comparator
+`lean/comparator-zeta241.json`); no submission has been made yet.
+[docs/FORMALIZATION_STATUS.md](docs/FORMALIZATION_STATUS.md) records what has
+been verified and what remains, and the manual workflow
+[`palomar-preflight.yml`](.github/workflows/palomar-preflight.yml) runs
+Palomar's pinned verifier on this repository's exact commit.
+
+## Authorship, licensing and provenance
+
+The papers, the research note and the formalization were produced with AI
+tools under Eric Naslund's direction; each paper carries its own disclosure,
+and [`lean/NOTICE`](lean/NOTICE) credits the formalization's contributors and
+vendored sources. The root [LICENSE](LICENSE) (Apache-2.0) covers the
+formalization; the papers keep their own terms
+([details](docs/LICENSING_AND_ATTRIBUTION.md)). The
 [provenance manifest](provenance/papers.json) records the source and hash of
-every copied file.
+every copied paper file, and [`provenance/lean-release.json`](provenance/lean-release.json)
+identifies the Lean source archive.

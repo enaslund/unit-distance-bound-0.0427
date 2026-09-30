@@ -1,0 +1,11 @@
+Audited all 4 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 4 project declarations selected.
+Axiom audit: beginning UnitDistance.ArithmeticProP.finiteResidueInertia_le_of_fixedField_unramified.
+Axiom audit: beginning UnitDistance.ArithmeticProP.valuation_hasExtension_of_integralClosure_tower.
+Axiom audit: beginning UnitDistance.ArithmeticProP.finiteResidueInertia_restrictNormal_eq_one_of_unramified.
+'UnitDistance.ArithmeticProP.finiteResidueInertia_le_of_fixedField_unramified' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

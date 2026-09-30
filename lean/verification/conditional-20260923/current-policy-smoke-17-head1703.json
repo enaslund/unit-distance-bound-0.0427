@@ -1,0 +1,16 @@
+{
+  "archive_sha256": "3e369cb1cdc367fbb396946b9b69c1898a99d69cbb534b9b0d5ebe8cc29f1672",
+  "checked_at": "2026-09-23T13:15:33.964250+00:00",
+  "intake_ready": false,
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "metadata_contract_passed": true,
+  "policy_head": "1703d7babd984ccc3831cdf89c28221abe34808f",
+  "project": "Planar unit distances from one fixed zeta inequality",
+  "schema": "unit-distance-current-policy-smoke-v1",
+  "scope": "Current Palomar metadata parser and toolchain floor only; no intake, Lean build, Comparator, kernel replay, or registration.",
+  "toolchain_policy": {
+    "code": "toolchain.unsupported",
+    "message": "Lean toolchain leanprover/lean4:v4.32.0 is older than the minimum Palomar supports (v4.35.0-rc2)",
+    "passed": false
+  }
+}

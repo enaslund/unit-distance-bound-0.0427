@@ -1,0 +1,22 @@
+⚠ [3660/3673] Replayed UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Cyclic.Herbrand.HerbrandLowDegree.Cardinality
+warning: UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Cyclic/Herbrand/HerbrandLowDegree/Cardinality.lean:62:27: This simp argument is unused:
+  Rep.hom_comm_apply
+
+Hint: Omit it from the simp argument list.
+  simp [Rep.FiniteCyclicGroup.subCompNormHom, Rep.norm, Representation.norm, R̵e̵p̵.̵h̵o̵m̵_̵c̵o̵m̵m̵_̵a̵p̵p̵l̵y̵,̵ ̵hf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [4379/4386] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.RealCompositum (4.0s)
+✔ [4380/4386] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.NumberField.EverywhereUnramifiedTower (5.4s)
+✔ [4382/4391] Built UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.NumberField.FiniteUnramifiedEtaleBridge (5.4s)
+✔ [4383/4391] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.FiniteRealPExtension (6.2s)
+✔ [4384/4391] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.EverywhereUnramifiedBridge (4.6s)
+✔ [4385/4391] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.BinaryUnramifiedCompositum (7.8s)
+✔ [4386/4394] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.MaximalEverywhereUnramifiedProP (5.3s)
+✔ [4387/4395] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.EverywhereUnramifiedProPCompositum (9.7s)
+✔ [4389/4395] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.MaximalEverywhereUnramifiedProPFiniteSupport (7.5s)
+✔ [4392/4396] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.FiniteRealPExtensionSupport (7.3s)
+✔ [4394/4413] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.MaximalRealProPOutside (5.6s)
+✔ [4413/4447] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.MaximalRealProPGroup (8.2s)
+✔ [4447/4447] Built UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.RationalRamificationSupport (4.8s)
+Build completed successfully (4447 jobs).

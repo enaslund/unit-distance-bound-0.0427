@@ -1,0 +1,23 @@
+✔ [2499/2506] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.RelativeTwoCocycle (4.3s)
+✔ [2501/2509] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.MixedTwoCocycle (6.3s)
+✔ [2502/2509] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.UnitsCohomologyCongr (3.6s)
+✔ [2503/2509] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.QuotientTwoCocycle (6.7s)
+✔ [2505/2509] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.UnitsCohomologyRestrictScalars (3.5s)
+✔ [2506/2509] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.FiniteGaloisUnitsH2Inflation (18s)
+✔ [2507/2510] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.FiniteGaloisUnitsCohomologyTransport (11s)
+✔ [2508/2510] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicCarryCocycle (5.0s)
+✔ [2510/2515] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.FiniteGaloisTowerUnitsH2 (6.0s)
+✔ [2511/2515] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicBarPeriodicCarryIdentity (5.2s)
+✔ [2512/2515] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicBarPeriodicChainComparison (9.4s)
+✔ [2513/2515] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicBarPeriodicH2Comparison (11s)
+✔ [2514/2515] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicCarryCoefficientNorm (4.2s)
+✔ [2515/2515] Built UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicH2CoefficientNorm (3.6s)
+Build completed successfully (2515 jobs).
+Audited all 273 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 273 project declarations selected.
+Axiom audit: beginning ClassFieldTower.Cohomology.finiteCyclicCarryTwoCocycle_apply.
+Axiom audit: beginning ClassFieldTower.Cohomology.finiteCyclicGeneratorCoordinate_generator.
+Axiom audit: beginning ClassFieldTower.Cohomology.finiteCyclicGeneratorPrefix.

@@ -1,0 +1,60 @@
+{
+  "upstream_pin": "3a455e1aa9140dbbe7b7d68f508392a69c86d0f4",
+  "license": "Apache-2.0 for attributed adapted source; new proofs by this formalization",
+  "modules": {
+    "SupportedIdeleCocycles": {
+      "private_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/SupportedIdeleCocycles.lean",
+      "private_sha256": "d56811f1ac57c3882de59ecc6e3e317f25680088d615b60a3ec51b0f194168f8",
+      "file": "UnitDistance/SupportedIdeleCocycles.lean",
+      "sha256": "47f8deb5e74957f0a23c7bcfe45dfd729d02f8fc28bb2eb7f902cd882299194a",
+      "isolated_check": "passed",
+      "public_check": "passed"
+    },
+    "SupportedIdeleLocalization": {
+      "private_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/SupportedIdeleLocalization.lean",
+      "private_sha256": "1a5b2e0a4cd7ec9d3756b2dac36f16c57e1a75c06c43f7d0a1e9f72893ab1191",
+      "file": "UnitDistance/SupportedIdeleLocalization.lean",
+      "sha256": "ec73c5ec222535ea6318da92700eafc613a3e0932d50762d9d26fffbced8736c",
+      "isolated_check": "passed",
+      "public_check": "passed"
+    },
+    "FieldUnitsIdeleDetection": {
+      "private_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/FieldUnitsIdeleDetection.lean",
+      "private_sha256": "91ea2228727cfd0a85a83448bdece7b2be66a8c3d47df01ef96f0dbad1b01a47",
+      "file": "UnitDistance/FieldUnitsIdeleDetection.lean",
+      "sha256": "f1be789e550c93dafda5aef63d0f05da95bf8956221482fdbf7497a306423d9f",
+      "isolated_check": "passed",
+      "public_check": "passed"
+    },
+    "AbsoluteProPRestriction": {
+      "private_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/AbsoluteProPRestriction.lean",
+      "private_sha256": "50ddb6f7ea33ad0dc7f445376ffb1248e3a2748854dc9a1a79fed95d32fc0871",
+      "file": "UnitDistance/AbsoluteProPRestriction.lean",
+      "sha256": "4a2aae30c89ace97f019ba3f12ce703dfaf12390922651bc58e254d528a27d62",
+      "isolated_check": "passed",
+      "public_check": "passed"
+    }
+  },
+  "private_audit": {
+    "declarations": 78,
+    "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "log": ".cache/yamaguchi-development/CurrentCohomologyGlueAudit.log"
+  },
+  "public_build": {
+    "jobs": 4518,
+    "log": "verification/supported-idele-build.log"
+  },
+  "public_audit": {
+    "declarations": 14287,
+    "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "log": "verification/supported-idele-audit.log"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "checker": "genus13_short_upper_certificate.py",
+  "checker_sha256": "4d2580b537d1039c07dde85ca12a31674ef49bd33267b59e60061b10f92272d2",
+  "command": "python3 automation/lean-formalization/guarded_build.py --wait-seconds 30 --timeout-seconds 900 -- python3 lean-formalization/verification/sol-luna-20260922/genus13_short_upper_certificate.py",
+  "guarded_exit_code": 0,
+  "guarded_admission_available_gib": 17.3,
+  "elapsed_seconds_approx": 0.9,
+  "source_binding": "both pinned Lean sources and binding anchors matched",
+  "sources": {
+    "lean-formalization/UnitDistance/GenusDirichletConductorsRun20260920.lean": "da1f113fb627a0e64651d1b5998f453f7d0e452771ea0a1f18ada752ca9b3a77",
+    "lean-formalization/UnitDistance/GenusLunaRun20260922ConductorThirteen.lean": "110cc2883052d0cfa0a18f048c809a91154365cf31039e34a0c8c04e83694950"
+  },
+  "period_mod_13": [1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, 1, 0],
+  "selected_primes": [2, 3, 5, 7, 11, 13, 17],
+  "selected_character_values": [-1, 1, -1, -1, -1, 0, 1],
+  "cutoff": 52,
+  "finite_sum_upper": "70334919167156019061867/105950239461401596800000",
+  "tail_absolute_upper_strict": "2/53",
+  "primitive_L_upper": "3939651194782072203878951/5615362691454284630400000",
+  "selected_correction_upper": "13093091/9296875",
+  "deleted_value_upper": "4689291963776399684905241675231/4745938638374004765750000000000",
+  "strict_margin_below_one": "56646674597605080844758324769/4745938638374004765750000000000",
+  "scope": "Exact rational upper bound for the selected-prime-deleted conductor-13 value; no manuscript row allowance, Lean interval theorem, completion integral, or genus aggregate bound."
+}

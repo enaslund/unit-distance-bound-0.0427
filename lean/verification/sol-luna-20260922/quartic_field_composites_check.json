@@ -1,0 +1,14 @@
+{
+  "checked_unramified_coefficients": 186,
+  "coefficient_helper_sha256": "3759f993a31a0df05241d8faa546950dcf68b49ad4768339e4f56da4e7846329",
+  "complete_vector_sha256": "baec4879c9e60ab3f2e657ff9f4d9cac64a39eebc3aa123495844f19e3ef654c",
+  "composite_cases": 21,
+  "field_checker_sha256": "58c56d92ce43839d191df20fc7d0264135aff6c91f8d7415e4b6593dcb2e6b72",
+  "full_research_sources_compared": true,
+  "prime_cases": 159,
+  "quartic_irreducibility_witness": "Norm_Q(sqrt(-35))/Q(u)=429 is nonsquare",
+  "scope": "All n<=981 supported on primes outside 2,3,5,7,11,13, reconstructed from quartic/quadratic root-count traces at p and p^2 and Euler multiplicativity; no ramified factors or global Artin identity.",
+  "skipped_ramified_support": 795,
+  "square_cases": 5,
+  "status": "pass"
+}

@@ -1,0 +1,53 @@
+{
+  "upstream_pin": "3a455e1aa9140dbbe7b7d68f508392a69c86d0f4",
+  "modules": {
+    "TotallyComplexFieldUnitsH2": {
+      "private_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/TotallyComplexFieldUnitsH2.lean",
+      "private_sha256": "431761a7899bd964fb5eaf4f9551e756ff989fbb938479de973b0388387f24e0",
+      "file": "UnitDistance/TotallyComplexFieldUnitsH2.lean",
+      "sha256": "137841875fd4d6ee7e20d619bef4c34c8c39bcb8be1b36b57c9ca4b28dad08b6",
+      "isolated_check": "passed",
+      "public_check": "passed"
+    },
+    "AbsoluteProPUnramified": {
+      "private_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/AbsoluteProPUnramified.lean",
+      "private_sha256": "ef02ed4fe5714ff677144ad12b96765f1040736ef56e17f540c7780eda24e878",
+      "file": "UnitDistance/AbsoluteProPUnramified.lean",
+      "sha256": "654dd0e854fdc2e3b780af2dac5fdb1bc7b26225ca899d3195b999c353be04d2",
+      "isolated_check": "passed",
+      "public_check": "passed"
+    },
+    "ProPStageRestriction": {
+      "private_source": ".cache/yamaguchi-port/Lean4/SawinTotallyRealTowers/ProPStageRestriction.lean",
+      "private_sha256": "05f5e456da40beed24900d2267d2e818551c216ea5632a7e54890aa37a723244",
+      "file": "UnitDistance/ProPStageRestriction.lean",
+      "sha256": "ae2ff657dfafdfc1650cdd95040c359da15b7664ef993b1994837c259a101f9d",
+      "isolated_check": "passed",
+      "public_check": "passed"
+    }
+  },
+  "private_audit": {
+    "declarations": 115,
+    "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "log": ".cache/yamaguchi-development/ComplexDetectorAudit.log"
+  },
+  "public_build": {
+    "status": "passed",
+    "jobs": 4873,
+    "log": "verification/complex-detector-build.log"
+  },
+  "public_audit": {
+    "status": "passed",
+    "declarations": 22109,
+    "axioms": [
+      "Quot.sound",
+      "Classical.choice",
+      "propext"
+    ],
+    "log": "verification/complex-detector-audit.log"
+  }
+}

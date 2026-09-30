@@ -1,0 +1,26 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [],
+      "added_options": [],
+      "declaration": "equalCharacteristicThetaAfterBracketCoefficient_zero",
+      "insertions": [],
+      "migrated_sha256": "3112cadbf26b95482ffddcaad54ea16b8665739171a8ca6b7009f7e4b2428571",
+      "original_sha256": "77cb05d060a07163fc139a288490e18e1a8dccfaf59f8f4f61b4bc550f3b6edb",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Theta/ThetaFirstIdentity.lean",
+      "reason": "The unchanged target follows by explicitly composing multiplication commutativity with hsemi.symm, avoiding simplifier ordering. Isolated exact-module compile passed in repair-pilot-05-proof1/result.json.",
+      "replacement": {
+        "after": "    equalCharacteristicCompletedSourceBracketCoefficient] using\n    (mul_comm _ _).trans hsemi.symm\n",
+        "before": "    equalCharacteristicCompletedSourceBracketCoefficient,\n    mul_comm] using hsemi.symm\n",
+        "offset": 22394,
+        "offset_unit": "utf8-bytes"
+      },
+      "statement": "theorem equalCharacteristicThetaAfterBracketCoefficient_zero\n    (u : k\u27e6X\u27e7\u02e3) :\n    equalCharacteristicThetaAfterBracketCoefficient u 0 =\n      equalCharacteristicPowerSeriesFrobenius k\n        (equalCharacteristicThetaCoefficient u 0) := by\n"
+    }
+  ],
+  "schema": "unit-distance-module-port-proof-repair-v1",
+  "scope": "One tested proof-only compatibility repair. The theorem statement, assumptions, definitions and every other source byte are unchanged. The exact replaced proof slice is recorded reversibly; no axioms are added."
+}

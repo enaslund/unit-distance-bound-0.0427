@@ -1,0 +1,109 @@
+✖ [6756/6832] Building UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.CyclotomicIdeleClassValuation (54s)
+trace: .> LEAN_PATH=/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Cli/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/batteries/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Qq/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/aesop/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/proofwidgets/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/importGraph/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/LeanSearchClient/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/plausible/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean /home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean -o /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.olean -i /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.ilean -c /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.c --setup /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.setup.json --json
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:110:2: Private declaration `ideleClassContinuousQuotientLift` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:113:4: Private declaration `rationalCyclotomicZHatIdeleValue_principalSubgroup_le_ker` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:176:2: Private declaration `ideleClassContinuousQuotientLift` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:179:5: Private declaration `normalizedCyclotomicZHatIdeleValue_principalSubgroup_le_ker` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:485:3: Private declaration `numberFieldCyclotomicZHatFiniteLayerArtinData` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:485:2: Private declaration `NumberFieldCyclotomicZHatFiniteLayerArtinData.toMonoidHom` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:528:7: Private declaration `numberFieldCyclotomicZHatFiniteLayer_principalSubgroup_le_ker` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:999:6: Private declaration `rationalAbstractFixedFieldFiniteDimensional` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:1001:6: Private declaration `rationalAbstractFixedFieldNumberField` accessed publicly; this is allowed only because the `backward.privateInPublic` option is enabled. 
+
+Disable `backward.privateInPublic.warn` to silence this warning.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:1100:7: failed to synthesize instance of type class
+  NumberField ↥(LocalClassFieldTheory.abstractFixedField ℚ (SeparableClosure ℚ) H.field)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:1106:6: failed to synthesize instance of type class
+  NumberField ↥(LocalClassFieldTheory.abstractFixedField ℚ (SeparableClosure ℚ) H.field)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:1137:7: failed to synthesize instance of type class
+  NumberField ↥(LocalClassFieldTheory.abstractFixedField ℚ (SeparableClosure ℚ) H.field)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:1144:6: failed to synthesize instance of type class
+  NumberField ↥(LocalClassFieldTheory.abstractFixedField ℚ (SeparableClosure ℚ) H.field)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleClassValuation.lean:1146:47: unsolved goals
+case calc.step
+H : FiniteAbstractField Gal(SeparableClosure ℚ/ℚ)
+c : Additive sorry
+hdegree :
+  let F := LocalClassFieldTheory.abstractFixedField ℚ (SeparableClosure ℚ) H.field;
+  cyclotomicZHatIntersectionDegree ↥F = ↑(H.residueDegree rationalCyclotomicDegreeData)
+F : IntermediateField ℚ (SeparableClosure ℚ) := LocalClassFieldTheory.abstractFixedField ℚ (SeparableClosure ℚ) H.field
+this : NumberField ↥F := rationalAbstractFixedFieldNumberField H
+⊢ ↑(H.residueDegree rationalCyclotomicDegreeData) • (normalizedCyclotomicZHatIdeleClassValueContinuous ↥F) sorry =
+    (zHatMulNat ↑(H.residueDegree rationalCyclotomicDegreeData)) sorry
+✖ [6758/6832] Building UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitExtensionAction (72s)
+trace: .> LEAN_PATH=/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Cli/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/batteries/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Qq/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/aesop/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/proofwidgets/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/importGraph/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/LeanSearchClient/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/plausible/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean /home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.lean -o /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.olean -i /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.ilean -c /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.c --setup /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.setup.json --json
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.lean:486:8: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ F E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.lean:485:7: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ F E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.lean:500:6: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ F E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.lean:499:5: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ F E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.lean:508:9: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ F E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.lean:512:11: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ F E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.lean:629:6: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ ↥F ↥E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.lean:628:5: failed to synthesize instance of type class
+  Mul (TowerRelativeIdeleGroup.ClassGroup ℚ ↥F ↥E)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionAction.lean:642:2: 'change' tactic failed, pattern
+  (((eAmbient.trans eFixed.symm).trans eRelative.symm).trans eTower)
+      ((M.ρ ((QuotientGroup.mk' (extensionSubgroup K L hLK)) σ)) x) =
+    Additive.ofMul (τ • Additive.toMul (eTower (eRelative.symm (eFixed.symm (eAmbient x)))))
+is not definitionally equal to target
+  let F := abstractFixedField ℚ (SeparableClosure ℚ) K;
+  let E := abstractRelativeFixedField ℚ (SeparableClosure ℚ) hLK;
+  (rationalAbstractExtensionIdeleClassEquiv K L hLK hnormal)
+      (((extensionFixedRepresentation rationalIdeleClassRepresentation K L hLK hnormal).ρ
+          ((QuotientGroup.mk' (extensionSubgroup K L hLK)) σ))
+        x) =
+    ((Rep.ofMulDistribMulAction Gal(↥E/↥F) (RelativeIdeleGroup.ClassGroup ↥F ↥E)).ρ
+        ((abstractExtensionQuotientEquivGaloisGroup ℚ (SeparableClosure ℚ) K L hLK hnormal)
+          ((QuotientGroup.mk' (extensionSubgroup K L hLK)) σ)))
+      ((rationalAbstractExtensionIdeleClassEquiv K L hLK hnormal) x)
+Some required targets logged failures:
+- UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.CyclotomicIdeleClassValuation
+- UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitExtensionAction
+error: build failed

@@ -1,0 +1,8 @@
+Audited all 68 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 68 project declarations selected.
+Axiom audit: beginning UnitDistance.ArithmeticProP.openNormalFiniteGaloisField._proof_3.
+Axiom audit: beginning UnitDistance.ArithmeticProP.absoluteToMaximalProPOutside._proof_1.
+Axiom audit: beginning UnitDistance.ArithmeticProP.openNormalFiniteGaloisField._proof_1.

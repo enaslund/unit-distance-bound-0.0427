@@ -1,0 +1,26 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "Expose the existing private DirectedSystem from IdeleClassDirectLimitCore for DirectLimit.exists_eq_mk in the descent endpoint. Unchanged baseline failure reproduced; exact import-only candidate passed with statements and proof bodies preserved.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescent.lean",
+      "original_sha256": "b8fab6f259bbf8f77181e06cf7bf19f411dbae20ee67a1757630947733af7987",
+      "migrated_sha256": "7141af8338cce943fe1256f73cc9a233696a5b4f9a890a9e63f5732e8abb52a1",
+      "insertions": [
+        {
+          "offset": 599,
+          "text": "\nimport all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitCore\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitCore"
+      ],
+      "added_options": [],
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-26-descent-endpoint-baseline/unchanged-descent-endpoint.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-28-descent-endpoint/result.json"
+    }
+  ]
+}

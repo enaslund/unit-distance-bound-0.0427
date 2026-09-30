@@ -1,0 +1,189 @@
+{
+  "checked_at": "2026-09-21T20:30:43.309151+00:00",
+  "scope": "Current manuscript identity, historical analytic evidence integrity, fresh finite-prime/outward-sum recheck using the preserved census. No fresh full Hecke-factor, moment-producer, maximal-order or prime-sieve regeneration in this check. Not a Lean proof of the displayed zeta inequality.",
+  "manuscript": [
+    {
+      "path": "publication/unit-distance-1.0418235/main.tex",
+      "sha256": "43340f7681b1e8c17969f57fcdf6c1032f92964e494320dffe2809257db44ba2",
+      "matches_review": true
+    },
+    {
+      "path": "publication/unit-distance-1.0418235/references.bib",
+      "sha256": "4476797d09430f9e565c0ad788a24f7410bbb804e07fd28984622588b57536e8",
+      "matches_review": true
+    },
+    {
+      "path": "publication/unit-distance-1.0418235/sections/analytic.tex",
+      "sha256": "1133c1b5ba204296288ba3199b0df169ae9b4324648808619792b07fcb232973",
+      "matches_review": true
+    },
+    {
+      "path": "publication/unit-distance-1.0418235/sections/certificate.tex",
+      "sha256": "7531827a594ee6ededfa747989adf292c0dfa61b06e4d651209d38283d1d2841",
+      "matches_review": true
+    },
+    {
+      "path": "publication/unit-distance-1.0418235/sections/finite-windows.tex",
+      "sha256": "abfe852f3f6cd1c874d56c83eec694c5e9b7633d5880262cde17b87bfc3fdce4",
+      "matches_review": true
+    },
+    {
+      "path": "publication/unit-distance-1.0418235/sections/finite-witness.tex",
+      "sha256": "bc4c6725f65ed66bfc73e5f22da80d28e876fbbb5954ac661d8b60584885030f",
+      "matches_review": true
+    },
+    {
+      "path": "publication/unit-distance-1.0418235/sections/geometry.tex",
+      "sha256": "7427465c2c646af413cd82ebfb637e0c14b5fe7e2b8d1508ed047bb5afd1ade9",
+      "matches_review": true
+    },
+    {
+      "path": "publication/unit-distance-1.0418235/sections/introduction.tex",
+      "sha256": "9439424cd5689a268f863f2d25596cedc81a1d14c7931fbeb9686dbd63c27b02",
+      "matches_review": true
+    },
+    {
+      "path": "publication/unit-distance-1.0418235/sections/profiles.tex",
+      "sha256": "dfdd6a1e83f821607708d0929cfe0a8d36138c2bb389d0c5e548b0dba07fc0f1",
+      "matches_review": true
+    },
+    {
+      "path": "publication/unit-distance-1.0418235/sections/retained-field.tex",
+      "sha256": "dfdd48ba5a2445c94cc8a27b86463a6ece86dc46f57c6eeabff78d5470bdf50d",
+      "matches_review": true
+    },
+    {
+      "path": "publication/unit-distance-1.0418235/sections/tower.tex",
+      "sha256": "06d8e99eeaed0407d1eadc540ec5ec2764dfa3ea0984d1a114e70c632ed3f58e",
+      "matches_review": true
+    }
+  ],
+  "analytic_evidence": [
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/analytic.json",
+      "sha256": "73bd8cbb42751195eb0e35e1e3663ec75d0d6733ff096466595fe7b8b9bc3238",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/analytic.log",
+      "sha256": "7cd11eb2d1ea1b1421f8bd70220d2ef61cde70f1501a274db0023d7e9ed464cf",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/census-100000000.txt",
+      "sha256": "7defdeacdd2845b12682f1fdde81fe614d0f9c348953e2dc4e3a29622f875049",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/census-1000000000000.txt",
+      "sha256": "43669734971ae82bdf2980bbacd869a65224fe3cececb121cf2fbc14936813f2",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/census-benchmark.log",
+      "sha256": "500d0bc31f65917cabde454cb28dd283f83842d38cdd7584f7505e74dddb3640",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/census-full-time.log",
+      "sha256": "0349f3e59c809cdaa6185e7e95d714456d247909e5389c2eadeafa216ebaf4ef",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/census-full.json",
+      "sha256": "38b947f93a2237da9983f5e28b54950c40db6397832cc6d7b44556b01074f66d",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/census-full.log",
+      "sha256": "f8071db3f8076d63334f3bac7c55d1f1c42a253782a55e9e82c3f340a218cd87",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/finite-ceiling.json",
+      "sha256": "760198cd7b7163513e72466ce21cec88bd33dd10c2442f2ca092051711b4124c",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/finite-ceiling.py",
+      "sha256": "09ae01bbc7d4c71582083b48d30fbe3078b62b4d3cf225cb4c1266ade8c31c32",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/full-census.py",
+      "sha256": "28ea53f245365b7460569643006cba69819db9d153395e3ff75cf3f25c6773c1",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/low-arithmetic.log",
+      "sha256": "cb6164e33613dad9aeada3ca6216bd48b4e8f5975860a66a0caacabb8d964e35",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/moments.json",
+      "sha256": "ebe8204a70cf31df6976b5fc1bd14a6218626e42654d0e22a38ce5d78d4350ae",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/moments.log",
+      "sha256": "a40fbea094b36fe6c3412b203e9a5a01ceddb3fa32aa15fb32c670cd6a0444a1",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/new-arithmetic.log",
+      "sha256": "961e6e3b1ef613775afb8da84e6115872b8c55208502da663e555d6abdb3b532",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/nfcertify-parsed.log",
+      "sha256": "302bbe4739ddd19c69d6f5ec05d5ddb53bbda1b1beef2f5718ddb03febb70bc3",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/nfcertify.gp",
+      "sha256": "61e7215482a22ab6aabb9afa2e39a4f2926f31afa08e7675cb440a53efad1f7d",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/nfcertify.json",
+      "sha256": "1acb42fec96d54330cf9e1eb116a72b0c0fa1355d7b921593fb65f8445465271",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/nfcertify.log",
+      "sha256": "4ec54c76d2ea954b464acd9c3ea1e05679b56dcc1c626ed643a231d08df9c82a",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/nfcertify.py",
+      "sha256": "73b2a6868849743dabe3fcce9abc29c89272edc458d313d04b60e5fd35207a13",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/nfcertify.stderr",
+      "sha256": "1c121c0c7ab78dc947fe268c213e7d5aad779a26b90869990e930b50dccebebc",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/nfcertify.stdout",
+      "sha256": "db0e6117ed531c88b4b71dd2e1bc932b51fc015e6c9b830cf514b467bb7e1bf5",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/octic-arithmetic.json",
+      "sha256": "4b14d302167283c60ba6b1707932ec781a90ff8b949fe9d836ebe29bd17e923c",
+      "matches_review": true
+    },
+    {
+      "path": "lean-formalization/reviews/adversarial-20260919/analytic-evidence/octic-arithmetic.log",
+      "sha256": "11bef81431a7299318215088822f41f391d4b9d72d0cea3ce2012490381395c5",
+      "matches_review": true
+    }
+  ],
+  "fresh_finite_ceiling_sha256": "760198cd7b7163513e72466ce21cec88bd33dd10c2442f2ca092051711b4124c",
+  "fresh_finite_ceiling_matches_historical_receipt": true,
+  "rational_allowance_sum": "2108090946974047476569229/50000000000000000000000000",
+  "current_lean_threshold": "42165819/1000000000",
+  "exact_slack": "200003025952523430771/50000000000000000000000000",
+  "positive_slack": true
+}

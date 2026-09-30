@@ -1,0 +1,27 @@
+{
+ "schema": "unit-distance-public-lean-release-v1",
+ "research_repository": "enaslund/unit-distance-bound",
+ "research_commit": "c11cb34cee34f2bd99191b5f6bf2ff111d17d57a",
+ "exporter": "lean/scripts/export-zeta241-candidate.py",
+ "archive_sha256": "3c8c0576c2a97b9d4dfbfba68789bbd96717d1de266e368e80db61e75ec7630e",
+ "archive_bytes": 8776063,
+ "archive_files": 2998,
+ "source_snapshot_sha256": "3b8695ade1c36f07e506253242b23fdc7b744a0dda840370cbed0ed7938e0cc4",
+ "selection_sha256": "dde10daa204aac81145aa1e3ad6c926ef171d46f7a98c6a05528af9669291ea3",
+ "identity_scope": "Every file of the source archive is unchanged under lean/; lean/SOURCE_SNAPSHOT.json lists their hashes.",
+ "palomar_request": {
+  "project_path": "lean",
+  "formalization_metadata_path": "lean/formalization.yaml",
+  "comparator_config_path": "lean/comparator-zeta241.json"
+ },
+ "selected_theorem": "UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound",
+ "companion_theorem": "UnitDistanceZetaSubmission.target_of_canonical_zeta_bound",
+ "local_checks": {
+  "archive_gate": "passed: deterministic re-export and the metadata contract of PalomarSubmission 65f0154ed776cd26c224254aa57b379137f28b0d",
+  "palomar_source_rules": "passed: all 2,407 Lean files of this repository use the module system and have at most 10,000 lines",
+  "fresh_build": "passed: fresh build of the selected closure from the archive alone (6,960 jobs, 3,708 s, 6 threads) and its generated axiom audit (52,186 project and 32 submission declarations; only propext, Quot.sound, Classical.choice)",
+  "check_reports": "provenance/lean-checks/"
+ },
+ "published": true,
+ "submitted": false
+}

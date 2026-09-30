@@ -1,0 +1,1069 @@
+{
+  "upstream_url": "https://github.com/n-yamaguchi-0729/SawinTotallyRealTowers",
+  "upstream_commit": "3a455e1aa9140dbbe7b7d68f508392a69c86d0f4",
+  "upstream_toolchain": "leanprover/lean4:v4.33.0",
+  "probe_toolchain": "leanprover/lean4:v4.32.0",
+  "targets": [
+    "ProCGroups.Presentations.Profinite",
+    "GaloisCohomology.ProP.ClosedKernelH2FiniteFamily",
+    "ProCGroups.Profinite.OpenSubgroups",
+    "ProCGroups.ProC.InverseLimits.Predicates",
+    "GaloisCohomology.ProP.RelationRankH2",
+    "ClassFieldTheory.AlgebraicNumberTheory.FiniteAbelianCompositum",
+    "SawinTotallyRealTowers.QuadraticSquarefreeGenerator",
+    "SawinTotallyRealTowers.QuadraticFieldDiscriminant",
+    "SawinTotallyRealTowers.ProTwoFrattini",
+    "SawinTotallyRealTowers.FixedFieldIntersection",
+    "GaloisCohomology.Kummer.FiniteGaloisTowerUnitsH2",
+    "GaloisCohomology.ProP.FiniteCyclicH2CoefficientNorm",
+    "ProCGroups.FreeProC.Construction",
+    "ProCGroups.ProP.MinimalEpimorphism"
+  ],
+  "local_modules": 130,
+  "external_modules": 124,
+  "missing_external_modules": [],
+  "scope": "130-module source slice: original 95 pro-p/cohomology modules, 13 quadratic modules, two Frattini/fixed-field modules, 14 tower/cyclic H\u00b2 modules, and six actual free-source construction/minimal-epimorphism modules. All relocated proper builds and imported audits pass; logs record each scope. No arithmetic six-relation bound is claimed.",
+  "license": "Apache-2.0",
+  "files": {
+    "ClassFieldTheory.AlgebraicNumberTheory.FiniteAbelianCompositum": {
+      "upstream_file": "Lean4/ClassFieldTheory/AlgebraicNumberTheory/FiniteAbelianCompositum.lean",
+      "upstream_sha256": "d138244c22ecfd5c837d1f4c25a073b8a0504eec6801d71f6e363c4a57417d91",
+      "compatible_sha256": "d138244c22ecfd5c837d1f4c25a073b8a0504eec6801d71f6e363c4a57417d91",
+      "file": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/FiniteAbelianCompositum.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.FiniteAbelianCompositum",
+      "sha256": "fbf8eab5709c085ee4be3286852560435f538db74a6c9a942ecccbf7f0f3763a"
+    },
+    "ClassFieldTheory.AlgebraicNumberTheory.SeparableClosureEmbedding": {
+      "upstream_file": "Lean4/ClassFieldTheory/AlgebraicNumberTheory/SeparableClosureEmbedding.lean",
+      "upstream_sha256": "9134be2f74598564bda36201a0f45d7e4a7aac487ab8576428c4247106faaaac",
+      "compatible_sha256": "9134be2f74598564bda36201a0f45d7e4a7aac487ab8576428c4247106faaaac",
+      "file": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/SeparableClosureEmbedding.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.AlgebraicNumberTheory.SeparableClosureEmbedding",
+      "sha256": "97054fd012056417d10510f19bb227c13c175e2ed6cc7e297cde58e71e36d373"
+    },
+    "GaloisCohomology.Kummer.FiniteGaloisTowerUnitsH2": {
+      "upstream_file": "Lean4/GaloisCohomology/Kummer/FiniteGaloisTowerUnitsH2.lean",
+      "upstream_sha256": "1e67ed0c14c4f9f30df8dbf0c0c3aaed1649ebd7dfaa89d12d3c0f7226bd9bf0",
+      "compatible_sha256": "1e67ed0c14c4f9f30df8dbf0c0c3aaed1649ebd7dfaa89d12d3c0f7226bd9bf0",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Kummer/FiniteGaloisTowerUnitsH2.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.FiniteGaloisTowerUnitsH2",
+      "sha256": "ae458e357e8f8ea5c73742a8548b47a2444d2ceb27fcc53faa0b0d36bef6f46d"
+    },
+    "GaloisCohomology.Kummer.FiniteGaloisUnitsCohomologyTransport": {
+      "upstream_file": "Lean4/GaloisCohomology/Kummer/FiniteGaloisUnitsCohomologyTransport.lean",
+      "upstream_sha256": "2923959a9256c0ee6a0664364919e385b35e6766bc631b30c97d68a618751818",
+      "compatible_sha256": "2923959a9256c0ee6a0664364919e385b35e6766bc631b30c97d68a618751818",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Kummer/FiniteGaloisUnitsCohomologyTransport.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.FiniteGaloisUnitsCohomologyTransport",
+      "sha256": "4d5b33dae8b486d60d5ae19a869fffae45efaf8b375fa0c14872749164742976"
+    },
+    "GaloisCohomology.Kummer.FiniteGaloisUnitsH2Inflation": {
+      "upstream_file": "Lean4/GaloisCohomology/Kummer/FiniteGaloisUnitsH2Inflation.lean",
+      "upstream_sha256": "97757f38d707c8fd8d9b87d9798e2608162fe1f551e70b684d0e7e307f9e5000",
+      "compatible_sha256": "97757f38d707c8fd8d9b87d9798e2608162fe1f551e70b684d0e7e307f9e5000",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Kummer/FiniteGaloisUnitsH2Inflation.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.FiniteGaloisUnitsH2Inflation",
+      "sha256": "d459442e25a24d23a47c7464d9c0736f26712ab8f23c19988d1b037d9e80cdd5"
+    },
+    "GaloisCohomology.Kummer.MixedTwoCocycle": {
+      "upstream_file": "Lean4/GaloisCohomology/Kummer/MixedTwoCocycle.lean",
+      "upstream_sha256": "e3bb96f5fb85eefa03d93e3792507bedabf32bd33c1f4ee3d3be035d5379a4e6",
+      "compatible_sha256": "e3bb96f5fb85eefa03d93e3792507bedabf32bd33c1f4ee3d3be035d5379a4e6",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Kummer/MixedTwoCocycle.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.MixedTwoCocycle",
+      "sha256": "fe27514d3ac114b4783c8eecc8824d72c9b29fe82f6fb13654c46a4c2ee1a169"
+    },
+    "GaloisCohomology.Kummer.QuotientTwoCocycle": {
+      "upstream_file": "Lean4/GaloisCohomology/Kummer/QuotientTwoCocycle.lean",
+      "upstream_sha256": "611ab9c5c3489afc82f0bf8d5faa5357bd8a97cd741473a4d8dd9072a0d2afd4",
+      "compatible_sha256": "611ab9c5c3489afc82f0bf8d5faa5357bd8a97cd741473a4d8dd9072a0d2afd4",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Kummer/QuotientTwoCocycle.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.QuotientTwoCocycle",
+      "sha256": "c4be24654913be9c94139bfbe4c8a5cf5989ccf2c024042193d1df88fa5c2c43"
+    },
+    "GaloisCohomology.Kummer.RelativeTwoCocycle": {
+      "upstream_file": "Lean4/GaloisCohomology/Kummer/RelativeTwoCocycle.lean",
+      "upstream_sha256": "9ac9ca56674ef7132546cb7e92b8329e8fb87db7757564c605df4625fc92044b",
+      "compatible_sha256": "9ac9ca56674ef7132546cb7e92b8329e8fb87db7757564c605df4625fc92044b",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Kummer/RelativeTwoCocycle.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.RelativeTwoCocycle",
+      "sha256": "b5e67caf90209a01ed6775f4a2cf5d093494a37b4dc17cf4cafa5d7ab6d3221d"
+    },
+    "GaloisCohomology.Kummer.UnitsCohomologyCongr": {
+      "upstream_file": "Lean4/GaloisCohomology/Kummer/UnitsCohomologyCongr.lean",
+      "upstream_sha256": "1a03b03b55fab65ec3050978bb962d64c16ea4ab349c6840c292c574a5438dbd",
+      "compatible_sha256": "1a03b03b55fab65ec3050978bb962d64c16ea4ab349c6840c292c574a5438dbd",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Kummer/UnitsCohomologyCongr.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.UnitsCohomologyCongr",
+      "sha256": "29fb83b5a10d9ecc56eefbd6a2acd27db7c5f600039cb2d265b864fbe65d3e84"
+    },
+    "GaloisCohomology.Kummer.UnitsCohomologyRestrictScalars": {
+      "upstream_file": "Lean4/GaloisCohomology/Kummer/UnitsCohomologyRestrictScalars.lean",
+      "upstream_sha256": "cc7e2793e8c44ddf30ac8e86a2cd2458685dc00e49e825f6c254bef74858718e",
+      "compatible_sha256": "cc7e2793e8c44ddf30ac8e86a2cd2458685dc00e49e825f6c254bef74858718e",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/Kummer/UnitsCohomologyRestrictScalars.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.Kummer.UnitsCohomologyRestrictScalars",
+      "sha256": "03daa5c21171e70ddda7778081aa7581271213ad298c980d74edfb35825c7e8e"
+    },
+    "GaloisCohomology.ProP.ClosedKernelH2FiniteFamily": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/ClosedKernelH2FiniteFamily.lean",
+      "upstream_sha256": "d6af7a9148abab72f457412b21773807a51994517942894f2f698c266a5cdf66",
+      "compatible_sha256": "d6af7a9148abab72f457412b21773807a51994517942894f2f698c266a5cdf66",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/ClosedKernelH2FiniteFamily.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.ClosedKernelH2FiniteFamily",
+      "sha256": "f1292c958abd8ba636f935ab6de9687fda720f6fb24eefc3f245015f182855bb"
+    },
+    "GaloisCohomology.ProP.ContinuousH1Bridge": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/ContinuousH1Bridge.lean",
+      "upstream_sha256": "15cc66e896c92c7d80faef86fd359f048c07a9378a80fb66f019f2b8b5a67537",
+      "compatible_sha256": "15cc66e896c92c7d80faef86fd359f048c07a9378a80fb66f019f2b8b5a67537",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/ContinuousH1Bridge.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.ContinuousH1Bridge",
+      "sha256": "187c4f2510db3d5a4b9a13c9ee70a41cd4073ec6c886ba63b312d89cf9144445"
+    },
+    "GaloisCohomology.ProP.FiniteCyclicBarPeriodicCarryIdentity": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteCyclicBarPeriodicCarryIdentity.lean",
+      "upstream_sha256": "58e317caa1062442b283ffc573c4497fedcd38714af1a868eb134bf2b45c4e20",
+      "compatible_sha256": "58e317caa1062442b283ffc573c4497fedcd38714af1a868eb134bf2b45c4e20",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteCyclicBarPeriodicCarryIdentity.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicBarPeriodicCarryIdentity",
+      "sha256": "241003a4e9fca2464f11b7971ec15dec12530ca135f3d051b7bc560b6f09d4a0"
+    },
+    "GaloisCohomology.ProP.FiniteCyclicBarPeriodicChainComparison": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteCyclicBarPeriodicChainComparison.lean",
+      "upstream_sha256": "75e35c1583799c338cca8644f24fbc9ef0c44ba5ecb66fbae34c29c098f9a84f",
+      "compatible_sha256": "75e35c1583799c338cca8644f24fbc9ef0c44ba5ecb66fbae34c29c098f9a84f",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteCyclicBarPeriodicChainComparison.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicBarPeriodicChainComparison",
+      "sha256": "998a2b62792524d8a1a1c3536c503931f1d5b2ae21e1cb014b8b710abd819246"
+    },
+    "GaloisCohomology.ProP.FiniteCyclicBarPeriodicH2Comparison": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteCyclicBarPeriodicH2Comparison.lean",
+      "upstream_sha256": "a06d5dbf6fd696176ec8344ea8702b3672632304cafab8f43ee68be3f05f8561",
+      "compatible_sha256": "a7c5b61dac2facdf93eba2c74aaff1ad2eb7bb7249fab8ad0b6419a0f18b4d50",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteCyclicBarPeriodicH2Comparison.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicBarPeriodicH2Comparison",
+      "sha256": "65f4b834b27befd9e7d9e87034a9b6f751fbfd66d896f05f51eebcf9068b22ea"
+    },
+    "GaloisCohomology.ProP.FiniteCyclicCarryCocycle": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteCyclicCarryCocycle.lean",
+      "upstream_sha256": "6538ef7c52aae7c0dca036be67b493e64c993daf000b35ffe3cec8d8bf337717",
+      "compatible_sha256": "6538ef7c52aae7c0dca036be67b493e64c993daf000b35ffe3cec8d8bf337717",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteCyclicCarryCocycle.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicCarryCocycle",
+      "sha256": "4a93a4d43e1817e0fb1a4502086bb8a7b2e9e28445385480b11bfe973c39ea69"
+    },
+    "GaloisCohomology.ProP.FiniteCyclicCarryCoefficientNorm": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteCyclicCarryCoefficientNorm.lean",
+      "upstream_sha256": "da8000c7bffc5403c618a4de7ae685111e5b88f31bbb113f4871403d2337e855",
+      "compatible_sha256": "da8000c7bffc5403c618a4de7ae685111e5b88f31bbb113f4871403d2337e855",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteCyclicCarryCoefficientNorm.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicCarryCoefficientNorm",
+      "sha256": "7c2aaae9a87916e784f8a8592218a9dc638738f768a2703a149a16472a4bd6f7"
+    },
+    "GaloisCohomology.ProP.FiniteCyclicH2CoefficientNorm": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteCyclicH2CoefficientNorm.lean",
+      "upstream_sha256": "1236a7d2c8e8061b36f7df394e3b1917da25a30805dca62765a97486412b68de",
+      "compatible_sha256": "1236a7d2c8e8061b36f7df394e3b1917da25a30805dca62765a97486412b68de",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteCyclicH2CoefficientNorm.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteCyclicH2CoefficientNorm",
+      "sha256": "2c88556fd019e0d180276076716f3854e248cc95ee0296b18f7fcea20ac11448"
+    },
+    "GaloisCohomology.ProP.FiniteStageTransgression": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteStageTransgression.lean",
+      "upstream_sha256": "057df132b360176be6354d358fef96a17e71478fc791a7cfc4ddafdcb0fb2ea3",
+      "compatible_sha256": "057df132b360176be6354d358fef96a17e71478fc791a7cfc4ddafdcb0fb2ea3",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteStageTransgression.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteStageTransgression",
+      "sha256": "e2a66218e332a6ab0c69b51ce83071667403d9e5bfee3e877b2d5bac9f21c332"
+    },
+    "GaloisCohomology.ProP.FiniteStageTransgressionKernel": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteStageTransgressionKernel.lean",
+      "upstream_sha256": "1e70e25289c359ab8f9a333a83cf8c80533b2c5d22472148d8b89b814a53a14c",
+      "compatible_sha256": "1e70e25289c359ab8f9a333a83cf8c80533b2c5d22472148d8b89b814a53a14c",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteStageTransgressionKernel.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteStageTransgressionKernel",
+      "sha256": "3898fb0a3d34b3eb30c9eeed450653a624b1d84e0080ef83003fedbb590cb9ec"
+    },
+    "GaloisCohomology.ProP.FiniteStageTransgressionLinear": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteStageTransgressionLinear.lean",
+      "upstream_sha256": "d00558dd110f8865a4d9fa45e07eb75ec1b0a5895a4e3f5ba33c6e8817e9270e",
+      "compatible_sha256": "d00558dd110f8865a4d9fa45e07eb75ec1b0a5895a4e3f5ba33c6e8817e9270e",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteStageTransgressionLinear.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteStageTransgressionLinear",
+      "sha256": "833e1a4889e074cae3e276669f9ec51923e2daba47457ac963b8f07fab793dfe"
+    },
+    "GaloisCohomology.ProP.FiniteStageTransgressionPrimitive": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteStageTransgressionPrimitive.lean",
+      "upstream_sha256": "45c31815bf3e43dbc72d825988b79cbf6419995623e953deb130d88961b8486c",
+      "compatible_sha256": "45c31815bf3e43dbc72d825988b79cbf6419995623e953deb130d88961b8486c",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteStageTransgressionPrimitive.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteStageTransgressionPrimitive",
+      "sha256": "2cf37f4f66c6ef9fb3809a672ced073bf387c2e47116ff18674b172a6c6bb07f"
+    },
+    "GaloisCohomology.ProP.FiniteTransgression": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteTransgression.lean",
+      "upstream_sha256": "630edd548de0965c2bb10b167ec3818b913b413f24902b0812f2ddbdaef3c4e3",
+      "compatible_sha256": "630edd548de0965c2bb10b167ec3818b913b413f24902b0812f2ddbdaef3c4e3",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteTransgression.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteTransgression",
+      "sha256": "8d205e44396fff3b73f6ccef0ec62b8012979b939db0c1be824bd8aa96fe19fd"
+    },
+    "GaloisCohomology.ProP.FiniteTransgressionKernel": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteTransgressionKernel.lean",
+      "upstream_sha256": "e0b8dd245da354095aa1214b2f38d5158e988d47d4d7919c7fe7c7eb0c74c2da",
+      "compatible_sha256": "e0b8dd245da354095aa1214b2f38d5158e988d47d4d7919c7fe7c7eb0c74c2da",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteTransgressionKernel.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteTransgressionKernel",
+      "sha256": "2d37cc7127e56eb36fabca94b205bc345ecfd50a90e047422c6fb15fcc3afe38"
+    },
+    "GaloisCohomology.ProP.FiniteTransgressionLinear": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FiniteTransgressionLinear.lean",
+      "upstream_sha256": "eb6d9d281c65954bf6336cac71994cd10ba99c378cdf0f76e48bb972cbcd5f92",
+      "compatible_sha256": "eb6d9d281c65954bf6336cac71994cd10ba99c378cdf0f76e48bb972cbcd5f92",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FiniteTransgressionLinear.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FiniteTransgressionLinear",
+      "sha256": "8663cd120bd11444dcce0d7e2c3c02e045331e7f7f6856350bb3ac8eb70918e5"
+    },
+    "GaloisCohomology.ProP.FreeProPH2": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FreeProPH2.lean",
+      "upstream_sha256": "0a7161d1c51e7164c07f4bcbb151a7b5f2bc25a130e0b8aad8fd95721f63fb10",
+      "compatible_sha256": "0a7161d1c51e7164c07f4bcbb151a7b5f2bc25a130e0b8aad8fd95721f63fb10",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FreeProPH2.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FreeProPH2",
+      "sha256": "5480e5775f42d1cebad24281322c4cbc559d79a22333d3c6afc0c7897fd6fc0c"
+    },
+    "GaloisCohomology.ProP.FreeProPH2Cocycle": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/FreeProPH2Cocycle.lean",
+      "upstream_sha256": "f0ff6df2b3bb61e1c7c37ac0103d8b2db28fe3e3c137c1b515bb86445d74a84b",
+      "compatible_sha256": "f0ff6df2b3bb61e1c7c37ac0103d8b2db28fe3e3c137c1b515bb86445d74a84b",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/FreeProPH2Cocycle.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.FreeProPH2Cocycle",
+      "sha256": "0487545037f63eb4bd83c63ad1aedb43ec65d4b70f80e9c73cd6d167504bc982"
+    },
+    "GaloisCohomology.ProP.H2CocycleExtension": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/H2CocycleExtension.lean",
+      "upstream_sha256": "3100f02cb809eaf2e58a041918c272d914ad286b501d1ab206c4f6c3e9868b94",
+      "compatible_sha256": "3100f02cb809eaf2e58a041918c272d914ad286b501d1ab206c4f6c3e9868b94",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/H2CocycleExtension.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.H2CocycleExtension",
+      "sha256": "2c0dbec798b4f496041ad2faea186e50b3a976cbe5d65bba6bab59f44416df31"
+    },
+    "GaloisCohomology.ProP.InvariantKernelH1": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/InvariantKernelH1.lean",
+      "upstream_sha256": "14eb0f3713e64671a80a24f0b063b6cffbc74751a1a7a128f726fbc4dfada161",
+      "compatible_sha256": "14eb0f3713e64671a80a24f0b063b6cffbc74751a1a7a128f726fbc4dfada161",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/InvariantKernelH1.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.InvariantKernelH1",
+      "sha256": "2c9c693c8e2331ddff29a6a92c76f96f49c2bc520f410292fdad437f3bbf22dc"
+    },
+    "GaloisCohomology.ProP.PresentationH2KernelCharacter": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/PresentationH2KernelCharacter.lean",
+      "upstream_sha256": "2fcb0f1a6b48910b2124b389884de612230b45f014159af72cc74f028c2c238f",
+      "compatible_sha256": "2fcb0f1a6b48910b2124b389884de612230b45f014159af72cc74f028c2c238f",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/PresentationH2KernelCharacter.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.PresentationH2KernelCharacter",
+      "sha256": "c423575c215cbc9d38c0665a25af652d7398669ed0c4e1dee9fce3619cd69bcc"
+    },
+    "GaloisCohomology.ProP.PresentationH2LowerBound": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/PresentationH2LowerBound.lean",
+      "upstream_sha256": "4e5a9f722d7ec56faa3faa39471b1b7af4fd27ba8486565efe6ff6b4ac02b651",
+      "compatible_sha256": "4e5a9f722d7ec56faa3faa39471b1b7af4fd27ba8486565efe6ff6b4ac02b651",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/PresentationH2LowerBound.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.PresentationH2LowerBound",
+      "sha256": "88c00163c0b12e5ce70f673b148c981e0768621d316bca105392f805599d8986"
+    },
+    "GaloisCohomology.ProP.PresentationH2Primitive": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/PresentationH2Primitive.lean",
+      "upstream_sha256": "92bff65814d6d23b7594924f8a192523416a860a568c89b636e17c03ac983e8d",
+      "compatible_sha256": "92bff65814d6d23b7594924f8a192523416a860a568c89b636e17c03ac983e8d",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/PresentationH2Primitive.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.PresentationH2Primitive",
+      "sha256": "daa50ae35ddff1a0dee2619cbeff7ea06576867c55994f4fccbcd04fd338c584"
+    },
+    "GaloisCohomology.ProP.PresentationH2UpperBound": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/PresentationH2UpperBound.lean",
+      "upstream_sha256": "6a97ca72316660bc0e8038e9e94693ba6b21f1979730c87d1755ead75b6b80d6",
+      "compatible_sha256": "6a97ca72316660bc0e8038e9e94693ba6b21f1979730c87d1755ead75b6b80d6",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/PresentationH2UpperBound.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.PresentationH2UpperBound",
+      "sha256": "390a6295e8a4a9f49d7083e5d60a974d4b0b4f3cea561cefb7bd6a2197a32d01"
+    },
+    "GaloisCohomology.ProP.PresentationQuotientEquiv": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/PresentationQuotientEquiv.lean",
+      "upstream_sha256": "1867c7cddee60de683bc729a82ebe3987496f61a36f050fc0554ae6e7ffa40d2",
+      "compatible_sha256": "02c0d7eed5d393df84d22c8738786749582ad17efed3b1d669c03aec2df8a243",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/PresentationQuotientEquiv.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.PresentationQuotientEquiv",
+      "sha256": "93d4a0ea7bed4809b8361c2613768f788cb9336860942dc0dd181118612f5c79"
+    },
+    "GaloisCohomology.ProP.QuotientRestriction": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/QuotientRestriction.lean",
+      "upstream_sha256": "6140d13a0bb8213dc691b07c63d2dbeaeda6ede504812eb1fa768ed47cd3e98e",
+      "compatible_sha256": "6140d13a0bb8213dc691b07c63d2dbeaeda6ede504812eb1fa768ed47cd3e98e",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/QuotientRestriction.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.QuotientRestriction",
+      "sha256": "edb662f79e5675b95640a5133c987d116f5ef2b8b7420ec332a7bf5c5b8ea1ac"
+    },
+    "GaloisCohomology.ProP.RelationRankH1": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/RelationRankH1.lean",
+      "upstream_sha256": "fb7c0d00b4bfa594905377b18d3eabc51d53dab1987e61205fc5728f486d8054",
+      "compatible_sha256": "fb7c0d00b4bfa594905377b18d3eabc51d53dab1987e61205fc5728f486d8054",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/RelationRankH1.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.RelationRankH1",
+      "sha256": "cffb976c55f6de32739265d89198ed7e150354a8fb08a0212bb93355df699cc0"
+    },
+    "GaloisCohomology.ProP.RelationRankH2": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/RelationRankH2.lean",
+      "upstream_sha256": "63e606a13aae787db7f8cdf1dc65272ad49940855c8d1500e03cc0a2d613ae12",
+      "compatible_sha256": "63e606a13aae787db7f8cdf1dc65272ad49940855c8d1500e03cc0a2d613ae12",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/RelationRankH2.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.RelationRankH2",
+      "sha256": "88f6529948ec8e2cb1cd1698261a715dfc3edaf27e04cf2c1dfcf2bd5ddcbf1d"
+    },
+    "GaloisCohomology.ProP.TrivialZModP": {
+      "upstream_file": "Lean4/GaloisCohomology/ProP/TrivialZModP.lean",
+      "upstream_sha256": "94518bbf82d9cbcd67b1667174265eec942a0b95423b211237835421e3fad5f1",
+      "compatible_sha256": "94518bbf82d9cbcd67b1667174265eec942a0b95423b211237835421e3fad5f1",
+      "file": "UnitDistance/Upstream/Yamaguchi/GaloisCohomology/ProP/TrivialZModP.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.GaloisCohomology.ProP.TrivialZModP",
+      "sha256": "c76fc345db29ae6026ef2b35dc27a43479990b7ce91a9b3d8ad266db77e776e0"
+    },
+    "ProCGroups.Categorical.AlgebraicPullbacks": {
+      "upstream_file": "Lean4/ProCGroups/Categorical/AlgebraicPullbacks.lean",
+      "upstream_sha256": "f1cb0f1ca60ff20e935f7f56ac4b1c4551312335aa6f2331a98fa8795ec4a9b9",
+      "compatible_sha256": "81c72c9399f7178a4dee6277e768270164410da69e7ae9c8089f7f3d128b0f2a",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Categorical/AlgebraicPullbacks.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Categorical.AlgebraicPullbacks",
+      "sha256": "81ad84d29bd84c49129d1150ef51bdbc556fcf4a7d5bf68bcb8efb1c914b7013"
+    },
+    "ProCGroups.Categorical.ProfinitePullbacks": {
+      "upstream_file": "Lean4/ProCGroups/Categorical/ProfinitePullbacks.lean",
+      "upstream_sha256": "adbe1ebdfc00148ce61466999e165f909e4b73d4d83e987588f1475482f2c183",
+      "compatible_sha256": "adbe1ebdfc00148ce61466999e165f909e4b73d4d83e987588f1475482f2c183",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Categorical/ProfinitePullbacks.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Categorical.ProfinitePullbacks",
+      "sha256": "6e2b6c72908043b8897c0eea816399f887d30cec010e1f586f3b9f8277bd8453"
+    },
+    "ProCGroups.Categorical.QuotientPullbackEquivalences": {
+      "upstream_file": "Lean4/ProCGroups/Categorical/QuotientPullbackEquivalences.lean",
+      "upstream_sha256": "0ce910db232e09a0c89d166c7bf47550f8b1aeee00ceda0d31b477a79473db4c",
+      "compatible_sha256": "0ce910db232e09a0c89d166c7bf47550f8b1aeee00ceda0d31b477a79473db4c",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Categorical/QuotientPullbackEquivalences.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Categorical.QuotientPullbackEquivalences",
+      "sha256": "9b7c91400af886677234427eb1e0ee69799c21504318277f5b24f47f555618fd"
+    },
+    "ProCGroups.Cohomology.FiniteInvariantCharacter": {
+      "upstream_file": "Lean4/ProCGroups/Cohomology/FiniteInvariantCharacter.lean",
+      "upstream_sha256": "094920810b566d67e62f5893ba8aad37e0ad259aca0ab17703cd2bffd12d5b6e",
+      "compatible_sha256": "094920810b566d67e62f5893ba8aad37e0ad259aca0ab17703cd2bffd12d5b6e",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Cohomology/FiniteInvariantCharacter.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Cohomology.FiniteInvariantCharacter",
+      "sha256": "94b2bed3f70bc12aa1f24f73efce9c9b8bb46b79e886468f0aaf0289238297a8"
+    },
+    "ProCGroups.Cohomology.FreeProPProjective": {
+      "upstream_file": "Lean4/ProCGroups/Cohomology/FreeProPProjective.lean",
+      "upstream_sha256": "5f546098df58bc93ed681a0d2456865bc89a4599f130d6c3b18bf8b9824815d5",
+      "compatible_sha256": "5f546098df58bc93ed681a0d2456865bc89a4599f130d6c3b18bf8b9824815d5",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Cohomology/FreeProPProjective.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Cohomology.FreeProPProjective",
+      "sha256": "75d8df91e3c7e868ada936c5bea1f3a7b89533ce20a22d5c394a00098c6e9cfd"
+    },
+    "ProCGroups.Cohomology.InvariantCharacterFiniteFamily": {
+      "upstream_file": "Lean4/ProCGroups/Cohomology/InvariantCharacterFiniteFamily.lean",
+      "upstream_sha256": "beaada2f925a89e4b5535e8b476f440f9d28ee46540b4de8d042ee70c1d62b6d",
+      "compatible_sha256": "beaada2f925a89e4b5535e8b476f440f9d28ee46540b4de8d042ee70c1d62b6d",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Cohomology/InvariantCharacterFiniteFamily.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Cohomology.InvariantCharacterFiniteFamily",
+      "sha256": "77b8bac9e38c8abe445033a7019b8bee343b2dba33cb63cfbc4110888bc9d952"
+    },
+    "ProCGroups.Cohomology.InvariantCharacterFiniteStage": {
+      "upstream_file": "Lean4/ProCGroups/Cohomology/InvariantCharacterFiniteStage.lean",
+      "upstream_sha256": "ed24104969383f589c347a0e22fcc5b220cb0911f556dd6946cd66cb6b1a5d1e",
+      "compatible_sha256": "ed24104969383f589c347a0e22fcc5b220cb0911f556dd6946cd66cb6b1a5d1e",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Cohomology/InvariantCharacterFiniteStage.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Cohomology.InvariantCharacterFiniteStage",
+      "sha256": "e52bd3e848ca94bbc49e566e14f462a57ef5909821a60748e817d1eb79de3e5e"
+    },
+    "ProCGroups.Cohomology.RelativeNakayama": {
+      "upstream_file": "Lean4/ProCGroups/Cohomology/RelativeNakayama.lean",
+      "upstream_sha256": "dbe9a3cf0f77b85bf1f2a95012089545e6d51065f114ee853f977d67c91099b7",
+      "compatible_sha256": "dbe9a3cf0f77b85bf1f2a95012089545e6d51065f114ee853f977d67c91099b7",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Cohomology/RelativeNakayama.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Cohomology.RelativeNakayama",
+      "sha256": "960a1bfc5a866be22b8a03ae0ddbbee95854592b1d80b83524f3e10e6cba2c7a"
+    },
+    "ProCGroups.Completion.Construction": {
+      "upstream_file": "Lean4/ProCGroups/Completion/Construction.lean",
+      "upstream_sha256": "63e3818024b2398ee2ed241a91dd6751d42ff6994cbc4237adc2dd18877695ec",
+      "compatible_sha256": "63e3818024b2398ee2ed241a91dd6751d42ff6994cbc4237adc2dd18877695ec",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Completion/Construction.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Completion.Construction",
+      "sha256": "81100408677567a4f50b6b0aca2f85f630c04cd24ff36e1f619b4ee69840ebec"
+    },
+    "ProCGroups.Completion.UniversalProperty": {
+      "upstream_file": "Lean4/ProCGroups/Completion/UniversalProperty.lean",
+      "upstream_sha256": "d34a592f1a9e1b831a2d605664ea207db18296ae20271f587b7851d14a3eb558",
+      "compatible_sha256": "d34a592f1a9e1b831a2d605664ea207db18296ae20271f587b7851d14a3eb558",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Completion/UniversalProperty.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Completion.UniversalProperty",
+      "sha256": "172e4c96ac706608d99fca53314485340f0166807ef2a034052a7b23b66a59ea"
+    },
+    "ProCGroups.FiniteGeneration.Basic": {
+      "upstream_file": "Lean4/ProCGroups/FiniteGeneration/Basic.lean",
+      "upstream_sha256": "8c196b9fbdad6d2b2c1b54f20a9297e46faede5a7b29015f07f3bc82d66679f7",
+      "compatible_sha256": "8c196b9fbdad6d2b2c1b54f20a9297e46faede5a7b29015f07f3bc82d66679f7",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/FiniteGeneration/Basic.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.FiniteGeneration.Basic",
+      "sha256": "5bf6334c3e1946a962441e29ae8df4dcf6f87345f963ddd97d19060c974582eb"
+    },
+    "ProCGroups.FiniteGeneration.CharacteristicChainsAndIndices": {
+      "upstream_file": "Lean4/ProCGroups/FiniteGeneration/CharacteristicChainsAndIndices.lean",
+      "upstream_sha256": "c548861ca63b606547b98404f7e95cab186c20304e125235c030ec379d81fd65",
+      "compatible_sha256": "129ec9d7a9cecab98b30cd71ee55df75b6c2d68e3736a6846154e263a96c0ee9",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/FiniteGeneration/CharacteristicChainsAndIndices.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.FiniteGeneration.CharacteristicChainsAndIndices",
+      "sha256": "dd3f7a541cef49090045645f049bb1457a6a7d85172db996055b1ef3d6492289"
+    },
+    "ProCGroups.FiniteGroups.AllFinite": {
+      "upstream_file": "Lean4/ProCGroups/FiniteGroups/AllFinite.lean",
+      "upstream_sha256": "370a5cd28be25f88929ae30a4a65556c7f0a87b848c6cc660d589465e012736c",
+      "compatible_sha256": "370a5cd28be25f88929ae30a4a65556c7f0a87b848c6cc660d589465e012736c",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/FiniteGroups/AllFinite.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.FiniteGroups.AllFinite",
+      "sha256": "75ee225487704fc3fbf2bda09b5c7429119b43ac1ffe409fc495a611347dd123"
+    },
+    "ProCGroups.FiniteGroups.Classes": {
+      "upstream_file": "Lean4/ProCGroups/FiniteGroups/Classes.lean",
+      "upstream_sha256": "f47f366f116c0c49b3196df06bdc110dfbcbbe3dd83636c2c6f574b0badaa2ba",
+      "compatible_sha256": "f47f366f116c0c49b3196df06bdc110dfbcbbe3dd83636c2c6f574b0badaa2ba",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/FiniteGroups/Classes.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.FiniteGroups.Classes",
+      "sha256": "dc396f4ba8d79c6af9a346cc69657d5de613ce5a64ba0c78b6130b49cdaf641e"
+    },
+    "ProCGroups.FiniteGroups.StandardClasses": {
+      "upstream_file": "Lean4/ProCGroups/FiniteGroups/StandardClasses.lean",
+      "upstream_sha256": "a0888b7054429eb58bccf796847486b59bd4db7bc938df36d5032aeabc17c7fc",
+      "compatible_sha256": "07113e67efd72eea2bd2ad0cc70f6a90c08b6e3d6b1f37f3f1c4cd4f79f26c59",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/FiniteGroups/StandardClasses.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.FiniteGroups.StandardClasses",
+      "sha256": "25784454a7e446b81a01bc0e2685d2bdf99920736b5479c41c79b9a23c0200bd"
+    },
+    "ProCGroups.Frattini": {
+      "upstream_file": "Lean4/ProCGroups/Frattini.lean",
+      "upstream_sha256": "b53259f982693d377e811cf6efb8200bb8cc0447728179fffd8e5eb1f0053406",
+      "compatible_sha256": "b53259f982693d377e811cf6efb8200bb8cc0447728179fffd8e5eb1f0053406",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Frattini.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Frattini",
+      "sha256": "4331f0ee3b4ff8e8dd9e66ac9f1f9f1f566a57110d6eff40f12580ff22c6d631"
+    },
+    "ProCGroups.FreeProC.Basic": {
+      "upstream_file": "Lean4/ProCGroups/FreeProC/Basic.lean",
+      "upstream_sha256": "d960abdbab54319c1f3d3877339c87e8c08a15881470efcdbb26157508fe2262",
+      "compatible_sha256": "07cf509ae1d5d7f58d244c16e1696620445d077d2c6f0226adcd7d3254c4fed9",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/FreeProC/Basic.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.FreeProC.Basic",
+      "sha256": "f93cbdded306c3fa33b05668ff8b7694f03cefac644bd4a3450a2621cd09949b"
+    },
+    "ProCGroups.FreeProC.Construction": {
+      "upstream_file": "Lean4/ProCGroups/FreeProC/Construction.lean",
+      "upstream_sha256": "1b5054b8c14428c2cc3504cb76e61ceb998393e273349031dff515a5b48ceac0",
+      "compatible_sha256": "1b5054b8c14428c2cc3504cb76e61ceb998393e273349031dff515a5b48ceac0",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/FreeProC/Construction.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.FreeProC.Construction",
+      "sha256": "49b09aa1be10137759fc4f4e4203ae09c2757136b4bd98dafb7df14eed84045d"
+    },
+    "ProCGroups.FreeProC.FiniteBasis": {
+      "upstream_file": "Lean4/ProCGroups/FreeProC/FiniteBasis.lean",
+      "upstream_sha256": "c4864dd64e804cbded9c81a78b96ad26f7dfc07bcaa733b148a060243e725c6f",
+      "compatible_sha256": "c4864dd64e804cbded9c81a78b96ad26f7dfc07bcaa733b148a060243e725c6f",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/FreeProC/FiniteBasis.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.FreeProC.FiniteBasis",
+      "sha256": "8aefb039b18a971c8f59e12682ff8281b35a8635984fe808c4262ce5f62575e9"
+    },
+    "ProCGroups.Generation.Basic": {
+      "upstream_file": "Lean4/ProCGroups/Generation/Basic.lean",
+      "upstream_sha256": "19459344e33f669eac133c243a6393450e8fc6804e9f88ec98aaa468a06074f9",
+      "compatible_sha256": "5ac74c201c9864d6b66107b9c99f5ae67ebee8c66329837172fe95f07a68f24f",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Generation/Basic.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Generation.Basic",
+      "sha256": "c43d9c0bb2c093693a5c03a4edb50ca3da8dab45b9808a597cf94156a58e4963"
+    },
+    "ProCGroups.Generation.Convergence": {
+      "upstream_file": "Lean4/ProCGroups/Generation/Convergence.lean",
+      "upstream_sha256": "04da9cecb03c763d41a9599fb5209121d75b31286c2ca7dd25f0d33ef7e32d91",
+      "compatible_sha256": "04da9cecb03c763d41a9599fb5209121d75b31286c2ca7dd25f0d33ef7e32d91",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Generation/Convergence.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Generation.Convergence",
+      "sha256": "9b38d849a83e160a464b1e1fa881214e315b9866354461c56c571281cb5173c9"
+    },
+    "ProCGroups.Generation.GeneratorConvergingPairs": {
+      "upstream_file": "Lean4/ProCGroups/Generation/GeneratorConvergingPairs.lean",
+      "upstream_sha256": "e580db172d9f023bbb5d10854e12eaa37eb2728353302957d41d8d24bf9bc9c6",
+      "compatible_sha256": "e580db172d9f023bbb5d10854e12eaa37eb2728353302957d41d8d24bf9bc9c6",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Generation/GeneratorConvergingPairs.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Generation.GeneratorConvergingPairs",
+      "sha256": "dd922fc1a90427b67ae59479954830a420cfc08e02fbfd4163205f2ed821002c"
+    },
+    "ProCGroups.Generation.QuotientCriteria": {
+      "upstream_file": "Lean4/ProCGroups/Generation/QuotientCriteria.lean",
+      "upstream_sha256": "d9afee72e8a298fdb7c0831422f9ed024402b1100afdce455cdd728d60ddf074",
+      "compatible_sha256": "0c4c3ffa7b60b720fc7efff76ab3c368aa93cf8ae641be6b86e60ab9081c2e70",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Generation/QuotientCriteria.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Generation.QuotientCriteria",
+      "sha256": "a129a392e25e11473bd15b7aee06a82e0c5065f99255354483cf006bc9561119"
+    },
+    "ProCGroups.Generation.QuotientGeneratorConvergingPairs": {
+      "upstream_file": "Lean4/ProCGroups/Generation/QuotientGeneratorConvergingPairs.lean",
+      "upstream_sha256": "29e1e7cc63632844692dbb77672d115db302c67c8d837e62544f5e12888c9d86",
+      "compatible_sha256": "0e33ef6d66d653cb8df0aa4100fd91b3d988b011e592e5e88170b8a2045c136c",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Generation/QuotientGeneratorConvergingPairs.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Generation.QuotientGeneratorConvergingPairs",
+      "sha256": "6b0b39fb743f613b15255372b8348165304309206c7fe89d7f54640a10b173f8"
+    },
+    "ProCGroups.GroupTheory.CentralizerNormalizerCommensurator": {
+      "upstream_file": "Lean4/ProCGroups/GroupTheory/CentralizerNormalizerCommensurator.lean",
+      "upstream_sha256": "60e108a19c8354902899fade47bb668504ab48340818aaaaced56e146c7a190a",
+      "compatible_sha256": "60e108a19c8354902899fade47bb668504ab48340818aaaaced56e146c7a190a",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/GroupTheory/CentralizerNormalizerCommensurator.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.GroupTheory.CentralizerNormalizerCommensurator",
+      "sha256": "8e85ab45114425d2fc30a5d4a0722e8fdec6c4033025c267045a979ec9cd700c"
+    },
+    "ProCGroups.InverseSystems.Basic": {
+      "upstream_file": "Lean4/ProCGroups/InverseSystems/Basic.lean",
+      "upstream_sha256": "0a6041b9130397a9be72a0672d25414bae056d7347ce3a3a6c3fcb151816ea91",
+      "compatible_sha256": "98d64d873edb8bc03f21f4f5c7199af790c39e0bf320836b4dd29eb209348487",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/InverseSystems/Basic.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.InverseSystems.Basic",
+      "sha256": "5b30454b40a394418a8f00ff4b8e263e090a012f6f0e1295e5db33c4d1424267"
+    },
+    "ProCGroups.InverseSystems.CofinalityAndDensity": {
+      "upstream_file": "Lean4/ProCGroups/InverseSystems/CofinalityAndDensity.lean",
+      "upstream_sha256": "570750238384ee998e9e9e7b7b5811c9367d011f2ea86f6007b6cc4548fb82fc",
+      "compatible_sha256": "570750238384ee998e9e9e7b7b5811c9367d011f2ea86f6007b6cc4548fb82fc",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/InverseSystems/CofinalityAndDensity.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.InverseSystems.CofinalityAndDensity",
+      "sha256": "0518e221256a65673dd385770f0ed4572bc5a6467e1a042064687bfdd5b4dc7e"
+    },
+    "ProCGroups.InverseSystems.CompatibilityAndSurjectivity": {
+      "upstream_file": "Lean4/ProCGroups/InverseSystems/CompatibilityAndSurjectivity.lean",
+      "upstream_sha256": "268752b51e066e0cdf19395c16eee76b7682779aab88755cc454e0912ebdc3eb",
+      "compatible_sha256": "0b841670db55d3c828b2ac27c7d99d1b2151d38cdd1af3a36672d783b9ad2889",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/InverseSystems/CompatibilityAndSurjectivity.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.InverseSystems.CompatibilityAndSurjectivity",
+      "sha256": "e07fa69e8e908e9ab7c493963e27a48e6964ae13ec03850d267583b91a3b59ec"
+    },
+    "ProCGroups.InverseSystems.FiniteStageFactorization": {
+      "upstream_file": "Lean4/ProCGroups/InverseSystems/FiniteStageFactorization.lean",
+      "upstream_sha256": "dc9f78125d7052c081e28cafb2ea44e9120eb8de0158fe88aad1fb2dfcfe4c1e",
+      "compatible_sha256": "dc9f78125d7052c081e28cafb2ea44e9120eb8de0158fe88aad1fb2dfcfe4c1e",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/InverseSystems/FiniteStageFactorization.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.InverseSystems.FiniteStageFactorization",
+      "sha256": "36d2b8d564ab080b8943d168e23c4c11f22a2f344177e4529d756a5144d1bb19"
+    },
+    "ProCGroups.InverseSystems.ProfiniteSpace": {
+      "upstream_file": "Lean4/ProCGroups/InverseSystems/ProfiniteSpace.lean",
+      "upstream_sha256": "39cd1589f6422c3ce070211633ccd79e9f9995402741d673a15c4edc71388d78",
+      "compatible_sha256": "39cd1589f6422c3ce070211633ccd79e9f9995402741d673a15c4edc71388d78",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/InverseSystems/ProfiniteSpace.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.InverseSystems.ProfiniteSpace",
+      "sha256": "e1b89117c021124c3cbd22a3c14d70cf33990403f996171e20c8f79f42a0f5fc"
+    },
+    "ProCGroups.InverseSystems.ProjectionImageSystems": {
+      "upstream_file": "Lean4/ProCGroups/InverseSystems/ProjectionImageSystems.lean",
+      "upstream_sha256": "fd2e3b679cc1b9a347cea34fa14aa9c9cc0ebe2d7daf424448e98f1468cdf040",
+      "compatible_sha256": "fd2e3b679cc1b9a347cea34fa14aa9c9cc0ebe2d7daf424448e98f1468cdf040",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/InverseSystems/ProjectionImageSystems.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.InverseSystems.ProjectionImageSystems",
+      "sha256": "537f614423ce50d03a375fe38e44ddd9800b998cac7887d3c0e96c344695e408"
+    },
+    "ProCGroups.InverseSystems.Utilities": {
+      "upstream_file": "Lean4/ProCGroups/InverseSystems/Utilities.lean",
+      "upstream_sha256": "426d474998ba2280ff8a316e3f892510976ca09ede76fdff2df88c47718acaf7",
+      "compatible_sha256": "426d474998ba2280ff8a316e3f892510976ca09ede76fdff2df88c47718acaf7",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/InverseSystems/Utilities.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.InverseSystems.Utilities",
+      "sha256": "dec8688dc2603002e8568c5370f2646774af2654e7ebd4205b8f6a1650f0c393"
+    },
+    "ProCGroups.Presentations.Profinite": {
+      "upstream_file": "Lean4/ProCGroups/Presentations/Profinite.lean",
+      "upstream_sha256": "c810d4b694e111e1b1a99eacf64411f435bb5eff6c8230b899d6a269e8dff7b9",
+      "compatible_sha256": "c810d4b694e111e1b1a99eacf64411f435bb5eff6c8230b899d6a269e8dff7b9",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Presentations/Profinite.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Presentations.Profinite",
+      "sha256": "2a0deccbca2cbf437d5bf64cc4c91de6bc9438875a5d48f52f187b2b31c0409d"
+    },
+    "ProCGroups.ProC.Category.Basic": {
+      "upstream_file": "Lean4/ProCGroups/ProC/Category/Basic.lean",
+      "upstream_sha256": "615486197f50fa181460f30d6ae59b8caa0eb9c1e012395a679bc0bc024e7f79",
+      "compatible_sha256": "615486197f50fa181460f30d6ae59b8caa0eb9c1e012395a679bc0bc024e7f79",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/Category/Basic.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.Category.Basic",
+      "sha256": "a4a520506a80d3d51ba6c91c4c23b9ef22f88abf6bb5923819cb79de8bafa72f"
+    },
+    "ProCGroups.ProC.InverseLimits.FiniteQuotients": {
+      "upstream_file": "Lean4/ProCGroups/ProC/InverseLimits/FiniteQuotients.lean",
+      "upstream_sha256": "ac68a75698bf9e4043ea7c1866b71d9c166d5da3c832f375fedcbae4ceb86a6c",
+      "compatible_sha256": "ac68a75698bf9e4043ea7c1866b71d9c166d5da3c832f375fedcbae4ceb86a6c",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/InverseLimits/FiniteQuotients.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.InverseLimits.FiniteQuotients",
+      "sha256": "5f9729cd9d0c132b555c9b60b36ee04670ae11bc339e1f5c9c4bdfdb1d757fd7"
+    },
+    "ProCGroups.ProC.InverseLimits.Limits": {
+      "upstream_file": "Lean4/ProCGroups/ProC/InverseLimits/Limits.lean",
+      "upstream_sha256": "1bd52be86edd90ed3d9ea85d69dc0b4d99463c83c33162676f5734f3bc354875",
+      "compatible_sha256": "1e51be53367aa9b77bae60fc9f05f5af051030c689c86038f48645aa91db877c",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/InverseLimits/Limits.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.InverseLimits.Limits",
+      "sha256": "7dc3c7c53dacdf108152bff0b2933f499d83fd4a3db03f2d0f375e9a9299cc01"
+    },
+    "ProCGroups.ProC.InverseLimits.Predicates": {
+      "upstream_file": "Lean4/ProCGroups/ProC/InverseLimits/Predicates.lean",
+      "upstream_sha256": "c3ceded9f60ba647a55c0faa24c53b14b469dd8e02db67be6cd298e895e59e8d",
+      "compatible_sha256": "c3ceded9f60ba647a55c0faa24c53b14b469dd8e02db67be6cd298e895e59e8d",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/InverseLimits/Predicates.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.InverseLimits.Predicates",
+      "sha256": "2d2a70a578be3de01f48ab4b88ed6c9a3249fede109eda7ac8b104717ff7c730"
+    },
+    "ProCGroups.ProC.MaximalQuotients.ResidualCore": {
+      "upstream_file": "Lean4/ProCGroups/ProC/MaximalQuotients/ResidualCore.lean",
+      "upstream_sha256": "5afe6f2c8c5128dba37baa6158413ebb36c40b8988a9059c8f411c24c5a7b6e8",
+      "compatible_sha256": "5afe6f2c8c5128dba37baa6158413ebb36c40b8988a9059c8f411c24c5a7b6e8",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/MaximalQuotients/ResidualCore.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.MaximalQuotients.ResidualCore",
+      "sha256": "4bf403c253d5c30b95e2100cf2f657b57a877f4be5e7dc67546dd3697b30e5da"
+    },
+    "ProCGroups.ProC.MaximalQuotients.ResidualQuotient": {
+      "upstream_file": "Lean4/ProCGroups/ProC/MaximalQuotients/ResidualQuotient.lean",
+      "upstream_sha256": "83e741ebd0b038f5e93d60ae257d6ceb5830b803d1fa2857159ffb26dba5bd72",
+      "compatible_sha256": "83e741ebd0b038f5e93d60ae257d6ceb5830b803d1fa2857159ffb26dba5bd72",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/MaximalQuotients/ResidualQuotient.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.MaximalQuotients.ResidualQuotient",
+      "sha256": "ff39cadbe7c1b3241ac6f84f1dbbdabf639a92f08621a8773f87d4d4a9036873"
+    },
+    "ProCGroups.ProC.MaximalQuotients.UniversalProperty": {
+      "upstream_file": "Lean4/ProCGroups/ProC/MaximalQuotients/UniversalProperty.lean",
+      "upstream_sha256": "675b6c962f5c0384025d45c509a62f69e6b62e34c61e19153cd850c7b65fbf59",
+      "compatible_sha256": "675b6c962f5c0384025d45c509a62f69e6b62e34c61e19153cd850c7b65fbf59",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/MaximalQuotients/UniversalProperty.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.MaximalQuotients.UniversalProperty",
+      "sha256": "e288cb30545eb8d62aa4ca0d5c750b656b524765e066afb02231092384a4b8ae"
+    },
+    "ProCGroups.ProC.OpenNormalSubgroups.Basic": {
+      "upstream_file": "Lean4/ProCGroups/ProC/OpenNormalSubgroups/Basic.lean",
+      "upstream_sha256": "f6e5af8221bb5e15288822305c60ed01e9b568ef5727e62dca96de44718a7a0c",
+      "compatible_sha256": "f6e5af8221bb5e15288822305c60ed01e9b568ef5727e62dca96de44718a7a0c",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/OpenNormalSubgroups/Basic.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.OpenNormalSubgroups.Basic",
+      "sha256": "49ce1d824b641e30628f87dd2f12104523975194a68c3328f598c32f344148fe"
+    },
+    "ProCGroups.ProC.OpenNormalSubgroups.BasisAtOne": {
+      "upstream_file": "Lean4/ProCGroups/ProC/OpenNormalSubgroups/BasisAtOne.lean",
+      "upstream_sha256": "4e4224f6c2bc4f18febfa2d76322653f2205303d809ea9920f42a27206bfeb91",
+      "compatible_sha256": "4e4224f6c2bc4f18febfa2d76322653f2205303d809ea9920f42a27206bfeb91",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/OpenNormalSubgroups/BasisAtOne.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.OpenNormalSubgroups.BasisAtOne",
+      "sha256": "2869fc96e6a16996f7363589b89b0b3ffd5dbecf765a489f0b4ec78928b9cd92"
+    },
+    "ProCGroups.ProC.OpenNormalSubgroups.ClosedAndCosets": {
+      "upstream_file": "Lean4/ProCGroups/ProC/OpenNormalSubgroups/ClosedAndCosets.lean",
+      "upstream_sha256": "407e03dcbb2a9c9eccee08d931efa0003b990322eeb315c1ed3d7ed7c45740a6",
+      "compatible_sha256": "894f62b2de384c14d39cf3dc70ea43cf5adf1a82fb53c0d233393b1811df7418",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/OpenNormalSubgroups/ClosedAndCosets.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.OpenNormalSubgroups.ClosedAndCosets",
+      "sha256": "6f70f8b1d4b1e1e61f7e9d807ffd34891d29c132b2caae1bae64ff4bdcf8663b"
+    },
+    "ProCGroups.ProC.OpenNormalSubgroups.FilteredFamilies": {
+      "upstream_file": "Lean4/ProCGroups/ProC/OpenNormalSubgroups/FilteredFamilies.lean",
+      "upstream_sha256": "129a84fc45780fd2d88980aac40f8ebee7cddbcace34c4ae5b7c835674f6b015",
+      "compatible_sha256": "f961462d7f068706dfb939e09e85877fed76f673f969b45adc588aa97b1f4367",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/OpenNormalSubgroups/FilteredFamilies.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.OpenNormalSubgroups.FilteredFamilies",
+      "sha256": "c250e410499155b634cf128ff070bf91ce3e49f07ab6d4876152e64f0a522b01"
+    },
+    "ProCGroups.ProC.OpenNormalSubgroups.LimitPresentation": {
+      "upstream_file": "Lean4/ProCGroups/ProC/OpenNormalSubgroups/LimitPresentation.lean",
+      "upstream_sha256": "c8975157e6884a81158133673f7fb18fdd8c8b5e94e6c1101a48e0b4be549de0",
+      "compatible_sha256": "e41620ee65e7379bf78a35a1a59cce5d9c6639c25c7c2057ac2ce3b397010bf7",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/OpenNormalSubgroups/LimitPresentation.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.OpenNormalSubgroups.LimitPresentation",
+      "sha256": "ab3fbc70095cea189806787304d898e24cc5690a55897031b1f938da52fb6e75"
+    },
+    "ProCGroups.ProC.OpenNormalSubgroups.ProCGroup": {
+      "upstream_file": "Lean4/ProCGroups/ProC/OpenNormalSubgroups/ProCGroup.lean",
+      "upstream_sha256": "3c209beefd957370b1d02b097a93f0775488cce8774a8485dcdef1685604861a",
+      "compatible_sha256": "109e1112122eb0b8dbb32776a7c9ec5ca386f63309fcabf1bfdd57f44c3dfe0d",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/OpenNormalSubgroups/ProCGroup.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.OpenNormalSubgroups.ProCGroup",
+      "sha256": "d8d90443d04dcb85a40832198c9d070de69b0e694932df0c0b0f5d26c3106277"
+    },
+    "ProCGroups.ProC.OpenNormalSubgroups.Separation": {
+      "upstream_file": "Lean4/ProCGroups/ProC/OpenNormalSubgroups/Separation.lean",
+      "upstream_sha256": "9ff3147aad4873f5af0a59ad257d20fffe825501965e6c2fed01751c6ef3f621",
+      "compatible_sha256": "9ff3147aad4873f5af0a59ad257d20fffe825501965e6c2fed01751c6ef3f621",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/OpenNormalSubgroups/Separation.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.OpenNormalSubgroups.Separation",
+      "sha256": "5d2bedcae048fced3e60212d9c7b5224b372c86041ef747216f4b5dbb1d76038"
+    },
+    "ProCGroups.ProC.Quotients.ClosedNormal": {
+      "upstream_file": "Lean4/ProCGroups/ProC/Quotients/ClosedNormal.lean",
+      "upstream_sha256": "bbad3c4bb2b6401213c043774e6dcf6e581d2452563623d71f66faae1e95cd73",
+      "compatible_sha256": "bbad3c4bb2b6401213c043774e6dcf6e581d2452563623d71f66faae1e95cd73",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/Quotients/ClosedNormal.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.Quotients.ClosedNormal",
+      "sha256": "3ede6748eb5c152c390b0a0a71aaa192729f1ca82e78f2f704d11db8ee62c79f"
+    },
+    "ProCGroups.ProC.Quotients.ClosedSubgroupNeighborhoods": {
+      "upstream_file": "Lean4/ProCGroups/ProC/Quotients/ClosedSubgroupNeighborhoods.lean",
+      "upstream_sha256": "b2252fdac017abfe42c6291fadcdbe2a976b2768fc737ec50b3471afde5099ec",
+      "compatible_sha256": "b2252fdac017abfe42c6291fadcdbe2a976b2768fc737ec50b3471afde5099ec",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/Quotients/ClosedSubgroupNeighborhoods.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.Quotients.ClosedSubgroupNeighborhoods",
+      "sha256": "926d008a85eb9662bf02fe07ebb753b9ad94102624606564b11bd2ff6966c0f9"
+    },
+    "ProCGroups.ProC.Quotients.DescendingClosedSubgroupQuotients": {
+      "upstream_file": "Lean4/ProCGroups/ProC/Quotients/DescendingClosedSubgroupQuotients.lean",
+      "upstream_sha256": "e02fcd3a68503bb20f59aec572e8443cdd25509a59ec7107d05c8ce6e608a654",
+      "compatible_sha256": "e02fcd3a68503bb20f59aec572e8443cdd25509a59ec7107d05c8ce6e608a654",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/Quotients/DescendingClosedSubgroupQuotients.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.Quotients.DescendingClosedSubgroupQuotients",
+      "sha256": "42c9082b738ae4973e3bc429f60da43640e18e3cfe1852345f4b855b31937bf1"
+    },
+    "ProCGroups.ProC.Quotients.LeftQuotientMaps": {
+      "upstream_file": "Lean4/ProCGroups/ProC/Quotients/LeftQuotientMaps.lean",
+      "upstream_sha256": "69cc66ea5c51fd5f1c9f3d732b553176c5d1d811c10c7016a4360b14b74f9066",
+      "compatible_sha256": "69cc66ea5c51fd5f1c9f3d732b553176c5d1d811c10c7016a4360b14b74f9066",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/Quotients/LeftQuotientMaps.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.Quotients.LeftQuotientMaps",
+      "sha256": "53d5be2321b39127908ee433a30194e70ecbb8789c3a4f90c0e99ea38bb9c1ff"
+    },
+    "ProCGroups.ProC.Quotients.LeftQuotientProjectionSections": {
+      "upstream_file": "Lean4/ProCGroups/ProC/Quotients/LeftQuotientProjectionSections.lean",
+      "upstream_sha256": "f7029a8a6b9146f4e07d24530b4a1c55219634e6d56d21be5f228e337aeca54f",
+      "compatible_sha256": "f7029a8a6b9146f4e07d24530b4a1c55219634e6d56d21be5f228e337aeca54f",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/Quotients/LeftQuotientProjectionSections.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.Quotients.LeftQuotientProjectionSections",
+      "sha256": "4e8650eed94eddb0d5cb17d808b98d273f6546ae303de4eca1e7d1a3340cd606"
+    },
+    "ProCGroups.ProC.Quotients.OpenSubgroupSections": {
+      "upstream_file": "Lean4/ProCGroups/ProC/Quotients/OpenSubgroupSections.lean",
+      "upstream_sha256": "bee1f9361f639b68810311072e77e54834981803938c3394320e26d80b3ae50a",
+      "compatible_sha256": "bee1f9361f639b68810311072e77e54834981803938c3394320e26d80b3ae50a",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/Quotients/OpenSubgroupSections.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.Quotients.OpenSubgroupSections",
+      "sha256": "87233bef6bacbe2530105e9eeaf569d875f7e5b843cc143d93073b3779c673de"
+    },
+    "ProCGroups.ProC.Subgroups.Closed": {
+      "upstream_file": "Lean4/ProCGroups/ProC/Subgroups/Closed.lean",
+      "upstream_sha256": "a67d2de0c93727c49a83710a08cec586c4a243fb5816e9f71852674e57d388bb",
+      "compatible_sha256": "a67d2de0c93727c49a83710a08cec586c4a243fb5816e9f71852674e57d388bb",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/Subgroups/Closed.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.Subgroups.Closed",
+      "sha256": "0738ac46622fba78782cdf29ac366ec2e647e89370c7b04ccee4f2477780134e"
+    },
+    "ProCGroups.ProC.Subgroups.Products": {
+      "upstream_file": "Lean4/ProCGroups/ProC/Subgroups/Products.lean",
+      "upstream_sha256": "6355abfd191bbadcff9b520a3724023ce708009cdb48581cd35c580f3b891e9d",
+      "compatible_sha256": "6355abfd191bbadcff9b520a3724023ce708009cdb48581cd35c580f3b891e9d",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProC/Subgroups/Products.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProC.Subgroups.Products",
+      "sha256": "39743cfe9f5fed537364f5c372a991ff8fecc862a032d64a93715472963b1db5"
+    },
+    "ProCGroups.ProP.BurnsideBasis": {
+      "upstream_file": "Lean4/ProCGroups/ProP/BurnsideBasis.lean",
+      "upstream_sha256": "8851c83ecf2631b973d10e41e73ad2886902d2d7e1721323ca45ab676d27bf8a",
+      "compatible_sha256": "8851c83ecf2631b973d10e41e73ad2886902d2d7e1721323ca45ab676d27bf8a",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/BurnsideBasis.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.BurnsideBasis",
+      "sha256": "de7ff5b861bb3a02d3dd8bce62b46d1893bebc24de407c4650efd17b891a1129"
+    },
+    "ProCGroups.ProP.ContinuousH1": {
+      "upstream_file": "Lean4/ProCGroups/ProP/ContinuousH1.lean",
+      "upstream_sha256": "12b542c9e6c0ee5f97b0aaa8b4eb7f59b416ce9d13705910939f96cd97dd8835",
+      "compatible_sha256": "12b542c9e6c0ee5f97b0aaa8b4eb7f59b416ce9d13705910939f96cd97dd8835",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/ContinuousH1.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.ContinuousH1",
+      "sha256": "dc74ca854347bea38e253074cc59e8bf0653cfc27fc0bf40d58d5b038c1889a0"
+    },
+    "ProCGroups.ProP.ElementaryAbelianRank": {
+      "upstream_file": "Lean4/ProCGroups/ProP/ElementaryAbelianRank.lean",
+      "upstream_sha256": "0c77a6b050e37da17730ffce962c9a57c94e7509003ccb59cca55538bfb20bda",
+      "compatible_sha256": "0c77a6b050e37da17730ffce962c9a57c94e7509003ccb59cca55538bfb20bda",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/ElementaryAbelianRank.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.ElementaryAbelianRank",
+      "sha256": "5cb09bb80d88b4cb894d98e5bb683676647600c32a5f89e4adf2d306f0aa6154"
+    },
+    "ProCGroups.ProP.FiniteFrattini": {
+      "upstream_file": "Lean4/ProCGroups/ProP/FiniteFrattini.lean",
+      "upstream_sha256": "dc306c0c21b5dcfba505039440980a8e973b75b904cf5944f7225a9cd10fc2dd",
+      "compatible_sha256": "dc306c0c21b5dcfba505039440980a8e973b75b904cf5944f7225a9cd10fc2dd",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/FiniteFrattini.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.FiniteFrattini",
+      "sha256": "ab15b1f649b18f6eb96f1ed8715771d3b00163a785cb45d4c2834c57828c9863"
+    },
+    "ProCGroups.ProP.FinitePGroupMaximal": {
+      "upstream_file": "Lean4/ProCGroups/ProP/FinitePGroupMaximal.lean",
+      "upstream_sha256": "08209efe719e90182b80e5813b91070bc964297033ecc1a8763a0deee8512a17",
+      "compatible_sha256": "08209efe719e90182b80e5813b91070bc964297033ecc1a8763a0deee8512a17",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/FinitePGroupMaximal.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.FinitePGroupMaximal",
+      "sha256": "44cf38b8404384e108330b889eae5faeac35239ec6caec9c715ddc94ed5b65f0"
+    },
+    "ProCGroups.ProP.FrattiniPowers": {
+      "upstream_file": "Lean4/ProCGroups/ProP/FrattiniPowers.lean",
+      "upstream_sha256": "b5482f414fe58825dd8b7212f6177ea9842c39759315cf6be171e28aa615eb7e",
+      "compatible_sha256": "b5482f414fe58825dd8b7212f6177ea9842c39759315cf6be171e28aa615eb7e",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/FrattiniPowers.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.FrattiniPowers",
+      "sha256": "bfae801f8e715d33adff1fb852a4d12cc86acecc52c2742c878e5886a20e031d"
+    },
+    "ProCGroups.ProP.FrattiniQuotient": {
+      "upstream_file": "Lean4/ProCGroups/ProP/FrattiniQuotient.lean",
+      "upstream_sha256": "3c651eb16e3ab901a841e6775f55e34b006c77f3a5eaec2d5ef16687a7c9d3b3",
+      "compatible_sha256": "3c651eb16e3ab901a841e6775f55e34b006c77f3a5eaec2d5ef16687a7c9d3b3",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/FrattiniQuotient.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.FrattiniQuotient",
+      "sha256": "61c0aa18446b9441928b05127b9c27a5dae91924d89f82310e6399bc37678246"
+    },
+    "ProCGroups.ProP.GeneratorRank": {
+      "upstream_file": "Lean4/ProCGroups/ProP/GeneratorRank.lean",
+      "upstream_sha256": "37c89509cb11c21f1b8fcfbc7587cbe099febce5da38db58edf60f70b2b01ee1",
+      "compatible_sha256": "37c89509cb11c21f1b8fcfbc7587cbe099febce5da38db58edf60f70b2b01ee1",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/GeneratorRank.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.GeneratorRank",
+      "sha256": "046750565f50c8614bfdb5c0c6acd289e66ce2276c7125cd1d6cb1cc1c4538a2"
+    },
+    "ProCGroups.ProP.MinimalEpimorphism": {
+      "upstream_file": "Lean4/ProCGroups/ProP/MinimalEpimorphism.lean",
+      "upstream_sha256": "8f324d27377ef9fafef7a4d7debe1f61a36d89c193dd205c05c1839246b7581a",
+      "compatible_sha256": "8f324d27377ef9fafef7a4d7debe1f61a36d89c193dd205c05c1839246b7581a",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/MinimalEpimorphism.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.MinimalEpimorphism",
+      "sha256": "c2f29e7e0dbe8e1258978ef13a98e9b169e5b025bb6030a90af849b5a9e08a9f"
+    },
+    "ProCGroups.ProP.Presentation.Basic": {
+      "upstream_file": "Lean4/ProCGroups/ProP/Presentation/Basic.lean",
+      "upstream_sha256": "c1d7159c8c6c7a9d8126bb280b769c8549ca6259aada0ea33c1eaeea53075086",
+      "compatible_sha256": "c1d7159c8c6c7a9d8126bb280b769c8549ca6259aada0ea33c1eaeea53075086",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/Presentation/Basic.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.Presentation.Basic",
+      "sha256": "8078e8840918c8f1d57c183c822f94e58621c632799f390f4038340bc9bf136a"
+    },
+    "ProCGroups.ProP.Presentation.GeneratorRank": {
+      "upstream_file": "Lean4/ProCGroups/ProP/Presentation/GeneratorRank.lean",
+      "upstream_sha256": "4daf422f9c1e083c0875298d6f61ca303befa942baf124d6fb0ac186984a7ad7",
+      "compatible_sha256": "4daf422f9c1e083c0875298d6f61ca303befa942baf124d6fb0ac186984a7ad7",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/Presentation/GeneratorRank.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.Presentation.GeneratorRank",
+      "sha256": "6d0084b166a2ac6a571c036741d8acdf00d08a6e2a8a723417226a7a9aa59fbd"
+    },
+    "ProCGroups.ProP.Presentation.Minimal": {
+      "upstream_file": "Lean4/ProCGroups/ProP/Presentation/Minimal.lean",
+      "upstream_sha256": "ef8c082ceb069b01294cb4775fde884b55841f199e739d9930fda0c6513cb8bf",
+      "compatible_sha256": "ef8c082ceb069b01294cb4775fde884b55841f199e739d9930fda0c6513cb8bf",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/Presentation/Minimal.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.Presentation.Minimal",
+      "sha256": "23125933cecc516479ea83cd5cc30b9a37fb175e7677b84f59933195ee3f86df"
+    },
+    "ProCGroups.ProP.Presentation.RelationCardinal": {
+      "upstream_file": "Lean4/ProCGroups/ProP/Presentation/RelationCardinal.lean",
+      "upstream_sha256": "bb2c100f0b6db340f73e98d201cbf5944cc5bdb298e2531b3c818c394bd42100",
+      "compatible_sha256": "bb2c100f0b6db340f73e98d201cbf5944cc5bdb298e2531b3c818c394bd42100",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/Presentation/RelationCardinal.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.Presentation.RelationCardinal",
+      "sha256": "32573d2294b1706a15b9c5beacc1fd309be30a1ded86f888006dc27181945b38"
+    },
+    "ProCGroups.ProP.Presentation.RelationNakayama": {
+      "upstream_file": "Lean4/ProCGroups/ProP/Presentation/RelationNakayama.lean",
+      "upstream_sha256": "e59163e92f4f35f381c7e90cb621e8df14a47740c00b876306b72249c9489262",
+      "compatible_sha256": "e59163e92f4f35f381c7e90cb621e8df14a47740c00b876306b72249c9489262",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/Presentation/RelationNakayama.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.Presentation.RelationNakayama",
+      "sha256": "67591a12f04142c95169703c14c62af937f34255d5eabaea4dbc5a0341403b56"
+    },
+    "ProCGroups.ProP.ProfiniteFrattini": {
+      "upstream_file": "Lean4/ProCGroups/ProP/ProfiniteFrattini.lean",
+      "upstream_sha256": "a42cd45e376bfc9791c27df4a29fca1cb55e0171e98d16e0bb56a905d5776ec7",
+      "compatible_sha256": "a42cd45e376bfc9791c27df4a29fca1cb55e0171e98d16e0bb56a905d5776ec7",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/ProP/ProfiniteFrattini.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.ProP.ProfiniteFrattini",
+      "sha256": "8fdf9c94ea605de36bec92c1d054f1a5d81bfea1e5c93694de02a47c073e7b5b"
+    },
+    "ProCGroups.Profinite.Basic": {
+      "upstream_file": "Lean4/ProCGroups/Profinite/Basic.lean",
+      "upstream_sha256": "ebc42afe560f73b15a68b0d9d537e74ebc2bc99baa23ece06167a95c2d9f30bc",
+      "compatible_sha256": "ebc42afe560f73b15a68b0d9d537e74ebc2bc99baa23ece06167a95c2d9f30bc",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Profinite/Basic.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Profinite.Basic",
+      "sha256": "919d674d73482f9a6978cbc0be930d6c1cd547555e14b8172f50a79c1f922396"
+    },
+    "ProCGroups.Profinite.OpenSubgroups": {
+      "upstream_file": "Lean4/ProCGroups/Profinite/OpenSubgroups.lean",
+      "upstream_sha256": "2e4ee9ef6825f18f65b0247d73c37907445c9f8fe3535f7f9f581976b761505a",
+      "compatible_sha256": "2e4ee9ef6825f18f65b0247d73c37907445c9f8fe3535f7f9f581976b761505a",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Profinite/OpenSubgroups.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Profinite.OpenSubgroups",
+      "sha256": "62a9f4e2433e5b3af8c2e826b361741ed471bbc1db3f2b4f4a1211ef56733f74"
+    },
+    "ProCGroups.TopologicalGroups": {
+      "upstream_file": "Lean4/ProCGroups/TopologicalGroups.lean",
+      "upstream_sha256": "137c989b8ac381d0f45106cc7ea99400d1178493fe26590afc15b6517ba8c543",
+      "compatible_sha256": "137c989b8ac381d0f45106cc7ea99400d1178493fe26590afc15b6517ba8c543",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/TopologicalGroups.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.TopologicalGroups",
+      "sha256": "0a48894b40c6e86ec1052fbdf5a890b71509e0102699cb9bb8c915952c91d40c"
+    },
+    "ProCGroups.Topologies.ContinuousMonoidHom": {
+      "upstream_file": "Lean4/ProCGroups/Topologies/ContinuousMonoidHom.lean",
+      "upstream_sha256": "c851a821e918ff7096c02303b1c9dc82643c87fce3a107c8e909cf20991a20f0",
+      "compatible_sha256": "c851a821e918ff7096c02303b1c9dc82643c87fce3a107c8e909cf20991a20f0",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Topologies/ContinuousMonoidHom.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Topologies.ContinuousMonoidHom",
+      "sha256": "463fcf148b944ae2d37292d7eeb7de25401312c46be10de029aa060ef9c3525a"
+    },
+    "ProCGroups.Topologies.ContinuousMulEquiv": {
+      "upstream_file": "Lean4/ProCGroups/Topologies/ContinuousMulEquiv.lean",
+      "upstream_sha256": "2140dbca41df70dce3f2d59b1b95658ca9cce7868342924910290e0f3c430cfc",
+      "compatible_sha256": "2140dbca41df70dce3f2d59b1b95658ca9cce7868342924910290e0f3c430cfc",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Topologies/ContinuousMulEquiv.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Topologies.ContinuousMulEquiv",
+      "sha256": "cedeb45f3dfc3c04cbffdc4be5495fd77891b6206fc26ecf71823572d1c65f11"
+    },
+    "ProCGroups.Topologies.QuotientMaps": {
+      "upstream_file": "Lean4/ProCGroups/Topologies/QuotientMaps.lean",
+      "upstream_sha256": "84f55e03a9ca98d2f3c54910ff8feb144cbaaa1cd56eafdb1ea2e73a1577c5ac",
+      "compatible_sha256": "84f55e03a9ca98d2f3c54910ff8feb144cbaaa1cd56eafdb1ea2e73a1577c5ac",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Topologies/QuotientMaps.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Topologies.QuotientMaps",
+      "sha256": "6ed2698a53e8d9f77891d1d6e40050881205b6245c7bbb95118a60c8d5db7a1f"
+    },
+    "ProCGroups.Topologies.TopologicallyCharacteristicSubgroups": {
+      "upstream_file": "Lean4/ProCGroups/Topologies/TopologicallyCharacteristicSubgroups.lean",
+      "upstream_sha256": "e8008c3d4e2f77867f5fa0ad7a3dba66fabeba9ce42eb6adfd48843cdb409c89",
+      "compatible_sha256": "e8008c3d4e2f77867f5fa0ad7a3dba66fabeba9ce42eb6adfd48843cdb409c89",
+      "file": "UnitDistance/Upstream/Yamaguchi/ProCGroups/Topologies/TopologicallyCharacteristicSubgroups.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.ProCGroups.Topologies.TopologicallyCharacteristicSubgroups",
+      "sha256": "d8889e9edc418892b106b7276f81c81fcb04823695f3e33315522062515b6ab9"
+    },
+    "SawinTotallyRealTowers.FixedFieldIntersection": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/FixedFieldIntersection.lean",
+      "upstream_sha256": "3731f6687f402a8b95d8f0dcc7f2effe85302527a9ae4432d0bb10c2848cbe16",
+      "compatible_sha256": "3731f6687f402a8b95d8f0dcc7f2effe85302527a9ae4432d0bb10c2848cbe16",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/FixedFieldIntersection.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.FixedFieldIntersection",
+      "sha256": "387976638594371238dab05280526697db54555e68fc91fe9f4b8728ee3745f8"
+    },
+    "SawinTotallyRealTowers.ProTwoFrattini": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/ProTwoFrattini.lean",
+      "upstream_sha256": "94139882e01f72243740193828a77476cde21acedcba99939128f4337565e9e8",
+      "compatible_sha256": "94139882e01f72243740193828a77476cde21acedcba99939128f4337565e9e8",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/ProTwoFrattini.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.ProTwoFrattini",
+      "sha256": "40143b7891f1d96e821f583bb8ed060714f2d3e79a438c8416248359102c6d50"
+    },
+    "SawinTotallyRealTowers.QuadraticBasis": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/QuadraticBasis.lean",
+      "upstream_sha256": "61bdcb19f59e0410b9b800fe7f9cbe97c7746e33052e509a1f7a61692043caea",
+      "compatible_sha256": "61bdcb19f59e0410b9b800fe7f9cbe97c7746e33052e509a1f7a61692043caea",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticBasis.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.QuadraticBasis",
+      "sha256": "d296cb80f3265b6534c6ee5e8ec960d1f9dfbd81547f8449515b3d91ac101786"
+    },
+    "SawinTotallyRealTowers.QuadraticBasisDiscriminant": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/QuadraticBasisDiscriminant.lean",
+      "upstream_sha256": "7be1a9d19d6f0a211854667b8e1182cbab0cdd0ed70ad2cb532f7baffa077892",
+      "compatible_sha256": "7be1a9d19d6f0a211854667b8e1182cbab0cdd0ed70ad2cb532f7baffa077892",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticBasisDiscriminant.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.QuadraticBasisDiscriminant",
+      "sha256": "873fb0a36f6f63cd5ac9c3b1a34e3b97af15565c10aa7b76b62110ace15e1c1b"
+    },
+    "SawinTotallyRealTowers.QuadraticFieldDiscriminant": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/QuadraticFieldDiscriminant.lean",
+      "upstream_sha256": "fc3c91abdc9bbd70158cdfb3abcd463cf26221ab8eeb781a0f18b93895e07a54",
+      "compatible_sha256": "fc3c91abdc9bbd70158cdfb3abcd463cf26221ab8eeb781a0f18b93895e07a54",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticFieldDiscriminant.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.QuadraticFieldDiscriminant",
+      "sha256": "4fd0363b63334dfa768d7efd31bec3ed558c38692d449726a156058e09143783"
+    },
+    "SawinTotallyRealTowers.QuadraticGenerator": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/QuadraticGenerator.lean",
+      "upstream_sha256": "f974be0a8dd6af0718a69104f73f10331a8a5750ff67e62b4dc9c512241627f0",
+      "compatible_sha256": "f974be0a8dd6af0718a69104f73f10331a8a5750ff67e62b4dc9c512241627f0",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticGenerator.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.QuadraticGenerator",
+      "sha256": "3d23df099e79b3ceaf280d7d533abc9726404cc8e3a4587a50e8d515cf432118"
+    },
+    "SawinTotallyRealTowers.QuadraticIntegerBasis": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/QuadraticIntegerBasis.lean",
+      "upstream_sha256": "abf87f3d7df7daf8c3fc0c056992b5cd3b88bce172278d7fae3668f627bd55bd",
+      "compatible_sha256": "abf87f3d7df7daf8c3fc0c056992b5cd3b88bce172278d7fae3668f627bd55bd",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticIntegerBasis.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.QuadraticIntegerBasis",
+      "sha256": "33dda1f0bc616c91f915089b970ac7730925d5cee65f4035146e136c36311571"
+    },
+    "SawinTotallyRealTowers.QuadraticIntegerRepresentation": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/QuadraticIntegerRepresentation.lean",
+      "upstream_sha256": "e7929f2eb9d8356a7b981fbedd2d37e5c31c63b8039f798bf684c6cd9d4c91b8",
+      "compatible_sha256": "e7929f2eb9d8356a7b981fbedd2d37e5c31c63b8039f798bf684c6cd9d4c91b8",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticIntegerRepresentation.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.QuadraticIntegerRepresentation",
+      "sha256": "5f2fd54e7adc7e134b525d6aea97b0ef8448adc0892d4dd2c7ff44a909541900"
+    },
+    "SawinTotallyRealTowers.QuadraticIntegralCoordinates": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/QuadraticIntegralCoordinates.lean",
+      "upstream_sha256": "ed02b9af85a2af13e340f7bf6cce3b333ef2cf626d58eddb6b59a157accb54b0",
+      "compatible_sha256": "ed02b9af85a2af13e340f7bf6cce3b333ef2cf626d58eddb6b59a157accb54b0",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticIntegralCoordinates.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.QuadraticIntegralCoordinates",
+      "sha256": "b3d866e1a9a2ffc58a480aa276a914f67b3dc905566f1bb379914ded433feebe"
+    },
+    "SawinTotallyRealTowers.QuadraticIntegralGenerator": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/QuadraticIntegralGenerator.lean",
+      "upstream_sha256": "a80c91b91be627ab31b1a7c4f6a4cfba1a718f988d6b5942f694d6b6b18ada94",
+      "compatible_sha256": "a80c91b91be627ab31b1a7c4f6a4cfba1a718f988d6b5942f694d6b6b18ada94",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticIntegralGenerator.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.QuadraticIntegralGenerator",
+      "sha256": "a24e3af991aab3d90a32a53e2adeae5f6757b01bf74ab9fc9eb5eb1d70574f0b"
+    },
+    "SawinTotallyRealTowers.QuadraticIntegralParity": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/QuadraticIntegralParity.lean",
+      "upstream_sha256": "42c36b710ff35359d1ed09d0d2be010e7382c24ad28b8d81a4411ffdbb9f6d41",
+      "compatible_sha256": "42c36b710ff35359d1ed09d0d2be010e7382c24ad28b8d81a4411ffdbb9f6d41",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticIntegralParity.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.QuadraticIntegralParity",
+      "sha256": "a959de5666ce92672b5d2a3ab7a5074f69f77137b1c1350c336c0dfd542a4a3f"
+    },
+    "SawinTotallyRealTowers.QuadraticSquarefreeGenerator": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/QuadraticSquarefreeGenerator.lean",
+      "upstream_sha256": "8dbaf19976cdc48e7efdf7d6c03059983838b88187b9cd88131af56f3172ccf1",
+      "compatible_sha256": "8dbaf19976cdc48e7efdf7d6c03059983838b88187b9cd88131af56f3172ccf1",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticSquarefreeGenerator.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.QuadraticSquarefreeGenerator",
+      "sha256": "5aec0ed282856a1886d7b4ed60f507dad2b971c3c0ab4e52289882fe2d53ce54"
+    },
+    "SawinTotallyRealTowers.QuadraticTrace": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/QuadraticTrace.lean",
+      "upstream_sha256": "39528e4f5984dff915feba0d22679387d48bba545ddab5d6ae24dfe07088a688",
+      "compatible_sha256": "39528e4f5984dff915feba0d22679387d48bba545ddab5d6ae24dfe07088a688",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticTrace.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.QuadraticTrace",
+      "sha256": "2f5a6f2b687d719c8435245b084d5dfad402b4fd5792ecce69641993a422734a"
+    },
+    "SawinTotallyRealTowers.RationalSquarefree": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/RationalSquarefree.lean",
+      "upstream_sha256": "e72db096bfd2885aafe500bf55f2c8f188c0d72d151322d3380e85b3f64d4344",
+      "compatible_sha256": "e72db096bfd2885aafe500bf55f2c8f188c0d72d151322d3380e85b3f64d4344",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/RationalSquarefree.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.RationalSquarefree",
+      "sha256": "43ba7eb98acc00b2c6b2de4c8f966c3037694b90cdf007b1be9427db70a4831f"
+    },
+    "SawinTotallyRealTowers.SquarefreeIntegralCoordinates": {
+      "upstream_file": "Lean4/SawinTotallyRealTowers/SquarefreeIntegralCoordinates.lean",
+      "upstream_sha256": "b43289e3bdf82437596bf1854184b1fe372cc5fde2753d5d90a69267e8f8e84a",
+      "compatible_sha256": "b43289e3bdf82437596bf1854184b1fe372cc5fde2753d5d90a69267e8f8e84a",
+      "file": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/SquarefreeIntegralCoordinates.lean",
+      "module": "UnitDistance.Upstream.Yamaguchi.SawinTotallyRealTowers.SquarefreeIntegralCoordinates",
+      "sha256": "14d1aa5d03f4903dc7e97ba7a363acd22a69c4eecd7ebe74f39f68c4cbe635aa"
+    }
+  }
+}

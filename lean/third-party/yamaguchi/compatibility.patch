@@ -1,0 +1,1487 @@
+--- upstream/Lean4/GaloisCohomology/ProP/PresentationQuotientEquiv.lean
++++ compatible/Lean4/GaloisCohomology/ProP/PresentationQuotientEquiv.lean
+@@ -39,7 +39,7 @@
+   let lg : continuousCohomologyZModPLifted p H n →ₗ[ZMod p]
+       continuousCohomologyZModPLifted p G n :=
+     (continuousCohomologyZModPMapLifted p g n).hom.toLinearMap
+-  refine LinearEquiv.ofLinearMap lf lg ?_ ?_
++  refine LinearEquiv.ofLinear lf lg ?_ ?_
+   · ext x
+     change ConcreteCategory.hom
+         (continuousCohomologyZModPMapLifted p f n)
+--- upstream/Lean4/ProCGroups/Categorical/AlgebraicPullbacks.lean
++++ compatible/Lean4/ProCGroups/Categorical/AlgebraicPullbacks.lean
+@@ -27,7 +27,7 @@
+ /-- Concrete pullback subgroup of \(\beta_1\) and \(\beta_2\). -/
+ def FiberProduct.subgroup (β₁ : H₁ →* H) (β₂ : H₂ →* H) : Subgroup (H₁ × H₂) where
+   carrier := { x | β₁ x.1 = β₂ x.2 }
+-  one_mem' := by simp only [Set.mem_ofPred_eq, Prod.fst_one, map_one, Prod.snd_one]
++  one_mem' := by simp only [Set.mem_setOf_eq, Prod.fst_one, map_one, Prod.snd_one]
+   mul_mem' := by
+     intro x y hx hy
+     change β₁ x.1 = β₂ x.2 at hx
+--- upstream/Lean4/ProCGroups/FiniteGeneration/CharacteristicChainsAndIndices.lean
++++ compatible/Lean4/ProCGroups/FiniteGeneration/CharacteristicChainsAndIndices.lean
+@@ -105,7 +105,7 @@
+     f = g := by
+   let K : Subgroup G := {
+     carrier := { x | f x = g x }
+-    one_mem' := by simp only [mem_ofPred_eq, map_one]
++    one_mem' := by simp only [mem_setOf_eq, map_one]
+     mul_mem' := by
+       intro a b ha hb
+       change f (a * b) = g (a * b)
+--- upstream/Lean4/ProCGroups/FiniteGroups/StandardClasses.lean
++++ compatible/Lean4/ProCGroups/FiniteGroups/StandardClasses.lean
+@@ -125,14 +125,14 @@
+ 
+ /-- The class of finite solvable groups. -/
+ def solvable : FiniteGroupClass.{u} where
+-  pred := fun G [_] => Finite G ∧ Group.IsSolvable G
++  pred := fun G [_] => Finite G ∧ IsSolvable G
+   finite_of_mem := fun hG => hG.1
+   mem_of_mulEquiv := by
+     intro G H _ _ e hG
+     let : Finite G := hG.1
+-    let : Group.IsSolvable G := hG.2
++    let : IsSolvable G := hG.2
+     exact ⟨Finite.of_equiv G e.toEquiv,
+-      Group.isSolvable_of_surjective (f := e.toMonoidHom) e.surjective⟩
++      solvable_of_surjective (f := e.toMonoidHom) e.surjective⟩
+ 
+ /-- The finite group class consisting of finite nilpotent groups. -/
+ def nilpotent : FiniteGroupClass.{u} where
+@@ -660,7 +660,7 @@
+   rcases hGH with ⟨e⟩
+   rcases hG with ⟨hfin, hsolv⟩
+   refine ⟨Finite.of_equiv G e.toEquiv, ?_⟩
+-  exact Group.isSolvable_of_surjective (f := e.toMonoidHom) e.surjective
++  exact solvable_of_surjective (f := e.toMonoidHom) e.surjective
+ 
+ /-- Finite solvable groups are closed under quotients. -/
+ theorem solvable_quotientClosed : QuotientClosed solvable := by
+@@ -699,7 +699,7 @@
+     cyclic G → solvable G := by
+   rintro ⟨hfin, hcyc⟩
+   have hnil : Group.IsNilpotent G := (cyclic_to_nilpotent ⟨hfin, hcyc⟩).2
+-  exact ⟨hfin, (inferInstance : Group.IsSolvable G)⟩
++  exact ⟨hfin, (inferInstance : IsSolvable G)⟩
+ 
+ /-- Every finite \(p\)-group belongs to the finite nilpotent class. -/
+ theorem pGroup_to_nilpotent {p : ℕ} [Fact (Nat.Prime p)] {G : Type u} [Group G] :
+--- upstream/Lean4/ProCGroups/FreeProC/Basic.lean
++++ compatible/Lean4/ProCGroups/FreeProC/Basic.lean
+@@ -246,7 +246,7 @@
+     hμ.eventually hU
+   change {x : X | μ x ∈ U} ∈ Filter.cofinite at heventually
+   rw [Filter.mem_cofinite] at heventually
+-  simpa only [Set.compl_ofPred, SetLike.mem_coe] using heventually
++  exact heventually
+ 
+ /-- Convergence is preserved by a continuous homomorphism. -/
+ theorem comp
+--- upstream/Lean4/ProCGroups/Generation/Basic.lean
++++ compatible/Lean4/ProCGroups/Generation/Basic.lean
+@@ -69,7 +69,7 @@
+   have hbad : {x : X | (x : G) ∉ U}.Finite := by
+     change {x : X | (x : G) ∈ U} ∈ Filter.cofinite at heventually
+     rw [Filter.mem_cofinite] at heventually
+-    simpa only [Set.compl_ofPred] using heventually
++    exact heventually
+   have hsubset :
+       X \ (U : Set G) ⊆
+         (fun x : X => (x : G)) '' {x : X | (x : G) ∉ U} := by
+--- upstream/Lean4/ProCGroups/Generation/QuotientCriteria.lean
++++ compatible/Lean4/ProCGroups/Generation/QuotientCriteria.lean
+@@ -243,7 +243,7 @@
+     have htop :
+         (⊤ : Subgroup (G ⧸ (U : Subgroup G))) ≤
+           (Subgroup.closure (((QuotientGroup.mk' (U : Subgroup G)) '' X))).topologicalClosure := by
+-      simpa [TopologicallyGenerates] using hgen
++      exact hgen.ge
+     exact hx_not_qH (hclosure_le_qH (htop hxtop))
+ 
+ omit [T2Space G] in
+--- upstream/Lean4/ProCGroups/Generation/QuotientGeneratorConvergingPairs.lean
++++ compatible/Lean4/ProCGroups/Generation/QuotientGeneratorConvergingPairs.lean
+@@ -135,8 +135,8 @@
+     · intro y
+       simp only [QuotientGeneratorConvergingPair.sourceOfY, Subtype.coe_prop]
+     · simp only [QuotientGeneratorConvergingPair.yImage, QuotientGeneratorConvergingPair.sourceOfY,
+-  Subtype.range_coe_subtype, ofPred_mem_eq, sdiff_self, leftQuotientProjection_id, id_eq,
+-  ofPred_eq_eq_singleton, subset_singleton_iff, mem_empty_iff_false, IsEmpty.forall_iff,
++  Subtype.range_coe_subtype, setOf_mem_eq, sdiff_self, leftQuotientProjection_id, id_eq,
++  setOf_eq_eq_singleton, subset_singleton_iff, mem_empty_iff_false, IsEmpty.forall_iff,
+       implies_true]
+   le_trans A B C hAB hBC := by
+     classical
+@@ -484,7 +484,7 @@
+     have hEq : {x : X | e x ∈ X ∧ e x ∉ (V : Set G)} = {x : X | (x : G) ∉ (V : Set G)} := by
+       ext x
+       simp only [Function.Embedding.coeFn_mk, Subtype.coe_prop, SetLike.mem_coe, true_and,
+-          mem_ofPred_eq, e]
++          mem_setOf_eq, e]
+     exact hEq ▸ hfinite'
+   exact hfinite_pre.image g |>.subset hsubset
+ 
+--- upstream/Lean4/ProCGroups/InverseSystems/Basic.lean
++++ compatible/Lean4/ProCGroups/InverseSystems/Basic.lean
+@@ -370,7 +370,7 @@
+ /-- The inverse limit is a closed subspace of the product. -/
+ theorem isClosed_setOf_compatible [∀ i, T2Space (S.X i)] :
+     IsClosed {x : ∀ i, S.X i | S.Compatible x} := by
+-  simp only [Compatible, Set.ofPred_forall]
++  simp only [Compatible, Set.setOf_forall]
+   refine isClosed_iInter fun i => isClosed_iInter fun j => isClosed_iInter fun hij => ?_
+   exact isClosed_eq ((S.continuous_map hij).comp (continuous_apply j)) (continuous_apply i)
+ 
+--- upstream/Lean4/ProCGroups/InverseSystems/CompatibilityAndSurjectivity.lean
++++ compatible/Lean4/ProCGroups/InverseSystems/CompatibilityAndSurjectivity.lean
+@@ -42,7 +42,7 @@
+ -/
+ private theorem isClosed_setOf_compatibleUpTo [∀ i, T2Space (S.X i)] (j : I) :
+     IsClosed {x : ∀ i, S.X i | S.CompatibleUpTo j x} := by
+-  simp only [CompatibleUpTo, Set.ofPred_forall]
++  simp only [CompatibleUpTo, Set.setOf_forall]
+   refine isClosed_iInter fun k => isClosed_iInter fun hkj => ?_
+   exact isClosed_eq ((S.continuous_map hkj).comp (continuous_apply j)) (continuous_apply k)
+ 
+--- upstream/Lean4/ProCGroups/ProC/InverseLimits/Limits.lean
++++ compatible/Lean4/ProCGroups/ProC/InverseLimits/Limits.lean
+@@ -265,7 +265,7 @@
+     have hx :
+         gx⁻¹ * gy ∈
+           sInf {N : Subgroup G | IsOpen (N : Set G) ∧ K ≤ N ∧ N.Normal} := by
+-      simp only [Subgroup.mem_sInf, Set.mem_ofPred_eq]
++      simp only [Subgroup.mem_sInf, Set.mem_setOf_eq]
+       intro N hN
+       let U : OpenNormalSubgroup G :=
+         { toOpenSubgroup := ⟨N, hN.1⟩
+--- upstream/Lean4/ProCGroups/ProC/OpenNormalSubgroups/ClosedAndCosets.lean
++++ compatible/Lean4/ProCGroups/ProC/OpenNormalSubgroups/ClosedAndCosets.lean
+@@ -26,7 +26,7 @@
+   ext x
+   constructor
+   · intro hx
+-    simp only [Subgroup.mem_sInf, Set.mem_ofPred_eq]
++    simp only [Subgroup.mem_sInf, Set.mem_setOf_eq]
+     intro N hN
+     exact hN.2 hx
+   · intro hx
+@@ -36,7 +36,7 @@
+       change IsOpen ((fun y : G => x * y⁻¹) ⁻¹' ((H : Set G)ᶜ))
+       exact H.isClosed'.isOpen_compl.preimage (continuous_const.mul continuous_inv)
+     have h1W : (1 : G) ∈ W := by
+-      simp only [W, Set.mem_ofPred_eq, inv_one, mul_one]
++      simp only [W, Set.mem_setOf_eq, inv_one, mul_one]
+       exact hxH
+     rcases ProfiniteGrp.exist_openNormalSubgroup_sub_open_nhds_of_one
+         (G := G) hW h1W with ⟨N, hNW⟩
+@@ -49,7 +49,7 @@
+       exact Subgroup.mem_sup_left hy
+     have hxK : x ∈ (K : Subgroup G) := by
+       have hxall : ∀ N : Subgroup G, IsOpen (N : Set G) ∧ (H : Subgroup G) ≤ N → x ∈ N := by
+-        simpa only [Subgroup.mem_sInf, Set.mem_ofPred_eq] using hx
++        simpa only [Subgroup.mem_sInf, Set.mem_setOf_eq] using hx
+       exact hxall (K : Subgroup G) ⟨openSubgroup_isOpen (G := G) K, hHK⟩
+     rcases
+         (Subgroup.mem_sup_of_normal_right (s := (H : Subgroup G)) (t := (N : Subgroup G))).1
+--- upstream/Lean4/ProCGroups/ProC/OpenNormalSubgroups/FilteredFamilies.lean
++++ compatible/Lean4/ProCGroups/ProC/OpenNormalSubgroups/FilteredFamilies.lean
+@@ -187,16 +187,16 @@
+   ext x
+   constructor
+   · intro hx
+-    simp only [Subgroup.mem_sInf, Set.mem_ofPred_eq]
++    simp only [Subgroup.mem_sInf, Set.mem_setOf_eq]
+     intro N hN
+     exact hN.2.1 hx
+   · intro hx
+     have hxall :
+         ∀ N : Subgroup G, IsOpen (N : Set G) ∧ (H : Subgroup G) ≤ N ∧ N.Normal → x ∈ N := by
+-      simpa only [Subgroup.mem_sInf, Set.mem_ofPred_eq] using hx
++      simpa only [Subgroup.mem_sInf, Set.mem_setOf_eq] using hx
+     have hxOpen :
+         x ∈ sInf {N : Subgroup G | IsOpen (N : Set G) ∧ (H : Subgroup G) ≤ N} := by
+-      simp only [Subgroup.mem_sInf, Set.mem_ofPred_eq]
++      simp only [Subgroup.mem_sInf, Set.mem_setOf_eq]
+       intro N hN
+       have hNfin : Subgroup.FiniteIndex N := by
+         let : Finite (G ⧸ N) := Subgroup.quotient_finite_of_isOpen N hN.1
+--- upstream/Lean4/ProCGroups/ProC/OpenNormalSubgroups/LimitPresentation.lean
++++ compatible/Lean4/ProCGroups/ProC/OpenNormalSubgroups/LimitPresentation.lean
+@@ -229,8 +229,8 @@
+     {g : G | y⁻¹ * g ∈ (U i : Subgroup G)}, ?_, ?_, ?_, ?_, ?_⟩
+   · exact (hclopenCoset x).2
+   · exact (hclopenCoset y).2
+-  · simp only [OpenSubgroup.mem_toSubgroup, Set.mem_ofPred_eq, inv_mul_cancel, one_mem]
+-  · simp only [OpenSubgroup.mem_toSubgroup, Set.mem_ofPred_eq, inv_mul_cancel, one_mem]
++  · simp only [OpenSubgroup.mem_toSubgroup, Set.mem_setOf_eq, inv_mul_cancel, one_mem]
++  · simp only [OpenSubgroup.mem_toSubgroup, Set.mem_setOf_eq, inv_mul_cancel, one_mem]
+   · refine Set.disjoint_left.2 ?_
+     intro g hx hg
+     apply hxyi
+@@ -264,7 +264,7 @@
+         · change IsOpen (f ⁻¹' ((U i).toOpenSubgroup : Set G))
+           exact (openSubgroup_isOpen (G := G) (U i).toOpenSubgroup).preimage hf
+       refine ⟨{g : G | x⁻¹ * g ∈ (U i : Subgroup G)}, ?_, by simp only
+-          [OpenSubgroup.mem_toSubgroup, Set.mem_ofPred_eq, inv_mul_cancel, one_mem], ?_⟩
++          [OpenSubgroup.mem_toSubgroup, Set.mem_setOf_eq, inv_mul_cancel, one_mem], ?_⟩
+       · exact hclopenCoset
+       · intro g hg
+         have hxgW₁ : x⁻¹ * g ∈ W₁ := hi hg
+--- upstream/Lean4/ProCGroups/ProC/OpenNormalSubgroups/ProCGroup.lean
++++ compatible/Lean4/ProCGroups/ProC/OpenNormalSubgroups/ProCGroup.lean
+@@ -537,7 +537,7 @@
+     change IsOpen ((fun x : G => f (x * g₀)) ⁻¹' ({f g₀} : Set A))
+     exact isOpen_discrete _ |>.preimage (hf.comp (continuous_id.mul continuous_const))
+   have h1W : (1 : G) ∈ W := by
+-    simp only [Set.mem_ofPred_eq, one_mul, W]
++    simp only [Set.mem_setOf_eq, one_mul, W]
+   rcases hG.exists_openNormalSubgroupInClass_sub_open_nhds_of_one hW h1W with ⟨U, hUW⟩
+   refine ⟨U, ?_⟩
+   intro g hg
+
+--- upstream/GaloisCohomology/ProP/FiniteCyclicBarPeriodicH2Comparison.lean
++++ lean4.32/GaloisCohomology/ProP/FiniteCyclicBarPeriodicH2Comparison.lean
+@@ -38,6 +38,7 @@
+     (resolutionLinearYonedaMap P P' phi A).f n =
+       ModuleCat.ofHom (Linear.leftComp R A (phi.hom.f n)) := rfl
+ 
++set_option backward.isDefEq.respectTransparency false in
+ omit [Fintype G] in
+ theorem resolution_isoExt_hom_naturality
+     {X X' : Rep R G} {f : X ⟶ X'}
+--- upstream/Lean4/ClassFieldTheory/AbstractClassFieldTheory/Reciprocity/Main.lean
++++ compatible/Lean4/ClassFieldTheory/AbstractClassFieldTheory/Reciprocity/Main.lean
+@@ -404,7 +404,7 @@
+ 
+ section SolvableReciprocity
+ 
+-local notation "IsSolvable" => Group.IsSolvable
++local notation "IsSolvable" => IsSolvable
+ 
+ /-- The degree induction in the first reduction for solvable
+ Galois groups.  In the abelian noncyclic case one cuts out one of the
+@@ -467,8 +467,8 @@
+       FiniteGaloisSubextension.finite_extension_trans
+         (L.intermediateField_le_base S) (le_baseField K.field)
+     let MF : FiniteAbstractField G := ⟨M, hMabsolute⟩
+-    let hNsolvable : Group.IsSolvable N.extensionQuotient :=
+-      Group.isSolvable_of_isSolvable_injective
++    let hNsolvable : IsSolvable N.extensionQuotient :=
++      solvable_of_solvable_injective
+         (f := (L.lowerQuotientEquiv S).toMonoidHom)
+         (L.lowerQuotientEquiv S).injective
+     let hUcyclic : IsCyclic U.extensionQuotient := hfactorCyclic i
+@@ -505,7 +505,7 @@
+         Group.commGroupOfCenterEqTop hcenter
+       exact ⟨⟨fun x y => hcommGroup.mul_comm x y⟩⟩
+     have hSlt : S < ⊤ :=
+-      Group.IsSolvable.commutator_lt_top_of_nontrivial Q
++      IsSolvable.commutator_lt_top_of_nontrivial Q
+     let M := L.intermediateField S
+     let N := L.lowerFiniteGalois S
+     let U := L.intermediateFiniteGalois S hSnormal
+@@ -518,15 +518,15 @@
+       FiniteGaloisSubextension.finite_extension_trans
+         (L.intermediateField_le_base S) (le_baseField K.field)
+     let MF : FiniteAbstractField G := ⟨M, hMabsolute⟩
+-    let hNsolvable : Group.IsSolvable N.extensionQuotient :=
+-      Group.isSolvable_of_isSolvable_injective
++    let hNsolvable : IsSolvable N.extensionQuotient :=
++      solvable_of_solvable_injective
+         (f := (L.lowerQuotientEquiv S).toMonoidHom)
+         (L.lowerQuotientEquiv S).injective
+-    let hUpperSolvable : Group.IsSolvable (L.upperQuotient S) := by
+-      change Group.IsSolvable (Q ⧸ S)
++    let hUpperSolvable : IsSolvable (L.upperQuotient S) := by
++      change IsSolvable (Q ⧸ S)
+       infer_instance
+-    let hUsolvable : Group.IsSolvable U.extensionQuotient :=
+-      Group.isSolvable_of_isSolvable_injective
++    let hUsolvable : IsSolvable U.extensionQuotient :=
++      solvable_of_solvable_injective
+         (f := (L.upperQuotientEquiv S).symm.toMonoidHom)
+         (L.upperQuotientEquiv S).symm.injective
+     let : Finite
+@@ -614,7 +614,7 @@
+       base := K
+       below := hMK
+       finiteQuotient := hMfinite }
+-  let hNsolvable : Group.IsSolvable N.extensionQuotient :=
++  let hNsolvable : IsSolvable N.extensionQuotient :=
+     L.abstractReciprocity_sylow_lowerQuotient_isSolvable Psource
+   let rLower := D.finiteReciprocityHom A v hAxiom MF L.field hLM
+   have hrLower : Function.Surjective rLower :=
+--- upstream/Lean4/ClassFieldTheory/AbstractClassFieldTheory/Reciprocity/Sylow.lean
++++ compatible/Lean4/ClassFieldTheory/AbstractClassFieldTheory/Reciprocity/Sylow.lean
+@@ -56,7 +56,7 @@
+ 
+ section SylowSolvability
+ 
+-local notation "IsSolvable" => Group.IsSolvable
++local notation "IsSolvable" => IsSolvable
+ 
+ /-- Consequently, the actual extension `L/M` cut out by a Sylow subgroup
+ is solvable.  Mathlib proves this by the standard chain
+@@ -85,7 +85,7 @@
+           (L.field_le_intermediateField
+             (P : Subgroup L.extensionQuotient))) :=
+     (L.abstractReciprocity_sylow_lowerQuotient_isPGroup P).isNilpotent
+-  change Group.IsSolvable
++  change IsSolvable
+     ((L.intermediateField (P : Subgroup L.extensionQuotient)).toSubgroup ⧸
+       extensionSubgroup
+         (L.intermediateField (P : Subgroup L.extensionQuotient)) L.field
+--- upstream/Lean4/ClassFieldTheory/AlgebraicNumberTheory/RayClass/Topology.lean
++++ compatible/Lean4/ClassFieldTheory/AlgebraicNumberTheory/RayClass/Topology.lean
+@@ -204,7 +204,7 @@
+             InfinitePlace.Completion.extensionEmbeddingOfIsReal
+               hv (x : v.Completion)} by
+         ext x
+-        simp only [Set.mem_ofPred_eq]
++        simp only [Set.mem_setOf_eq]
+         constructor
+         · intro h
+           exact h hv
+@@ -302,7 +302,7 @@
+           (v.adicCompletionIntegers K)) ^ n :=
+     (localHigherUnitMap_eq_one_iff v n y).1 hy
+   have hIdealSet :=
+-    Valuation.Integers.maximalIdeal_pow_eq_setOfPred_le_v_algebraMap_pow
++    Valuation.Integers.maximalIdeal_pow_eq_setOf_le_v_algebraMap_pow
+       (IsDedekindDomain.HeightOneSpectrum.adicCompletionIntegers.integers
+         K v) hϖ n
+   have hyVal :
+--- upstream/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/LocalResidueDatum.lean
++++ compatible/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/LocalResidueDatum.lean
+@@ -327,8 +327,7 @@
+     ⟨E, hE, hEs⟩
+   let : Algebra k E := E.algebra
+   let : FiniteDimensional k E := hE
+-  let : Finite E := Module.finite_of_finite
+-    (decompositionResidueField K (localSeparableValuationSubring K))
++  let : Finite E := Module.finite_of_finite k
+   let : Fintype E := Fintype.ofFinite E
+   let lifts : Finset (SeparableClosure K) :=
+     Finset.univ.image (fun x : E =>
+--- upstream/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/SeparableFixedFieldNorm.lean
++++ compatible/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/SeparableFixedFieldNorm.lean
+@@ -88,7 +88,7 @@
+   let : Algebra.IsSeparable E Ω :=
+     Algebra.isSeparable_tower_top_of_isSeparable K E Ω
+   obtain ⟨φ, hφ⟩ :=
+-    (IsSepClosed.surjective_domRestrict_of_isSeparable
++    (IsSepClosed.surjective_restrictDomain_of_isSeparable
+       (K := K) (L := E) (M := Ω) (E := Ω)) f
+   let σ : Ω ≃ₐ[K] Ω :=
+     AlgEquiv.ofBijective φ
+--- upstream/Lean4/GaloisCohomology/Cyclic/Herbrand/HerbrandLowDegree/Cardinality.lean
++++ compatible/Lean4/GaloisCohomology/Cyclic/Herbrand/HerbrandLowDegree/Cardinality.lean
+@@ -51,7 +51,7 @@
+     ext a
+     apply Additive.ofMul.injective
+     simp [Rep.FiniteCyclicGroup.subCompNormHom, Rep.norm,
+-      Representation.norm, Rep.hom_comm_apply]
++      Representation.norm, Rep.hom_comm_apply, hf]
+ 
+ private noncomputable def periodicChainMap
+     (σ : G) (f : A →* B)
+--- upstream/Lean4/GaloisCohomology/Kummer/Abstract/KummerFixedField.lean
++++ compatible/Lean4/GaloisCohomology/Kummer/Abstract/KummerFixedField.lean
+@@ -72,7 +72,7 @@
+   have hset : {σ : G | ∀ a, a ∈ S → A.ρ σ a = a} =
+       ⋂ a : S, {σ : G | A.ρ σ a.1 = a.1} := by
+     ext σ
+-    simp only [Set.mem_ofPred_eq, Set.mem_iInter, Subtype.forall]
++    simp only [Set.mem_setOf_eq, Set.mem_iInter, Subtype.forall]
+   rw [hset]
+   exact isClosed_iInter fun a =>
+     isClosed_setOf_representation_fixed A hcontinuous a.1
+--- upstream/Lean4/GaloisCohomology/Topology/TotallyDisconnectedQuotients.lean
++++ compatible/Lean4/GaloisCohomology/Topology/TotallyDisconnectedQuotients.lean
+@@ -37,7 +37,7 @@
+       change IsOpen ((fun u : G => g * u⁻¹) ⁻¹' ((N : Set G)ᶜ))
+       exact hN.isOpen_compl.preimage (continuous_const.mul continuous_inv)
+     have hWone : (1 : G) ∈ W := by
+-      simpa only [W, Set.mem_ofPred_eq, inv_one, mul_one] using hgN
++      simpa only [W, Set.mem_setOf_eq, inv_one, mul_one] using hgN
+     obtain ⟨V, hVW⟩ :=
+       ProfiniteGrp.exist_openNormalSubgroup_sub_open_nhds_of_one
+         (G := G) hWopen hWone
+--- upstream/Lean4/SawinTotallyRealTowers/GaloisPCompositum.lean
++++ compatible/Lean4/SawinTotallyRealTowers/GaloisPCompositum.lean
+@@ -52,9 +52,9 @@
+   let B : IntermediateField K S :=
+     IntermediateField.restrict (show E₂ ≤ E₁ ⊔ E₂ from le_sup_right)
+   let eA : E₁ ≃ₐ[K] A :=
+-    IntermediateField.restrictAlgEquiv (show E₁ ≤ E₁ ⊔ E₂ from le_sup_left)
++    IntermediateField.restrict_algEquiv (show E₁ ≤ E₁ ⊔ E₂ from le_sup_left)
+   let eB : E₂ ≃ₐ[K] B :=
+-    IntermediateField.restrictAlgEquiv (show E₂ ≤ E₁ ⊔ E₂ from le_sup_right)
++    IntermediateField.restrict_algEquiv (show E₂ ≤ E₁ ⊔ E₂ from le_sup_right)
+   let : Normal K A := Normal.of_algEquiv eA
+   let : Normal K B := Normal.of_algEquiv eB
+   let rA : (S ≃ₐ[K] S) →* (A ≃ₐ[K] A) := AlgEquiv.restrictNormalHom A
+--- upstream/Lean4/SawinTotallyRealTowers/RamificationSupportCompositum.lean
++++ compatible/Lean4/SawinTotallyRealTowers/RamificationSupportCompositum.lean
+@@ -66,9 +66,9 @@
+     (show E₁ ≤ E₁ ⊔ E₂ from le_sup_left)
+   let B : IntermediateField K L := IntermediateField.restrict
+     (show E₂ ≤ E₁ ⊔ E₂ from le_sup_right)
+-  let eA : E₁ ≃ₐ[K] A := IntermediateField.restrictAlgEquiv
++  let eA : E₁ ≃ₐ[K] A := IntermediateField.restrict_algEquiv
+     (show E₁ ≤ E₁ ⊔ E₂ from le_sup_left)
+-  let eB : E₂ ≃ₐ[K] B := IntermediateField.restrictAlgEquiv
++  let eB : E₂ ≃ₐ[K] B := IntermediateField.restrict_algEquiv
+     (show E₂ ≤ E₁ ⊔ E₂ from le_sup_right)
+   let : FiniteDimensional K L := IntermediateField.finiteDimensional_sup E₁ E₂
+   let : NumberField L := NumberField.of_module_finite K L
+--- upstream/Lean4/SawinTotallyRealTowers/UnramifiedProPRelationRank/Global/BinaryUnramifiedCompositum.lean
++++ compatible/Lean4/SawinTotallyRealTowers/UnramifiedProPRelationRank/Global/BinaryUnramifiedCompositum.lean
+@@ -63,10 +63,10 @@
+     IntermediateField.restrict
+       (show E₂ ≤ E₁ ⊔ E₂ from le_sup_right)
+   let eA : E₁ ≃ₐ[K] A :=
+-    IntermediateField.restrictAlgEquiv
++    IntermediateField.restrict_algEquiv
+       (show E₁ ≤ E₁ ⊔ E₂ from le_sup_left)
+   let eB : E₂ ≃ₐ[K] B :=
+-    IntermediateField.restrictAlgEquiv
++    IntermediateField.restrict_algEquiv
+       (show E₂ ≤ E₁ ⊔ E₂ from le_sup_right)
+   let hFiniteS : FiniteDimensional K S :=
+     IntermediateField.finiteDimensional_sup E₁ E₂
+--- upstream/Lean4/SawinTotallyRealTowers/UnramifiedProPRelationRank/Global/EverywhereUnramifiedProPCompositum.lean
++++ compatible/Lean4/SawinTotallyRealTowers/UnramifiedProPRelationRank/Global/EverywhereUnramifiedProPCompositum.lean
+@@ -95,10 +95,10 @@
+     IntermediateField.restrict
+       (show E₂.field ≤ E₁.field ⊔ E₂.field from le_sup_right)
+   let eA : E₁.field ≃ₐ[F] A :=
+-    IntermediateField.restrictAlgEquiv
++    IntermediateField.restrict_algEquiv
+       (show E₁.field ≤ E₁.field ⊔ E₂.field from le_sup_left)
+   let eB : E₂.field ≃ₐ[F] B :=
+-    IntermediateField.restrictAlgEquiv
++    IntermediateField.restrict_algEquiv
+       (show E₂.field ≤ E₁.field ⊔ E₂.field from le_sup_right)
+   let hFiniteS : FiniteDimensional F S :=
+     IntermediateField.finiteDimensional_sup E₁.field E₂.field
+--- upstream/Lean4/ValuedFieldTheory/LocalField/DiscreteValuationField/Units.lean
++++ compatible/Lean4/ValuedFieldTheory/LocalField/DiscreteValuationField/Units.lean
+@@ -681,7 +681,7 @@
+     [(U.principalUnitSubgroup m).Normal] :
+     U.principalUnitSubgroupClassInQuotient l n →*
+       U.principalUnitSubgroupClassInQuotient l m :=
+-  ((U.quotient_principalUnitSubgroup_mapOfLe hmn).domRestrict
++  ((U.quotient_principalUnitSubgroup_mapOfLe hmn).restrict
+       (U.principalUnitSubgroupClassInQuotient l n)).codRestrict
+     (U.principalUnitSubgroupClassInQuotient l m)
+     (by
+--- upstream/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/FiniteUnramified.lean
++++ compatible/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/FiniteUnramified.lean
+@@ -648,7 +648,7 @@
+           ((integerRingMapOfValuationExtension K L xK : 𝒪[L]) : L) ≤
+         ValuativeRel.valuation L
+           ((integerRingMapOfValuationExtension K L πK : 𝒪[L]) : L) ^ n := by
+-    have hset := Irreducible.maximalIdeal_pow_eq_setOfPred_le_v_coe_pow
++    have hset := Irreducible.maximalIdeal_pow_eq_setOf_le_v_coe_pow
+       (ValuativeRel.valuation L) hπL n
+     exact (show integerRingMapOfValuationExtension K L xK ∈
+         ({y : 𝒪[L] | ValuativeRel.valuation L (y : L) ≤
+@@ -668,7 +668,7 @@
+       (xK : K) (((πK ^ n : 𝒪[K]) : K))).1 hvalL'
+   rw [mem_principalUnits_iff]
+   change xK ∈ (𝓂[K] ^ n : Ideal 𝒪[K])
+-  have hsetK := Irreducible.maximalIdeal_pow_eq_setOfPred_le_v_coe_pow
++  have hsetK := Irreducible.maximalIdeal_pow_eq_setOf_le_v_coe_pow
+     (ValuativeRel.valuation K) (chosenIntegerRingUniformizer_irreducible K) n
+   have hvalK : xK ∈
+       ({y : 𝒪[K] | ValuativeRel.valuation K (y : K) ≤
+--- upstream/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/IdealQuotients.lean
++++ compatible/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/IdealQuotients.lean
+@@ -191,7 +191,7 @@
+       have hyspan : y ∈
+           (Ideal.span ({ϖ} : Set 𝒪[K]) : Ideal 𝒪[K]) := by
+         simpa [hϖ.maximalIdeal_eq] using hym
+-      have hset := Valuation.integer.coe_span_singleton_eq_setOfPred_le_v_coe
++      have hset := Valuation.integer.coe_span_singleton_eq_setOf_le_v_coe
+         (v := ValuativeRel.valuation K) ϖ
+       have hyle : ValuativeRel.valuation K (y : K) ≤
+           ValuativeRel.valuation K ((ϖ : 𝒪[K]) : K) := by
+--- upstream/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/PrincipalUnitQuotients.lean
++++ compatible/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/PrincipalUnitQuotients.lean
+@@ -174,7 +174,7 @@
+   intro x hx
+   apply hts
+   apply hγt
+-  have hset := Irreducible.maximalIdeal_pow_eq_setOfPred_le_v_coe_pow
++  have hset := Irreducible.maximalIdeal_pow_eq_setOf_le_v_coe_pow
+     (v := ValuativeRel.valuation K) hϖ N
+   have hxset : x ∈ ((𝓂[K] ^ N : Ideal 𝒪[K]) : Set 𝒪[K]) := hx
+   rw [hset] at hxset
+@@ -198,7 +198,7 @@
+     [IsNonarchimedeanLocalField K] (n : Nat) :
+     IsClosed (((𝓂[K] ^ n : Ideal 𝒪[K]) : Set 𝒪[K])) := by
+   rcases IsDiscreteValuationRing.exists_irreducible 𝒪[K] with ⟨ϖ, hϖ⟩
+-  have hset := Irreducible.maximalIdeal_pow_eq_setOfPred_le_v_coe_pow
++  have hset := Irreducible.maximalIdeal_pow_eq_setOf_le_v_coe_pow
+     (v := ValuativeRel.valuation K) hϖ n
+   rw [hset]
+   have hclosed :
+@@ -210,7 +210,7 @@
+         (continuous_subtype_val : Continuous (fun x : 𝒪[K] => (x : K)))
+   convert hclosed using 1
+   ext x
+-  simp only [Set.mem_ofPred_eq]
++  simp only [Set.mem_setOf_eq]
+   rw [← map_pow, Valuation.restrict_le_iff, map_pow]
+ 
+ /-- Each power of the maximal ideal is a zero-neighborhood in the valuation
+@@ -231,7 +231,7 @@
+   · exact (IsValuativeTopology.hasBasis_nhds_zero K).mem_of_mem (i := γ) trivial
+   · intro x hx
+     change x ∈ ((𝓂[K] ^ n : Ideal 𝒪[K]) : Set 𝒪[K])
+-    have hset := Irreducible.maximalIdeal_pow_eq_setOfPred_le_v_coe_pow
++    have hset := Irreducible.maximalIdeal_pow_eq_setOf_le_v_coe_pow
+       (v := ValuativeRel.valuation K) hϖ n
+     rw [hset]
+     have hxv : ValuativeRel.valuation K ((x : 𝒪[K]) : K) <
+--- upstream/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/ResidueExtension.lean
++++ compatible/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/ResidueExtension.lean
+@@ -365,7 +365,7 @@
+       uniq := fun q => Subtype.ext (Set.mem_singleton_iff.mp (hprimes ▸ q.property)) }
+   rw [Ideal.ramificationIdx'_eq_ramificationIdx _ _ hp,
+     Ideal.inertiaDeg'_eq_inertiaDeg,
+-    IsFractionRing.finrank_eq 𝒪[K] K 𝒪[L] L]
++    Algebra.IsAlgebraic.finrank_of_isFractionRing 𝒪[K] K 𝒪[L] L]
+   simpa only [Fintype.sum_unique, hq] using
+     (Ideal.sum_ramification_inertia_eq_finrank (𝓂[K] : Ideal 𝒪[K]) 𝒪[L])
+ 
+--- upstream/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/SeparableNormValuation.lean
++++ compatible/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/SeparableNormValuation.lean
+@@ -137,6 +137,7 @@
+   let : IsScalarTower R T E := IsScalarTower.to₁₃₄ R S T E
+   let : IsFractionRing T E := ringNormalClosure_isFractionRing R S
+   intro hGalois
++  letI : IsGalois K E := hGalois
+   refine IsGalois.of_equiv_equiv (F := K) («E» := E)
+     (f := (FractionRing.algEquiv R K).symm.toRingEquiv)
+     (g := (FractionRing.algEquiv T E).symm.toRingEquiv) ?_
+@@ -184,6 +185,7 @@
+ 
+ attribute [local instance] FractionRing.liftAlgebra
+ 
++set_option maxHeartbeats 1000000 in
+ /-- The same separable normal-closure construction is Dedekind when the
+ original rings are Dedekind. -/
+ private theorem ringNormalClosure_isDedekindDomain_of_isSeparable
+--- upstream/Lean4/ValuedFieldTheory/Ramification/GaloisValuation/AbsoluteGalois/FiniteExtensionCorrespondence.lean
++++ compatible/Lean4/ValuedFieldTheory/Ramification/GaloisValuation/AbsoluteGalois/FiniteExtensionCorrespondence.lean
+@@ -317,7 +317,7 @@
+   rw [openSubgroupOfFiniteExtension_toSubgroup]
+   change (AlgHom.fieldRange i).fixingSubgroup.index = Module.finrank K L
+   exact (IntermediateField.finrank_eq_fixingSubgroup_index
+-    (F := K) (AlgebraicClosure K) (AlgHom.fieldRange i)).symm.trans
++    (k := K) (K := AlgebraicClosure K) (AlgHom.fieldRange i)).symm.trans
+       (AlgEquiv.ofInjectiveField i).toLinearEquiv.finrank_eq.symm
+ 
+ /-- Conjugate an embedding `i : L -> K^al` by an element of `G_K`. -/
+--- upstream/Lean4/ValuedFieldTheory/Ramification/GaloisValuation/AbsoluteGalois/InfiniteGaloisCorrespondence.lean
++++ compatible/Lean4/ValuedFieldTheory/Ramification/GaloisValuation/AbsoluteGalois/InfiniteGaloisCorrespondence.lean
+@@ -518,7 +518,7 @@
+   let hle := lift_separableClosure_le_absoluteSeparableClosure K E
+   let eAlg :
+       EsepLift ≃ₐ[K] separablePartInAbsoluteSeparableClosure K E :=
+-    IntermediateField.restrictAlgEquiv hle
++    IntermediateField.restrict_algEquiv hle
+   exact Module.Finite.equiv eAlg.toLinearEquiv
+ 
+ /-- States the theorem `separableClosureExtension_mem_fixingSubgroup_of_mem_separablePart`. -/
+@@ -1222,7 +1222,7 @@
+       Subgroup (Gal(AlgebraicClosure K / K))).index = Module.finrank K E := by
+   change E.fixingSubgroup.index = Module.finrank K E
+   exact (IntermediateField.finrank_eq_fixingSubgroup_index
+-    (F := K) (AlgebraicClosure K) E).symm
++    (k := K) (K := AlgebraicClosure K) E).symm
+ 
+ /-- The image of `Gal(K^al/E) → G_K` has finite index for finite `E/K`. -/
+ theorem range_ofIntermediateField_finiteIndex
+--- upstream/Lean4/ValuedFieldTheory/Ramification/GaloisValuation/Ramification.lean
++++ compatible/Lean4/ValuedFieldTheory/Ramification/GaloisValuation/Ramification.lean
+@@ -401,7 +401,7 @@
+ def quotientKernelMapOfLe {l m n : ℕ} (hlm : l ≤ m) (hmn : m ≤ n) :
+     F.quotientKernelOfLe (le_trans hlm hmn) →*
+       F.quotientKernelOfLe hlm :=
+-  ((F.quotientMapOfLe hmn).domRestrict
++  ((F.quotientMapOfLe hmn).restrict
+       (F.quotientKernelOfLe (le_trans hlm hmn))).codRestrict
+     (F.quotientKernelOfLe hlm)
+     (by
+--- upstream/Lean4/ValuedFieldTheory/Ramification/HilbertRamification/BaseChange.lean
++++ compatible/Lean4/ValuedFieldTheory/Ramification/HilbertRamification/BaseChange.lean
+@@ -310,7 +310,7 @@
+ def galoisPullback_ramificationGroupMap :
+     ramificationGroup K' A' →*
+       ramificationGroup K (pulledValuationSubring tauL A') :=
+-  ((galoisPullback_inertiaGroupMap tauK tauL hsquare A').domRestrict
++  ((galoisPullback_inertiaGroupMap tauK tauL hsquare A').restrict
+       (ramificationGroup K' A')).codRestrict
+     (ramificationGroup K (pulledValuationSubring tauL A'))
+     (fun sigma => by
+--- upstream/Lean4/ValuedFieldTheory/Valuation/AbsoluteValue/AlgebraicExtension/RamificationInvariants.lean
++++ compatible/Lean4/ValuedFieldTheory/Valuation/AbsoluteValue/AlgebraicExtension/RamificationInvariants.lean
+@@ -1555,7 +1555,7 @@
+           Subtype.ext (Set.mem_singleton_iff.mp (hprimes ▸ q.property)) }
+     rw [Ideal.ramificationIdx'_eq_ramificationIdx _ _ hp,
+       Ideal.inertiaDeg'_eq_inertiaDeg,
+-      IsFractionRing.finrank_eq V K W L]
++      Algebra.IsAlgebraic.finrank_of_isFractionRing V K W L]
+     simpa only [show algebraMap V W = i from rfl, Fintype.sum_unique, hq] using
+       (Ideal.sum_ramification_inertia_eq_finrank
+         (IsLocalRing.maximalIdeal V) W)
+--- upstream/Lean4/ValuedFieldTheory/Valuation/AbsoluteValue/Ostrowski.lean
++++ compatible/Lean4/ValuedFieldTheory/Valuation/AbsoluteValue/Ostrowski.lean
+@@ -747,7 +747,7 @@
+   simp only [isMinOn_univ_iff]
+   refine (show Continuous fun r : ℝ => ‖x - algebraMap ℝ F r‖ from
+     (continuous_const.sub hcont_alg).norm).exists_forall_le_of_isBounded 0 ?_
+-  simpa [isBounded_def, compl_ofPred, Ioi]
++  simpa [isBounded_def, Set.compl_setOf, Ioi]
+     using htend (Ioi_mem_atTop ‖x - algebraMap ℝ F (0 : ℝ)‖)
+ 
+ /-- The quadratic test function is cobounded under the scalar norm
+@@ -828,7 +828,7 @@
+   · simp only [isMinOn_univ_iff] at hu ⊢
+     refine (ostrowski_continuous_realRpowPhi (F := F) hs hnorm x).norm
+       |>.exists_forall_le_of_isBounded (0, 0) ?_
+-    simpa [isBounded_def, compl_ofPred, Ioi]
++    simpa [isBounded_def, Set.compl_setOf, Ioi]
+       using tendsto_norm_cobounded_atTop.comp
+         (ostrowski_tendsto_realRpowPhi_cobounded
+           (F := F) hs hnorm hc₀ hu)
+--- upstream/Lean4/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.lean
++++ compatible/Lean4/ValuedFieldTheory/Valuation/Completion/AbsoluteValueExtensions.lean
+@@ -734,7 +734,7 @@
+   let : Algebra.IsAlgebraic E A :=
+     Algebra.IsAlgebraic.tower_top (K := F) E
+   obtain ⟨psi, hpsi⟩ :=
+-    IsAlgClosed.surjective_domRestrict_of_isAlgebraic
++    IsAlgClosed.surjective_restrictDomain_of_isAlgebraic
+       (K := F) (L := E) (M := A) (E := A) phi'
+   let sigma : A ≃ₐ[F] A := AlgEquiv.ofBijective psi
+     (Algebra.IsAlgebraic.algHom_bijective psi)
+--- upstream/Lean4/ValuedFieldTheory/Valuation/Completion/PolynomialFactors.lean
++++ compatible/Lean4/ValuedFieldTheory/Valuation/Completion/PolynomialFactors.lean
+@@ -114,7 +114,7 @@
+   · intro hg
+     have hg' : g ∈ normalizedFactors p := by
+       simpa only [polynomialDistinctNormalizedFactors,
+-        polynomialNormalizedFactors, Multiset.mem_toFinset, Set.mem_ofPred_eq] using hg
++        polynomialNormalizedFactors, Multiset.mem_toFinset, Set.mem_setOf_eq] using hg
+     obtain ⟨hgirred, hgmonic, hgdvd⟩ :=
+       (Polynomial.mem_normalizedFactors_iff hp).mp hg'
+     have hgdegree : g.degree ≠ 0 :=
+--- upstream/Lean4/ValuedFieldTheory/Valuation/DiscreteValuationField/FiniteExtension/Defectless.lean
++++ compatible/Lean4/ValuedFieldTheory/Valuation/DiscreteValuationField/FiniteExtension/Defectless.lean
+@@ -51,7 +51,7 @@
+   rw [Ideal.ramificationIdx'_eq_ramificationIdx
+       base.maximalIdeal target.maximalIdeal base.maximalIdeal_ne_bot,
+     Ideal.inertiaDeg'_eq_inertiaDeg base.maximalIdeal target.maximalIdeal,
+-    IsFractionRing.finrank_eq base.valuationSubring K target.valuationSubring L]
++    Algebra.IsAlgebraic.finrank_of_isFractionRing base.valuationSubring K target.valuationSubring L]
+   exact hsum.symm
+ 
+ end ValuationTheory.DiscreteValuationField.ValuedExtension
+--- upstream/Lean4/ValuedFieldTheory/LocalField/Analytic/LogExpSeries/FormalCoreBase/PowerSeriesComposition.lean
++++ compatible/Lean4/ValuedFieldTheory/LocalField/Analytic/LogExpSeries/FormalCoreBase/PowerSeriesComposition.lean
+@@ -159,7 +159,7 @@
+   have hD :
+       PowerSeries.derivative A f * (1 + PowerSeries.X : PowerSeries A) = f := by
+     dsimp [f]
+-    rw [PowerSeries.derivative_subst hl]
++    rw [PowerSeries.derivative_subst A hl]
+     rw [PowerSeries.derivative_exp]
+     calc
+       (PowerSeries.subst l (PowerSeries.exp A) *
+@@ -227,7 +227,7 @@
+       PowerSeries.derivative A (PowerSeries.subst e l) =
+           PowerSeries.subst e (PowerSeries.derivative A l) *
+             PowerSeries.derivative A e := by
+-        rw [PowerSeries.derivative_subst he]
++        rw [PowerSeries.derivative_subst A he]
+       _ = PowerSeries.subst e (PowerSeries.derivative A l) *
+             PowerSeries.exp A := by
+         rw [hde]
+--- upstream/Lean4/ValuedFieldTheory/LocalField/DiscreteValuationField/FieldUnitDecomposition.lean
++++ compatible/Lean4/ValuedFieldTheory/LocalField/DiscreteValuationField/FieldUnitDecomposition.lean
+@@ -678,13 +678,13 @@
+     have hy' :
+       (Valued.v : _root_.Valuation K Γ).restrict
+           (y - ((u : F.valuationSubring) : K)) < 1 := by
+-      simpa only [Set.mem_ofPred_eq, Units.val_one] using hy
++      simpa only [Set.mem_setOf_eq, Units.val_one] using hy
+     have hval :
+       (Valued.v : _root_.Valuation K Γ)
+           (y - ((u : F.valuationSubring) : K)) < 1 :=
+       (_root_.Valuation.restrict_lt_one_iff
+         (Valued.v : _root_.Valuation K Γ)).1 hy'
+-    simpa only [Set.mem_ofPred_eq] using hval
++    simpa only [Set.mem_setOf_eq] using hval
+   have hballUnits :
+       { y : F.valuationSubringˣ |
+           (Valued.v : _root_.Valuation K Γ)
+--- upstream/Lean4/ClassFieldTheory/AlgebraicNumberTheory/Adele/FiniteRestrictedProductBaseChange.lean
++++ compatible/Lean4/ClassFieldTheory/AlgebraicNumberTheory/Adele/FiniteRestrictedProductBaseChange.lean
+@@ -318,7 +318,7 @@
+     apply Filter.eventually_cofinite.mpr
+     apply himage.subset
+     intro w hw
+-    simp only [Set.mem_ofPred_eq] at hw
++    simp only [Set.mem_setOf_eq] at hw
+     rw [Set.mem_image]
+     push Not at hw
+     rcases hw with ⟨W, hW⟩
+--- upstream/Lean4/GaloisCohomology/Kummer/Concrete/FiniteSupport.lean
++++ compatible/Lean4/GaloisCohomology/Kummer/Concrete/FiniteSupport.lean
+@@ -425,7 +425,7 @@
+     Group.fg_of_surjective
+       (chosenFiniteSupportCoefficientToQuotient_surjective
+         (K := K) (Omega := Omega) n Delta T hT)
+-  apply CommGroup.finite_of_fg_isMulTorsion
++  apply CommGroup.finite_of_fg_torsion _
+   intro q
+   apply isOfFinOrder_iff_pow_eq_one.2
+   exact ⟨(n : ℕ), n.pos,
+--- upstream/Lean4/GaloisCohomology/Kummer/Concrete/KummerCorrespondenceFormula.lean
++++ compatible/Lean4/GaloisCohomology/Kummer/Concrete/KummerCorrespondenceFormula.lean
+@@ -149,7 +149,7 @@
+     intro r
+     apply Subtype.ext
+     exact hRexponent r.1
+-  let : Finite R0 := CommGroup.finite_of_fg_isMulTorsion (G := R0) (fun r =>
++  let : Finite R0 := CommGroup.finite_of_fg_torsion R0 (fun r =>
+     isOfFinOrder_iff_pow_eq_one.mpr ⟨(n : ℕ), n.pos, hR0exponent r⟩)
+   have hHker (r : R0) : H ≤ MonoidHom.ker (f r.1) := by
+     intro g hg
+--- upstream/Lean4/ClassFieldTheory/AlgebraicNumberTheory/Ramification/Splitting/NormalClosure.lean
++++ compatible/Lean4/ClassFieldTheory/AlgebraicNumberTheory/Ramification/Splitting/NormalClosure.lean
+@@ -362,7 +362,7 @@
+       L.fixingSubgroup.index_eq_card.symm
+     _ = Module.finrank K L :=
+       (IntermediateField.finrank_eq_fixingSubgroup_index
+-        (F := K) (E' := M) L).symm
++        (k := K) (K := M) L).symm
+ 
+ variable [FiniteDimensional K M]
+ 
+--- upstream/Lean4/GaloisCohomology/ProfiniteIntegers/ProfiniteIntegerPrimeProduct.lean
++++ compatible/Lean4/GaloisCohomology/ProfiniteIntegers/ProfiniteIntegerPrimeProduct.lean
+@@ -171,7 +171,7 @@
+         Ideal.span ({(p.1 : ℤ_[p.1]) ^ n} : Set ℤ_[p.1]) := by
+     rw [← PadicInt.ker_toZModPow n, RingHom.mem_ker]
+     exact hmod
+-  simp only [Set.mem_ofPred_eq, map_zero]
++  simp only [Set.mem_setOf_eq, map_zero]
+   change zHatToPadicInt p z ∈
+     Metric.closedBall (0 : ℤ_[p.1]) ε
+   rw [Metric.mem_closedBall, dist_zero_right]
+--- upstream/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.lean
++++ compatible/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicZHatBaseChange.lean
+@@ -465,7 +465,7 @@
+       (IntermediateField.inclusion
+         (show J ≤ F from inf_le_left)).injective
+   let : FiniteDimensional ℚ E :=
+-    ((IntermediateField.restrictAlgEquiv hJT).toLinearEquiv).finiteDimensional
++    ((IntermediateField.restrict_algEquiv hJT).toLinearEquiv).finiteDimensional
+   let HR :=
+     H.toFiniteResidueAbstractField
+       rationalCyclotomicDegreeData
+@@ -491,11 +491,11 @@
+         Subgroup.index_map_equiv E.fixingSubgroup
+           rationalCyclotomicZHatFieldGalEquivZHat.toMulEquiv
+       _ = Module.finrank ℚ E :=
+-        (IntermediateField.finrank_eq_fixingSubgroup_index rationalCyclotomicZHatField E).symm
++        (IntermediateField.finrank_eq_fixingSubgroup_index (K := rationalCyclotomicZHatField) E).symm
+       _ = Module.finrank ℚ J := by
+         change Module.finrank ℚ (J.restrict hJT) = Module.finrank ℚ J
+         exact
+-          ((IntermediateField.restrictAlgEquiv hJT).toLinearEquiv).finrank_eq.symm
++          ((IntermediateField.restrict_algEquiv hJT).toLinearEquiv).finrank_eq.symm
+   let :
+       (rationalCyclotomicDegreeData.fieldImage
+         HR.field).IsFiniteRelIndex
+@@ -833,14 +833,14 @@
+     (E.fixingSubgroup.map e.toMonoidHom).index = E.fixingSubgroup.index :=
+       Subgroup.index_map_equiv E.fixingSubgroup e.toMulEquiv
+     _ = Module.finrank ℚ E :=
+-      (IntermediateField.finrank_eq_fixingSubgroup_index rationalCyclotomicZHatField E).symm
++      (IntermediateField.finrank_eq_fixingSubgroup_index (K := rationalCyclotomicZHatField) E).symm
+     _ = cyclotomicZHatIntersectionDegree K := by
+       change
+         Module.finrank ℚ
+             ((numberFieldCyclotomicZHatIntersection K).restrict hle) =
+           Module.finrank ℚ (numberFieldCyclotomicZHatIntersection K)
+       exact
+-        ((IntermediateField.restrictAlgEquiv hle).toLinearEquiv).finrank_eq.symm
++        ((IntermediateField.restrict_algEquiv hle).toLinearEquiv).finrank_eq.symm
+ 
+ /-- The actual compositum of the chosen copy of `K` with a finite
+ Galois layer of the rational cyclotomic `ZHat`-extension. -/
+@@ -1052,10 +1052,10 @@
+   let : Algebra ℚ B := B.algebra'
+   let eK : K ≃ₐ[ℚ] A :=
+     (numberFieldSeparableClosureEmbedding K).equivFieldRange.trans
+-      (IntermediateField.restrictAlgEquiv le_sup_left)
++      (IntermediateField.restrict_algEquiv le_sup_left)
+   let eE : E ≃ₐ[ℚ] B :=
+     (IntermediateField.liftAlgEquiv E.toIntermediateField).trans
+-      (IntermediateField.restrictAlgEquiv le_sup_right)
++      (IntermediateField.restrict_algEquiv le_sup_right)
+   let hE : IsGalois ℚ E := E.isGalois
+   let : IsGalois ℚ E := hE
+   let hfiniteB : FiniteDimensional ℚ B :=
+@@ -1105,10 +1105,10 @@
+   let : Algebra ℚ B := B.algebra'
+   let eK : K ≃ₐ[ℚ] A :=
+     (numberFieldSeparableClosureEmbedding K).equivFieldRange.trans
+-      (IntermediateField.restrictAlgEquiv le_sup_left)
++      (IntermediateField.restrict_algEquiv le_sup_left)
+   let eE : E ≃ₐ[ℚ] B :=
+     (IntermediateField.liftAlgEquiv E.toIntermediateField).trans
+-      (IntermediateField.restrictAlgEquiv le_sup_right)
++      (IntermediateField.restrict_algEquiv le_sup_right)
+   let hE : IsGalois ℚ E := E.isGalois
+   let : IsGalois ℚ E := hE
+   let hfiniteB : FiniteDimensional ℚ B :=
+@@ -1426,9 +1426,9 @@
+   let : Algebra ℚ B := B.algebra'
+   let eK : K ≃ₐ[ℚ] A :=
+     (numberFieldSeparableClosureEmbedding K).equivFieldRange.trans
+-      (IntermediateField.restrictAlgEquiv le_sup_left)
++      (IntermediateField.restrict_algEquiv le_sup_left)
+   let eT : rationalCyclotomicZHatField ≃ₐ[ℚ] B :=
+-    IntermediateField.restrictAlgEquiv le_sup_right
++    IntermediateField.restrict_algEquiv le_sup_right
+   let hB : IsAbelianGalois ℚ B :=
+     @IsAbelianGalois.of_algHom ℚ B rationalCyclotomicZHatField
+       _ _ _ _ _ eT.symm.toAlgHom
+@@ -1691,9 +1691,9 @@
+   let : Algebra ℚ B := B.algebra'
+   let eK : K ≃ₐ[ℚ] A :=
+     (numberFieldSeparableClosureEmbedding K).equivFieldRange.trans
+-      (IntermediateField.restrictAlgEquiv le_sup_left)
++      (IntermediateField.restrict_algEquiv le_sup_left)
+   let eT : rationalCyclotomicZHatField ≃ₐ[ℚ] B :=
+-    IntermediateField.restrictAlgEquiv le_sup_right
++    IntermediateField.restrict_algEquiv le_sup_right
+   let hB : IsAbelianGalois ℚ B :=
+     @IsAbelianGalois.of_algHom ℚ B rationalCyclotomicZHatField
+       _ _ _ _ _ eT.symm.toAlgHom
+--- upstream/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldLocalData.lean
++++ compatible/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldLocalData.lean
+@@ -766,6 +766,7 @@
+   let : (localCompleteDVF F).valuation.HasExtension B.valuation := hBext
+   exact localSeparableValuationSubring_eq_of_hasExtension F B
+ 
++set_option maxHeartbeats 1000000 in
+ /-- Changing from the canonical separable closure of a finite fixed field to
+ the original ambient separable closure identifies its intrinsic local
+ residue degree with the normalized degree on the corresponding abstract
+--- upstream/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldRelativeNorm.lean
++++ compatible/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldRelativeNorm.lean
+@@ -99,7 +99,7 @@
+       (abstractFixedField k Ω K)
+       (abstractRelativeFixedField k Ω hLK) Ω
+   obtain ⟨φ, hφ⟩ :=
+-    (IsSepClosed.surjective_domRestrict_of_isSeparable
++    (IsSepClosed.surjective_restrictDomain_of_isSeparable
+       (K := abstractFixedField k Ω K)
+       (L := abstractRelativeFixedField k Ω hLK)
+       (M := Ω) (E := Ω)) f
+--- upstream/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/Existence/FiniteUnramifiedField.lean
++++ compatible/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/Existence/FiniteUnramifiedField.lean
+@@ -116,7 +116,7 @@
+         (abstractFixedField K (SeparableClosure K)
+           U.field).fixingSubgroup.index :=
+       IntermediateField.finrank_eq_fixingSubgroup_index
+-        (F := K) (SeparableClosure K)
++        (k := K) (K := SeparableClosure K)
+         (abstractFixedField K (SeparableClosure K) U.field)
+     _ = U.field.toSubgroup.index := by
+       rw [InfiniteGalois.fixingSubgroup_fixedField U.field]
+--- upstream/Lean4/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/RelativeUnramifiedFixedField.lean
++++ compatible/Lean4/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/RelativeUnramifiedFixedField.lean
+@@ -125,6 +125,7 @@
+     (relativeUnramifiedFiniteExtension K H m hm).below H.finite
+     (relativeUnramifiedFiniteExtension K H m hm).finiteQuotient
+ 
++set_option synthInstance.maxHeartbeats 200000 in
+ /-- The actual relative fixed field has exactly the prescribed degree. -/
+ theorem relativeUnramifiedFixedField_finrank
+     (H : FiniteAbstractField (Gal(SeparableClosure K / K)))
+@@ -212,6 +213,7 @@
+ 
+ attribute [local instance] relativeUnramifiedFixedField_faithfulSMul
+ 
++set_option synthInstance.maxHeartbeats 200000 in
+ /-- The residue field of the actual relative degree-kernel extension also has
+ exactly the prescribed degree, for its compatible local valuations. -/
+ theorem relativeUnramifiedFixedField_residue_finrank :
+--- upstream/Lean4/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/UnramifiedCommonExtension.lean
++++ compatible/Lean4/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/UnramifiedCommonExtension.lean
+@@ -38,7 +38,7 @@
+     apply Nat.finite_of_card_ne_zero
+     change F.fixingSubgroup.relIndex ⊤ ≠ 0
+     rw [Subgroup.relIndex_top_right,
+-      ← IntermediateField.finrank_eq_fixingSubgroup_index (F := K) (SeparableClosure K) F]
++      ← IntermediateField.finrank_eq_fixingSubgroup_index (k := K) (K := SeparableClosure K) F]
+     exact Module.finrank_pos.ne'
+ 
+ /-- The abstract package returns precisely the original intermediate field. -/
+@@ -49,6 +49,7 @@
+       (finiteAbstractFieldOfGaloisIntermediateField K F).field = F :=
+   InfiniteGalois.fixedField_fixingSubgroup F
+ 
++set_option synthInstance.maxHeartbeats 200000 in
+ private theorem finrank_inclusion_congr
+     (A B C D : IntermediateField K (SeparableClosure K))
+     (hAB : A = B) (hCD : C = D) (hAC : A ≤ C) (hBD : B ≤ D) :
+@@ -102,6 +103,7 @@
+   rw [relativeUnramifiedFixedField_actual_eq_sup K F m hm]
+   exact le_sup_left
+ 
++set_option synthInstance.maxHeartbeats 200000 in
+ /-- The degree over the original actual field is the prescribed `m`,
+ for its literal intermediate-field inclusion. -/
+ theorem relativeUnramifiedFixedField_actual_finrank
+--- upstream/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteIdeleArtin.lean
++++ compatible/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FiniteIdeleArtin.lean
+@@ -177,7 +177,7 @@
+                   (chosenFinitePlaceExtension
+                     (L := L) v),
+                 hram⟩))
+-    simpa only [S, Set.mem_ofPred_eq, not_not,
++    simpa only [S, Set.mem_setOf_eq, not_not,
+       IdeleGroup.finiteComponent_apply] using hvS
+   rw [← chosenFinitePlaceArtinMonoidHom_ker
+     (K := K) (L := L) v] at hNorm
+@@ -519,7 +519,7 @@
+   have hComponentUnit :
+       IdeleGroup.finiteComponent W a ∈
+         (W.adicCompletionIntegers M).units := by
+-    simpa only [S, Set.mem_ofPred_eq, not_not,
++    simpa only [S, Set.mem_setOf_eq, not_not,
+       IdeleGroup.finiteComponent_apply] using hWS
+   have hvT : v ∉ T := by
+     intro hvT
+--- upstream/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/InfinitePlaceArtin.lean
++++ compatible/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/InfinitePlaceArtin.lean
+@@ -1025,7 +1025,7 @@
+   by_cases hUnramified : w.IsUnramified K
+   · have hDegree :
+         Module.finrank v.Completion w.Completion = 1 :=
+-      InfinitePlace.IsUnramified.finrank_eq_one v hUnramified
++      InfinitePlace.Completion.finrank_eq_one_of_isUnramified v hUnramified
+     have hNormTop :
+         localNormSubgroup
+           v.Completion w.Completion = ⊤ := by
+--- upstream/Lean4/ClassFieldTheory/LubinTate/FiniteLevel/PrimitiveUniformizer.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/FiniteLevel/PrimitiveUniformizer.lean
+@@ -731,7 +731,7 @@
+     simpa using hcast
+   have hvle :
+       IsDiscreteValuationRing.addVal target.valuationSubring lambda ≤ 1 :=
+-    (ENat.mul_le_mul_left_iff hdcoe (ENat.natCast_ne_top d)).1 hmul_le
++    (ENat.mul_le_mul_left_iff hdcoe (ENat.coe_ne_top d)).1 hmul_le
+   have hlambdaVal :
+       IsDiscreteValuationRing.addVal target.valuationSubring lambda = 1 :=
+     le_antisymm hvle honele
+--- upstream/Lean4/ClassFieldTheory/LubinTate/FiniteLevel/ChangedLevelCompositum.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/FiniteLevel/ChangedLevelCompositum.lean
+@@ -792,7 +792,7 @@
+     simpa only [nsmul_eq_mul] using h
+   have hmulNat := congrArg ENat.toNat hmul
+   have habd : a * d = b * d := by
+-    simpa only [ENat.toNat_mul, ENat.toNat_natCast] using hmulNat
++    simpa only [ENat.toNat_mul, ENat.toNat_coe] using hmulNat
+   exact Nat.eq_of_mul_eq_mul_right hd habd
+ 
+ /-- The original and changed levels have the same ramification index inside
+--- upstream/Lean4/ClassFieldTheory/LubinTate/FiniteLevel/HigherUnitLevelEquiv.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/FiniteLevel/HigherUnitLevelEquiv.lean
+@@ -966,7 +966,7 @@
+         IsDiscreteValuationRing.addVal target.valuationSubring
+           (alpha - beta) := by
+     have h := hsubtracted
+-    rw [← ENat.natCast_sub, hnatSub] at h
++    rw [← ENat.coe_sub, hnatSub] at h
+     exact h
+   have hqpow : q ^ n < q ^ (n + 1) :=
+     pow_lt_pow_right₀
+@@ -981,7 +981,7 @@
+   have hstrict :
+       ((e * q ^ n : ℕ) : ℕ∞) <
+         ((e * q ^ (n + 1) : ℕ) : ℕ∞) := by
+-    exact (ENat.natCast_lt_natCast).2 hstrictNat
++    exact (ENat.coe_lt_coe).2 hstrictNat
+   exact hstrict.trans_le hdeep
+ 
+ /-- A nontrivial displacement of the old primitive point by a Galois
+@@ -1289,9 +1289,9 @@
+         (hadjoin
+           (IntermediateField.mem_adjoin_simple_self K (alpha : M)))
+   let oldEquiv : L ≃ₐ[K] oldLevel :=
+-    IntermediateField.restrictAlgEquiv (le_sup_left : L ≤ M)
++    IntermediateField.restrict_algEquiv (le_sup_left : L ≤ M)
+   let changedEquiv : L' ≃ₐ[K] changedLevel :=
+-    IntermediateField.restrictAlgEquiv (le_sup_right : L' ≤ M)
++    IntermediateField.restrict_algEquiv (le_sup_right : L' ≤ M)
+   let oldPowerBasis : PowerBasis K oldLevel :=
+     (standardLubinTateLevelPowerBasis hπ n).map oldEquiv
+   let oldInclusion : oldLevel →ₐ[K] M := oldLevel.val
+@@ -1378,9 +1378,9 @@
+   let changedLevel : IntermediateField K M :=
+     IntermediateField.restrict (le_sup_right : L' ≤ M)
+   let oldEquiv : L ≃ₐ[K] oldLevel :=
+-    IntermediateField.restrictAlgEquiv (le_sup_left : L ≤ M)
++    IntermediateField.restrict_algEquiv (le_sup_left : L ≤ M)
+   let changedEquiv : L' ≃ₐ[K] changedLevel :=
+-    IntermediateField.restrictAlgEquiv (le_sup_right : L' ≤ M)
++    IntermediateField.restrict_algEquiv (le_sup_right : L' ≤ M)
+   have heq : changedLevel = oldLevel := by
+     exact
+       standardLubinTateHigherUnit_restrict_changedLevel_eq_originalLevel
+--- upstream/Lean4/ClassFieldTheory/LubinTate/Padic/ChangedUniformizerIntertwiner/CompletedSeries.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/Padic/ChangedUniformizerIntertwiner/CompletedSeries.lean
+@@ -73,26 +73,9 @@
+     standardLubinTateChangedUniformizer,
+     map_add, map_mul, map_pow, PowerSeries.map_C,
+     PowerSeries.map_X, hcard]
+-  have hcoeff :
+-      padicValuationSubringToCompletedUnramifiedWittRing p
+-          ((u : (padicLocalField p).valuationSubring) *
+-            (show (padicLocalField p).valuationSubring from
+-              padicIntEquivValuationSubring p (p : ℤ_[p]))) =
+-        padicValuationSubringToCompletedUnramifiedWittRing p u *
+-          (p : padicCompletedUnramifiedWittRing p) :=
+-    (map_mul (padicValuationSubringToCompletedUnramifiedWittRing p)
+-      (u : (padicLocalField p).valuationSubring)
+-      (show (padicLocalField p).valuationSubring from
+-        padicIntEquivValuationSubring p (p : ℤ_[p]))).trans
+-      (congrArg (fun z : padicCompletedUnramifiedWittRing p =>
+-        padicValuationSubringToCompletedUnramifiedWittRing p u * z)
+-        (padicValuationSubringToCompletedUnramifiedWittRing_uniformizer p))
+-  exact congrArg (fun z : PowerSeries (padicCompletedUnramifiedWittRing p) =>
+-      z * PowerSeries.X + PowerSeries.X ^ p)
+-    ((congrArg PowerSeries.C hcoeff).trans
+-      (map_mul PowerSeries.C
+-        (padicValuationSubringToCompletedUnramifiedWittRing p u)
+-        (p : padicCompletedUnramifiedWittRing p)))
++  simp only [padicValuationSubringToCompletedUnramifiedWittRing_uniformizer]
++  rfl
++
+ 
+ theorem padicCompletedMultiplicativeSeries_constantCoeff
+     (p : ℕ) [Fact p.Prime] :
+--- upstream/Lean4/ClassFieldTheory/LubinTate/Padic/MultiplicativeEvaluation/FiniteLevelPrimitiveRoot.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/Padic/MultiplicativeEvaluation/FiniteLevelPrimitiveRoot.lean
+@@ -382,7 +382,7 @@
+     standardLubinTatePrimitivePointIterateInteger_addVal
+       (padicMultiplicativeLubinTateSeries_isUniformizer p) n n le_rfl
+   rw [hzero, IsDiscreteValuationRing.addVal_zero] at hval
+-  exact ENat.top_ne_natCast _ hval
++  exact ENat.top_ne_coe _ hval
+ 
+ private theorem padicMultiplicativePrimitivePoint_pow_primePower
+     (p : ℕ) [Fact p.Prime] (n i : ℕ) :
+@@ -612,6 +612,7 @@
+   simpa [padicMultiplicativePrimitiveRoot, hπ, H, m,
+     lambdaU, hlambdaU, zetaMinusOne] using hrootField
+ 
++set_option maxHeartbeats 1000000 in
+ /-- For the finite Galois element supplied by the Lubin--Tate unit
+ parameter, the inverse automorphism acts on the actual primitive
+ `p ^ (n + 1)`-st root by the inverse unit exponent modulo `p ^ (n + 1)`.
+--- upstream/Lean4/ClassFieldTheory/LubinTate/Padic/CompletedPrimitiveUniformizer.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/Padic/CompletedPrimitiveUniformizer.lean
+@@ -315,7 +315,7 @@
+     simpa using hcast
+   have hvle :
+       IsDiscreteValuationRing.addVal target.valuationSubring root ≤ 1 :=
+-    (ENat.mul_le_mul_left_iff hdcoe (ENat.natCast_ne_top d)).1 hmul_le
++    (ENat.mul_le_mul_left_iff hdcoe (ENat.coe_ne_top d)).1 hmul_le
+   have hrootVal :
+       IsDiscreteValuationRing.addVal target.valuationSubring root = 1 :=
+     le_antisymm hvle honele
+@@ -652,7 +652,7 @@
+     rw [hmul, hed, mul_one]
+   have hvle :
+       IsDiscreteValuationRing.addVal target.valuationSubring θ ≤ 1 :=
+-    (ENat.mul_le_mul_left_iff hdcoe (ENat.natCast_ne_top d)).1 hmul_le
++    (ENat.mul_le_mul_left_iff hdcoe (ENat.coe_ne_top d)).1 hmul_le
+   have hθval :
+       IsDiscreteValuationRing.addVal target.valuationSubring θ = 1 :=
+     le_antisymm hvle honele
+--- upstream/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleValue.lean
++++ compatible/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicIdeleValue.lean
+@@ -378,7 +378,7 @@
+     let E :=
+       (numberFieldCyclotomicZHatIntersection K).restrict hle
+     letI : FiniteDimensional ℚ E :=
+-      (IntermediateField.restrictAlgEquiv hle).toLinearEquiv.finiteDimensional
++      (IntermediateField.restrict_algEquiv hle).toLinearEquiv.finiteDimensional
+     letI : NumberField E :=
+       NumberField.of_module_finite ℚ E
+     IdeleGroup.norm ℚ K a ∈
+@@ -390,12 +390,12 @@
+   let E :=
+     (numberFieldCyclotomicZHatIntersection K).restrict hle
+   let : FiniteDimensional ℚ E :=
+-    (IntermediateField.restrictAlgEquiv hle).toLinearEquiv.finiteDimensional
++    (IntermediateField.restrict_algEquiv hle).toLinearEquiv.finiteDimensional
+   let : NumberField E :=
+     NumberField.of_module_finite ℚ E
+   let eEK : E →ₐ[ℚ] K :=
+     (numberFieldCyclotomicZHatIntersectionEmbedding K).comp
+-      (IntermediateField.restrictAlgEquiv hle).symm.toAlgHom
++      (IntermediateField.restrict_algEquiv hle).symm.toAlgHom
+   let : Algebra E K :=
+     eEK.toRingHom.toAlgebra
+   let : IsScalarTower ℚ E K :=
+@@ -453,7 +453,7 @@
+   let E₀ :=
+     (numberFieldCyclotomicZHatIntersection K).restrict hle
+   let : FiniteDimensional ℚ E₀ :=
+-    (IntermediateField.restrictAlgEquiv hle).toLinearEquiv.finiteDimensional
++    (IntermediateField.restrict_algEquiv hle).toLinearEquiv.finiteDimensional
+   let : NumberField E₀ :=
+     NumberField.of_module_finite ℚ E₀
+   let : IsAbelianGalois ℚ rationalCyclotomicZHatField :=
+--- upstream/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicPrincipalIdele.lean
++++ compatible/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/CyclotomicPrincipalIdele.lean
+@@ -194,6 +194,7 @@
+     finiteSubfieldOfRationalCyclotomicField_le_level F
+   exact ⟨n, F, e, hn⟩
+ 
++set_option maxHeartbeats 1000000 in
+ /-- The infinite Artin automorphism of the actual rational
+ `ZHat`-field is the restriction of the infinite Artin automorphism of
+ the full rational cyclotomic field.  The statement uses the genuine
+--- upstream/Lean4/ClassFieldTheory/AlgebraicNumberTheory/Idele/NormTopology/FiniteNormArithmetic.lean
++++ compatible/Lean4/ClassFieldTheory/AlgebraicNumberTheory/Idele/NormTopology/FiniteNormArithmetic.lean
+@@ -385,7 +385,7 @@
+             (algebraMap (𝓞 K) (𝓞 L))) =
+         Ideal.absNorm v₀.asIdeal ^ Module.finrank K L := by
+     simpa only [
+-      ← IsFractionRing.finrank_eq
++      ← Algebra.IsAlgebraic.finrank_of_isFractionRing
+         (𝓞 K) (FractionRing (𝓞 K))
+         (𝓞 L) (FractionRing (𝓞 L)),
+       hfinrank] using
+--- upstream/Lean4/ValuedFieldTheory/LocalField/Padic/ClosedAddSubgroup.lean
++++ compatible/Lean4/ValuedFieldTheory/LocalField/Padic/ClosedAddSubgroup.lean
+@@ -107,7 +107,7 @@
+     simpa only [sub_self] using H.zero_mem
+   obtain ⟨n, hn⟩ := hdense.exists_mem_open hUopen hUne
+   refine ⟨n + 1, Nat.zero_lt_succ n, ?_⟩
+-  simpa only [U, Set.mem_ofPred_eq, Nat.cast_add, Nat.cast_one] using hn
++  simpa only [U, Set.mem_setOf_eq, Nat.cast_add, Nat.cast_one] using hn
+ 
+ /-- A positive integral degree is nontrivial in the multiplicative
+ copy of the additive group of `ℤ_p`. -/
+--- upstream/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FinitePlaceCyclotomicFrobeniusLift.lean
++++ compatible/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/FinitePlaceCyclotomicFrobeniusLift.lean
+@@ -308,10 +308,10 @@
+   let : Algebra ℚ B := B.algebra'
+   let eF : F ≃ₐ[ℚ] A :=
+     (numberFieldSeparableClosureEmbedding F).equivFieldRange.trans
+-      (IntermediateField.restrictAlgEquiv le_sup_left)
++      (IntermediateField.restrict_algEquiv le_sup_left)
+   let eE : E ≃ₐ[ℚ] B :=
+     (IntermediateField.liftAlgEquiv E.toIntermediateField).trans
+-      (IntermediateField.restrictAlgEquiv le_sup_right)
++      (IntermediateField.restrict_algEquiv le_sup_right)
+   let : Normal ℚ B := Normal.of_algEquiv eE
+   have hsup : B ⊔ A = ⊤ := by
+     apply IntermediateField.lift_injective C
+--- upstream/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/AbstractFixedFieldGlobalNormResidue.lean
++++ compatible/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/AbstractFixedFieldGlobalNormResidue.lean
+@@ -59,7 +59,7 @@
+     Algebra.isSeparable_tower_top_of_isSeparable
+       ℚ F (SeparableClosure ℚ)
+   obtain ⟨φ, hφ⟩ :=
+-    (IsSepClosed.surjective_domRestrict_of_isSeparable
++    (IsSepClosed.surjective_restrictDomain_of_isSeparable
+       (K := ℚ) (L := F)
+       (M := SeparableClosure ℚ)
+       (E := SeparableClosure ℚ)) j
+--- upstream/Lean4/ClassFieldTheory/AlgebraicNumberTheory/Idele/Extension/InfiniteOnePlaceBaseNorm.lean
++++ compatible/Lean4/ClassFieldTheory/AlgebraicNumberTheory/Idele/Extension/InfiniteOnePlaceBaseNorm.lean
+@@ -202,7 +202,7 @@
+     (NumberField.LiesOver.completionMap (v := v) (w := W)).toAlgebra
+   have hDegree :
+       Module.finrank v.Completion W.Completion = 1 :=
+-    InfinitePlace.IsUnramified.finrank_eq_one
++    InfinitePlace.Completion.finrank_eq_one_of_isUnramified
+       v hW
+   rw [
+     norm_infinitePlaceIdele_infinitePlaceBaseUnitExtension,
+--- upstream/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/ComplexificationArtin/NumberFieldComplexification.lean
++++ compatible/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/ComplexificationArtin/NumberFieldComplexification.lean
+@@ -165,13 +165,13 @@
+ private noncomputable def numberFieldComplexificationBaseEquiv :
+     F ≃ₐ[ℚ] numberFieldComplexificationBaseLayer F :=
+   (numberFieldSeparableClosureEmbedding F).equivFieldRange.trans
+-    (IntermediateField.restrictAlgEquiv le_sup_left)
++    (IntermediateField.restrict_algEquiv le_sup_left)
+ 
+ private noncomputable def numberFieldComplexificationCyclotomicEquiv :
+     rationalComplexificationCyclotomicField ≃ₐ[ℚ]
+       numberFieldComplexificationCyclotomicLayer F :=
+   rationalComplexificationAmbientEquiv.trans
+-    (IntermediateField.restrictAlgEquiv le_sup_right)
++    (IntermediateField.restrict_algEquiv le_sup_right)
+ 
+ private noncomputable local instance
+     numberFieldComplexificationCyclotomicLayer_isAbelianGalois :
+--- upstream/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/ComplexificationArtin/OverextensionArtin.lean
++++ compatible/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/ComplexificationArtin/OverextensionArtin.lean
+@@ -511,6 +511,8 @@
+       c
+ 
+ omit [NumberField K] [FiniteDimensional K L] in
++set_option synthInstance.maxHeartbeats 200000 in
++set_option maxHeartbeats 2000000 in
+ /-- At each class in the genuine norm quotient of the special
+ overextension, the chosen-local-factor product is the canonical
+ global norm-residue equivalence. -/
+--- upstream/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/ComplexificationArtin/InfinitePlaceCompatibility.lean
++++ compatible/Lean4/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/ComplexificationArtin/InfinitePlaceCompatibility.lean
+@@ -345,7 +345,7 @@
+         (K := K) (L := L) v →ₐ[ℚ]
+       SeparableClosure ℚ :=
+   Classical.choose
+-    (IsAlgClosed.surjective_domRestrict_of_isAlgebraic
++    (IsAlgClosed.surjective_restrictDomain_of_isAlgebraic
+       (K := ℚ)
+       (L := L)
+       (E :=
+@@ -361,10 +361,10 @@
+     infinitePlaceComplexificationOverfieldSeparableClosureEmbedding_restrictDomain
+     (v : InfinitePlace K) :
+     (infinitePlaceComplexificationOverfieldSeparableClosureEmbedding
+-      (K := K) (L := L) v).domRestrict L =
++      (K := K) (L := L) v).restrictDomain L =
+         AlgebraicNumberTheory.numberFieldSeparableClosureEmbedding L :=
+   Classical.choose_spec
+-    (IsAlgClosed.surjective_domRestrict_of_isAlgebraic
++    (IsAlgClosed.surjective_restrictDomain_of_isAlgebraic
+       (K := ℚ)
+       (L := L)
+       (E :=
+@@ -596,7 +596,7 @@
+       AlgebraicNumberTheory.numberFieldSeparableClosureEmbedding L := by
+   simpa only [
+     infinitePlaceComplexificationLowerSeparableClosureEmbedding,
+-    AlgHom.domRestrict] using
++    AlgHom.restrictDomain] using
+     infinitePlaceComplexificationOverfieldSeparableClosureEmbedding_restrictDomain
+       (K := K) (L := L) v
+ 
+--- upstream/Lean4/ValuedFieldTheory/Ramification/HilbertRamification/HerbrandTheorem.lean
++++ compatible/Lean4/ValuedFieldTheory/Ramification/HilbertRamification/HerbrandTheorem.lean
+@@ -289,7 +289,7 @@
+         apply (hmem (j + 1) (sigma : G)).2
+         have hjm : j < m := Finset.mem_range.1 hj
+         have hjle : ((j + 2 : ℕ) : ℕ∞) ≤ ((m + 2 : ℕ) : ℕ∞) :=
+-          ENat.natCast_le_natCast.2 (by omega)
++          ENat.coe_le_coe.2 (by omega)
+         simpa [i, Nat.add_assoc] using hjle.trans hhigh
+     have htrunc : truncateENatAtDVF i (s + 1) = s + 1 := by
+       exact truncateENatAtDVF_eq_right_of_natCast_le
+@@ -504,7 +504,7 @@
+         change ((j + 2 : ℕ) : ℕ∞) ≤ i
+         have hjm : j < m := Finset.mem_range.1 hj
+         have hjm' : ((j + 2 : ℕ) : ℕ∞) ≤ ((m + 2 : ℕ) : ℕ∞) :=
+-          ENat.natCast_le_natCast.2 (by omega)
++          ENat.coe_le_coe.2 (by omega)
+         exact hjm'.trans hhigh
+     have htrunc : truncateENatAtDVF i (s + 1) = s + 1 := by
+       exact truncateENatAtDVF_eq_right_of_natCast_le
+@@ -520,7 +520,7 @@
+     have hk_one : 1 ≤ k := by
+       exact_mod_cast (hi_one.trans_eq hk.symm)
+     have hk_upper : k ≤ m + 1 := by
+-      have : k < m + 2 := ENat.natCast_lt_natCast.1 (hk.symm ▸ hlt)
++      have : k < m + 2 := ENat.coe_lt_coe.1 (hk.symm ▸ hlt)
+       omega
+     have hmem : (tau : H) ∉
+         (D.depthLowerFiltration H).lower (m + 1) := hhigh
+@@ -1032,7 +1032,7 @@
+       change (realRamificationExponent
+           ((fixedFieldSubextensionFiltration F H).herbrandFunction s) : ℕ∞) ≤
+         iM ↔ _
+-      rw [← hcoe, ENat.natCast_le_natCast]
++      rw [← hcoe, ENat.coe_le_coe]
+       rw [realRamificationExponent_le_iff_add_one_le_dvf]
+       rw [havg, hetaSub]
+       have havgMax :=
+--- upstream/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/Existence/LaurentLocalField.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/Existence/LaurentLocalField.lean
+@@ -106,7 +106,7 @@
+   intro f hf
+   have hcoeff : ∀ n : ℕ, n < N → PowerSeries.coeff n f = 0 := by
+     intro n hn
+-    simp only [U, Set.mem_iInter, Set.mem_ofPred_eq] at hf
++    simp only [U, Set.mem_iInter, Set.mem_setOf_eq] at hf
+     exact hf n (Finset.mem_range.mpr hn)
+   change (Valued.v : Valuation k⸨X⸩ ℤᵐ⁰).restrict
+     ((f : k⟦X⟧) : k⸨X⸩) < γ.1
+--- upstream/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/PrimitiveIrreducible.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/PrimitiveIrreducible.lean
+@@ -256,7 +256,7 @@
+     refine ⟨a, ?_⟩
+     apply mul_left_cancel₀ (PowerSeries.X_ne_zero (R := k))
+     simpa [pow_two, mul_assoc] using ha.symm
+-  exact PowerSeries.X_prime.not_isUnit hunit
++  exact (PowerSeries.X_prime (R := k)).2.1 hunit
+ 
+ /-- The integral primitive polynomial is Eisenstein at `(T)`. -/
+ theorem equalCharacteristicLubinTateIntegralPrimitivePolynomial_isEisensteinAt
+--- upstream/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/CompletedLevel/DirectThetaAtCompletedLevel.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/CompletedLevel/DirectThetaAtCompletedLevel.lean
+@@ -141,11 +141,9 @@
+     equalCharacteristicCompletedBaseIntegerToLevel,
+     equalCharacteristicCompletedLevelUniformizer,
+     equalCharacteristicCompletedBaseUniformizer]
+-  exact congrArg
+-    (algebraMap
+-      (equalCharacteristicCompletedUnramifiedField F.residueField)
+-      (equalCharacteristicCompletedLevelField F n))
+-    (PowerSeries.coe_X (R := AlgebraicClosure F.residueField))
++  change ((PowerSeries.X : (AlgebraicClosure F.residueField)⟦X⟧) :
++    (AlgebraicClosure F.residueField)⸨X⸩) = HahnSeries.single 1 1
++  exact PowerSeries.coe_X
+ 
+ /-- The direct target parameter `uT` in the standard completed-level
+ valuation ring. -/
+--- upstream/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/FreeRankOne.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/FiniteLevel/FreeRankOne.lean
+@@ -150,6 +150,7 @@
+   rw [Nat.card_congr (equalCharacteristicLubinTateParameterEquiv F n),
+     Nat.card_fun, Nat.card_fin]
+ 
++set_option synthInstance.maxHeartbeats 200000 in
+ /-- Level `n + 1` torsion is exactly the root set of the corresponding
+ division polynomial. -/
+ noncomputable def equalCharacteristicLubinTateTorsionEquivRootSet
+--- upstream/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/PrimitivePoint.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/PrimitivePoint.lean
+@@ -881,7 +881,7 @@
+     simpa using hcast
+   have hvle :
+       IsDiscreteValuationRing.addVal target.valuationSubring lambda ≤ 1 :=
+-    (ENat.mul_le_mul_left_iff hdcoe (ENat.natCast_ne_top d)).1 hmul_le
++    (ENat.mul_le_mul_left_iff hdcoe (ENat.coe_ne_top d)).1 hmul_le
+   have honele :
+       1 ≤ IsDiscreteValuationRing.addVal target.valuationSubring lambda :=
+     Order.one_le_iff_ne_zero.mpr hvne
+--- upstream/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/LowerGroups.lean
++++ compatible/Lean4/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/LowerGroups.lean
+@@ -387,7 +387,7 @@
+         intro htop
+         exact hu (PowerSeries.order_eq_top.mp htop)
+       have hcoe : ((u.order.toNat : ℕ) : ℕ∞) = u.order :=
+-        ENat.natCast_toNat hordertop
++        ENat.coe_toNat hordertop
+       have hkorder : k ≤ u.order.toNat := by
+         rw [← hcoe] at horder
+         exact_mod_cast horder
+@@ -701,7 +701,7 @@
+         intro htop
+         exact hu (PowerSeries.order_eq_top.mp htop)
+       have hcoe : ((u.order.toNat : ℕ) : ℕ∞) = u.order :=
+-        ENat.natCast_toNat hordertop
++        ENat.coe_toNat hordertop
+       have hkorder : k ≤ u.order.toNat := by
+         rw [← hcoe] at horder
+         exact_mod_cast horder
+--- upstream/Lean4/ClassFieldTheory/LocalClassFieldTheory/LubinTateApplication/EqualCharacteristicTransportedUpperRamification.lean
++++ compatible/Lean4/ClassFieldTheory/LocalClassFieldTheory/LubinTateApplication/EqualCharacteristicTransportedUpperRamification.lean
+@@ -402,5 +402,6 @@
+   convert
+     equalCharacteristicTransportedLubinTateLocalUpperRamificationGroup_map_eq_residueCharacteristic
+       K ϖ hϖ n t using 1
++  rfl
+ 
+ end LubinTate
+--- upstream/Lean4/ClassFieldTheory/LocalClassFieldTheory/LubinTateApplication/EqualCharacteristicTransportedLevelTower.lean
++++ compatible/Lean4/ClassFieldTheory/LocalClassFieldTheory/LubinTateApplication/EqualCharacteristicTransportedLevelTower.lean
+@@ -277,5 +277,6 @@
+             K p ϖ hϖ m
+             (intermediateFieldRestrictNormalHom E L hEL σ) x) := by
+       rw [equalCharacteristicTransportedLubinTateGaloisEquiv_apply]
++      rfl
+ 
+ end LubinTate
+--- upstream/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/MultiplicativeDecomposition.lean
++++ compatible/Lean4/ValuedFieldTheory/LocalField/NonarchimedeanLocalField/MultiplicativeDecomposition.lean
+@@ -55,7 +55,7 @@
+     (Valuation.isOpen_sphere (v := ValuativeRel.valuation K)
+       (r := (ValuativeRel.valuation K).restrict (x : K)) (by simp)).preimage
+       Units.continuous_val
+-  simpa only [Set.preimage_ofPred_eq, Valuation.restrict_inj] using hopen
++  simpa only [Set.preimage_setOf_eq, Valuation.restrict_inj] using hopen
+ 
+ /-- The normalized valuation as a continuous multiplicative homomorphism. -/
+ def valuationUnitsContinuousMonoidHom
+--- upstream/Lean4/ValuedFieldTheory/Ramification/GaloisValuation/CompositumRestriction.lean
++++ compatible/Lean4/ValuedFieldTheory/Ramification/GaloisValuation/CompositumRestriction.lean
+@@ -66,9 +66,9 @@
+   let E₁F : IntermediateField K F := IntermediateField.restrict hE₁
+   let E₂F : IntermediateField K F := IntermediateField.restrict hE₂
+   let : Normal K E₁F :=
+-    Normal.of_algEquiv (IntermediateField.restrictAlgEquiv hE₁)
++    Normal.of_algEquiv (IntermediateField.restrict_algEquiv hE₁)
+   let : Normal K E₂F :=
+-    Normal.of_algEquiv (IntermediateField.restrictAlgEquiv hE₂)
++    Normal.of_algEquiv (IntermediateField.restrict_algEquiv hE₂)
+   have hsupF : E₁F ⊔ E₂F = ⊤ := by
+     apply IntermediateField.lift_injective F
+     rw [IntermediateField.lift_sup, IntermediateField.lift_restrict,
+--- upstream/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/Filtered/AbstractUnramified.lean
++++ compatible/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/Filtered/AbstractUnramified.lean
+@@ -267,7 +267,7 @@
+       exact congrArg Subgroup.index
+         (InfiniteGalois.fixingSubgroup_fixedField H.field).symm
+     _ = Module.finrank K E :=
+-      (IntermediateField.finrank_eq_fixingSubgroup_index (SeparableClosure K) E).symm
++      (IntermediateField.finrank_eq_fixingSubgroup_index E).symm
+ 
+ /-- Abstract unramifiedness of a normal finite fixed field gives actual
+ unramifiedness for its canonical spectral valuation. -/
+--- upstream/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/Filtered/InertiaUnramifiedExtension.lean
++++ compatible/Lean4/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/Filtered/InertiaUnramifiedExtension.lean
+@@ -86,8 +86,7 @@
+           symm
+           rw [← Subgroup.relIndex_top_right]
+           rfl
+-        rw [hindex, ← IntermediateField.finrank_eq_fixingSubgroup_index
+-          (SeparableClosure K) E]
++        rw [hindex, ← IntermediateField.finrank_eq_fixingSubgroup_index E]
+         exact (Module.finrank_pos (R := K) (M := E)).ne' }
+   have hnormal :
+       (extensionSubgroup
+--- upstream/Lean4/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/OrdinaryNormClassField.lean
++++ compatible/Lean4/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/OrdinaryNormClassField.lean
+@@ -147,7 +147,7 @@
+       (numberFieldTowerIdeleClassEquivAmbientFixed K L).toAddMonoidHom =
+         (MulEquiv.toAdditive
+           (ideleClassCongr
+-            (numberFieldTowerAbstractBaseFieldEquiv K L))) := by
++            (numberFieldTowerAbstractBaseFieldEquiv K L))).toAddMonoidHom := by
+   apply AddMonoidHom.ext
+   intro c
+   exact

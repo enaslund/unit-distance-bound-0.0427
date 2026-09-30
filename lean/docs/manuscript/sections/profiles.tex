@@ -1,0 +1,448 @@
+\section{Archimedean Profiles}
+\label{pf:section}
+
+For a pair of complex places, set
+\[
+ t=(1+a|z|^2)^{-1},\qquad u=(1+a|w|^2)^{-1},\qquad
+ g_D(z,w)=t^su^sP(t,u),
+\]
+where
+\[
+ s=1.14600585,\qquad a=0.0000128633241758,
+\]
+and
+\[
+ P(t,u)=\sum_{i,j=0}^3 B_{ij}b_i^3(t)b_j^3(u),\qquad
+ b_i^m(t)=\binom mi t^i(1-t)^{m-i},
+\]
+with
+\begin{equation}\label{pf:bernstein-witness}
+ B=\begin{pmatrix}
+ 1&2.4129438977&2.7721799210&6.6857798061\\
+ 2.4129438977&3.8532983888&4.6371750119&8.1307168183\\
+ 2.7721799210&4.6371750119&5.4628959084&9.5512647588\\
+ 6.6857798061&8.1307168183&9.5512647588&13.8659430610
+ \end{pmatrix}.
+\end{equation}
+All finite decimals are exact rationals. The Bernstein basis is
+nonnegative and sums to one, so $P$ is bounded above and below by
+positive constants on the real square. We prove the hypotheses of
+Proposition~\ref{fw:transfer} for these profiles and derive finite bounds
+for their functionals. Section~\ref{sec:certificate} evaluates the
+bounds at the fixed rational parameters.
+
+\subsection{The Gaussian and the Pair Convolution}
+The compact Gaussian $f_C^p=e^{-a_C|z|^2}$ gives
+\begin{equation}\label{pf:gaussian-compact}
+ J_C=\log(p/2)+\delta\log(a_C/\pi)-a_C/(2p),\qquad
+ a_C=2p\delta
+\end{equation}
+where the displayed scale maximizes the Gaussian functional. For our
+choice of $\delta$, we have $a_C<1$. The slope of the general margin as
+a function of the signature
+is $-\log\pi-2J_C+J_D$, and depends on the chosen profile.
+
+For the pair calculation, let $\alpha,\alpha'>0$ with
+$A=\alpha+\alpha'-1>0$. The Laplace identity
+\[
+ (1+|z|^2)^{-\alpha}
+ =\frac1{\Gamma(\alpha)}\int_0^\infty
+ r^{\alpha-1}e^{-r-r|z|^2}\,dr
+\]
+and Gaussian integration give
+\begin{equation}\label{pf:laplace-convolution}
+ \int_{\mathbb C}(1+|z|^2)^{-\alpha}
+          (1+|z+h|^2)^{-\alpha'}\,dz
+ =\frac\pi A\,
+ \mathbb E(1+T(1-T)|h|^2)^{-A},
+ \qquad T\sim\operatorname{Beta}(\alpha,\alpha').
+\end{equation}
+After integrating $z$, change the two positive Laplace variables to their
+sum $r$ and ratio $T$. Completing the square gives the term
+$rT(1-T)|h|^2$, and integration in $r$ gives the Beta expectation.
+Tonelli justifies the interchanges, since the integrands are nonnegative.
+
+For $A,B>0$ define
+\[
+ Q_{AB}(b)=\int_{\mathbb R}
+ (1+be^{2v})^{-A}(1+be^{-2v})^{-B}\,dv,\qquad b>0.
+\]
+The two coordinates in the pair convolution reduce to this integral with
+\[
+ b=a\sqrt{T(1-T)T'(1-T')}\le a/4.
+\]
+This follows by translating $v$ until the coefficients of $e^{2v}$ and
+$e^{-2v}$ agree, which has Jacobian one. The exponential representation is
+\[
+ \int_{\mathbb R}e^{-a(Re^{2v}+R'e^{-2v})}\,dv
+ =K_0(2a\sqrt{RR'}),\qquad
+ K_0(x)=\int_0^\infty e^{-x\cosh t}\,dt,
+\]
+where the substitution $t=2v+\frac12\log(R/R')$ and evenness cancel
+their factors of two.
+
+Splitting the $Q_{AB}$ integral at zero yields
+\begin{equation}\label{pf:elementary-hyperbola-error}
+ \left|Q_{AB}(b)-\log(1/b)
+       +\frac{\psi(A)+\psi(B)+2\gamma_E}{2}\right|
+ \le (A+B)b/2.
+\end{equation}
+Deleting the smaller factor on one half leaves
+$\frac12\int_b^\infty(1+x)^{-A}dx/x$. Its difference from its
+logarithmic constant lies between zero and $Ab/2$, by
+$0\le1-(1+x)^{-A}\le Ax$. On that half the factor removed costs at most
+$Bb/2$, since $1-(1+be^{-2v})^{-B}\le Bbe^{-2v}$.
+The other half interchanges $A$ and $B$. Thus the total positive error
+from the two tails and the total loss from the factors removed are both
+at most $(A+B)b/2$, proving the bound. The logarithmic constant follows
+from \cite[Equation~(5.9.16)]{DLMF},
+\[
+ \int_0^1\frac{(1-x)^{A-1}-1}{x}\,dx=-\psi(A)-\gamma_E.
+\]
+We use $\psi=\Gamma'/\Gamma$ and Euler's constant $\gamma_E$. For later
+formulas write
+\begin{equation}\label{pf:student-constant}
+ C_s=-2\psi(s)+\psi(2s)+(2s-1)^{-1}-\gamma_E.
+\end{equation}
+
+\subsection{Endpoint Moments and the Fourier Bound}
+
+The compact Gaussian has finite positive mass and overlap, and every
+polynomial moment under its endpoint law is finite. Since $P$ is bounded
+above and below by positive constants, the pair mass is finite for
+$sp>1$. Formula~\eqref{pf:laplace-convolution} and
+\eqref{pf:elementary-hyperbola-error} show that the pair overlap is finite:
+the Beta variables have positive parameters and finite logarithmic
+moments, and $b\le a/4$. Both integrals are positive. The energy
+$-\log g_D=s\log(1+a|z|^2)+s\log(1+a|w|^2)-\log P(t,u)$ is bounded
+below and coercive, so its sublevel sets are compact.
+
+Finite endpoint-energy second moments hold for every positive polynomial
+Student profile $t^su^sP(t,u)$ when $P$ is bounded above and below by
+positive constants on the square and $sp>1$. Choose
+$0<\epsilon<\min(s,2s-1)$ and absorb each logarithmic square into a
+factor $(1+a|z|^2)^\epsilon$. Formula~\eqref{pf:laplace-convolution}
+then has positive Beta parameters and positive hyperbola exponents.
+The bound in \eqref{pf:elementary-hyperbola-error} is a constant plus
+$|\log b|+b(A+B)/2$, which is integrable against the Beta densities.
+This proves the second-moment condition, including $s=1$.
+
+For the Fourier bound, write
+$P(t,u)=\sum B_{ij}b_i^m(t)b_j^m(u)$ with $B_{ij}>0$. For a tube width
+$0<\rho<1$, put $\omega=(\rho+\rho^2)/(1-\rho^2)$ and
+\[
+ E_{rs}=\binom mr\binom ms\max|\Delta_1^r\Delta_2^sB|,
+ \qquad q_0=\frac{\sum_{r+s>0}E_{rs}\omega^{r+s}}{\min B}.
+\]
+If $q_0<1$, the Bernstein derivative formula puts $P$ in the right
+half-plane throughout the product complex tube. Contour shifting then
+gives, with $\beta=sp$,
+\[
+ |\widehat {g_D^p}(\xi_z,\xi_w)|/A_D
+ \le (1-\rho^2)^{-2\beta}(1+q_0)^p
+ e^{-2\pi\rho(|\xi_z|+|\xi_w|)/\sqrt a}.
+\]
+Here the tube is taken after the scaling $x=\sqrt a\,z$ in each
+complex coordinate, and its imaginary displacement has Euclidean norm at
+most $\rho$. If $D(x,y)=1+\sum_j(x_j+iy_j)^2$, then
+\[
+ |D(x,y)|\ge (1-\rho^2)(1+|x|^2),\qquad
+ \left|D(x,y)^{-1}-(1+|x|^2)^{-1}\right|\le\omega.
+\]
+The latter follows by bounding the numerator by $2|x|\rho+\rho^2$
+and the denominator by $(1-\rho^2)(1+|x|^2)^2$.
+The Bernstein derivative identity bounds the coefficient of the
+$(r,s)$ Taylor term by $E_{rs}$, uniformly at real $(t,u)\in[0,1]^2$.
+Hence the complex value of $P$ differs from its positive real value by
+at most $q_0P(t,u)$. We can define $P^p$ holomorphically in the tube and have
+$|P_{\rm shifted}|^p\le(1+q_0)^pP(t,u)^p$. The displayed bound on $D$
+supplies the other factor $(1-\rho^2)^{-2sp}$. Shift each real
+Fourier contour by a vector of length $\rho/\sqrt a$ opposite its
+frequency. The shifted majorant is integrable since $sp>1$, so
+truncation and dominated convergence justify the shift. This proves the
+Fourier envelope. The tube condition $q_0<1$, in addition to positivity
+on the real square, gives explicit $M,\sigma$ in
+\eqref{geo:poisson-condition}.
+
+With the compact Gaussian \eqref{pf:gaussian-compact}, a sufficient
+global choice in \eqref{geo:poisson-condition} is
+\begin{equation}\label{pf:polynomial-fourier-contract}
+ M=\max\{2,\sqrt{K_D}\},\quad
+ \sigma=\min\{1,2\pi\rho/\sqrt a\},\quad
+ K_D=(1-\rho^2)^{-2sp}(1+q_0)^p.
+\end{equation}
+There are $b$ one-coordinate blocks and $c$ two-coordinate blocks, so their
+prefactors are bounded by $M^{b+2c}=M^d$. The maximum and minimum give
+a bound uniform in the signature.
+
+\subsection{Finite Bounds for Polynomial Profiles}
+
+Let $s\ge1$, $\beta=sp>1$, $\eta_0=2s-1$, and
+\[
+ g_D(z,w)=t^s u^s P(t,u),\qquad
+ P(t,u)=\sum_{i,j}d_{ij}t^iu^j>0\quad(0\le t,u\le1).
+\]
+Put
+\[
+ A_{ik}=\eta_0+i+k,\quad B_{jl}=\eta_0+j+l,\quad
+ w_{ijkl}=\frac{d_{ij}d_{kl}}{A_{ik}B_{jl}},\quad b_0=\sum w_{ijkl}>0,
+\]
+\[
+ c(x,y)=\frac1{x+y-1}
+ +\frac{\psi(x+y-1)-\psi(x)-\psi(y)-\gamma_E}{2},
+\]
+\[
+ \kappa_P=\frac{\sum w_{ijkl}[c(s+i,s+k)+c(s+j,s+l)]}{b_0}.
+\]
+Here $\pi^2b_0=\int_{\mathbb C^2}g_D^2$ at scale $a=1$.
+Let $z_0=a^2/16$ and assume, for every cross with nonzero coefficient,
+\begin{equation}\label{pf:cross-threshold}
+ A_{ik}B_{jl}z_0<1,\qquad
+ 2\log(4/a)\ge H_{\lceil A_{ik}\rceil-1}+H_{\lceil B_{jl}\rceil-1},
+ \qquad \log(4/a)>1/2,
+\end{equation}
+where $H_0=0$. Define
+\[
+ E_- =\log(4/a)\sum_{w_{ijkl}<0}(-w_{ijkl})
+                \frac{A_{ik}B_{jl}z_0}{1-A_{ik}B_{jl}z_0}.
+\]
+Then
+\begin{equation}\label{pf:polynomial-overlap}
+ I_D\ge\pi^2a^{-2}b_0
+       [\log(1/a)+\kappa_P-E_-/b_0].
+\end{equation}
+The bracket must be positive before taking its logarithm.
+
+To prove this bound, recall that for $A,B\ge1$,
+\[
+ Q_{AB}(b)=\int_{\mathbb R}(1+be^{2u})^{-A}(1+be^{-2u})^{-B}\,du.
+\]
+For $0<b<1$, its convergent logarithmic series is
+\[
+ Q_{AB}(b)=\sum_{n\ge0}\frac{(A)_n(B)_n}{(n!)^2}b^{2n}
+ \left[\log(1/b)+\psi(n+1)-\frac{\psi(A+n)+\psi(B+n)}2\right].
+\]
+To verify the series, substitute $x=be^{2u}$ and then $t=x/(x+b^2)$.
+This expresses $2Q_{AB}(\sqrt z)$ as
+\[
+ \int_0^1t^{B-1}(1-t)^{A-1}(1-(1-z)t)^{-A}\,dt.
+\]
+Differentiation and integration by parts give
+$z(1-z)y''+[1-(A+B+1)z]y'-AB y=0$.
+Substituting the displayed series verifies its coefficients, using
+$a_{n+1}/a_n=(n+A)(n+B)/(n+1)^2$ and the digamma recurrence.
+The coefficients have polynomial growth, so the series and its fixed
+derivatives converge locally uniformly for $0<z<1$. Its leading
+logarithm and constant agree with the elementary estimate~\eqref{pf:elementary-hyperbola-error}. To see uniqueness with these two leading terms, let
+$\phi(z)=\sum a_nz^n$, so $\phi(0)=1$ and $\phi>0$ on $[0,1)$.
+For the difference $v$ of two such solutions, reduction of order gives
+$(v/\phi)'=C/[z(1-z)^{A+B}\phi^2]$. Thus
+$v/\phi=C\log z+D+o(1)$, and the matching leading terms force $C=D=0$.
+
+The digamma recurrence and monotonicity imply
+\[
+ -H_{\lceil A\rceil-1}-H_{\lceil B\rceil-1}
+ \le2\psi(n+1)-\psi(A+n)-\psi(B+n)\le0.
+\]
+Under the threshold in \eqref{pf:cross-threshold}, every term with
+$n\ge1$ is nonnegative. Since $(A)_n(B)_n/(n!)^2\le(AB)^n$, summation gives
+\[
+ 0\le Q_{AB}(b)-\log(1/b)
+           +\tfrac12[\psi(A)+\psi(B)+2\gamma_E]
+ \le\frac{ABb^2\log(1/b)}{1-ABb^2}.
+\]
+The right side increases for $b\le a/4$ under the stated conditions.
+Apply this inside the two Beta expectations from \eqref{pf:laplace-convolution}, where $b=a\sqrt{T(1-T)T'(1-T')}\le a/4$.
+Their logarithmic expectations give $c(x,y)$. For positive cross
+coefficients we discard the nonnegative remainder. For negative cross
+coefficients we subtract its upper bound. This proves
+\eqref{pf:polynomial-overlap}, allowing either sign of monomial
+coefficient.
+
+To retain cancellation between monomial coefficients, we collect exact
+terms before bounding the signed remainder. For $n\ge0$, define
+\[
+ K_n(i,k)=\frac{(s+i)_n(s+k)_n}
+ {n!(\eta_0+i+k+n)_{n+1}},\qquad
+ S_x(j)=\sum_{h=0}^{j-1}\frac1{x+h},
+\]
+with $S_x(0)=0$, and put
+\[
+ \begin{split}
+ r_n(i,k)={}&-\eta_0^{-1}+H_n/2
+ -S_{\eta_0}(i+k+n)/2+S_{\eta_0}(i+k+2n+1)\\
+ &-[S_s(i+n)+S_s(k+n)]/2,\qquad R_n(i,k)=K_n(i,k)r_n(i,k),
+ \end{split}
+\]
+\[
+ B_n=\sum d_{ij}d_{kl}K_n(i,k)K_n(j,l),\qquad
+ V_n=\sum d_{ij}d_{kl}
+ [R_n(i,k)K_n(j,l)+K_n(i,k)R_n(j,l)].
+\]
+For rational parameters these are rational numbers. Under
+\eqref{pf:cross-threshold}, for every integer $m\ge0$,
+\begin{equation}\label{pf:collected-overlap}
+ \begin{split}
+ \frac{I_D}{\pi^2a^{-2}}\ge{}&
+ \sum_{n=0}^m a^{2n}\{B_n[\log(1/a)+C_s]+V_n\}-E_{-,m},\\
+ E_{-,m}={}&\log(4/a)\sum_{w_{ijkl}<0}(-w_{ijkl})
+ \frac{(A_{ik}B_{jl}z_0)^{m+1}}{1-A_{ik}B_{jl}z_0}.
+ \end{split}
+\end{equation}
+Thus $m=1$ retains the exact $a^2$ term and leaves a signed error of order
+$a^4\log(1/a)$ for a fixed polynomial. The displayed right-hand side is a
+lower bound for the overlap and gives no upper bound.
+
+For a cross with exponents $\alpha=s+i$, $\alpha'=s+k$ and
+$A=\alpha+\alpha'-1$, the coordinate factor at order $n$ is
+\[
+ \frac{(A)_n}{A n!}\,
+ \mathbb E[(T(1-T))^n]
+ =\frac{(\alpha)_n(\alpha')_n}
+ {n!(A+n)_{n+1}}=K_n(i,k),\quad
+ T\sim\mathrm{Beta}(\alpha,\alpha').
+\]
+The logarithmic moment uses the tilted distribution
+$\mathrm{Beta}(\alpha+n,\alpha'+n)$, giving the coordinate constant
+\[
+ \tfrac12\psi(n+1)-\tfrac12\psi(A+n)
+ -\tfrac12[\psi(\alpha+n)+\psi(\alpha'+n)]
+ +\psi(A+2n+1)=C_s/2+r_n(i,k).
+\]
+The digamma recurrence proves the rational expression for $r_n$.
+The remainder of each $Q_{AB}$ after index $m$ is nonnegative and bounded
+by $\log(1/b)(ABb^2)^{m+1}/(1-ABb^2)$. Monotonicity for $b\le a/4$
+under \eqref{pf:cross-threshold} proves \eqref{pf:collected-overlap}.
+We also have $B_n>0$, since $K_n$ has the Gram representation
+\[
+ K_n(i,k)=\frac{(s+i)_n(s+k)_n}{(n!)^2}
+ \int_0^1 t^{\eta_0+n-1}(1-t)^n t^i t^k\,dt.
+\]
+It is positive definite on any finite collection of distinct monomials,
+and its tensor square makes $B_n$ the squared norm of a nonzero
+polynomial. Individual signed crosses can still be negative.
+
+For the mass, let $T,U$ be independent $\mathrm{Beta}(\beta-1,1)$ variables.
+Radial substitution gives
+\begin{equation}\label{pf:polynomial-mass}
+ A_D=\frac{\pi^2a^{-2}}{(\beta-1)^2}\mathcal A,
+ \qquad \mathcal A=\mathbb E P(T,U)^p.
+\end{equation}
+For a rational positive Bernstein representation, first clear a common
+denominator. Since scalar multiplication of $P$ cancels from $J_D$, normalize
+it to $P=1+V$ with $|V|\le r<1$ by dividing by half the sum of the smallest
+and largest Bernstein coefficient. Then, for $N\ge2$,
+\begin{equation}\label{pf:polynomial-mass-tail}
+ \left|\mathcal A-\sum_{k=0}^N\binom pk\mathbb EV^k\right|
+ \le\frac{|\binom p{N+1}|r^{N+1}}{1-r}.
+\end{equation}
+Indeed the binomial series is uniformly convergent on $[-r,r]$ and the
+absolute binomial coefficients decrease after index two, since
+$1<p<2$. If $\beta-1=A/C$ is positive rational, the monomial moments
+$\mathbb ET^j=A/(A+Cj)$ make every coefficient in the truncated sum
+exactly rational. We calculate them by integer polynomial convolution
+and contraction. Since the mass has a negative logarithmic coefficient
+in the functional, its upper endpoint gives a lower bound for the score.
+
+For polynomials with a large ratio of maximum to minimum Bernstein
+coefficient, the following local version has a smaller tail. Partition
+$[0,1]^2$ into rational rectangles, put $q=\beta-1>0$, and on
+$\mathcal R=[l,r]\times[b,t]$ use coordinates
+$x=(T-l)/(r-l)$ and $y=(U-b)/(t-b)$. Restrict the polynomial exactly and
+express it in the Bernstein basis in $x,y$. If its coefficient bounds are
+$0<m_{\mathcal R}\le M_{\mathcal R}$, set
+\[
+ h_{\mathcal R}=(m_{\mathcal R}+M_{\mathcal R})/2,\quad
+ \rho_{\mathcal R}=
+ \frac{M_{\mathcal R}-m_{\mathcal R}}{M_{\mathcal R}+m_{\mathcal R}}<1,
+ \quad P=h_{\mathcal R}(1+W_{\mathcal R}).
+\]
+The Bernstein convex-hull property gives
+$|W_{\mathcal R}|\le\rho_{\mathcal R}$ throughout the rectangle.
+Define the unnormalized one-dimensional moments
+\begin{equation}\label{pf:subrectangle-moments}
+ \begin{split}
+ M_i(l,r)&=\int_l^r qv^{q-1}
+       \left(\frac{v-l}{r-l}\right)^i\,dv\\
+ &=\frac q{(r-l)^i}\sum_{j=0}^i\binom ij(-l)^{i-j}
+             \frac{r^{q+j}-l^{q+j}}{q+j}.
+ \end{split}
+\end{equation}
+The identity follows by expanding $(v-l)^i$. The convention $0^q=0$
+is valid because $q>0$. If
+$W_{\mathcal R}^k=\sum c^{(k)}_{ij}x^iy^j$, put
+\[
+ T_{\mathcal R,N}=h_{\mathcal R}^{p}
+ \sum_{k=0}^N\binom pk\sum_{i,j}c^{(k)}_{ij}M_i(l,r)M_j(b,t).
+\]
+Then for $N\ge2$,
+\begin{equation}\label{pf:subrectangle-mass}
+ \left|\mathcal A-\sum_{\mathcal R}T_{\mathcal R,N}\right|
+ \le\sum_{\mathcal R}h_{\mathcal R}^{p}
+ \frac{|\binom p{N+1}|\rho_{\mathcal R}^{N+1}}
+      {1-\rho_{\mathcal R}}M_0(l,r)M_0(b,t).
+\end{equation}
+This follows by integrating the uniform binomial-tail bound against the
+nonnegative density on each rectangle. Polynomial restriction,
+conversion, and powers have rational coefficients and may be calculated
+by integer convolution after clearing denominators. The endpoint powers
+in \eqref{pf:subrectangle-moments} and $h_{\mathcal R}^p$ are enclosed
+using outward-rounded logarithms and exponentials, since they need not
+be rational. Exact rational algebra followed by interval contraction
+preserves the bound when the moment formula has cancellation. For symmetric $P$
+and the same partition on both axes, off-diagonal rectangles may be
+counted twice and diagonal rectangles once. Otherwise all rectangles
+must be included separately.
+
+Combining \eqref{pf:polynomial-overlap} and
+\eqref{pf:polynomial-mass} gives
+\begin{equation}\label{pf:polynomial-functional}
+ \begin{split}
+ J_D\ge{}&\log b_0+2(1+\delta)\log(\beta-1)-2\delta\log\pi
+ -(1+\delta)\log\mathcal A+2\delta\log a\\
+ &+\log[\log(1/a)+\kappa_P-E_-/b_0].
+ \end{split}
+\end{equation}
+More generally, if $Z_*>0$ is the lower expression in
+\eqref{pf:collected-overlap} and $\mathcal A^*$ is an upper bound from
+\eqref{pf:subrectangle-mass}, we obtain the bound used in the certificate,
+\begin{equation}\label{pf:collected-functional}
+ J_D\ge\log Z_*+2(1+\delta)\log(\beta-1)-2\delta\log\pi
+       +2\delta\log a-(1+\delta)\log\mathcal A^*.
+\end{equation}
+Interval evaluation encloses this lower-bound expression. Its upper
+endpoint need not bound $J_D$.
+For rational $s$ and rational polynomial data all digamma shifts in
+$\kappa_P$ reduce to rational corrections and the single constant
+\[
+ C_s=\frac2{2s-1}-2(s-1)^2
+ \sum_{k\ge1}\frac1{k(k+s-1)(k+2s-2)}.
+\]
+The positive sum has tail at most $1/(2N^2)$ after $N$ terms. Hence
+$C_s$ can be enclosed using a finite sum and this explicit remainder.
+Together with the endpoint moments and
+\eqref{pf:polynomial-fourier-contract}, these bounds give the
+archimedean inputs to Proposition~\ref{fw:transfer}.
+Section~\ref{sec:certificate} supplies the finite-place inputs and
+evaluates the resulting margin.
+
+We also use the following digamma enclosure. For $x>0$, integers $L\ge0$
+and $m\ge1$, and $z=x+L$,
+\[
+ \left|\psi(x)-\left(\log z-\frac1{2z}
+ -\sum_{k=1}^{m-1}\frac{B_{2k}}{2kz^{2k}}
+ -\sum_{j=0}^{L-1}\frac1{x+j}\right)\right|
+ \le\frac{|B_{2m}|}{2m z^{2m}},
+\]
+where $B_{2k}$ are rational Bernoulli numbers. To verify the remainder,
+expand $(z^2+t^2)^{-1}$ as a finite geometric sum in Binet's identity
+\cite[Equation~(5.9.15)]{DLMF},
+\[
+ \psi(z)=\log z-\frac1{2z}
+ -2\int_0^\infty\frac{t}{(t^2+z^2)(e^{2\pi t}-1)}\,dt.
+\]
+The residual has a fixed sign and is bounded by the next integrated term,
+$|B_{2m}|/(2m z^{2m})$. Apply the digamma recurrence $L$ times.
+We evaluate the displayed expression with exact rational arguments and
+Bernoulli numbers, outward arithmetic, and the explicit remainder.
+The rational witness values are used without rounding the arguments.

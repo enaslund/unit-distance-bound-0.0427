@@ -1,0 +1,54 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree"
+      ],
+      "insertions": [
+        {
+          "offset": 698,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree\n"
+        }
+      ],
+      "migrated_sha256": "35c53ce824ba9f4b2f340c71130e57be97ce779ec85e1a5ab9b576a6b3c5dfe9",
+      "original_sha256": "a555d53f881aa9796b9a5a8286399afa6341222180f3ec61de997199bf7ff509",
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/ResidueDatum.lean",
+      "reason": "Restores legacy imports/instance registration; isolated exact-module compile passed (repair-triage-03)."
+    },
+    {
+      "added_imports": [
+        "Mathlib.Algebra.Algebra.IsSimpleRing"
+      ],
+      "insertions": [
+        {
+          "offset": 592,
+          "text": "public import Mathlib.Algebra.Algebra.IsSimpleRing\n"
+        }
+      ],
+      "migrated_sha256": "5564a023906fa52839a67b94b43321ff45617391177ea8cf2e25342c5586e8d3",
+      "original_sha256": "1eb19ccc8a0820dfac073d464de3f1e3f80f598139e6831529fd80caede467c3",
+      "path": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/QuadraticIntegralGenerator.lean",
+      "reason": "Restores legacy imports/instance registration; isolated exact-module compile passed (repair-triage-03)."
+    },
+    {
+      "added_imports": [
+        "Mathlib.Algebra.Group.Commute.Basic"
+      ],
+      "insertions": [
+        {
+          "offset": 420,
+          "text": "public import Mathlib.Algebra.Group.Commute.Basic\n"
+        }
+      ],
+      "migrated_sha256": "a0bb263104d4784b5c90bba88f73ded361cee406542ae0999d5803b625c90a08",
+      "original_sha256": "296489b47a2fbe22c03545255c9a80b7856551d7861020856554fb3cfe84136c",
+      "path": "UnitDistance/Upstream/Yamaguchi/ProCGroups/GroupTheory/CentralizerNormalizerCommensurator.lean",
+      "reason": "Restores legacy imports/instance registration; isolated exact-module compile passed (repair-triage-03)."
+    }
+  ],
+  "schema": "unit-distance-module-port-repair-v1",
+  "scope": "Three tested header-only import repairs; original mathematical source bodies unchanged. Import-all restores the exact previously available private instance registration, without adding hypotheses."
+}

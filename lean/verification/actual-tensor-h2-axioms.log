@@ -1,0 +1,21 @@
+Audited all 145 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 145 project declarations selected.
+Axiom audit: beginning UnitDistance.ArithmeticProP.localTensorRepIsoCoind._proof_3.
+Axiom audit: beginning UnitDistance.ArithmeticProP.localizationAut_restrict_of_commutes.
+Axiom audit: beginning UnitDistance.ArithmeticProP.localFieldToGlobalAut.
+'UnitDistance.ArithmeticProP.coindEvaluationH2_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'UnitDistance.ArithmeticProP.fieldUnitsTensorH2_eq_zero_iff_localField' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'UnitDistance.ArithmeticProP.finiteFieldUnitsTensor_eq_zero_of_inflation_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'UnitDistance.ArithmeticProP.finiteFieldUnitsTensorRestriction_eq_zero_of_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'UnitDistance.ArithmeticProP.fieldScalarUnitH2_tensor_eq_zero_iff_norm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

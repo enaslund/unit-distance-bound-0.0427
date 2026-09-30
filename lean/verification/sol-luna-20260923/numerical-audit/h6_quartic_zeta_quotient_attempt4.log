@@ -1,0 +1,28 @@
+guarded-build: admitted with 16.3 GiB host available; cgroup headroom 1.36 GiB; timeout 900s
+{
+  "status": "PASS finite coefficient equality",
+  "coefficient_count": 3922,
+  "maximal_order_decomposition_prime_count": 543,
+  "mismatch_count": 0,
+  "target_vector_sha256": "b9317cb66d83f606dbbeeecd2ad40f4e805afbfbda7bd04383b28b7e7f1e3489",
+  "pari_vector_sha256": "b9317cb66d83f606dbbeeecd2ad40f4e805afbfbda7bd04383b28b7e7f1e3489",
+  "tool": {
+    "executable": "/usr/bin/gp",
+    "version": "### Usage: /usr/bin/gp [options] [GP files]\nAvailable options:\n  [-f,--fast]\t\tFast start: do not read .gprc\n  [-q,--quiet]\t\tQuiet mode: do not print banner and history numbers\n  [-s stacksize]\tStart with the PARI stack of given size (in bytes)\n  [--default key=val]\tExecute default(key,val) on startup\n  [--emacs]\t\tRun as if in Emacs shell\n  [--help]\t\tPrint this message\n  [--test]\t\tTest mode. No history, wrap long lines (bench only)\n  [--texmacs]\t\tRun as if using TeXmacs frontend\n  [--version]\t\tOutput version info and exit\n  [--version-short]\tOutput version number and exit",
+    "generated_source_sha256": "dffac4c86dc11f0b8c7e219bc684c5e608aea0e95de312c961f3bbab2194604d",
+    "gp_elapsed_seconds": "0.033771940"
+  },
+  "source_sha256": {
+    "nonabelian-dyadic-lower-bound/research/h6-low-degree-arithmetic.json": "b0335a1a87f8c3261d4be0bff2108a520964651c8884207f54194923378b7771",
+    "nonabelian-dyadic-lower-bound/research/h6-low-degree-arithmetic.py": "09cf2aae4e0f67bf3dee34289fd767635b0499801e81d787950f48b53599c14f",
+    "nonabelian-dyadic-lower-bound/research/h6-low-degree-euler.py": "9fdee8fe5bd9fcbc90c9b28ccbdd0ec5066d49b8b52757ee3f20cc89af707f38",
+    "nonabelian-dyadic-lower-bound/research/h6-low-degree.md": "09f325e66fb399f463576aaa1314d321611dd92e89c38158851eb84836306b46",
+    "six-dimensional-lower-bound/research/next-dyadic-h5-single.py": "f9a97f5c41485914e9700a5efcebb9df0ffdbc834a56a666b994d397ab3a3ba6",
+    "six-dimensional-lower-bound/research/next-dyadic-arithmetic-extensions.json": "729cbff5f8477db075a43cec9a7e3aa20ed077a5d244592d472ac55b4bb97de6",
+    "five-prime-lower-bound/certificates/five_descent.py": "3671cea7925585b7f8a0f83310777b9dbb09c64d039544e7c3333c0d630faf0a",
+    "five-prime-lower-bound/certificates/five_single.py": "fab1dab721b92f3d2713d666e6ad9a394b6f5ff90834609d6190e432e2e0053f",
+    "unit-distance-lower-bound/certificates/five_space_data.py": "b11235fa492a91fe2b487e35bcbb46ad87bb09ab1f22ceaf2dc5e7d3b892d4ec",
+    "unit-distance-lower-bound/certificates/four_space_odd_local.py": "e3a8488c434b3e0c6978ce06f1ca1fcef76587e1b6a3ab55d21a1622ab67254b",
+    "unit-distance-lower-bound/certificates/hecke_coefficients.py": "897f51fa566be6312288f5e48552cd44655051a3967cd2123b4e05f6cb95defe"
+  }
+}

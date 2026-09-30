@@ -1,0 +1,47 @@
+{
+  "status": "PASS finite coefficient equality; post-run tool metadata correction",
+  "executed_checker_sha256": "7139eb656580755af33ece151acb072bdc76ef3d8af60e47b6118cfd22f39a5f",
+  "immutable_source_copy": "h6_quartic_zeta_quotient_attempt4.source",
+  "source_sha256": "7139eb656580755af33ece151acb072bdc76ef3d8af60e47b6118cfd22f39a5f",
+  "immutable_checker_receipt": "h6_quartic_zeta_quotient_attempt4.json",
+  "checker_receipt_sha256": "5d568a5830300ce24b1bb1411bc35c146f0241d414ba0832bd7db8d1d0d64f41",
+  "guard_log": "h6_quartic_zeta_quotient_attempt4.log",
+  "guard_log_sha256": "6189260ca42474312ad5d3579fcdfedb3f60fd20adbe21b27ae86332b87202cd",
+  "result": {
+    "coefficient_count": 3922,
+    "maximal_order_decomposition_prime_count": 543,
+    "mismatch_count": 0,
+    "vector_sha256_both_methods": "b9317cb66d83f606dbbeeecd2ad40f4e805afbfbda7bd04383b28b7e7f1e3489",
+    "all_seven_bad_local_cross_products_pass": true
+  },
+  "guard": {
+    "command": "python3 automation/lean-formalization/guarded_build.py --timeout-seconds 900 -- env PYTHONPATH=/tmp/unit-distance-flint python3 lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py",
+    "admission_host_available_gib": 16.3,
+    "admission_cgroup_headroom_gib": 1.36,
+    "guard_timeout_seconds": 900,
+    "wrapper_exit_code": 0,
+    "observed_end_to_end_wall_seconds_approx": 7.01,
+    "script_measured_gp_seconds": 0.03377194,
+    "peak_rss": "unavailable"
+  },
+  "pari_gp": {
+    "executable": "/usr/bin/gp",
+    "version": "2.17.2",
+    "version_query": "/usr/bin/gp --version-short, queried after successful run",
+    "executable_sha256": "96db9f9c75bcf665232278476bb752777086f6a86d1f645cb03a966987b96140",
+    "generated_gp_source_sha256": "dffac4c86dc11f0b8c7e219bc684c5e608aea0e95de312c961f3bbab2194604d",
+    "maximal_order_check": "The run fails unless nfcertify(K) and nfcertify(B) both return the empty vector."
+  },
+  "python_environment": {
+    "python": "3.13.5",
+    "pythonpath": "/tmp/unit-distance-flint",
+    "import_only_package": "python-flint 0.9.0",
+    "package_module_sha256": "2e5f8f1768d14eccd7961353c635195bd557f297edff8b8de09e2d211f03ec2d",
+    "extension_module_sha256": "d25ab4ad06522f9199234b18451399b9f13d923cec99ebd3a794abfb519d3d73",
+    "installation_tree_file_count": 71,
+    "installation_tree_bytes": 25419377,
+    "installation_tree_sha256": "1003f80b4b8a20a5b7f5aa2c9dea5fff6490ace53490d4a28cf5e0c35cbab6af",
+    "role": "Imported only because the pinned recurrence module transitively imports AFE modules; no python-flint or Arb numerical calculation was used."
+  },
+  "metadata_caveat": "The raw checker receipt's tool.version field contains usage text because the executed source queried gp -v, an unsupported option. A separate post-run `gp --version-short` query established 2.17.2. The corrected current source uses --version-short and records python-flint provenance; its guarded retry was deferred with exit 75 (see attempt5 receipt). No formula or arithmetic logic changed between source hashes."
+}

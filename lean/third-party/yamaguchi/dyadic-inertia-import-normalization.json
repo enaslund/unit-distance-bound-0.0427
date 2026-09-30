@@ -1,0 +1,135 @@
+{
+  "purpose": "Consistent original upstream module labels for the isolated actual dyadic inertia calculation; proof text unchanged, all affected ancestors recompiled.",
+  "modules": [
+    {
+      "module": "UnitDistance.ArithmeticDyadicGenerators",
+      "checked_source_sha256": "bcbd4ab1dcab02bf40d492ed6356c54b713629425ffdd103e03cf0e5aa25c06e",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.ArithmeticDyadicGenerators.log"
+    },
+    {
+      "module": "UnitDistance.ArithmeticDyadicModel",
+      "checked_source_sha256": "935eeda4a1484c8d234971624554e1637dd2f8712d7477fe75e5855ad51dba4a",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.ArithmeticDyadicModel.log"
+    },
+    {
+      "module": "UnitDistance.OddTameRamification",
+      "checked_source_sha256": "f2937e4d7f1502260878a4ee0749f44c4cd1afe1b7292e795e5a1109a83f27a3",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.OddTameRamification.log"
+    },
+    {
+      "module": "UnitDistance.OddTameCharacter",
+      "checked_source_sha256": "eec655ac9c42210926883cd689690aaba79491498005df4f2b04b3efcbbe852f",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.OddTameCharacter.log"
+    },
+    {
+      "module": "UnitDistance.OddTameFrobenius",
+      "checked_source_sha256": "2ac15eb61fbd1326e5fe82a638720a40efa841abf7669ea17bf9868d504c7ef8",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.OddTameFrobenius.log"
+    },
+    {
+      "module": "UnitDistance.DyadicInertiaRadical",
+      "checked_source_sha256": "37e5db728f0abdfc1894b9d8837acc694f143c6c1549dcad68bca5394696e99a",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.DyadicInertiaRadical.log"
+    },
+    {
+      "module": "UnitDistance.ArithmeticDyadicInertia",
+      "checked_source_sha256": "8943a17bd8e7c4ec5fa4dace898414af30586eb83e1734119f7dd03406040e84",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.ArithmeticDyadicInertia.log"
+    },
+    {
+      "module": "UnitDistance.OddTameRadicalAction",
+      "checked_source_sha256": "21e605cbc4efafa7971597837c5982cd21e2ff115aa4c4077d54009a7d4aa700",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.OddTameRadicalAction.log"
+    },
+    {
+      "module": "UnitDistance.OddTameResidueGeneration",
+      "checked_source_sha256": "91db3e92ee50238c4969212526ebdf75f25dc64bcf36c0d14b149ff8cc910f37",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.OddTameResidueGeneration.log"
+    },
+    {
+      "module": "UnitDistance.PadicFiniteGaloisValuation",
+      "checked_source_sha256": "bf0c4ee9538e3fae46e89d62a9350588c931ba3627a0c6a8cfedd5073b315080",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.PadicFiniteGaloisValuation.log"
+    },
+    {
+      "module": "UnitDistance.ArithmeticDyadicValuation",
+      "checked_source_sha256": "734a1d0b7fa7420ce6af97bd08d27ad1f85456f82f55ef5eea1a7aaf0ca4b71c",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.ArithmeticDyadicValuation.log"
+    },
+    {
+      "module": "UnitDistance.ArithmeticDyadicAbelianization",
+      "checked_source_sha256": "7923e4fabf4e92df9ddce11df80c4befc77c10420cc1424131d3ef0faaec25e5",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.ArithmeticDyadicAbelianization.log"
+    },
+    {
+      "module": "UnitDistance.PadicFiniteGaloisIntrinsic",
+      "checked_source_sha256": "1f11b333bab900e57b29c36fd2bbfe31d791a9aac5b9789ff6725eb1cfd7ed44",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.PadicFiniteGaloisIntrinsic.log"
+    },
+    {
+      "module": "UnitDistance.IntrinsicInertiaComparison",
+      "checked_source_sha256": "0827e73c87e7c55219baca2da99e1adf0c14b16b5c9c71567864f8cde6499934",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.IntrinsicInertiaComparison.log"
+    },
+    {
+      "module": "UnitDistance.LocalResidueSurjectivity",
+      "checked_source_sha256": "416d27fdfd43eddfc960c63127ddc14f6d43c5632b4095fd41aa0bcd34483dee",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.LocalResidueSurjectivity.log"
+    },
+    {
+      "module": "UnitDistance.LocalArtinUnitIndex",
+      "checked_source_sha256": "202098e15d644870b7df333262a570434bad72dcdd4efeed8fded06b1f9c4e73",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.LocalArtinUnitIndex.log"
+    },
+    {
+      "module": "UnitDistance.ArithmeticDyadicIntrinsic",
+      "checked_source_sha256": "7f16bfc7f8b9d4a33cb9f224c9e2b9de5dc9fdcb8eb61b0be0b3d1e7aadcc364",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.ArithmeticDyadicIntrinsic.log"
+    },
+    {
+      "module": "UnitDistance.LocalAbsoluteInertiaRestriction",
+      "checked_source_sha256": "b80bcd275be02a6e4abc779437981485b62d0f5b2cb610b278d2464adaf95ea4",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.LocalAbsoluteInertiaRestriction.log"
+    },
+    {
+      "module": "UnitDistance.FiniteAbsoluteInertiaImage",
+      "checked_source_sha256": "2176656e2d54f16424dc2f6a6dff059657492ea3309cb30eb24d50bfaff8aa84",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.FiniteAbsoluteInertiaImage.log"
+    },
+    {
+      "module": "UnitDistance.FiniteInertiaRestriction",
+      "checked_source_sha256": "4ba38794c2aeb138b4342541bbf919bf81dce815ff4c2cdf102b1175aca4d057",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.FiniteInertiaRestriction.log"
+    },
+    {
+      "module": "UnitDistance.IntegralClosureValuationTower",
+      "checked_source_sha256": "33da60ecd9193730f7aa5889d97bb478268e28074c76359ba45b024f101de23e",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.IntegralClosureValuationTower.log"
+    },
+    {
+      "module": "UnitDistance.FiniteInertiaFixedField",
+      "checked_source_sha256": "51ebb503663fdd2eb81726dccbc129bdcf770d948396661a5468616a64096389",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.FiniteInertiaFixedField.log"
+    },
+    {
+      "module": "UnitDistance.LocalArtinRestriction",
+      "checked_source_sha256": "90d0ae4c60617e9de8b8a52d31c214982b61e84b75a86e4ab48fac25930f3696",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.LocalArtinRestriction.log"
+    },
+    {
+      "module": "UnitDistance.LocalArtinUnitContainment",
+      "checked_source_sha256": "00de6ed5c9ec86a68e3d3cb90d780d6baf20054f2adf778f9f8c7557868969c5",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.LocalArtinUnitContainment.log"
+    },
+    {
+      "module": "UnitDistance.LocalInertiaFiniteImage",
+      "checked_source_sha256": "390a3e9e2f4c354c7f24a226859166f504c3f9067991df8ec114f9d8ba08c084",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.LocalInertiaFiniteImage.log"
+    },
+    {
+      "module": "UnitDistance.ArithmeticDyadicInertiaCards",
+      "checked_source_sha256": "812af7841d0ed94255d6bd7d508a1566e2e480a913c10359c76dd614d634446a",
+      "check_log": ".cache/yamaguchi-dyadic-unified/UnitDistance.ArithmeticDyadicInertiaCards.log"
+    }
+  ]
+}

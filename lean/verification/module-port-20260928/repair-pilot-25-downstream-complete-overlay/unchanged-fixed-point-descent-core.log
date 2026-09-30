@@ -1,0 +1,15 @@
+/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-downstream-complete-overlay/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescentCore.lean:91:11: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DirectedSystem (fun E => RelativeIdeleGroup.ClassGroup ℚ ↥E.toIntermediateField) fun x1 x2 x3 =>
+    ⇑(rationalRelativeIdeleClassTransition x3)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-25-downstream-complete-overlay/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitFixedPointDescentCore.lean:91:11: error: failed to synthesize
+  (i : FiniteGaloisIntermediateField ℚ (SeparableClosure ℚ)) →
+    SMul Gal(SeparableClosure ℚ/ℚ) (RelativeIdeleGroup.ClassGroup ℚ ↥i.toIntermediateField)
+(deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached
+
+Note: Use `set_option synthInstance.maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.

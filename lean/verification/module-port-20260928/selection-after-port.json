@@ -1,0 +1,28 @@
+{
+  "added_packaged_lean": [],
+  "added_project_modules": [],
+  "baseline_archive": "dist/conditional-candidate24-20260927/conditional-source-24-final.tar.gz",
+  "baseline_archive_sha256": "bb973e41a5bd4937eee6413fe459340d0009dbd049737b945951b29f18d284b0",
+  "baseline_import_graph_sha256": "3e0ac0a1ff06d4326824419501b2011e5351d7af148923b4fb11c1ca0ad97c08",
+  "baseline_packaged_lean_count": 2168,
+  "baseline_project_module_count": 2163,
+  "baseline_snapshot_sha256": "b14d950fdfd782334385ff6b68aa326fb81329bb5df5c7bd3c418da4970ac5c3",
+  "changed_explicit_imports": {},
+  "changed_packaged_lean_count": 2136,
+  "current_import_graph_sha256": "3e0ac0a1ff06d4326824419501b2011e5351d7af148923b4fb11c1ca0ad97c08",
+  "current_packaged_lean_count": 2165,
+  "current_packaged_nonclosure_lean": [
+    "UnitDistance.lean",
+    "verification/ZetaAudit.lean"
+  ],
+  "current_project_module_count": 2163,
+  "passed": true,
+  "removed_packaged_lean": [
+    "verification/conditional-20260925/diagnostics/ChallengeCheck.lean",
+    "verification/conditional-20260925/diagnostics/CompareCheck.lean",
+    "verification/conditional-20260925/diagnostics/SolutionCheck.lean"
+  ],
+  "removed_project_modules": [],
+  "schema": "unit-distance-module-port-selection-v1",
+  "scope": "Source selection and explicit imports only; no compilation or kernel replay."
+}

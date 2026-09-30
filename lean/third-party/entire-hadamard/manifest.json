@@ -1,0 +1,115 @@
+{
+  "repository": "https://github.com/alejandrozu/RiemannHypothesis-Formalization",
+  "commit": "753938937e624d1c8bbe4c208517660a672d1b8e",
+  "scope": "Generic entire-function and canonical-product analysis, including generic adaptations of divisor lemmas. No xi function, Riemann Hypothesis, or theorem assuming it is imported.",
+  "files": [
+    {
+      "source": "RiemannHypothesis/ComplexAnalysis/AntiHerglotz.lean",
+      "source_sha256": "1792b68059adde42fba35af15461764462d9b686e4a702eae240d5db0012fa88",
+      "local": "UnitDistance/Upstream/Hadamard/ComplexAnalysis/AntiHerglotz.lean",
+      "local_sha256": "1792b68059adde42fba35af15461764462d9b686e4a702eae240d5db0012fa88",
+      "modification": "Byte-identical to upstream; no internal imports to relocate and no notice needed."
+    },
+    {
+      "source": "RiemannHypothesis/ComplexAnalysis/EntireQuotient.lean",
+      "source_sha256": "ca9213e5608b0d63e5d3a2a5fe982ffb72bf77b815c8a0f29ce6420cd471105e",
+      "local": "UnitDistance/Upstream/Hadamard/ComplexAnalysis/EntireQuotient.lean",
+      "local_sha256": "d23a0de39f36bb93822abb926a55e0e6f1614b59b21f7444d9a96d7016f67f7f",
+      "modification": "Internal imports relocated to UnitDistance.Upstream.Hadamard.*; in-file change notice added inside the copyright header (2026-09-22); proof text unchanged."
+    },
+    {
+      "source": "RiemannHypothesis/ComplexAnalysis/GrowthRigidity.lean",
+      "source_sha256": "6393cb9257fb39f5979974b9eb01a86c2b426aaa9199f310bbb021d4c015cc4e",
+      "local": "UnitDistance/Upstream/Hadamard/ComplexAnalysis/GrowthRigidity.lean",
+      "local_sha256": "6393cb9257fb39f5979974b9eb01a86c2b426aaa9199f310bbb021d4c015cc4e",
+      "modification": "Byte-identical to upstream; no internal imports to relocate and no notice needed."
+    },
+    {
+      "source": "RiemannHypothesis/ComplexAnalysis/LogDerivative.lean",
+      "source_sha256": "46e6818321ea99f466740578e0b16a0ba0b8a57f8b8ae5f3fb91921c9f7ffe64",
+      "local": "UnitDistance/Upstream/Hadamard/ComplexAnalysis/LogDerivative.lean",
+      "local_sha256": "12935ffa8cb24649917506576b7ec3771956c7b0a9eac706ada1219a03c0ace9",
+      "modification": "Internal imports relocated to UnitDistance.Upstream.Hadamard.*; in-file change notice added inside the copyright header (2026-09-22); proof text unchanged."
+    },
+    {
+      "source": "RiemannHypothesis/ComplexAnalysis/ProximityGrowth.lean",
+      "source_sha256": "2c4130bb3afe29e94aaf339599a4aef2f50b2b68da53361ffb0755d1c0850b9d",
+      "local": "UnitDistance/Upstream/Hadamard/ComplexAnalysis/ProximityGrowth.lean",
+      "local_sha256": "be5b650721236564d39a930756aad4228297f66ebae22b4544e6693696959d5d",
+      "modification": "Internal imports relocated to UnitDistance.Upstream.Hadamard.*; in-file change notice added inside the copyright header (2026-09-22); proof text unchanged."
+    },
+    {
+      "source": "RiemannHypothesis/ComplexAnalysis/RealPartGrowth.lean",
+      "source_sha256": "17f4a7906ac32639c2187ebcade312bbcf0fa91dbc1dc49bb14669aafb6a7128",
+      "local": "UnitDistance/Upstream/Hadamard/ComplexAnalysis/RealPartGrowth.lean",
+      "local_sha256": "42d52d440d70b8c712823502748f56104531ecaa083be773e01845126b741392",
+      "modification": "Internal imports relocated to UnitDistance.Upstream.Hadamard.*; in-file change notice added inside the copyright header (2026-09-22); proof text unchanged."
+    },
+    {
+      "source": "RiemannHypothesis/HadamardProduct/CanonicalProductDivisor.lean",
+      "source_sha256": "7c26232ff13951e9a30df96fa8066aca71064d99790a0ff2e5343537b860f950",
+      "local": "UnitDistance/Upstream/Hadamard/HadamardProduct/CanonicalProductDivisor.lean",
+      "local_sha256": "55510118e1f60d9945fb6f73aedacd4c6711147c2e6de4a90a8bdfd8bc4bfae1",
+      "modification": "Internal imports relocated to UnitDistance.Upstream.Hadamard.*; in-file change notice added inside the copyright header (2026-09-22); proof text unchanged."
+    },
+    {
+      "source": "RiemannHypothesis/HadamardProduct/CanonicalProductGrowth.lean",
+      "source_sha256": "677a9e98c5e9a8a7073ff2b14d9c1a1af325dff5ae880ba3524aab49f1d5219a",
+      "local": "UnitDistance/Upstream/Hadamard/HadamardProduct/CanonicalProductGrowth.lean",
+      "local_sha256": "5c76e4cd46f269c5c5732ed8c5316f184a74b339733f7a836484b91ce2339fb3",
+      "modification": "Internal imports relocated to UnitDistance.Upstream.Hadamard.*; in-file change notice added inside the copyright header (2026-09-22); proof text unchanged.",
+      "pre_v435_local_sha256": "575cc8efe6c62fa0b331f50987ce54f67fa83dcb4e9e610ad3c8fc3da5aace64"
+    },
+    {
+      "source": "RiemannHypothesis/HadamardProduct/GenusOne.lean",
+      "source_sha256": "6ea6e3041c9db215831e4fd3b5825797dea27f0fb6a497aec5523f61aab5ea69",
+      "local": "UnitDistance/Upstream/Hadamard/HadamardProduct/GenusOne.lean",
+      "local_sha256": "50ec63df96119796f4bd1628ad701165adc7d9d3aff93dd3a03feb6f2bc35335",
+      "modification": "Internal imports relocated to UnitDistance.Upstream.Hadamard.*; in-file change notice added inside the copyright header (2026-09-22); proof text unchanged.",
+      "pre_v435_local_sha256": "d023de08ab42e1313b3a3bd67ad0357788a5fe0e74067e54cbf26d30afe07d8d"
+    },
+    {
+      "source": "RiemannHypothesis/HadamardProduct/InfiniteProducts.lean",
+      "source_sha256": "0a52a01b6f1a79e490d794f470cd6096fec3ca683d5d7d7d725a91f84ad8ce48",
+      "local": "UnitDistance/Upstream/Hadamard/HadamardProduct/InfiniteProducts.lean",
+      "local_sha256": "ed3ded414b1147bc918804e40a524f419549c5c081bffdfd9d0dbffc3aebb90e",
+      "modification": "Internal imports relocated to UnitDistance.Upstream.Hadamard.*; in-file change notice added inside the copyright header (2026-09-22); proof text unchanged.",
+      "pre_v435_local_sha256": "529b835b090fc247ebb9622688eba3a55a43996677da017211e9c2bc0224aa4b"
+    },
+    {
+      "source": "RiemannHypothesis/HadamardProduct/LogDerivative.lean",
+      "source_sha256": "0f6d76241e3da7221cf486c748faf51f44a262d75a9142b207529e36caf56586",
+      "local": "UnitDistance/Upstream/Hadamard/HadamardProduct/LogDerivative.lean",
+      "local_sha256": "86330ffa8c5185715eac9e3c1552d08ad8ee8f32328a7d7f605f08f9b851e056",
+      "modification": "Internal imports relocated to UnitDistance.Upstream.Hadamard.*; in-file change notice added inside the copyright header (2026-09-22); proof text unchanged."
+    },
+    {
+      "source": "RiemannHypothesis/HadamardProduct/PairedGenusOne.lean",
+      "source_sha256": "8b5a6002231a9ed90995c4a8a252c6772114e4ff9ed78e5cded7bdc4965fe0c2",
+      "local": "UnitDistance/Upstream/Hadamard/HadamardProduct/PairedGenusOne.lean",
+      "local_sha256": "f4a2792b3473db06440de1e91f2d3b27625ebdd4d9307747a388f0df66127bd8",
+      "modification": "Internal imports relocated to UnitDistance.Upstream.Hadamard.*; in-file change notice added inside the copyright header (2026-09-22); proof text unchanged."
+    },
+    {
+      "source": "RiemannHypothesis/HadamardProduct/PairedCanonicalProductGrowth.lean",
+      "source_sha256": "ec5a9bcb065e2c3e286321ef0924014f97544ddb50d126895f4d7ba3a170aa24",
+      "local": "UnitDistance/HadamardPairing.lean",
+      "local_sha256": "a7030b8dc97f3477b1a37c050f7c924b1f9ec1f4ee3019241c836e24405da63f",
+      "modification": "Selected negation-pairing definitions and exact product reindexing, through line146; excludes later dyadic count and growth sections. Imports restricted and relocated."
+    },
+    {
+      "source": "RiemannHypothesis/Xi/CanonicalDivisor.lean",
+      "source_sha256": "7fe314d6754729e36ffcbb43978d59d8226d47e007338493ca1b6a751eb299ec",
+      "local": "UnitDistance/CanonicalEntireDivisor.lean",
+      "local_sha256": "2854d29b79135e4bc3aecaafb3c3307624ff7b633937de7f319d799d41d6e1a1",
+      "modification": "Selected divisor, local finiteness and negation-involution proofs generalized to an arbitrary nontrivial even entire function. All xi-specific premises replaced with explicit entire, nontrivial and even data. New exact location-fiber and divisor identities added."
+    },
+    {
+      "source": "RiemannHypothesis/Xi/CanonicalProductPairedGrowth.lean",
+      "source_sha256": "1c3708464031f711376c6a2727fe5e9fc85c221f05fb87b841e8f1ff92d05184",
+      "local": "UnitDistance/CanonicalEntireDivisor.lean",
+      "local_sha256": "2854d29b79135e4bc3aecaafb3c3307624ff7b633937de7f319d799d41d6e1a1",
+      "modification": "Selected divisor, local finiteness and negation-involution proofs generalized to an arbitrary nontrivial even entire function. All xi-specific premises replaced with explicit entire, nontrivial and even data. New exact location-fiber and divisor identities added."
+    }
+  ]
+}

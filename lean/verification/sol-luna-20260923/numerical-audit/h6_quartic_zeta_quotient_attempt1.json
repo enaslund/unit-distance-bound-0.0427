@@ -1,0 +1,23 @@
+{
+  "status": "FAIL before coefficient comparison",
+  "attempt": 1,
+  "failure": "Generated PARI/GP forprime body was not braced; parser errors were followed by cascading idealprimedec type errors.",
+  "checked_inputs_before_failure": true,
+  "checker_sha256": "515bd56260e9844b09f77864f2a8bad7f9e137d7fae6fa25b0054dcd67b69814",
+  "guarded_command": "python3 automation/lean-formalization/guarded_build.py --timeout-seconds 900 -- python3 lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py",
+  "guard_admission": {
+    "host_available_gib": 15.9,
+    "cgroup_headroom_gib": 1.33,
+    "timeout_seconds": 900
+  },
+  "wrapper_exit_code": 1,
+  "gp_child_exit_code": 0,
+  "wrapper_observed_elapsed_seconds": 0.926951777,
+  "comparison_performed": false,
+  "log": "h6_quartic_zeta_quotient_attempt1.log",
+  "limits": [
+    "No maximal-order decompositions were parsed.",
+    "No coefficient vector or hash comparison was obtained.",
+    "No analytic conclusion follows."
+  ]
+}

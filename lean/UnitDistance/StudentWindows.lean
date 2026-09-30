@@ -1,0 +1,161 @@
+module
+
+public import UnitDistance.StudentOverlap
+public import UnitDistance.ProfileOverlap
+public import UnitDistance.GeometryReciprocalSupport
+
+@[expose] public section
+set_option backward.privateInPublic true
+
+
+/-!
+# Compact windows of the actual Bernstein-Student energy
+
+The exact exponent is greater than one. A coordinate inverse-quadratic
+bound therefore gives an explicit radius for every energy sublevel window.
+This supplies genuine compact geometric windows, independently of numerical
+quadrature or lattice counting.
+-/
+
+open MeasureTheory
+open scoped ENNReal
+
+namespace UnitDistance.Witness
+
+theorem continuous_pairProfile : Continuous pairProfile := by
+  have hbase (z : ℂ) : 0 < 1+a*‖z‖^2 := by
+    have ha := witness_basic.2.1
+    positivity
+  have hs : 0 ≤ s := witness_basic.1.le
+  have ht : Continuous (fun z : ℂ × ℂ => (1+a*‖z.1‖^2)⁻¹) :=
+    (continuous_const.add (continuous_const.mul (continuous_fst.norm.pow 2))).inv₀
+      (fun z => (hbase z.1).ne')
+  have hu : Continuous (fun z : ℂ × ℂ => (1+a*‖z.2‖^2)⁻¹) :=
+    (continuous_const.add (continuous_const.mul (continuous_snd.norm.pow 2))).inv₀
+      (fun z => (hbase z.2).ne')
+  change Continuous (fun z : ℂ × ℂ =>
+    (1+a*‖z.1‖^2)⁻¹^s * (1+a*‖z.2‖^2)⁻¹^s *
+      polynomial (1+a*‖z.1‖^2)⁻¹ (1+a*‖z.2‖^2)⁻¹)
+  unfold polynomial bernstein3
+  fun_prop (disch := positivity)
+
+theorem continuous_pairEnergy : Continuous pairEnergy :=
+  (continuous_pairProfile.log (fun z => (pairProfile_pos z).ne')).neg
+
+/-- A fixed lower bound needed for common windows of many profile blocks. -/
+theorem pairEnergy_lower (z : ℂ × ℂ) : -Real.log 14 ≤ pairEnergy z := by
+  unfold pairEnergy
+  exact neg_le_neg (Real.log_le_log (pairProfile_pos z) (pairProfile_le_fourteen z))
+
+/-- Each coordinate alone bounds the actual profile. -/
+theorem pairProfile_coordinate_bound (z : ℂ × ℂ) :
+    pairProfile z ≤ 14/(1+a*‖z.1‖^2) ∧
+    pairProfile z ≤ 14/(1+a*‖z.2‖^2) := by
+  have ha := witness_basic.2.1
+  have hs : 1 ≤ s := by norm_num [s]
+  have hg0 (x : ℂ) := studentWeight_nonneg ha.le s x
+  have hg1 (x : ℂ) := studentWeight_le_one ha.le (by linarith : 0 ≤ s) x
+  have hinv (x : ℂ) : studentWeight a s x ≤ (1+a*‖x‖^2)⁻¹ := by
+    have hbase : 1 ≤ 1+a*‖x‖^2 := by nlinarith [mul_nonneg ha.le (sq_nonneg ‖x‖)]
+    simpa only [studentWeight, Real.rpow_neg_one] using
+      Real.rpow_le_rpow_of_exponent_le hbase (show -s ≤ (-1:ℝ) by linarith)
+  have hprofile := pairProfile_rpow_le z (by norm_num : (0:ℝ) ≤ 1)
+  simp only [Real.rpow_one, mul_one] at hprofile
+  constructor
+  · calc
+      _ ≤ (studentWeight a s z.1 * studentWeight a s z.2)*14 := hprofile
+      _ ≤ studentWeight a s z.1*14 := by gcongr; exact mul_le_of_le_one_right (hg0 _) (hg1 _)
+      _ ≤ (1+a*‖z.1‖^2)⁻¹*14 := mul_le_mul_of_nonneg_right (hinv _) (by norm_num)
+      _ = _ := by ring
+  · calc
+      _ ≤ (studentWeight a s z.1 * studentWeight a s z.2)*14 := hprofile
+      _ ≤ studentWeight a s z.2*14 := by gcongr; exact mul_le_of_le_one_left (hg0 _) (hg1 _)
+      _ ≤ (1+a*‖z.2‖^2)⁻¹*14 := mul_le_mul_of_nonneg_right (hinv _) (by norm_num)
+      _ = _ := by ring
+
+/-- A convenient explicit common coordinate radius for the exact window. -/
+noncomputable def pairWindowRadius (T : ℝ) : ℝ := Real.sqrt (14*Real.exp T/a)
+
+theorem pairWindowRadius_pos (T : ℝ) : 0 < pairWindowRadius T := by
+  unfold pairWindowRadius
+  exact Real.sqrt_pos.mpr (div_pos (mul_pos (by norm_num) (Real.exp_pos T)) witness_basic.2.1)
+
+/-- The common sublevel window has bounded coordinates with an exact radius. -/
+theorem pairWindow_coordinate_bounds (T : ℝ) {z : ℂ × ℂ}
+    (hz : z ∈ energyWindow pairEnergy T) :
+    ‖z.1‖ ≤ pairWindowRadius T ∧ ‖z.2‖ ≤ pairWindowRadius T := by
+  have ha := witness_basic.2.1
+  have hE : -Real.log (pairProfile z) ≤ T := hz
+  have hlow : Real.exp (-T) ≤ pairProfile z := by
+    calc
+      _ ≤ Real.exp (Real.log (pairProfile z)) := Real.exp_le_exp.mpr (by linarith)
+      _ = _ := Real.exp_log (pairProfile_pos z)
+  have hbound (x : ℂ) (hx : pairProfile z ≤ 14/(1+a*‖x‖^2)) : ‖x‖ ≤ pairWindowRadius T := by
+    have hbase : 0 < 1+a*‖x‖^2 := by positivity
+    have hmul : Real.exp (-T)*(1+a*‖x‖^2) ≤ 14 := (le_div_iff₀ hbase).mp (hlow.trans hx)
+    have hm := mul_le_mul_of_nonneg_left hmul (Real.exp_pos T).le
+    have he : Real.exp T * Real.exp (-T) = 1 := by rw [← Real.exp_add]; simp
+    have hb : a*‖x‖^2 ≤ 14*Real.exp T := by
+      rw [← mul_assoc, he, one_mul] at hm
+      linarith
+    have hs : ‖x‖^2 ≤ 14*Real.exp T/a := by
+      apply (le_div_iff₀ ha).mpr
+      nlinarith
+    apply (sq_le_sq₀ (norm_nonneg _) (pairWindowRadius_pos T).le).mp
+    rw [pairWindowRadius, Real.sq_sqrt (by positivity : 0 ≤ 14*Real.exp T/a)]
+    exact hs
+  exact ⟨hbound z.1 (pairProfile_coordinate_bound z).1,
+    hbound z.2 (pairProfile_coordinate_bound z).2⟩
+
+/-- Every real energy sublevel of the actual pair profile is compact. -/
+theorem isCompact_pair_energyWindow (T : ℝ) : IsCompact (energyWindow pairEnergy T) := by
+  apply ((isCompact_closedBall (0:ℂ) (pairWindowRadius T)).prod
+    (isCompact_closedBall (0:ℂ) (pairWindowRadius T))).of_isClosed_subset
+    (isClosed_le continuous_pairEnergy continuous_const)
+  intro z hz
+  obtain ⟨h1,h2⟩ := pairWindow_coordinate_bounds T hz
+  simpa only [Set.mem_prod, Metric.mem_closedBall, dist_zero_right] using And.intro h1 h2
+
+/-- Actual lattice/window membership is finite for every translation. -/
+theorem finite_pair_energyWindow (L : AddSubgroup (ℂ × ℂ)) [DiscreteTopology L]
+    (hL : IsClosed (L : Set (ℂ × ℂ))) (T : ℝ) (h : ℂ × ℂ) :
+    {l : L | (l : ℂ × ℂ)+h ∈ energyWindow pairEnergy T}.Finite :=
+  finite_lattice_window L hL _ (isCompact_pair_energyWindow T) h
+
+/-- The overlap of the actual window vanishes outside a compact logarithmic
+interval. Haar normalization is untouched; the statement holds for any μ. -/
+theorem pair_energyWindow_overlap_compactSupport (μ : Measure (ℂ × ℂ)) (T : ℝ) :
+    HasCompactSupport (fun u : ℝ => μ (overlapSet (energyWindow pairEnergy T)
+      (reciprocalPairStep u))) := by
+  let R := pairWindowRadius T
+  have hR : 0 < R := pairWindowRadius_pos T
+  apply HasCompactSupport.of_support_subset_isCompact
+    (isCompact_Icc : IsCompact (Set.Icc (-Real.log (2*R)) (Real.log (2*R))))
+  intro u hu
+  have hne : (overlapSet (energyWindow pairEnergy T) (reciprocalPairStep u)).Nonempty := by
+    apply Set.nonempty_iff_ne_empty.mpr
+    intro he
+    apply hu
+    change μ (overlapSet (energyWindow pairEnergy T) (reciprocalPairStep u)) = 0
+    rw [he]
+    exact measure_empty
+  obtain ⟨z,hz,hy⟩ := hne
+  obtain ⟨hz1,hz2⟩ := pairWindow_coordinate_bounds T hz
+  obtain ⟨hy1,hy2⟩ := pairWindow_coordinate_bounds T hy
+  have he1 : Real.exp u ≤ 2*R := by
+    have h := norm_sub_le (z.1+(Real.exp u:ℂ)) z.1
+    rw [add_sub_cancel_left, Complex.norm_real, Real.norm_eq_abs,
+      abs_of_pos (Real.exp_pos u)] at h
+    change ‖z.1+(Real.exp u:ℂ)‖ ≤ R at hy1
+    linarith
+  have he2 : Real.exp (-u) ≤ 2*R := by
+    have h := norm_sub_le (z.2+(Real.exp (-u):ℂ)) z.2
+    rw [add_sub_cancel_left, Complex.norm_real, Real.norm_eq_abs,
+      abs_of_pos (Real.exp_pos (-u))] at h
+    change ‖z.2+(Real.exp (-u):ℂ)‖ ≤ R at hy2
+    linarith
+  have hu1 := (Real.le_log_iff_exp_le (by positivity : 0 < 2*R)).mpr he1
+  have hu2 := (Real.le_log_iff_exp_le (by positivity : 0 < 2*R)).mpr he2
+  exact ⟨by linarith, hu1⟩
+
+end UnitDistance.Witness

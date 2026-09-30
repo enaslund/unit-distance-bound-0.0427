@@ -1,0 +1,6 @@
+Audited all 1 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 1 project declarations selected.
+Axiom audit: beginning UnitDistance.ArithmeticProP.intrinsicInertia_iff_lowerRamification_zero.

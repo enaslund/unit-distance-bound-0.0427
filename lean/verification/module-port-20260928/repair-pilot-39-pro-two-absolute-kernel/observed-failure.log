@@ -1,0 +1,8 @@
+error: UnitDistance/ProTwoH2AbsoluteKernel.lean:106:20: failed to synthesize instance of type class
+  LocallyCompactSpace (Field.absoluteGaloisGroup ℚ)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/ProTwoH2AbsoluteKernel.lean:106:9: Tactic `rcases` failed: `x✝ : ?m.138` is not an inductive datatype
+Some required targets logged failures:
+- UnitDistance.ProTwoH2AbsoluteKernel
+error: build failed

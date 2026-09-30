@@ -1,0 +1,23 @@
+{
+  "archive_bytes": 5959498,
+  "archive_sha256": "f5bfc2e50e6432af0d6dfccf26801bf1de6d147f42cb6b037478e0b40c3ccd0a",
+  "deterministic_archive": true,
+  "external_zeta_records": 6,
+  "extraction": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/export-tests-07/standalone-l273jqna/unit-distance-zeta",
+  "files": 2299,
+  "manuscript_files": 14,
+  "mode": "zeta-archive-only",
+  "passed": true,
+  "project_modules": 2163,
+  "proof_build_performed": false,
+  "referenced_records": 62,
+  "references_ignored": [
+    "scripts/verify_submission.py"
+  ],
+  "resealed_export_identical": true,
+  "scope": "Local standalone export validation; no publication or Palomar submission",
+  "snapshot_sha256": "382beb470029ed8fefd9bd7ecc36b6f5254af836cc173d9f1ee9d66e7d0618cd",
+  "source_bytes": 31341244,
+  "verification_subject": "Selected zeta candidate archive",
+  "work_directory": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/export-tests-07/standalone-l273jqna"
+}

@@ -1,0 +1,35 @@
+{"upstream_url": "https://github.com/n-yamaguchi-0729/SawinTotallyRealTowers", "upstream_commit": "3a455e1aa9140dbbe7b7d68f508392a69c86d0f4", "upstream_toolchain": "leanprover/lean4:v4.33.0", "probe_toolchain": "leanprover/lean4:v4.32.0", "targets": ["SawinTotallyRealTowers.MaximalRealProPGroup"], "local_modules": 400, "external_modules": 229, "missing_external_modules": []}
+pass ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.HenselianValuationBase 6.05
+pass ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.AbstractFixedFieldNorm 10.14
+pass ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.LocalResidueDatum 17.7
+pass ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.FiniteSubgroupResidueDegree 26.87
+pass ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.FiniteResidueFinrankTransfer 25.56
+pass ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.LocalHenselianValuation 11.8
+pass ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.Main 5.44
+pass ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.TopologicalReciprocity 8.5
+pass ClassFieldTheory.AlgebraicNumberTheory.Idele.NormApproximation.FinitePlaces 21.24
+pass ClassFieldTheory.AlgebraicNumberTheory.Idele.Relative.FinitePlaceTensorNorm 10.28
+pass ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.AbsoluteValue 8.06
+pass ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.Lattice 7.74
+pass ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.FinitePlaceCompletion 14.88
+pass ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.LocalTensorDecomposition 24.76
+pass ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.IdeleSupport 4.94
+pass ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralTensorSupport.Localization 6.75
+pass ClassFieldTheory.AlgebraicNumberTheory.Adele.IntegralLocalFactor 25.6
+pass ClassFieldTheory.AlgebraicNumberTheory.Completion.ExtensionIndex 9.28
+pass ClassFieldTheory.AlgebraicNumberTheory.NumberField.FiniteUnramifiedTower 5.31
+pass SawinTotallyRealTowers.RamificationSupport 5.29
+pass SawinTotallyRealTowers.RamificationSupportTransport 4.74
+pass SawinTotallyRealTowers.RamificationSupportCompositum 8.2
+pass SawinTotallyRealTowers.FiniteRealPExtension 7.23
+pass ClassFieldTheory.AlgebraicNumberTheory.NumberField.EverywhereUnramifiedTower 5.82
+pass ClassFieldTheory.AlgebraicNumberTheory.NumberField.FiniteUnramifiedEtaleBridge 7.07
+pass SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.EverywhereUnramifiedBridge 8.69
+pass SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.MaximalEverywhereUnramifiedProP 7.96
+pass SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.BinaryUnramifiedCompositum 13.11
+pass SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.EverywhereUnramifiedProPCompositum 8.42
+pass SawinTotallyRealTowers.UnramifiedProPRelationRank.Global.MaximalEverywhereUnramifiedProPFiniteSupport 4.94
+pass SawinTotallyRealTowers.FiniteRealPExtensionSupport 5.1
+pass SawinTotallyRealTowers.MaximalRealProPOutside 5.27
+pass SawinTotallyRealTowers.MaximalRealProPGroup 8.51
+SUMMARY {'cached': 367, 'pass': 33}

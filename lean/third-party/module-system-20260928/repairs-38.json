@@ -1,0 +1,28 @@
+{
+  "schema": "unit-distance-module-port-instance-proof-repair-v1",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "One exact local Prop-valued Hausdorff instance proof in the named maximal-abelian reciprocity equivalence. Mathlib krullTopology_t2 bypasses the observed synthesis timeout. Definition type, hypotheses, existing proof steps, underlying equivalence/maps, and heartbeat settings are preserved; no new imports or axioms.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.lean",
+      "original_sha256": "e1d8093bbafa1f7d550ce6ddebbee87ac1076a866dff7602d83d425a26f4579f",
+      "migrated_sha256": "b0cbaf97683d916cc243b817658e17ba7a6e2a75965d6662ebb64f5be28e9ef2",
+      "declaration": "ideleClassComponentQuotientEquivMaximalAbelianGalois",
+      "statement": "noncomputable def ideleClassComponentQuotientEquivMaximalAbelianGalois :\n    ideleClassComponentQuotient K ≃ₜ*\n      Gal(maximalAbelianExtension K / K) := by",
+      "insertions": [],
+      "added_imports": [],
+      "added_options": [],
+      "replacement": {
+        "offset": 8002,
+        "offset_unit": "utf8-bytes",
+        "before": "noncomputable def ideleClassComponentQuotientEquivMaximalAbelianGalois :\n    ideleClassComponentQuotient K ≃ₜ*\n      Gal(maximalAbelianExtension K / K) := by\n  let e : ideleClassComponentQuotient K ≃*\n      Gal(maximalAbelianExtension K / K) :=\n    QuotientGroup.liftEquiv\n      (ideleClassIdentityComponent K)\n      (maximalAbelianGlobalArtin_surjective K)\n      (maximalAbelianGlobalArtin_ker K).symm\n  have heContinuous : Continuous e := by\n    apply\n      (QuotientGroup.isQuotientMap_mk\n        (ideleClassIdentityComponent K)).continuous_iff.mpr\n    refine\n      (maximalAbelianGlobalArtin K).continuous_toFun.congr\n        (fun c => ?_)\n    exact\n      (QuotientGroup.liftEquiv_coe\n        (ideleClassIdentityComponent K)\n        (maximalAbelianGlobalArtin_surjective K)\n        (maximalAbelianGlobalArtin_ker K).symm c).symm\n  let h := heContinuous.homeoOfEquivCompactToT2\n  exact\n    { toMulEquiv := e\n      continuous_toFun := h.continuous\n      continuous_invFun := h.symm.continuous }",
+        "after": "noncomputable def ideleClassComponentQuotientEquivMaximalAbelianGalois :\n    ideleClassComponentQuotient K ≃ₜ*\n      Gal(maximalAbelianExtension K / K) := by\n  let e : ideleClassComponentQuotient K ≃*\n      Gal(maximalAbelianExtension K / K) :=\n    QuotientGroup.liftEquiv\n      (ideleClassIdentityComponent K)\n      (maximalAbelianGlobalArtin_surjective K)\n      (maximalAbelianGlobalArtin_ker K).symm\n  have heContinuous : Continuous e := by\n    apply\n      (QuotientGroup.isQuotientMap_mk\n        (ideleClassIdentityComponent K)).continuous_iff.mpr\n    refine\n      (maximalAbelianGlobalArtin K).continuous_toFun.congr\n        (fun c => ?_)\n    exact\n      (QuotientGroup.liftEquiv_coe\n        (ideleClassIdentityComponent K)\n        (maximalAbelianGlobalArtin_surjective K)\n        (maximalAbelianGlobalArtin_ker K).symm c).symm\n  letI : T2Space (Gal(maximalAbelianExtension K / K)) := krullTopology_t2\n  let h := heContinuous.homeoOfEquivCompactToT2\n  exact\n    { toMulEquiv := e\n      continuous_toFun := h.continuous\n      continuous_invFun := h.symm.continuous }"
+      },
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-38-maximal-abelian-kernel/observed-failure.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-38-maximal-abelian-kernel/result.json",
+      "reason": "Supply the existing Mathlib krullTopology_t2 proof as a local Prop-valued instance. The definition type, underlying equivalence/maps, original proof steps, assumptions and heartbeat settings remain unchanged."
+    }
+  ]
+}

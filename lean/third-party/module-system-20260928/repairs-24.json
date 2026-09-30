@@ -1,0 +1,43 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "DisplacementValuation and PrimeComparison failed in integration213146 with hidden private CharP/T2Space instances. Exact owner import-all candidates pass with stable direct artifacts. Statements, proof bodies, assumptions and heartbeat limits remain unchanged.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean",
+      "original_sha256": "78fcfebd4f2af424461c60f4e0c8840ba1a4c9b38ee75a5627322003c2761f42",
+      "migrated_sha256": "77ea567d68b706927970eb6bb6d8cc2e81fa7049b14d6f8bc63236a2c5b00899",
+      "insertions": [
+        {
+          "offset": 816,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.FiniteLevel.DivisionPolynomial"
+      ],
+      "added_options": [],
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-24/DisplacementValuation/candidate/observed-failure.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-24/DisplacementValuation/candidate/result.json"
+    },
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LocalClassFieldTheory/Finite/LocalReciprocity/FixedFieldIntrinsicReciprocity/PrimeComparison.lean",
+      "original_sha256": "697b53688213b195bf748c086e24dfc3e50d66cd4d3385101d2d737efe57debf",
+      "migrated_sha256": "dca0f2d600c5222a71a475742e89278aa0c875f87a86519c603c890c754b3af9",
+      "insertions": [
+        {
+          "offset": 726,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityTransport"
+      ],
+      "added_options": [],
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-24/PrimeComparison/candidate/observed-failure.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-24/PrimeComparison/candidate/result.json"
+    }
+  ]
+}

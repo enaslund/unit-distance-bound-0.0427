@@ -1,0 +1,74 @@
+✖ [6504/6637] Building UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LubinTate.EqualCharacteristic.Ramification.DisplacementValuation (54s)
+trace: .> LEAN_PATH=/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Cli/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/batteries/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Qq/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/aesop/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/proofwidgets/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/importGraph/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/LeanSearchClient/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/plausible/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean /home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean -o /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.olean -i /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.ilean -c /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.c --setup /home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/ir/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.setup.json --json
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:109:6: failed to synthesize instance of type class
+  CharP (↥(equalCharacteristicLubinTateLevelField F n)) F.residueCharacteristic
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:113:17: unsolved goals
+K₀ : Type
+inst✝¹ : Field K₀
+F : LocalField K₀
+inst✝ : CharP K₀ F.residueCharacteristic
+n : ℕ
+x : (equalCharacteristicLubinTateLevelCompleteDVF F n).valuationSubring
+⊢ ↑x ^ Nat.card F.residueField +
+      (algebraMap F.residueField⸨X⸩ ↥(equalCharacteristicLubinTateLevelField F n))
+          (equalCharacteristicLaurentUniformizer F) *
+        ↑x =
+    sorry ()
+warning: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:115:4: This simp argument is unused:
+  equalCharacteristicLubinTateAmbientPiEnd_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [equalCharacteristicLubinTatePiEndInteger, integerMap_apply,
+    equalCharacteristicLubinTateBaseUniformizerInteger_coe]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:134:4: failed to synthesize instance of type class
+  CharP (↥(equalCharacteristicLubinTateLevelField F n)) F.residueCharacteristic
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:143:9: failed to synthesize instance of type class
+  CharP (↥(equalCharacteristicLubinTateLevelField F n)) F.residueCharacteristic
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:139:6: failed to synthesize instance of type class
+  CharP (↥(equalCharacteristicLubinTateLevelField F n)) F.residueCharacteristic
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:153:6: failed to synthesize instance of type class
+  CharP (↥(equalCharacteristicLubinTateLevelField F n)) F.residueCharacteristic
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:149:6: failed to synthesize instance of type class
+  CharP (↥(equalCharacteristicLubinTateLevelField F n)) F.residueCharacteristic
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:157:11: failed to synthesize instance of type class
+  CharP (↥(equalCharacteristicLubinTateLevelField F n)) F.residueCharacteristic
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:170:6: failed to synthesize instance of type class
+  CharP (↥(equalCharacteristicLubinTateLevelField F n)) F.residueCharacteristic
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:176:9: unsolved goals
+case zero
+K₀ : Type
+inst✝¹ : Field K₀
+F : LocalField K₀
+inst✝ : CharP K₀ F.residueCharacteristic
+n : ℕ
+⊢ (equalCharacteristicLubinTateLevelPowerBasis F n).gen = sorry ()
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:303:6: failed to synthesize instance of type class
+  CharP (↥(equalCharacteristicLubinTateLevelField F n)) F.residueCharacteristic
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:479:4: failed to synthesize instance of type class
+  CharP (↥(equalCharacteristicLubinTateLevelField F n)) F.residueCharacteristic
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/LubinTate/EqualCharacteristic/Ramification/DisplacementValuation.lean:571:6: failed to synthesize instance of type class
+  CharP (SeparableClosure F.residueField⸨X⸩) F.residueCharacteristic
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.

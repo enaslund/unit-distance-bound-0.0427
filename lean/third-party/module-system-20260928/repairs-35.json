@@ -1,0 +1,26 @@
+{
+  "schema": "unit-distance-module-port-repair-v2",
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "scope": "Expose exact existing private tower-relative class-group operations from IdeleClassDirectLimitExtension for ExtensionNorm. Actual integration10 failure captured as an immutable excerpt and prefix hash; the import-only candidate passes the complete file. Statements, proof bodies, hypotheses, and heartbeat limits preserved.",
+  "files": [
+    {
+      "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/IdeleClassDirectLimitExtensionNorm.lean",
+      "original_sha256": "76df8e474264a60b017a2a3524696f4b4fb4837d34ef30fa25c613fe7b40081c",
+      "migrated_sha256": "ecafc85cb2e3ab0792e80f19fb03e46f8e0a568f94660e3d581b0a310e3442e2",
+      "insertions": [
+        {
+          "offset": 593,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitExtension\n"
+        }
+      ],
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.GlobalClassFieldTheory.Reciprocity.IdeleClassDirectLimitExtension"
+      ],
+      "added_options": [],
+      "observed_failure_log": "verification/module-port-20260928/repair-pilot-35-extension-norm/observed-failure.log",
+      "focused_compile": "verification/module-port-20260928/repair-pilot-35-extension-norm/result.json"
+    }
+  ]
+}

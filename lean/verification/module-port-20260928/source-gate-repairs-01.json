@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-28T17:18:23.205917+00:00",
+  "base_port_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "evidence": {
+    "files_checked": 2165,
+    "maximum_lines": 10000,
+    "module_required": true,
+    "schema_version": 1
+  },
+  "exporter_sha256": "580f7066f204ccb716eb06070c4f6fd1fb3be04d5660643bf7d7127489a88308",
+  "issues": [],
+  "lean_source_manifest_sha256": "c237f3a64ecee501eaa67d96526ba2e8f3f77885262bc364826eb80eea2466f6",
+  "passed": true,
+  "repair_01_sha256": "af493e3ade2cb9cbd22341786462242550272b234b76e9c75da87410e9580014",
+  "scope": "Actual pinned Palomar inspect_lean_sources on the final selected repaired Lean sources only; lexical module headers, line limits, regular UTF-8 files. No Lean build, semantic header parsing, declaration visibility, or kernel verification.",
+  "source_requirements_sha256": "971950a45500ad8ba8c9061eb51716bc1c38f411ff877c447b6de527b23d2c6d",
+  "submission_pin": "65f0154ed776cd26c224254aa57b379137f28b0d"
+}

@@ -1,0 +1,34 @@
+Audited all 8774 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 8774 project declarations selected.
+Axiom audit: beginning LocalFieldTheory.maximalIdealPowMapOfUnramifiedValuation._proof_8.
+Axiom audit: beginning LocalFieldTheory.integerUnitsModPrincipalUnitsResidueNorm_residue.
+Axiom audit: beginning LocalClassFieldTheory.finiteResidueFrobeniusExponentHom_injective.
+Axiom audit: 500/8774 complete transitive axiom closures checked.
+Axiom audit: 1000/8774 complete transitive axiom closures checked.
+Axiom audit: 1500/8774 complete transitive axiom closures checked.
+Axiom audit: 2000/8774 complete transitive axiom closures checked.
+Axiom audit: 2500/8774 complete transitive axiom closures checked.
+Axiom audit: 3000/8774 complete transitive axiom closures checked.
+Axiom audit: 3500/8774 complete transitive axiom closures checked.
+Axiom audit: 4000/8774 complete transitive axiom closures checked.
+Axiom audit: 4500/8774 complete transitive axiom closures checked.
+Axiom audit: 5000/8774 complete transitive axiom closures checked.
+Axiom audit: 5500/8774 complete transitive axiom closures checked.
+Axiom audit: 6000/8774 complete transitive axiom closures checked.
+Axiom audit: 6500/8774 complete transitive axiom closures checked.
+Axiom audit: 7000/8774 complete transitive axiom closures checked.
+Axiom audit: 7500/8774 complete transitive axiom closures checked.
+Axiom audit: 8000/8774 complete transitive axiom closures checked.
+Axiom audit: 8500/8774 complete transitive axiom closures checked.
+'UnitDistance.ArithmeticProP.localArtin_integerUnits_range_index' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'UnitDistance.ArithmeticProP.localArtinMonoidHom_abelianized_restrict_tower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'UnitDistance.ArithmeticProP.localArtin_integerUnit_mem_of_fixedField_unramified' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

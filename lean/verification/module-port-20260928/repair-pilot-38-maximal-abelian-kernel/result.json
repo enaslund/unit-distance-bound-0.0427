@@ -1,0 +1,240 @@
+{
+  "inputs": {
+    "compiler": "/home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "compiler_sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "LEAN_PATH": "/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Cli/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/batteries/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/Qq/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/aesop/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/proofwidgets/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/importGraph/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/LeanSearchClient/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/plausible/.lake/build/lib/lean:/mnt/disks/data/lean-shared/v4.35.0-rc2-mathlib-065356127b/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean",
+    "scope": "Exact same-definition-type local Prop-instance proof via Mathlib krullTopology_t2; no import, data-map, assumption, or heartbeat changes.1CPU2GiB noSwap600s8GiBguard.",
+    "integration_attempt": "integration-20260928T233551Z",
+    "integration_build_log_sha256": "f0d5edab6b20262239073fed63f28dcab91cec02c61a0eb58a0dfa7e53176269",
+    "integration_terminal_result_sha256": "82ede9c29040fc7aa4343452b499ca2c7cf82f8aac8d4b6deb8aad366c096ae5",
+    "direct_import_artifact_hashes": [
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerAlgEquivNaturality.olean",
+        "sha256": "61752c0d8561eae81ad2fcf0cbd77a3c6b6a652fdfbb6cc50ec2bfe9fb2203bd"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerAlgEquivNaturality.olean.private",
+        "sha256": "cae66b8cd89455d7cb61110e1606301b6fa865748651752195ba613923c9e7fc"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerAlgEquivNaturality.olean.server",
+        "sha256": "96e193ebd73c84ade479cfc388d6b62f9e9bfd86f76f9969c7382c0a41d9b14c"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerAlgEquivNaturality.ir",
+        "sha256": "c2e6c4a95f4f08cc331c2a510be29061de69a560dba13299047404ba3929ea37"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerAlgEquivNaturality.ir.sig",
+        "sha256": "f1a03c78213dd1ee7adf72405e9d8c44039fd79ba21dfb961c355d0b43b54dda"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/IdentityComponent.olean",
+        "sha256": "47873dd63dc155655bc27a6b011c0c12c2dedb5e48036941cb4a6ced36baad26"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/IdentityComponent.olean.private",
+        "sha256": "6e8236982ee91a7314f48e896ca3a88d1452f72957f92b4e7e5963ab1189baba"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/IdentityComponent.olean.server",
+        "sha256": "4f65e80449bb148045cb78acfbcf0acb1ad74e3380bc140346d4659b08d2d98d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/IdentityComponent.ir",
+        "sha256": "382484c68c9db4713f2502d0cd5f7b2a27b5803e9bb1b7395c5a477b7c632a99"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/IdentityComponent.ir.sig",
+        "sha256": "9c9898226c58b5bb85c19603e3fc4c0a7b915ae62698216739ed16cb894d8680"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/ClosedFiniteIndexClassFieldOriginalField.olean",
+        "sha256": "98947a2b17578a23a744234df6dcad41a5c0570a147dc0d087ae41c957c3b69a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/ClosedFiniteIndexClassFieldOriginalField.olean.private",
+        "sha256": "8d813ca1fc7a3d6d684ab311d52362b5760ff5e2a2e65f6f46a5f55365485b44"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/ClosedFiniteIndexClassFieldOriginalField.olean.server",
+        "sha256": "f78e3b14da37bc594fb78080dd58b7546fcaa464e678b2d3a1c70f10e703fdc2"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/ClosedFiniteIndexClassFieldOriginalField.ir",
+        "sha256": "5a49bd00bc137dccd427d11632ce6546e9ea4688c4f1efa07ec3af8ac48d1459"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/ClosedFiniteIndexClassFieldOriginalField.ir.sig",
+        "sha256": "0f33b9692adb077534ded719b1c3210dea5135222fbfb1879a1e623145068a56"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianGlobalArtin.olean",
+        "sha256": "1b67c44c9fef17780e9fa83136edde93b0d016b1e1fdc4087005c6947f951975"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianGlobalArtin.olean.private",
+        "sha256": "9fe14bdc8938a8c1fa883937a135e508fc6e8b7da6ad44c52ad5519257f16095"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianGlobalArtin.olean.server",
+        "sha256": "d8cd14a23d1f9c53620a4ca67ba7b89427adc36bf0952862143cc5cc7a20e2e6"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianGlobalArtin.ir",
+        "sha256": "ffea567b45a255ee7745a018f9dc9ef9b607bda98ea5fdbaa67000b7d41dd5ea"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianGlobalArtin.ir.sig",
+        "sha256": "41c903624e7beed5986baa4972ac08f67e9e7998d8fb355b508dcba476574816"
+      }
+    ],
+    "variants": [
+      {
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.lean",
+        "original_sha256": "e1d8093bbafa1f7d550ce6ddebbee87ac1076a866dff7602d83d425a26f4579f",
+        "migrated_sha256": "b0cbaf97683d916cc243b817658e17ba7a6e2a75965d6662ebb64f5be28e9ef2",
+        "declaration": "ideleClassComponentQuotientEquivMaximalAbelianGalois",
+        "statement": "noncomputable def ideleClassComponentQuotientEquivMaximalAbelianGalois :\n    ideleClassComponentQuotient K \u2243\u209c*\n      Gal(maximalAbelianExtension K / K) := by",
+        "insertions": [],
+        "added_imports": [],
+        "added_options": [],
+        "replacement": {
+          "offset": 8002,
+          "offset_unit": "utf8-bytes",
+          "before": "noncomputable def ideleClassComponentQuotientEquivMaximalAbelianGalois :\n    ideleClassComponentQuotient K \u2243\u209c*\n      Gal(maximalAbelianExtension K / K) := by\n  let e : ideleClassComponentQuotient K \u2243*\n      Gal(maximalAbelianExtension K / K) :=\n    QuotientGroup.liftEquiv\n      (ideleClassIdentityComponent K)\n      (maximalAbelianGlobalArtin_surjective K)\n      (maximalAbelianGlobalArtin_ker K).symm\n  have heContinuous : Continuous e := by\n    apply\n      (QuotientGroup.isQuotientMap_mk\n        (ideleClassIdentityComponent K)).continuous_iff.mpr\n    refine\n      (maximalAbelianGlobalArtin K).continuous_toFun.congr\n        (fun c => ?_)\n    exact\n      (QuotientGroup.liftEquiv_coe\n        (ideleClassIdentityComponent K)\n        (maximalAbelianGlobalArtin_surjective K)\n        (maximalAbelianGlobalArtin_ker K).symm c).symm\n  let h := heContinuous.homeoOfEquivCompactToT2\n  exact\n    { toMulEquiv := e\n      continuous_toFun := h.continuous\n      continuous_invFun := h.symm.continuous }",
+          "after": "noncomputable def ideleClassComponentQuotientEquivMaximalAbelianGalois :\n    ideleClassComponentQuotient K \u2243\u209c*\n      Gal(maximalAbelianExtension K / K) := by\n  let e : ideleClassComponentQuotient K \u2243*\n      Gal(maximalAbelianExtension K / K) :=\n    QuotientGroup.liftEquiv\n      (ideleClassIdentityComponent K)\n      (maximalAbelianGlobalArtin_surjective K)\n      (maximalAbelianGlobalArtin_ker K).symm\n  have heContinuous : Continuous e := by\n    apply\n      (QuotientGroup.isQuotientMap_mk\n        (ideleClassIdentityComponent K)).continuous_iff.mpr\n    refine\n      (maximalAbelianGlobalArtin K).continuous_toFun.congr\n        (fun c => ?_)\n    exact\n      (QuotientGroup.liftEquiv_coe\n        (ideleClassIdentityComponent K)\n        (maximalAbelianGlobalArtin_surjective K)\n        (maximalAbelianGlobalArtin_ker K).symm c).symm\n  letI : T2Space (Gal(maximalAbelianExtension K / K)) := krullTopology_t2\n  let h := heContinuous.homeoOfEquivCompactToT2\n  exact\n    { toMulEquiv := e\n      continuous_toFun := h.continuous\n      continuous_invFun := h.symm.continuous }"
+        },
+        "observed_failure_log": "verification/module-port-20260928/repair-pilot-38-maximal-abelian-kernel/observed-failure.log",
+        "focused_compile": "verification/module-port-20260928/repair-pilot-38-maximal-abelian-kernel/result.json",
+        "reason": "Supply the existing Mathlib krullTopology_t2 proof as a local Prop-valued instance. The definition type, underlying equivalence/maps, original proof steps, assumptions and heartbeat settings remain unchanged.",
+        "name": "local-krull-hausdorff-proof",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-38-maximal-abelian-kernel/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-38-maximal-abelian-kernel/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-38-maximal-abelian-kernel/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.olean"
+      }
+    ]
+  },
+  "results": [
+    {
+      "compiler_exit_code": 0,
+      "direct_import_artifact_hashes_after": [
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerAlgEquivNaturality.olean",
+          "sha256": "61752c0d8561eae81ad2fcf0cbd77a3c6b6a652fdfbb6cc50ec2bfe9fb2203bd"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerAlgEquivNaturality.olean.private",
+          "sha256": "cae66b8cd89455d7cb61110e1606301b6fa865748651752195ba613923c9e7fc"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerAlgEquivNaturality.olean.server",
+          "sha256": "96e193ebd73c84ade479cfc388d6b62f9e9bfd86f76f9969c7382c0a41d9b14c"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerAlgEquivNaturality.ir",
+          "sha256": "c2e6c4a95f4f08cc331c2a510be29061de69a560dba13299047404ba3929ea37"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/ClassGroup/TowerAlgEquivNaturality.ir.sig",
+          "sha256": "f1a03c78213dd1ee7adf72405e9d8c44039fd79ba21dfb961c355d0b43b54dda"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/IdentityComponent.olean",
+          "sha256": "47873dd63dc155655bc27a6b011c0c12c2dedb5e48036941cb4a6ced36baad26"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/IdentityComponent.olean.private",
+          "sha256": "6e8236982ee91a7314f48e896ca3a88d1452f72957f92b4e7e5963ab1189baba"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/IdentityComponent.olean.server",
+          "sha256": "4f65e80449bb148045cb78acfbcf0acb1ad74e3380bc140346d4659b08d2d98d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/IdentityComponent.ir",
+          "sha256": "382484c68c9db4713f2502d0cd5f7b2a27b5803e9bb1b7395c5a477b7c632a99"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/IdentityComponent.ir.sig",
+          "sha256": "9c9898226c58b5bb85c19603e3fc4c0a7b915ae62698216739ed16cb894d8680"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/ClosedFiniteIndexClassFieldOriginalField.olean",
+          "sha256": "98947a2b17578a23a744234df6dcad41a5c0570a147dc0d087ae41c957c3b69a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/ClosedFiniteIndexClassFieldOriginalField.olean.private",
+          "sha256": "8d813ca1fc7a3d6d684ab311d52362b5760ff5e2a2e65f6f46a5f55365485b44"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/ClosedFiniteIndexClassFieldOriginalField.olean.server",
+          "sha256": "f78e3b14da37bc594fb78080dd58b7546fcaa464e678b2d3a1c70f10e703fdc2"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/ClosedFiniteIndexClassFieldOriginalField.ir",
+          "sha256": "5a49bd00bc137dccd427d11632ce6546e9ea4688c4f1efa07ec3af8ac48d1459"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/GlobalClassFields/ClosedFiniteIndexClassFieldOriginalField.ir.sig",
+          "sha256": "0f33b9692adb077534ded719b1c3210dea5135222fbfb1879a1e623145068a56"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianGlobalArtin.olean",
+          "sha256": "1b67c44c9fef17780e9fa83136edde93b0d016b1e1fdc4087005c6947f951975"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianGlobalArtin.olean.private",
+          "sha256": "9fe14bdc8938a8c1fa883937a135e508fc6e8b7da6ad44c52ad5519257f16095"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianGlobalArtin.olean.server",
+          "sha256": "d8cd14a23d1f9c53620a4ca67ba7b89427adc36bf0952862143cc5cc7a20e2e6"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianGlobalArtin.ir",
+          "sha256": "ffea567b45a255ee7745a018f9dc9ef9b607bda98ea5fdbaa67000b7d41dd5ea"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianGlobalArtin.ir.sig",
+          "sha256": "41c903624e7beed5986baa4972ac08f67e9e7998d8fb355b508dcba476574816"
+        }
+      ],
+      "variant": {
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.lean",
+        "original_sha256": "e1d8093bbafa1f7d550ce6ddebbee87ac1076a866dff7602d83d425a26f4579f",
+        "migrated_sha256": "b0cbaf97683d916cc243b817658e17ba7a6e2a75965d6662ebb64f5be28e9ef2",
+        "declaration": "ideleClassComponentQuotientEquivMaximalAbelianGalois",
+        "statement": "noncomputable def ideleClassComponentQuotientEquivMaximalAbelianGalois :\n    ideleClassComponentQuotient K \u2243\u209c*\n      Gal(maximalAbelianExtension K / K) := by",
+        "insertions": [],
+        "added_imports": [],
+        "added_options": [],
+        "replacement": {
+          "offset": 8002,
+          "offset_unit": "utf8-bytes",
+          "before": "noncomputable def ideleClassComponentQuotientEquivMaximalAbelianGalois :\n    ideleClassComponentQuotient K \u2243\u209c*\n      Gal(maximalAbelianExtension K / K) := by\n  let e : ideleClassComponentQuotient K \u2243*\n      Gal(maximalAbelianExtension K / K) :=\n    QuotientGroup.liftEquiv\n      (ideleClassIdentityComponent K)\n      (maximalAbelianGlobalArtin_surjective K)\n      (maximalAbelianGlobalArtin_ker K).symm\n  have heContinuous : Continuous e := by\n    apply\n      (QuotientGroup.isQuotientMap_mk\n        (ideleClassIdentityComponent K)).continuous_iff.mpr\n    refine\n      (maximalAbelianGlobalArtin K).continuous_toFun.congr\n        (fun c => ?_)\n    exact\n      (QuotientGroup.liftEquiv_coe\n        (ideleClassIdentityComponent K)\n        (maximalAbelianGlobalArtin_surjective K)\n        (maximalAbelianGlobalArtin_ker K).symm c).symm\n  let h := heContinuous.homeoOfEquivCompactToT2\n  exact\n    { toMulEquiv := e\n      continuous_toFun := h.continuous\n      continuous_invFun := h.symm.continuous }",
+          "after": "noncomputable def ideleClassComponentQuotientEquivMaximalAbelianGalois :\n    ideleClassComponentQuotient K \u2243\u209c*\n      Gal(maximalAbelianExtension K / K) := by\n  let e : ideleClassComponentQuotient K \u2243*\n      Gal(maximalAbelianExtension K / K) :=\n    QuotientGroup.liftEquiv\n      (ideleClassIdentityComponent K)\n      (maximalAbelianGlobalArtin_surjective K)\n      (maximalAbelianGlobalArtin_ker K).symm\n  have heContinuous : Continuous e := by\n    apply\n      (QuotientGroup.isQuotientMap_mk\n        (ideleClassIdentityComponent K)).continuous_iff.mpr\n    refine\n      (maximalAbelianGlobalArtin K).continuous_toFun.congr\n        (fun c => ?_)\n    exact\n      (QuotientGroup.liftEquiv_coe\n        (ideleClassIdentityComponent K)\n        (maximalAbelianGlobalArtin_surjective K)\n        (maximalAbelianGlobalArtin_ker K).symm c).symm\n  letI : T2Space (Gal(maximalAbelianExtension K / K)) := krullTopology_t2\n  let h := heContinuous.homeoOfEquivCompactToT2\n  exact\n    { toMulEquiv := e\n      continuous_toFun := h.continuous\n      continuous_invFun := h.symm.continuous }"
+        },
+        "observed_failure_log": "verification/module-port-20260928/repair-pilot-38-maximal-abelian-kernel/observed-failure.log",
+        "focused_compile": "verification/module-port-20260928/repair-pilot-38-maximal-abelian-kernel/result.json",
+        "reason": "Supply the existing Mathlib krullTopology_t2 proof as a local Prop-valued instance. The definition type, underlying equivalence/maps, original proof steps, assumptions and heartbeat settings remain unchanged.",
+        "name": "local-krull-hausdorff-proof",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-38-maximal-abelian-kernel/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-38-maximal-abelian-kernel/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-38-maximal-abelian-kernel/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.olean"
+      },
+      "command": [
+        "/home/naslund_eric/.local/share/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-R",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-38-maximal-abelian-kernel/source",
+        "-o",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-38-maximal-abelian-kernel/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.olean",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-38-maximal-abelian-kernel/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/GlobalClassFieldTheory/Reciprocity/MaximalAbelianKernel.lean"
+      ],
+      "exit_code": 0,
+      "reason": null,
+      "elapsed_total": 19.533770529553294
+    }
+  ],
+  "passed": true
+}

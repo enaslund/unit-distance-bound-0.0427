@@ -1,0 +1,190 @@
+{
+  "inputs": {
+    "compiler": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+    "compiler_sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "LEAN_PATH": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/plausible/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/importGraph/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/aesop/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Qq/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/batteries/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/Cli/.lake/build/lib/lean:/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean",
+    "scope": "Single isolated AdeleBaseChange header-only candidate; 1CPU/2GiB/zero swap,180s,8GiB host guard; source and compiler outputs separate; no active snapshot mutation.",
+    "integration_attempt": "integration-20260928T200108Z",
+    "direct_import_artifact_hashes": [
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/BaseChange.olean",
+        "sha256": "d253b80059768eb1e98d0fe53743df2c8d33be3d0e3df028f430cf41681a6451"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/BaseChange.olean.private",
+        "sha256": "9ae54fe460f60df5546819a73e68c499078eec470f4a48c47cbd53c7f9213b2c"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/BaseChange.olean.server",
+        "sha256": "99d9f48dc61352693a7b61450df6825bf71c779b9a80b9fc3d49c2ec9829e51a"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/BaseChange.ir",
+        "sha256": "50d55458ed867dc141413562203c031390131ac5edddd76bec014d610dbb90d4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/BaseChange.ir.sig",
+        "sha256": "3f5a8efc89e02c9386f868aab7a5425c4aa4c74304758dbef995dbc53d6db780"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/AdicCompletionComparison.olean",
+        "sha256": "961e5c9658a7a9d4d121e227c52ba3c94d43bf42e389d37d74ff0a997dafa4ff"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/AdicCompletionComparison.olean.private",
+        "sha256": "b89c0dace4c311cbcdb8bb39fd423275dff0a2aaf701f5a89b1d72b1cec55cff"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/AdicCompletionComparison.olean.server",
+        "sha256": "8476355838b63b950b8adbd5137736c17e8f4a93896af9dd5a51bfffc4f42b71"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/AdicCompletionComparison.ir",
+        "sha256": "6e3dff5d7b261006df046a7bfbe7b5e42f0b105905c105dc99f0b3edc5f17979"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/AdicCompletionComparison.ir.sig",
+        "sha256": "38abb66b3fe79cab391ae08720f71d48ac9917d2098e2472166adf623c1c17db"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/NumberField/Completion/LiesOverInstances.olean",
+        "sha256": "c60403d8bc2beaf1ab8b88822ec6cf592f56cd4f72f66dcd06936de174641fb4"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/NumberField/Completion/LiesOverInstances.olean.private",
+        "sha256": "0be6f2396323c23a2c02e0e018fa06da3bb38b386e8331df69250583357a9a7d"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/NumberField/Completion/LiesOverInstances.olean.server",
+        "sha256": "c7cc4d41a9604980d2b905757540a8949d87f2788b39aa18b6bcc4c3472c0a99"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/NumberField/Completion/LiesOverInstances.ir",
+        "sha256": "d9c6bcaec4d1d7c032e47e337931fc52890a83cbb68078552dd3a0c816ee86d5"
+      },
+      {
+        "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/NumberField/Completion/LiesOverInstances.ir.sig",
+        "sha256": "f7d67e1b34bcce8a7cd84d00c97bfaccf3a614a4a231e27a8125c3fb9a58fc0c"
+      }
+    ],
+    "variants": [
+      {
+        "name": "expose-completionMap-owner",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-14-header/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-14-header/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/AdeleBaseChange.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-14-header/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/AdeleBaseChange.olean",
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/AdeleBaseChange.lean",
+        "original_sha256": "3585eef0027fc978294a511e4a3b23da2a9a0afbff69447aa0565090d2cfbdf9",
+        "migrated_sha256": "4cd2df13d27b42a715dc885b0fc1bde3741764c90b1b96781229c90ef2f14bfd",
+        "insertions": [
+          {
+            "offset": 570,
+            "text": "import all Mathlib.NumberTheory.NumberField.Completion.LiesOverInstances\n"
+          }
+        ],
+        "added_imports": [
+          "Mathlib.NumberTheory.NumberField.Completion.LiesOverInstances"
+        ],
+        "added_options": []
+      }
+    ]
+  },
+  "results": [
+    {
+      "compiler_exit_code": 0,
+      "direct_import_artifact_hashes_after": [
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/BaseChange.olean",
+          "sha256": "d253b80059768eb1e98d0fe53743df2c8d33be3d0e3df028f430cf41681a6451"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/BaseChange.olean.private",
+          "sha256": "9ae54fe460f60df5546819a73e68c499078eec470f4a48c47cbd53c7f9213b2c"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/BaseChange.olean.server",
+          "sha256": "99d9f48dc61352693a7b61450df6825bf71c779b9a80b9fc3d49c2ec9829e51a"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/BaseChange.ir",
+          "sha256": "50d55458ed867dc141413562203c031390131ac5edddd76bec014d610dbb90d4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Idele/BaseChange.ir.sig",
+          "sha256": "3f5a8efc89e02c9386f868aab7a5425c4aa4c74304758dbef995dbc53d6db780"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/AdicCompletionComparison.olean",
+          "sha256": "961e5c9658a7a9d4d121e227c52ba3c94d43bf42e389d37d74ff0a997dafa4ff"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/AdicCompletionComparison.olean.private",
+          "sha256": "b89c0dace4c311cbcdb8bb39fd423275dff0a2aaf701f5a89b1d72b1cec55cff"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/AdicCompletionComparison.olean.server",
+          "sha256": "8476355838b63b950b8adbd5137736c17e8f4a93896af9dd5a51bfffc4f42b71"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/AdicCompletionComparison.ir",
+          "sha256": "6e3dff5d7b261006df046a7bfbe7b5e42f0b105905c105dc99f0b3edc5f17979"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/build/lib/lean/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/Completion/AdicCompletionComparison.ir.sig",
+          "sha256": "38abb66b3fe79cab391ae08720f71d48ac9917d2098e2472166adf623c1c17db"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/NumberField/Completion/LiesOverInstances.olean",
+          "sha256": "c60403d8bc2beaf1ab8b88822ec6cf592f56cd4f72f66dcd06936de174641fb4"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/NumberField/Completion/LiesOverInstances.olean.private",
+          "sha256": "0be6f2396323c23a2c02e0e018fa06da3bb38b386e8331df69250583357a9a7d"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/NumberField/Completion/LiesOverInstances.olean.server",
+          "sha256": "c7cc4d41a9604980d2b905757540a8949d87f2788b39aa18b6bcc4c3472c0a99"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/NumberField/Completion/LiesOverInstances.ir",
+          "sha256": "d9c6bcaec4d1d7c032e47e337931fc52890a83cbb68078552dd3a0c816ee86d5"
+        },
+        {
+          "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-build/source/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/NumberField/Completion/LiesOverInstances.ir.sig",
+          "sha256": "f7d67e1b34bcce8a7cd84d00c97bfaccf3a614a4a231e27a8125c3fb9a58fc0c"
+        }
+      ],
+      "variant": {
+        "name": "expose-completionMap-owner",
+        "source_root": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-14-header/source",
+        "source": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-14-header/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/AdeleBaseChange.lean",
+        "artifact": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-14-header/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/AdeleBaseChange.olean",
+        "path": "UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/AdeleBaseChange.lean",
+        "original_sha256": "3585eef0027fc978294a511e4a3b23da2a9a0afbff69447aa0565090d2cfbdf9",
+        "migrated_sha256": "4cd2df13d27b42a715dc885b0fc1bde3741764c90b1b96781229c90ef2f14bfd",
+        "insertions": [
+          {
+            "offset": 570,
+            "text": "import all Mathlib.NumberTheory.NumberField.Completion.LiesOverInstances\n"
+          }
+        ],
+        "added_imports": [
+          "Mathlib.NumberTheory.NumberField.Completion.LiesOverInstances"
+        ],
+        "added_options": []
+      },
+      "command": [
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/conditional14-v435-migration/elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+        "-R",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-14-header/source",
+        "-o",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-14-header/lib/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/AdeleBaseChange.olean",
+        "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/build-tmp/module-port-20260928-repair-pilot-14-header/source/UnitDistance/Upstream/Yamaguchi/ClassFieldTheory/AlgebraicNumberTheory/AdeleBaseChange.lean"
+      ],
+      "exit_code": 0,
+      "reason": null,
+      "elapsed_total": 46.3249965403229
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,21 @@
+{
+  "archive08_byte_comparison_performed": true,
+  "archive08_inputs_equal_working_sources": true,
+  "archive08_sha256": "2cf8ff138ff678a2b9f52de20286808a2371bf3a16e5362bdd780dec64ec1385",
+  "census_prefix_forms_and_predicates_equal_sources": true,
+  "census_prefix_sha256": "fafbdaff49c1317d2606df81ca886fea6fb01200b4da7d490e7550bb84b342b3",
+  "challenge_sha256": "9e0b573c7a89624c8494d38306576428cedd9a1aca109586b724c552965a227a",
+  "checked_norm_rows": 17,
+  "completed_form_rank": 7,
+  "completed_form_span_inside_retained": true,
+  "euler_certificate_sha256": "4f01e9ae1f0f79f6575955745c1bdf6ce349a03b6990e2e4189a5205426088af",
+  "lean_retained_words_equal_manuscript": true,
+  "manuscript_field_section_sha256": "dfdd48ba5a2445c94cc8a27b86463a6ece86dc46f57c6eeabff78d5470bdf50d",
+  "order_four_prime_list_equal_certificate": true,
+  "order_four_primes_recomputed": 45,
+  "quadratic_form_hex_equal_manuscript": true,
+  "retained_form_rank": 12,
+  "scope": "Literal field-data and finite quadratic-form cross-check only; no zeta bound or field-degree proof.",
+  "sealed_archive08_source_hashes_match": true,
+  "status": "pass"
+}

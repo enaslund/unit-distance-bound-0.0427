@@ -1,0 +1,15 @@
+{
+  "before": 831,
+  "after": 838,
+  "added": [
+    "ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.NormResidue",
+    "ValuedFieldTheory.Ramification.GaloisValuation.IntermediateFieldRestriction",
+    "ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.IntermediateFieldNormResidueNaturality",
+    "ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.NormResidueNaturality",
+    "ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ConcreteReciprocityPrimeNorm",
+    "ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.UnramifiedReciprocity",
+    "ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.UnramifiedNormalization"
+  ],
+  "previous_sources_unchanged": true,
+  "unchanged_before_import_relocation": true
+}

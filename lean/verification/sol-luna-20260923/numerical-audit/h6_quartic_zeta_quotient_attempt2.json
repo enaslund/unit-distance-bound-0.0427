@@ -1,0 +1,23 @@
+{
+  "status": "FAIL after PARI decomposition, before coefficient comparison",
+  "attempt": 2,
+  "failure": "Target setup compared real integer bad-polynomial entries with the equivalent complex-pair representation without normalizing [real,imag] to real entries.",
+  "checker_sha256": "24b093073ed7570a678266a14b5c3f4139317569467bb6acdcc80b24609c691e",
+  "guarded_command": "python3 automation/lean-formalization/guarded_build.py --timeout-seconds 900 -- python3 lean-formalization/verification/sol-luna-20260923/numerical-audit/h6_quartic_zeta_quotient.py",
+  "guard_admission": {
+    "host_available_gib": 16.3,
+    "cgroup_headroom_gib": 1.30,
+    "timeout_seconds": 900
+  },
+  "wrapper_exit_code": 1,
+  "gp_child_exit_code": 0,
+  "wrapper_observed_elapsed_seconds": 0.922868732,
+  "pari_decomposition_process": "completed and returned a parsed nonempty table; full parsed table/count not saved by this failed version",
+  "comparison_performed": false,
+  "log": "h6_quartic_zeta_quotient_attempt2.log",
+  "limits": [
+    "No target coefficient vector was assembled.",
+    "No coefficient comparison or hash equality was obtained.",
+    "No analytic conclusion follows."
+  ]
+}

@@ -1,0 +1,11 @@
+Audited all 201 project declarations (including private auxiliaries and attributed ports); their complete transitive axiom union is [Quot.sound,
+ Classical.choice,
+ propext].
+Axiom audit: starting environment selection.
+Axiom audit: 201 project declarations selected.
+Axiom audit: beginning UnitDistance.ArithmeticProP.localTensorRepIsoCoind._proof_3.
+Axiom audit: beginning UnitDistance.ArithmeticProP.localizationAut_restrict_of_commutes.
+Axiom audit: beginning UnitDistance.ArithmeticProP.localFieldToGlobalAut.
+'UnitDistance.ArithmeticProP.rationalFieldUnitsH2_detection_of_imaginary_detection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

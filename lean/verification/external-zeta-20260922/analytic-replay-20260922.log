@@ -1,0 +1,348 @@
+PASS exact retained H7 coset, ranks, infinity types and all Artin multiplicities
+RUN /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/venv/bin/python -B /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/tmp-analytic/unit-distance-1.0418235-2579rvqg/publication/nonabelian-dyadic-lower-bound/research/h7-inherited-euler.py --sigma 12001/12000 --output /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/tmp-analytic/unit-distance-1.0418235-2579rvqg/publication/seven-dimensional-dyadic-lower-bound/certificates/.replay-tf5j41eu/inherited.json
+PASS fresh inherited real sector 133
+PASS fresh inherited real sector 173
+PASS fresh inherited real sector 2063
+PASS fresh inherited real sector 2087
+PASS fresh inherited real sector 2186
+PASS fresh inherited real sector 2210
+PASS fresh inherited completed sector 13
+PASS fresh inherited completed sector 37
+PASS fresh inherited completed sector 136
+PASS fresh inherited completed sector 160
+PASS fresh inherited completed sector 2050
+PASS fresh inherited completed sector 2183
+PASS fresh inherited completed sector 2223
+PASS fresh inherited completed sector 2090
+PASS inherited mixed AFE H5-single 4
+PASS inherited mixed AFE H5-single 9
+PASS inherited mixed AFE H5-single 44
+PASS inherited mixed AFE H5-single 164
+PASS inherited mixed AFE H5-single 2083
+PASS inherited mixed AFE H5-quartic 33
+PASS inherited mixed AFE H5-quartic 129
+PASS inherited mixed AFE H5-quartic 140
+PASS inherited mixed AFE H5-quartic 169
+PASS inherited mixed AFE H5-quartic 2054
+PASS inherited mixed AFE H5-quartic 2059
+PASS inherited mixed AFE H5-quartic 2094
+PASS inherited mixed AFE H5-quartic 2179
+PASS inherited mixed AFE H5-quartic 2190
+PASS inherited mixed AFE H5-quartic 2214
+PASS inherited mixed AFE H5-quartic 2219
+PASS inherited mixed AFE H6-low 1562
+PASS inherited mixed AFE H6-low 1566
+PASS inherited mixed AFE H6-low 1586
+PASS inherited mixed AFE H6-low 1590
+PASS inherited mixed AFE H6-low 1595
+PASS inherited mixed AFE H6-low 1686
+PASS inherited mixed AFE H6-low 3601
+PASS inherited mixed AFE H6-low 3608
+PASS inherited mixed AFE H6-low 3612
+PASS inherited mixed AFE H6-low 3632
+PASS inherited mixed AFE H6-low 3636
+PASS inherited mixed AFE H6-low 3772
+PASS inherited octic AFE 1555
+PASS inherited octic AFE 1559
+PASS inherited octic AFE 1599
+PASS inherited octic AFE 1682
+PASS inherited octic AFE 1691
+PASS inherited octic AFE 1695
+PASS inherited octic AFE 1715
+PASS inherited octic AFE 1719
+PASS inherited octic AFE 1722
+PASS inherited octic AFE 1726
+PASS inherited octic AFE 3605
+PASS inherited octic AFE 3641
+PASS inherited octic AFE 3645
+PASS inherited octic AFE 3728
+PASS inherited octic AFE 3732
+PASS inherited octic AFE 3737
+PASS inherited octic AFE 3741
+PASS inherited octic AFE 3761
+PASS inherited octic AFE 3765
+PASS inherited octic AFE 3768
+PASS fresh inherited Y6 [0.0008540 +/- 9.50e-8] seconds 103.13018401619047
+RUN /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/venv/bin/python -B /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/tmp-analytic/unit-distance-1.0418235-2579rvqg/publication/nonabelian-dyadic-lower-bound/research/h7-low-euler.py --evaluate-only --sigma 12001/12000 --output /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/tmp-analytic/unit-distance-1.0418235-2579rvqg/publication/seven-dimensional-dyadic-lower-bound/certificates/.replay-tf5j41eu/mixed.json
+PASS mixed quartic AFE 274 [0.11909699536914638736926664549946431 +/- 3.62e-36]
+PASS mixed quartic AFE 278 [0.11737522960368166074204910677965593 +/- 3.73e-36]
+PASS mixed quartic AFE 283 [0.099211782312426472718290257397968394 +/- 3.66e-37]
+PASS mixed quartic AFE 287 [0.069684510367984215226370722779005814 +/- 1.58e-37]
+PASS mixed quartic AFE 1793 [-0.083261374272006279023838408035975572 +/- 1.23e-38]
+PASS mixed quartic AFE 1797 [-0.056983740388441387292790029710956734 +/- 1.55e-37]
+PASS mixed quartic AFE 1828 [0.055695664116448264446013187276698094 +/- 4.35e-37]
+PASS mixed quartic AFE 1833 [-0.033790237088617353107774970672379846 +/- 2.45e-37]
+PASS mixed quartic AFE 1837 [-0.0044225380345866657445428067206936682 +/- 8.95e-40]
+PASS mixed quartic AFE 1957 [-0.018274129563412327585438173741824639 +/- 2.63e-38]
+PASS mixed quartic AFE 1964 [0.0059356761767762224494968751847827502 +/- 7.19e-39]
+PASS mixed quartic AFE 2353 [0.034644966290610533695809229843469210 +/- 5.55e-38]
+PASS mixed quartic AFE 2360 [-0.017863808111031903969036322435099302 +/- 1.97e-37]
+PASS mixed quartic AFE 3847 [-0.074778217798279202214481661751837893 +/- 3.17e-37]
+PASS mixed quartic AFE 3850 [-0.088366279410359161897140510192388294 +/- 2.64e-37]
+PASS mixed quartic AFE 3854 [-0.066883342912820649016227262611276276 +/- 1.20e-38]
+PASS mixed quartic AFE 3874 [0.041915855746101234406701310191908322 +/- 1.67e-37]
+PASS mixed quartic AFE 3878 [0.052647759729356183868083529121349238 +/- 3.82e-37]
+PASS mixed quartic AFE 3974 [0.059682683577300035193535603805289298 +/- 8.39e-38]
+PASS mixed quartic AFE 3983 [0.085000943783386434908987751969927812 +/- 1.77e-37]
+PASS mixed quartic AFE 4003 [-0.070651217446677521993155491576513720 +/- 1.59e-37]
+PASS H7 mixed quartic log sum [0.2256171820469851931801785824005732366454771347313061648191034421003761018 +/- 2.62e-74] normalized [5.508231983568974442875453671888995035289969109651029414528892629403713423e-5 +/- 7.57e-78] seconds 18.044470643624663
+PASS fresh pure quartic AFE -1
+PASS fresh pure quartic AFE 1
+PASS fresh pure quartic AFE -2
+PASS fresh pure quartic AFE 2
+PASS fresh pure quartic AFE -3
+PASS fresh pure quartic AFE 3
+PASS fresh pure quartic AFE -5
+PASS fresh pure quartic AFE 5
+RUN /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/venv/bin/python -B /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/tmp-analytic/unit-distance-1.0418235-2579rvqg/publication/nonabelian-dyadic-lower-bound/research/h7-octic-afe-at-sigma.py --sigma 12001/12000 --output /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/tmp-analytic/unit-distance-1.0418235-2579rvqg/publication/seven-dimensional-dyadic-lower-bound/certificates/.replay-tf5j41eu/octic.json
+PASS octic 2324 1 sigma 12001/12000 logLS [0.002047922683466661 +/- 7.34e-20]
+PASS octic 2333 1 sigma 12001/12000 logLS [-0.002045915506889569 +/- 4.80e-19]
+PASS octic 307 -1 sigma 12001/12000 logLS [0.08102949288338940 +/- 7.81e-19]
+PASS octic 307 1 sigma 12001/12000 logLS [-0.1270716670601688 +/- 2.02e-17]
+PASS octic 311 -1 sigma 12001/12000 logLS [0.09284603541655909 +/- 3.29e-18]
+PASS octic 311 1 sigma 12001/12000 logLS [-0.1481522992498301 +/- 3.77e-17]
+PASS octic 314 -1 sigma 12001/12000 logLS [0.001278780164746482 +/- 3.10e-19]
+PASS octic 314 -7 sigma 12001/12000 logLS [-0.008000855397164522 +/- 2.62e-19]
+PASS octic 318 -1 sigma 12001/12000 logLS [-0.004032169982648865 +/- 2.84e-19]
+PASS octic 318 -7 sigma 12001/12000 logLS [-0.01666903991440158 +/- 3.95e-18]
+PASS octic 403 -1 sigma 12001/12000 logLS [-0.01754222647388462 +/- 2.35e-18]
+PASS octic 403 1 sigma 12001/12000 logLS [-0.04040199268237629 +/- 4.28e-18]
+PASS octic 407 -1 sigma 12001/12000 logLS [-0.03921936559905831 +/- 2.67e-19]
+PASS octic 407 1 sigma 12001/12000 logLS [-0.01937626683386318 +/- 8.40e-19]
+PASS octic 410 -1 sigma 12001/12000 logLS [-0.04325947588971859 +/- 6.17e-19]
+PASS octic 410 -3 sigma 12001/12000 logLS [0.02405820447960683 +/- 3.27e-18]
+PASS octic 414 -1 sigma 12001/12000 logLS [-0.03364771247511369 +/- 4.26e-18]
+PASS octic 414 -5 sigma 12001/12000 logLS [0.005258799836020453 +/- 1.59e-19]
+PASS octic 434 -1 sigma 12001/12000 logLS [-0.002277293619277825 +/- 3.02e-19]
+PASS octic 434 1 sigma 12001/12000 logLS [0.04306224180966179 +/- 3.15e-18]
+PASS octic 438 -1 sigma 12001/12000 logLS [-0.01071454573339363 +/- 4.60e-18]
+PASS octic 438 1 sigma 12001/12000 logLS [0.04705137403590625 +/- 3.95e-18]
+PASS octic 443 -1 sigma 12001/12000 logLS [0.01334245846492866 +/- 3.54e-18]
+PASS octic 443 1 sigma 12001/12000 logLS [0.02698771586382613 +/- 2.27e-18]
+PASS octic 447 -1 sigma 12001/12000 logLS [0.02217164669655449 +/- 5.90e-19]
+PASS octic 447 1 sigma 12001/12000 logLS [0.006816777463501753 +/- 4.78e-19]
+PASS octic 1800 1 sigma 12001/12000 logLS [-0.008090039748030129 +/- 4.9e-21]
+PASS octic 1804 -1 sigma 12001/12000 logLS [-0.02720202178183509 +/- 3.17e-18]
+PASS octic 1804 1 sigma 12001/12000 logLS [0.01385725428119563 +/- 3.61e-18]
+PASS octic 1824 -1 sigma 12001/12000 logLS [-0.004356685069593130 +/- 3.63e-19]
+PASS octic 1824 1 sigma 12001/12000 logLS [0.02175905299936991 +/- 2.80e-18]
+PASS octic 1924 -1 sigma 12001/12000 logLS [0.03334564042347625 +/- 4.67e-18]
+PASS octic 1924 -2 sigma 12001/12000 logLS [0.005928864666425832 +/- 1.84e-19]
+PASS octic 1929 -1 sigma 12001/12000 logLS [0.005312070104551486 +/- 2.19e-20]
+PASS octic 1929 -3 sigma 12001/12000 logLS [-0.01196965663066863 +/- 3.87e-18]
+PASS octic 1933 1 sigma 12001/12000 logLS [0.002032661598705760 +/- 4.92e-19]
+PASS octic 1953 -1 sigma 12001/12000 logLS [0.04750990900130379 +/- 3.09e-18]
+PASS octic 1953 1 sigma 12001/12000 logLS [-0.06586982230322350 +/- 2.74e-19]
+PASS octic 1960 -1 sigma 12001/12000 logLS [-0.01989157737465265 +/- 5.99e-19]
+PASS octic 1960 -2 sigma 12001/12000 logLS [0.01318430664352590 +/- 1.38e-18]
+PASS octic 2320 -1 sigma 12001/12000 logLS [0.01409966419144734 +/- 1.87e-18]
+PASS octic 2320 1 sigma 12001/12000 logLS [-0.002005069297926871 +/- 4.02e-19]
+PASS octic 2329 -1 sigma 12001/12000 logLS [0.01385865893464457 +/- 2.86e-18]
+PASS octic 2329 -2 sigma 12001/12000 logLS [-0.01073527217493992 +/- 3.61e-19]
+PASS octic 2357 -1 sigma 12001/12000 logLS [-7.073774735048453e-5 +/- 3.30e-21]
+PASS octic 2357 1 sigma 12001/12000 logLS [0.008880104224766516 +/- 1.52e-19]
+PASS octic 2364 -1 sigma 12001/12000 logLS [-0.004942319636660774 +/- 1.02e-19]
+PASS octic 2364 1 sigma 12001/12000 logLS [-0.01426353193157060 +/- 2.95e-18]
+PASS octic 2449 -1 sigma 12001/12000 logLS [0.3014557205542955 +/- 3.59e-17]
+PASS octic 2449 -2 sigma 12001/12000 logLS [-0.2828901550030477 +/- 4.52e-17]
+PASS octic 2453 -1 sigma 12001/12000 logLS [-0.09534058007444836 +/- 4.11e-18]
+PASS octic 2453 1 sigma 12001/12000 logLS [0.1091868251497110 +/- 3.46e-17]
+PASS octic 2456 -1 sigma 12001/12000 logLS [0.006890227092210187 +/- 1.05e-19]
+PASS octic 2456 -7 sigma 12001/12000 logLS [-0.006103680743265961 +/- 3.33e-19]
+PASS octic 2460 -1 sigma 12001/12000 logLS [0.05538357473366988 +/- 6.65e-19]
+PASS octic 2460 1 sigma 12001/12000 logLS [-0.07135009016269141 +/- 1.58e-18]
+PASS octic 2480 -1 sigma 12001/12000 logLS [-0.04764396556493137 +/- 1.72e-18]
+PASS octic 2480 -3 sigma 12001/12000 logLS [0.05127844764489262 +/- 1.55e-18]
+PASS octic 2484 -1 sigma 12001/12000 logLS [-0.004519548949968314 +/- 1.62e-19]
+PASS octic 2484 1 sigma 12001/12000 logLS [0.003772882303057105 +/- 2.61e-19]
+PASS octic 2489 -1 sigma 12001/12000 logLS [-0.01397837539608993 +/- 1.13e-18]
+PASS octic 2489 1 sigma 12001/12000 logLS [0.02670900595970294 +/- 8.36e-19]
+PASS octic 2493 -1 sigma 12001/12000 logLS [-0.01421781762058489 +/- 1.37e-18]
+PASS octic 2493 -5 sigma 12001/12000 logLS [0.01605576358033220 +/- 8.41e-19]
+PASS octic 3843 -1 sigma 12001/12000 logLS [-0.02634424027352830 +/- 1.66e-18]
+PASS octic 3843 1 sigma 12001/12000 logLS [-0.01473583404360119 +/- 4.16e-18]
+PASS octic 3883 -1 sigma 12001/12000 logLS [0.03092790414741402 +/- 2.94e-18]
+PASS octic 3883 -3 sigma 12001/12000 logLS [0.01344082034753761 +/- 2.01e-18]
+PASS octic 3887 1 sigma 12001/12000 logLS [0.02494370309269706 +/- 4.03e-18]
+PASS octic 3970 -1 sigma 12001/12000 logLS [0.01806465342617538 +/- 1.85e-18]
+PASS octic 3970 1 sigma 12001/12000 logLS [0.0004877249822404761 +/- 5.80e-21]
+PASS octic 3979 -1 sigma 12001/12000 logLS [0.03149386514243836 +/- 5.84e-19]
+PASS octic 3979 -2 sigma 12001/12000 logLS [0.007100289285580578 +/- 5.00e-19]
+PASS octic 4007 -1 sigma 12001/12000 logLS [0.006329439450778725 +/- 4.45e-19]
+PASS octic 4007 -2 sigma 12001/12000 logLS [-0.03252187048058862 +/- 4.47e-18]
+PASS octic 4010 1 sigma 12001/12000 logLS [-0.02202290408501550 +/- 2.10e-18]
+PASS octic 4014 -1 sigma 12001/12000 logLS [-0.02842924874869992 +/- 3.15e-18]
+PASS octic 4014 1 sigma 12001/12000 logLS [-0.008485907081445822 +/- 2.19e-19]
+PASS sum [-0.104285866546899642231234796031666177972660614375919042710947546895800339079665727874547135371888888241307042503 +/- 1.09e-112] seconds 66.6814688006416
+PASS fresh independent census prefix and full finite-sum enclosure
+RUN /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/venv/bin/python -B /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/tmp-analytic/unit-distance-1.0418235-2579rvqg/publication/nonabelian-dyadic-lower-bound/research/h7-geometry.py /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/tmp-analytic/unit-distance-1.0418235-2579rvqg/publication/seven-dimensional-dyadic-lower-bound/certificates/witness.json /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/tmp-analytic/unit-distance-1.0418235-2579rvqg/publication/seven-dimensional-dyadic-lower-bound/certificates/.replay-tf5j41eu/euler.json --output /tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/8d25afac-a242-48d8-a13a-db5e033b4c36/scratchpad/tmp-analytic/unit-distance-1.0418235-2579rvqg/publication/seven-dimensional-dyadic-lower-bound/certificates/.replay-tf5j41eu/geometry.json
+PASS exact tower, retained local types, signature, and GS -160218343/112275691650
+PASS exact Euler-record ceiling comparison 42161819/1000000000
+Recomputing polynomial powers and outward beta moments...
+PASS fresh mass enclosure ['33.79352625412411340372705695775437805252396242589415214703324053671', '33.79352625412411387429670877527697520467987139185060935549758506804']
+PASS M_* ['0.00000294175802994170459177721846036802768786320008754024645542591', '0.00000294175802994895635885832248961224245489483725079202639918584']
+PASS M_* after concentration ['0.00000293775802994170459177721846036802768786320008754024645542591', '0.00000293775802994895635885832248961224245489483725079202639918584']
+Geometric exponent: 10418123/10000000 seconds: 10.383464539423585
+PASS fresh exponent 1.0418123 full new moments False seconds 233.17765899002552
+Use --seal after finalizing the manuscript.
+PASS all465 inherited H7 inputs; fresh profile verification begins
+PASS exact tower, retained local types, signature, and GS -160218343/112275691650
+PASS exact Euler-record ceiling comparison 42161819/1000000000
+Recomputing polynomial powers and outward beta moments...
+PASS fresh mass enclosure ['38.96878165632475491468276458948699543676831203840806557591841457613', '38.96878165632475604497713666177156215351593905613752503726826223400']
+PASS M_* ['0.00000533604359816794130106440745755304962099704532285668671221059', '0.00000533604359818304672259289816686409201133648443115558156669435']
+PASS M_* after concentration ['0.00000533204359816794130106440745755304962099704532285668671221059', '0.00000533204359818304672259289816686409201133648443115558156669435']
+Geometric exponent: 2083647/2000000 seconds: 10.907289694994688
+PASS exponent1.0418235, gain0.0000112, seconds 14.083643790334463
+PASS identity of 44 package files; all 11 manuscript inputs covered
+{
+  "status": "PASS independent exact manuscript tower calculations",
+  "quadratic_rank": 16,
+  "cubic_ranks": [
+    92,
+    93,
+    112
+  ],
+  "quotient_order_exponent": 38,
+  "conjugacy_class_exponent": 12,
+  "local_augmentation_dimensions": [
+    32,
+    31,
+    28,
+    23,
+    16,
+    9,
+    4,
+    1,
+    0
+  ],
+  "graded_row_kernel_dimensions": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "GS_value": "-160218343/112275691650"
+}
+{
+  "status": "PASS independent exact printed retained-field arithmetic",
+  "catalog_norm_identities": 17,
+  "completed_rank": 7,
+  "full_rank": 12,
+  "quadratic_relation_rank": 16,
+  "quadratic_relation_annihilation": true,
+  "completed_field_degree": 16384,
+  "full_field_degree": 524288,
+  "polar_rank_counts": {
+    "2": 8,
+    "4": 57,
+    "6": 62
+  },
+  "positive_gauss_counts": {
+    "2": 5,
+    "4": 34,
+    "6": 48
+  },
+  "zero_gauss_counts": {
+    "2": 3,
+    "4": 23,
+    "6": 14
+  },
+  "pure_sector_count": 1,
+  "quartic_twist_choices": {
+    "5,13": 26,
+    "5": 9,
+    "13": 5
+  },
+  "quartic_integral_bases": {
+    "5": {
+      "integral_element_characteristic_polynomials": [
+        [
+          1,
+          -4,
+          6,
+          -4,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1,
+          1
+        ]
+      ],
+      "trace_discriminant": 125
+    },
+    "13": {
+      "integral_element_characteristic_polynomials": [
+        [
+          1,
+          -4,
+          6,
+          -4,
+          1
+        ],
+        [
+          1,
+          1,
+          2,
+          -4,
+          3
+        ],
+        [
+          1,
+          -1,
+          2,
+          4,
+          3
+        ],
+        [
+          1,
+          1,
+          2,
+          -4,
+          3
+        ]
+      ],
+      "trace_discriminant": 2197
+    }
+  },
+  "pure_projector": {
+    "status": "PASS eta0 = beta * P5^2 / 256",
+    "projector_vectors": [
+      1,
+      16,
+      32,
+      6,
+      74
+    ],
+    "projector_signs": [
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "positive_embedding_lower_bound": 16634
+  }
+}
+PASS 1.0418235; fresh margin: ['0.00000533204359816794130106440745755304962099704532285668671221059', '0.00000533204359818304672259289816686409201133648443115558156669435']

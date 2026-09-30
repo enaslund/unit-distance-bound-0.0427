@@ -1,0 +1,43 @@
+{
+  "applied": true,
+  "base_manifest": "third-party/module-system-20260928/manifest.json",
+  "base_manifest_sha256": "245457565d6a6f37bea961e38c3c3efece0ccf36fcb99b096ea8a2ad9650e2c3",
+  "files": [
+    {
+      "added_imports": [
+        "UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-11-algclosure/result.json",
+      "insertions": [
+        {
+          "offset": 818,
+          "text": "import all UnitDistance.Upstream.Yamaguchi.ClassFieldTheory.LocalClassFieldTheory.Finite.LocalReciprocity.ResidueAlgebraicClosureDegree\n"
+        }
+      ],
+      "migrated_sha256": "85564244d9565569990978a335a85aea907dd41eea7ed18095e4643701a98b20",
+      "original_sha256": "eb3148e7173d0487bb1cf8936886d2090862f56542fe9c4c02ac832f13b98f19",
+      "path": "UnitDistance/Upstream/Yamaguchi/SawinTotallyRealTowers/UnramifiedProPRelationRank/Local/FinitePlaceAlgebraicLocalizationAlgClosure.lean",
+      "reason": "Restore the precise previously available private instance from its existing dependency owner; original mathematical source body unchanged."
+    },
+    {
+      "added_imports": [
+        "UnitDistance.RationalCompletionPadic"
+      ],
+      "added_options": [],
+      "focused_compile": "verification/module-port-20260928/repair-pilot-11-rational/result.json",
+      "insertions": [
+        {
+          "offset": 157,
+          "text": "import all UnitDistance.RationalCompletionPadic\n"
+        }
+      ],
+      "migrated_sha256": "c1e5a6b46f4125a08141c0d7d1170cc2575835b06e752cda513de5b05ef82f28",
+      "original_sha256": "534ac8a0e2947207f5f80df3c2db58f17d84c8cc693162bdc0979f74dc1d844b",
+      "path": "UnitDistance/RationalPrimeCompletion.lean",
+      "reason": "Restore the precise previously available private instance from its existing dependency owner; original mathematical source body unchanged."
+    }
+  ],
+  "schema": "unit-distance-module-port-repair-v2",
+  "scope": "Two tested header-only repairs restoring the generic algebraic-closure instance and the rational-completion algebra instance. All theorem statements, mathematical bodies and assumptions are unchanged."
+}
