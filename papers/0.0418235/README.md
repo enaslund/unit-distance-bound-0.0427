@@ -1,6 +1,12 @@
-# Current manuscript: delta 0.0418235
+# Interim note: delta 0.0418235
 
 [PDF](main.pdf) · [TeX](main.tex) · [Bibliography](references.bib)
+
+**Status.** An interim private note of the author, never released before its
+inclusion in this repository. Its result, the exponent 1.0418235, is weaker than
+that of the paper [*An Exponent of 1.04273 for the Unit Distance Problem*](../0.04273/README.md),
+which incorporates its methods and proves them in full. It is kept for the
+record, with its computer-assisted certificate.
 
 *A Lower Exponent of 1.0418235 for Planar Unit Distances*, Eric Naslund.
 This is the September 27, 2026 revision, with 41 cited references and a

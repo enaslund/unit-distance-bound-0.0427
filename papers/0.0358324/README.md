@@ -3,8 +3,12 @@
 [PDF](main.pdf) · [TeX](main.tex) · [Bibliography](references.bib)
 
 *An Improved Explicit Lower Bound for the Unit Distance Problem*, Eric Naslund.
-This is the earlier manuscript recording exponent **1.0358324**. The stronger
-current manuscript is [here](../0.0418235/README.md).
+This manuscript is a formal write-up of the construction in the author's
+MathOverflow answer. It records the exponent **1.0358324**, the largest
+exponent claimed before the paper
+[*An Exponent of 1.04273 for the Unit Distance Problem*](../0.04273/README.md).
+The [1.0418235 note](../0.0418235/README.md) in between was an interim private
+note, never released before this repository.
 The old paper counts ordered pairs; the current paper counts unordered pairs.
 This constant factor does not change the exponents.
 

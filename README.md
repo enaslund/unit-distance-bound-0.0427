@@ -11,8 +11,8 @@ bound is asserted for every sufficiently large `n`.
 | Result | Source | Status |
 | --- | --- | --- |
 | **Exponent 1.04273** (main result): *An Exponent of 1.04273 for the Unit Distance Problem* | [PDF](papers/0.04273/main.pdf) · [sources and certificate](papers/0.04273/README.md) | Manuscript of September 30, 2026: the tower of the 1.0418235 construction built over the real quadratic field ℚ(√241), with a computer-assisted certificate and a finite replay. Independent AI referee reviews found no mathematical error; it has not been peer reviewed. |
-| Exponent 1.0418235 | [PDF](papers/0.0418235/main.pdf) · [sources and certificate](papers/0.0418235/README.md) | Manuscript with a computer-assisted certificate. |
-| Exponent 1.0358324 | [PDF](papers/0.0358324/main.pdf) · [sources](papers/0.0358324/README.md) | Historical manuscript, kept for the record. |
+| Exponent 1.0418235 | [PDF](papers/0.0418235/main.pdf) · [sources and certificate](papers/0.0418235/README.md) | Interim private note, never released before this repository: a lesser result, with a computer-assisted certificate, whose methods the main paper incorporates. Kept for the record. |
+| Exponent 1.0358324 | [PDF](papers/0.0358324/main.pdf) · [sources](papers/0.0358324/README.md) | Formal write-up of the author's MathOverflow answer; the largest exponent claimed before the main paper. |
 
 ## Checks
 
@@ -39,8 +39,8 @@ its left side by 0.0848335 against the ceiling 0.0852. The statement is
 [`lean/ChallengeZeta241.lean`](lean/ChallengeZeta241.lean) and the proof
 [`lean/SolutionZeta241.lean`](lean/SolutionZeta241.lean).
 
-The project also contains the earlier conditional theorem at exponent
-1.0418235, the formalization of the 0.0418235 paper, for reference.
+The project also contains the conditional theorem at exponent 1.0418235,
+the formalization of the interim note in `papers/0.0418235`, for reference.
 
 ```sh
 cd lean

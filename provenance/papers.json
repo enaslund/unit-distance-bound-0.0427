@@ -45,7 +45,7 @@
     "papers/0.04273"
    ],
    "via": "research repository, unchanged: the September 30, 2026 manuscript An Exponent of 1.04273 for the Unit Distance Problem, its certificates and the research record",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05"
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90"
   },
   {
    "paths": [
@@ -305,349 +305,349 @@
   },
   "papers/0.04273/Makefile": {
    "research_source": "papers/0.04273/Makefile",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "329da8fe66ca05f839916bab903f2f0935ea98afd21909e5b1d92caddea684a2",
    "bytes": 348
   },
   "papers/0.04273/README.md": {
    "research_source": "papers/0.04273/README.md",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "251ef0996c91b3fe88703a86f07317abb95794094acec008f67f7e300fd84919",
    "bytes": 5652
   },
   "papers/0.04273/certificates/.gitignore": {
    "research_source": "papers/0.04273/certificates/.gitignore",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "fd11a609bc3e8b0c6b5e9bde97c20d673550adf621398f86dd6a7860056a6a84",
    "bytes": 45
   },
   "papers/0.04273/certificates/afe241.py": {
    "research_source": "papers/0.04273/certificates/afe241.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "598b0f015ebfe873c01f36c49d897558f2aad0b18263c227d2f9295933dcd289",
    "bytes": 2413
   },
   "papers/0.04273/certificates/afe241_301_300.json": {
    "research_source": "papers/0.04273/certificates/afe241_301_300.json",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "c40ea76f93e46c6d8881722ab4038dd9bd32485eaa51d82adf32efbe0937ee47",
    "bytes": 40793
   },
   "papers/0.04273/certificates/ceiling241.py": {
    "research_source": "papers/0.04273/certificates/ceiling241.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "e55552afb024b0527bac98ed29c93688fb018a1d768e32e5fb9ffe391a9a28fd",
    "bytes": 4246
   },
   "papers/0.04273/certificates/census241.c": {
    "research_source": "papers/0.04273/certificates/census241.c",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "8f2705a482c9597058736f7e5b291af7f93a8fcf676e250eae442eb69d330e02",
    "bytes": 6081
   },
   "papers/0.04273/certificates/census241.py": {
    "research_source": "papers/0.04273/certificates/census241.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "f25a4a284704ee95e2550c460b03c6f96a816aa6ff3633c6c5ad7d87f68eb5b4",
    "bytes": 4100
   },
   "papers/0.04273/certificates/census_1e9.txt": {
    "research_source": "papers/0.04273/certificates/census_1e9.txt",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "29ec6e2d11e73c8d034e745272b99c1758d21ae3385eecd85a6d8938fbaa464f",
    "bytes": 201
   },
   "papers/0.04273/certificates/check255.gp": {
    "research_source": "papers/0.04273/certificates/check255.gp",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "afd7aab4c0d11f0bd93ac2b9b1b3f9a84aa844cc8c3447e58661f95cd6db31b8",
    "bytes": 5113
   },
   "papers/0.04273/certificates/cup241.gp": {
    "research_source": "papers/0.04273/certificates/cup241.gp",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "d87a7684b2d8fafe4769a2f1b53c00b6c66d06f6c4900d65612abd2db98c3e9c",
    "bytes": 2254
   },
   "papers/0.04273/certificates/dyadic241.py": {
    "research_source": "papers/0.04273/certificates/dyadic241.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "688daaa425513eacbaea9855cd569717544c3f12d8292bdc8a2ed39df7c4def4",
    "bytes": 8722
   },
   "papers/0.04273/certificates/env241.py": {
    "research_source": "papers/0.04273/certificates/env241.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "886ffdb02aa5f6ba1d13eb2c268c7d2ce5f52fcdce45cd8bc28b0a33ac697889",
    "bytes": 1927
   },
   "papers/0.04273/certificates/geom241.py": {
    "research_source": "papers/0.04273/certificates/geom241.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "2fda015aad9bba8ba0afa276ead3a99dbb6961a47a40ecbd6bf0d55f2b82a93e",
    "bytes": 8047
   },
   "papers/0.04273/certificates/gs241.py": {
    "research_source": "papers/0.04273/certificates/gs241.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "9288d532b8e9d9e27e88ffe65775bf25b453f09532a9b0fa49598ae03c3ec979",
    "bytes": 729
   },
   "papers/0.04273/certificates/h241_receipt.json": {
    "research_source": "papers/0.04273/certificates/h241_receipt.json",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "8a3f914c76c8af157d6d8d57559280494cb96d7dc128c2f8ace7fc862f5abe72",
    "bytes": 597
   },
   "papers/0.04273/certificates/h241_receipt.py": {
    "research_source": "papers/0.04273/certificates/h241_receipt.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "cfa61b90339f03cbc07ad38f41fabe894c5e9114ad07078c69577ed918a04575",
    "bytes": 3384
   },
   "papers/0.04273/certificates/kummer241.gp": {
    "research_source": "papers/0.04273/certificates/kummer241.gp",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "8ccb1cd3e81232d747fcff36725209fddefa7b55b42d80c3e8dcb2ba65238988",
    "bytes": 3534
   },
   "papers/0.04273/certificates/lcheck.gp": {
    "research_source": "papers/0.04273/certificates/lcheck.gp",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "c1023d914d1f04ca5d44740bb9764b246ef1146ac56b04cf415d2b3aacc4e1e9",
    "bytes": 28633
   },
   "papers/0.04273/certificates/lfun241.py": {
    "research_source": "papers/0.04273/certificates/lfun241.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "bce07f3889d9cfcf7561565ed76394c569955a40cd28c659f0d6635ac8b78909",
    "bytes": 5605
   },
   "papers/0.04273/certificates/lie241.py": {
    "research_source": "papers/0.04273/certificates/lie241.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "9f4daf06573ac59808e0cd1a8331bdac9c2ee1a035cda321156a5bf1440fcb49",
    "bytes": 5108
   },
   "papers/0.04273/certificates/lie241c.py": {
    "research_source": "papers/0.04273/certificates/lie241c.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "98de266cb90c1f36bf3e9768583cc3132524e7e0a9f7d0717ec4724dceeb205f",
    "bytes": 2087
   },
   "papers/0.04273/certificates/lvalues255.gp": {
    "research_source": "papers/0.04273/certificates/lvalues255.gp",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "f9f2e0af007d286304a1527eabd48d9d7117263f678425d331eae6a83e79ca12",
    "bytes": 4198
   },
   "papers/0.04273/certificates/replay241.json": {
    "research_source": "papers/0.04273/certificates/replay241.json",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "376a4c8ecc4080b50f2afa346945a82932b16fa553edaab6f6f7ab48ec1ead0e",
    "bytes": 1404
   },
   "papers/0.04273/certificates/reproduce241.py": {
    "research_source": "papers/0.04273/certificates/reproduce241.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "ab6999b80d44a02cf56558586283a7ad5dde39c590d7b8c277bade8a462bfed5",
    "bytes": 5595
   },
   "papers/0.04273/certificates/shells241.py": {
    "research_source": "papers/0.04273/certificates/shells241.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "d6edd9eb27e9b6ac94078b7593b049d31a3a0889e9b1842d2a3604606a7080bf",
    "bytes": 1922
   },
   "papers/0.04273/certificates/shells241_0.0426.json": {
    "research_source": "papers/0.04273/certificates/shells241_0.0426.json",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "6323138b5e6c52ba87a14a4e4f8ed330223916b37753dccb8620616bb7fd3da7",
    "bytes": 761
   },
   "papers/0.04273/certificates/shells241_0.0427.json": {
    "research_source": "papers/0.04273/certificates/shells241_0.0427.json",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "4c87bda386a3571bc9243438e73a90e3f62eaef1292742d8c5c0cd669eac5fbf",
    "bytes": 764
   },
   "papers/0.04273/certificates/shells241_0.04273.json": {
    "research_source": "papers/0.04273/certificates/shells241_0.04273.json",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "d53d319cf61a4e4f7ff0031133644b376fe6f65f9427118237c97de759b1d13c",
    "bytes": 762
   },
   "papers/0.04273/certificates/shells241_0.0428.json": {
    "research_source": "papers/0.04273/certificates/shells241_0.0428.json",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "6e2bc086febf2d875fc1512929e279007fcbafc0edf48abc2db48d52048f5a78",
    "bytes": 758
   },
   "papers/0.04273/certificates/sqinR.txt": {
    "research_source": "papers/0.04273/certificates/sqinR.txt",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "d565c97146a8b5861bf60b7b3dc57e314057ff3cdd6bed95b3a83b524811168a",
    "bytes": 511
   },
   "papers/0.04273/certificates/yecheck.gp": {
    "research_source": "papers/0.04273/certificates/yecheck.gp",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "4e37b5413f982aecb212b84c6db4f8c25d0e54780141aa91344bc45251dd2fc9",
    "bytes": 641
   },
   "papers/0.04273/main.pdf": {
    "research_source": "papers/0.04273/main.pdf",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
-   "sha256": "7c685fb4235847e1e262a6253c482867bc0b2e8aa19b3945ea55ecfc1dad8489",
-   "bytes": 845502
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
+   "sha256": "c915b2c95f786e41b2acff82e6b9debf8689ba1cd75b86201a004c41291eb45d",
+   "bytes": 844946
   },
   "papers/0.04273/main.tex": {
    "research_source": "papers/0.04273/main.tex",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "5d7e6921e6236345a9d44d5f2a5ae8527c99fa6b53f0c3a07eb57a011f4411ed",
    "bytes": 4060
   },
   "papers/0.04273/references.bib": {
    "research_source": "papers/0.04273/references.bib",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
-   "sha256": "3548dc74462c8870307cb56fb93ebc3bcac43b4822a714ce9695bda28bd1887c",
-   "bytes": 22057
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
+   "sha256": "7054cdbee0f420f61e3d370a8854baf594a765009997d190b4df3a858e7eedf5",
+   "bytes": 21913
   },
   "papers/0.04273/requirements.txt": {
    "research_source": "papers/0.04273/requirements.txt",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "c3ef72268b6e958115eebb056c8a88d728bf597300c92cf72cc17388c188d7b0",
    "bytes": 187
   },
   "papers/0.04273/research/construction.md": {
    "research_source": "papers/0.04273/research/construction.md",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "04088670f931e1391089746f747936ff7d9f45dba39f5a3f0f3db706004151aa",
    "bytes": 15170
   },
   "papers/0.04273/research/design-model/amort.py": {
    "research_source": "papers/0.04273/research/design-model/amort.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "b1439d7319d026092de45e993d1117b2c76e24405e7acfa9ce4a4a1f74d45593",
    "bytes": 769
   },
   "papers/0.04273/research/design-model/design.py": {
    "research_source": "papers/0.04273/research/design-model/design.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "15765439ef19d7fcd2e801387be1f392c30126885f7ab202a22ba16a993fd6db",
    "bytes": 3339
   },
   "papers/0.04273/research/design-model/fastopt.py": {
    "research_source": "papers/0.04273/research/design-model/fastopt.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "d7c45aec05eb698f6c18bcce2fbc8dfbbc857d7b8196f55da9fef71b20d48e81",
    "bytes": 2530
   },
   "papers/0.04273/research/design-model/genus.py": {
    "research_source": "papers/0.04273/research/design-model/genus.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "5f23730f755a7884a7de1549dc72ec382e8b6625ac5184ccc8373dc812c2dfaa",
    "bytes": 768
   },
   "papers/0.04273/research/design-model/model.py": {
    "research_source": "papers/0.04273/research/design-model/model.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "949208da08bb3ec1e8655c97b7a736c7cf066b38c474fe8cbf5b5c31fd33a4c6",
    "bytes": 4991
   },
   "papers/0.04273/research/design-model/optimize.py": {
    "research_source": "papers/0.04273/research/design-model/optimize.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "1d4dbd356c062c6c0096be6151f1a721dd27a96a668f611cf01254504f09caa3",
    "bytes": 3464
   },
   "papers/0.04273/research/design-model/quadbase.py": {
    "research_source": "papers/0.04273/research/design-model/quadbase.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "8d84ae811b2ed307ce7e94bb8b252e577601ac9d8fa27488085cf11f25d5ec04",
    "bytes": 3875
   },
   "papers/0.04273/research/design-model/util.py": {
    "research_source": "papers/0.04273/research/design-model/util.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "92e1ceafe5183903f7b2e0463dd6a01b86fbf7d41ba5cd1172e8a5a3edb1b728",
    "bytes": 251
   },
   "papers/0.04273/research/design-model/zero_genus.py": {
    "research_source": "papers/0.04273/research/design-model/zero_genus.py",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "535d797a3d822d8125ce9a85e83e5912b93d47da731cc8d7015fd495ef36676a",
    "bytes": 464
   },
   "papers/0.04273/research/design-search.md": {
    "research_source": "papers/0.04273/research/design-search.md",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "088becbf9f8cd62caab4c37eab940e21323e1983588d34ad1fcd218efa072b2c",
    "bytes": 6790
   },
   "papers/0.04273/research/manuscript-review-20260930.md": {
    "research_source": "papers/0.04273/research/manuscript-review-20260930.md",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "3276a1203508196220dafe176fd8951dee637fcbf7df861342f403821a252b2d",
    "bytes": 4993
   },
   "papers/0.04273/research/review-20260929.md": {
    "research_source": "papers/0.04273/research/review-20260929.md",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "1238f278886974361c08fb8239c3b8d3ab49a1dac43984222b678d0705b6bf77",
    "bytes": 3969
   },
   "papers/0.04273/sections/analytic.tex": {
    "research_source": "papers/0.04273/sections/analytic.tex",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "b41b1cc6c970d48f8e221db3a64d78d419edf8459abc9f2a3d863d7fd59ee328",
    "bytes": 38028
   },
   "papers/0.04273/sections/certificate.tex": {
    "research_source": "papers/0.04273/sections/certificate.tex",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "dae3c7758f6ee9ed0410840f5fda77d78884ffb8790bd04ad57eb469acd1b48c",
    "bytes": 12809
   },
   "papers/0.04273/sections/finite-windows.tex": {
    "research_source": "papers/0.04273/sections/finite-windows.tex",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "c0fb2c7e75c377bdd5fd946a720965caed4aa8027f350062932c93e10705728e",
    "bytes": 24898
   },
   "papers/0.04273/sections/finite-witness.tex": {
    "research_source": "papers/0.04273/sections/finite-witness.tex",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "78ad6017cfdf1f427ead81031afe1f5999d11a41851a349c953e2375e323d2d1",
    "bytes": 1536
   },
   "papers/0.04273/sections/genus-field.tex": {
    "research_source": "papers/0.04273/sections/genus-field.tex",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "2b6a05415321328dcace4c2976aa4b10e36010651a5eb9125cc1d97d77d31ad4",
    "bytes": 15911
   },
   "papers/0.04273/sections/geometry.tex": {
    "research_source": "papers/0.04273/sections/geometry.tex",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "dbf1e4a21aee582b0ffbb7907aedaa5ce661ea8d38cabe1518b26f9cb35e3402",
    "bytes": 32799
   },
   "papers/0.04273/sections/introduction.tex": {
    "research_source": "papers/0.04273/sections/introduction.tex",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
-   "sha256": "f42dd6e48dda1ae702b4be15a35318cbf5132ec3108aa671e9737b3075789513",
-   "bytes": 19403
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
+   "sha256": "620ff16e452cbfa95ffe9dd44f4d77e98fcea3b3918c3d49ecd4b57208ba4b68",
+   "bytes": 19258
   },
   "papers/0.04273/sections/profiles.tex": {
    "research_source": "papers/0.04273/sections/profiles.tex",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "cfcc0e2306a5b3148f01dc94f6c4e8058634d7dd5807b9623ebdf460146507be",
    "bytes": 23269
   },
   "papers/0.04273/sections/tower.tex": {
    "research_source": "papers/0.04273/sections/tower.tex",
-   "research_commit": "2547dee276b79cd82f253f4d26c1a3896cb1dd05",
+   "research_commit": "fbbea29b7e97eeba6687512cbe405f94a0c56a90",
    "sha256": "571b0e7eb452950c49f0f8ebab3f6cc58411698742671163be725ff571be680b",
    "bytes": 74627
   }

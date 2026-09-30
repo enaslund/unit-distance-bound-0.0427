@@ -41,8 +41,9 @@ credited in [`lean/NOTICE`](../lean/NOTICE).
 
 ## The companion theorem: exponent 1.0418235
 
-The package also contains the earlier conditional theorem at exponent
-`2083647/2000000`: [`lean/ChallengeZeta.lean`](../lean/ChallengeZeta.lean),
+The package also contains the conditional theorem at exponent
+`2083647/2000000` of the author's interim note, a private note never released
+before this repository and superseded by the main paper: [`lean/ChallengeZeta.lean`](../lean/ChallengeZeta.lean),
 [`lean/SolutionZeta.lean`](../lean/SolutionZeta.lean),
 `lean/comparator-zeta.json` and `lean/formalization-zeta.yaml`, the
 formalization of [papers/0.0418235](../papers/0.0418235/README.md). It assumes
