@@ -56,7 +56,8 @@ ChallengeZeta` builds it.
 | Axiom audit of the 57,394 declarations in the selected closure and the 32 submission declarations | This package | Only the three standard axioms |
 | Packaging gate: deterministic re-export and the metadata contract of PalomarSubmission `65f0154` | This package's archive | Passed ([report](../provenance/lean-checks/gate.json)) |
 | Fresh build from source, with the axiom audit | The first export of this package, with byte-identical Lean files | Passed: 6,960 build jobs in 62 minutes; the audit of 52,186 project and 32 submission declarations reports only the three standard axioms ([report](../provenance/lean-checks/candidate1-fresh-build.json)) |
-| Complete pinned pipeline on this repository's exact commit | This repository | Not yet run |
+| **Palomar's own preflight workflow** (pinned verifier `65f0154` on a GitHub-hosted runner, profile `palomar-standard-v1`: 4 CPUs, 16 GiB): fresh build, protected exports, statement and definition comparison, axiom checks, con-ron, NanoDa, Lean kernel | Commits `5e35812` and `6ebff18` of this repository | **Passed** on September 30, 2026: `status: pass`, `stage: complete`, "Your solution is okay!"; for `6ebff18` the build took 1 h 43 min (peak 11.1 GiB) and the comparator phase 1 h 6 min (peak 12.0 GiB) ([report](../provenance/lean-checks/hosted-6ebff18-mechanical-report.json), [earlier report](../provenance/lean-checks/hosted-5e35812-mechanical-report.json)) |
+| The same pinned pipeline reproduced on a local host under the `palomar-standard-v1` limits | The first export of this package, with byte-identical Lean files | Passed in 9,235 s ([report](../provenance/lean-checks/candidate1-local-standard-report.json)) |
 
 The sources differ from candidate 4 only inside proofs: certificate splits
 that fit con-ron within 16 GiB. Compared declaration by declaration, no
@@ -66,8 +67,10 @@ and its Lean sources are unchanged since.
 
 ## Next steps
 
-1. Run the manual workflow
-   [`.github/workflows/palomar-preflight.yml`](../.github/workflows/palomar-preflight.yml)
-   on this repository's exact commit. It runs Palomar's pinned verifier on a
-   GitHub-hosted runner under the profile `palomar-standard-v1`.
-2. Submit the commit to the Palomar registry. No submission has been made.
+The repository is ready for submission to the Palomar registry: project
+`lean`, metadata `lean/formalization.yaml`, comparator
+`lean/comparator-zeta241.json`. No submission has been made. Commits after
+`6ebff18` change only documentation; the manual workflow
+[`.github/workflows/palomar-preflight.yml`](../.github/workflows/palomar-preflight.yml)
+reruns Palomar's pinned verifier on any commit, and its results appear in
+the repository's Actions tab.

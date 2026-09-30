@@ -48,7 +48,8 @@ lake build SolutionZeta ChallengeZeta  # the 1.0418235 theorem
 
 This repository is prepared as the Palomar submission of the 1.0427 theorem
 (project `lean`, metadata `lean/formalization.yaml`, comparator
-`lean/comparator-zeta241.json`); no submission has been made yet.
+`lean/comparator-zeta241.json`), and Palomar's own preflight check passes on
+it; no submission has been made yet.
 [docs/FORMALIZATION_STATUS.md](docs/FORMALIZATION_STATUS.md) records what has
 been verified and what remains, and the manual workflow
 [`palomar-preflight.yml`](.github/workflows/palomar-preflight.yml) runs
