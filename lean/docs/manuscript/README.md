@@ -115,6 +115,11 @@ identifies the literature sources used to prepare the references.
 
 ## Revision note
 
+- September 30, 2026: removed the displayed replay command and command-line
+  options from the certificate section. The section now describes the three
+  replay levels in prose, and this README gives the commands. The theorem,
+  proofs, witness and certificate are unchanged.
+
 - September 27, 2026: revised the abstract, introduction and proof exposition
   using the author's naslund-math-writing guide. Expanded the bibliography
   with primary-source checks and a documented Palomar search. The introduction

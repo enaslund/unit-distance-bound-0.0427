@@ -17,6 +17,16 @@
    ],
    "via": "research repository, unchanged",
    "research_commit": "a7c15fa86eb8acc4161fffb66328f5d7a8301eee"
+  },
+  {
+   "paths": [
+    "papers/0.0418235/sections/certificate.tex",
+    "papers/0.0418235/main.pdf",
+    "papers/0.04273/README.md",
+    "papers/0.04273/research/construction.md"
+   ],
+   "via": "research repository, unchanged: the September 30, 2026 revision that removed code listings from the papers",
+   "research_commit": "c459e36b35eac607f4e4a7cbf463517714eeaac2"
   }
  ],
  "files": {
@@ -183,10 +193,10 @@
    "bytes": 73124
   },
   "papers/0.0418235/main.pdf": {
-   "research_source": "publication/unit-distance-1.0418235/main.pdf",
-   "research_commit": "abf46882f6cf71d515087fbf1d849a64a2a53593",
-   "sha256": "e9524d03ff490143478bfd7a91a2a5b9f2f86caa945d493a1dd41c0a6abc8bd8",
-   "bytes": 640928
+   "research_source": "papers/0.0418235/main.pdf",
+   "research_commit": "c459e36b35eac607f4e4a7cbf463517714eeaac2",
+   "sha256": "dc8eec2b8d2d27b5a7b65577ee9ce075f043542ab36ab0900b840717b3b653c8",
+   "bytes": 640050
   },
   "papers/0.0418235/main.tex": {
    "research_source": "publication/unit-distance-1.0418235/main.tex",
@@ -213,10 +223,10 @@
    "bytes": 41611
   },
   "papers/0.0418235/sections/certificate.tex": {
-   "research_source": "publication/unit-distance-1.0418235/sections/certificate.tex",
-   "research_commit": "abf46882f6cf71d515087fbf1d849a64a2a53593",
-   "sha256": "2a6e78658108c00672e186d71ddf98bb2e56ec45b22a3df01fcac9d361d70835",
-   "bytes": 7715
+   "research_source": "papers/0.0418235/sections/certificate.tex",
+   "research_commit": "c459e36b35eac607f4e4a7cbf463517714eeaac2",
+   "sha256": "929892fe98fe0ed7242f262c86ccb792d791fab6a238091a7ffc026661360fce",
+   "bytes": 7581
   },
   "papers/0.0418235/sections/finite-windows.tex": {
    "research_source": "publication/unit-distance-1.0418235/sections/finite-windows.tex",
@@ -268,9 +278,9 @@
   },
   "papers/0.04273/README.md": {
    "research_source": "papers/0.04273/README.md",
-   "research_commit": "a7c15fa86eb8acc4161fffb66328f5d7a8301eee",
-   "sha256": "18143170002c379b3667f8cb8b4d1569357c62d6ac3561baeb4d8bc7d0de70b2",
-   "bytes": 3126
+   "research_commit": "c459e36b35eac607f4e4a7cbf463517714eeaac2",
+   "sha256": "684b1b9ea6a88f5fb9924a76514557c713d697ff1d69ab67ffb07aa45c6866c3",
+   "bytes": 3984
   },
   "papers/0.04273/certificates/.gitignore": {
    "research_source": "papers/0.04273/certificates/.gitignore",
@@ -442,9 +452,9 @@
   },
   "papers/0.04273/research/construction.md": {
    "research_source": "papers/0.04273/research/construction.md",
-   "research_commit": "a7c15fa86eb8acc4161fffb66328f5d7a8301eee",
-   "sha256": "e0e84214696e1f96137f98f55d8053c3d922f7236bffd800dd5517b46e119c4d",
-   "bytes": 15184
+   "research_commit": "c459e36b35eac607f4e4a7cbf463517714eeaac2",
+   "sha256": "c9c37f0c115795d835c5434e77ab24e1e11225d068304795dd0823d9305ff6c7",
+   "bytes": 14638
   },
   "papers/0.04273/research/design-model/amort.py": {
    "research_source": "papers/0.04273/research/design-model/amort.py",

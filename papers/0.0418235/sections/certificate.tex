@@ -145,29 +145,24 @@ Section~\ref{pf:section} enclose the geometric score. The preceding
 sections justify these calculations. The verifier evaluates the fixed
 witness and contains no optimizer.
 
-The supplied Python driver extracts a private working copy, so a replay
-does not alter the distributed inputs. The default command
-\begin{verbatim}
-python3 certificates/reproduce.py
-\end{verbatim}
-checks the retained input identities and recomputes the final geometric
-witness. Adding \texttt{--analytic} evaluates
-every Hecke factor at $12001/12000$, checks the independent prime-census
-prefix and full finite correction, and reassembles the Euler ceiling.
-Adding \texttt{--moments} also recompiles all five newest sparse producers
-and regenerates their 64 complete sector files, comparing every integer
-bin. These contain 103012 bins and 5515960 integer moments. Earlier
-moment tables and actual-field arithmetic receipts remain supplied
-finite data in these modes. Neither the default command nor these
-extended commands repeats the full $10^{12}$ prime sieve, whose source
-is included.
+The replay works on a private copy of the supplied inputs, which it
+leaves unchanged, and has three levels. The basic level checks the
+retained input identities and recomputes the final geometric witness.
+The analytic level also evaluates every Hecke factor at $12001/12000$,
+checks the independent prime-census prefix and the full finite
+correction, and reassembles the Euler ceiling. The moment level also
+regenerates the 64 complete sector files of the five newest sparse
+producers and compares every integer bin; these contain 103012 bins and
+5515960 integer moments. Earlier moment tables and actual-field
+arithmetic receipts remain supplied finite data at every level, and no
+level repeats the full $10^{12}$ prime sieve, whose source is included.
 
 The arithmetic software uses PARI/GP for exact field and Euler
 computations, Arb for ball arithmetic, and MPFR and mpmath intervals for
 directed enclosures \cite{PARI,Johansson2017,MPFR,Mpmath}.
-The package README gives dependency versions and build commands.
-The manifest checker follows every manuscript \verb|\input| and
-\verb|\bibliography| transitively, binds their bytes together with the
-certificate archive, and rejects a changed dependency closure. These
+The package README gives the replay commands, dependency versions and
+build instructions. A manifest binds the bytes of every source file and
+the bibliography of this manuscript together with the certificate
+archive, and its checker rejects any change to that set. These
 checks establish source identity. The mathematical proofs and the
 finite computations remain separate obligations.

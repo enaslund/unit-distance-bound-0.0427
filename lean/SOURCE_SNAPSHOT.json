@@ -33,7 +33,7 @@
   },
   "SELECTION.json": {
     "bytes": 1450688,
-    "sha256": "dde10daa204aac81145aa1e3ad6c926ef171d46f7a98c6a05528af9669291ea3"
+    "sha256": "05d8ee619bd33b197044f1432e6079b6225d92835e03d0d26b16c319a990ba8b"
   },
   "SolutionZeta.lean": {
     "bytes": 6026,
@@ -9704,12 +9704,12 @@
     "sha256": "9b4a3282dc0964b5c4573314c050b51d844a3bdeead9cbc637d6ff28fd7dd69d"
   },
   "docs/manuscript/README.md": {
-    "bytes": 7904,
-    "sha256": "103547dd79b2bcfae610fc5d406e17e9f3932daaa80fd131a814f325e0f39b7e"
+    "bytes": 8181,
+    "sha256": "dfe63c70717eed3a8fba7798fca53129421695afa5942acc8540e17db395d3f9"
   },
   "docs/manuscript/main.pdf": {
-    "bytes": 640928,
-    "sha256": "e9524d03ff490143478bfd7a91a2a5b9f2f86caa945d493a1dd41c0a6abc8bd8"
+    "bytes": 640050,
+    "sha256": "dc8eec2b8d2d27b5a7b65577ee9ce075f043542ab36ab0900b840717b3b653c8"
   },
   "docs/manuscript/main.tex": {
     "bytes": 2786,
@@ -9724,8 +9724,8 @@
     "sha256": "3f2add361a87ed4ebee3e429617d4a85dc52f5f1d4c7b2079defa835e5f58c56"
   },
   "docs/manuscript/sections/certificate.tex": {
-    "bytes": 7715,
-    "sha256": "2a6e78658108c00672e186d71ddf98bb2e56ec45b22a3df01fcac9d361d70835"
+    "bytes": 7581,
+    "sha256": "929892fe98fe0ed7242f262c86ccb792d791fab6a238091a7ffc026661360fce"
   },
   "docs/manuscript/sections/finite-windows.tex": {
     "bytes": 13627,
@@ -9756,8 +9756,8 @@
     "sha256": "6cbe36fe27a46d37048001c53848fae5b7f59d1313d54ec924f9a298bf925c41"
   },
   "docs/quadratic-base-research/README.md": {
-    "bytes": 3126,
-    "sha256": "18143170002c379b3667f8cb8b4d1569357c62d6ac3561baeb4d8bc7d0de70b2"
+    "bytes": 3984,
+    "sha256": "684b1b9ea6a88f5fb9924a76514557c713d697ff1d69ab67ffb07aa45c6866c3"
   },
   "docs/quadratic-base-research/certificates/afe241.py": {
     "bytes": 2413,
@@ -9872,8 +9872,8 @@
     "sha256": "c3ef72268b6e958115eebb056c8a88d728bf597300c92cf72cc17388c188d7b0"
   },
   "docs/quadratic-base-research/research/construction.md": {
-    "bytes": 15184,
-    "sha256": "e0e84214696e1f96137f98f55d8053c3d922f7236bffd800dd5517b46e119c4d"
+    "bytes": 14638,
+    "sha256": "c9c37f0c115795d835c5434e77ab24e1e11225d068304795dd0823d9305ff6c7"
   },
   "docs/quadratic-base-research/research/design-model/amort.py": {
     "bytes": 769,

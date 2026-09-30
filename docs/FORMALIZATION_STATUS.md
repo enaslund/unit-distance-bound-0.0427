@@ -2,7 +2,7 @@
 
 [`lean/`](../lean/README.md) is a Lean 4 project (Lean `v4.35.0-rc2`, Mathlib
 `065356127b1dc0016f66b7283ce0ce2c4055aa55`). Its sources are the export of
-research commit `c11cb34c` of `enaslund/unit-distance-bound`, copied unchanged;
+research commit `c459e36b` of `enaslund/unit-distance-bound`, copied unchanged;
 [`provenance/lean-release.json`](../provenance/lean-release.json) records the
 archive identity.
 
@@ -55,7 +55,7 @@ ChallengeZeta` builds it.
 | con-ron, NanoDa and Lean kernel replays of the Solution export, each within 4 CPUs and 16 GiB | The selected theorem's declarations in this package | Passed; memory peaks 10.3, 10.4 and 8.0 GiB ([record](../lean/verification/sqrt241-bounded-20260929/README.md)) |
 | Axiom audit of the 57,394 declarations in the selected closure and the 32 submission declarations | This package | Only the three standard axioms |
 | Packaging gate: deterministic re-export and the metadata contract of PalomarSubmission `65f0154` | This package's archive | Passed ([report](../provenance/lean-checks/gate.json)) |
-| Fresh build of this package from source, with the axiom audit | This package's archive | Passed: 6,960 build jobs in 62 minutes; the audit of 52,186 project and 32 submission declarations reports only the three standard axioms ([reports](../provenance/lean-checks/)) |
+| Fresh build from source, with the axiom audit | The first export of this package, with byte-identical Lean files | Passed: 6,960 build jobs in 62 minutes; the audit of 52,186 project and 32 submission declarations reports only the three standard axioms ([report](../provenance/lean-checks/candidate1-fresh-build.json)) |
 | Complete pinned pipeline on this repository's exact commit | This repository | Not yet run |
 
 The sources differ from candidate 4 only inside proofs: certificate splits

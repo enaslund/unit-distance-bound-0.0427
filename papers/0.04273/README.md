@@ -55,3 +55,20 @@ python3 reproduce241.py        # needs PARI/GP and ../requirements.txt (or PYLIB
 The replay unpacks the manuscript's supplementary archive with the
 manuscript's own hash-checked routine. It reuses the certified profile,
 shell-window and degree-two AFE modules unchanged.
+
+The individual steps, from `certificates/` (Python ≥3.11, mpmath 1.3.0,
+python-flint 0.9.0, PARI/GP and a C compiler; set PYLIB if the Python packages
+are not installed):
+
+```sh
+gp -q < kummer241.gp          # Kummer basis and local vectors
+gp -q < cup241.gp             # cup-product invariants (rank 7)
+python3 lie241.py; python3 lie241c.py   # layers L2, L3, retention, ad(c1)
+python3 gs241.py              # P_B(34/117) < 0
+python3 lfun241.py            # 255 L-function data rows (lrows241.json)
+gp -q < lcheck.gp             # conductor/gamma/coefficient checks vs PARI
+python3 afe241.py 301/300     # rigorous (1/512) log zeta_{E_B}
+python3 ceiling241.py afe241_301_300.json   # C = 0.04871285
+python3 geom241.py 0.04273 0.04871285 shells241_0.04273.json
+gcc -O2 -fopenmp -o census241 census241.c -lm && ./census241 1e9 8   # census statistics
+```
