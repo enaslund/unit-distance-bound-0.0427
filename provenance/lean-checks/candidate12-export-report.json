@@ -1,7 +1,7 @@
 {
-  "archive": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/candidate13.tar.gz",
-  "archive_bytes": 9776498,
-  "archive_sha256": "7380cedc00b50b2cad5b76d3393e908b353584c51cdcfac8ca91cd4e9775c4e4",
+  "archive": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/dist/public-0.0427/candidate12.tar.gz",
+  "archive_bytes": 9776343,
+  "archive_sha256": "53dc492c9f9fea7baa837b04495d787fce85a40028afd10807dc55f78a9840e5",
   "companion_modules_beyond_selected": 114,
   "external_zeta_records": 29,
   "files": 3015,
@@ -23,6 +23,6 @@
   "research_note_files": 58,
   "selected_configuration": "comparator-zeta241.json",
   "selected_theorem": "UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound",
-  "snapshot_sha256": "1f181b79a5b02a1dd508ef3fa4d47495edf4ee5c5d4ec12ec3de331aaf358cfe",
-  "source_bytes": 47105494
+  "snapshot_sha256": "68e74a0e4c43838686459bcc5d597b9ddc5ff59cca33861ef0d2acb5052b3542",
+  "source_bytes": 47105051
 }
