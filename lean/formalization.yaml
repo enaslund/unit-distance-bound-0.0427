@@ -41,25 +41,26 @@ sources:
 - title: An exponent of 1.04273 for the unit distance problem
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/1d9e89445fae8500cca27254a1acfc8afb1aac8b/papers/0.04273/main.tex
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/802a29bd2a4a0ab6645ecc8b2489f73ed50ac6e7/papers/0.04273/main.tex
   type: paper
   location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.04273/ at the cited commit
     (main.tex, sections/, certificates/). The source archive includes these materials under
     docs/quadratic-base-research/.'
   relationship: adapts
-  note: 'Self-contained manuscript of September 30, 2026 for the tower over Q(sqrt 241): the tower,
-    the Kummer field of the tower (called the genus field here) and its 255 quadratic L-functions, the
-    analytic ceiling, the geometric transfer and the final certificate. It proves the exponent 1.04273
-    unconditionally, with a computer-assisted certificate; this formalization proves the exponent 1.0427
-    conditional on the displayed hypothesis (H). Independent AI referee reviews found no mathematical
-    error. It is an unrefereed manuscript produced with AI tools under Eric Naslund''s direction, with an
+  note: 'Self-contained manuscript of September 30, 2026, revised for readability on October 1, 2026,
+    for the tower over Q(sqrt 241): the tower, the Kummer field of the tower (called the genus field here)
+    and its 255 quadratic L-functions, the upper bound for the relative zeta value (the analytic ceiling
+    of this formalization), the geometric construction and the proof of the main theorem. It proves the
+    exponent 1.04273 unconditionally, with a computer-assisted certificate; this formalization proves the
+    exponent 1.0427 conditional on the displayed hypothesis (H). Independent AI referee reviews found no
+    mathematical error, and the readability revision changed no mathematics. It is an unrefereed manuscript produced with AI tools under Eric Naslund''s direction, with an
     AI Methodology statement on its first page, published in the repository cited above; it is not a
     peer-reviewed publication. His role as directing author and responsible maintainer does not assert
     human proof review. No registry action is claimed by this metadata.'
 - title: A lower exponent of 1.0418235 for planar unit distances
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/1d9e89445fae8500cca27254a1acfc8afb1aac8b/papers/0.0418235/main.tex
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/802a29bd2a4a0ab6645ecc8b2489f73ed50ac6e7/papers/0.0418235/main.tex
   type: research note
   location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.0418235/ at the cited commit.
     Exported formalization package: docs/manuscript/; especially sections/tower.tex, analytic.tex,

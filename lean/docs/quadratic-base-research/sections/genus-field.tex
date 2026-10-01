@@ -1,8 +1,7 @@
 \section{\texorpdfstring{The Kummer Field and Its Quadratic $L$-Functions}{The Kummer Field and Its Quadratic L-Functions}}\label{gf:section}
 
 The analytic estimate of Section~\ref{an:section} compares every field of
-Theorem~\ref{tw:field-family} with one fixed subfield, the \emph{Kummer
-field}
+Theorem~\ref{tw:field-family} with one fixed subfield, the Kummer field
 \[
  E=B(\sqrt{\alpha_0},\ldots,\sqrt{\alpha_7})=B(\sqrt V)
 \]
@@ -10,86 +9,101 @@ of Subsection~\ref{tw:global-section}, with $\alpha_0,\ldots,\alpha_7$ as in
 \eqref{tw:alpha} and $V$ as in Lemma~\ref{tw:base}(d). It is the maximal
 elementary abelian $2$-extension of $B$ unramified at the finite primes
 outside $S$, that is, the fixed field of the Frattini subgroup of $G_B$
-(Lemma~\ref{gf:in-tower}); the Lean formalization calls it the genus field.
+(Lemma~\ref{gf:in-tower}). The Lean formalization calls $E$ the genus field;
+we do not use that name here.
 This section shows that $E$ lies in every field of
 Theorem~\ref{tw:field-family}. It then writes $\zeta_E$ as the product of
 $\zeta_B$ and $255$ quadratic Hecke $L$-functions of $B$, and determines
 their conductors, gamma factors, root numbers and Euler factors.
 
 For $v,e\in\Ftwo^8$ put $\langle v,e\rangle=\sum_{i=0}^7v_ie_i\in\Ftwo$; as
-in Section~\ref{tw:tower}, vectors are written as words $v_0v_1\cdots v_7$.
-For $e\in\Ftwo^8$ put
-\[
- \alpha_e=\prod_{i=0}^7\alpha_i^{e_i},\qquad B_e=B(\sqrt{\alpha_e}).
-\]
-For a nonzero ideal $\mathfrak a$ of a number field, $\mathrm N\mathfrak a$
-denotes its absolute norm. The number of positive divisors of an integer
-$n\ge1$ is $\tau(n)$.
+in Section~\ref{tw:tower}, vectors are written as strings of their
+coordinates. For a nonzero ideal $\mathfrak a$ of a number field,
+$\mathrm N\mathfrak a$ denotes its absolute norm. The number of positive
+divisors of an integer $n\ge1$ is $\tau(n)$.
 
 \subsection{The Characters of the Kummer Field}
-By Subsection~\ref{tw:global-section}, $[E:B]=256$, and the elementary image
-$\bar g\in\Ftwo^8$, defined by $g(\sqrt{\alpha_i})=(-1)^{\bar
-g_i}\sqrt{\alpha_i}$, identifies $\Gal(E/B)$ with $\Ftwo^8$. For
-$e\in\Ftwo^8$ let $\chi_e$ be the character $g\mapsto(-1)^{\langle\bar
-g,e\rangle}$ of $\Gal(E/B)$. Since $g(\sqrt{\alpha_e})=\chi_e(g)\sqrt{\alpha_e}$,
+By Lemma~\ref{tw:kummer-field}, $[E:B]=256$, and the elementary image
+$\bar g\in\Ftwo^8$ of Definition~\ref{tw:elementary-image}, given by
+$g(\sqrt{\alpha_i})=(-1)^{\bar g_i}\sqrt{\alpha_i}$, identifies $\Gal(E/B)$
+with $\Ftwo^8$.
+
+\begin{definition}\label{gf:characters}
+For $e\in\Ftwo^8$ put
+\[
+ \alpha_e=\prod_{i=0}^7\alpha_i^{e_i},\qquad B_e=B(\sqrt{\alpha_e}),
+\]
+and let $\chi_e$ be the character $g\mapsto(-1)^{\langle\bar g,e\rangle}$ of
+$\Gal(E/B)$.
+\end{definition}
+
+The character $\chi_e$ takes the values $\pm1$; in the additive notation of
+Definition~\ref{tw:elementary-image}, $\chi_e(g)=(-1)^{\chi_{\alpha_e}(g)}$.
+Since $g(\sqrt{\alpha_e})=\chi_e(g)\sqrt{\alpha_e}$,
 the character $\chi_e$ cuts out $B_e$, and the $256$ characters $\chi_e$ are
 all the characters of $\Gal(E/B)$. For $e\ne0$ the extension $B_e/B$ is
 quadratic, because the classes of $\alpha_0,\ldots,\alpha_7$ are independent
 in $B^\times/B^{\times2}$ (Lemma~\ref{tw:base}(d)).
 
-For a pro-$2$ group $H$, the Frattini subgroup $\Phi(H)=H^2[H,H]$ is $D_2H$.
-
 \begin{lemma}\label{gf:in-tower}
-The fixed field of $D_2G_B=\Phi(G_B)$ is $E$. Consequently $E$ is contained
-in every field $K$ of Theorem~\ref{tw:field-family}.
+The fixed field of the Frattini subgroup $D_2G_B$ of $G_B$ is $E$.
+Consequently $E$ is contained in every field $K$ of
+Theorem~\ref{tw:field-family}.
 \end{lemma}
 
 \begin{proof}
-Let $\mathcal G_B$ be the group of Subsection~\ref{tw:global-section}, so
-that $\mathcal G_B/\Phi(\mathcal G_B)=\Gal(E/B)$, and let
-$G_B=\mathcal G_B/N$ as in Definition~\ref{tw:GB}. As observed after that
-definition, $N\subseteq\Phi(\mathcal G_B)$: the images of the Frattini
-subgroups of the local groups above $3$ and $5$ and the fourth powers of
-Frobenius elements lie in $\Phi(\mathcal G_B)$, and the kernel of the
-surjection $\mathcal G_{\mathfrak p_j}\to D$ lies in $\Phi(\mathcal
-G_{\mathfrak p_j})$ because both groups have generator rank three. Hence
-$G_B/\Phi(G_B)=\mathcal G_B/\Phi(\mathcal G_B)=\Gal(E/B)$. A field $K$ of
+Let $G_S$ be the group of Subsection~\ref{tw:global-section}, so
+that $G_S/D_2G_S=\Gal(E/B)$ (Lemma~\ref{tw:kummer-field}), and let
+$G_B=G_S/N$ as in Definition~\ref{tw:GB}. By Lemma~\ref{tw:GB-basic}(b),
+$N\subseteq D_2G_S$, so
+$G_B/D_2G_B=G_S/D_2G_S=\Gal(E/B)$. A field $K$ of
 Theorem~\ref{tw:field-family} contains the fixed field of
 $D_4G_B\subseteq D_2G_B$, and hence contains $E$.
 \end{proof}
 
 \subsection{Local Data}
+
+\begin{definition}\label{gf:frobenius-vector}
 For a prime $\mathfrak p\notin S$ of $B$, the \emph{Frobenius vector}
-$v_{\mathfrak p}\in\Ftwo^8$ is the elementary image of the Frobenius of
-$\mathfrak p$ in $\Gal(E/B)$. By Euler's criterion, $(v_{\mathfrak p})_i=1$
-exactly when $\alpha_i$ is not a square in $\mathcal O_B/\mathfrak p$. For a
+$\overline{\Frob}_{\mathfrak p}\in\Ftwo^8$ is the elementary image of the
+Frobenius of $\mathfrak p$ in $\Gal(E/B)$, that is, of the Frobenius element
+$\Frob_{\mathfrak p}$ of Subsection~\ref{tw:global-section}.
+\end{definition}
+
+For $\mathfrak p=\mathfrak t_k$ it is the vector of $\Frob_{\mathfrak t_k}$ in
+Table~\ref{tw:vector-table}. By Euler's criterion,
+$(\overline{\Frob}_{\mathfrak p})_i=1$ exactly when $\alpha_i$ is not a
+square in $\mathcal O_B/\mathfrak p$. For a
 place $\mathfrak p$ of $B$ we write $(\cdot,\cdot)_{\mathfrak p}$ for the
 quadratic Hilbert symbol of $B_{\mathfrak p}$.
 
 \begin{proposition}\label{gf:local-data}
 Let $e\in\Ftwo^8\setminus\{0\}$. For a prime $\mathfrak p$ of $B$ let
-$a_{\mathfrak p}(e)$ be the exponent of $\mathfrak p$ in the conductor of
-$\chi_e$, and if $a_{\mathfrak p}(e)=0$, let $\chi_e(\mathfrak p)\in\{\pm1\}$
+$c_{\mathfrak p}(e)$ be the exponent of $\mathfrak p$ in the conductor of
+$\chi_e$, and if $c_{\mathfrak p}(e)=0$, let $\chi_e(\mathfrak p)\in\{\pm1\}$
 be the value of $\chi_e$ at the Frobenius of $\mathfrak p$.
 \begin{enumerate}
-\item If $\mathfrak p\notin S$, then $a_{\mathfrak p}(e)=0$ and
- $\chi_e(\mathfrak p)=(-1)^{\langle v_{\mathfrak p},e\rangle}$. Let $p$ be the
- rational prime below $\mathfrak p$. If $p$ splits in $B$, then
+\item If $\mathfrak p\notin S$, then $c_{\mathfrak p}(e)=0$ and
+ $\chi_e(\mathfrak p)=(-1)^{\langle\overline{\Frob}_{\mathfrak p},e\rangle}$.
+ Let $p$ be the rational prime below $\mathfrak p$. If $p$ splits in $B$, then
  $\mathfrak p=(p,\sqrt{241}-r)$ with $r^2\equiv241\pmod p$, and
- $(v_{\mathfrak p})_i=1$ exactly when the image of $\alpha_i$ under
- $\sqrt{241}\mapsto r$ is a quadratic nonresidue modulo $p$. If $p$ is
- inert, then $(v_{\mathfrak p})_i=1$ exactly when $N_{B/\Q}(\alpha_i)$ is a
- quadratic nonresidue modulo $p$. If $p=241$, the same holds with
- $\sqrt{241}\mapsto0$.
+ $(\overline{\Frob}_{\mathfrak p})_i=1$ exactly when the image of $\alpha_i$
+ under $\sqrt{241}\mapsto r$ is a quadratic nonresidue modulo $p$. If $p$ is
+ inert, then $(\overline{\Frob}_{\mathfrak p})_i=1$ exactly when
+ $N_{B/\Q}(\alpha_i)$ is a quadratic nonresidue modulo $p$. If $p=241$, the
+ same holds with $\sqrt{241}\mapsto0$.
 \item Let $\mathfrak p$ lie above $p\in\{3,5\}$, let $u=-1$ if $p=3$ and $u=2$
- if $p=5$, and let $\varpi=-\alpha_i$, where $\alpha_i$ generates
- $\mathfrak p$. If $(u,\alpha_e)_{\mathfrak p}=-1$, then
- $a_{\mathfrak p}(e)=1$. Otherwise $a_{\mathfrak p}(e)=0$ and
- $\chi_e(\mathfrak p)=(\varpi,\alpha_e)_{\mathfrak p}$.
+ if $p=5$, and let $\alpha_i$ be the generator of $\mathfrak p$. If
+ $(u,\alpha_e)_{\mathfrak p}=-1$, then $c_{\mathfrak p}(e)=1$. Otherwise
+ $c_{\mathfrak p}(e)=0$ and
+ $\chi_e(\mathfrak p)=(-\alpha_i,\alpha_e)_{\mathfrak p}$. The Frobenius
+ generator $\varphi_{\mathfrak p}$ of Definition~\ref{tw:local-generators},
+ which fixes $\sqrt{\alpha_i}$, acts on square roots by
+ $(-\alpha_i,\cdot)_{\mathfrak p}$ (Table~\ref{tw:vector-table}).
 \item Let $\mathfrak p=\mathfrak p_j$. If $(5,\alpha_e)_{\mathfrak p}=-1$, then
- $a_{\mathfrak p}(e)=3$. If $(5,\alpha_e)_{\mathfrak p}=1$ and
- $(-1,\alpha_e)_{\mathfrak p}=-1$, then $a_{\mathfrak p}(e)=2$. Otherwise
- $a_{\mathfrak p}(e)=0$ and $\chi_e(\mathfrak p)=(-2,\alpha_e)_{\mathfrak p}$.
+ $c_{\mathfrak p}(e)=3$. If $(5,\alpha_e)_{\mathfrak p}=1$ and
+ $(-1,\alpha_e)_{\mathfrak p}=-1$, then $c_{\mathfrak p}(e)=2$. Otherwise
+ $c_{\mathfrak p}(e)=0$ and $\chi_e(\mathfrak p)=(-2,\alpha_e)_{\mathfrak p}$.
 \item The real place $v_k$ becomes complex in $B_e$, that is, $\chi_e$ is
  nontrivial at $v_k$, exactly when $\alpha_e<0$ at $v_k$.
 \end{enumerate}
@@ -118,9 +132,9 @@ $U^{(n)}$, where $U^{(0)}=\mathbb Z_p^\times$ and $U^{(n)}=1+p^n\mathbb Z_p$
 \cite{MilneCFT}.
 
 For $p=3,5$, the unit group modulo squares is $\{1,u\}$, and $U^{(1)}$
-consists of squares by Hensel's lemma. Hence $a_{\mathfrak p}(e)\le1$, with
+consists of squares by Hensel's lemma. Hence $c_{\mathfrak p}(e)\le1$, with
 equality exactly when $(u,\alpha_e)_{\mathfrak p}=-1$. In the unramified
-case the Frobenius is the image of any uniformizer, such as $\varpi$.
+case the Frobenius is the image of any uniformizer, such as $-\alpha_i$.
 
 For $p=2$, the squares of $\mathbb Z_2^\times$ form $U^{(3)}$. Moreover
 $U^{(2)}=U^{(3)}\cup5U^{(3)}$ and
@@ -134,48 +148,69 @@ For (4), the real place $v_k$ splits in $B_e$ exactly when $\alpha_e>0$ at
 $v_k$.
 \end{proof}
 
-Each condition in the proposition is linear in $e$. Indeed,
-$(b,\alpha_e)_{\mathfrak p}=(-1)^{\langle w,e\rangle}$, where $w$ is the
-elementary image of the local generator that acts on square roots by
+Each condition in the proposition is linear in $e$:
+
+\begin{lemma}\label{gf:linear}
+Let $e\in\Ftwo^8$. Then
+$(5,\alpha_e)_{\mathfrak p_j}=(-1)^{\langle\bar x_j,e\rangle}$,
+$(-1,\alpha_e)_{\mathfrak p_j}=(-1)^{\langle\bar y_j,e\rangle}$ and
+$(-2,\alpha_e)_{\mathfrak p_j}=(-1)^{\langle\bar z_j,e\rangle}$. For a prime
+$\mathfrak p$ above $3$ or $5$, with $u$ as in
+Proposition~\ref{gf:local-data}(2) and $\alpha_i$ the generator of
+$\mathfrak p$,
+$(u,\alpha_e)_{\mathfrak p}=(-1)^{\langle\bar\tau_{\mathfrak p},e\rangle}$ and
+$(-\alpha_i,\alpha_e)_{\mathfrak p}=(-1)^{\langle\bar\varphi_{\mathfrak p},e\rangle}$.
+Finally, $\alpha_e<0$ at $v_k$ exactly when $\langle\bar\iota_k,e\rangle=1$.
+\end{lemma}
+
+\begin{proof}
+In each case $(b,\alpha_e)_{\mathfrak p}=(-1)^{\langle w,e\rangle}$, where $w$
+is the elementary image of the local generator that acts on square roots by
 $(b,\cdot)_{\mathfrak p}$ in Table~\ref{tw:vector-table}: at $\mathfrak p_j$
 the vectors $\bar x_j,\bar y_j,\bar z_j$ belong to $b=5,-1,-2$, and above
 $3$ and $5$ the images of the inertia and Frobenius generators belong to
-$b=u$ and $b=\varpi$. Likewise $\alpha_e<0$ at $v_k$ exactly when
-$\langle\bar\iota_k,e\rangle=1$, where $\bar\iota_k$ is the elementary image of
-the complex conjugation $\iota_k$. We put
-$\nu_k(e)=\langle\bar\iota_k,e\rangle\in\{0,1\}$. The conductor of $\chi_e$
-is $\mathfrak f_e=\prod_{\mathfrak p\in S}\mathfrak p^{a_{\mathfrak p}(e)}$.
+$b=u$ and $b=-\alpha_i$. Likewise the complex conjugation $\iota_k$ negates
+$\sqrt{\alpha_e}$ exactly when $\alpha_e<0$ at $v_k$
+(Lemma~\ref{tw:local-groups}(a)), and it multiplies $\sqrt{\alpha_e}$ by
+$(-1)^{\langle\bar\iota_k,e\rangle}$.
+\end{proof}
+
+We put $\nu_k(e)=\langle\bar\iota_k,e\rangle\in\{0,1\}$ for $k=1,2$. By
+Proposition~\ref{gf:local-data}, the conductor of $\chi_e$
+is $\mathfrak f_e=\prod_{\mathfrak p\in S}\mathfrak p^{c_{\mathfrak p}(e)}$.
 
 \begin{corollary}\label{gf:types}
-The ramification index and residue degree of a prime $\mathfrak p$ of $B$ in
-$E/B$ are $(4,2)$ at $\mathfrak p_1,\mathfrak p_2$; $(2,2)$ at
+The type (Definition~\ref{tw:type}) of a prime $\mathfrak p$ of $B$ in
+$E/B$ is $(4,2)$ at $\mathfrak p_1,\mathfrak p_2$; $(2,2)$ at
 $\mathfrak q_1,\mathfrak q_2,\mathfrak r_1,\mathfrak r_2$; and $(1,1)$ or
-$(1,2)$ at $\mathfrak p\notin S$, according as $v_{\mathfrak p}=0$ or not.
-In particular $\mathfrak t_0,\mathfrak t_1,\mathfrak t_2$ have type $(1,2)$.
+$(1,2)$ at $\mathfrak p\notin S$, according as $\overline{\Frob}_{\mathfrak p}=0$
+or not.
+In particular $\mathfrak t_0,\mathfrak t_1,\mathfrak t_2$ have type $(1,2)$
+in $E/B$.
 \end{corollary}
 
 \begin{proof}
 For $\mathfrak p\in S$, local class field theory identifies the
 decomposition group of $\mathfrak p$ in $\Gal(E/B)=\Ftwo^8$ with the image
 of $\Q_p^\times$ under the local Artin map, and the inertia group with the
-image of the units. By the preceding paragraph, at $\mathfrak p_j$ these are
+image of the units. By Lemma~\ref{gf:linear}, at $\mathfrak p_j$ these are
 spanned by $\bar x_j,\bar y_j,\bar z_j$ and by $\bar x_j,\bar y_j$; the three
 vectors are independent (Table~\ref{tw:vector-table}), so the decomposition
 group has order $8$ and inertia has order $4$. Above $3$ and $5$ the two
 elementary images are independent, which gives $(2,2)$. For
 $\mathfrak p\notin S$ the decomposition group is generated by
-$v_{\mathfrak p}$. The Frobenius vectors of $\mathfrak t_0,\mathfrak
+$\overline{\Frob}_{\mathfrak p}$. The Frobenius vectors of $\mathfrak t_0,\mathfrak
 t_1,\mathfrak t_2$ are nonzero (Table~\ref{tw:vector-table}).
 \end{proof}
 
 \subsection{The Zeta Function of the Kummer Field}
-Let $\chi_{241}$ be the Dirichlet character $n\mapsto(n/241)$.
+Let $\chi_B$ be the Dirichlet character $n\mapsto(n/241)$.
 
 \begin{proposition}\label{gf:factorization}
 For $\operatorname{Re}s>1$,
 \[
  \zeta_E(s)=\zeta_B(s)\prod_{e\in\Ftwo^8\setminus\{0\}}L(s,\chi_e),
- \qquad \zeta_B(s)=\zeta(s)L(s,\chi_{241}),
+ \qquad \zeta_B(s)=\zeta(s)L(s,\chi_B),
 \]
 where $L(s,\chi_e)=\zeta_{B_e}(s)/\zeta_B(s)$ is the Hecke $L$-function of
 $\chi_e$.
@@ -197,7 +232,7 @@ $\prod_{\zeta^{f_{\mathfrak p}}=1}(1-\zeta X)^{-g_{\mathfrak p}}
 identifies $L(s,\chi_e)$ with $\zeta_{B_e}/\zeta_B$. The second identity is
 the case of $B/\Q$. Since $241\equiv1\pmod8$, the prime $2$ splits in $B$,
 and quadratic reciprocity shows that the character of $B/\Q$ is
-$\chi_{241}$.
+$\chi_B$.
 \end{proof}
 
 Put $\Gamma_\R(s)=\pi^{-s/2}\Gamma(s/2)$ and
@@ -221,10 +256,11 @@ Let $e\ne0$, write $L(s,\chi_e)=\sum_{n\ge1}a_n(e)n^{-s}$, and put
 \item The coefficients $a_n(e)$ are integers with $|a_n(e)|\le\tau(n)$. The
  Euler factor at a rational prime $p$ is
  $\prod_{\mathfrak p\mid p}(1-\chi_e(\mathfrak p)\mathrm N\mathfrak p^{-s})^{-1}$,
- with $\chi_e(\mathfrak p)=0$ when $a_{\mathfrak p}(e)>0$.
+ with $\chi_e(\mathfrak p)=0$ when $c_{\mathfrak p}(e)>0$.
 \item The function $\Lambda(s,\chi_e)$ equals $\Lambda_{B_e}(s)/\Lambda_B(s)$.
  It is entire of order at most one and satisfies
- $\Lambda(s,\chi_e)=\Lambda(1-s,\chi_e)$.
+ $\Lambda(s,\chi_e)=\Lambda(1-s,\chi_e)$; that is, the root number of
+ $L(s,\chi_e)$ is $1$.
 \item Exactly $63$ of the characters have $\nu_1(e)=\nu_2(e)=0$, exactly
  $64$ have $\nu_1(e)=\nu_2(e)=1$, and $128$ have $\nu_1(e)\ne\nu_2(e)$.
 \end{enumerate}
@@ -259,14 +295,18 @@ $e\mapsto(\nu_1(e),\nu_2(e))$ maps $\Ftwo^8$ onto $\Ftwo^2$ with fibers of
 size $64$. Removing $e=0$ from the fiber over $(0,0)$ gives the counts.
 \end{proof}
 
-The characters with $\nu_1=\nu_2$ have \emph{pure} gamma factors
-$\Gamma_\R(s+\nu)^2$, and the others have \emph{mixed} gamma factors
-$\Gamma_\R(s)\Gamma_\R(s+1)=\Gamma_\C(s)$. Only the primes of $S$ divide the
-conductors. Since $\mathrm N\mathfrak f_e=2^{a_{\mathfrak p_1}(e)+a_{\mathfrak
-p_2}(e)}3^{a_{\mathfrak q_1}(e)+a_{\mathfrak q_2}(e)}5^{a_{\mathfrak
-r_1}(e)+a_{\mathfrak r_2}(e)}$, the conductors are $Q_e=241\cdot2^i\cdot m$
-with $2^i\in\{1,4,8,16,32,64\}$ and $m\mid225$. The number of characters with
-given $2^i$ and $m$ is as follows.
+\begin{definition}\label{gf:pure-mixed}
+Let $e\ne0$. The gamma factor of $\chi_e$ is \emph{pure} if
+$\nu_1(e)=\nu_2(e)=\nu$, and then it equals $\Gamma_\R(s+\nu)^2$; otherwise it
+is \emph{mixed}, and then it equals $\Gamma_\R(s)\Gamma_\R(s+1)=\Gamma_\C(s)$.
+\end{definition}
+
+\begin{corollary}\label{gf:conductors}
+For $e\ne0$, $Q_e=241\cdot2^i\cdot m$, where
+$2^i=2^{c_{\mathfrak p_1}(e)+c_{\mathfrak p_2}(e)}\in\{1,4,8,16,32,64\}$ and
+$m=3^{c_{\mathfrak q_1}(e)+c_{\mathfrak q_2}(e)}5^{c_{\mathfrak r_1}(e)+c_{\mathfrak r_2}(e)}$
+divides $225$. The number of characters $\chi_e$ with given $2^i$ and $m$ is
+given by the table
 \begin{equation}\label{gf:conductor-table}
 \begin{array}{c|ccccccccc|c}
  2^i\backslash m&1&3&5&9&15&25&45&75&225&\text{total}\\\hline
@@ -279,20 +319,41 @@ given $2^i$ and $m$ is as follows.
  \text{total}&15&32&32&16&64&16&32&32&16&255
 \end{array}
 \end{equation}
-No nontrivial character has $\mathrm N\mathfrak f_e=1$, since the narrow
-class number of $B$ is one. The conductors range from $Q_e=723$ to
-$Q_e=241\cdot14400=3470400$.
+In particular $723\le Q_e\le241\cdot14400=3470400$.
+\end{corollary}
+
+\begin{proof}
+Only the primes of $S$ divide the conductors, so $Q_e=241\,\mathrm N\mathfrak f_e$
+with
+\[
+ \mathrm N\mathfrak f_e=2^{c_{\mathfrak p_1}(e)+c_{\mathfrak
+ p_2}(e)}3^{c_{\mathfrak q_1}(e)+c_{\mathfrak q_2}(e)}5^{c_{\mathfrak
+ r_1}(e)+c_{\mathfrak r_2}(e)}.
+\]
+By Proposition~\ref{gf:local-data},
+$c_{\mathfrak p_j}(e)\in\{0,2,3\}$ and
+$c_{\mathfrak q_j}(e),c_{\mathfrak r_j}(e)\in\{0,1\}$, and by
+Lemma~\ref{gf:linear} these exponents are determined by the vectors of
+Table~\ref{tw:vector-table}; counting the $255$ vectors $e\ne0$ gives the
+table, which the supplementary program \texttt{check255.gp} also prints
+(Remark~\ref{gf:checks}). No nontrivial character has $\mathrm N\mathfrak f_e=1$,
+since $B$ has class number one and a unit of norm $-1$
+(Lemma~\ref{tw:base}(a),(b)), so that its narrow class number is one. The
+range of $Q_e$ can be read off from the table.
+\end{proof}
 
 \begin{remark}\label{gf:checks}
 The supplementary program \texttt{lfun241.py} computes, for each $e\ne0$,
-the conductor $Q_e$, the gamma type and the coefficients $a_n(e)$ for
-$n\le N_e=4\lfloor\sqrt{Q_e}\rfloor+1$ from Propositions~\ref{gf:local-data}
-and~\ref{gf:degree-two}(1); these are the data used in
-Section~\ref{an:section}. The supplementary program \texttt{check255.gp}
-compares all $255$ of them with PARI/GP's own number fields and
-$L$-functions \cite{PARI}. For each $e$ it computes the maximal order of
-$B_e$, checks $|\Delta_{B_e}|=241\,Q_e$ and the gamma type against the
-signature of $B_e$, and checks every coefficient $a_n(e)$ with $n\le N_e$
+the integer $Q_e$, the pair $(\nu_1(e),\nu_2(e))$ and the coefficients
+$a_n(e)$ for $n\le N_e=4\lfloor\sqrt{Q_e}\rfloor+1$, the truncation point
+used in Subsection~\ref{an:value-section}, from
+Propositions~\ref{gf:local-data} and~\ref{gf:degree-two}(1); these are the
+data used in Section~\ref{an:section}. The supplementary program
+\texttt{check255.gp} compares all $255$ of them with PARI/GP's own number
+fields and $L$-functions \cite{PARI}. For each $e$ it computes the maximal
+order of $B_e$, checks $|\Delta_{B_e}|=241\,Q_e$ and the pair
+$(\nu_1(e),\nu_2(e))$ against the signature of $B_e$, and checks every
+coefficient $a_n(e)$ with $n\le N_e$
 against the Dirichlet series of $\zeta_{B_e}/\zeta_B$. All agree. It also
 prints the table \eqref{gf:conductor-table}, the counts of
 Proposition~\ref{gf:degree-two}(3) and the range of $Q_e$. These comparisons

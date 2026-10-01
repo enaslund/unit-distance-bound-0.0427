@@ -2,7 +2,7 @@
 
 [`lean/`](../lean/README.md) is a Lean 4 project (Lean `v4.35.0-rc2`, Mathlib
 `065356127b1dc0016f66b7283ce0ce2c4055aa55`). Its sources are the export of
-research commit `9872a1e3` of `enaslund/unit-distance-bound`, copied unchanged;
+research commit `2034afaa` of `enaslund/unit-distance-bound`, copied unchanged;
 [`provenance/lean-release.json`](../provenance/lean-release.json) records the
 archive identity. It formalizes the paper *An Exponent of 1.04273 for the Unit Distance Problem* at the
 exponent 1.0427, conditional on one zeta inequality, and its Palomar project
@@ -61,7 +61,7 @@ ChallengeZeta` builds it.
 | Axiom audit of the 57,394 declarations in the selected closure and the 32 submission declarations | This package | Only the three standard axioms |
 | Packaging gate: deterministic re-export and the metadata contract of PalomarSubmission `65f0154` | This package's archive | Passed ([report](../provenance/lean-checks/gate.json)) |
 | Fresh build from source, with the axiom audit | The first export of this package, with byte-identical Lean files | Passed: 6,960 build jobs in 62 minutes; the audit of 52,186 project and 32 submission declarations reports only the three standard axioms ([report](../provenance/lean-checks/candidate1-fresh-build.json)) |
-| **Palomar's own preflight workflow** (pinned verifier `65f0154` on a GitHub-hosted runner, profile `palomar-standard-v1`: 4 CPUs, 16 GiB): fresh build, protected exports, statement and definition comparison, axiom checks, con-ron, NanoDa, Lean kernel | Commit `48cbae6` of this repository, the current package; earlier also `5e35812`, `6ebff18`, `7ce1f81`, `81755b0` and `144d08d` | **Passed** for all six (the current one on October 1, 2026, the others on September 30): `status: pass`, `stage: complete`, "Your solution is okay!"; for `6ebff18` the build took 1 h 43 min (peak 11.1 GiB) and the comparator phase 1 h 6 min (peak 12.0 GiB) ([current report](../provenance/lean-checks/hosted-48cbae6-mechanical-report.json); earlier: [5e35812](../provenance/lean-checks/hosted-5e35812-mechanical-report.json), [6ebff18](../provenance/lean-checks/hosted-6ebff18-mechanical-report.json), [7ce1f81](../provenance/lean-checks/hosted-7ce1f81-mechanical-report.json), [81755b0](../provenance/lean-checks/hosted-81755b0-mechanical-report.json), [144d08d](../provenance/lean-checks/hosted-144d08d-mechanical-report.json)) |
+| **Palomar's own preflight workflow** (pinned verifier `65f0154` on a GitHub-hosted runner, profile `palomar-standard-v1`: 4 CPUs, 16 GiB): fresh build, protected exports, statement and definition comparison, axiom checks, con-ron, NanoDa, Lean kernel | Commits `5e35812`, `6ebff18`, `7ce1f81`, `81755b0`, `144d08d`, `48cbae6` and `71f5d36` of this repository, with the same Lean files as the current package | **Passed** for all seven (on September 30 and October 1, 2026): `status: pass`, `stage: complete`, "Your solution is okay!"; for `6ebff18` the build took 1 h 43 min (peak 11.1 GiB) and the comparator phase 1 h 6 min (peak 12.0 GiB) ([latest report](../provenance/lean-checks/hosted-71f5d36-mechanical-report.json); earlier: [5e35812](../provenance/lean-checks/hosted-5e35812-mechanical-report.json), [6ebff18](../provenance/lean-checks/hosted-6ebff18-mechanical-report.json), [7ce1f81](../provenance/lean-checks/hosted-7ce1f81-mechanical-report.json), [81755b0](../provenance/lean-checks/hosted-81755b0-mechanical-report.json), [144d08d](../provenance/lean-checks/hosted-144d08d-mechanical-report.json), [48cbae6](../provenance/lean-checks/hosted-48cbae6-mechanical-report.json)) |
 | The same pinned pipeline reproduced on a local host under the `palomar-standard-v1` limits | The first export of this package, with byte-identical Lean files | Passed in 9,235 s ([report](../provenance/lean-checks/candidate1-local-standard-report.json)) |
 
 The sources differ from candidate 4 only inside proofs: certificate splits
@@ -75,9 +75,9 @@ and its Lean sources are unchanged since.
 The repository is ready for submission to the Palomar registry: project
 `lean`, metadata `lean/formalization.yaml`, comparator
 `lean/comparator-zeta241.json`. No submission has been made. The current
-`lean/` is the export of research commit `9872a1e3`. Its metadata cites the
+`lean/` is the export of research commit `2034afaa`. Its metadata cites the
 self-contained manuscript *An Exponent of 1.04273 for the Unit Distance
-Problem*, published at commit `1d9e894`, and it carries that manuscript and
+Problem*, published at commit `802a29b`, and it carries that manuscript and
 its certificates under `lean/docs`. No Lean file has changed since the
 package that passed at `6ebff18`, and the packaging gate passes. Palomar's
 preflight runs on the commit that publishes this package; the table above
