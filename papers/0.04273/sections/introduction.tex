@@ -19,25 +19,29 @@ In particular, $u(n)\ge n^{1.04273}$ for arbitrarily large integers $n$.
 The largest exponent previously claimed, $1.0358324$, is in the author's
 unpublished manuscript \cite{Naslund0358}. Theorem~\ref{thm:main} uses
 the same number-field method with several new ingredients: fields of
-mixed signature, averaged over their norm-one units; a
-pro-$2$ class field tower over the real quadratic field $\Q(\sqrt{241})$
-with a nonabelian dyadic local group; an explicit bound for the relative
-zeta value from the quadratic $L$-functions of a Kummer field of degree
-$512$; and optimized archimedean profiles and weighted windows.
-Section~\ref{intro:new} describes them. The theorem concerns an unbounded
-sequence of cardinalities. Its proof uses no unproved hypothesis, such
-as the generalized Riemann hypothesis, but it is computer-assisted:
-finite facts about the tower and several numerical inequalities are
-certified by exact computation and interval arithmetic, as described in
-Section~\ref{intro:code}.
+mixed signature, averaged over their norm-one units; an infinite
+pro-$2$ extension of the real quadratic field $\Q(\sqrt{241})$, with
+restricted ramification and a nonabelian local Galois group at the
+primes above $2$; an explicit
+bound for the relative zeta value (defined in
+Subsection~\ref{intro:outline}) from the quadratic $L$-functions of a
+Kummer field of degree $512$; and optimized \emph{profiles}: smooth or
+locally constant weight functions at the archimedean places and at
+finitely many primes, whose product determines, through its superlevel
+sets, the region in which lattice points are counted. Subsection~\ref{intro:new} describes
+them. The theorem concerns an unbounded sequence of cardinalities. Its
+proof uses no unproved hypothesis, such as the generalized Riemann
+hypothesis, but it is computer-assisted: finite facts about the tower
+and several numerical inequalities are verified by exact computation and
+interval arithmetic, as described in Subsection~\ref{intro:code}.
 
 \subsection{Background}\label{intro:background}
 Erd\H{o}s \cite{Erdos1946} showed that a suitable section of a scaled
 integer lattice gives
 \[
- u(n)\ge n^{1+c/\log\log n}
+ u(n)\ge n^{1+c_0/\log\log n}
 \]
-for some $c>0$ and arbitrarily large $n$, and he conjectured that this is
+for some $c_0>0$ and arbitrarily large $n$, and he conjectured that this is
 essentially optimal \cite{Erdos1946,Erdos1994}. The best upper bound,
 \[
  u(n)=O(n^{4/3}),
@@ -62,8 +66,8 @@ on MathOverflow spiderduckpig \cite{SpiderduckpigMO2026} adjusted these
 data to reach $1.031883$. In a comment the next day, spiderduckpig
 proposed a structural change: in the Golod--Shafarevich step of Sawin's
 argument \cite[Lemma~11]{Sawin2026}, replace the unweighted count of
-relations by a count weighted by degree in the Zassenhaus filtration.
-This was reported to give $\delta\ge0.0333487$
+relations by a count weighted by degree in the Zassenhaus filtration
+(recalled in Section~\ref{tw:tower}). This was reported to give $\delta\ge0.0333487$
 \cite{SpiderduckpigMO2026}. Weighted counts of this kind underlie the
 towers of \cite{Naslund0358} and of the present paper. The author's
 MathOverflow answer \cite{NaslundMO2026} then combined this count with
@@ -86,17 +90,17 @@ journal when this paper was written.}
 \toprule
 Exponent & Source & Main new input & Kind of source\\
 \midrule
-$1+c/\log\log n$ & Erd\H{o}s \cite{Erdos1946} & integer lattice & journal\\
+$1+c_0/\log\log n$ & Erd\H{o}s \cite{Erdos1946} & integer lattice & journal\\
 $1+\delta$, $\delta>0$ & OpenAI \cite{OpenAI2026} & ideal lattices from class field towers & manuscript\\
 $1+6\cdot10^{-38}$ & Alon et al.\ \cite{Alon2026} & simplified argument & preprint\\
 $1.014114$ & Sawin \cite{Sawin2026} & explicit and sharpened criterion & preprint\\
 $1.015263$ & Emmerich \cite{Emmerich2026} & optimized parameters & preprint\\
-$1.031185$ & Emmerich, Cordella \cite{EmmerichCordella2026} & extended range of primes & certificate\\
+$1.031185$ & Emmerich, Cordella \cite{EmmerichCordella2026} & extended range of primes & online certificate\\
 $1.031849$ & mlewko \cite{ErdosProblems90} & finite data found by ChatGPT & forum post\\
 $1.0333487$ & spiderduckpig \cite{SpiderduckpigMO2026} & weighted Zassenhaus count & online post\\
 $1.0358324$ & Naslund \cite{Naslund0358,NaslundMO2026} & covolume counting, dyadic & manuscript,\\
  & & ramification, fixed-subfield Euler products & online post\\
-$1.04273$ & this paper & see Section~\ref{intro:new} & \\
+$1.04273$ & this paper & see Subsection~\ref{intro:new} & \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -108,51 +112,95 @@ involution $\iota$ whose fixed field is $F$. We take the points of a
 translated ideal lattice of $K$ that lie in a bounded region of
 $K\otimes\R$. A complex embedding in which $\iota$ acts as complex
 conjugation maps them injectively to the plane. It sends every
-difference of relative norm one over $F$ to a unit vector. The exponent
-is then set by a balance, per unit of $d$. The gain is the number of
-equal-norm choices: a prime of $F$ that splits in $K$ and is used with
-exponent $k$ gives $k+1$ ideals of the same relative norm. Selecting a
-common ideal class loses part of this gain. Through the class-number
-formula, that loss is governed by the root discriminant $\lambda$ of $K$
-and the value at $s=1$ of $L_F(s)=\zeta_K(s)/\zeta_F(s)$. The geometric
-window decides how many of the resulting displacements keep both
-endpoints in the region, and its volume fixes the number of points.
-Using a prime $\mathfrak p$ with exponent $k$ also makes the ideal
-lattice denser by the factor $N\mathfrak p^k$, and the exponent $\delta$
-charges the gain for the points this adds.
+difference of relative norm one over $F$ to a unit vector, so two points
+whose difference has relative norm one are at distance one. The
+exponent is then set by a balance between four quantities, each
+normalized as $d^{-1}$ times the logarithm of a count. First,
+equal-norm choices: if a prime $\mathfrak p$ of $F$ splits in $K$ as
+$\mathfrak P\cdot\iota\mathfrak P$, the $k+1$ ideals
+$\mathfrak P^j(\iota\mathfrak P)^{k-j}$, $0\le j\le k$, all have
+relative norm $\mathfrak p^k$. When the construction uses these $k+1$
+ideals, we say that $\mathfrak p$ is used with exponent $k$, and we call
+the primes so used the \emph{selected primes}. Second, ideal classes:
+a choice of exponents $0\le j_{\mathfrak p}\le k_{\mathfrak p}$, one at
+each selected prime $\mathfrak p$ (used with exponent $k_{\mathfrak p}$),
+gives the product of the ideals
+$\mathfrak P^{j_{\mathfrak p}}(\iota\mathfrak P)^{k_{\mathfrak p}-j_{\mathfrak p}}$.
+For the choices whose ideals $\prod_{\mathfrak p}\mathfrak P^{j_{\mathfrak p}}$
+lie in one class of $\Cl(K)$ modulo the image of $\Cl(F)$, there are
+elements of relative norm one that generate these products times one
+fixed fractional ideal, and keeping the most frequent class loses at
+most a factor equal to the order of that quotient
+(Lemma~\ref{geo:selection}).
+Through the class-number formula, this loss is governed by the root
+discriminant $\lambda$ of $K$ and by the \emph{relative zeta value}
+$L_F(1)$, where $L_F(s)=\zeta_K(s)/\zeta_F(s)$. Third, the region: its
+shape decides how many pairs of points with difference of relative norm
+one lie in it, and its volume fixes the number of points. Fourth,
+density: using a prime $\mathfrak p$ with exponent $k$ also makes the
+ideal lattice denser by the factor $N\mathfrak p^k$; since the exponent
+$1+\delta$ is measured against the number of points, this costs
+$\delta k\log N\mathfrak p$ before division by $d$.
 
-Quantitatively, suppose that such fields exist with $d\to\infty$, a fixed
-root discriminant $\lambda$, fixed local types at the selected primes,
-and $\theta=c/d$ bounded below, where $(b,c)$ is the signature of $F$ and
-$d=b+2c$; thus $2\theta$ is the proportion of non-real embeddings of $F$.
-With hard windows at the selected primes, the exponent $1+\delta$ is
-attained when
+Quantitatively, suppose that such fields exist with $d\to\infty$ and a
+fixed root discriminant $\lambda$. Let $(b,c)$ be the signature of $F$,
+so that $d=b+2c$, and put $\theta=c/d$; thus $2\theta$ is the proportion
+of non-real embeddings of $F$. Suppose also that the selected
+primes have \emph{uniform local types}: they are all the primes of $F$
+above the primes $r$ of a fixed finite set $\mathcal R$, each of them
+splits in $K$, and all those above a given $r$ have the same absolute
+ramification index $e_r$ and residue degree $f_r$ (Definitions~\ref{tw:type}
+and~\ref{geo:uniform-types}). Then $F$ has exactly $d/(e_rf_r)$ primes
+above each $r$, and we use all of them with a common exponent
+$k_r$. If the points are taken from one translate
+of a fixed ideal lattice, with no further weighting at the selected
+primes (\emph{unweighted shell profiles},
+Definition~\ref{fw:shell-profile}), the
+exponent $1+\delta$ is attained when
 \begin{equation}\label{intro:margin}
- \sum_q\frac{\log(k_q+1)-\delta k_qf_q\log q}{e_qf_q}
+ \sum_{r\in\mathcal R}\frac{\log(k_r+1)-\delta k_rf_r\log r}{e_rf_r}
  -\Bigl(\frac12-\delta\Bigr)\log\lambda-C+\mathcal A_\delta(\theta)>0.
 \end{equation}
-Here $q$ runs over the rational primes below the selected primes, $e_q$
-and $f_q$ are their absolute ramification indices and residue degrees in
-$F$, $k_q$ is the exponent used at the primes above $q$, $C$ is an upper
+Here $C$ is an upper
 bound for $d^{-1}\log L_F(1)$, and
 \[
  \mathcal A_\delta(\theta)=(1-\delta)\log2+(1-\theta)\log\pi
  +(1-2\theta)J_\R+\theta J_\C
 \]
-is the archimedean contribution, in which $J_\R$ and $J_\C$ measure the
-overlap of the archimedean profiles at the real and at the complex
-places of $F$ under unit displacements (Proposition~\ref{geo:transfer}).
-Section~\ref{fw:section} replaces the hard windows by weighted shells
-(Proposition~\ref{fw:transfer}), and Section~\ref{sec:certificate}
-verifies the resulting inequality at $\delta=\deltastar$.
+is the archimedean contribution. In it, $J_\R$ and $J_\C$ are the
+functionals of the profiles at the real and at the complex places of
+$F$ (Definition~\ref{geo:profiles}); they compare how much a profile
+overlaps its translates by elements of relative norm one with its mass.
+We call the left side of \eqref{intro:margin} the \emph{margin}.
+Proposition~\ref{geo:transfer}, the geometric transfer, makes this
+precise for quadratic extensions $K/F$ with $K$ totally imaginary, $F$
+with a real place and $K/F$ unramified at every finite place: under
+conditions on the profiles, if the margin is bounded below by a positive
+constant along such a family, then there are finite sets
+$U_j\subset\R^2$ with $|U_j|\to\infty$ and
+$u(U_j)/|U_j|^{1+\delta}\to\infty$. Section~\ref{fw:section} allows
+general \emph{shell profiles}, weighted sums of indicator functions of
+sets defined by valuations (Definition~\ref{fw:shell-profile} and
+Proposition~\ref{fw:transfer}). This replaces each summand of the sum
+over $\mathcal R$ in \eqref{intro:margin} by
+$\log\mathcal F_{\delta,r}/(e_rf_r)$, where $\mathcal F_{\delta,r}$ is
+the value of the local functional of Definition~\ref{fw:local-functional}
+at the shell profile used above $r$; we still call the resulting left
+side the margin (Corollary~\ref{fw:uniform-types}).
+Section~\ref{sec:certificate} proves a positive lower bound for it at
+$\delta=\deltastar$.
 
 The fields must form an infinite family of growing degree with fixed
-$\lambda$ and fixed local types. Such families come from infinite
-pro-$2$ class field towers with prescribed local Galois groups. The
-Golod--Shafarevich criterion \cite{GolodShafarevich} proves that a tower
-is infinite when a certain power series in a variable $t$ takes a
-negative value; the use of Frobenius conditions to control splitting in
-such towers goes back to Hajir, Maire and Ramakrishna
+$\lambda$ and fixed types at the selected primes. Such families come
+from \emph{towers}, pro-$2$ extensions with restricted ramification and
+prescribed local Galois groups, when these are infinite.
+Golod--Shafarevich arguments \cite{GolodShafarevich} show that a tower
+is infinite when an explicit function of $t\in(0,1)$, built from the
+number of generators of its Galois group and from its local conditions,
+takes a negative value; here that function is the
+\emph{Golod--Shafarevich function} $P_B$ of \eqref{tw:PB}, and
+Proposition~\ref{tw:infinite} proves the criterion for it. The use of
+Frobenius conditions to control splitting in such towers goes back to Hajir, Maire and Ramakrishna
 \cite{HajirMaireRamakrishna2021Cutting}.
 
 \subsection{New ingredients}\label{intro:new}
@@ -166,20 +214,24 @@ modulus one at every archimedean place, and the norm-one units are
 finite. Here $K$ is totally imaginary and Galois over $B=\Q(\sqrt{241})$,
 and $F$ is the fixed field of one complex conjugation $\iota_1$, which is
 not central: its conjugacy class has at least $2^{15}$ elements, so
-$\theta\ge\thetastar$ and almost every place of $F$ is complex. Above a
+$\theta\ge\theta_*=\thetastar$ (Theorem~\ref{tw:field-family}) and
+almost every place of $F$ is complex. Above a
 complex place of $F$ the two coordinates of a norm-one element can have
 moduli $e^u$ and $e^{-u}$, and the norm-one units, of rank $c$, move $u$
 along a lattice. Averaging over a fundamental domain of that lattice
-counts the resulting displacements exactly, and the class-number formula
-cancels the regulator of these units together with the capitulation
-kernel (Proposition~\ref{geo:mass}). Mixed signature therefore costs only
+counts the resulting pairs of points exactly, and the class-number
+formula cancels the regulator of these units together with the
+capitulation kernel, the kernel of $\Cl(F)\to\Cl(K)$
+(Proposition~\ref{geo:mass}). Mixed signature therefore costs only
 a factor $\pi$ per complex place of $F$, and a profile that couples the
 two coordinates at that place more than repays it.
 
 \emph{A tower over $\Q(\sqrt{241})$.} Over a totally real base field in
-which every prime used by the construction splits completely, the
-Golod--Shafarevich series contains a copy of each local condition for
-every prime of the base, but only one constant term. The field
+which every prime at which the tower is ramified splits completely, the
+Golod--Shafarevich function has a local term for every prime of the
+base above such a prime, but only one constant term (in
+\eqref{tw:PB}, the terms $2\psi_D$ and $4\psi_{C_2\times C_2}$, and the
+constant $1$). The field
 $B=\Q(\sqrt{241})$ is the real quadratic field of smallest discriminant
 in which $2$, $3$ and $5$ all split. Over $B$ we prescribe a nonabelian
 dyadic local Galois group of order $32$ at each of the two primes above
@@ -190,7 +242,8 @@ inert in $B$. The relations are counted through their images in the
 Zassenhaus filtration, and one dyadic relation is implied by the others
 through Hilbert reciprocity. The resulting tower is infinite, it is
 ramified only above $2$, $3$ and $5$, and its Galois group has $8$
-generators. The root discriminant of its fields is
+generators. The fields of Theorem~\ref{tw:field-family} have root
+discriminant
 \[
  \lambda=2^{9/4}\sqrt{3615}\approx286.0,
  \qquad 3615=3\cdot5\cdot241.
@@ -203,22 +256,24 @@ states the family of fields.
 
 \emph{The zeta value.} Every field $K$ of Theorem~\ref{tw:field-family}
 contains the Kummer field $E=B(\sqrt V)$, of degree $512$ over $\Q$,
-where $V$ is the group of $\{2,3,5\}$-units of $B$ modulo squares. Its
+where $V$ is the group of $\{2,3,5\}$-units of $B$ (the units of
+$\mathcal O_B[1/30]$) modulo squares. Its
 Dedekind zeta function is the product of $\zeta_B$ and $255$ quadratic
-Hecke $L$-functions of $B$, which we evaluate with certified approximate
+Hecke $L$-functions of $B$, which we evaluate rigorously with approximate
 functional equations (Sections~\ref{gf:section} and~\ref{an:section}).
-Together with refinements from the exact local types of the tower, this
-gives the bound $C=\ceiling$ for $d^{-1}\log L_F(1)$
+Together with refinements from the known types of primes in the fields
+of the tower (Definition~\ref{tw:type}), this gives the bound $C=\ceiling$ for $d^{-1}\log L_F(1)$
 (Theorem~\ref{an:ceiling}). It replaces Louboutin's bound
 \cite{Louboutin2000}, which Sawin uses, and the Euler products over a
 fixed multiquadratic subfield of \cite{Naslund0358}.
 
-\emph{Profiles and shells.} Sawin counts points in a sup-norm window by
-packing, and \cite{Naslund0358} counts them by covolume in a Euclidean
-ball. We use a Gaussian profile at the real places of $F$, a coupled
-Student--Bernstein profile at the complex places, and weighted valuation
-shells at the selected primes, and we count points by Poisson summation
-(Sections~\ref{geo:section}--\ref{pf:section}).
+\emph{Profiles and shells.} Sawin counts points in a region bounded in
+the sup norm by packing, and \cite{Naslund0358} counts them by covolume
+in a Euclidean ball. We use a Gaussian profile at the real places of
+$F$; at the complex places, a Student--Bernstein profile, which couples
+the two coordinates (Definition~\ref{pf:student}); and shell profiles at the selected primes
+(Definition~\ref{fw:shell-profile}). We count points by Poisson
+summation (Sections~\ref{geo:section}--\ref{pf:section}).
 Table~\ref{intro:table-constructions} compares Sawin's example with the
 present construction.
 
@@ -234,7 +289,7 @@ primes of $F$; Sawin's residue degrees are at most $2$.}
 \midrule
 base field of the tower & $\Q(\sqrt{3\cdot5\cdots43})$ & $\Q(\sqrt{241})$\\
 primes ramified in the tower & $2$ and $3,5,\dots,43$ & those above $2,3,5$\\
-fields $K$ & CM, $\theta=0$ & mixed signature, $\theta\ge\thetastar$\\
+fields $K$ & CM, $\theta=0$ & mixed signature, $\theta\ge\theta_*$\\
 selected primes, $(e,f)$ & $22$ primes up to $179$ & $2{:}\,(8,4)$;\ $3,5{:}\,(2,2)$;\\
  & & $7{:}\,(1,8)$;\ $29{:}\,(1,4)$\\
 root discriminant $\lambda$ & about $1.6\cdot10^8$ & $2^{9/4}\sqrt{3615}\approx286.0$\\
@@ -248,13 +303,18 @@ exponent $1+\delta$ & $1.014114$ & $1.04273$\\
 \subsection{Why the exponent improves}\label{intro:why}
 Write $\ell=\log\lambda$,
 \[
- J=\sum_q\frac{\log(k_q+1)}{e_qf_q},\qquad
- H=\sum_q\frac{k_q\log q}{e_q},
+ J=\sum_{r\in\mathcal R}\frac{\log(k_r+1)}{e_rf_r},\qquad
+ H=\sum_{r\in\mathcal R}\frac{k_r\log r}{e_r},
 \]
 so that the sum in \eqref{intro:margin} is $J-\delta H$. Sawin's
-criterion \cite[Proposition~10]{Sawin2026} applies to Galois CM fields of
-unbounded degree with relative root discriminant $\lambda$, and uses a
-sup-norm window with parameter $R>1$. Rearranged, it gives arbitrarily
+criterion \cite[Proposition~10]{Sawin2026} applies to Galois CM fields
+$K$ of unbounded degree, with maximal totally real subfield $F$, whose
+relative root discriminant $(|\Delta_K|/|\Delta_F|)^{1/d}$ is $\lambda$,
+and counts points in a region bounded in the sup norm, with a parameter
+$R>1$. In his example, as for our fields, $K/F$ is unramified at every
+finite place, so that $|\Delta_K|=|\Delta_F|^2$ and $\lambda=\rd(K)$
+(Definition~\ref{tw:rd}).
+Rearranged, his criterion gives arbitrarily
 large sets with $u(U)\gg|U|^{1+\delta}$ whenever
 \eqref{intro:sawin-margin} holds; inequality \eqref{intro:regrouped} is
 \eqref{intro:margin} with $\mathcal A_\delta(\theta)$ written out and
@@ -268,8 +328,8 @@ regrouped:
  \label{intro:regrouped}
 \end{align}
 In both, the three groups are the gain from equal-norm choices, the loss
-in selecting a common ideal class, and the count of vertices together
-with the window.
+in selecting a common ideal class, and the count of points together
+with the shape of the region.
 
 \emph{The fields.} The dominant change is in $\ell$. Sawin's example has
 $\ell>18.9$; here $\ell<5.657$, so the term $-\frac12\ell$ improves by
@@ -282,70 +342,80 @@ degree $4$ or $8$.
 formula, which is exact in either signature; they differ in how they
 bound the zeta value. At $\theta=0$ the constants agree, and the groups
 differ only in $C$ against $1+\log\ell$. In Sawin's criterion,
-$1+\log\ell$ is the sum of $\log(e/2)+\log\ell$, which is Louboutin's
+$1+\log\ell$ is the sum of $1-\log2+\log\ell$, which is Louboutin's
 bound \cite[Corollary~3]{Louboutin2000} for $d^{-1}\log L_F(1)$ read
 through the class-number formula, and $\log2$, for the factor $2^d$
-allowed for units in Sawin's modified class group
+allowed for units in
 \cite[Lemma~6]{Sawin2026}. The manuscript \cite{Naslund0358} removed the
 unit factor and sharpened Louboutin's bound with Euler products over a
 fixed subfield. Here Proposition~\ref{geo:mass} accounts for the unit
-index exactly, and the Kummer field gives $C=\ceiling$, whereas
+index $[\mathcal O_F^\times:N_{K/F}\mathcal O_K^\times]$ exactly, and the Kummer field gives $C=\ceiling$, whereas
 $1+\log\ell$ would exceed $2.73$ even at our value of $\lambda$. Mixed
 signature costs $\theta\log\pi$ in this group, since each place of $F$
 carries one factor $\pi$ in the class-number formula.
 
-\emph{Vertices and window.} Sawin's packing count gives
-$\delta(H+2\log(2R+e^{-H/2}))$, which does not involve $\lambda$.
-Counting by covolume, as in \cite{Naslund0358} and here, returns
-$\delta\ell$, because a larger discriminant makes the ideal lattice
-sparser. The overlap $2\log(1-R^{-1})$ of the sup-norm window and its
-volume become the profile functionals $J_\R$ and $J_\C$.
+\emph{Points and region.} Besides the term $-\delta H$, which both
+criteria share, Sawin's packing count of points contributes
+$-2\delta\log(2R+e^{-H/2})$ to \eqref{intro:sawin-margin}, which does not
+involve $\lambda$. Counting by covolume, as in \cite{Naslund0358} and
+here, contributes $\delta\ell-\delta\log2$ to \eqref{intro:regrouped},
+because a larger discriminant makes the ideal lattice sparser. The term $2\log(1-R^{-1})$, which measures how much Sawin's
+region overlaps its translates by elements of relative norm one, and
+the volume of that region become the functionals $J_\R$ and $J_\C$ of
+the profiles.
 
 \emph{Signature.} CM fields have $\theta=0$. With the other data fixed,
 mixed signature adds $\theta(J_\C-2J_\R-\log\pi)$ to the left side of
-\eqref{intro:regrouped}. The certificate gives
-$J_\C-2J_\R-\log\pi>0.632$, so with $\theta\ge\thetastar$ this term
-exceeds $0.316$ per unit of $d$; at $\theta=0$ the certified margin
-would be negative (Remark~\ref{cert:signature-remark}).
+\eqref{intro:regrouped}. Section~\ref{sec:certificate} proves
+$J_\C-2J_\R-\log\pi>0.6324$ (Proposition~\ref{cert:enclosures}(h) and
+Lemma~\ref{cert:lower-margin}), so
+with $\theta\ge\theta_*$ this term exceeds $0.316$; at $\theta=0$ the
+lower bound for the margin proved there would be negative
+(Remark~\ref{cert:signature-remark}).
 
-Table~\ref{cert:tab-budget} lists the certified terms of the margin at
-$\delta=\deltastar$. Their sum leaves a margin of about
-$1.77\cdot10^{-4}$ per unit of $d$. With the same profiles, and shell
-weights optimized in the same way, the margin at $\delta=0.0428$ is
-negative.
+Table~\ref{cert:tab-budget} lists, rounded, the terms of the lower bound
+for the margin that Section~\ref{sec:certificate} proves at
+$\delta=\deltastar$ and $\theta=\theta_*$; they sum to about $1.77\cdot10^{-4}$
+(Proposition~\ref{cert:enclosures}). With the same complex-place
+profile, the real-place profile adjusted to $\delta$ as in
+Definition~\ref{cert:data}, and shell weights re-optimized in the same
+way, the corresponding lower bound at $\delta=0.0428$ is negative
+(Remark~\ref{cert:observations}).
 
 \subsection{Organization}\label{intro:organization}
 Section~\ref{tw:tower} constructs the tower over $B$ and proves
 Theorem~\ref{tw:field-family}, which supplies the fields.
 Section~\ref{gf:section} describes the Kummer field and its quadratic
-$L$-functions, and Section~\ref{an:section} proves the ceiling
-$d^{-1}\log L_F(1)<C$ (Theorem~\ref{an:ceiling}).
-Sections~\ref{geo:section}--\ref{pf:section} carry out the geometric
-construction: the norm-one mass formula and the transfer to planar sets,
-the weighted windows at the selected primes, and the archimedean
-profiles. These sections hold for any quadratic extension with the
-stated properties. Section~\ref{sec:certificate} evaluates the final
-inequality at $\delta=\deltastar$ and completes the proof of
+$L$-functions, and Section~\ref{an:section} proves the upper bound
+$d^{-1}\log L_F(1)<C$ for the relative zeta value
+(Theorem~\ref{an:ceiling}). Sections~\ref{geo:section}--\ref{pf:section}
+carry out the geometric construction: the class-number formula for the
+units of relative norm one and the geometric transfer to planar sets,
+the shell profiles at the selected primes, and the archimedean profiles.
+These sections apply to any quadratic extension $K/F$ satisfying the
+conditions (G1)--(G3) of Section~\ref{geo:section}. Section~\ref{sec:certificate} proves the final inequality
+at $\delta=\deltastar$ and completes the proof of
 Theorem~\ref{thm:main}.
 
 \subsection{Computations and data}\label{intro:code}
 The proof uses finite computations: linear algebra over $\Ftwo$ for the
-tower, exact rational arithmetic for the Golod--Shafarevich series,
-certified evaluations of $L$-functions in the ball arithmetic of Arb,
-now part of FLINT \cite{Johansson2017,FLINT}, and directed interval
-bounds for the geometric margin \cite{Mpmath}. PARI/GP \cite{PARI} is
+tower, exact rational arithmetic for the Golod--Shafarevich function,
+rigorous evaluations of $L$-functions in the ball arithmetic of Arb,
+now part of FLINT \cite{Johansson2017,FLINT}, and interval arithmetic
+with directed rounding for the margin \cite{Mpmath}. PARI/GP \cite{PARI} is
 used for the arithmetic of number fields and for independent checks.
 Each finite fact is verified by a supplementary program, named in the
-text where the fact is used. These certificates concern exact arithmetic
-and rigorous inequalities, not the statistical accuracy of
+text where the fact is used. These computations concern exact
+arithmetic and rigorous inequalities, not the statistical accuracy of
 floating-point approximations.
 
 The programs and their data are in the directory
 \texttt{papers/0.04273/certificates} of the public repository
-\cite{NaslundCode2026}. Some certified routines, for the degree-two
-approximate functional equations, the archimedean profiles and the
-finite windows, are imported unchanged from an earlier supplementary
-archive of the author, in the directory
+\cite{NaslundCode2026}. Some routines, for the degree-two approximate
+functional equations, the archimedean profiles and the shell profiles,
+are imported unchanged from the supplementary archive of an earlier,
+unpublished note of the author, superseded by the present paper, in the
+directory
 \texttt{papers/0.0418235/certificates} of the same repository, together
 with a manifest of the SHA-256 hashes of its members. A replay program
 runs every step and records its results. The computations were run with

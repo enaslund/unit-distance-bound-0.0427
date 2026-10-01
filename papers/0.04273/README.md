@@ -37,13 +37,13 @@ and 5 all split. Over it, the tower is ramified only above 2, 3 and 5, with
 Frobenius conditions at the primes above 29 and at the inert prime 7, and it
 needs no ramification at 7, 11 and 13. The root discriminant falls from about
 583 to 2^{9/4}·√3615 ≈ 286. That outweighs the loss of the selected primes
-11–31 and the larger analytic ceiling.
+11–31 and the larger upper bound for the relative zeta value.
 
 ## Contents
 
 | Path | Contents |
 | --- | --- |
-| [main.tex](main.tex), [sections/](sections/), [references.bib](references.bib) | The manuscript: introduction, tower over Q(√241), the Kummer field and its L-functions, analytic ceiling, geometric transfer, finite windows, archimedean profiles, final certificate |
+| [main.tex](main.tex), [sections/](sections/), [references.bib](references.bib) | The manuscript: introduction; the tower over Q(√241); the Kummer field and its L-functions; the upper bound for the relative zeta value; units of relative norm one and planar point sets; shell profiles at split finite places; archimedean profiles; the proof of the main theorem |
 | [certificates/](certificates/) | The supplementary programs and the replay driver `reproduce241.py` |
 | [research/construction.md](research/construction.md) | The research note of September 29, 2026 that first recorded the construction; the manuscript supersedes it |
 | [research/manuscript-review-20260930.md](research/manuscript-review-20260930.md) | Review record of the manuscript |
@@ -57,9 +57,9 @@ needs no ramification at 7, 11 and 13. The root discriminant falls from about
 | --- | --- |
 | rd(K) = rd(F) | 2^{9/4}·√3615 ≈ 286.0 |
 | Golod–Shafarevich | P_B(34/117) = −187433948535241/88772225460489675 |
-| retained quotient | order 2⁴⁹; conjugacy class of ι₁ of size 2¹⁵, so θ ≥ 65535/131072 |
-| analytic ceiling | C = 0.04871285 (σ = 301/300, from 255 rigorously evaluated quadratic Hecke L-functions of Q(√241)) |
-| certified margin | M_*(θ_*) > 1.767·10⁻⁴ at δ = 0.04273 |
+| quotient G_B/D_4G_B | order 2⁴⁹; conjugacy class of ι₁ of size 2¹⁵, so θ ≥ 65535/131072 |
+| upper bound for d⁻¹ log L_F(1) | C = 0.04871285 (σ = 301/300, from 255 rigorously evaluated quadratic Hecke L-functions of Q(√241)) |
+| lower bound for the margin | 𝓜_*(θ_*) > 1.767·10⁻⁴ at δ = 0.04273 |
 
 ## Reproduce
 
@@ -96,4 +96,4 @@ python3 h241_receipt.py       # the Lean hypothesis H241 (not needed for the man
 ```
 
 `census241.c` and `census_1e9.txt` are floating-point diagnostics of the
-Frobenius census up to 10⁹; the manuscript does not use them.
+classification of the Frobenius vectors of primes up to 10⁹; the manuscript does not use them.
