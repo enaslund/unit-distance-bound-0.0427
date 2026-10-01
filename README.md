@@ -14,6 +14,9 @@ bound is asserted for every sufficiently large `n`.
 | Exponent 1.0418235 | [PDF](papers/0.0418235/main.pdf) · [sources and certificate](papers/0.0418235/README.md) | Interim private note, never released before this repository: a lesser result, with a computer-assisted certificate, whose methods the main paper incorporates. Kept for the record. |
 | Exponent 1.0358324 | [PDF](papers/0.0358324/main.pdf) · [sources](papers/0.0358324/README.md) | Formal write-up of the author's MathOverflow answer; the largest exponent claimed before the main paper. |
 
+**Palomar registry:** the Lean formalization (exponent 1.0427, conditional on one
+zeta inequality) is registered as [PALOMAR-2026-10-01-000018, version 1](https://palomar-registry.org/entry?id=PALOMAR-2026-10-01-000018&version=1).
+
 ## Checks
 
 ```sh
@@ -48,10 +51,12 @@ lake build                          # the 1.0427 theorem
 lake build SolutionZeta ChallengeZeta  # the 1.0418235 theorem
 ```
 
-This repository is prepared as the Palomar submission of the 1.0427 theorem
-(project `lean`, metadata `lean/formalization.yaml`, comparator
-`lean/comparator-zeta241.json`), and Palomar's own preflight check passes on
-it; no submission has been made yet.
+The 1.0427 theorem is registered in the Palomar registry as
+[PALOMAR-2026-10-01-000018, version 1](https://palomar-registry.org/entry?id=PALOMAR-2026-10-01-000018&version=1),
+from commit `e0ac836` of this repository (project `lean`, metadata
+`lean/formalization.yaml`, comparator `lean/comparator-zeta241.json`).
+Palomar's verification passed and its automated review identified no
+problems; the record was registered on October 1, 2026.
 [docs/FORMALIZATION_STATUS.md](docs/FORMALIZATION_STATUS.md) records what has
 been verified and what remains, and the manual workflow
 [`palomar-preflight.yml`](.github/workflows/palomar-preflight.yml) runs

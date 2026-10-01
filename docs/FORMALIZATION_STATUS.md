@@ -62,6 +62,7 @@ ChallengeZeta` builds it.
 | Packaging gate: deterministic re-export and the metadata contract of PalomarSubmission `65f0154` | This package's archive | Passed ([report](../provenance/lean-checks/gate.json)) |
 | Fresh build from source, with the axiom audit | The first export of this package, with byte-identical Lean files | Passed: 6,960 build jobs in 62 minutes; the audit of 52,186 project and 32 submission declarations reports only the three standard axioms ([report](../provenance/lean-checks/candidate1-fresh-build.json)) |
 | **Palomar's own preflight workflow** (pinned verifier `65f0154` on a GitHub-hosted runner, profile `palomar-standard-v1`: 4 CPUs, 16 GiB): fresh build, protected exports, statement and definition comparison, axiom checks, con-ron, NanoDa, Lean kernel | Commits `5e35812`, `6ebff18`, `7ce1f81`, `81755b0`, `144d08d`, `48cbae6` and `71f5d36` of this repository, with the same Lean files as the current package | **Passed** for all seven (on September 30 and October 1, 2026): `status: pass`, `stage: complete`, "Your solution is okay!"; for `6ebff18` the build took 1 h 43 min (peak 11.1 GiB) and the comparator phase 1 h 6 min (peak 12.0 GiB) ([latest report](../provenance/lean-checks/hosted-71f5d36-mechanical-report.json); earlier: [5e35812](../provenance/lean-checks/hosted-5e35812-mechanical-report.json), [6ebff18](../provenance/lean-checks/hosted-6ebff18-mechanical-report.json), [7ce1f81](../provenance/lean-checks/hosted-7ce1f81-mechanical-report.json), [81755b0](../provenance/lean-checks/hosted-81755b0-mechanical-report.json), [144d08d](../provenance/lean-checks/hosted-144d08d-mechanical-report.json), [48cbae6](../provenance/lean-checks/hosted-48cbae6-mechanical-report.json)) |
+| **Palomar registry verification** (Palomar's own dispatch, profile `palomar-namespace-16x32-v1`) | Commit `e0ac836`, the registered package | **Passed** on October 1, 2026 (run 36919920713 in `PalomarRegistry/PalomarSubmission`): `status: pass`, `stage: complete`; con-ron, NanoDa and Lean's kernel accept ([report](../provenance/lean-checks/palomar-registration-e0ac836-mechanical-report.json)) |
 | The same pinned pipeline reproduced on a local host under the `palomar-standard-v1` limits | The first export of this package, with byte-identical Lean files | Passed in 9,235 s ([report](../provenance/lean-checks/candidate1-local-standard-report.json)) |
 
 The sources differ from candidate 4 only inside proofs: certificate splits
@@ -70,18 +71,21 @@ theorem statement or definition changed. The companion theorem passed the
 complete pipeline under both Palomar profiles for its own earlier package,
 and its Lean sources are unchanged since.
 
-## Next steps
+## Registration
 
-The repository is ready for submission to the Palomar registry: project
-`lean`, metadata `lean/formalization.yaml`, comparator
-`lean/comparator-zeta241.json`. No submission has been made. The current
+The 1.0427 theorem is registered in the Palomar registry as
+[PALOMAR-2026-10-01-000018, version 1](https://palomar-registry.org/entry?id=PALOMAR-2026-10-01-000018&version=1).
+The author submitted commit `e0ac836` (project `lean`, metadata
+`lean/formalization.yaml`, comparator `lean/comparator-zeta241.json`) on
+October 1, 2026. Palomar's mechanical verification passed (run 36919920713),
+the Challenge was rendered, the automated editorial review identified no
+problems, and the record was registered the same day. The registered
 `lean/` is the export of research commit `c280e7e6`. Its metadata cites the
 self-contained manuscript *An Exponent of 1.04273 for the Unit Distance
 Problem*, published at commit `7dfcf88`, and it carries that manuscript and
-its certificates under `lean/docs`. No Lean file has changed since the
-package that passed at `6ebff18`, and the packaging gate passes. Palomar's
-preflight runs on the commit that publishes this package; the table above
-records the passes on earlier packages with the same Lean files. The manual workflow
+its certificates under `lean/docs`. Later commits of this repository change
+only the papers and documentation; `lean/` is unchanged since `e0ac836`.
+The manual workflow
 [`.github/workflows/palomar-preflight.yml`](../.github/workflows/palomar-preflight.yml)
 reruns Palomar's pinned verifier on any commit, and its results appear in
 the repository's Actions tab.
