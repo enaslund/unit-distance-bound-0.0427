@@ -17,9 +17,11 @@ from the research repository. On September 30, 2026 the author line gained an
 asterisk and an AI Methodology statement was added after the abstract: the
 research was carried out with GPT 5.5 Pro, and the paper was written with
 Codex 5.6 Sol, under the author's supervision; the author has read all of the
-arguments carefully. The mathematics is unchanged. The [provenance manifest](../../provenance/papers.json)
-records their identities. The earlier manuscript and the public MathOverflow
-change log are distinct records, as explained in the current introduction.
+arguments carefully. On October 1, 2026 the author added to that statement that
+this paper is the more carefully written version of the author's earlier
+MathOverflow answer. The mathematics is unchanged, and its constants may differ
+slightly from those posted in the answer. The [provenance manifest](../../provenance/papers.json)
+records their identities.
 
 Build with a standard TeX installation:
 
