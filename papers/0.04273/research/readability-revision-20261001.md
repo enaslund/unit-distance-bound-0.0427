@@ -111,8 +111,14 @@ contexts, without the editors' verdicts.
     quadratic Hecke L-functions." Previously it read: "… bounded through the
     255 quadratic Hecke L-functions of the degree-512 field generated over
     Q(√241) by the square roots of its {2,3,5}-units."
-- **Left unchanged (the author's text):** the AI Methodology paragraph and the
-  abstract's last sentence.
+- **The author's own text.** The editors left the AI Methodology paragraph and
+  the abstract's last sentence unchanged. Afterwards, on October 1, 2026, the
+  author edited both. Three typos in that edit were corrected:
+  - "te" → "the";
+  - "AI of model of choice" → "AI model of choice";
+  - "reduction of proof" → "reduction of the proof".
+  The abstract's sentence now names the exponent 1.0427 of the Lean result,
+  as the AI Methodology paragraph does.
 
 ## Checks
 
