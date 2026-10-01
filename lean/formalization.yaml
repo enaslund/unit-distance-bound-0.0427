@@ -41,7 +41,7 @@ sources:
 - title: An exponent of 1.04273 for the unit distance problem
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/f9f3917224cd4b2051044c73d1d61df290769b4e/papers/0.04273/main.tex
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/1d9e89445fae8500cca27254a1acfc8afb1aac8b/papers/0.04273/main.tex
   type: paper
   location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.04273/ at the cited commit
     (main.tex, sections/, certificates/). The source archive includes these materials under
@@ -59,7 +59,7 @@ sources:
 - title: A lower exponent of 1.0418235 for planar unit distances
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/f9f3917224cd4b2051044c73d1d61df290769b4e/papers/0.0418235/main.tex
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/1d9e89445fae8500cca27254a1acfc8afb1aac8b/papers/0.0418235/main.tex
   type: research note
   location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.0418235/ at the cited commit.
     Exported formalization package: docs/manuscript/; especially sections/tower.tex, analytic.tex,

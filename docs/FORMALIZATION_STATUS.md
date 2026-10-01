@@ -2,7 +2,7 @@
 
 [`lean/`](../lean/README.md) is a Lean 4 project (Lean `v4.35.0-rc2`, Mathlib
 `065356127b1dc0016f66b7283ce0ce2c4055aa55`). Its sources are the export of
-research commit `9d29ea2b` of `enaslund/unit-distance-bound`, copied unchanged;
+research commit `9872a1e3` of `enaslund/unit-distance-bound`, copied unchanged;
 [`provenance/lean-release.json`](../provenance/lean-release.json) records the
 archive identity. It formalizes the paper *An Exponent of 1.04273 for the Unit Distance Problem* at the
 exponent 1.0427, conditional on one zeta inequality, and its Palomar project
@@ -75,13 +75,13 @@ and its Lean sources are unchanged since.
 The repository is ready for submission to the Palomar registry: project
 `lean`, metadata `lean/formalization.yaml`, comparator
 `lean/comparator-zeta241.json`. No submission has been made. The current
-`lean/` is the export of research commit `9d29ea2b`. Its metadata cites the
+`lean/` is the export of research commit `9872a1e3`. Its metadata cites the
 self-contained manuscript *An Exponent of 1.04273 for the Unit Distance
-Problem*, published at commit `f9f3917`, and it carries that manuscript and
+Problem*, published at commit `1d9e894`, and it carries that manuscript and
 its certificates under `lean/docs`. No Lean file has changed since the
 package that passed at `6ebff18`, and the packaging gate passes. Palomar's
-preflight passed on commit `48cbae6`, which carries this package; later
-commits change only documentation. The manual workflow
+preflight runs on the commit that publishes this package; the table above
+records the passes on earlier packages with the same Lean files. The manual workflow
 [`.github/workflows/palomar-preflight.yml`](../.github/workflows/palomar-preflight.yml)
 reruns Palomar's pinned verifier on any commit, and its results appear in
 the repository's Actions tab.

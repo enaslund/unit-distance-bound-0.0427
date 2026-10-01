@@ -70,11 +70,14 @@ The present sources add proof-internal splits of the pair-mass certificate and
 of four group-data certificates so that the kernels fit the 4-CPU/16-GiB
 profile; no theorem statement or definition changed. Con-ron, NanoDa and Lean's
 kernel each accepted this source's Solution export within 4 CPUs and 16 GiB
-(`verification/sqrt241-bounded-20260929/README.md`). The complete pipeline has
-not yet run on these exact sources, so this archive needs its own terminal
-receipt. Earlier full passes for the 1.0418235 theorem do not verify this
-theorem, and a local pass remains distinct from an official Palomar result or
-a hosted workflow on an exact public commit.
+(`verification/sqrt241-bounded-20260929/README.md`). The complete pinned
+pipeline then passed on these Lean sources: locally under the 4-CPU/16-GiB
+profile on September 30, 2026, and in Palomar's own reusable workflow
+(PalomarSubmission `65f0154`, profile `palomar-standard-v1`) on the public
+commits of `enaslund/unit-distance-bound-0.0427` that carry them, each with
+status pass, the permitted axioms only, and con-ron, NanoDa and Lean's kernel
+accepting. These runs are preflights: they are not registry verification, and
+earlier full passes for the 1.0418235 theorem do not verify this theorem.
 
 The [earlier sqrt241 receipts](verification/sqrt241-20260929/README.md) record
 a fresh build, imported axiom queries and individual `leanchecker` passes on
@@ -98,7 +101,7 @@ The [quadratic-base manuscript](docs/quadratic-base-research/README.md)
 proves an external computer-assisted result at exponent 1.04273. Its
 `certificates/h241_receipt.py` separately computes an upper bound of about
 0.0848335193 for H's left side. These are external numerical evidence,
-not Lean proofs of H. The [original manuscript](docs/manuscript/README.md)
+not Lean proofs of H. The [1.0418235 interim note](docs/manuscript/README.md)
 and the quadratic-base manuscript, with its certificates and the research
 note that preceded it, are included as source material with their original
 authorship and AI-production disclosures. Their local provenance and the
@@ -113,8 +116,8 @@ does not supply that separate external replay environment.
 The mathematical development, generators and documentation were produced
 with AI tools under Eric Naslund's direction. Earlier reviews were automated
 reviews with their stated scopes. They are not human peer review or owner
-proof verification. This package is for local verification; publication,
-submission, registration and editorial acceptance are not claimed.
+proof verification. Publication, registration and editorial acceptance are
+not claimed.
 
 The formalization retains its Apache-2.0 [LICENSE](LICENSE), [NOTICE](NOTICE),
 and third-party notices under `third-party/`. Embedded manuscript and research
