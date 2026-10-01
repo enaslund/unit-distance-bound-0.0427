@@ -44,6 +44,7 @@ needs no ramification at 7, 11 and 13. The root discriminant falls from about
 | Path | Contents |
 | --- | --- |
 | [main.tex](main.tex), [sections/](sections/), [references.bib](references.bib) | The manuscript: introduction; the tower over Q(√241); the Kummer field and its L-functions; the upper bound for the relative zeta value; units of relative norm one and planar point sets; shell profiles at split finite places; archimedean profiles; the proof of the main theorem |
+| [main-single-file.tex](main-single-file.tex) | The same paper as one self-contained LaTeX file, with the sections and the bibliography included, for submission to preprint servers and journals. It produces the same text as main.pdf; regenerate it after any change to main.tex, sections/ or references.bib |
 | [certificates/](certificates/) | The supplementary programs and the replay driver `reproduce241.py` |
 | [research/construction.md](research/construction.md) | The research note of September 29, 2026 that first recorded the construction; the manuscript supersedes it |
 | [research/manuscript-review-20260930.md](research/manuscript-review-20260930.md) | Review record of the manuscript |
