@@ -6,7 +6,8 @@
 \\ afe241_301_300.json, written by afe241.py, records for each e an interval
 \\ containing L(301/300, chi_e), obtained from a certified approximate
 \\ functional equation in ball arithmetic (its endpoints are stored as
-\\ double-precision numbers), and an enclosure of (1/512) log zeta_E(301/300),
+\\ double-precision numbers rounded outward, including their JSON decimal
+\\ serialization), and an enclosure of (1/512) log zeta_E(301/300),
 \\ where E = B(sqrt(alpha_0), ..., sqrt(alpha_7)).
 \\
 \\ This program evaluates the same values numerically with PARI's own

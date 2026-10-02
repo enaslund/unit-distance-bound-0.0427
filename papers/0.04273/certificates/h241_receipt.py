@@ -11,17 +11,18 @@ H:  log ζ_E(1+ε)/512 + ε((ℓ − γ − log 4π)/4 − (ζ_E'/ζ_E)(2)/512) 
   (4,2) above 2, (2,2) above 3 and 5, and for the other primes f = 1 or 2
   according as all eight radicands are squares modulo 𝔭 (e = 1). Primes of
   norm ≤ X are summed exactly (Arb balls); the rest is bounded by
-  Σ_{n>X} log n/(n²−1) ≤ (log X + 1)/X, since at most two primes of B have a
-  given norm and each term is at most log N/(2(N²−1)).
+  Σ_{n>X} log n/(n²−1) ≤ (log X + 1)/(X(1−X⁻²)), since at most two primes of B
+  have a given norm and each term is at most log N/(2(N²−1)). The tail bound
+  uses only Arb operations, including the logarithm.
 All quantities are Arb balls; the printed bound is an upper endpoint.
 """
 import json
-import math
 from pathlib import Path
 
 import env241  # noqa: F401  (path set-up, PYLIB)
 from flint import arb, ctx
 from census241 import primes_upto, legendre, sqrtmod, KB, NORMS
+from interval241 import logderiv_tail_bound, require_strict_upper_bound
 
 ctx.prec = 200
 HERE = Path(__file__).resolve().parent
@@ -60,8 +61,7 @@ def logderiv_sum(X):
         for N, c in places:
             f = 1 if c == 0 else 2
             total += lg(N) / (2 * (arb(N) ** (2 * f) - 1))
-    tail = arb((math.log(X) + 1) / X) * (1 + arb(1) / 10**6)
-    return total + tail
+    return total + logderiv_tail_bound(X)
 
 
 def main(X=10**6):
@@ -73,6 +73,7 @@ def main(X=10**6):
     R = logderiv_sum(X)
     lhs_hi = arb(hi) + eps * (bhalf + R)
     ceiling = arb(852) / 10000
+    require_strict_upper_bound(lhs_hi, ceiling)
     out = {
         "normalized_log_zeta_E_upper": hi,
         "B_half": str(bhalf),

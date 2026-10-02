@@ -20,9 +20,22 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 import env241  # noqa: E402
 from mpmath import mp, iv  # noqa: E402
+import interval_core  # noqa: E402
+import profile_certificate  # noqa: E402
 from interval_core import I, qi, lower, upper  # noqa: E402
 from profile_certificate import mass_certificate, overlap_certificate, tube_certificate, interval_strings  # noqa: E402
 from finite_windows import local_window  # noqa: E402
+
+
+def exact_box(lo, hi):
+    """Enclose dyadic endpoints directly, without rounding through str()."""
+    return iv.mpf([lo, hi])
+
+
+# Preserve the hash-checked archive on disk. Its mass and digamma routines
+# each hold a reference to box; replace both before evaluating certificates.
+interval_core.box = profile_certificate.box = exact_box
+interval_core.psi.cache_clear()
 
 EF = {2: (8, 4), 3: (2, 2), 5: (2, 2), 29: (1, 4), 7: (1, 8)}
 THETA = Q(65535, 131072)         # b/d = 1/(2|cl(iota_1)|) <= 2^-16, theta = (1-b/d)/2 >= 1/2 - 2^-17

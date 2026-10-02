@@ -2,7 +2,8 @@
 
 Uses the manuscript's certified degree-two AFE kernels (nonpositive-afe.py) with root number 1
 (each L(s,chi_e) = zeta_{B(sqrt alpha_e)}/zeta_B), and zeta_B = zeta * L(chi_241) via Hurwitz zeta.
-Output: ball enclosures, as JSON.
+Output: JSON-number endpoints rounded outward for the factors, and Arb
+midpoint--radius strings for the normalized logarithm.
 """
 import importlib.util
 import json
@@ -13,6 +14,7 @@ from pathlib import Path
 
 import env241  # noqa: E402
 from flint import arb, acb, ctx  # noqa: E402
+from interval241 import outward_float_bounds  # noqa: E402
 
 npafe = env241.nonpositive_afe()
 
@@ -51,11 +53,11 @@ def main(sigma_q=Q(301, 300), rows_path="lrows241.json", out="afe241.json", degr
         assert Lball > 0, (row["label"], Lball)
         total += Lball.log()
         recs.append({"label": row["label"], "kind": kind, "conductor": row["conductor"],
-                     "L": [float(Lball.lower()), float(Lball.upper())],
-                     "imag_check": float(abs(A.imag).upper() + abs(B.imag).upper())})
+                     "L": outward_float_bounds(Lball),
+                     "imag_check": outward_float_bounds(abs(A.imag) + abs(B.imag))[1]})
     Y = total / 512
-    res = {"sigma": str(sigma_q), "zeta_B": [float(zB.lower()), float(zB.upper())],
-           "L_chi241": [float(L241.lower()), float(L241.upper())],
+    res = {"sigma": str(sigma_q), "zeta_B": outward_float_bounds(zB),
+           "L_chi241": outward_float_bounds(L241),
            "normalized_log_zeta_EB": [str(Y.lower()), str(Y.upper())],
            "rows": recs, "seconds": time.monotonic() - t0}
     json.dump(res, open(out, "w"), indent=1)

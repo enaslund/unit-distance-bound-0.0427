@@ -490,7 +490,7 @@ The programs and their data are in the directory
 \texttt{papers/0.04273/certificates} of the public repository
 \cite{NaslundCode2026}. Some routines, for the degree-two approximate
 functional equations, the archimedean profiles and the shell profiles,
-are imported unchanged from the supplementary archive of an earlier,
+come from the supplementary archive of an earlier,
 unpublished note of the author, superseded by the present paper, in the
 directory
 \texttt{papers/0.0418235/certificates} of the same repository, together
@@ -3246,6 +3246,11 @@ enclosure
  [0.08264460177456168\ldots,\ 0.08264460807137072\ldots]
 \]
 of $\log\zeta_E(\sigma)/512$, which the proposition states rounded outward.
+The logarithms are summed in Arb before any output conversion. The JSON
+endpoints for the individual factors are rounded outward to double
+precision, and their serialized decimal values are checked against the
+Arb enclosures. The bounds for the normalized logarithm are retained as
+Arb midpoint--radius strings, including their radii.
 So the inequalities follow from
 Lemmas~\ref{an:balanced-afe}--\ref{an:row}, the exact coefficients, and
 outward-rounded interval arithmetic.
@@ -3369,16 +3374,19 @@ Proposition~\ref{an:prime-budget}.
 \end{lemma}
 
 \begin{proof}
-The primes of norm greater than $10^6$ receive $(1,1)$. At most two primes of
-$B$ have a given norm, and $x\mapsto\log x/(x^2-1)$ decreases on
-$[2,\infty)$. So their contribution to the sum is at most
+The primes of norm greater than $X=10^6$ receive $(1,1)$. At most two primes
+of $B$ have a given norm, and $x\mapsto\log x/x^2$ decreases on
+$[2,\infty)$. Their contribution to the sum is therefore at most
 \[
- \sum_{m>10^6}\frac{\log m}{m^2-1}\le\int_{10^6}^\infty\frac{\log x}{x^2-1}\,dx
- \le\frac{\log10^6+1}{10^6}\,(1+10^{-6}).
+ \sum_{m>X}\frac{\log m}{m^2-1}
+ \le\frac{1}{1-X^{-2}}\sum_{m>X}\frac{\log m}{m^2}
+ \le\frac{1}{1-X^{-2}}\int_X^\infty\frac{\log x}{x^2}\,dx
+ =\frac{\log X+1}{X(1-X^{-2})}.
 \]
 The supplementary program \texttt{ceiling241.py} sums the primes of norm at
-most $10^6$ in interval arithmetic and adds this bound for the remaining
-primes; the result, $0.0085105512261\ldots$, is less than $0.0085105513$.
+most $X$ in Arb interval arithmetic and evaluates this tail bound entirely
+in Arb, including the logarithm. The resulting upper endpoint is less
+than $0.0085105513$.
 \end{proof}
 
 \subsection{\texorpdfstring{Proof of Theorem~\ref{an:ceiling}}{Proof of the Upper Bound}}
@@ -3412,7 +3420,8 @@ so
 \]
 The interval evaluation of the same expression from the unrounded
 enclosures, by \texttt{ceiling241.py}, gives the upper bound
-$0.0487128429$. Proposition~\ref{an:prime-budget} with $C'=C$ proves
+$0.0487128429$. The replay compares the complete serialized Arb enclosure,
+including its printed radius, with $C$. Proposition~\ref{an:prime-budget} with $C'=C$ proves
 the theorem.
 \end{proof}
 
@@ -5982,7 +5991,7 @@ Definition~\ref{cert:data}: the local functionals
 Tables~\ref{cert:tab-local} and~\ref{cert:tab-weights}, and the
 quantities of Propositions~\ref{pf:mass} and~\ref{pf:overlap}, of
 Lemma~\ref{pf:tube} and of Corollary~\ref{pf:functional} from the
-profile data. For these it uses, unchanged, three modules of an earlier
+profile data. For these it uses three modules of an earlier
 supplementary archive of the author (Subsection~\ref{intro:code}), which
 implement exactly these formulas. In Proposition~\ref{pf:mass} it uses
 the symmetry of \eqref{pf:bernstein-witness}: each square off the
@@ -6019,7 +6028,10 @@ lower endpoint rounded down and the upper endpoint rounded up, at a
 working precision of $80$ decimal digits; exact rational algebra
 followed by interval evaluation keeps the bound of
 Proposition~\ref{pf:mass} valid despite the cancellation in
-\eqref{pf:subrectangle-moments}. Hence every computed interval contains
+\eqref{pf:subrectangle-moments}. The program supplies the archived mass
+and digamma routines with an interval constructor that preserves the exact
+dyadic endpoints of their error allowances, without an intermediate
+decimal conversion. Hence every computed interval contains
 the exact value, and the decimals stated above, which are coarser than
 the working precision by more than fifty orders of magnitude, are
 rigorous bounds.

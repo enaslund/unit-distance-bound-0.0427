@@ -4,8 +4,9 @@ Dependencies (the same pins as the 1.0418235 manuscript): mpmath 1.3.0 and
 python-flint 0.9.0.  If they are not installed, set PYLIB to a directory
 containing them (for example the unpacked PyPI wheels).
 
-The certified profile, shell-window and degree-two AFE routines are imported
-unchanged from the 1.0418235 supplementary archive.  The archive is verified
+The certified profile, shell-window and degree-two AFE routines come from
+the 1.0418235 supplementary archive. geom241 supplies a lossless interval
+endpoint adapter for the profile routines. The archive is verified
 and unpacked once into CACHE (default: certificates/.cache) by the manuscript's
 own unpacking routine, which checks every part and member hash.
 """

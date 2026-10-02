@@ -9,6 +9,12 @@ exponent 1.0427, conditional on one zeta inequality, and its Palomar project
 name is "An Exponent of 1.04273 for the Unit Distance Problem: Lean formalization at exponent
 1.0427, conditional on one zeta inequality".
 
+The corrected external numerical certificates are maintained in
+[`papers/0.04273`](../papers/0.04273/README.md#reproduce). The copies under
+`lean/docs/quadratic-base-research` retain the original contents recorded in
+the sealed `lean/SOURCE_SNAPSHOT.json`; the October 2, 2026 interval-handling
+corrections do not alter that registered Lean archive.
+
 ## The selected theorem: exponent 1.0427
 
 `UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound` is stated

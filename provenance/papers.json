@@ -1,5 +1,6 @@
 {
- "scope": "Byte-identical copies of manuscript, research-note, certificate and checker files from the research repository; not a proof verdict. Paper READMEs written for publication and the resealed papers/0.0418235/certificates/manifest.json are not copies and are not listed.",
+ "scope": "Original source identities and hashes of manuscript, research-note, certificate and checker files copied from the research repository; not a proof verdict. Later local corrections are recorded separately in local_corrections, preserving the original import hashes here. Paper READMEs written for publication and the resealed papers/0.0418235/certificates/manifest.json are not copies and are not listed.",
+ "local_corrections": "provenance/certificate-corrections-20261002.json",
  "research_repository": "enaslund/unit-distance-bound",
  "copies": [
   {

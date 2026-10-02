@@ -1,0 +1,151 @@
+{
+  "schema": "unit-distance-certificate-corrections-v1",
+  "date": "2026-10-02",
+  "base_repository_commit": "c2c5e01fa578fb2ae78571d1682b812fce462ee1",
+  "scope": "Local corrections to the active 1.04273 manuscript and numerical certificates. The original import hashes in provenance/papers.json and the sealed Lean archive remain unchanged.",
+  "changes": [
+    "Export all factor intervals with outward-rounded float endpoints and check their JSON decimal serialization against the Arb bounds.",
+    "Evaluate the logarithmic-derivative tail (log X + 1)/(X*(1-X^-2)) entirely in Arb in both the analytic ceiling and H241 receipt.",
+    "Compare the complete serialized Arb interval, including its radius, with the analytic ceiling.",
+    "Supply both archived mass and digamma routines with an interval constructor that accepts exact dyadic endpoints directly, avoiding inward decimal rounding; clear the digamma cache and preserve the archive files.",
+    "Update the manuscript explanation and regenerate the PDF, single-file LaTeX source, and numerical receipts."
+  ],
+  "validation": {
+    "regressions": {
+      "command": "python3 -m unittest -v test_interval241",
+      "tests": 5,
+      "status": "PASS"
+    },
+    "finite_replay": {
+      "command": "python3 reproduce241.py",
+      "status": "PASS finite replay for delta = 0.04273 (exponent 1.04273); the mathematics is proved in the manuscript ../main.tex",
+      "scope_note": "The full replay preceded the additional geometric endpoint repair; the changed geometric step was rerun separately below.",
+      "analytic_ceiling": {
+        "C_upper": "[0.048712842890287597068555772665282586627260380309518115341522 +/- 2.07e-62]",
+        "used": "0.04871285",
+        "C_minus_Bsel": "[0.00704438 +/- 4.89e-9]"
+      },
+      "geometry": {
+        "delta": "0.04273",
+        "margin_after_concentration_lower": "0.00017672603353"
+      }
+    },
+    "geometry_after_endpoint_repair": {
+      "command": "python3 geom241.py 0.04273 0.04871285 shells241_0.04273.json",
+      "status": "PASS",
+      "fourier_ok": true,
+      "positive_slope": true,
+      "margin_after_concentration_interval": [
+        "0.0001767260335345988433",
+        "0.0001767260335346145071"
+      ]
+    },
+    "H241": {
+      "command": "python3 h241_receipt.py",
+      "holds": true,
+      "lhs_upper": "[0.084833519260413224789084360280165811268704413484171893416804 +/- 1.10e-61]",
+      "ceiling": "852/10000"
+    },
+    "manuscript": {
+      "command": "make paper",
+      "pages": 66,
+      "single_file_pdf_text_matches": true
+    },
+    "sealed_lean_archive": {
+      "unchanged_members": 3014,
+      "all_original_hashes_match": true
+    }
+  },
+  "files": {
+    "papers/0.04273/README.md": {
+      "previous_sha256": "f6426399f2773c45f5f6777a882859e42b06a9145fb2d712f8752b072bd2e982",
+      "sha256": "f193fc1b43bfeb977cd65b790ed3f117423f95fc8e7fd168c6d4b6eb83e9597f",
+      "bytes": 7098
+    },
+    "papers/0.04273/certificates/afe241.py": {
+      "previous_sha256": "598b0f015ebfe873c01f36c49d897558f2aad0b18263c227d2f9295933dcd289",
+      "sha256": "df6bc4b3df0602d8294f0f7899cb83621ec87b8a00499e069088ce6025ec7649",
+      "bytes": 2519
+    },
+    "papers/0.04273/certificates/afe241_301_300.json": {
+      "previous_sha256": "c40ea76f93e46c6d8881722ab4038dd9bd32485eaa51d82adf32efbe0937ee47",
+      "sha256": "9a3e3328fb879dd6efd9e10cf7a5e5d49b73bdd4b757e93ad11c0c3083cc03ee",
+      "bytes": 40817
+    },
+    "papers/0.04273/certificates/ceiling241.py": {
+      "previous_sha256": "e55552afb024b0527bac98ed29c93688fb018a1d768e32e5fb9ffe391a9a28fd",
+      "sha256": "60a48356816ee457009ffe7f4c9b84bf64d970861b5b6afd05b042b58dbcbc3a",
+      "bytes": 4307
+    },
+    "papers/0.04273/certificates/env241.py": {
+      "previous_sha256": "886ffdb02aa5f6ba1d13eb2c268c7d2ce5f52fcdce45cd8bc28b0a33ac697889",
+      "sha256": "0acf280595632fbe5c9fd95a10b8b2edc1cb44c0d66ad6c9a671b0827c2d110d",
+      "bytes": 1988
+    },
+    "papers/0.04273/certificates/geom241.py": {
+      "previous_sha256": "2fda015aad9bba8ba0afa276ead3a99dbb6961a47a40ecbd6bf0d55f2b82a93e",
+      "sha256": "f8ca2998e56f075e69b8a87f3e9f2b532e76a50fb839c79c3856209ec104ddc9",
+      "bytes": 8495
+    },
+    "papers/0.04273/certificates/h241_receipt.json": {
+      "previous_sha256": "8a3f914c76c8af157d6d8d57559280494cb96d7dc128c2f8ace7fc862f5abe72",
+      "sha256": "dceec9e8ed7a57658c889a141e0802ec24175d455a447f9a84e145188ace9333",
+      "bytes": 597
+    },
+    "papers/0.04273/certificates/h241_receipt.py": {
+      "previous_sha256": "cfa61b90339f03cbc07ad38f41fabe894c5e9114ad07078c69577ed918a04575",
+      "sha256": "b5d3fd3daa2e41717d80b95ca103c10a1e49b690d6fd58fc3fe645e5c6f159dd",
+      "bytes": 3531
+    },
+    "papers/0.04273/certificates/interval241.py": {
+      "previous_sha256": null,
+      "sha256": "76d58881f399c019e7c6877e8d235d0f984d7ee7010dd73fa582d073d6954da5",
+      "bytes": 1835
+    },
+    "papers/0.04273/certificates/lvalues255.gp": {
+      "previous_sha256": "f9f2e0af007d286304a1527eabd48d9d7117263f678425d331eae6a83e79ca12",
+      "sha256": "309e36e68ab4544e4f249e279a6fd3c51f1f5c2be1652dd37d9615a1ca1725d3",
+      "bytes": 4261
+    },
+    "papers/0.04273/certificates/replay241.json": {
+      "previous_sha256": "376a4c8ecc4080b50f2afa346945a82932b16fa553edaab6f6f7ab48ec1ead0e",
+      "sha256": "2f2a07c8c3c2a7c169bc0d94e18385269a795ec022debd5424671a8c450826f8",
+      "bytes": 1403
+    },
+    "papers/0.04273/certificates/reproduce241.py": {
+      "previous_sha256": "ab6999b80d44a02cf56558586283a7ad5dde39c590d7b8c277bade8a462bfed5",
+      "sha256": "7cfcd0b16e07e9e828cc484a68465377cf00b83e46daf3dbad0894bcd0a0caa4",
+      "bytes": 5599
+    },
+    "papers/0.04273/certificates/test_interval241.py": {
+      "previous_sha256": null,
+      "sha256": "8bfa340c85b68fac6e944fce03e0b690159298c552843cf76bbcfda54818cd80",
+      "bytes": 3963
+    },
+    "papers/0.04273/main-single-file.tex": {
+      "previous_sha256": "f70e01dc7ff83520ee3dad4683a5a1df64b328df325392bdbb994c882618f9f9",
+      "sha256": "21269ac0729241e052c55b7284fcc142995845c16bd06c8459caba3393c8bf3e",
+      "bytes": 309585
+    },
+    "papers/0.04273/main.pdf": {
+      "previous_sha256": "b41aabba34e5974f650530747da853e2cb8c4e962caeacc52e16a22ff7227940",
+      "sha256": "98594faa7ea62232b309338564d11f7fd403eb185ce9ad28351fd403aa68f190",
+      "bytes": 923214
+    },
+    "papers/0.04273/sections/analytic.tex": {
+      "previous_sha256": "ef7d01e1aaf360987abe3e5e4c9e5b9264ac39430015849ad9a8725e8bb90a68",
+      "sha256": "9c25bc3b444d7717feae3cf207bce82ceb43e89fefeb894f1e80d8c2aea73439",
+      "bytes": 46372
+    },
+    "papers/0.04273/sections/certificate.tex": {
+      "previous_sha256": "baaec297108b0fce0144a9568b01d8a2d7f2e8e5c73c76f586f52772b30d3174",
+      "sha256": "3c7cd6ac820abd1906d5d72dd5f4e13cfc0dea5de9851e2de45e288cc98066c8",
+      "bytes": 20693
+    },
+    "papers/0.04273/sections/introduction.tex": {
+      "previous_sha256": "ea0c7efc3dc5479f17566f4da4b542ce445ed7e7893d7abf15fb9cc994edaf63",
+      "sha256": "7bff301c05ba769fe643ff7b6fcd05c9902679b42f2246f5cf9bf765130034a2",
+      "bytes": 23916
+    }
+  }
+}

@@ -70,6 +70,9 @@ and [`lean/NOTICE`](lean/NOTICE) credits the formalization's contributors and
 vendored sources. The root [LICENSE](LICENSE) (Apache-2.0) covers the
 formalization; the papers keep their own terms
 ([details](docs/LICENSING_AND_ATTRIBUTION.md)). The
-[provenance manifest](provenance/papers.json) records the source and hash of
-every copied paper file, and [`provenance/lean-release.json`](provenance/lean-release.json)
-identifies the Lean source archive.
+[provenance manifest](provenance/papers.json) records the original source and
+hash of every copied paper file. The later
+[certificate corrections](provenance/certificate-corrections-20261002.json)
+record the updated manuscript and numerical certificates, while
+[`provenance/lean-release.json`](provenance/lean-release.json) identifies the
+unchanged Lean source archive.
