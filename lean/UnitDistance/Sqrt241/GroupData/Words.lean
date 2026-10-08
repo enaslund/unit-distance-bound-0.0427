@@ -33,6 +33,11 @@ namespace UnitDistance.Sqrt241
 open ClassTwo GroupData
 open Dyadic.Presentation (comm literalRelations)
 
+/-- A cap vector is **admissible** when it is nonzero and its square in the retained model
+`Q_B` is nontrivial (`Retained.cocycle v v ≠ 0`): a lift with this vector then generates a
+strict `C₄` (`LocalModels.cap_layers_of_good`). The labels of the caps only need this. -/
+abbrev CapGood (v : V) : Prop := v ≠ 0 ∧ Retained.cocycle v v ≠ 0
+
 /-- Lifts of the local generators in a group `G`. Index conventions: `P = 0, 1`
 for `𝔭₁, 𝔭₂`; `q = 0, 1, 2, 3` for `𝔮₁, 𝔮₂, 𝔯₁, 𝔯₂`; caps `k = 0, 1, 2` for
 Frob(29₁), Frob(29₂), F₇². -/
@@ -123,7 +128,7 @@ structure Labels (L : Lifts G) (e : G → V) : Prop where
   dyadicX : ∀ P, e (L.dyadicX P) = dyadicXVector P
   dyadicY : ∀ P, e (L.dyadicY P) = dyadicYVector P
   dyadicZ : ∀ P, e (L.dyadicZ P) = dyadicZVector P
-  cap : ∀ k, e (L.cap k) = capVector k
+  cap : ∀ k, CapGood (e (L.cap k))
 
 theorem Labels.map {L : Lifts G} {e : H → V} (f : G →* H) (h : (L.map f).Labels e) :
     L.Labels (e ∘ f) :=
@@ -134,6 +139,11 @@ theorem Labels.of_map {L : Lifts G} {e : H → V} (f : G →* H) (h : L.Labels (
   ⟨h.conj,h.tameInertia,h.tameFrobenius,h.dyadicX,h.dyadicY,h.dyadicZ,h.cap⟩
 
 end Lifts
+
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 16000000 in
+/-- The three cap vectors of version 1 (`Frob(29₁)`, `Frob(29₂)`, `F₇²`) are admissible. -/
+theorem capVector_good : ∀ k : Fin 3, CapGood (capVector k) := by decide +kernel
 
 namespace Retained
 

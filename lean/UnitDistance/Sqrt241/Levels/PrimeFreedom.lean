@@ -252,17 +252,16 @@ theorem conj_moves_rootD (I : Input) (a : Fin 5) :
 `c₁` moves every prime of `K` of norm `p^{f_a}` above the witness prime `p`. -/
 theorem prime_moved (I : Input) {K : IntermediateField ℚ Omega} [FiniteDimensional ℚ K]
     [IsGalois ℚ K] (hE : EOmega ≤ K) (a : Fin 5)
-    (P : PrimeNormFiber K (Witness.primeNorm a)) :
+    (P : PrimeNormFiber K (v1Primes a ^ v1ResidueDegree a)) :
     Ideal.map (RingOfIntegers.mapRingHom (Input.res K ((I.E.conj 0 : GB) : Ghat)).toRingHom)
       P.1.asIdeal ≠ P.1.asIdeal := by
-  have hnorm : Witness.primeNorm a = (selectedPrime a).val ^ Witness.residueDegree a := by
+  have hnorm : v1Primes a ^ v1ResidueDegree a = (selectedPrime a).val ^ v1ResidueDegree a := by
     rw [selectedPrime_val]
-    rfl
-  let P' : PrimeNormFiber K ((selectedPrime a).val ^ Witness.residueDegree a) :=
+  let P' : PrimeNormFiber K ((selectedPrime a).val ^ v1ResidueDegree a) :=
     ⟨P.1, P.2.trans hnorm⟩
-  have hpos : 0 < Witness.residueDegree a := by fin_cases a <;> decide
+  have hpos : 0 < v1ResidueDegree a := by fin_cases a <;> decide
   apply prime_moved_of_absolute_genus_exclusion (M := K) (p := selectedPrime a) (j := jK K)
-    (signChar hE a) (Input.res K ((I.E.conj 0 : GB) : Ghat)) ?_ (Witness.residueDegree a) hpos P'
+    (signChar hE a) (Input.res K ((I.E.conj 0 : GB) : Ghat)) ?_ (v1ResidueDegree a) hpos P'
   intro σ
   rw [decompositionRestriction_eq, signChar_eq_zero_of_fix hE a]
   · exact (signChar_ne_zero_of_neg hE a _ (conj_moves_rootD I a)).symm

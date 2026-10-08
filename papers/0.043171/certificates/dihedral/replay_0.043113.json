@@ -1,0 +1,48 @@
+{
+ "witness": "witness_0.043113.json",
+ "delta": "0.043113",
+ "sigma": "1101/1100",
+ "base_ceiling_C_upper_301_300": "[0.048712842890336985523808060535854129837929012382509769251960 +/- 1.49e-61]",
+ "Y_E": [
+  "[0.08555834423748177767880870918487025714226430731889926317048005944120142607499 +/- 2.54e-78]",
+  "[0.08555835059247620420612487395044999952175086814043246629548005944120142607499 +/- 2.54e-78]"
+ ],
+ "d4_census_fields": "PASS 27 classes, rank 15; 15 census fields verified; root counts",
+ "plane": "PASS psi_10 + psi_23 = psi_24, all of D4 type, maximal; fields of orbits 10, 23, 24 verified",
+ "export": "PASS export.gp reproduces ddata_orb10/23/24.json (r1(K) = r1(Bc) asserted)",
+ "inert_vector0": "inertv0: 13 inert vector-0 primes with p^2 <= 12000000: [409, 769, 1129, 1249, 1489, 1609, 1801, 2281, 2521, 2689, 3001, 3049, 3361]; Frobenius off ker W at 12; in ker W at [2521]",
+ "l_values": "PASS certified enclosures of the 192 values L(1101/1100) reproduced; coefficients agree with PARI up to 20000; 6 lfun comparisons",
+ "census": "PASS census_d3k agrees with Python on norms 6e4..1.2e7; stored census data hash-check",
+ "ceiling": {
+  "Y_E": "[0.08555835 +/- 5.77e-9]",
+  "Y_W": "[0.069531 +/- 7.69e-7]",
+  "dyadic_E_W_term": "[0.02693084399572198423840397867712043807647997472838662993004 +/- 4.94e-60]",
+  "Delta_sel": "[0.02521471016769075988599043428069864212199408651151893997321 +/- 6.47e-60]",
+  "Delta_P4": "[0.0008683005132389568082137633858741027243308746021878808 +/- 2.64e-56]",
+  "C_W_upper": "[0.044035532391650212086155698805680195053844938718191510360227 +/- 1.01e-61]",
+  "small_gain_lower": "[0.00010043783035442948588784393609018794057177723190731631322887 +/- 6.44e-64]",
+  "census_gain_lower": "[0.00028563996644335570364385127103074787354481871553099907551609 +/- 1.71e-63]",
+  "counts": {
+   "v0_Frobenius_off_kerW": 2330,
+   "v0_census": 606,
+   "v0_undetected": 1,
+   "adaptive_terms": 11
+  },
+  "bins": [
+   {
+    "XLO": 12000000,
+    "XHI": 10000000000000,
+    "binsBW": 337835097,
+    "sum_T_lower": "[0.00028563996644335570364385127103074787354481871553099907551609 +/- 1.71e-63]"
+   }
+  ],
+  "XC": 10000000000000,
+  "C_eff_upper": "[0.043649454594853315075043703723791598145062815427003194971086 +/- 8.39e-62]"
+ },
+ "geometry": {
+  "C_effective": "0.0436495",
+  "margin_after_concentration_lower": "0.00000508421399260907"
+ },
+ "status": "PASS dihedral replay for delta = 0.043113 (exponent 1+delta)",
+ "seconds": 261
+}

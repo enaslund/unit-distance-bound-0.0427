@@ -1,16 +1,61 @@
 # Mathematical assumptions
 
-Each Lean theorem assumes one explicit numerical inequality. Neither is proved
+Each Lean theorem assumes one explicit numerical inequality. None is proved
 in Lean. Each is an explicit hypothesis of its theorem, not an added axiom or
 a Boolean flag, and the fields, zeta functions, logarithmic derivatives and
-constants have their ordinary mathematical meanings. Both proofs otherwise use
+constants have their ordinary mathematical meanings. The proofs otherwise use
 only `propext`, `Quot.sound` and `Classical.choice`.
 
-## H241: the hypothesis of the 1.0427 theorem
+## H_W: the hypothesis of the 1.04315 theorem (version 2)
+
+The theorem `UnitDistanceSqrt241Submission.target_of_wide_zeta_bound`, stated in
+[ChallengeZeta241.lean](../ChallengeZeta241.lean) and proved in
+[SolutionZeta241.lean](../SolutionZeta241.lean), gives finite planar sets with
+both cardinality and the number of unordered unit pairs divided by
+`|U|^(20863/20000)` tending to infinity. There is no assertion for every
+sufficiently large cardinality.
+
+Let `B = ℚ(√241)`, let `E` be the genus field of degree 512 described under
+H241 below, and let `E_W = E(√β₁, √β₂, √β₃, √β₄)` for the four elements
+`β_i ∈ E` of the Challenge (`CanonicalWide.wideRadicand`), written in terms of
+`√241` and products `√a_i = rootA i`, `√b_i = rootB i` of the square roots of the
+eight Kummer radicands. Each `B(√a_i, √b_i, √β_i)` is a dihedral extension of `B`
+of degree 8, the field of the dihedral forms 24, 20, 17, 7 of
+`papers/0.043171/certificates/dihedral/d4all27.json`; these four forms span the
+space `W''` of the paper (Section 5), and `E_W` has degree 8192 over `ℚ`
+(`Wide.finrank_field`). With `ℓ = (9/4) log 2 + (1/2) log 3615`, the hypothesis is
+
+```text
+log(Re ζ_{E_W}(1 + 1/4411))/8192
+  + (1/4411) * ((ℓ − γ − log(4π))/4 − Re(logDeriv ζ_{E_W} 2)/8192)
+  < 50969/1000000.
+```
+
+The evidence is outside Lean.
+`papers/0.043171/certificates/dihedral/h_w_receipt.py` bounds the left side by
+`0.0509171473`, below the threshold `0.050969` with slack `5.2·10⁻⁵`: the first
+term is the certified value of `log ζ_{E_W}(4412/4411)/8192` from the
+factorization of `ζ_{E_W}` into `ζ_E`, 448 Hecke L-functions of degree 4 and 128
+of degree 8 (Sections 5 and 6 of the paper), and the logarithmic derivative at 2 is bounded above prime by
+prime from lower bounds for the residue degrees in `E_W/B` up to norm `10⁶` and an
+explicit tail. These are certified numerical computations, not proofs in Lean.
+
+The planar theorem itself, the infinite 41-cap tower over `B`, its fields and
+their local types, the field `E_W` with its degree, its embedding in the fixed
+base `M` and its local data, the passage from H_W to the analytic ceiling, the
+numerical margin and the planar construction are proved in Lean.
+
+## H241: the hypothesis of the 1.0427 theorem (version 1)
+
+Version 1 of the Palomar entry registered this theorem. Its endpoint modules were
+removed from the current sources when the witness changed to the 41-cap tower
+(version 2); it remains in the history of this repository and at the commits
+cited by version 1. The genus field `E` defined here is also the base of `E_W`.
+
 
 The theorem `UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound`,
-stated in [ChallengeZeta241.lean](../ChallengeZeta241.lean) and proved in
-[SolutionZeta241.lean](../SolutionZeta241.lean), gives finite planar sets with
+stated in version 1 of `ChallengeZeta241.lean` and proved in version 1 of
+`SolutionZeta241.lean`, gave finite planar sets with
 both cardinality and the number of unordered unit pairs divided by
 `|U|^(10427/10000)` tending to infinity. There is no assertion for every
 sufficiently large cardinality.

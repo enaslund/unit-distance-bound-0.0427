@@ -32,14 +32,14 @@ private theorem log_mul_le_of_pow_le {x y : ℝ} (hx : 0 < x) (a b : ℕ) (h : x
   exact Real.log_le_log (by positivity) h
 
 /-- The ℚ lemma `24 ≤ periodLogDensity` fails for the five types
-(`periodLogDensity ≈ 15.69`); comparisons with powers of two give the bound
+(`periodLogDensity ≈ 15.60`); comparisons with powers of two give the bound
 in units of `log 2` that the separation below needs. -/
-theorem periodLogDensity_lower : (1579/70 : ℝ)*Real.log 2 ≤ periodLogDensity := by
+theorem periodLogDensity_lower : (4709/210 : ℝ)*Real.log 2 ≤ periodLogDensity := by
   have h3 := log_mul_le_of_pow_le (x := 2) (y := 3) (by norm_num) 19 12 (by norm_num)
   have h5 := log_mul_le_of_pow_le (x := 2) (y := 5) (by norm_num) 23 10 (by norm_num)
   have h29 := log_mul_le_of_pow_le (x := 2) (y := 29) (by norm_num) 34 7 (by norm_num)
-  have h7 := log_mul_le_of_pow_le (x := 2) (y := 7) (by norm_num) 14 5 (by norm_num)
-  push_cast at h3 h5 h29 h7
+  have h41 := log_mul_le_of_pow_le (x := 2) (y := 41) (by norm_num) 16 3 (by norm_num)
+  push_cast at h3 h5 h29 h41
   norm_num [periodLogDensity, Fin.sum_univ_succ, periodPower, primes, ramification]
   linarith
 

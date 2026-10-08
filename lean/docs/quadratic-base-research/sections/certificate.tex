@@ -376,7 +376,7 @@ Definition~\ref{cert:data}: the local functionals
 Tables~\ref{cert:tab-local} and~\ref{cert:tab-weights}, and the
 quantities of Propositions~\ref{pf:mass} and~\ref{pf:overlap}, of
 Lemma~\ref{pf:tube} and of Corollary~\ref{pf:functional} from the
-profile data. For these it uses, unchanged, three modules of an earlier
+profile data. For these it uses three modules of an earlier
 supplementary archive of the author (Subsection~\ref{intro:code}), which
 implement exactly these formulas. In Proposition~\ref{pf:mass} it uses
 the symmetry of \eqref{pf:bernstein-witness}: each square off the
@@ -413,7 +413,10 @@ lower endpoint rounded down and the upper endpoint rounded up, at a
 working precision of $80$ decimal digits; exact rational algebra
 followed by interval evaluation keeps the bound of
 Proposition~\ref{pf:mass} valid despite the cancellation in
-\eqref{pf:subrectangle-moments}. Hence every computed interval contains
+\eqref{pf:subrectangle-moments}. The program supplies the archived mass
+and digamma routines with an interval constructor that preserves the exact
+dyadic endpoints of their error allowances, without an intermediate
+decimal conversion. Hence every computed interval contains
 the exact value, and the decimals stated above, which are coarser than
 the working precision by more than fifty orders of magnitude, are
 rigorous bounds.

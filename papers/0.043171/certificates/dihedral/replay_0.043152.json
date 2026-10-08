@@ -1,0 +1,57 @@
+{
+ "witness": "witness_0.043152.json",
+ "delta": "0.043152",
+ "space": "W3",
+ "hashes": "PASS 312 pinned files, covering all 183 files the certification reads",
+ "d4": "PASS 27 classes, rank 15, census fields, vplane3: PASS orbits 10, 23, 24, 19, 20",
+ "exports": "PASS export.gp, exportg.gp, export8.gp reproduce the stored data; deg8_bad.json",
+ "inert_vector0": "inertv0: 13 inert vector-0 primes with p^2 <= 12000000: [409, 769, 1129, 1249, 1489, 1609, 1801, 2281, 2521, 2689, 3001, 3049, 3361]; Frobenius off ker W' at 12; in ker W' at [2521]",
+ "l_values": "PASS dcoef4/leval reproduce the hp3 values of orbits [19, 20] and leval the degree-8 values at ['43692/43691', '390/389', '102/101']; octtest (Euler product at 19/10) on every family",
+ "census": "PASS census_kv4 = census_kv on three ranges (W, Wcheck); its ker-W/W'/W'' bins on 6e4..1.2e7 = an independent classification; stored bins nested; ker-W bins = earlier census data; stored data hash-check",
+ "signed": {
+  "sigmas": [
+   "43692/43691",
+   "38179/38178",
+   "29152/29151",
+   "22259/22258",
+   "14852/14851",
+   "9910/9909",
+   "7567/7566",
+   "5778/5777",
+   "4412/4411",
+   "2944/2943",
+   "1965/1964",
+   "1500/1499",
+   "1146/1145",
+   "668/667",
+   "511/510",
+   "390/389",
+   "298/297",
+   "228/227",
+   "174/173",
+   "133/132",
+   "102/101"
+  ],
+  "b": "17434576364/77978037883473",
+  "kernel_cells": 1976,
+  "kernel_min_slacks": [
+   "[2.2799542624565156785174243087845399643391928520729661225752e-7 +/- 4.32e-66]",
+   "[8.7745187364313411312018567404356235863919583336010290076087e-23 +/- 2.72e-83]",
+   "[8.7747194466310300611428468812748796245699279888230835989790e-23 +/- 7.90e-83]"
+  ],
+  "xbig": 2000000,
+  "sum_abs_c": "19673893129500444175843602010100096838398734016605006973946789777958624985704091012180745763456711022561568701186839167538400805615731408743383389374320022320618543281143637/5099274780406886013162007378716818545958319179386556431955313997512146195740869165689121010411759800190152888214688387911311887616711396775244413101186849135160354406400",
+  "sum_c_E": "[0.00096 +/- 1.02e-6]",
+  "census_tau": "[0.0001533 +/- 5.26e-8]",
+  "rest_plus_TV_upper": "[0.0010477709041191503504511114034992578625230098160301340112225 +/- 2.54e-62]",
+  "Z_sel(1)": "[0.041668484032140421095767129745951476942651955276948362743244 +/- 6.34e-61]",
+  "C_eff_upper": "[0.042716254936261347803057641399915412615843910405478496754467 +/- 4.85e-61]",
+  "seconds": 447
+ },
+ "geometry": {
+  "C_effective": "0.0427163",
+  "margin_after_concentration_lower": "0.00000824020484462638"
+ },
+ "status": "PASS replay over W3 for delta = 0.043152 (exponent 1+delta)",
+ "seconds": 2833
+}

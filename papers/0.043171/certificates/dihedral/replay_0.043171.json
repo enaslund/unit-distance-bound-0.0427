@@ -1,0 +1,58 @@
+{
+ "witness": "witness_0.043171.json",
+ "delta": "0.043171",
+ "space": "W4",
+ "hashes": "PASS 617 pinned files, covering all 353 files the certification reads",
+ "d4": "PASS 27 classes, rank 15, census fields, vplane4: PASS orbits 10, 23, 24, 19, 20, 17, 7",
+ "general_shells": "PASS general_windows_check.py: shell lemma for general weights, 48 brute-force cases",
+ "exports": "PASS export.gp, exportg.gp, export8.gp reproduce the stored data; deg8_bad.json",
+ "inert_vector0": "inertv0: 13 inert vector-0 primes with p^2 <= 12000000: [409, 769, 1129, 1249, 1489, 1609, 1801, 2281, 2521, 2689, 3001, 3049, 3361]; Frobenius off ker W'' at 13; in ker W'' at []",
+ "l_values": "PASS dcoef4/leval reproduce the hp3 values of orbits [19, 20, 17, 7] and leval the degree-8 values at ['43692/43691', '511/510', '102/101']; octtest (Euler product at 19/10) on every family",
+ "census": "PASS census_kv4 = census_kv on three ranges (W, Wcheck); its ker-W/W'/W'' bins on 6e4..1.2e7 = an independent classification; stored bins nested; ker-W bins = earlier census data; stored data hash-check",
+ "signed": {
+  "sigmas": [
+   "43692/43691",
+   "38179/38178",
+   "29152/29151",
+   "22259/22258",
+   "14852/14851",
+   "9910/9909",
+   "7567/7566",
+   "5778/5777",
+   "4412/4411",
+   "2944/2943",
+   "1965/1964",
+   "1500/1499",
+   "1001/1000",
+   "668/667",
+   "511/510",
+   "390/389",
+   "298/297",
+   "199/198",
+   "174/173",
+   "116/115",
+   "102/101"
+  ],
+  "b": "8687735449/76582443134581",
+  "kernel_cells": 1976,
+  "kernel_min_slacks": [
+   "[1.8623427774305633295489511589136988835210065147156072366760e-7 +/- 5.70e-67]",
+   "[3.7300013078600836033655252080117641882415008112748197766718e-22 +/- 1.46e-81]",
+   "[3.7300866290476308019049332566402461792580020630222806552793e-22 +/- 1.41e-81]"
+  ],
+  "xbig": 2000000,
+  "sum_abs_c": "6356871610814634655569507743402247873603806687931766633317889978979307797046901355776499995113432782111343095571319012200654213574826645559746923999781/1653605685409034709794232217658352650213640016243652212818085749858446438555088321264762474408153406312841713722337551899907177495800850230009659392",
+  "sum_c_E": "[0.000562 +/- 7.94e-7]",
+  "census_tau": "[7.57e-5 +/- 5.37e-8]",
+  "rest_plus_TV_upper": "[0.00060783605368196724421120039862325999469464852077483468226035 +/- 2.35e-63]",
+  "Z_sel(1)": "[0.041668484032140421095767129745951476942651955276948362743244 +/- 6.34e-61]",
+  "C_eff_upper": "[0.042276320085823276518398030269807075842681076453973197425504 +/- 3.40e-61]",
+  "seconds": 240
+ },
+ "geometry": {
+  "C_effective": "0.0422764",
+  "margin_after_concentration_lower": "0.00001053865261682250"
+ },
+ "status": "PASS replay over W4 for delta = 0.043171 (exponent 1+delta)",
+ "seconds": 7123
+}

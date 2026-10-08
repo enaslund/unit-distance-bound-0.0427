@@ -43,10 +43,10 @@ theorem sumRange_cast (f : ℕ → ℚ) (n : ℕ) :
     ring
 
 /-- The mass exponent `p = 2/(1+δ)`. -/
-def pQ : ℚ := 20000 / 10427
+def pQ : ℚ := 40000 / 20863
 
 /-- The beta exponent `q = s·p − 1`. -/
-def qQ : ℚ := 12493117 / 10427000
+def qQ : ℚ := 12488617 / 10431500
 
 /-- Generalized binomial coefficients `C(x, k)`. -/
 def gchoose (x : ℚ) : ℕ → ℚ

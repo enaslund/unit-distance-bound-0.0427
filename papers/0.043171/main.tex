@@ -1,0 +1,123 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array,microtype}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{tikz}
+\definecolor{aiboxfill}{gray}{0.93}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={An Exponent of 1.043 for the Unit Distance Problem},
+ pdfauthor={Eric Naslund}}
+\numberwithin{equation}{section}
+% Theorems and equations share one counter, so every number is unique.
+\newtheorem{theorem}[equation]{Theorem}
+\newtheorem{proposition}[equation]{Proposition}
+\newtheorem{lemma}[equation]{Lemma}
+\newtheorem{corollary}[equation]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[equation]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[equation]{Remark}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\rd}{rd}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\inv}{inv}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\covol}{covol}
+\DeclareMathOperator{\artanh}{artanh}
+\newcommand{\Ftwo}{\mathbb F_2}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\deltastar}{0.043171}
+\newcommand{\thetastar}{65535/131072}
+\newcommand{\ceiling}{0.04871285}
+\newcommand{\Ceff}{0.0422764}
+\newcommand{\Wpp}{W''}
+\newcommand{\EW}{E_{W''}}
+% \fref: a pointer to a statement that the argument at hand does not use
+% (for example ``it is used in Lemma~X''); tools/depgraph.py ignores it.
+\newcommand{\fref}[1]{\ref{#1}}
+\setcounter{tocdepth}{1}
+\raggedbottom
+\title[The Unit Distance Problem]{An Exponent of 1.043\\for the Unit Distance Problem}
+\author[Eric Naslund]{Eric Naslund\textsuperscript{*}}
+\email{naslund.math@gmail.com}
+\date{October 8, 2026}
+\begin{document}
+\begin{abstract}
+Let $u(U)$ count the unordered pairs at distance one in a finite planar
+set $U$. We construct finite sets $U_j$ with $|U_j|\to\infty$ and
+$u(U_j)/|U_j|^{1.043171}\to\infty$. The largest exponent previously
+claimed in a manuscript, $1.04273$, is in the author's earlier paper,
+whose construction we keep: unit distances come from elements of
+relative norm one in quadratic extensions $K/F$ in which $F$ has both real
+and complex places, and the
+fields come from an infinite pro-$2$ tower over $\Q(\sqrt{241})$,
+ramified only above $2$, $3$ and $5$. We change the tower in one place:
+the Frobenius condition at the inert prime $7$ is moved to one of the
+two primes above $41$, which leaves its Golod--Shafarevich function and
+its quotient by the fourth Zassenhaus term unchanged and doubles the
+contribution of the capped prime to the margin. Most of the gain comes from a sharper bound for the relative
+zeta value. The tower group has $27$ quotients isomorphic to the
+dihedral group of order~$8$; fifteen of them detect, by a census, the
+residue degree of the primes that split completely in the Kummer field
+up to norm $4\cdot10^{13}$, and seven of them generate a field
+$E_{W''}$ of degree $8192$ contained in every field of the tower. We
+write $\zeta_{E_{W''}}$ as a product of $L$-functions of degrees
+$2$, $4$ and~$8$, evaluate the $576$ new ones rigorously at $21$ real
+points near~$1$, and combine the values through a kernel inequality with
+coefficients of both signs. Finite facts and numerical inequalities are
+certified by exact computation and interval arithmetic.
+\end{abstract}
+\maketitle
+
+% AI Methodology statement, referenced by the asterisk on the author's name,
+% set in a box as in the author's Linnik paper (hexagon:2610.00018v1).
+\begin{center}
+\fcolorbox{gray!60}{aiboxfill}{%
+\begin{minipage}{\dimexpr0.9\linewidth-2\fboxsep-2\fboxrule\relax}
+\small\setlength{\parindent}{0pt}\vspace{2pt}%
+\textsuperscript{*}\textbf{AI Methodology.} This work was
+done with extensive AI use, with agents developing the mathematics, writing
+the programs and writing the paper; I supervised, prompted, and coordinated them. The change of the Frobenius condition from the prime $7$ to a prime above $41$ (Section~\ref{tw:tower}) was found in an agent run of the Muse Spark system. The refinements of the bound for the relative zeta value
+(Sections~\ref{an:section}--\ref{ce:section}), the general shell weights,
+the certificates and this paper were produced with Claude Opus 5.5 working
+as an agent in Claude Code. The construction reuses the author's paper
+\cite{Naslund04273}, produced with Claude Opus 5.5, ChatGPT Sol 5.6 and
+ChatGPT Astra 6. The reviews mentioned in Subsection~\ref{intro:status} are
+automated reviews by AI agents in fresh contexts, not human peer review. While I have had the agents clean up the writing and provide a clearer introduction and, I recommend the reader make use of their AI model of choice to ask the
+paper questions.\vspace{2pt}
+\end{minipage}}
+\end{center}
+\medskip
+
+\input{sections/introduction}
+\tableofcontents
+\input{sections/tower}
+\input{sections/genus-field}
+\input{sections/analytic}
+\input{sections/dihedral}
+\input{sections/lvalues}
+\input{sections/ceiling}
+\input{sections/geometry}
+\input{sections/finite-windows}
+\input{sections/profiles}
+\input{sections/certificate}
+\input{sections/limits}
+\appendix
+\input{sections/finite-witness}
+\input{sections/dependency-index}
+
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}

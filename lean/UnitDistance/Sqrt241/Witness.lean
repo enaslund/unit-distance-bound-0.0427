@@ -9,19 +9,20 @@ set_option backward.privateInPublic true
 
 
 /-!
-# The witness for the tower over `ℚ(√241)` at δ = 0.0427
+# The witness for the tower over `ℚ(√241)` at δ = 0.04315
 
 Port of `UnitDistance.Witness` with the five local types of
-`certificates/finite-witness-241.json`: rational primes 2, 3, 5, 29 and 7 with
-absolute (e, f) = (8,4), (2,2), (2,2), (1,4), (1,8). The pair profile is the
-manuscript's unchanged (`s`, `a` and the Bernstein matrix of `UnitDistance.Witness`),
-so `pairProfile` and `pairOverlap` coincide with those of the ℚ development and
-only the mass exponent changes: `q = s·p − 1 = 12493117/10427000`
-(`pair_exponent_gap`). `ceiling = 495/10000` is the threshold for the fixed-base
-residue ceiling of the tower fields, which `fixedBaseCeiling_lt_of_genus_bound`
-derives from the hypothesis H; `thetaMin = 65535/131072` corresponds to a
-centralizer index of at least `2^16`. These are definitions only; their
-numerical bounds are proved separately (`Numerics/`, `FiniteCertificates/`).
+`certificates/finite-witness-241.json`: rational primes 2, 3, 5, 29 and 41 with
+absolute (e, f) = (8,4), (2,2), (2,2), (1,4), (2,4). At 41 only the primes of the
+tower above the capped prime of `ℚ(√241)` carry windows; they have true type (1,4) and
+are half of the primes above 41, which the effective type (2,4) records. The pair
+profile is the 1.0418235 manuscript's unchanged (`s`, `a` and the Bernstein matrix of
+`UnitDistance.Witness`), so `pairProfile` and `pairOverlap` coincide with those of
+the ℚ development and only the mass exponent changes: `q = s·p − 1`
+(`pair_exponent_gap`). `ceiling` is the threshold for the fixed-base residue ceiling
+of the tower fields; `thetaMin = 65535/131072` corresponds to a conjugacy class of
+complex conjugation of size at least `2^15` in `Gal(K/B)`. These are definitions only;
+their numerical bounds are proved separately (`Numerics/`, `FiniteCertificates/`).
 -/
 
 noncomputable section
@@ -37,8 +38,8 @@ def a : ℝ := (64316620879 : ℝ) / 5000000000000000
 def p : ℝ := 2 / (1 + increment)
 /-- The Gaussian parameter `2pδ` of the compact-place profile. -/
 def aCompact : ℝ := 2 * p * increment
-/-- The threshold `0.0495` for the fixed-base residue ceiling of the tower fields. -/
-def ceiling : ℝ := 495 / 10000
+/-- The threshold `0.0425` for the fixed-base residue ceiling of the tower fields. -/
+def ceiling : ℝ := 425 / 10000
 /-- The lower bound `(1 - 2⁻¹⁶)/2` for the complex-place proportion `θ` of the fixed
 field of a complex conjugation with centralizer index at least `2^16`. -/
 def thetaMin : ℝ := 65535 / 131072
@@ -91,18 +92,18 @@ def JCompact : ℝ := Real.log compactOverlap - (1+increment) * Real.log compact
 def JPair : ℝ := Real.log pairOverlap - (1+increment) * Real.log pairMass
 
 /-- The five witness primes. -/
-def primes : Fin 5 → ℕ := ![2, 3, 5, 29, 7]
+def primes : Fin 5 → ℕ := ![2, 3, 5, 29, 41]
 /-- The absolute ramification indices `e` at the witness primes. -/
-def ramification : Fin 5 → ℕ := ![8, 2, 2, 1, 1]
+def ramification : Fin 5 → ℕ := ![8, 2, 2, 1, 2]
 /-- The absolute residue degrees `f` at the witness primes. -/
-def residueDegree : Fin 5 → ℕ := ![4, 2, 2, 4, 8]
+def residueDegree : Fin 5 → ℕ := ![4, 2, 2, 4, 4]
 /-- The period exponents `k` of the finite-place shell functions (`period` in
 `certificates/finite-witness-241.json`). -/
 def periodPower : Fin 5 → ℕ := ![7, 9, 6, 1, 1]
 /-- The six shell weights at each witness prime (`weights` in
 `certificates/finite-witness-241.json`). -/
 def shellWeights : Fin 5 → Fin 6 → ℚ :=
-  ![![(1 / 1 : ℚ), (4337752249783 / 89475534818478 : ℚ), (142407545721 / 68475669431263 : ℚ), (6794713568 / 75479284581567 : ℚ), (290575981 / 73281982602526 : ℚ), (5972273 / 33729033834294 : ℚ)], ![(1 / 1 : ℚ), (1855926878905 / 20719672018137 : ℚ), (355542143822 / 48801251009333 : ℚ), (58146544358 / 97425369110793 : ℚ), (1474762657 / 29788551996439 : ℚ), (398099368 / 96307786378223 : ℚ)], ![(1 / 1 : ℚ), (2640115727474 / 90949493463877 : ℚ), (57338538679 / 75911152151678 : ℚ), (1993282330 / 99898228546427 : ℚ), (32287067 / 59918959199341 : ℚ), (1005993 / 67887592557980 : ℚ)], ![(1 / 1 : ℚ), (30117307 / 79041895970601 : ℚ), (13 / 94469155647357 : ℚ), (13 / 94469155647357000000 : ℚ), (13 / 94469155647357000000000000 : ℚ), (13 / 94469155647357000000000000000000 : ℚ)], ![(1 / 1 : ℚ), (1388007 / 41533768108880 : ℚ), (1388007 / 41533768108880000000 : ℚ), (1388007 / 41533768108880000000000000 : ℚ), (1388007 / 41533768108880000000000000000000 : ℚ), (1388007 / 41533768108880000000000000000000000000 : ℚ)]]
+  ![![(1 / 1 : ℚ), (4509124288194 / 96956058240835 : ℚ), (30486659864 / 15431412416677 : ℚ), (4750817593 / 55833807291627 : ℚ), (312557292 / 83683070090213 : ℚ), (10202986 / 61336650248189 : ℚ)], ![(1 / 1 : ℚ), (3557293422470 / 41587294680821 : ℚ), (4473097537 / 648982313134 : ℚ), (26849579809 / 47776963967923 : ℚ), (2513662972 / 54092619562375 : ℚ), (282581518 / 72995375851841 : ℚ)], ![(1 / 1 : ℚ), (1193123103534 / 42681663198781 : ℚ), (47239103179 / 65579497149591 : ℚ), (123442883 / 6520756159540 : ℚ), (23800649 / 46724632351127 : ℚ), (581851 / 41663755329659 : ℚ)], ![(1 / 1 : ℚ), (8517707 / 22940059243274 : ℚ), (13 / 99293481491072 : ℚ), (13 / 99293481491072000000 : ℚ), (13 / 99293481491072000000000000 : ℚ), (13 / 99293481491072000000000000000000 : ℚ)], ![(1 / 1 : ℚ), (6670914 / 90087681134399 : ℚ), (1 / 100000000000000 : ℚ), (1 / 100000000000000000000 : ℚ), (1 / 100000000000000000000000000 : ℚ), (1 / 100000000000000000000000000000000 : ℚ)]]
 
 /-- The residue field size `q = p^f` at the witness prime `v`. -/
 def residueCard (v : Fin 5) : ℝ := (primes v : ℝ) ^ residueDegree v
@@ -143,7 +144,7 @@ theorem p_mul_exponent : p * (1+increment) = 2 := by
   field_simp [ne_of_gt (show 0 < 1+increment by linarith [increment_pos])]
 
 /-- The beta exponent `q = s p - 1` of the pair mass. -/
-theorem pair_exponent_gap : s * p - 1 = 12493117 / 10427000 := by
+theorem pair_exponent_gap : s * p - 1 = 12488617 / 10431500 := by
   norm_num [s, p, increment]
 
 /-- Positivity of the profile parameters and `0 < thetaMin < 1/2`. -/

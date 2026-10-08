@@ -42,7 +42,8 @@ open Tower Presentation Cut GroupData ProCGroups ProCGroups.Presentations
 * `σ̂`-compatibility: `c₂ = σ̂ c₁ σ̂⁻¹`, and at the pairs of primes above `3`, `5`, `2`,
   `29` the second-prime elements are conjugate to the first-prime ones by some
   `s ∈ σ̂ G_B` (for the normalized maps `Local.localMapB`, `s = σ̂` or `σ̂⁻¹`);
-  the third cap is `F₇²` with `F₇ ∉ G_B` (i.e. `σ̂ F₇⁻¹ ∈ G_B`);
+  the third cap is `F₇²` with `F₇ ∉ G_B` (i.e. `σ̂ F₇⁻¹ ∈ G_B`), or a copy of the first cap
+  (version 2's symmetric cut `Retained.inputSym`, without any cap at `7`);
 * a complex embedding `phi` of `Ω` whose complex conjugation is `c₁`
   (`Local.phi₁`, `Local.conj₁_isConj`). -/
 structure Input where
@@ -60,7 +61,8 @@ structure Input where
     ∀ g, ((E.dyadic 1 g : GB) : Ghat) = s * (E.dyadic 0 g : Ghat) * s⁻¹
   cap_compat : ∃ s : Ghat, s * sigmaHat⁻¹ ∈ GB ∧
     ((E.cap 1 : GB) : Ghat) = s * (E.cap 0 : Ghat) * s⁻¹
-  frob7_compat : ∃ F : Ghat, ((E.cap 2 : GB) : Ghat) = F ^ 2 ∧ sigmaHat * F⁻¹ ∈ GB
+  frob7_compat : (∃ F : Ghat, ((E.cap 2 : GB) : Ghat) = F ^ 2 ∧ sigmaHat * F⁻¹ ∈ GB) ∨
+    E.cap 2 = E.cap 0
   phi : Omega →+* ℂ
   conj_isConj : NumberField.ComplexEmbedding.IsConj phi ((E.conj 0 : GB) : Ghat)
 

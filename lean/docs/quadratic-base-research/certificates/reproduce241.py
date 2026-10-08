@@ -24,6 +24,8 @@ import time
 from fractions import Fraction
 from pathlib import Path
 
+from interval241 import require_strict_upper_bound
+
 HERE = Path(__file__).resolve().parent
 os.chdir(HERE)
 PY = [sys.executable, "-B"]
@@ -91,8 +93,7 @@ def main():
     rec["pari_lvalues"] = "PASS PARI's 255 values L(301/300, chi_e) lie inside the certified row enclosures"
     out = run(PY + ["ceiling241.py", "afe241_301_300.json"])
     d = json.loads(out[out.index("{"):])
-    cu = re.search(r"\[([0-9.]+)", d["C_upper"]).group(1)
-    assert Fraction(cu) < Fraction("0.04871285")
+    require_strict_upper_bound(d["C_upper"], "0.04871285")
     rec["analytic_ceiling"] = {"C_upper": d["C_upper"], "used": "0.04871285", "C_minus_Bsel": d["C_minus_Bsel"]}
     out = run(PY + ["geom241.py", "0.04273", "0.04871285", "shells241_0.04273.json"])
     m = re.search(r"margin_after (-?[0-9.]+)", out)

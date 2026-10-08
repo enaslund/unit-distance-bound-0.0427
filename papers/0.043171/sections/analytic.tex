@@ -1,0 +1,1120 @@
+\section{The Relative Zeta Value}\label{an:section}
+
+We bound the relative zeta value $L_F(1)$ needed in the geometric
+construction. Logarithms of Dedekind zeta functions are normalized by the
+degree: for a number field $A$ we work with $[A:\Q]^{-1}\log\zeta_A(s)$.
+Subsections~\ref{an:reduction}--\ref{an:budget-section} and
+\ref{an:afe-section}--\ref{an:census} repeat \cite[Section~4]{Naslund04273};
+Subsections~\ref{an:selected} and~\ref{an:signed-section} are new.
+
+\begin{definition}\label{an:family}
+Let $\mathcal K$ be the set of all finite Galois extensions $K/B$ contained
+in $B_G$, of degree a power of two at least $2^{49}$, such that
+$G_B\to\overline G_B$ factors through $\Gal(K/B)$ (notation of
+Definition~\ref{tw:GB}). These are the fields $K$ of
+Theorem~\ref{tw:field-family}.
+\end{definition}
+
+For $K\in\mathcal K$ we use the notation of
+Theorem~\ref{tw:field-family}: $\iota_1$ is a complex conjugation at a place of $K$ above
+$v_1$, $F=K^{\langle\iota_1\rangle}$, $d=[F:\Q]$, so that $[K:\Q]=2d$, $(b,c)$
+is the signature of $F$, $\theta=c/d$, and $\lambda=2^{9/4}\sqrt{3615}$ is the
+root discriminant of both $K$ and $F$. Put
+\[
+ \ell=\log\lambda=\tfrac94\log2+\tfrac12\log3615=5.65600472355\ldots
+\]
+Different choices of $\iota_1$ are conjugate in $\Gal(K/B)$ and give
+conjugate fields $F$; hence $b$, $c$, $\theta$ and the function
+$L_F(s)=\zeta_K(s)/\zeta_F(s)$ depend only on $K$. The extension $K/F$ is
+quadratic and unramified at every finite place, $K$ is totally imaginary,
+and $b\ge1$. Let $\gamma$ be Euler's constant. For a
+prime $\mathfrak p$ of $B$, let $e_K(\mathfrak p)$ and $f_K(\mathfrak p)$ be
+its ramification index and residue degree in the Galois extension $K/B$, so
+that $(e_K(\mathfrak p),f_K(\mathfrak p))$ is the type of $\mathfrak p$ in
+$K/B$ (Definition~\ref{tw:type}).
+
+
+\begin{theorem}\label{an:ceiling}
+There is an $m_0$ such that every $K\in\mathcal K$ with $[K:B]\ge m_0$
+satisfies
+\[
+ \frac1d\log L_F(1)<C_{\rm eff}:=\Ceff.
+\]
+\end{theorem}
+
+The proof of Theorem~\ref{an:ceiling} is completed in
+Section~\ref{ce:section}. This section proves the general criterion,
+Proposition~\ref{an:signed}, and encloses $\zeta_E$ at real points
+(Proposition~\ref{an:genus-value}); Sections~\ref{dh:section}
+and~\ref{lv:section} supply the other inputs of the criterion.
+
+The proof assumes neither the generalized Riemann hypothesis nor a
+Brauer--Siegel type asymptotic formula, and it does not give an effective
+value of $m_0$. It has four steps. Monotonicity of the completion of $L_F$
+reduces the value at $s=1$ to $\zeta_K$ at real points $\sigma>1$
+(Subsection~\ref{an:reduction}). Along a sequence of fields of growing
+degree, the normalized numbers of primes of each prime power norm $q$
+converge to limiting densities $\beta_q$ (Lemma~\ref{an:limit}), and
+$d^{-1}\log L_F(1)$ is bounded in the limit by $Z(1)=\sum_q\beta_qg_1(q)$,
+where $g_s(q)=-\log(1-q^{-s})$; the Tsfasman--Vl\u{a}du\c{t} inequality
+bounds a weighted sum of the $\beta_q$ (Subsection~\ref{an:budget-section}).
+The \emph{selected primes} of $B$, those above $2$, $3$, $5$ and the capped
+primes, have the same type in every field of the tower, so their part of
+$Z(1)$ is known exactly (Subsection~\ref{an:selected}). For each other prime
+of $B$ we use a lower bound for its residue degree, a \emph{floor}, and a
+kernel inequality with several abscissae bounds the rest of $Z(1)$ by a
+combination, with coefficients of both signs, of \emph{floor sums}: the sums
+of the terms of these primes at residue degree equal to the floor, evaluated
+at real points $\sigma_j>1$ (Proposition~\ref{an:signed}).
+Sections~\ref{dh:section}--\ref{ce:section} supply the floors and the
+values: the floors come from a field $\EW$ contained in every field of the
+tower and from a census, and the values come from the factorization of
+$\zeta_{\EW}$ into $L$-functions. Throughout, $\sigma$ denotes a real number
+greater than $1$ and $\varepsilon=\sigma-1$; in this section $\varepsilon$ is
+this positive number, not the unit $\alpha_1$ of \eqref{tw:alpha}.
+
+\subsection{\texorpdfstring{Reduction to $s>1$}{Reduction to s > 1}}
+\label{an:reduction}
+This subsection shows that $L_F(1)>0$, by the class-number formula, and that
+the completion $\mathcal L_F$ of $L_F$, defined in \eqref{an:completion}
+below, is positive and nondecreasing on
+$[1,\infty)$ (Lemma~\ref{an:monotonicity}). Together with a comparison of
+Euler products they bound $L_F(1)$ by $\zeta_K$ at a real point
+$1+\varepsilon$ (Lemma~\ref{an:shift}), which Lemma~\ref{an:limit} uses.
+
+For a number field $A$, write $h_A$, $\operatorname{Reg}_A$, $w_A$ and
+$\Delta_A$ for its class number, regulator, number of roots of unity and
+discriminant. The residue of $\zeta_A$ at $s=1$ is
+$2^{r_1(A)}(2\pi)^{r_2(A)}h_A\operatorname{Reg}_A/(w_A|\Delta_A|^{1/2})$.
+Since $K/F$ is unramified at the finite places, $|\Delta_K|=|\Delta_F|^2$.
+Hence
+\begin{equation}\label{an:class-formula}
+ L_F(1)=\lim_{s\to1}\frac{\zeta_K(s)}{\zeta_F(s)}
+ =2^c\pi^{d-c}\lambda^{-d/2}\,
+ \frac{h_K\operatorname{Reg}_Kw_F}{h_F\operatorname{Reg}_Fw_K}>0.
+\end{equation}
+
+Let $s>1$ be real. At a prime of $F$ of norm $q$, the Euler factor of $L_F$
+is $(1-q^{-s})^{-1}$ if the prime splits in $K$ and $(1+q^{-s})^{-1}$ if it
+is inert. Its square is at most the Euler factor of $\zeta_K$, which is
+$(1-q^{-s})^{-2}$, respectively $(1-q^{-2s})^{-1}$. Consequently
+\begin{equation}\label{an:relative-euler}
+ \frac{\log L_F(s)}d\le\frac{\log\zeta_K(s)}{2d}
+ =\frac{\log\zeta_K(s)}{[K:\Q]}.
+\end{equation}
+
+The function $L_F$ is the Hecke $L$-function of the quadratic character of
+$K/F$. This character is unramified at every finite place and nontrivial at
+every real place of $F$, since $K$ is totally imaginary. With $\Gamma_\R$,
+$\Gamma_\C$ and $\Lambda_A$ as in Section~\ref{gf:section}, put
+\begin{equation}\label{an:completion}
+ \mathcal L_F(s)=\frac{\Lambda_K(s)}{\Lambda_F(s)}
+ =\lambda^{ds/2}\,\Gamma_\R(s+1)^b\,\Gamma_\C(s)^c\,L_F(s).
+\end{equation}
+By Hecke's theorem \cite{Hecke1920,Tate1967}, $\mathcal L_F$ is entire of
+order at most one, and it satisfies $\mathcal L_F(s)=\mathcal L_F(1-s)$
+because both completed Dedekind zeta functions do.
+
+\begin{lemma}\label{an:monotonicity}
+The function $\mathcal L_F(s)$ is positive and nondecreasing on $[1,\infty)$.
+\end{lemma}
+
+\begin{proof}
+The Euler product shows that $\mathcal L_F$ has no zeros with
+$\operatorname{Re}s>1$, and the functional equation excludes
+$\operatorname{Re}s<0$. So every zero $\rho$ satisfies $0\le\operatorname{Re}
+\rho\le1$. There is no zero on $[1,\infty)$, by the Euler product and by
+\eqref{an:class-formula}. As $\mathcal L_F(s)>0$ for large real $s$,
+it is positive on $[1,\infty)$.
+
+Put $\Xi(z)=\mathcal L_F(\frac12+z)$. It is entire of order at most one,
+even, and real on the real axis. Its zeros $z=\rho-\frac12$ satisfy
+$|\operatorname{Re}z|\le\frac12$, and $\sum_{z\ne0}|z|^{-2}<\infty$. Group
+the nonzero zeros into pairs $\{z_0,-z_0\}$, and let $m\ge0$ be the order of
+$\Xi$ at $0$. By Hadamard's theorem for functions of order at most one,
+\[
+ \frac{\Xi'}{\Xi}(z)-\frac mz-\sum_{\{z_0,-z_0\}}\frac{2z}{z^2-z_0^2}
+\]
+is constant, where the series converges absolutely and locally uniformly
+away from the zeros. Since $\Xi$ is even, $\Xi'/\Xi$ is odd, so the constant
+is zero. For real $x\ge\frac12$ the logarithmic derivative is real, so it
+equals the sum of the real parts. If $z_0=a+iy$, then
+\[
+ \operatorname{Re}\frac{2x}{x^2-z_0^2}
+ =\frac{2x(x^2-a^2+y^2)}{(x^2-a^2+y^2)^2+4a^2y^2}\ge0,
+\]
+because $|a|\le\frac12\le x$. Since also $m/x\ge0$, the logarithmic
+derivative is nonnegative, and $\log\Xi$ is nondecreasing on
+$[\frac12,\infty)$.
+\end{proof}
+
+For $0<\varepsilon\le1$ and $0\le\theta\le\frac12$ put
+\begin{equation}\label{an:gamma}
+ \Upsilon(\varepsilon,\theta)
+ =\frac\varepsilon2(\ell-\log\pi)-\varepsilon\theta\log2
+ +(1-2\theta)\log\Gamma\Bigl(1+\frac\varepsilon2\Bigr)
+ +\theta\log\Gamma(1+\varepsilon).
+\end{equation}
+
+\begin{lemma}\label{an:shift}
+Let $K\in\mathcal K$ and $0<\varepsilon\le1$. Then
+\begin{equation}\label{an:finite-gamma}
+ \frac{\log L_F(1)}d
+ \le\frac{\log\zeta_K(1+\varepsilon)}{[K:\Q]}+\Upsilon(\varepsilon,\theta).
+\end{equation}
+Moreover $\Upsilon(\varepsilon,\theta)\to0$ as $\varepsilon\downarrow0$,
+uniformly for $0\le\theta\le\frac12$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{an:monotonicity},
+$\mathcal L_F(1)\le\mathcal L_F(1+\varepsilon)$. In \eqref{an:completion}
+the gamma factors change by
+\[
+ \frac{\Gamma_\R(2+\varepsilon)}{\Gamma_\R(2)}
+ =\pi^{-\varepsilon/2}\,\Gamma\Bigl(1+\frac\varepsilon2\Bigr),\qquad
+ \frac{\Gamma_\C(1+\varepsilon)}{\Gamma_\C(1)}
+ =(2\pi)^{-\varepsilon}\,\Gamma(1+\varepsilon).
+\]
+Taking logarithms, dividing by $d$, and using $b/d=1-2\theta$, $c/d=\theta$
+and \eqref{an:relative-euler}, we obtain \eqref{an:finite-gamma}. Since
+$\Upsilon$ is affine in $\theta$, $\Upsilon(\varepsilon,\theta)\to0$ as
+$\varepsilon\downarrow0$, uniformly for $0\le\theta\le\frac12$.
+\end{proof}
+
+The term $\Upsilon$ does not appear in the final estimate. With
+$\varepsilon=1/300$, \eqref{an:finite-gamma} would add
+$\Upsilon(1/300,\theta)\approx0.0054$ for $\theta$ near $\frac12$. Instead,
+the proof of Lemma~\ref{an:limit} applies \eqref{an:finite-gamma} with $s-1$
+in place of $\varepsilon$ for each fixed $s\in(1,2]$, passes to the limit
+along a sequence of fields, and then lets $s\downarrow1$, so that $\Upsilon$
+vanishes in the limit; the change from the real points $\sigma>1$ back to
+$1$ is then paid for through the Tsfasman--Vl\u{a}du\c{t} inequality
+(Propositions~\ref{an:prime-budget} and~\ref{an:signed}). This limit is
+also the reason why $m_0$ is not effective.
+
+
+\subsection{\texorpdfstring{The Tsfasman--Vl\u{a}du\c{t} Inequality over $B$}{The Tsfasman-Vladut Inequality over B}}
+\label{an:budget-section}
+This subsection passes to limits along sequences of fields of $\mathcal K$
+(Lemma~\ref{an:limit}). The limit densities $\beta_q$ and the function $Z(s)$
+defined there are the quantities that Propositions~\ref{an:prime-budget}
+and~\ref{an:signed} bound, and the Tsfasman--Vl\u{a}du\c{t} inequality bounds
+$\sum_q\beta_qw(q)$. Lemma~\ref{an:local-contribution} first writes the
+normalized logarithm of a Dedekind zeta function as a sum over the primes
+of $B$.
+
+For real $q>1$ and $s\ge1$ put $g_s(q)=-\log(1-q^{-s})$.
+
+\begin{lemma}\label{an:local-contribution}
+Let $M$ be a finite Galois extension of $B$ and $s>1$. For a prime
+$\mathfrak p$ of $B$ let $e_M(\mathfrak p)$ and $f_M(\mathfrak p)$ be its
+ramification index and residue degree in $M/B$. Then
+\begin{align}
+ \frac{\log\zeta_M(s)}{[M:\Q]}
+ &=\sum_{\mathfrak p}\frac{g_s(\mathrm N\mathfrak p^{f_M(\mathfrak p)})}
+ {2e_M(\mathfrak p)f_M(\mathfrak p)},\label{an:local-sum}\\
+ -\frac1{[M:\Q]}\frac{\zeta_M'}{\zeta_M}(2)
+ &=\frac1{[M:\Q]}\sum_{\mathfrak P}\frac{\log\mathrm N\mathfrak P}
+ {\mathrm N\mathfrak P^2-1}
+ =\sum_{\mathfrak p}\frac{\log\mathrm N\mathfrak p}
+ {2e_M(\mathfrak p)(\mathrm N\mathfrak p^{2f_M(\mathfrak p)}-1)},
+ \label{an:local-debit}
+\end{align}
+where $\mathfrak P$ runs over the primes of $M$. Each summand on the right
+does not increase when $e_M(\mathfrak p)$ or $f_M(\mathfrak p)$ is replaced
+by a larger real number. If $M\subseteq M'$ are both Galois over $B$, then
+$e_M(\mathfrak p)\mid e_{M'}(\mathfrak p)$ and
+$f_M(\mathfrak p)\mid f_{M'}(\mathfrak p)$.
+\end{lemma}
+
+\begin{proof}
+Above $\mathfrak p$ there are $[M:B]/(ef)$ primes of $M$, each of norm
+$\mathrm N\mathfrak p^f$, and $[M:\Q]=2[M:B]$. This gives both formulas.
+The first equality in \eqref{an:local-debit} follows from
+$-\zeta_M'/\zeta_M(s)=\sum_{\mathfrak P}\log\mathrm N\mathfrak P/(\mathrm
+N\mathfrak P^s-1)$. For monotonicity in $f$, write
+$g_s(x^f)/f=\sum_{j\ge1}x^{-fjs}/(fj)$ for $x>1$; each term decreases in
+$f$. The divisibilities hold because ramification indices and residue
+degrees are multiplicative in towers.
+\end{proof}
+
+Put
+\[
+ \kappa_\infty=\frac{\ell-\gamma-\log(4\pi)}4,\qquad
+ w(q)=2\log q\sum_{m\ge1}\frac1{q^m+1}.
+\]
+Here $2\kappa_\infty$ is the right side, and $w(q)$ the weight of the prime
+power $q$, in the Tsfasman--Vl\u{a}du\c{t} inequality \eqref{an:tv-budget}
+below.
+
+\begin{lemma}\label{an:limit}
+Let $C'\in\R$, and let $K^{(j)}\in\mathcal K$, $j\ge1$, be fields of strictly
+increasing degree. Let $F^{(j)}$ and $d_j=[F^{(j)}:\Q]$ be the field $F$ and
+the number $d$ attached to $K^{(j)}$ above, so that $[K^{(j)}:\Q]=2d_j$, and
+suppose that $d_j^{-1}\log L_{F^{(j)}}(1)\ge C'$ for every $j$. For a prime
+power $q$ let $N_q(K)$ be the number of
+primes of $K$ of norm $q$. After passing to a subsequence, the limit
+$\beta_q=\lim_jN_q(K^{(j)})/(2d_j)$ exists for every prime power $q$, and
+$Z(s)=\sum_q\beta_qg_s(q)$, for real $s\ge1$, satisfies:
+\begin{enumerate}
+\item[(a)] $Z(s)=\lim_j[K^{(j)}:\Q]^{-1}\log\zeta_{K^{(j)}}(s)$ for every
+ real $s>1$;
+\item[(b)] $\sum_q\beta_qw(q)\le2\kappa_\infty$;
+\item[(c)] $C'\le Z(1)<\infty$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+If $q=p^f$, then $N_q(K)\le[K:\Q]/f$, since the local degrees above $p$ add
+up to $[K:\Q]$. So $N_q(K^{(j)})/(2d_j)\le1$, and a diagonal argument gives
+a subsequence along which $\beta_q$ exists for every $q$. The fields
+$K^{(j)}$ have strictly increasing degrees, so they are pairwise
+non-isomorphic.
+
+(a) For fixed real $s>1$,
+$(2d_j)^{-1}\log\zeta_{K^{(j)}}(s)=\sum_q(N_q(K^{(j)})/2d_j)g_s(q)$ tends to
+$Z(s)$ by dominated convergence: for $q=p^f$ the terms are at most
+$g_s(q)/f\le2q^{-s}$, and $\sum_qq^{-s}<\infty$.
+
+(b) Tsfasman and Vl\u{a}du\c{t} call a sequence $(A_i)$ of pairwise
+non-isomorphic number fields asymptotically exact if its genus
+$\mathfrak g(A_i)=\log|\Delta_{A_i}|^{1/2}$ tends to infinity and the limits
+$\phi_q=\lim N_q(A_i)/\mathfrak g(A_i)$,
+$\phi_\R=\lim r_1(A_i)/\mathfrak g(A_i)$ and
+$\phi_\C=\lim r_2(A_i)/\mathfrak g(A_i)$ exist. Their unconditional Basic
+Inequality$'$ \cite[Section~3.2, Proposition~3.1]{TsfasmanVladut2002} states
+that every such sequence satisfies
+\[
+ 2\sum_q\phi_q\log q\sum_{m\ge1}\frac1{q^m+1}
+ +\phi_\R\Bigl(\frac\gamma2+\frac12+\log2\sqrt\pi\Bigr)
+ +\phi_\C(\gamma+\log4\pi)\le1.
+\]
+For our sequence $\mathfrak g(K^{(j)})=d_j\ell$ and $K^{(j)}$ is totally
+imaginary, so $\phi_q=2\beta_q/\ell$, $\phi_\R=0$ and $\phi_\C=1/\ell$, and
+the inequality becomes
+\begin{equation}\label{an:tv-budget}
+ \sum_q\beta_qw(q)\le\frac{\ell-\gamma-\log(4\pi)}2=2\kappa_\infty.
+\end{equation}
+
+(c) Since $g_1(q)\le1/(q-1)$ and $w(q)\ge2\log q/(q+1)$, we have
+$g_1(q)\le3w(q)/(2\log2)$, so $Z(1)<\infty$ by (b). By
+Lemma~\ref{an:shift} with $s-1$ in place of $\varepsilon$, and by (a), for
+$1<s\le2$,
+\[
+ C'\le\limsup_j\frac{\log L_{F^{(j)}}(1)}{d_j}
+ \le Z(s)+\sup_{0\le\theta\le1/2}\Upsilon(s-1,\theta).
+\]
+As $s\downarrow1$, $Z(s)$ increases to $Z(1)$ by monotone convergence, and
+the supremum tends to zero. Hence $C'\le Z(1)$.
+\end{proof}
+
+The next proposition is the form of this argument used in
+\cite{Naslund04273}, with one abscissa. Here it serves only for comparison
+(Remark~\ref{an:base-ceiling} and Section~\ref{lim:section}).
+
+\begin{proposition}\label{an:prime-budget}
+Let $\sigma=1+\varepsilon$ with $0<\varepsilon\le1$, and let $Y_*$ be a real
+number with $[K:\Q]^{-1}\log\zeta_K(\sigma)\le Y_*$ for every
+$K\in\mathcal K$. For each prime $\mathfrak p$ of $B$, let
+$e^0_{\mathfrak p},f^0_{\mathfrak p}\ge1$ be integers with
+$e_K(\mathfrak p)\ge e^0_{\mathfrak p}$ and $f_K(\mathfrak p)\ge
+f^0_{\mathfrak p}$ for every $K\in\mathcal K$, and let $Y'_*$ be a real
+number with
+\[
+ Y'_*\ge\sum_{\mathfrak p}\frac{\log\mathrm N\mathfrak p}
+ {2e^0_{\mathfrak p}(\mathrm N\mathfrak p^{2f^0_{\mathfrak p}}-1)}.
+\]
+Then every $C'>Y_*+\varepsilon(\kappa_\infty+Y'_*)$ has the following
+property: there is an $m_0$ such that $d^{-1}\log L_F(1)<C'$ for every
+$K\in\mathcal K$ with $[K:B]\ge m_0$.
+\end{proposition}
+
+\begin{proof}
+Suppose not, and let $K^{(j)}$, $\beta_q$ and $Z$ be as in
+Lemma~\ref{an:limit}. For every prime power $q$,
+\begin{align*}
+ g_1(q)-g_{1+\varepsilon}(q)&=\int_1^{1+\varepsilon}\frac{\log q}{q^u-1}\,du
+ \le\frac{\varepsilon\log q}{q-1},\\
+ \frac{\log q}{q-1}-\frac{w(q)}2&=\log q\sum_{m\ge1}\frac1{q^m(q^m+1)}
+ \le\frac{\log q}{q^2-1}.
+\end{align*}
+With \eqref{an:tv-budget} these give
+$Z(1)\le Z(1+\varepsilon)+\varepsilon(\kappa_\infty+\sum_q\beta_q\log q/(q^2-1))$.
+By Fatou's lemma, \eqref{an:local-debit} for $M=K^{(j)}$, and the monotonicity
+in Lemma~\ref{an:local-contribution},
+\[
+ \sum_q\beta_q\frac{\log q}{q^2-1}
+ \le\liminf_j\sum_{\mathfrak p}\frac{\log\mathrm N\mathfrak p}
+ {2e_{K^{(j)}}(\mathfrak p)(\mathrm N\mathfrak p^{2f_{K^{(j)}}(\mathfrak p)}-1)}
+ \le Y'_*.
+\]
+Finally $Z(1+\varepsilon)\le Y_*$ by Lemma~\ref{an:limit}(a). Thus
+$C'\le Z(1)\le Y_*+\varepsilon(\kappa_\infty+Y'_*)$, a contradiction.
+\end{proof}
+
+By \eqref{an:local-debit} and the monotonicity in
+Lemma~\ref{an:local-contribution}, $Y'_*$ bounds
+$-[K:\Q]^{-1}(\zeta_K'/\zeta_K)(2)$ for every $K\in\mathcal K$, as $Y_*$
+bounds $[K:\Q]^{-1}\log\zeta_K(\sigma)$.
+
+
+\subsection{Selected Primes and Floors}\label{an:selected}
+This subsection separates the primes of $B$ whose type is the same in every
+$K\in\mathcal K$, the selected primes, whose contribution $Z_{\rm sel}(1)$
+to $Z(1)$ is computed exactly (Lemma~\ref{an:selected-lemma}), from the free
+primes, which enter Proposition~\ref{an:signed} only through lower bounds
+for their residue degrees, the floors of Definition~\ref{an:floor-def}.
+
+\begin{definition}\label{an:selected-def}
+The \emph{selected primes} of $B$ are the six primes of $S$, which lie above
+$2$, $3$ and $5$ (Lemma~\ref{tw:base}(c),(d)), and the capped primes
+$\mathfrak t_1,\mathfrak t_2,\mathfrak t_3$
+(Definition~\ref{tw:local-generators}). The other primes of $B$ are
+\emph{free}. For a prime power $q$ put
+\[
+ \beta^{\rm sel}_q=\sum_{\mathfrak p}\frac1{2e_K(\mathfrak p)f_K(\mathfrak p)},
+\]
+the sum over the selected primes $\mathfrak p$ with
+$\mathrm N\mathfrak p^{f_K(\mathfrak p)}=q$, where
+$(e_K(\mathfrak p),f_K(\mathfrak p))$ is the type of $\mathfrak p$ in $K/B$
+given by Theorem~\ref{tw:field-family}; it is the same for every
+$K\in\mathcal K$. Put
+\[
+ Z_{\rm sel}(s)=\sum_q\beta^{\rm sel}_qg_s(q)\quad(s\ge1),\qquad
+ T_{\rm sel}=\sum_q\beta^{\rm sel}_qw(q).
+\]
+The places of $F$ above the selected primes of $B$ form the set of finite
+places used in the geometric construction (Section~\ref{sec:certificate});
+in Subsection~\ref{intro:outline} they are also called selected.
+\end{definition}
+
+\begin{lemma}\label{an:selected-lemma}
+The numbers $\beta^{\rm sel}_q$ are $1/32$ for $q=16$, $1/4$ for
+$q=9,25,29^4$, $1/8$ for $q=41^4$, and $0$ for every other prime power $q$.
+For every $K\in\mathcal K$ and every prime power $q$, the number
+$N^{\rm sel}_q(K)$ of primes of $K$ of norm $q$ above selected primes of
+$B$ satisfies $N^{\rm sel}_q(K)/[K:\Q]=\beta^{\rm sel}_q$. Moreover
+\begin{gather*}
+ 0.0416684840321404<Z_{\rm sel}(1)<0.0416684840321405,\\
+ 0.2004555342790642<T_{\rm sel}<0.2004555342790643.
+\end{gather*}
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{tw:field-family} the types are $(8,4)$ at
+$\mathfrak p_1,\mathfrak p_2$, which have norm $2$; $(2,2)$ at the two primes
+above $3$ and the two above $5$, which have norms $3$ and $5$; and $(1,4)$ at
+$\mathfrak t_1,\mathfrak t_2$, of norm $29$, and at $\mathfrak t_3$, of norm
+$41$. The definition then gives the values of $\beta^{\rm sel}_q$. A prime
+$\mathfrak p$ of $B$ of type $(e,f)$ in the Galois extension $K/B$ has
+$[K:B]/(ef)=d/(ef)$ primes of $K$ above it, each of norm
+$\mathrm N\mathfrak p^f$, and $[K:\Q]=2d$; this gives
+$N^{\rm sel}_q(K)/[K:\Q]=\beta^{\rm sel}_q$. The two numbers are evaluated
+in Arb interval arithmetic by the supplementary program \texttt{signed.py}
+(its functions \texttt{zsel} and \texttt{B\_r}).
+\end{proof}
+
+Since $K/B$ is unramified outside $S$, every free prime has $e_K(\mathfrak
+p)=1$.
+
+\begin{definition}\label{an:floor-def}
+Put $q_{\min}=41^4=2825761$. A \emph{system of floors} is a choice of an
+integer $f^0_{\mathfrak p}\ge1$, the \emph{floor} of $\mathfrak p$, for every
+free prime $\mathfrak p$ of $B$ such that
+\begin{enumerate}
+\item[(Fl1)] $f^0_{\mathfrak p}$ divides $f_K(\mathfrak p)$ for every
+ $K\in\mathcal K$;
+\item[(Fl2)] $\mathrm N\mathfrak p^{f^0_{\mathfrak p}}\ge q_{\min}$.
+\end{enumerate}
+Its \emph{floor sum} is
+\[
+ Y_{\rm fl}(\sigma)=\sum_{\mathfrak p\ \rm free}
+ \frac{g_\sigma(\mathrm N\mathfrak p^{f^0_{\mathfrak p}})}{2f^0_{\mathfrak p}}
+ \qquad(\sigma>1).
+\]
+The series converges, since $g_\sigma(x^f)/f\le g_\sigma(x)$ for $x>1$ and
+$f\ge1$, and $\sum_{\mathfrak p}g_\sigma(\mathrm N\mathfrak p)=\log\zeta_B(\sigma)$.
+By (Fl1), the floors are an admissible choice, at the free primes, of the lower
+bounds $f^0_{\mathfrak p}$ of Proposition~\fref{an:prime-budget}; this is why
+the same symbol is used.
+\end{definition}
+
+By \eqref{an:local-sum}, the floor sum is the part of the termwise bound
+for $[K:\Q]^{-1}\log\zeta_K(\sigma)$ that comes from the free primes, for a
+hypothetical field in which every free prime has residue degree equal to
+its floor. The floors used in this paper are those of
+Definition~\ref{dh:floors}.
+
+\subsection{A Signed Kernel}\label{an:signed-section}
+Proposition~\ref{an:prime-budget} passes from $1+\varepsilon$ to $1$ through
+the uniform bound $g_1(q)-g_{1+\varepsilon}(q)\le\varepsilon\log q/(q-1)$.
+The next proposition, the criterion that proves Theorem~\ref{an:ceiling} in
+Section~\ref{ce:section}, replaces it by a kernel inequality between $g_1$,
+a combination $\mathsf K$ of several functions $g_{\sigma_i}$ with
+coefficients of either sign, and the weight $w$ of the
+Tsfasman--Vl\u{a}du\c{t} inequality. Such a combination can follow the
+function $(g_1-b_{\rm TV}w)_+$, where $b_{\rm TV}\ge0$ is the multiplier of
+$w$ in the proposition, far more closely than a single multiple of
+$g_\sigma$.
+
+\begin{proposition}\label{an:signed}
+Let $(f^0_{\mathfrak p})$ be a system of floors (Definition~\ref{an:floor-def}),
+with floor sum $Y_{\rm fl}$, and let $Z_{\rm sel}$ and $T_{\rm sel}$ be as in
+Definition~\ref{an:selected-def} and $\kappa_\infty$ as in
+Subsection~\ref{an:budget-section}.
+Let $1<\sigma_1<\dots<\sigma_n$, let $c_1,\dots,c_n$ be real numbers of
+either sign, let $b_{\rm TV}\ge0$, and define the \emph{kernel}
+$\mathsf K(q)=\sum_ic_ig_{\sigma_i}(q)$ for real $q>1$. Suppose that, for
+every real $q\ge q_{\min}$,
+\[
+ \text{(i) }\mathsf K(q)\ge g_1(q)-b_{\rm TV}\,w(q),\qquad
+ \text{(ii) }\mathsf K(q)\ge0,\qquad
+ \text{(iii) }\mathsf K\text{ is non-increasing on }[q_{\min},\infty).
+\]
+Then every
+\[
+ C'>Z_{\rm sel}(1)+\sum_{i=1}^nc_iY_{\rm fl}(\sigma_i)
+ +b_{\rm TV}\,(2\kappa_\infty-T_{\rm sel})
+\]
+has the following property: there is an $m_0$ such that
+$d^{-1}\log L_F(1)<C'$ for every $K\in\mathcal K$ with $[K:B]\ge m_0$.
+\end{proposition}
+
+\begin{proof}
+Suppose not, and let $K^{(j)}$, $\beta_q$ and $Z$ be as in
+Lemma~\ref{an:limit}, applied with this $C'$. Write
+$N_q(K)=N^{\rm sel}_q(K)+N^{\rm free}_q(K)$, where $N^{\rm free}_q(K)$
+counts the primes of $K$ of norm $q$ above free primes of $B$, and put
+$\mu_j(q)=N^{\rm free}_q(K^{(j)})/(2d_j)$. By Lemma~\ref{an:selected-lemma},
+$\beta^{\rm free}_q=\beta_q-\beta^{\rm sel}_q=\lim_j\mu_j(q)$ for every $q$,
+and $\beta^{\rm free}_q\ge0$.
+
+\emph{One field.} Fix $j$ and write $K=K^{(j)}$ and $d=d_j$. A free prime
+$\mathfrak p$ of $B$ with $f=f_K(\mathfrak p)$ has $d/f$ primes of $K$ above
+it, each of norm $\mathrm N\mathfrak p^f$. By (Fl1), $f$ is a multiple of
+$f^0_{\mathfrak p}$, so $1/(2f)\le1/(2f^0_{\mathfrak p})$, and
+$\mathrm N\mathfrak p^f\ge\mathrm N\mathfrak p^{f^0_{\mathfrak p}}\ge q_{\min}$
+by (Fl2). By (ii) and (iii), the primes of $K$ above $\mathfrak p$ contribute
+\[
+ \frac{d/f}{2d}\,\mathsf K(\mathrm N\mathfrak p^f)
+ =\frac{\mathsf K(\mathrm N\mathfrak p^f)}{2f}
+ \le\frac{\mathsf K(\mathrm N\mathfrak p^{f^0_{\mathfrak p}})}{2f^0_{\mathfrak p}}
+\]
+to $\sum_q\mu_j(q)\mathsf K(q)$. Summing over the free primes,
+\[
+ \sum_q\mu_j(q)\mathsf K(q)\le\Sigma_{\mathsf K}:=\sum_{\mathfrak p\ \rm free}
+ \frac{\mathsf K(\mathrm N\mathfrak p^{f^0_{\mathfrak p}})}{2f^0_{\mathfrak p}}
+ =\sum_{i=1}^nc_iY_{\rm fl}(\sigma_i),
+\]
+where the series defining $\Sigma_{\mathsf K}$ converges absolutely, since
+$|\mathsf K|\le\sum_i|c_i|g_{\sigma_i}$, and may be summed term by term. Note
+also that $\mu_j$ is supported on $[q_{\min},\infty)$, hence so is
+$\beta^{\rm free}$.
+
+\emph{The limit.} Since $\mathsf K\ge0$ on $[q_{\min},\infty)$, Fatou's
+lemma gives $\sum_q\beta^{\rm free}_q\mathsf K(q)\le\liminf_j\sum_q\mu_j(q)
+\mathsf K(q)\le\Sigma_{\mathsf K}$. By (i) at every $q$ in the support of
+$\beta^{\rm free}$, by $b_{\rm TV}\ge0$, and by Lemma~\ref{an:limit}(b),
+\[
+ \sum_q\beta^{\rm free}_qg_1(q)
+ \le\sum_q\beta^{\rm free}_q\mathsf K(q)
+ +b_{\rm TV}\sum_q\beta^{\rm free}_qw(q)
+ \le\Sigma_{\mathsf K}+b_{\rm TV}\,(2\kappa_\infty-T_{\rm sel}),
+\]
+where we used $\sum_q\beta^{\rm free}_qw(q)=\sum_q\beta_qw(q)-T_{\rm sel}$.
+With Lemma~\ref{an:limit}(c),
+\[
+ C'\le Z(1)=Z_{\rm sel}(1)+\sum_q\beta^{\rm free}_qg_1(q)
+ \le Z_{\rm sel}(1)+\sum_ic_iY_{\rm fl}(\sigma_i)
+ +b_{\rm TV}\,(2\kappa_\infty-T_{\rm sel}),
+\]
+which contradicts the choice of $C'$.
+\end{proof}
+
+\begin{remark}\label{an:signed-remark}
+Condition (ii) follows from (iii), since $\mathsf K(q)\to0$ as
+$q\to\infty$; it is checked separately. The proof uses the floors only
+through (Fl1) and (Fl2), and the selected primes only through their exact
+types. The right-hand side of the proposition is at least
+$Z_{\rm sel}(1)$, since $\Sigma_{\mathsf K}\ge0$ by (ii) and
+$2\kappa_\infty>T_{\rm sel}$ (Remark~\ref{an:limit-remark}). With $n=1$ and
+$c_1\ge1$ it is the refined Tsfasman--Vl\u{a}du\c{t} step of
+Proposition~\ref{lim:D}, without the adaptive credits
+$R_{\mathfrak p}(f_K(\mathfrak p))+\rho_K(\mathfrak p)I_{\mathfrak p}(f_K(\mathfrak p))$
+of Definition~\ref{lim:credits} and Proposition~\ref{lim:A}.
+\end{remark}
+
+\subsection{An Approximate Functional Equation for Two Gamma Factors}
+\label{an:afe-section}
+This subsection and the next two enclose $\zeta_E(\sigma)$ at the abscissae
+of Section~\ref{ce:section} (Proposition~\ref{an:genus-value}), through the
+factorization of Proposition~\ref{gf:factorization}. The factors
+$L(\sigma,\chi_e)$ are computed from an approximate functional equation
+(Lemma~\ref{an:balanced-afe}), whose kernels are bounded by envelopes
+(Lemmas~\ref{an:kernels} and~\ref{an:tails}) and enclosed on a grid
+(Subsection~\ref{an:kernel-enclosures}). For real $\mu$ and $x,y>0$ define
+the incomplete gamma and Bessel integrals
+\[
+ H_\mu(x)=\int_1^\infty u^{\mu-1}e^{-xu}\,du,\qquad
+ I_\mu(y)=\int_1^\infty u^\mu K_0(yu)\,du,
+\]
+where $K_0$ is the modified Bessel function of the second kind of order
+zero, and their envelopes (upper bounds, by Lemma~\ref{an:kernels}(2))
+\[
+ \mathcal V_1(x)=\frac{e^{-x}}x\Bigl(1+\frac1x\Bigr),\qquad
+ \mathcal V_2(y)=\sqrt{\frac\pi2}\,\frac{e^{-y}}{y^{3/2}}\Bigl(1+\frac1y\Bigr).
+\]
+Numerical evaluation of $L$-functions from their functional equations is
+developed in \cite{Dokchitser2004}. Part (1) of the next lemma treats mixed
+gamma factors, and part (2), for pure gamma factors, uses the Bessel
+function $K_0$. We prove both.
+
+\begin{lemma}\label{an:balanced-afe}
+Let $a_n$ be real numbers with $|a_n|\le\tau(n)$, where $\tau(n)$ is the
+number of divisors of $n$, let $Q>0$ and
+$\nu_1,\nu_2\in\{0,1\}$ (integers, not places), and let
+$L(s)=\sum_{n\ge1}a_nn^{-s}$. Suppose that
+$\Lambda(s)=Q^{s/2}\Gamma_\R(s+\nu_1)\Gamma_\R(s+\nu_2)L(s)$ extends to an
+entire function of order at most one with $\Lambda(1-s)=\Lambda(s)$. Put
+$t=2\pi/\sqrt Q$ and let $\sigma>1$ be real.
+\begin{enumerate}
+\item If $\nu_1\ne\nu_2$, then
+\[
+ L(\sigma)=\frac{t^\sigma}{\Gamma(\sigma)}\sum_{n\ge1}a_n
+ \bigl(H_\sigma(tn)+H_{1-\sigma}(tn)\bigr).
+\]
+\item If $\nu_1=\nu_2=\nu$, then
+\[
+ L(\sigma)=\frac{4(t/2)^{\sigma+\nu}}{\Gamma((\sigma+\nu)/2)^2}
+ \sum_{n\ge1}a_nn^\nu
+ \bigl(I_{\sigma+\nu-1}(tn)+I_{\nu-\sigma}(tn)\bigr).
+\]
+\end{enumerate}
+The series converge absolutely.
+\end{lemma}
+
+\begin{proof}
+In case (1) put $k(x)=e^{-x}$ and $\nu=0$, and in case (2) put
+$k(x)=K_0(x)$. Their Mellin transforms are $\Gamma(w)$ and
+$2^{w-2}\Gamma(w/2)^2$ for $\operatorname{Re}w>0$
+\cite[10.43.19]{DLMF}. Let $\Theta(u)=\sum_na_nn^\nu k(tnu)$ for $u>0$. For
+$\operatorname{Re}w>1+\nu$, termwise integration gives
+\[
+ \widetilde\Theta(w)=\int_0^\infty\Theta(u)u^{w-1}\,du=
+ \begin{cases}
+ t^{-w}\Gamma(w)L(w)=\tfrac12\Lambda(w)&\text{in case (1)},\\
+ 2^{w-2}t^{-w}\Gamma(w/2)^2L(w-\nu)=\tfrac14Q^{\nu/2}\Lambda(w-\nu)
+ &\text{in case (2)}.
+ \end{cases}
+\]
+In case (1) we used $\Gamma_\R(w)\Gamma_\R(w+1)=\Gamma_\C(w)$ and
+$Q^{w/2}(2\pi)^{-w}=t^{-w}$. In both cases $\widetilde\Theta$ is entire and
+$\widetilde\Theta(w)=\widetilde\Theta(1+2\nu-w)$.
+
+The function $L=\Lambda/(Q^{s/2}\Gamma_\R(s+\nu_1)\Gamma_\R(s+\nu_2))$ of the
+complex variable $s$ is entire of finite order. Fix $\eta>0$. The function
+$L$ is bounded on $\operatorname{Re}s=1+\eta$, and, by the functional
+equation and Stirling's formula, of polynomial growth on
+$\operatorname{Re}s=-\eta$. By the Phragm\'en--Lindel\"of principle it has
+polynomial growth in $|\operatorname{Im}s|$ on every vertical strip. With
+Stirling's formula this shows that $\widetilde\Theta(w)$ decays exponentially in
+$|\operatorname{Im}w|$, uniformly on vertical strips. Mellin inversion on a
+line $\operatorname{Re}w=c>1+\nu$ and a shift to
+$\operatorname{Re}w=1+2\nu-c$ are therefore justified, and no residues
+occur. With the functional equation of $\widetilde\Theta$ they give
+\[
+ \Theta(u)=u^{-1-2\nu}\,\Theta(1/u)\qquad(u>0).
+\]
+In particular $\Theta(u)$ decays rapidly as $u\downarrow0$. Splitting the
+Mellin integral at $u=1$ and substituting $u\mapsto1/u$ below $1$ gives
+\[
+ \widetilde\Theta(\sigma+\nu)=\int_1^\infty\Theta(u)
+ \bigl(u^{\sigma+\nu-1}+u^{\nu-\sigma}\bigr)\,du.
+\]
+Termwise integration, justified by the exponential decay of $k$, turns the
+right side into $\sum_na_nn^\nu$ times $H_\sigma(tn)+H_{1-\sigma}(tn)$ in case
+(1), and times $I_{\sigma+\nu-1}(tn)+I_{\nu-\sigma}(tn)$ in case (2). On the
+left, $\widetilde\Theta(\sigma)=t^{-\sigma}\Gamma(\sigma)L(\sigma)$ in case (1), and
+$\widetilde\Theta(\sigma+\nu)=2^{\sigma+\nu-2}t^{-\sigma-\nu}
+\Gamma((\sigma+\nu)/2)^2L(\sigma)$ in case (2).
+\end{proof}
+
+\begin{lemma}\label{an:kernels}
+Let $\mu\in\R$.
+\begin{enumerate}
+\item The functions $H_\mu$ and $I_\mu$ are Laplace transforms of positive
+ measures on $[1,\infty)$. They are completely monotone on $(0,\infty)$,
+ extend holomorphically to $\operatorname{Re}z>0$, and satisfy
+ $|H(z)|\le H(\operatorname{Re}z)$ there, for $H=H_\mu$ or $H=I_\mu$.
+\item If $\mu\le2$, then $H_\mu\le\mathcal V_1$. If $\mu\le3/2$, then
+ $I_\mu\le\mathcal V_2$.
+\item They satisfy
+ \[
+ xH_\mu'(x)+\mu H_\mu(x)=-e^{-x},\qquad
+ yI_\mu'(y)+(\mu+1)I_\mu(y)=-K_0(y),
+ \]
+ and $K_0$ satisfies $y^2K_0''+yK_0'-y^2K_0=0$ and $K_0'=-K_1$, where
+ $K_1$ is the modified Bessel function of the second kind of order one.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The definition exhibits $H_\mu$ as the Laplace transform of
+$u^{\mu-1}\,du$ on $[1,\infty)$. Taking the order $0$ in
+\cite[10.32.9]{DLMF} and substituting $v=\cosh r$ in its integral gives
+$K_0(x)=\int_1^\infty e^{-xv}(v^2-1)^{-1/2}\,dv$. Substituting this into
+$I_\mu$, and then $v=r/u$ in the inner integral, shows
+\[
+ I_\mu(y)=\int_1^\infty e^{-yr}\Bigl(\int_1^ru^\mu(r^2-u^2)^{-1/2}\,du\Bigr)
+ \,dr,
+\]
+with a nonnegative inner integral. Differentiation under the integral
+gives complete monotonicity. Since the measures are positive and
+$|e^{-zr}|=e^{-r\operatorname{Re}z}$, we get $|H(z)|\le H(\operatorname{Re}z)$
+for $\operatorname{Re}z>0$, which proves (1).
+
+For (2), $u^{\mu-1}\le u$ for $u\ge1$ and $\mu\le2$, and
+$\int_1^\infty ue^{-xu}\,du=\mathcal V_1(x)$. For $I_\mu$ we use
+$K_0(x)\le K_{1/2}(x)=\sqrt{\pi/(2x)}\,e^{-x}$ \cite[10.39.2]{DLMF}. It
+holds because the modified Bessel function of order $\eta\ge0$ is
+$\int_0^\infty e^{-x\cosh r}\cosh(\eta r)\,dr$ \cite[10.32.9]{DLMF}, which
+increases with $\eta$. Since $u^{\mu-1/2}\le u$ for $\mu\le3/2$,
+\[
+ I_\mu(y)\le\sqrt{\frac\pi{2y}}\int_1^\infty u^{\mu-1/2}e^{-yu}\,du
+ \le\mathcal V_2(y).
+\]
+
+For (3), differentiate under the integral and integrate by parts:
+$xH_\mu'(x)=-\int_1^\infty u^\mu xe^{-xu}\,du=-e^{-x}-\mu H_\mu(x)$, and
+$yI_\mu'(y)=\int_1^\infty u^{\mu+1}\frac{d}{du}K_0(yu)\,du
+=-K_0(y)-(\mu+1)I_\mu(y)$. The last two identities are Bessel's equation
+and a standard derivative \cite[10.25.1, 10.29.3]{DLMF}.
+\end{proof}
+
+The next lemma bounds the tails of the two series of
+Lemma~\ref{an:balanced-afe}. In the application $1<\sigma\le101/100$, so its
+hypothesis $1<\sigma\le3/2$ holds.
+
+
+\begin{lemma}\label{an:tails}
+Let $1<\sigma\le3/2$, let $|a_n|\le\tau(n)$, let $t>0$, $N\ge1$ and
+$\omega>1$.
+\begin{enumerate}
+\item If $t(N+1)\ge\omega-1$, then for $\mu\in\{\sigma,1-\sigma\}$
+\[
+ \sum_{n>N}|a_n|H_\mu(tn)\le\zeta(\omega)^2(N+1)^\omega
+ \mathcal V_1\bigl(t(N+1)\bigr).
+\]
+\item If $\nu\in\{0,1\}$ and $t(N+1)\ge\omega+\nu-\frac32$, then for
+ $\mu\in\{\sigma+\nu-1,\nu-\sigma\}$
+\[
+ \sum_{n>N}|a_n|n^\nu I_\mu(tn)\le\zeta(\omega)^2(N+1)^{\omega+\nu}
+ \mathcal V_2\bigl(t(N+1)\bigr).
+\]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Since $1<\sigma\le3/2$ and $\nu\in\{0,1\}$, every $\mu\in\{\sigma,1-\sigma\}$
+satisfies $\mu\le2$ and every $\mu\in\{\sigma+\nu-1,\nu-\sigma\}$ satisfies
+$\mu\le3/2$; so Lemma~\ref{an:kernels}(2) gives $H_\mu\le\mathcal V_1$ in (1)
+and $I_\mu\le\mathcal V_2$ in (2). The logarithmic derivative of
+$x^\omega\mathcal V_1(x)=x^{\omega-1}e^{-x}(1+1/x)$ is
+$(\omega-1)/x-1-1/(x(x+1))<0$ for $x\ge\omega-1$. So
+$n^\omega\mathcal V_1(tn)\le(N+1)^\omega\mathcal V_1(t(N+1))$ for $n>N$.
+Hence
+\[
+ \sum_{n>N}|a_n|H_\mu(tn)\le\sum_{n>N}\frac{\tau(n)}{n^\omega}\,
+ n^\omega\mathcal V_1(tn)\le(N+1)^\omega\mathcal V_1\bigl(t(N+1)\bigr)
+ \sum_{n\ge1}\frac{\tau(n)}{n^\omega},
+\]
+and the last sum is $\zeta(\omega)^2$. Part (2) is the same, since
+$y^{\omega+\nu}\mathcal V_2(y)$ is a multiple of
+$y^{\omega+\nu-3/2}e^{-y}(1+1/y)$, which decreases for
+$y\ge\omega+\nu-\frac32$.
+\end{proof}
+
+\subsection{\texorpdfstring{Enclosures of $H_\mu$ and $I_\mu$, and Finite Sums}{Enclosures of H and I, and Finite Sums}}
+\label{an:kernel-enclosures}
+This subsection encloses the kernels $H_\mu$ and $I_\mu$ on a geometric grid
+(Lemma~\ref{an:grid}) and bounds the error of the resulting approximation of
+the finite sums of Lemma~\ref{an:balanced-afe} (Lemma~\ref{an:binning});
+Lemma~\ref{an:row} uses the second, which rests on the first. An \emph{enclosure} of a real number is an
+interval that contains it. Let $H$ be $H_\mu$ or $I_\mu$
+with $\mu$ as in Lemma~\ref{an:tails}, and let $\mathcal V$ be its envelope,
+$\mathcal V_1$ or $\mathcal V_2$. For $J\ge0$ and $\xi>0$ put
+\[
+ \rho_J(\xi)=\mathcal V(\xi/2)\,\frac{16^{-J-1}}{1-1/16}.
+\]
+
+\begin{lemma}\label{an:taylor}
+Let $\xi>0$ and let $h_j=H^{(j)}(\xi)/j!$ be the Taylor coefficients of $H$
+at $\xi$.
+\begin{enumerate}
+\item $(-1)^jh_j\ge0$ and $|h_j|\le\mathcal V(\xi/2)(2/\xi)^j$ for all
+ $j\ge0$.
+\item For $|x-\xi|\le\xi/32$,
+ $\bigl|H(x)-\sum_{j=0}^Jh_j(x-\xi)^j\bigr|\le\rho_J(\xi)$. For
+ $x=31\xi/32$ the difference lies in $[0,\rho_J(\xi)]$.
+\item Let $k_j$ be the Taylor coefficients at $\xi$ of $e^{-x}$ if
+ $H=H_\mu$, and of $K_0$ if $H=I_\mu$. If $H=H_\mu$, then
+ $(j+1)\xi h_{j+1}=-k_j-(j+\mu)h_j$, and $k_j=(-1)^je^{-\xi}/j!$. If
+ $H=I_\mu$, then $(j+1)\xi h_{j+1}=-k_j-(j+\mu+1)h_j$, where
+ $k_0=K_0(\xi)$, $k_1=-K_1(\xi)$, and
+ \[
+ (j+1)(j+2)\xi^2k_{j+2}=-(j+1)(2j+1)\xi k_{j+1}-(j^2-\xi^2)k_j
+ +2\xi k_{j-1}+k_{j-2},
+ \]
+ with $k_{-1}=k_{-2}=0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Complete monotonicity gives the signs in (1). The disc $|z-\xi|\le\xi/2$ lies
+in $\operatorname{Re}z\ge\xi/2$, where $|H(z)|\le H(\xi/2)\le\mathcal
+V(\xi/2)$ by Lemma~\ref{an:kernels}. Cauchy's estimate gives the bound on
+$h_j$. For $|x-\xi|\le\xi/32$, the omitted terms have modulus at most
+$\mathcal V(\xi/2)16^{-j}$, and their sum over $j>J$ is at most
+$\rho_J(\xi)$. For $x<\xi$ every term $h_j(x-\xi)^j$ is nonnegative by (1),
+so the remainder is nonnegative. Part (3) follows by comparing coefficients
+of $(x-\xi)^j$ in the differential equations of Lemma~\ref{an:kernels}(3),
+written at $x=\xi+(x-\xi)$.
+\end{proof}
+
+The grid points are $\xi_i=64\,(31/32)^i$ for $0\le i\le i_1$, where
+$i_1=1878$ is the least index with $\xi_{i_1}\le2^{-80}$. Taylor polynomials
+are formed at $\xi_0,\ldots,\xi_{i_1-1}$. The initial values
+$e^{-\xi_i}$, $K_0(\xi_i)$ and $K_1(\xi_i)$ of part~(3) of
+Lemma~\ref{an:taylor} are enclosed with the rigorous exponential and Bessel
+functions of Arb \cite{Johansson2017}, which is now part of FLINT
+\cite{FLINT} and is called through its Python interface.
+
+\begin{lemma}\label{an:grid}
+Let $J\ge0$, and suppose that enclosures of $e^{-\xi_i}$, $K_0(\xi_i)$ and
+$K_1(\xi_i)$ are given for $0\le i<i_1$. Start from the enclosure
+$[0,\mathcal V(64)]$ of $H(\xi_0)$. For $i=0,1,\ldots,i_1-1$, compute from
+the enclosure of $H(\xi_i)$ enclosures of $h_0,\ldots,h_J$ at $\xi_i$ by the
+recurrences of Lemma~\ref{an:taylor}(3), and take
+\[
+ \sum_{j=0}^Jh_j(-\xi_i/32)^j+[0,\rho_J(\xi_i)],
+\]
+evaluated in interval arithmetic, as the enclosure of $H(\xi_{i+1})$. Then
+every interval so obtained contains the corresponding true value.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{an:kernels}, $H(\xi_0)\in[0,\mathcal V(64)]$. Suppose that
+the enclosure of $H(\xi_i)$ contains $H(\xi_i)$. The true Taylor
+coefficients at $\xi_i$ are obtained from the true value $H(\xi_i)$ by the
+same recurrence, so their enclosures contain them. Since
+$\xi_{i+1}=31\xi_i/32$, Lemma~\ref{an:taylor}(2) shows that the enclosure
+of $H(\xi_{i+1})$ contains $H(\xi_{i+1})$. Induction on $i$ proves the
+lemma.
+\end{proof}
+
+Now let $t>0$, $\nu\in\{0,1\}$, integers $a_1,\ldots,a_N$ and $J\ge0$ be
+given, with $tN<\xi_0$ and $t>\xi_{i_1}$. For $0\le i<i_1$ let
+$\mathrm{Bin}_i=\{n:1\le n\le N,\ \xi_{i+1}<tn\le\xi_i\}$. These sets
+partition $\{1,\ldots,N\}$. For nonempty $\mathrm{Bin}_i$, let $\bar n_i$ be
+the integer part of the average of its least and largest elements, and put
+\[
+ M_{i,j}=\sum_{n\in\mathrm{Bin}_i}a_nn^\nu(n-\bar n_i)^j,\qquad
+ A_i=\sum_{n\in\mathrm{Bin}_i}|a_n|n^\nu,\qquad
+ P_{i,j}=t^j\sum_{m=j}^J\binom mjh_{i,m}(t\bar n_i-\xi_i)^{m-j},
+\]
+where $h_{i,m}$ are the Taylor coefficients of $H$ at $\xi_i$. The moments
+$M_{i,j}$ and the absolute sums $A_i$ are exact integers.
+
+\begin{lemma}\label{an:binning}
+With this notation,
+\begin{equation}\label{an:bin-sum}
+ \Bigl|\sum_{n=1}^Na_nn^\nu H(tn)-\sum_i\sum_{j=0}^JP_{i,j}M_{i,j}\Bigr|
+ \le\sum_i\rho_J(\xi_i)A_i,
+\end{equation}
+where $i$ runs over the indices with $\mathrm{Bin}_i$ nonempty.
+\end{lemma}
+
+\begin{proof}
+Let $n\in\mathrm{Bin}_i$. Then $|tn-\xi_i|<\xi_i/32$, so by
+Lemma~\ref{an:taylor}(2) the value $H(tn)$ differs from
+$\sum_{m=0}^Jh_{i,m}(tn-\xi_i)^m$ by at most $\rho_J(\xi_i)$. Since
+$tn-\xi_i=t(n-\bar n_i)+(t\bar n_i-\xi_i)$, the binomial theorem gives
+$\sum_{m=0}^Jh_{i,m}(tn-\xi_i)^m=\sum_{j=0}^JP_{i,j}(n-\bar n_i)^j$.
+Multiply by $a_nn^\nu$ and sum over $n\in\mathrm{Bin}_i$ and over $i$.
+\end{proof}
+
+In the application below $t\ge2\pi/\sqrt{3470400}>0.0033$, because
+$Q_e\le3470400$ for every $e$ (Corollary~\ref{gf:conductors}). So every argument
+$tn$ exceeds $0.0033$, and the part of the grid below that point is not
+used.
+
+\subsection{The Values of $\zeta_E$}
+\label{an:value-section}
+This subsection encloses $Y_E(\sigma)=\log\zeta_E(\sigma)/512$ at the
+abscissae of Table~\ref{ce:kernel-table} (Proposition~\ref{an:genus-value});
+these values enter $Y_{W''}$ through \eqref{dh:YW}.
+
+Let $\sigma\in(1,101/100]$ be rational, and let $e\in\Ftwo^8\setminus\{0\}$.
+By Proposition~\ref{gf:degree-two}, $L(s,\chi_e)=\sum_na_n(e)n^{-s}$
+satisfies the hypotheses of Lemma~\ref{an:balanced-afe} with $Q=Q_e$ and
+$\nu_k=\nu_k(e)$ (Definition~\ref{gf:archimedean}). Put $t=2\pi/\sqrt{Q_e}$ and let the truncation point be
+\[
+ N^{\rm afe}_e=8\lfloor\sqrt{Q_e}\rfloor+1,
+\]
+twice the length used in \cite{Naslund04273}, so that the enclosures are
+narrow enough for Proposition~\ref{an:signed}.
+
+\begin{lemma}\label{an:afe-range}
+For every $e\in\Ftwo^8\setminus\{0\}$, with $t=2\pi/\sqrt{Q_e}$ and
+$N=N^{\rm afe}_e$,
+\[
+ tN<50.6<\xi_0,\qquad t>0.0033>\xi_{i_1},\qquad 49.0<t(N+1)<50.6.
+\]
+Hence Lemma~\ref{an:binning} applies with this $t$ and $N$, and for
+$\nu\in\{0,1\}$ the conditions on $t(N+1)$ in Lemma~\ref{an:tails} hold for every
+$\omega$ in the list
+$\frac{101}{100},\frac{21}{20},\frac{11}{10},\frac98,\frac65,\frac54,
+\frac43,\frac32,2$.
+\end{lemma}
+
+\begin{proof}
+By Corollary~\ref{gf:conductors}, $723\le Q_e\le3470400$. Since
+$\sqrt{Q_e}-1<\lfloor\sqrt{Q_e}\rfloor\le\sqrt{Q_e}$,
+\[
+ tN\le2\pi\Bigl(8+\frac1{\sqrt{Q_e}}\Bigr)\le2\pi\Bigl(8+\frac1{\sqrt{723}}\Bigr)
+ <50.6,\qquad
+ t(N+1)>2\pi\Bigl(8-\frac6{\sqrt{Q_e}}\Bigr)\ge2\pi\Bigl(8-\frac6{\sqrt{723}}\Bigr)
+ >48.8,
+\]
+and $t\ge2\pi/\sqrt{3470400}>0.0033$. Moreover $\xi_0=64$ and
+$\xi_{i_1}\le2^{-80}$. The conditions on $t(N+1)$ in Lemma~\ref{an:tails} are
+$t(N+1)\ge\omega-1$ and $t(N+1)\ge\omega+\nu-\frac32$, whose right sides are
+at most $\frac32$ for $\omega\le2$ and $\nu\le1$. Finally, $Q_e$ takes the
+$53$ values $241\cdot2^i\cdot m$ with a nonzero entry in
+\eqref{gf:conductor-table}, and evaluating $t(N+1)$ at these values gives
+$49.0<t(N+1)<50.6$; the extremes, $49.07$ and $50.59$, occur at
+$Q_e=723$ and $Q_e=964$.
+\end{proof}
+
+Let $\Pi_e$ be the prefactor of Lemma~\ref{an:balanced-afe}:
+$\Pi_e=t^\sigma/\Gamma(\sigma)$ if $\nu_1(e)\ne\nu_2(e)$, and
+$\Pi_e=4(t/2)^{\sigma+\nu}/\Gamma((\sigma+\nu)/2)^2$ if
+$\nu_1(e)=\nu_2(e)=\nu$; in the first case put $\nu=0$. Let $S^{(1)}$ and
+$S^{(2)}$ be the sums $\sum_i\sum_{j=0}^{20}P_{i,j}M_{i,j}$ of
+Lemma~\ref{an:binning}, with $N=N^{\rm afe}_e$, $a_n=a_n(e)$ and $J=20$, for
+the two functions of the series of Lemma~\ref{an:balanced-afe}: $H=H_\sigma$
+and $H=H_{1-\sigma}$ in the first case, and $H=I_{\sigma+\nu-1}$ and
+$H=I_{\nu-\sigma}$ in the second; their envelope is $\mathcal V=\mathcal V_1$
+in the first case and $\mathcal V=\mathcal V_2$ in the second. By
+Lemma~\ref{an:afe-range}, Lemma~\ref{an:binning} applies, and
+Lemma~\ref{an:tails} applies with every $\omega$ in the list above; the value
+of $\omega$ in this list is chosen to minimize the bound
+\[
+ \mathcal T_e=\sum_i\rho_{20}(\xi_i)A_i
+ +\zeta(\omega)^2(N^{\rm afe}_e+1)^{\omega+\nu}
+ \mathcal V\bigl(t(N^{\rm afe}_e+1)\bigr).
+\]
+
+\begin{lemma}\label{an:row}
+For rational $\sigma\in(1,101/100]$ and every $e\in\Ftwo^8\setminus\{0\}$,
+\begin{equation}\label{an:row-enclosure}
+ \bigl|L(\sigma,\chi_e)-\Pi_e(S^{(1)}+S^{(2)})\bigr|
+ \le2\Pi_e\mathcal T_e.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Split each of the two series of Lemma~\ref{an:balanced-afe} at
+$N^{\rm afe}_e$. By Lemma~\ref{an:binning}, each finite part differs from its
+approximation $S^{(1)}$ or $S^{(2)}$ by at most $\sum_i\rho_{20}(\xi_i)A_i$; the
+same bound serves both series, since their two functions have the same
+envelope. By Lemma~\ref{an:tails}, each tail is at most
+$\zeta(\omega)^2(N^{\rm afe}_e+1)^{\omega+\nu}\mathcal V(t(N^{\rm afe}_e+1))$. Multiplying by
+$\Pi_e$ gives \eqref{an:row-enclosure}.
+\end{proof}
+
+\begin{proposition}\label{an:genus-value}
+Put $Y_E(\sigma)=\log\zeta_E(\sigma)/512$. For each of the abscissae
+$\sigma$ of Table~\ref{ce:kernel-table}, the supplementary program
+\texttt{ye\_hp.py} computes an enclosure of $Y_E(\sigma)$ of width less than
+$1.3\cdot10^{-19}$, by \eqref{an:row-enclosure} and
+\[
+ \log\zeta_E(\sigma)=\log\zeta(\sigma)+\log L(\sigma,\chi_B)
+ +\sum_{e\ne0}\log L(\sigma,\chi_e).
+\]
+For example,
+\[
+ 0.085358048288873992<Y_E(1001/1000)<0.085358048288873993.
+\]
+\end{proposition}
+
+\begin{proof}[Proof (computer-assisted)]
+The factorization is Proposition~\ref{gf:factorization}. The coefficients
+$a_n(e)$ for $n\le N^{\rm afe}_e$ are computed exactly from the Euler factors of
+Proposition~\ref{gf:local-data} by the functions of the supplementary program
+\texttt{lfun241.py} of \cite{Naslund04273}, and the program \texttt{afe241.py}
+of \cite{Naslund04273}, called unchanged by \texttt{ye\_hp.py}, evaluates
+\eqref{an:row-enclosure} in Arb midpoint--radius interval arithmetic
+\cite{Johansson2017,FLINT} with $256$ bits of precision, rounding every
+quantity outward. Its routines for
+Lemmas~\ref{an:balanced-afe}--\ref{an:binning} are taken unchanged from an
+earlier supplementary archive of the author \cite{Naslund0418235}, and
+they implement these lemmas as stated here. Every enclosure of
+$L(\sigma,\chi_e)$ is positive. The factor $\zeta_B(\sigma)=\zeta(\sigma)
+L(\sigma,\chi_B)$ is evaluated with
+\[
+ L(\sigma,\chi_B)=241^{-\sigma}\sum_{a=1}^{240}\Bigl(\frac
+ a{241}\Bigr)\zeta\Bigl(\sigma,\frac a{241}\Bigr),
+\]
+where $\zeta(s,x)=\sum_{n\ge0}(n+x)^{-s}$ is the Hurwitz zeta function,
+using Arb's rigorous implementation of it \cite{Johansson2015Hurwitz}.
+\end{proof}
+
+\subsection{Frobenius Vectors and the Set $\mathcal P_4$}
+\label{an:census}
+This subsection defines a set $\mathcal P_4$ of free primes of norm at
+most $10^6$ by a condition on their Frobenius vectors
+(Definition~\ref{an:P4}), and shows that their residue degree in every
+$K\in\mathcal K$ is divisible by $4$ (Lemma~\ref{an:census-degree}); these
+primes receive the floor
+$f^0_{\mathfrak p}=4$ in Definition~\ref{dh:floors}. We use the group $G_B$ of Definition~\ref{tw:GB} and its Zassenhaus
+filtration $D_nG_B$, the relation space $R_2$ in degree two
+(Definition~\ref{tw:relation-space}), which Lemma~\ref{tw:quadratic-layer}
+computes, the restricted square $v^{[2]}$ of a vector $v\in\Ftwo^8$ as in
+Section~\ref{tw:tower}, and the Frobenius vectors
+$\overline{\Frob}_{\mathfrak p}$ of Definition~\ref{gf:frobenius-vector}.
+
+\begin{definition}\label{an:P4}
+Let $\Sigma_2=\{v\in\Ftwo^8:v^{[2]}\in R_2\}$, and let $\mathcal P_4$ be the
+set of free primes $\mathfrak p$ of $B$ with $\mathrm N\mathfrak p\le10^6$
+and $\overline{\Frob}_{\mathfrak p}\notin\Sigma_2$.
+\end{definition}
+
+\begin{lemma}\label{an:census-degree}
+Let $K\in\mathcal K$, and let $\mathfrak p\notin S$ be a prime of $B$ with
+$\overline{\Frob}_{\mathfrak p}\notin\Sigma_2$. Then $e_K(\mathfrak p)=1$, and
+$f_K(\mathfrak p)$ is a power of two and at least $4$, so $4$ divides
+$f_K(\mathfrak p)$.
+\end{lemma}
+
+\begin{proof}
+The field $K$ is unramified over $B$ outside $S$, so $e_K(\mathfrak p)=1$,
+and a prime $\mathfrak P$ of $K$ above $\mathfrak p$ has a Frobenius
+$\Frob_{\mathfrak P}\in\Gal(K/B)$ of order $f_K(\mathfrak p)$. Choose
+$g\in G_B$ mapping to $\Frob_{\mathfrak P}$. Its image in
+$G_B/D_2G_B=\Gal(E/B)$ is the Frobenius of $\mathfrak p$ in $E$
+(Lemma~\ref{gf:in-tower}), whose elementary image is $\overline{\Frob}_{\mathfrak p}$; it is
+nonzero, since $0\in\Sigma_2$. By Lemma~\ref{tw:quadratic-layer}, which uses
+the complete list of generators of $N_B$ in
+Lemma~\ref{tw:GB-presentation}, and since $\overline{\Frob}_{\mathfrak p}^{[2]}\notin R_2$,
+$g$ has order at least $4$ in $G_B/D_3G_B$. The projection $G_B\to G_B/D_3G_B$
+factors through $\Gal(K/B)$, because $K$ contains the fixed field of
+$D_4G_B\subseteq D_3G_B$. So $\Frob_{\mathfrak P}$ has order at least $4$, and
+this order is a power of two because $\Gal(K/B)$ is a $2$-group.
+\end{proof}
+
+
+\begin{lemma}\label{an:sigma2}
+The set $\Sigma_2$ of Definition~\ref{an:P4} has exactly $21$ elements: zero
+and the following twenty vectors, written as strings $c_0c_1\cdots c_7$ of
+their coordinates, as in Section~\ref{tw:tower}:
+\[
+\begin{array}{ccccc}
+ 00100000&11110010&11010010&00010000&10000001\\
+ 10010001&00001000&10100111&10101111&00000100\\
+ 11101011&11101111&00000010&01100101&01100111\\
+ 00000001&01011010&01011011&10111010&11000101.
+\end{array}
+\]
+In the notation of Table~\ref{tw:vector-table}, these twenty vectors are the
+elementary images of the local involutions $x_j$, $y_j$ and $x_jy_j$ for
+$j=1,2$, of the nonidentity elements of the four local groups
+$C_2\times C_2$ above $3$ and $5$, and of $\iota_1$ and $\iota_2$.
+\end{lemma}
+
+\begin{proof}
+Each of these images lies in $\Sigma_2$ by Lemma~\ref{tw:quadratic-layer},
+since an involution has trivial square. The supplementary program
+\texttt{census241.py} computes $\Sigma_2$ by linear algebra over $\Ftwo$
+from the relations of Lemma~\ref{tw:quadratic-layer}, and finds no other
+vectors.
+\end{proof}
+
+\begin{proposition}[Frobenius vectors of the primes of norm at most $10^6$]\label{an:census-prop}
+Among the $78616$ free primes
+$\mathfrak p$ of $B$ with $\mathrm N\mathfrak p\le10^6$, exactly $246$ have
+$\overline{\Frob}_{\mathfrak p}=0$, exactly $5994$ have
+$\overline{\Frob}_{\mathfrak p}\in\Sigma_2\setminus\{0\}$, and the remaining $72376$ form
+$\mathcal P_4$.
+\end{proposition}
+
+\begin{proof}
+The supplementary program \texttt{census241.py} computes the Frobenius
+vector of each of these primes from Proposition~\ref{gf:local-data}(1) with
+exact modular arithmetic, and compares it with the elements of $\Sigma_2$
+(Lemma~\ref{an:sigma2}). The free primes differ from those of
+\cite{Naslund04273} only in that $\mathfrak t_0$ is free and $\mathfrak t_3$
+is not; both have Frobenius vectors outside $\Sigma_2$, so the counts are those
+of \cite{Naslund04273}. The program \texttt{adaptive41.py} of this paper
+enumerates the free primes and reproduces the three counts.
+\end{proof}
+
+Below we use this classification of the primes, not the three counts.
+
+
+\begin{remark}\label{an:base-ceiling}
+With $E$ as the comparison field, Proposition~\ref{an:prime-budget} at
+$\sigma=301/300$ gives the bound $C=\ceiling$ of
+\cite[Section~4]{Naslund04273} also for the present tower. Its lower bounds
+$(e^0_{\mathfrak p},f^0_{\mathfrak p})$ are the types in $K$ at the selected
+primes, $(1,4)$ at the primes of $\mathcal P_4$
+(Lemma~\ref{an:census-degree}), and the types in $E$ at the other free
+primes. By \eqref{an:local-sum} and Lemma~\ref{an:local-contribution} one may
+take $Y_*=Y_E(\sigma)-\Delta^E_{\rm sel}(\sigma)-\Delta^E_4(\sigma)$, where
+$\Delta^E_{\rm sel}(\sigma)$ is the sum over the selected primes of the
+difference between the terms in \eqref{an:local-sum} for $M=E$ and for
+$M=K$, and
+$\Delta^E_4(\sigma)=\sum_{\mathfrak p\in\mathcal P_4}\bigl(g_\sigma(\mathrm
+N\mathfrak p^2)/4-g_\sigma(\mathrm N\mathfrak p^4)/8\bigr)$; $Y'_*$ is bounded
+from the same lower bounds. Compared with \cite{Naslund04273}, the terms
+of $\mathfrak t_0$ and of $\mathfrak t_3$ change places between $\Delta^E_{\rm sel}$ and
+$\Delta^E_4$, with the same formula
+$g_\sigma(\mathrm N\mathfrak p^2)/4-g_\sigma(\mathrm N\mathfrak p^4)/8$, so the
+totals are unchanged; the supplementary program \texttt{ceiling41.py} of the
+41-cap variation recomputes the upper bound $0.04871284289\ldots$. With this
+$C$, the margin of Section~\ref{sec:certificate} with re-optimized profiles
+gives the exponent $1.042901$ (Table~\ref{intro:table-steps}). This bound is
+not used in the proof of Theorem~\fref{thm:main}.
+\end{remark}
+
+\begin{remark}\label{an:limit-remark}
+The selected primes alone limit what Proposition~\ref{an:signed} can give.
+In the notation of its proof, $\Sigma_{\mathsf K}\ge0$ by condition (ii), and
+$2\kappa_\infty-T_{\rm sel}>1.07>0$. So no system of floors, abscissae and
+coefficients gives a bound below
+$Z_{\rm sel}(1)=0.04166848403\ldots$ (Lemma~\ref{an:selected-lemma}), the
+contribution of the selected primes to $Z(1)$. It exceeds the corresponding
+number of \cite{Naslund04273} by $2.3\cdot10^{-8}$, because the selected
+primes above $41$ replace those above $7$. The bound $C_{\rm eff}=\Ceff$
+exceeds $Z_{\rm sel}(1)$ by $6.08\cdot10^{-4}$; Section~\ref{lim:section}
+discusses what this means for the exponent.
+\end{remark}
+
+\begin{remark}[The Lean formalization]\label{an:lean-hypothesis}
+The Lean formalization \cite{NaslundLean2026} proves, under one explicit
+hypothesis that it does not prove, that there are finite planar sets $U_j$
+with $|U_j|\to\infty$ and $u(U_j)/|U_j|^{1.0427}\to\infty$. Its fields are
+those of \cite{Naslund04273}, with the capped prime $\mathfrak t_0$ in place
+of $\mathfrak t_3$, and its hypothesis is the inequality
+\begin{equation}\label{an:h241}
+ \frac{\log\zeta_E(1+\frac1{300})}{512}
+ +\frac1{300}\Bigl(\frac{\ell-\gamma-\log(4\pi)}4
+ -\frac1{512}\frac{\zeta_E'}{\zeta_E}(2)\Bigr)<0.0852,
+\end{equation}
+which is the bound of Proposition~\ref{an:prime-budget} with all local data
+taken from $E$. The formalization does not cover the cap above $41$, the
+dihedral quotients, the field $\EW$, the census or the signed kernel of this
+paper, so it does not prove Theorem~\fref{thm:main}, even conditionally.
+\end{remark}
+

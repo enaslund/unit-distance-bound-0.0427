@@ -58,6 +58,15 @@ theorem localElements_relations : localElements.Relations where
     rw [← tameN_eq_tameNorm]
     exact tame_relation q
 
+/-- The genus labels of the three caps: `00100111`, `00011011`, `01110000`. -/
+theorem localElements_cap_label (k : Fin 3) :
+    genusLabel (localElements.cap k) = Multiplicative.ofAdd (capVector k) := by
+  fin_cases k
+  · exact (genusLabel_of_hasLabelHat _ _ (frob29_hasLabel 0)).trans (congrArg _ rfl)
+  · exact (genusLabel_of_hasLabelHat _ _ (frob29_hasLabel 1)).trans (congrArg _ rfl)
+  · exact (genusLabel_of_hasLabelHat ⟨frob7 ^ 2, frob7_sq_mem⟩ _ frob7_sq_hasLabel).trans
+      (congrArg _ rfl)
+
 theorem localElements_labels : localElements.Labels where
   conj k := by
     fin_cases k
@@ -79,11 +88,8 @@ theorem localElements_labels : localElements.Labels where
     exact (genusLabel_of_hasLabelHat _ _ (dyadicLocal_generator_hasLabel P 2)).trans
       (congrArg _ (by fin_cases P <;> rfl))
   cap k := by
-    fin_cases k
-    · exact (genusLabel_of_hasLabelHat _ _ (frob29_hasLabel 0)).trans (congrArg _ rfl)
-    · exact (genusLabel_of_hasLabelHat _ _ (frob29_hasLabel 1)).trans (congrArg _ rfl)
-    · exact (genusLabel_of_hasLabelHat ⟨frob7 ^ 2, frob7_sq_mem⟩ _ frob7_sq_hasLabel).trans
-        (congrArg _ rfl)
+    rw [localElements_cap_label k]
+    exact capVector_good k
 
 /-- **The seven relators normally generate the relation kernel** (for `localElements`). -/
 theorem localElements_relators_generate :

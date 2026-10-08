@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Export the exact conditional 1.0427 theorem over Q(sqrt 241).
+"""Export the exact conditional 1.04315 theorem over Q(sqrt 241) (version 2).
 
 The selected roots are ChallengeZeta241, SolutionZeta241 and AuditSupport.
-The comparator must select exactly the independently stated genus-field
-theorem. The earlier conditional theorem at exponent 2083647/2000000
+The comparator must select exactly the independently stated theorem
+target_of_wide_zeta_bound: exponent 20863/20000 conditional on one inequality
+H_W for the field E_W of degree 8192 of the 41-cap tower. Version 1 of the
+package (exponent 10427/10000, theorem target_of_canonical_genus_zeta_bound)
+was exported by the earlier revision of this script. The earlier conditional theorem at exponent 2083647/2000000
 (ChallengeZeta, SolutionZeta, comparator-zeta.json) is shipped beside it as an
 unselected companion, with its import closure, metadata, README, axiom audit
 and external evidence records; the generated lakefile declares its libraries,
@@ -18,11 +21,26 @@ SOURCE_SNAPSHOT.json and SELECTION.json keep the established schemas. The
 archive root remains unit-distance-zeta for the family's extraction contract;
 the comparator and exporter names inside it identify the 241 theorem.
 
-The original manuscript is preserved under docs/manuscript and the new
-research-note sources/evidence under docs/quadratic-base-research. These are
-provenance copies: the external computation still expects the original
-research repository and manuscript supplementary archive. It is not part of
-the Lean proof or this export's verification claim.
+The original manuscript is preserved under docs/manuscript. Two research
+sources are copied, git-tracked files only:
+
+* papers/0.043171 -> docs/research-1.043171: the manuscript "An Exponent of
+  1.043171 for the Unit Distance Problem" (README, LaTeX sources, references,
+  Makefile, PDF) and the external evidence for H_W
+  (certificates/dihedral/h_w_receipt.py and .json). Its other certificates
+  (about 1,400 files and 150 MB of census and L-value data) are not copied;
+  they stay in the research repository.
+* papers/0.04273 -> docs/quadratic-base-research: the 1.04273 manuscript and
+  its certificates, in full, as before. The version 2 sources still cite it:
+  the genus field E, the tower and the generators come from it, and the
+  0.043171 programs import its programs, hash-checked.
+
+The export needs the 1.043171 manuscript in papers/0.043171 (main.tex, the
+sections and main.pdf). Run it from a research commit that carries both the
+manuscript and the version 2 Lean sources; on a branch without the manuscript
+it fails closed. These are provenance copies: the external computations still
+expect the original research repository. They are not part of the Lean proof
+or this export's verification claim.
 """
 from __future__ import annotations
 
@@ -47,7 +65,8 @@ COMPARATOR = "comparator-zeta241.json"
 EXPORTER = "scripts/export-zeta241-candidate.py"
 CHALLENGE = "ChallengeZeta241"
 SOLUTION = "SolutionZeta241"
-THEOREM = "UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound"
+THEOREM = "UnitDistanceSqrt241Submission.target_of_wide_zeta_bound"
+LIBRARY_THEOREM = "UnitDistance.Sqrt241.V2.target_of_wide_zeta_bound"
 ROOT_MODULES = (CHALLENGE, SOLUTION, "AuditSupport")
 # The earlier theorem ships as an unselected companion; most of its import
 # closure is shared with the selected theorem.
@@ -59,8 +78,19 @@ COMPANION_ROOTS = (COMPANION_CHALLENGE, COMPANION_SOLUTION)
 COMPANION_FILES = ("formalization-zeta.yaml", "README-zeta.md", "verification/ZetaAudit.lean")
 LEAN_LIBRARIES = ("UnitDistance", *ROOT_MODULES, *COMPANION_ROOTS)
 AUDIT = "verification/Zeta241Audit.lean"
-RESEARCH_SOURCE = Path("papers/0.04273")
-RESEARCH_TARGET = "docs/quadratic-base-research"
+# Research sources: (origin in the research repository, target in the archive,
+# file filter over the tracked files (None: every tracked file), required files).
+WIDE_RESEARCH_FILES = re.compile(
+    r"(README\.md|main\.tex|references\.bib|Makefile|main\.pdf|requirements\.txt|sections/[A-Za-z-]+\.tex"
+    r"|certificates/dihedral/h_w_receipt\.(py|json))")
+RESEARCH_SOURCES = (
+    (Path("papers/0.043171"), "docs/research-1.043171", WIDE_RESEARCH_FILES,
+     ("README.md", "main.tex", "references.bib", "main.pdf", "sections/introduction.tex",
+      "certificates/dihedral/h_w_receipt.py", "certificates/dihedral/h_w_receipt.json")),
+    (Path("papers/0.04273"), "docs/quadratic-base-research", None,
+     ("README.md", "research/construction.md", "certificates/h241_receipt.json",
+      "certificates/reproduce241.py", "certificates/env241.py")),
+)
 VERIFICATION_RECORDS = "verification/sqrt241-20260929"
 SOURCE_MAP = {
     "README-zeta241.md": "README.md",
@@ -98,8 +128,8 @@ set_option maxHeartbeats 0
 run_cmd UnitDistanceAudit.audit `UnitDistance
 run_cmd UnitDistanceAudit.audit `UnitDistanceSqrt241Submission
 
-#print axioms UnitDistance.Sqrt241.target_of_canonical_genus_zeta_bound
-#print axioms UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound
+#print axioms UnitDistance.Sqrt241.V2.target_of_wide_zeta_bound
+#print axioms UnitDistanceSqrt241Submission.target_of_wide_zeta_bound
 """
 
 # Scan all current 241 notes in addition to inherited provenance. Referenced
@@ -304,33 +334,38 @@ def capture(root, tolerate_missing=False):
         elif path.suffix not in SUPPORT.BUILD_BYPRODUCTS:
             raise ValueError(f"Unexpected non-TeX manuscript section file: {path.name}")
 
-    research = {}
-    research_dir = root.parent / RESEARCH_SOURCE
-    # Only files tracked by git are exported: build byproducts and generated,
-    # git-ignored data (for example main.log or certificates/lrows241.json)
-    # stay out of the archive.
-    tracked = subprocess.run(["git", "-C", str(root.parent), "ls-files", "-z", "--", RESEARCH_SOURCE.as_posix()],
-                             check=True, capture_output=True).stdout.decode().split("\0")
-    tracked_paths = sorted(root.parent / name for name in tracked if name)
-    if not tracked_paths:
-        raise ValueError(f"No tracked files under {RESEARCH_SOURCE}")
-    for path in tracked_paths:
-        relative = path.relative_to(research_dir)
-        if any(part in SKIPPED_RESEARCH_PARTS for part in relative.parts):
-            continue
-        if path.is_symlink():
-            raise ValueError(f"Refusing research symlink: {relative}")
-        if not path.is_file():
-            continue
-        origin = RESEARCH_SOURCE / relative
-        data = SUPPORT.regular_file_bytes(path, origin.as_posix())
-        target = f"{RESEARCH_TARGET}/{relative.as_posix()}"
-        entries[target] = data
-        research[target] = {"origin": origin.as_posix(), **SUPPORT.file_record(data)}
-    for required in ("README.md", "research/construction.md", "certificates/h241_receipt.json",
-                     "certificates/reproduce241.py", "certificates/env241.py"):
-        if f"{RESEARCH_TARGET}/{required}" not in research:
-            raise ValueError(f"Missing quadratic-base research source: {required}")
+    research, research_origins = {}, {}
+    for source, target_dir, selected, required_files in RESEARCH_SOURCES:
+        research_dir = root.parent / source
+        # Only files tracked by git are exported: build byproducts and generated,
+        # git-ignored data (for example main.log or certificates/lrows241.json)
+        # stay out of the archive.
+        tracked = subprocess.run(["git", "-C", str(root.parent), "ls-files", "-z", "--", source.as_posix()],
+                                 check=True, capture_output=True).stdout.decode().split("\0")
+        tracked_paths = sorted(root.parent / name for name in tracked if name)
+        if not tracked_paths:
+            raise ValueError(f"No tracked files under {source}")
+        copied = set()
+        for path in tracked_paths:
+            relative = path.relative_to(research_dir)
+            if any(part in SKIPPED_RESEARCH_PARTS for part in relative.parts):
+                continue
+            if selected is not None and not selected.fullmatch(relative.as_posix()):
+                continue
+            if path.is_symlink():
+                raise ValueError(f"Refusing research symlink: {source / relative}")
+            if not path.is_file():
+                continue
+            origin = source / relative
+            data = SUPPORT.regular_file_bytes(path, origin.as_posix())
+            target = f"{target_dir}/{relative.as_posix()}"
+            entries[target] = data
+            research[target] = {"origin": origin.as_posix(), **SUPPORT.file_record(data)}
+            copied.add(relative.as_posix())
+        for required in required_files:
+            if required not in copied:
+                raise ValueError(f"Missing research source {source}/{required} (tracked by git)")
+        research_origins[target_dir] = source.as_posix()
 
     previous_docs = SUPPORT.REFERENCE_DOCUMENTS
     previous_references = SUPPORT.references
@@ -377,7 +412,7 @@ def capture(root, tolerate_missing=False):
         # established origin-bearing map, so Git-only reconstruction can
         # bind both the manuscript and the research note without a new schema.
         "manuscript_files": {**manuscript, **research},
-        "research_note_origin": RESEARCH_SOURCE.as_posix(),
+        "research_note_origin": research_origins,
         "research_note_files": research,
         "research_note_not_included": sorted(SKIPPED_RESEARCH_PARTS),
         "research_note_replay_scope": (
@@ -392,10 +427,11 @@ def capture(root, tolerate_missing=False):
         "missing_references": missing,
         "scope": (
             "The exact local import closure of ChallengeZeta241, SolutionZeta241 and AuditSupport; "
-            "one selected conditional theorem at exponent 10427/10000. The earlier conditional theorem "
+            "one selected conditional theorem at exponent 20863/20000 (version 2). The earlier conditional theorem "
             "at exponent 2083647/2000000 is included as an unselected companion with its import closure, "
             "metadata, README, axiom audit and external evidence records. Attribution, source manuscript, "
-            "quadratic-base research sources/evidence, 241 generators and their input, historical "
+            "the 1.043171 manuscript and the external evidence for H_W, the quadratic-base research "
+            "sources/evidence, 241 generators and their input, historical "
             "verification receipts and one-level referenced records are included. Dependencies and "
             "compiled artifacts are external. No proof verification or remote submission is performed."),
     })

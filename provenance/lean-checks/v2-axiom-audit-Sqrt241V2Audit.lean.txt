@@ -1,0 +1,12 @@
+import SolutionZeta241
+import AuditSupport
+
+#print axioms UnitDistanceSqrt241Submission.target_of_wide_zeta_bound
+#print axioms UnitDistance.Sqrt241.V2.target_of_wide_zeta_bound
+#print axioms UnitDistance.Sqrt241.V2.towerDataV2
+#print axioms UnitDistance.Sqrt241.Wide.wideLocalTypes
+#print axioms UnitDistance.Sqrt241.Analytic.fixedBaseCeiling_lt_425_of_wide_types
+#print axioms UnitDistance.Sqrt241.Witness.uniform_margin
+
+run_cmd UnitDistanceAudit.audit `UnitDistance
+run_cmd UnitDistanceAudit.audit `UnitDistanceSqrt241Submission

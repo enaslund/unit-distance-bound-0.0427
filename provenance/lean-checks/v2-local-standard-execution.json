@@ -1,0 +1,142 @@
+{
+  "archive_sha256": "647219527ad66a70a6e4274a759b563b2d601bd34ff90cbc4f0dab03be7dd8b4",
+  "capacity_probe_passed": true,
+  "comparator_config_path": "comparator-zeta241.json",
+  "comparator_config_sha256": "73b2e2c2aa0a883d6eb34383b5535e63d4d456066fa30984f0e4f27f3d8f3825",
+  "completed_checks": {
+    "allowed_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "basis": "Unmodified pinned execute completed; protected configuration and all kernel acceptances checked.",
+    "fresh_project_build": true,
+    "kernel_acceptances": {
+      "Lean default": "Lean default kernel accepts the solution",
+      "con-ron": "con-ron kernel accepts the solution",
+      "nanoda": "nanoda kernel accepts the solution"
+    },
+    "protected_challenge_export": true,
+    "protected_solution_export": true,
+    "statement_and_definition_comparison": true
+  },
+  "execute_command": [
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/setup-20260929/python-3.11.10/bin/python3.11",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/upstream/PalomarSubmission-current-20260928-pinned/scripts/verify_submission.py",
+    "execute",
+    "--work-dir",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/hosted-fit-20260929/standard-20261008T044312.650596Z/prepare-work",
+    "--output",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/hosted-fit-20260929/standard-20261008T044312.650596Z/local-execution.json",
+    "--bwrap",
+    "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/setup-20260929/bwrap/bwrap",
+    "--bwrap-source-tag",
+    "v0.12.0",
+    "--execution-budget-seconds",
+    "19800",
+    "--workflow-url",
+    "local-only:not-an-official-palomar-report"
+  ],
+  "execute_exit_code": 0,
+  "execute_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "execute_started_at": "2026-10-08T04:43:16.743719+00:00",
+  "execution_profile": "palomar-standard-v1",
+  "execution_report": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/hosted-fit-20260929/standard-20261008T044312.650596Z/local-execution.json",
+  "execution_report_sha256": "1bc1a33bfc8d05357ae94c337313759acda400b0e97987203429a7709734464c",
+  "execution_stage": "complete",
+  "execution_status": "pass",
+  "exports": {
+    "challenge": {
+      "bytes": 208139204,
+      "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/hosted-fit-20260929/standard-20261008T044312.650596Z/prepare-work/exports/challenge.export",
+      "sha256": "749237716a02e29ad1948a5fc0da324cc37eaddec6aef5e6bd6801551c450f01"
+    },
+    "solution": {
+      "bytes": 1833146451,
+      "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/hosted-fit-20260929/standard-20261008T044312.650596Z/prepare-work/exports/solution.export",
+      "sha256": "d1ecf06e9040233ef79c67f9fbdfcf260e618ecaa71f5b8a09d3e99894d838ca"
+    }
+  },
+  "finished_at": "2026-10-08T06:36:50.526137+00:00",
+  "local_git_commit": "a67753c6340f8fe4c3e89069780232c2bd1b24fb",
+  "local_only": true,
+  "local_source_bytes": 49914871,
+  "mode": "full",
+  "observed_host": {
+    "architecture": "x86_64",
+    "effective_cpus": 4.0,
+    "memory_bytes": 17179869184,
+    "memory_high_bytes": 16320875724,
+    "memory_max_bytes": 16836271800,
+    "workspace_free_bytes": 228514861056
+  },
+  "official_palomar_report": false,
+  "passed": true,
+  "prepare_errors": [],
+  "prepare_exit_code": 0,
+  "prepare_status": "pending",
+  "prepared_project_build_outputs_initially_absent": true,
+  "prepared_source_snapshot_verified": true,
+  "profile_sha256": "eb97b7b548c5d016967434818f0ed48a215e7fdc15528f564ab21ff2927cfd69",
+  "project_build_outputs_initially_absent": true,
+  "proof_execution_performed": true,
+  "remote_submission": false,
+  "resource_metrics_sha256": "99ce5edc636136534a0161092500e0623cad303793d82ec07f425ecf59943f3c",
+  "runtime_sha256": "fae11c3068cdb7e8cde23e15a1eb6cbf759ecf9e3945c882153ab71015cdca05",
+  "schema": "unit-distance-bounded-execution-v1",
+  "seconds": 6817.728,
+  "snapshot_file_count": 3074,
+  "source_snapshot_sha256": "93c14710e72c15bf471a04d46b36c84721e98652dce9e7d87a100cc145bae2cf",
+  "sources_unchanged": true,
+  "started_at": "2026-10-08T04:43:13.014524+00:00",
+  "state": "passed",
+  "tools": {
+    "bundle": {
+      "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/setup-20260929/gems/bin/bundle",
+      "sha256": "43b9be61f34f0cb95ae94bcac9b011a286826d774f7ddc41cbb1a0804d92abde"
+    },
+    "bwrap": {
+      "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/setup-20260929/bwrap/bwrap",
+      "sha256": "1245aa16d59fb0cda5f0922f5115c404e939cfc7ea2a6c12bf392048d2bb3d77"
+    },
+    "con-ron": {
+      "path": "/opt/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/con-ron",
+      "sha256": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef"
+    },
+    "lake": {
+      "path": "/opt/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lake",
+      "sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1"
+    },
+    "lean": {
+      "path": "/opt/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/lean",
+      "sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38"
+    },
+    "leanchecker": {
+      "path": "/opt/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/leanchecker",
+      "sha256": "9e36e955a251b1313c8eb5b7fa101282d51df109d34d8bb7c1cfdf51985aba29"
+    },
+    "leanexport": {
+      "path": "/opt/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/leanexport",
+      "sha256": "c5bc1a10a21e22cbb3671d65987cdef2076833b14182d823ccb2153adf2fa954"
+    },
+    "nanoda_bin": {
+      "path": "/opt/lean/toolchains/leanprover--lean4---v4.35.0-rc2/bin/nanoda_bin",
+      "sha256": "8241c5e6baa29490aa118d382f97961b208ae730fdb96545c2abed74c9ece5a8"
+    },
+    "python": {
+      "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/setup-20260929/python-3.11.10/bin/python3.11",
+      "sha256": "0080f0143420c61d8b195fc21ff49dc3d13ac148bc2eebf481bab03adbdbd823"
+    }
+  },
+  "tools_unchanged": true,
+  "upstream": {
+    "policy": {
+      "commit": "96b034cc31a72a63d4f4041911dce337a85c9a04",
+      "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/upstream/PalomarPolicy-current-20260928-pinned"
+    },
+    "submission": {
+      "commit": "65f0154ed776cd26c224254aa57b379137f28b0d",
+      "path": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/upstream/PalomarSubmission-current-20260928-pinned"
+    }
+  }
+}

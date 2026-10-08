@@ -1,29 +1,38 @@
-# Metadata for local verification of the 1.0427 conditional theorem.
+# Metadata for local verification of the 1.04315 conditional theorem (version 2 of
+# PALOMAR-2026-10-01-000018, which registered the 1.0427 theorem as version 1).
 # Local Git identifiers describe provenance; they do not assert public availability.
 # Publication, submission, registration and owner proof review are not claimed.
+# PLACEHOLDER: the first source cites papers/0.043171/main.tex at a commit of the public
+# repository that does not exist yet. Replace PUBLIC_COMMIT_TO_BE_FILLED_AT_PUBLICATION
+# with that full commit when the manuscript is published there, before any submission.
 version: v0.4
 project:
-  name: 'An Exponent of 1.04273 for the Unit Distance Problem: Lean formalization at exponent 1.0427, conditional on one zeta inequality'
-  description: 'Lean formalization accompanying the paper An Exponent of 1.04273 for the Unit Distance Problem by Eric Naslund (cited
-    under sources), which proves the exponent 1.04273 unconditionally with a computer-assisted certificate.
-    Conditional theorem on unit distances in the Euclidean plane. Let B = Q(sqrt 241) and
-    let E be the number field of degree 512 generated over Q by sqrt 241 and square roots of the eight
-    elements -1, -71011068 + 4574225 sqrt 241, (-6101 - 393 sqrt 241)/2, (6101 - 393 sqrt 241)/2, 31 -
-    2 sqrt 241, 31 + 2 sqrt 241, 326 - 21 sqrt 241 and 326 + 21 sqrt 241 of B (a basis of the {2,3,5}-units
-    of B modulo squares; E is the maximal elementary abelian 2-extension of B unramified outside 2, 3,
-    5 and the infinite places). Hypothesis (H) is one displayed numerical inequality for the Dedekind
-    zeta function of E: log(Re zeta_E(1 + 1/300))/512 + (1/300)((L - gamma - log(4 pi))/4 - Re((zeta_E''/zeta_E)(2))/512)
-    < 852/10000, where L = (9/4) log 2 + (1/2) log 3615 and gamma is Euler''s constant. The compared theorem
-    proves that (H) implies the existence of finite sets U_j in the plane with |U_j| -> infinity such
-    that the number of unordered pairs of points of U_j at distance one, divided by |U_j|^(10427/10000),
-    tends to infinity. The exponent is exactly 10427/10000 = 1.0427. The conclusion is a sequence statement
-    only; no bound at every sufficiently large cardinality is asserted. The infinite pro-2 tower over
-    B (generators, relation bound, presentation, Golod-Shafarevich infinitude, local data), its retained
-    field and growing Galois fields, the root-discriminant bound, the passage from (H) to the analytic
-    ceiling, the numerical margin and the planar construction are proved in Lean over Mathlib; (H) itself
-    is not proved. Outside Lean, a rigorous computation (certified approximate functional equations for
-    the 255 quadratic Hecke L-functions of E/B and an Euler product with explicit tail) bounds the left
-    side of (H) by 0.0848336; that computation is not part of the formal proof.'
+  name: 'An Exponent of 1.043 for the Unit Distance Problem: Lean formalization at exponent 1.04315, conditional on one zeta inequality'
+  description: 'Lean formalization accompanying the paper An Exponent of 1.043 for the Unit Distance Problem by
+    Eric Naslund (cited under sources), which proves the exponent 1.043171 unconditionally with a computer-assisted
+    certificate. Conditional theorem on unit distances in the Euclidean plane. Let B = Q(sqrt 241) and let E
+    be the number field of degree 512 generated over Q by sqrt 241 and square roots of the eight elements -1,
+    -71011068 + 4574225 sqrt 241, (-6101 - 393 sqrt 241)/2, (6101 - 393 sqrt 241)/2, 31 - 2 sqrt 241, 31 + 2
+    sqrt 241, 326 - 21 sqrt 241 and 326 + 21 sqrt 241 of B (a basis of the {2,3,5}-units of B modulo squares).
+    Let E_W be the field of degree 8192 obtained from E by adjoining square roots of four explicit elements
+    beta_1, ..., beta_4 of E, each generating with two of the square roots a dihedral extension of B of degree
+    8 (the elements are written out in the Challenge). Hypothesis (H_W) is one displayed numerical inequality
+    for the Dedekind zeta function of E_W: log(Re zeta_{E_W}(1 + 1/4411))/8192 + (1/4411)((L - gamma -
+    log(4 pi))/4 - Re((zeta_{E_W}''/zeta_{E_W})(2))/8192) < 50969/1000000, where L = (9/4) log 2 + (1/2) log
+    3615 and gamma is Euler''s constant. The compared theorem proves that (H_W) implies the existence of finite
+    sets U_j in the plane with |U_j| -> infinity such that the number of unordered pairs of points of U_j at
+    distance one, divided by |U_j|^(20863/20000), tends to infinity. The exponent is exactly 20863/20000 =
+    1.04315. The conclusion is a sequence statement only; no bound at every sufficiently large cardinality
+    is asserted. The infinite pro-2 tower over B with Frobenius caps at both primes above 29 and at one prime
+    above 41 (generators, relation bound, presentation, Golod-Shafarevich infinitude, local data), its fields,
+    which are Galois over B and over a fixed base field but not over Q, their local types and signature,
+    the root-discriminant bound, the field E_W with its degree, its embedding in the base field and its local
+    data, the passage from (H_W) to the analytic ceiling, the numerical margin and the planar construction
+    are proved in Lean over Mathlib; (H_W) itself is not proved. Outside Lean, a rigorous computation
+    (certified values of the 576 L-functions of degrees 4 and 8 in the factorization of zeta_{E_W} and an
+    Euler product with explicit tail) bounds the left side of (H_W) by 0.0509172; that computation is not
+    part of the formal proof. Version 1 of this entry proved the exponent 10427/10000 from a different
+    inequality, for the field E.'
   authors:
   - Eric Naslund
   responsible_maintainers:
@@ -38,6 +47,26 @@ classification:
   - 11R37
   - 20C05
 sources:
+- title: An Exponent of 1.043 for the Unit Distance Problem
+  authors:
+  - Eric Naslund
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/PUBLIC_COMMIT_TO_BE_FILLED_AT_PUBLICATION/papers/0.043171/main.tex
+  type: paper
+  location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.043171/ at the cited commit
+    (main.tex, sections/, certificates/). The source archive includes the manuscript, its research README and
+    the external evidence for (H_W) (certificates/dihedral/h_w_receipt.py and .json) under docs/research-1.043171/.'
+  relationship: adapts
+  note: 'Self-contained manuscript of October 8, 2026, for the 41-cap tower over Q(sqrt 241): the tower with the
+    Frobenius cap moved from the prime 7 to a prime above 41, the dihedral quotients of the tower group, the
+    field E_W of degree 8192 (the paper''s E_{W''''}) and the factorization of its zeta function, the bound for
+    the relative zeta value, the geometric construction and the proof of the main theorem. It proves the
+    exponent 1.043171 unconditionally, with a computer-assisted certificate; this formalization proves the
+    exponent 1.04315 conditional on the displayed hypothesis (H_W), with a single abscissa in place of the
+    paper''s census to 4e13, signed kernel and general shell weights. Independent AI referee reviews found
+    no error affecting the theorem. It is an unrefereed manuscript produced with AI tools under Eric Naslund''s
+    direction, with an AI Methodology statement on its first page; it is not a peer-reviewed publication.
+    His role as directing author and responsible maintainer does not assert human proof review. No registry
+    action is claimed by this metadata.'
 - title: An exponent of 1.04273 for the unit distance problem
   authors:
   - Eric Naslund
@@ -48,15 +77,15 @@ sources:
     docs/quadratic-base-research/.'
   relationship: adapts
   note: 'Self-contained manuscript of September 30, 2026, revised for readability on October 1, 2026,
-    for the tower over Q(sqrt 241): the tower, the Kummer field of the tower (called the genus field here)
-    and its 255 quadratic L-functions, the upper bound for the relative zeta value (the analytic ceiling
-    of this formalization), the geometric construction and the proof of the main theorem. It proves the
-    exponent 1.04273 unconditionally, with a computer-assisted certificate; this formalization proves the
-    exponent 1.0427 conditional on the displayed hypothesis (H). Independent AI referee reviews found no
-    mathematical error, and the readability revision changed no mathematics. It is an unrefereed manuscript produced with AI tools under Eric Naslund''s direction, with an
-    AI Methodology statement on its first page, published in the repository cited above; it is not a
-    peer-reviewed publication. His role as directing author and responsible maintainer does not assert
-    human proof review. No registry action is claimed by this metadata.'
+    for the tower over Q(sqrt 241) with the Frobenius cap at the prime 7: the tower, the Kummer field of
+    the tower (called the genus field here) and its 255 quadratic L-functions, the upper bound for the relative
+    zeta value, the geometric construction and the proof of the main theorem. It proves the exponent 1.04273
+    unconditionally, with a computer-assisted certificate. Version 1 of this formalization proved the exponent
+    1.0427 conditional on an inequality (H241) for the genus field; version 2 reuses its tower, genus field,
+    analytic machinery and geometric construction with the changes of the 1.043171 paper. It is an unrefereed
+    manuscript produced with AI tools under Eric Naslund''s direction, with an AI Methodology statement on its
+    first page, published in the repository cited above; it is not a peer-reviewed publication. No registry
+    action is claimed by this metadata.'
 - title: A lower exponent of 1.0418235 for planar unit distances
   authors:
   - Eric Naslund
@@ -121,6 +150,14 @@ sources:
     It is an informal, unrefereed forum post revised through June 2026. Context only; not an input to
     the Lean proof.
 related_formalizations:
+- id: https://palomar-registry.org/entry?id=PALOMAR-2026-10-01-000018&version=1
+  relationship: earlier version of this entry
+  note: 'Version 1 of this entry, registered on 2026-10-01 from public commit e0ac836176016dbefae28646bc91fc3a5aca30e8
+    of enaslund/unit-distance-bound-0.0427: the planar sequence theorem at exponent 10427/10000 conditional on
+    the inequality H241 for the genus field E (target_of_canonical_genus_zeta_bound). Version 2 keeps the
+    repository, the project path and the comparator configuration path, changes the tower (cap above 41
+    instead of at 7), the comparison field (E_W of degree 8192 instead of E), the exponent and the selected
+    theorem (target_of_wide_zeta_bound), and removes version 1''s endpoint modules.'
 - id: 'local-git:enaslund/unit-distance-bound@ed01a1ea90e59c61e13c0e8cdc7392a15db0979f:lean-formalization'
   relationship: builds-on
   note: 'The library of the verified conditional 1.0418235 package (Lean v4.35.0-rc2) is reused unchanged:
@@ -130,7 +167,7 @@ related_formalizations:
     this branch. Its selected 1.0418235 archive passed two bounded full local runs; those passes do not
     verify the new 1.0427 theorem. The 1.0418235 theorem remains in the same Lean project
     (ChallengeZeta/SolutionZeta). Its public-layout candidate was prepared locally and remains
-    unpublished and unregistered; this 1.0427 package is the intended submission. No public identifier
+    unpublished and unregistered; the sqrt241 package is the intended submission. No public identifier
     for that formalization is asserted here.'
 - id: https://github.com/leanprover-community/mathlib4/tree/065356127b1dc0016f66b7283ce0ce2c4055aa55
   relationship: builds-on
@@ -195,21 +232,19 @@ related_formalizations:
     statement, as described in the Palomar record PALOMAR-2026-08-08-000001. No code or theorem from it
     is used, and no comparison of exponents is claimed.
 status:
-  scope: 'Exact planar sequence theorem at exponent 10427/10000 conditional on one displayed genus-field
-    zeta/logarithmic-derivative inequality with ceiling 852/10000. The conditional implication is the
-    selected result and H remains unproved. Candidate 4 of this development (research commit
-    697c3cd7801431d594c01785f2b3e88dd248576d) passed the complete pinned local pipeline under the
-    16-CPU/32-GiB profile. The present sources add proof-internal certificate splits for the
-    4-CPU/16-GiB profile; con-ron, NanoDa and the Lean kernel each accepted their Solution export
-    within 4 CPUs and 16 GiB, and imported axiom queries over the 57,394 project and 32 submission
-    declarations of the closure report only the three permitted axioms. Imported collectAxioms queries
-    on Lean 4.35.0-rc2 have the limitation documented by Lean issue 15226; they are reported query
-    results rather than an independent exhaustive axiom audit. This archive needs its own complete
-    verification; no earlier result establishes that run or proves H. The axiom lists below specify
-    the selected permitted policy. The archive also contains the earlier conditional theorem at
-    exponent 2083647/2000000 (ChallengeZeta/SolutionZeta, comparator-zeta.json, formalization-zeta.yaml)
-    as an unselected companion. See README.md for the current verification state and
-    docs/sqrt241/SUBMISSION.md for the development account.'
+  scope: 'Exact planar sequence theorem at exponent 20863/20000 conditional on one displayed zeta/logarithmic-derivative
+    inequality for the field E_W of degree 8192, with threshold 50969/1000000 at 1 + 1/4411. The conditional
+    implication is the selected result and (H_W) remains unproved. In the research repository, lake build of
+    the default targets and of the whole library succeeded on 2026-10-08, and #print axioms of the selected
+    theorem, of the library theorem UnitDistance.Sqrt241.V2.target_of_wide_zeta_bound and of the local data
+    of E_W reports only the three permitted axioms. Imported axiom queries on Lean 4.35.0-rc2 have the
+    limitation documented by Lean issue 15226; they are reported query results rather than an independent
+    exhaustive axiom audit. The complete pinned pipeline has not been run on this version; this archive needs
+    its own complete verification, and no result of version 1 verifies it or proves (H_W). The axiom lists
+    below specify the selected permitted policy. The archive also contains the earlier conditional theorem
+    at exponent 2083647/2000000 (ChallengeZeta/SolutionZeta, comparator-zeta.json, formalization-zeta.yaml)
+    as an unselected companion. See README.md for the current verification state and docs/sqrt241/SUBMISSION.md
+    for the development account.'
   sorry_count: 0
   sorry_in_definitions: 0
   axioms:
@@ -217,7 +252,7 @@ status:
   - Quot.sound
   - Classical.choice
   main_results:
-  - declaration: UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound
+  - declaration: UnitDistanceSqrt241Submission.target_of_wide_zeta_bound
     file: SolutionZeta241.lean
     sorry_count: 0
     axioms:
@@ -227,6 +262,24 @@ status:
     comparator_config: comparator-zeta241.json
 automation:
   methods:
+  - method: autonomous
+    models:
+    - Claude Opus 5.5
+    framework: Claude Code
+    tool_setup: 'Sessions of 2026-10-07 and 2026-10-08 under the owner''s direction (version 2): one Claude Opus
+      5.5 coordinator with parallel Claude subagents in separate git worktrees, each owning a work package (the
+      41-cap cut, levels, local types, windows and prime freedom; the field E_W, its degree, its embedding in
+      the fixed base and its local data; the analytic bridge over E_W with generated corrections; the external
+      evidence for H_W), and the coordinator writing the interface for fields Galois over a fixed base, the
+      signature bound, the outer planar theorem, the witness, certificates and margin at 0.04315, the census
+      of the fixed base, the final theorem, the Challenge and Solution and this metadata. Lean v4.35.0-rc2 and
+      Mathlib 065356127b1dc0016f66b7283ce0ce2c4055aa55; no native_decide; finite certificates checked by decide
+      +kernel; generators in scripts/sqrt241/.'
+    prompting_notes: Update the formalization so that version 2 of the Palomar entry PALOMAR-2026-10-01-000018
+      states the 41-cap tower result at exponent 1.04315; preserve the verified material; no remote publication
+      or submission.
+    cost:
+      spend_usd: not available to the agent
   - method: autonomous
     models:
     - Claude Opus 5.5
@@ -273,27 +326,27 @@ automation:
     authorship or human proof verification.
 fidelity:
   divergences: >-
-    The manuscript's externally computer-assisted exponent is 1.04273. This
-    formalization proves the sequence implication at exact exponent 10427/10000
-    = 1.0427 from one explicit numerical inequality on the independently defined
-    degree-512 genus field. That inequality remains unproved in Lean. Ordinary
-    Euclidean distance, unordered unit pairs and both sequence limits are retained;
-    no conclusion for every sufficiently large cardinality is asserted.
+    The manuscript's externally computer-assisted exponent is 1.043171. This
+    formalization proves the sequence implication at exact exponent 20863/20000
+    = 1.04315 from one explicit numerical inequality on the independently defined
+    field E_W of degree 8192, with one abscissa 1 + 1/4411; the manuscript's census of
+    primes to 4e13, signed kernel over 21 abscissae and general shell weights are not
+    formalized. That inequality remains unproved in Lean. Ordinary Euclidean distance,
+    unordered unit pairs and both sequence limits are retained; no conclusion for every
+    sufficiently large cardinality is asserted.
 review:
   status: self-assessed
   reviewers: []
   notes: >-
-    Earlier fresh-context AI reviews of the statement and code reported no blocking
-    issue within their scopes, recorded in docs/sqrt241/REVIEWS.md. The retained
-    239-module leanchecker log is distinct from protected-export comparison,
-    export-based axiom checks, con-ron and NanoDa. The new full local verification
-    has its own archive-bound terminal report. No human peer review, owner proof
-    review, official Palomar report, editorial acceptance, publication, registration
-    or proof of H is claimed by this metadata.
+    The 1.043171 manuscript had fresh-context AI referee reviews, recorded with it.
+    The version 2 Lean statement and code have not yet had an independent review;
+    version 1's statement and code reviews are recorded in docs/sqrt241/REVIEWS.md.
+    No human peer review, owner proof review, official Palomar report, editorial
+    acceptance, publication, registration or proof of H_W is claimed by this metadata.
 alignment:
   namespace: UnitDistanceSqrt241Submission
   statements:
-  - source: 'Quadratic-base research construction: ordinary planar sequence and unordered unit pairs'
-    lean: UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound
+  - source: 'The 1.043171 manuscript, main theorem: ordinary planar sequence and unordered unit pairs'
+    lean: UnitDistanceSqrt241Submission.target_of_wide_zeta_bound
     module: SolutionZeta241
     status: adapted

@@ -15,7 +15,7 @@ set_option backward.privateInPublic true
 `fixedBaseCeiling_lt_of_local_types` is the analytic bridge for
 an abstract pair of Galois number fields `E ⊆ M` (with `[E:ℚ] = 512`):
 the fixed-base ceiling of `M` at `ε = 1/300` and `ℓ = Witness.logRD` is below
-`Witness.ceiling = 495/10000` as soon as
+`495/10000` (version 1's ceiling; version 2's `Witness.ceiling` is `425/10000`) as soon as
 
 * the displayed zeta/log-derivative expression of `E` is below `852/10000`;
 * `M` has the exact local types `(8,4)` at 2, `(1,4)` at 29, `(1,8)` at 7
@@ -293,7 +293,7 @@ theorem fixedBaseCeiling_lt_of_local_types
         (1 / 300 : ℝ) * ((Witness.logRD - Real.eulerMascheroniConstant -
           Real.log (4 * Real.pi)) / 4 - (logDeriv (dedekindZeta E) 2).re / 512) <
         852 / 10000) :
-    fixedBaseResidueCeiling M Witness.logRD (1 / 300) < Witness.ceiling := by
+    fixedBaseResidueCeiling M Witness.logRD (1 / 300) < 495 / 10000 := by
   have hs : (1 : ℝ) < sigma := by norm_num [sigma]
   -- Euler logarithms
   have hz := normalized_weight_le_sub_contributions E M eulerWeight_isNormWeight
@@ -319,7 +319,7 @@ theorem fixedBaseCeiling_lt_of_local_types
   unfold normalizedPrimeDebit at hdE
   rw [hdegR] at hz hd hdE
   rw [← sigma_eq] at H
-  unfold fixedBaseResidueCeiling Witness.ceiling
+  unfold fixedBaseResidueCeiling
   rw [← sigma_eq]
   unfold normalizedPrimeDebit
   simp only [eulerWeight, debitWeight] at hz hzsum hd hdsum

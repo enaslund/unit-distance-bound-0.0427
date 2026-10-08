@@ -1,0 +1,48 @@
+{
+ "witness": "witness_0.042965.json",
+ "delta": "0.042965",
+ "base_ceiling": {
+  "C_upper": "[0.048712842890336985523808060535854129837929012382509769251960 +/- 1.49e-61]",
+  "used": "0.04871285",
+  "sigma": "301/300"
+ },
+ "d4_functionals": "PASS 15 functionals vanish on R_2, rank 15",
+ "d4_fields": "PASS S-units, D4 pattern, unramified outside S (15 fields)",
+ "root_counts": "PASS 80 primes x 15 fields",
+ "census_programs": "PASS census_d3 and census_d3w agree with Python on all 2924 vector-0 primes of norm 6e4..1.2e7",
+ "census_data": "PASS stored bins hash-check",
+ "gain": {
+  "gain_lower": "[0.0015435887694398011598111698252473100545689095113 +/- 2.72e-50]",
+  "used": "0.0015435887",
+  "small_counts": {
+   "detected_v0": 2924,
+   "undetected_v0": 13,
+   "adaptive_terms": 22
+  },
+  "census": [
+   {
+    "XLO": 12000000,
+    "XHI": 10000000000,
+    "v0": 1768122,
+    "detected": 1768110,
+    "zero": 0,
+    "sum_T_lower": "[0.00062119512903162677624463489415084280038579100145 +/- 9.74e-52]"
+   },
+   {
+    "XLO": 10000000000,
+    "XHI": 1000000000000,
+    "v0": 145096446,
+    "detected": 145093184,
+    "zero": 0,
+    "sum_T_lower": "[0.00032714906750436712495325596958613065250663830687 +/- 8.17e-52]"
+   }
+  ],
+  "XC": 1000000000000
+ },
+ "geometry": {
+  "C_effective": "471692613/10000000000",
+  "margin_after_concentration_lower": "0.00001909269904231621"
+ },
+ "status": "PASS census replay for delta = 0.042965 (exponent 1+delta)",
+ "seconds": 100
+}

@@ -1,0 +1,396 @@
+\section{\texorpdfstring{Values of the $L$-Functions of $E_{W''}$}{Values of the L-Functions of E\_W''}}
+\label{lv:section}
+
+By \eqref{dh:YW}, $Y_{W''}(\sigma)$ is determined by $Y_E(\sigma)$ and by the
+values at $\sigma$ of $576$ further $L$-functions: $448$ of degree $4$ over
+$\Q$, the twists $L(s,\rho_o\otimes\chi_w)$ of the seven dihedral
+representations, and $128$ of degree $8$, the functions
+$L(s,\rho_a\otimes\rho_b\otimes\chi_w)$. They are needed at the $21$
+abscissae of Table~\ref{ce:kernel-table}, all in $(1,101/100)$; the values
+were computed at $36$ abscissae, from which the linear programme of
+Section~\ref{ce:section} chose these $21$. Proposition~\ref{an:genus-value}
+gives $Y_E(\sigma)$. This section encloses the $576$ values
+(Proposition~\ref{lv:values}); Lemma~\ref{ce:values} uses them.
+
+The $192$ twists of the forms $\psi_{10},\psi_{23},\psi_{24}$ were evaluated
+with the certified approximate functional equation for the gamma factor
+$\Gamma_\C(s)^2$ of \cite[Section~4.6, Lemma~4.4]{Naslund0418235}, with the
+tail bounds of its Section~4.7 and the kernel enclosures of its
+Section~4.9, which is not restated here. Its supplementary archive
+implements it in the program \texttt{nonpositive-afe.py} (kernel type
+\texttt{quartic}), which certifies enclosures of the kernels, of the
+interpolation errors and of the truncation errors; the program
+\texttt{dafe.py} applies it to these $192$ functions. The kernels of
+Subsection~\ref{lv:afe-general} evaluate the same $192$ functions
+independently (Subsection~\ref{lv:checks}, item~(3)), with radius about
+$10^{-13}$; a reader may use those values instead, which only enlarges the
+margin. The other $384$ functions were evaluated with the kernels of
+Subsection~\ref{lv:afe-general}, which cover the four gamma factors of
+Lemma~\ref{dh:gamma}.
+
+\subsection{An approximate functional equation for products of gamma
+functions}\label{lv:afe-general}
+This subsection proves an approximate functional equation
+(Lemma~\ref{lv:afe}) and the properties of its kernels
+(Lemma~\ref{lv:kernel}) for the four gamma factors of Lemma~\ref{dh:gamma};
+Subsection~\ref{lv:computation} uses them. In this section $d\in\{1,2\}$ is
+a parameter of the gamma factor, not the degree $[F:\Q]$ of
+Section~\ref{an:section}.
+
+Let $d\in\{1,2\}$, let $m\ge1$ and $\mu_1,\dots,\mu_m\in\{0,\frac12\}$ with at
+least one $\mu_j=0$, and let $C_G,\kappa_G>0$. The gamma factors of
+Lemma~\ref{dh:gamma} have the form
+$G(s)=C_G\kappa_G^{-s}\prod_{j=1}^m\Gamma(s/d+\mu_j)$:
+\[
+ \begin{aligned}
+ \Gamma_\C(s)^4&=16(2\pi)^{-4s}\Gamma(s)^4,&
+ \Gamma_\C(s)^2&=4(2\pi)^{-2s}\Gamma(s)^2,\\
+ \Gamma_\R(s)^3\Gamma_\R(s+1)&=\pi^{-1/2}\pi^{-2s}\Gamma(\tfrac s2)^3\Gamma(\tfrac s2+\tfrac12),&
+ \Gamma_\R(s)\Gamma_\R(s+1)^3&=\pi^{-3/2}\pi^{-2s}\Gamma(\tfrac s2)\Gamma(\tfrac s2+\tfrac12)^3,
+ \end{aligned}
+\]
+with $(d,\kappa_G)=(1,(2\pi)^4)$, $(1,(2\pi)^2)$, $(2,\pi^2)$ and $(2,\pi^2)$.
+Define the kernels
+\begin{gather*}
+ h(x)=\frac1{2\pi i}\int_{(\eta)}\prod_j\Gamma(u+\mu_j)\,x^{-u}\,du\qquad(x>0,\ \eta>0),\\
+ \mathcal I_b(x)=\int_1^\infty r^{b-1}h(xr)\,dr\qquad(b\in\R).
+\end{gather*}
+Thus $h$ is the inverse Mellin transform of $\prod_j\Gamma(u+\mu_j)$, the
+multiplicative convolution of the functions $x^{\mu_j}e^{-x}$; it is positive
+and decays exponentially, so $\mathcal I_b(x)$ converges for every real $b$.
+
+\begin{lemma}\label{lv:afe}
+Let $L(s)=\sum_{n\ge1}a_nn^{-s}$ with real coefficients of polynomial growth,
+let $Q>0$, and suppose that $\Lambda(s)=Q^{s/2}G(s)L(s)$ extends to an
+entire function of finite order with $\Lambda(1-s)=\Lambda(s)$. Put
+$t=\kappa_G/\sqrt Q$ and $x_n=(tn)^d$. Then for real $s>1$
+\[
+ L(s)=\frac{t^s}{\prod_j\Gamma(s/d+\mu_j)}\sum_{n\ge1}a_n
+ \bigl(\mathcal I_{s/d}(x_n)+\mathcal I_{(1-s)/d}(x_n)\bigr),
+\]
+and the series converges absolutely.
+\end{lemma}
+
+\begin{proof}
+For $y>0$ put $\Phi(y)=\sum_na_nh(x_ny)$. Since
+$\int_0^\infty h(x)x^{u-1}dx=\prod_j\Gamma(u+\mu_j)$ for $\operatorname{Re}u>0$
+and $Q^{s/2}\kappa_G^{-s}n^{-s}=x_n^{-s/d}$, termwise integration gives, for
+$\operatorname{Re}(du)>1$,
+\[
+ \int_0^\infty\Phi(y)y^{u-1}dy=\prod_j\Gamma(u+\mu_j)\sum_na_nx_n^{-u}
+ =\Lambda(du)/C_G.
+\]
+The right side is entire and invariant under $u\mapsto1/d-u$. As in the
+proof of Lemma~\ref{an:balanced-afe}, $L$ has polynomial growth in vertical
+strips by the Phragm\'en--Lindel\"of principle, so by Stirling's formula
+$\Lambda(du)$ decays exponentially in $|\operatorname{Im}u|$ on vertical
+strips. Mellin inversion on a line $\operatorname{Re}u=c>1/d$ and a shift to
+$\operatorname{Re}u=1/d-c$, where no poles occur, give
+$\Phi(y)=y^{-1/d}\Phi(1/y)$. Splitting the Mellin integral at $y=1$ and
+substituting $y\mapsto1/y$ below $1$,
+\begin{align*}
+ \frac{\Lambda(s)}{C_G}&=\int_1^\infty\Phi(y)\bigl(y^{s/d-1}+y^{(1-s)/d-1}\bigr)dy\\
+ &=\sum_na_n\bigl(\mathcal I_{s/d}(x_n)+\mathcal I_{(1-s)/d}(x_n)\bigr),
+\end{align*}
+by termwise integration, which the exponential decay of $h$ justifies.
+Finally
+\[
+ L(s)=\frac{\Lambda(s)}{C_G\,t^{-s}\prod_j\Gamma(s/d+\mu_j)}.
+\]
+\end{proof}
+
+\begin{lemma}\label{lv:kernel}
+\begin{enumerate}
+\item[(a)] $h$ and every $\mathcal I_b$ are completely monotone on
+ $(0,\infty)$; in particular $|\mathcal I_b^{(k)}|$ is nonincreasing for every
+ $k\ge0$.
+\item[(b)] $x\mathcal I_b'(x)+b\mathcal I_b(x)=-h(x)$.
+\item[(c)] $h(x)$, and $x^b\mathcal I_b(x)$ when no pole of
+ $\prod_j\Gamma(b+\mu_j+u)$ lies at $u=0$, are given by convergent series of
+ residues at the poles of the gamma factors, at $u=-n-\mu$ for $h$ and at
+ $u=-n-\mu-b$ for $x^b\mathcal I_b$ ($n\ge0$, $\mu\in\{\mu_j\}$), and
+ $x^b\mathcal I_b(x)$ has the additional term $\prod_j\Gamma(b+\mu_j)$ from
+ the pole of $1/u$. When $b<0$ the pole with $n=0$, $\mu=0$ lies at $u=-b>0$,
+ and the line of integration is taken to its right.
+\item[(d)] For $\eta>0$ with $b+\mu_j+\eta>0$ for all $j$,
+ $|\mathcal I_b(x)|\le C_{b,\eta}\,x^{-b-\eta}$, where
+ $C_{b,\eta}=\prod_j\Gamma(b+\mu_j+\eta)\cdot\frac1{2\pi}\int_\R
+ \prod_j\bigl(1+\tfrac{y^2}{(b+\mu_j+\eta)^2}\bigr)^{-1/2}\frac{dy}{|\eta+iy|}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) If $\mu_{j_0}=0$, then $h(x)=\int_0^\infty e^{-x/v}\varrho(v)\,dv/v$, where
+$\varrho\ge0$ is the convolution of the other factors $x^{\mu_j}e^{-x}$; this
+is a positive combination of the completely monotone functions $e^{-x/v}$.
+Then $\mathcal I_b(x)=\int_1^\infty r^{b-1}h(xr)\,dr$ is also one, and the
+derivatives of a completely monotone function alternate in sign and have
+nonincreasing absolute values.
+(b) Substituting $v=xr$, $\mathcal I_b(x)=x^{-b}\int_x^\infty v^{b-1}h(v)\,dv$;
+now differentiate.
+(c) The Mellin transform of $x^b\mathcal I_b(x)=\int_x^\infty v^{b-1}h(v)dv$ is
+$\prod_j\Gamma(b+\mu_j+u)/u$; shift the inversion integral to the left. The
+residues decay faster than any geometric sequence.
+(d) Write $x^b\mathcal I_b(x)=\frac1{2\pi i}\int_{(\eta)}\prod_j
+\Gamma(b+\mu_j+u)x^{-u}du/u$ and use
+$|\Gamma(a+iy)|\le\Gamma(a)(1+y^2/a^2)^{-1/2}$ for $a>0$, which follows from
+the product formula for $|\Gamma(a+iy)|^2$.
+\end{proof}
+
+\subsection{The computation}\label{lv:computation}
+This subsection describes how the kernels and the coefficients are computed
+and how their errors are bounded (Lemmas~\ref{lv:remainders}
+and~\ref{lv:coefficients}); the resulting enclosures,
+Proposition~\ref{lv:values}, are the input of Lemma~\ref{ce:values}. For each
+$L$-function let $a_n$ be its coefficients and $N$ the truncation point of
+the series of Lemma~\ref{lv:afe} (the column ``terms'' of
+Table~\ref{lv:results}).
+
+For each gamma factor, the supplementary program \texttt{deg8/gkernel.py}
+encloses $\mathcal I_{\sigma/d}$ and $\mathcal I_{(1-\sigma)/d}$ in Arb on a
+grid of cells: the points $\xi_0>\xi_1>\dots$ are $\xi_0=6144$ for
+$\Gamma_\C(s)^4$, $512$ for $\Gamma_\C(s)^2$ and $2^{14}$ for the mixed
+factors, and $\xi_{i+1}=31\xi_i/32$ rounded down to $53$ significant bits, down to
+$2^{-40}$. At each $\xi_i$ the Taylor coefficients of order $0$ to $20$ of
+$\mathcal I_b$ are computed from the residue series of
+Lemma~\ref{lv:kernel}(c), with the working precision raised to absorb the
+cancellation in these alternating series, whose terms reach about
+$\exp(m x^{1/m})$, and with the truncated tail bounded by Cauchy's estimate on
+circles of radius $1/2$ or $1/4$ around the poles; the recursion of
+Lemma~\ref{lv:kernel}(b) gives the higher coefficients from those of $h$. The
+next lemma bounds the error on each cell and beyond the last cell used.
+
+\begin{lemma}\label{lv:remainders}
+Let $b\in\R$.
+\begin{enumerate}
+\item[(a)] For $i\ge0$ and $x\in[\xi_{i+1},\xi_i]$,
+ \[
+  \Bigl|\mathcal I_b(x)-\sum_{k=0}^{20}\frac{\mathcal I_b^{(k)}(\xi_i)}{k!}
+  (x-\xi_i)^k\Bigr|\le\frac{|\mathcal I_b^{(21)}(\xi_{i+1})|}{21!}
+  (\xi_i-\xi_{i+1})^{21}.
+ \]
+\item[(b)] Let $\eta$ and $C_{b,\eta}$ be as in Lemma~\ref{lv:kernel}(d), let
+ $0<s_0<d(b+\eta)$, let $t>0$ and $N\ge1$, and let $x_n=(tn)^d$. Then for
+ real numbers $a_n$
+ \[
+  \sum_{n>N}|a_n|\,|\mathcal I_b(x_n)|\le C_{b,\eta}\,t^{-d(b+\eta)}
+  N^{s_0-d(b+\eta)}\sum_{n\ge1}|a_n|n^{-s_0}.
+ \]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) By Taylor's theorem the difference is
+$\mathcal I_b^{(21)}(\vartheta)(x-\xi_i)^{21}/21!$ for some $\vartheta\in[x,\xi_i]$. By
+Lemma~\ref{lv:kernel}(a), $|\mathcal I_b^{(21)}(\vartheta)|\le|\mathcal
+I_b^{(21)}(\xi_{i+1})|$, since $\vartheta\ge \xi_{i+1}$; and $|x-\xi_i|\le \xi_i-\xi_{i+1}$.
+(b) This is Rankin's trick. By Lemma~\ref{lv:kernel}(d),
+$|\mathcal I_b(x_n)|\le C_{b,\eta}(tn)^{-d(b+\eta)}$, and for $n>N$,
+$n^{-d(b+\eta)}=n^{-s_0}n^{s_0-d(b+\eta)}\le n^{-s_0}N^{s_0-d(b+\eta)}$.
+\end{proof}
+
+The coefficient programs \texttt{deg8/dcoef4.c} (degree $4$) and
+\texttt{deg8/octcoef.c} (degree $8$) compute, for each $L$-function and each
+cell $i$ (the $n$ with $x_n\in(\xi_{i+1},\xi_i]$), the moments
+$S_{ik}=\sum_na_nu_n^k$, $u_n=x_n/\xi_i-1$, for $k\le20$, and
+$A_i=\sum_n|a_n|$, in double precision with compensated (Kahan) summation.
+These moments differ from those of Subsection~\ref{an:kernel-enclosures}:
+the variable is $u_n$, and there is no weight $n^\nu$. The program
+\texttt{deg8/leval.py} turns kernels and moments into enclosures
+\[
+ L(\sigma)\in\frac{t^\sigma}{\prod_j\Gamma(\sigma/d+\mu_j)}\Bigl(\sum_i\sum_kp_{ik}S_{ik}
+ \pm\bigl(\textstyle\sum_iA_iR_i+\text{tail}\bigr)\Bigr),
+\]
+where $p_{ik}$ are the Taylor coefficients of the kernels at $\xi_i$ in the
+variable $u$, $R_i$ the cell remainders of Lemma~\ref{lv:remainders}(a) and
+``tail'' the bound of Lemma~\ref{lv:remainders}(b), for the two kernels
+$\mathcal I_{\sigma/d}$ and $\mathcal I_{(1-\sigma)/d}$. It treats each moment
+as a ball whose radius bounds the floating-point errors: the error of $t$ in
+double precision, bounded in Arb; the errors of $x_n$, $u_n$ and the powers,
+a few units in the last place each ($|u_n|\le1-\xi_{i+1}/\xi_i$ exactly, since the
+cells are cut at exact thresholds); and the error of Kahan summation, at most
+$(2\cdot2^{-53}+O(n2^{-106}))$ times the sum of the absolute values of the
+terms \cite[Section~4.3]{Higham2002}, plus the merging of the thread
+accumulators. For the degree-$4$ functions the Rankin tail uses
+$|a_n|\le\tau_4(n)$, where $\tau_4(n)$ is the number of ordered
+factorizations of $n$ into four positive integers, and
+$\sum\tau_4(n)n^{-s_0}=\zeta(s_0)^4$. For degree $8$ it uses the Euler
+product of $\sum|a_n|n^{-s_0}$: PARI's Euler factors for $p\le p_0$, where
+$p_0=2^{18}$ for the pairs $(19,23)$, $(19,24)$ and $2^{19}$ for the other
+six; the sums computed by \texttt{octcoef.c} for the primes in $(p_0,N]$; the
+bound $\binom{k+7}7$ for the coefficients of prime powers beyond; and the
+bound $\pi(x)\le1.25506\,x/\log x$ of Rosser and Schoenfeld
+\cite{RosserSchoenfeld1962} for the primes beyond $N$.
+
+The coefficients at large primes follow from the next lemma. Recall from
+Lemma~\ref{dh:Lfunctions} the elements $\gamma_o\in B_{c_o}$ and the fields
+$M_{o,w}$, $B_{ab}$ and $B_{ab,w}$.
+
+\begin{lemma}\label{lv:coefficients}
+\begin{enumerate}
+\item[(a)] Let $\psi_o$ be a form of Table~\ref{dh:W-table}, let
+ $w\in\Ftwo^8$, and let $p\notin\{2,3,5,241\}$ be prime. The coefficient
+ $a_p$ of $L(s,\rho_o\otimes\chi_w)$ is $0$ if $p$ is inert in $B$. If $p$
+ splits in $B$, then
+ \[
+  a_p=\sum_{\mathfrak P}\Bigl(\frac{\gamma_o\alpha_w}{\mathfrak P}\Bigr),
+ \]
+ the sum of quadratic residue symbols over the primes $\mathfrak P$ of
+ $B_{c_o}$ of norm $p$, provided $\gamma_o$ is a unit at these primes.
+\item[(b)] Let $(a,b)$ be a pair of Lemma~\ref{dh:W-structure}, let
+ $w\in\Ftwo^8$, and let $\mathfrak q\notin S$ be a prime of $B$ of degree
+ one and norm $q\ne241$, with Frobenius $g\in G_{W''}$. For $o\in\{a,b\}$: if
+ the image of $g$ in $\Gal(M_o/B)$ is central, then $\mathfrak q$ splits completely in
+ $F_{0,o}$; let $\epsilon_o(\mathfrak q)\in\{\pm1\}$ be the quadratic residue
+ symbol of $\gamma_o$ modulo a prime of $B_{c_o}$ above $\mathfrak q$,
+ provided $\gamma_o$ is a unit there. Then
+ $\tr(\rho_a\otimes\rho_b\otimes\chi_w)(g)=0$ unless the image of $g$ is
+ central in both $\Gal(M_a/B)$ and $\Gal(M_b/B)$, and then it equals
+ $4\epsilon_a(\mathfrak q)\epsilon_b(\mathfrak q)\chi_w(\mathfrak q)$. The
+ coefficient $a_q$ of $L(s,\rho_a\otimes\rho_b\otimes\chi_w)$ is the sum of
+ these traces over the two primes of $B$ above $q$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The fields $M_{o,w}$ and $B_{ab,w}$ are subfields of $\EW$ (proof of
+Lemma~\ref{dh:Lfunctions}), which is unramified over $B$ outside $S$ since
+$\EW\subseteq K$; so $p$, $q$ and $\mathfrak q$ are unramified in them.
+
+(a) By Lemma~\ref{dh:Lfunctions}(a), $L(s,\rho_o\otimes\chi_w)$ is the
+$L$-function of the quadratic character $\chi$ of $B_{c_o}$ that cuts out
+$M_{o,w}=B_{c_o}(\sqrt{\gamma_o\alpha_w})$, so $a_p$ is the sum of
+$\chi(\mathfrak P)$ over the primes $\mathfrak P$ of $B_{c_o}$ of norm $p$.
+If $p$ is inert in $B$, there are none. Otherwise $\mathfrak P$ is odd and
+unramified in $M_{o,w}$, and $\gamma_o\alpha_w$ is a unit at $\mathfrak P$,
+since $\alpha_w$ is a unit outside $S$; so $\chi(\mathfrak P)=1$ exactly when
+$\gamma_o\alpha_w$ is a square modulo $\mathfrak P$.
+
+(b) The trace of a tensor product is the product of the traces, and
+$\chi_w(g)=\chi_w(\mathfrak q)$. The character of the two-dimensional
+irreducible representation of $\mathrm{Dih}_4$ is $2$ at $1$, $-2$ at the
+central element $z$, and $0$ elsewhere. The image of $g$ in $\Gal(M_o/B)$ is
+central exactly when it lies in $\langle z\rangle=\Gal(M_o/F_{0,o})$, that
+is, when $\mathfrak q$ splits completely in $F_{0,o}$; then the primes of
+$B_{c_o}$ above $\mathfrak q$ have degree one, and the image is $1$ exactly
+when it fixes $\sqrt{\gamma_o}=(1+u_o)\sqrt{\beta_o}$, since $z$ negates
+it, that is, when $\gamma_o$ is a square modulo a prime of $B_{c_o}$ above
+$\mathfrak q$. So $\tr\rho_o(g)=2\epsilon_o(\mathfrak q)$ in that case, and
+$0$ otherwise. Finally, the coefficient at $q$ of an Artin $L$-function over
+$B$ is the sum of the traces of the Frobenius elements of the primes of $B$
+of norm $q$.
+\end{proof}
+
+\emph{Coefficients of degree $4$.} For $p\le3000$ the Euler factors are
+PARI's ($\zeta_{M_{o,w},p}/\zeta_{B_{c_o},p}$, program \texttt{deg8/exportg.gp}).
+For $p>3000$ only $a_p$ enters, since the truncation point $N$ is at most
+$6.7\cdot10^6<3000^2$, and only primes $p$ that split in $B$; then $a_p$ is
+given by Lemma~\ref{lv:coefficients}(a). The program \texttt{dcoef4.c} stops
+if a residue symbol vanishes; this does not occur.
+
+\emph{Coefficients of degree $8$.} For $p\le p_0$ the Euler factors are PARI's
+($\zeta_{B_{ab,w},p}/\zeta_{B_{ab},p}$, program \texttt{deg8/export8.gp}).
+The truncation point is $N=5.28\cdot10^{10}$ for the first two pairs and
+$1.055\cdot10^{11}$ for the others, which is less than $p_0^2$. So every
+$n\le N$ is either $p_0$-smooth or $n_1q$ with a prime $q>p_0$ and $n_1<p_0$,
+and for $q>p_0$ only $a_q$ enters, and only primes $q$ that split in $B$.
+The program \texttt{octcoef.c} sieves the primes $q\in(p_0,N]$
+($2.23\cdot10^9$ of them for the first two pairs, $4.34\cdot10^9$ for the
+others), evaluates the rule of Lemma~\ref{lv:coefficients}(b), and enumerates
+the $n=n_1q$ and the $p_0$-smooth $n$ with $a_n\ne0$. A prime $\mathfrak q$
+at which the images of the Frobenius are central but $\gamma_o$ is not a unit
+at a prime of $B_{c_o}$ above $\mathfrak q$ would be listed as exceptional;
+none occurs. Before each run the program compares the rule with PARI's Euler
+factors at every unramified prime in $(1000,p_0]$, for all sixteen twists of
+the pair: these are $22832$ primes for the first two pairs and $43222$ for the
+others, with between $1395$ and $2722$ primes of $B$ per pair at which both
+quotients are central.
+
+\subsection{Checks}\label{lv:checks}
+The following checks are independent of the coefficient rules and of the
+kernels, or of part of them; none is used in the proof.
+\begin{enumerate}
+\item[(1)] \emph{Euler products.} At $s=19/10$ the Euler products of the
+ degree-$8$ functions converge absolutely. For every pair, the program
+ \texttt{deg8/octtest.py} compares the value given by the approximate
+ functional equation (radius about $10^{-14}$) with the Euler product
+ (radius about $3\cdot10^{-10}$): all $128$ functions agree, with midpoints
+ within $8\cdot10^{-16}$. A wrong conductor, gamma factor, root number or
+ coefficient rule would show here.
+\item[(2)] \emph{Kernels.} For each of the four gamma factors, \texttt{gkernel.py}
+ reproduces PARI's \texttt{lfun} values of products of quadratic Dirichlet
+ $L$-functions with that gamma factor, within the certified radii.
+\item[(3)] \emph{Two implementations.} \texttt{dcoef4.c} with
+ \texttt{leval.py} reproduces the values computed with the archive kernels of
+ \cite{Naslund0418235} by \texttt{dafe.py}: for the twists of
+ $\psi_{19}$ at $801/800$, and for all $6912$ values of the $192$ twists of
+ $\psi_{10},\psi_{23},\psi_{24}$ at the $36$ abscissae, where all balls overlap
+ and the midpoints agree to $3.4\cdot10^{-16}$.
+\item[(4)] \emph{Coefficients.} The moments of \texttt{dcoef4.c} and
+ \texttt{octcoef.c} agree with independent Python implementations up to
+ $10^6$ and $2\cdot10^6$; the coefficients of the $192$ twists of
+ $\psi_{10},\psi_{23},\psi_{24}$ agree with PARI's Dirichlet series
+ $\zeta_{M_{o,w}}/\zeta_{B_{c_o}}$ up to $20000$, and for sample twists PARI's
+ \texttt{lfun} with the same data satisfies the functional equation to
+ $2^{-41}$ or better.
+\item[(5)] \emph{Reviews.} Independent reviews reproduced the Euler-factor
+ identity of Lemma~\ref{dh:EW}(e) at all primes up to $1000$ and at $2,3,5$;
+ the degree-$8$ Euler factors at $57$ primes of vector $0$; all degree-$8$
+ conductors by a different construction; and PARI's \texttt{lfun} values of
+ the twists of $\psi_{20}$, $\psi_{17}$ and $\psi_7$ inside the stored
+ enclosures. No reviewer recomputed the degree-$8$ values, whose conductors
+ are beyond the reach of general-purpose software.
+\end{enumerate}
+
+\subsection{Results}\label{lv:results-section}
+This subsection states the enclosures; with \eqref{dh:YW} they are used in
+Lemma~\ref{ce:values}.
+
+\begin{proposition}\label{lv:values}
+For each abscissa $\sigma_j$ of Table~\ref{ce:kernel-table} and each of the
+$576$ $L$-functions $L$ in \eqref{dh:YW}, the directories \texttt{hp} and
+\texttt{hp3} contain an interval that contains $L(\sigma_j)$, of radius at
+most the entry of Table~\ref{lv:results} (relative to the value, or absolute
+for the archive evaluation). With Proposition~\ref{an:genus-value} and
+\eqref{dh:YW} they give an enclosure of $Y_{W''}(\sigma_j)$; for instance
+$Y_{W''}(1001/1000)=0.050492599$ with radius $3.4\cdot10^{-10}$.
+\end{proposition}
+
+\begin{proof}[Proof (computer-assisted)]
+By Lemmas~\ref{dh:Lfunctions}(c) and~\ref{dh:gamma}, each of the $576$
+functions satisfies the hypotheses of Lemma~\ref{lv:afe}, with $Q$ its
+conductor and $G$ its gamma factor. For the $384$ functions of the forms
+$\psi_{19},\psi_{20},\psi_{17},\psi_7$ and of the eight pairs, the program
+\texttt{deg8/leval.py} evaluates the series of Lemma~\ref{lv:afe} as
+described in Subsection~\ref{lv:computation}: with the kernels of
+\texttt{deg8/gkernel.py} (Lemma~\ref{lv:kernel}), the coefficients from
+PARI's Euler factors and Lemma~\ref{lv:coefficients}, the cell remainders and
+tails of Lemma~\ref{lv:remainders}, and the floating-point errors bounded as
+described there. The $192$ twists of $\psi_{10},\psi_{23},\psi_{24}$ are
+evaluated by \texttt{dafe.py} with the approximate functional equation of
+\cite[Lemma~4.4]{Naslund0418235}, or alternatively, with radius about
+$10^{-13}$, by the same pipeline as the other functions
+(Subsection~\ref{lv:checks}, item~(3)).
+\end{proof}
+
+\begin{table}[htbp]
+\centering\small
+\caption{The $L$-functions in \eqref{dh:YW}: number, gamma factor, terms of
+the approximate functional equation, and the largest radius of the
+enclosures of their values at the abscissae (relative, except for $Y_E$ and
+for the archive evaluation, where it is absolute). All data are in the
+directories \texttt{hp} and \texttt{hp3}.}
+\label{lv:results}
+\begin{tabular}{lrlll}
+\toprule
+functions & number & gamma factor & terms & radius\\
+\midrule
+quadratic, $E$ & $255$ & $\Gamma_\R(s+\nu)^2$ or $\Gamma_\C(s)$ & $8\lfloor\sqrt{Q_e}\rfloor+1$ & $1.3\cdot10^{-19}$ (in $Y_E$)\\
+$\psi_{10},\psi_{23},\psi_{24}$ & $192$ & $\Gamma_\C(s)^2$ & $999999$ & $6.6\cdot10^{-9}$\\
+$\psi_{19},\psi_{20}$ & $128$ & $\Gamma_\C(s)^2$, mixed & up to $6.7\cdot10^6$ & $6.4\cdot10^{-13}$\\
+$\psi_{17},\psi_7$ & $128$ & $\Gamma_\C(s)^2$ & up to $6.7\cdot10^6$ & $2.2\cdot10^{-13}$\\
+pairs $(19,23),(19,24)$ & $32$ & $\Gamma_\C(s)^4$ & up to $5.28\cdot10^{10}$ & $5.1\cdot10^{-10}$\\
+other six pairs & $96$ & $\Gamma_\C(s)^4$ & up to $1.055\cdot10^{11}$ & $5.1\cdot10^{-10}$\\
+\bottomrule
+\end{tabular}
+\end{table}

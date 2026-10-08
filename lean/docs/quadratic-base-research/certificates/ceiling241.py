@@ -6,7 +6,6 @@ Y_*(sigma) = (1/512) log zeta_{E_B}(sigma) - [excess of E_B over K at selected p
 All subtracted terms are nonnegative and computed with outward-rounded Arb balls.
 """
 import json
-import math
 import sys
 from fractions import Fraction as Q
 from pathlib import Path
@@ -15,6 +14,7 @@ HERE = Path(__file__).resolve().parent
 import env241  # noqa: E402,F401
 from flint import arb, ctx  # noqa: E402
 from census241 import primes_upto, legendre, sqrtmod, KB, NORMS  # noqa: E402
+from interval241 import logderiv_tail_bound  # noqa: E402
 
 ctx.prec = 200
 SQINR = [int(x) for x in open(HERE / "sqinR.txt").read().split()]
@@ -59,8 +59,9 @@ def census_saving_and_R(s, X):
                 sav += a(N**2, s) / 4 - a(N**4, s) / 8
             Rsum += arb(N).log() / (2 * (arb(N) ** (2 * f0) - 1))
     # primes of B with norm n > X (split primes p > X, and inert p with p^2 > X): f0 >= 1 and at most
-    # two primes of B have any given norm n, so their total is <= sum_{n>X} log n/(n^2-1) <= (log X + 1)/X
-    Rsum += arb((math.log(X) + 1) / X) * (1 + arb(1) / 10**6)
+    # two primes of B have any given norm n. Bound sum_{n>X} log n/(n^2-1)
+    # by (log X + 1)/(X*(1-X^-2)), with every operation performed in Arb.
+    Rsum += logderiv_tail_bound(X)
     return sav, Rsum
 
 

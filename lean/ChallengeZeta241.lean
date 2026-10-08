@@ -16,15 +16,17 @@ public import Mathlib.Order.Filter.AtTopBot.Tendsto
 set_option backward.privateInPublic true
 
 
-/-! Planar unit-distance sequence theorem at exponent `10427/10000 = 1.0427`,
+/-! Planar unit-distance sequence theorem at exponent `20863/20000 = 1.04315`,
 conditional on one explicit numerical inequality for an independently specified
-number field `E` of degree 512: `E = B(√α₀, …, √α₇)` with `B = ℚ(√241)` and
-`α₀, …, α₇` a basis of the `{2,3,5}`-units of `B` modulo squares, i.e. the
-maximal elementary abelian 2-extension of `B` unramified outside `2, 3, 5` and
-the infinite places. The hypothesis is one displayed inequality for the
-Dedekind zeta function of `E` near `s = 1 + 1/300` and its logarithmic
-derivative at `s = 2`. It is not proved in Lean. No assertion for every large
-cardinality is made. -/
+number field `E_W` of degree 8192. Let `B = ℚ(√241)` and let
+`E = B(√α₀, …, √α₇)`, with `α₀, …, α₇` a basis of the `{2,3,5}`-units of `B`
+modulo squares, be the maximal elementary abelian 2-extension of `B` unramified
+outside `2, 3, 5` and the infinite places (degree 512). Then `E_W = E(√β₁, …, √β₄)`
+for four explicit elements `β_i ∈ E`, written below in terms of `√241` and products
+of the square roots `√α_k`; each `B(√a_i, √b_i, √β_i)` is a dihedral extension of
+degree 8 of `B`. The hypothesis is one displayed inequality for the Dedekind zeta
+function of `E_W` near `s = 1 + 1/4411` and its logarithmic derivative at `s = 2`.
+It is not proved in Lean. No assertion for every large cardinality is made. -/
 /- The imports `CStarAlgebra.Classes` and `SimplexCategory.Basic`, the local
 attribute `[-instance] instCommCStarAlgebraComplex`, the `backward.*` options
 and the instance priority below are inherited unchanged from the earlier
@@ -43,13 +45,12 @@ def orderedUnitPairs (U : Finset ℂ) : Finset (ℂ × ℂ) :=
 /-- Number of unordered unit-distance pairs, written as a real number.
 Swapping endpoints pairs the ordered edges; distance one excludes the diagonal. -/
 def unitPairs (U : Finset ℂ) : ℝ := (orderedUnitPairs U).card / 2
-/-- The exact exponent `1.0427`. -/
-def exponent : ℝ := 10427 / 10000
-/-- The strict upper threshold `0.0852` for the displayed zeta expression. -/
-def ceiling : ℝ := 852 / 10000
+/-- The exact exponent `1.04315`. -/
+def exponent : ℝ := 20863 / 20000
+/-- The strict upper threshold `0.050969` for the displayed zeta expression. -/
+def ceiling : ℝ := 50969 / 1000000
 /-- `ℓ = log(√241 · 2^(9/4) · √15) = (9/4) log 2 + (1/2) log 3615`. In the proof this
-bounds the logarithmic root discriminant of the fields of the tower over `ℚ(√241)`
-(it exceeds `log rd(E) = 2 log 2 + (1/2) log 3615`). -/
+bounds the logarithmic root discriminant of the fields of the tower over `ℚ(√241)`. -/
 def logRD : ℝ := (9 / 4 : ℝ) * Real.log 2 + (1 / 2 : ℝ) * Real.log 3615
 
 namespace CanonicalGenus
@@ -57,9 +58,9 @@ namespace CanonicalGenus
 abbrev Closure := AlgebraicClosure ℚ
 
 /-- Choose a square root in the algebraic closure. No ordering or positivity
-is intended. The field below does not depend on these choices: replacing `√241`
-by `−√241` maps each radicand to a product of radicands times a square, so the
-span of the radicands modulo squares is stable. -/
+is intended. Other choices of the square roots below replace the field `E_W` by its
+image under an automorphism of the algebraic closure, an isomorphic field with the
+same Dedekind zeta function, so the displayed inequality does not depend on them. -/
 def squareRoot (a : Closure) : Closure :=
   Classical.choose (IsAlgClosed.exists_pow_nat_eq a (by decide : 0<2))
 
@@ -84,15 +85,45 @@ def radicand (i : Fin 8) : Closure :=
 /-- Chosen square roots of the eight radicands. -/
 def genusRoot (i : Fin 8) : Closure := squareRoot (radicand i)
 
-/-- The subfield generated over the rationals by `√241` and the eight
-genus roots. The proof identifies its degree as `512`. -/
-def field : IntermediateField ℚ Closure :=
-  IntermediateField.adjoin ℚ (insert baseRoot (Set.range genusRoot))
+end CanonicalGenus
 
-/-- The carrier field of the explicitly generated intermediate field. -/
+namespace CanonicalWide
+open CanonicalGenus
+
+/-- `√a_i`: the product of the genus roots in the first row of the form. -/
+def rootA : Fin 4 → Closure :=
+  ![genusRoot 1 * genusRoot 3 * genusRoot 4 * genusRoot 5 * genusRoot 6 * genusRoot 7,
+    genusRoot 1 * genusRoot 4 * genusRoot 5,
+    genusRoot 1 * genusRoot 5 * genusRoot 6,
+    genusRoot 4 * genusRoot 6]
+
+/-- `√b_i`: the product of the genus roots in the second row of the form. -/
+def rootB : Fin 4 → Closure :=
+  ![genusRoot 0 * genusRoot 3 * genusRoot 4,
+    genusRoot 0 * genusRoot 3 * genusRoot 7,
+    genusRoot 0 * genusRoot 4,
+    genusRoot 0 * genusRoot 1 * genusRoot 5]
+
+/-- The four radicands `β_i ∈ E`. -/
+def wideRadicand : Fin 4 → Closure :=
+  ![-13151840112 + 847184400 * baseRoot - 31727062200 * (rootA 0 * rootB 0) -
+      2043719736 * baseRoot * (rootA 0 * rootB 0),
+    -1118796 + 72068 * baseRoot - 164 * rootA 1 - 4 * baseRoot * rootA 1 - 76752 * rootB 1 +
+      4944 * baseRoot * rootB 1 + 240 * (rootA 1 * rootB 1) + 16 * baseRoot * (rootA 1 * rootB 1),
+    -156 + 10 * baseRoot - 3850 * rootA 2 - 248 * baseRoot * rootA 2,
+    -130434 + 8402 * baseRoot - 646 * rootA 3 + 42 * baseRoot * rootA 3]
+
+/-- Chosen square roots `√β_i` in the closure. -/
+def wideRoot (i : Fin 4) : Closure := squareRoot (wideRadicand i)
+
+/-- `E_W`: the subfield generated over the rationals by `√241`, the eight genus roots and the
+four roots `√β_i`. -/
+def field : IntermediateField ℚ Closure :=
+  IntermediateField.adjoin ℚ (insert baseRoot (Set.range genusRoot ∪ Set.range wideRoot))
+
+/-- The carrier field. -/
 abbrev Carrier := field
 
--- Keep the implicit additive structure identical across Challenge and Solution imports.
 attribute [local instance 2000] AddSubgroupClass.toAddSubmonoidClass in
 /-- Finitely many algebraic generators give a finite-dimensional extension. -/
 instance finite : Module.Finite ℚ Carrier := by
@@ -100,32 +131,24 @@ instance finite : Module.Finite ℚ Carrier := by
   intro x _
   exact (Algebra.IsAlgebraic.isAlgebraic (R := ℚ) x).isIntegral
 
-/-- The fixed generated field, with its number-field structure. -/
+/-- The field `E_W` with its number-field structure. -/
 instance numberField : NumberField Carrier where
   to_finiteDimensional := finite
 
-theorem baseRoot_sq : baseRoot^2=(241 : Closure) := squareRoot_sq _
+theorem wideRoot_sq (i : Fin 4) : wideRoot i ^ 2 = wideRadicand i := squareRoot_sq _
 
-theorem genusRoot_sq (i : Fin 8) : genusRoot i^2=radicand i := squareRoot_sq _
+end CanonicalWide
 
-theorem baseRoot_mem : baseRoot∈field :=
-  IntermediateField.subset_adjoin ℚ _ (Set.mem_insert _ _)
-
-theorem genusRoot_mem (i : Fin 8) : genusRoot i∈field :=
-  IntermediateField.subset_adjoin ℚ _ (Set.mem_insert_of_mem _ ⟨i,rfl⟩)
-
-end CanonicalGenus
-
-/-- Conditional planar unit-distance theorem at exponent `1.0427`. The
+/-- Conditional planar unit-distance theorem at exponent `1.04315`. The
 displayed inequality for this one fixed number field is the sole hypothesis
 and remains unproved. The conclusion gives a sequence with cardinalities and
 normalized unordered unit-pair counts both tending to infinity; it makes no
 all-cardinalities claim. -/
-theorem target_of_canonical_genus_zeta_bound
-    (hfinite : Real.log (dedekindZeta CanonicalGenus.Carrier
-          ((1+(1/300:ℝ):ℝ):ℂ)).re / (512 : ℝ) + (1/300:ℝ)*
+theorem target_of_wide_zeta_bound
+    (hfinite : Real.log (dedekindZeta CanonicalWide.Carrier
+          ((1+(1/4411:ℝ):ℝ):ℂ)).re / (8192 : ℝ) + (1/4411:ℝ)*
         ((logRD-Real.eulerMascheroniConstant-Real.log (4*Real.pi))/4-
-          (logDeriv (dedekindZeta CanonicalGenus.Carrier) 2).re/(512 : ℝ)) < ceiling) :
+          (logDeriv (dedekindZeta CanonicalWide.Carrier) 2).re/(8192 : ℝ)) < ceiling) :
     ∃ U : ℕ → Finset ℂ,
       Tendsto (fun j => (U j).card) atTop atTop ∧
       Tendsto (fun j => unitPairs (U j) / ((U j).card : ℝ) ^ exponent) atTop atTop := by

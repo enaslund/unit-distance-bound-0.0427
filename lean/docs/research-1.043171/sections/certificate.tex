@@ -1,0 +1,446 @@
+\section{Proof of Theorem~\ref{thm:main}}
+\label{sec:certificate}
+
+We prove Theorem~\ref{thm:main} by applying
+Proposition~\ref{fw:transfer} to the fields of
+Theorem~\ref{tw:field-family}, with the upper bound for the relative
+zeta value in Theorem~\ref{an:ceiling} and the data of
+Definition~\ref{cert:data}. Propositions~\ref{cert:exact}
+and~\ref{cert:enclosures} are verified by computer, in exact rational
+arithmetic and in outward-rounded interval arithmetic, as described in
+Subsection~\ref{cert:computations}; the other steps are proved in the
+text. The inequalities between decimals in
+Propositions~\ref{cert:exact} and~\ref{cert:enclosures} and in the remarks,
+and the entries of Tables~\ref{cert:tab-local} and~\ref{cert:tab-budget},
+are computed by the supplementary program
+\texttt{margin\_general.py}, which calls the program \texttt{geom241.py} of
+\cite{Naslund04273} unchanged; the replay records the final margin, and
+calling \texttt{margin\_general} with \texttt{verbose=True} prints every
+enclosure and table entry. In the inequalities the decimals are rounded
+outward from interval enclosures, and the table entries are rounded to
+ten decimals. No rounded decimal is substituted into a later calculation.
+
+\subsection{Parameters and Local Data}
+
+This subsection fixes $\delta$, $C$, the archimedean profiles and the shell
+profiles (Definition~\ref{cert:data}), counts the places that carry shell
+profiles (Lemma~\ref{cert:places}), and defines the computable lower bound
+$\mathcal M_*$ for the margin (Definition~\ref{cert:lower-bounds}).
+
+\begin{definition}\label{cert:data}
+The \emph{data} of this section are the following.
+\begin{enumerate}
+\item[(a)] $\delta=43171/10^6=\deltastar$, $p=2/(1+\delta)=2000000/1043171$
+ and $C=C_{\rm eff}=\Ceff$; $\lambda=2^{9/4}\sqrt{3615}$ and $\ell=\log\lambda$,
+ as in Theorem~\ref{tw:field-family}.
+\item[(b)] At the compact coordinates, $f_\R$ is the Gaussian of
+ Lemma~\ref{pf:gaussian}, with $f_\R^p=e^{-a_\R|z|^2}$ and
+ $a_\R=2p\delta=172684/1043171<1$.
+\item[(c)] At the pair coordinates, $g_\C$ is the Student--Bernstein
+ profile of Definition~\ref{pf:student} with $s=1.147487$,
+ $a=0.0000181980309901$ and the polynomial $P$ of degree $m=3$ in each
+ variable whose Bernstein coefficients are \eqref{pf:bernstein-witness}. We
+ put $q_\star=sp-1=1251803/1043171$, as in Proposition~\fref{pf:mass}.
+\item[(d)] In Definition~\fref{pf:tube-constant} and Lemma~\fref{pf:tube} we take
+ $\rho=10^{-3}$, with the Bernstein coefficients of degree $m=3$ of (c). In
+ Proposition~\fref{pf:mass} we partition $[0,1]^2$ into the $64$ squares of
+ side $1/8$, use on each square the Bernstein coefficients of degree $3$, with
+ $m_{\mathcal Q}$ and $M_{\mathcal Q}$ the smallest and largest of these
+ coefficients, and take $N=18$. In Proposition~\fref{pf:overlap} we take
+ $n_*=1$.
+\item[(e)] For $K\in\mathcal K$, $\mathcal P$ is the set of places of $F$
+ above the selected primes of $B$ (Definition~\ref{an:selected-def}). Let
+ $\mathcal R=\{2,3,5,29,41\}$. We index the local data by $r\in\mathcal R$;
+ the index $41$ always refers to the places above the capped prime
+ $\mathfrak t_3$ of $B$, the only selected prime above $41$, and never to the
+ places above $\mathfrak t_4$. For $r\in\mathcal R$ let $k_r$ be the
+ exponent of Table~\ref{cert:tab-local}. At a place of $\mathcal P$ above
+ $r\in\{2,3,5\}$, $g_r$ is the shell profile with parameters
+ $(Q_r,k_r,(w_{r,ij}))$, with the symmetric weight matrices of
+ Appendix~\ref{fw-data:section}; at a place above $29$ or above
+ $\mathfrak t_3$ it is the shell profile with parameters
+ $(Q_r,k_r,(x_{r,i}x_{r,j}))$, with the vectors $x_{29}$, $x_{41}$ of that
+ appendix. Here $Q_r=r^4$ for $r=2,29,41$ and $Q_r=r^2$ for $r=3,5$, the
+ order of the residue field of these places (Theorem~\ref{tw:field-family}).
+ By Lemma~\ref{fw:shell-lemma}, $\mathcal F_{\delta,r}=\mathcal F_\delta(g_r)$
+ depends only on these parameters.
+\end{enumerate}
+\end{definition}
+
+Every parameter written as a finite decimal is exact. We recall
+$\theta_*=\thetastar$ from Theorem~\ref{tw:field-family}.
+
+\begin{definition}\label{cert:effective-types}
+For the places of $\mathcal P$ we put $(e_r,f_r)=(8,4)$, $(2,2)$, $(2,2)$,
+$(1,4)$ and $(2,4)$ for $r=2,3,5,29,41$. For $r\le29$ this is the absolute
+type of the places of $\mathcal P$ above $r$. We call $(e_{41},f_{41})=(2,4)$
+the \emph{effective type at $41$}: it is a counting device, not a local type.
+The places of $\mathcal P$ above $41$ are the places above $\mathfrak t_3$;
+they have absolute type $(1,4)$, and the effective type is chosen so that
+their number is $d/(e_{41}f_{41})$ and their residue fields have order
+$41^{f_{41}}$ (Lemma~\ref{cert:places}).
+\end{definition}
+
+For $r\in\{2,3,5,29\}$ these are uniform local types in the sense of
+Definition~\ref{geo:uniform-types} (Theorem~\ref{tw:field-family}); because of
+the index $41$, the proof of Theorem~\ref{thm:main} applies
+Proposition~\fref{fw:transfer} directly rather than
+Corollary~\fref{fw:uniform-types}.
+
+\begin{lemma}\label{cert:places}
+Let $K\in\mathcal K$, let $d=[F:\Q]$, let $\mathcal P$, $\mathcal R$, $Q_r$,
+$k_r$ and $g_r$ be as in Definition~\ref{cert:data}(e), and let $(e_r,f_r)$ be
+as in Definition~\ref{cert:effective-types}. For a place $\mathfrak p$ of
+$\mathcal P$ above $r$ write $g_{\mathfrak p}=g_r$, $k_{\mathfrak p}=k_r$ and
+$Q_{\mathfrak p}=Q_r$. Every place of $\mathcal P$ splits
+in $K$. For $r\in\mathcal R$, the number of places of $\mathcal P$ above $r$
+is $d/(e_rf_r)$, and each has residue field of order $Q_r$. Consequently
+\[
+ \frac1d\sum_{\mathfrak p\in\mathcal P}\log\mathcal F_\delta(g_{\mathfrak p})
+ =\sum_{r\in\mathcal R}\frac{\log\mathcal F_{\delta,r}}{e_rf_r},\qquad
+ \frac1d\sum_{\mathfrak p\in\mathcal P}k_{\mathfrak p}\log Q_{\mathfrak p}
+ =\sum_{r\in\mathcal R}\frac{k_r\log r}{e_r}=:H.
+\]
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{tw:field-family}, the places of $F$ above a selected prime
+$\mathfrak p$ of $B$ split in $K$, and $\mathfrak p$ has a type $(e,f)$ in
+$K/B$; so $K$ has $[K:B]/(ef)=d/(ef)$ primes above $\mathfrak p$, and $F$ has
+half as many, each with residue field of order $\mathrm N\mathfrak p^f$. The
+types are $(8,4)$ at the two primes above $2$, $(2,2)$ at the two primes above
+$3$ and at the two above $5$, and $(1,4)$ at $\mathfrak t_1,\mathfrak t_2$
+above $29$ and at $\mathfrak t_3$ above $41$. This gives $2\cdot d/64=d/32$
+places above $2$, $2\cdot d/8=d/4$ above $3$, above $5$ and above $29$, and
+$d/8$ above $41$ (the places above $\mathfrak t_3$, each with residue field
+of order $41^4$), which is $d/(e_rf_r)$ in each case. The places above the
+uncapped prime $\mathfrak t_4$, whose residue degree is a multiple of $4$
+that may be larger, carry no shell profiles. The
+second identity follows in the same way, since
+$(d/(e_rf_r))\,k_r\log r^{f_r}/d=k_r\log r/e_r$.
+\end{proof}
+
+Since the weights are nonnegative with $w_{r,00}=1$ (Appendix~\ref{fw-data:section}
+and Proposition~\ref{cert:exact}(a)), Lemma~\ref{fw:shell-lemma} gives
+\begin{equation}\label{cert:finite-factor}
+ \log\mathcal F_{\delta,r}
+ =\log\Bigl(Q_r^{-\delta k_r}\sum_{(i,j),(i',j')}w_{r,ij}\mathbf G_{(i,j),(i',j')}w_{r,i'j'}\Bigr)
+ -(1+\delta)\log\sum_{i,j}m_im_jw_{r,ij}^p,
+\end{equation}
+with the shell measures $m_i$ and the shell Gram matrix $\mathbf G$ of
+Definition~\ref{fw:gram-matrix} for $Q=Q_r$ and $k=k_r$; for product weights this is
+\eqref{fw:product-shells}. Table~\ref{cert:tab-local} lists the local data.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Local data. The last two columns give
+$\log\mathcal F_{\delta,r}/(e_rf_r)$ for the shell profile $g_r$ and for
+the unweighted shell profile with parameters $(Q_r,k_r)$, rounded to ten
+decimals. The row $41$ refers to the places above $\mathfrak t_3$, with the
+effective type $(e_{41},f_{41})$ of Definition~\ref{cert:effective-types}.}
+\label{cert:tab-local}
+\begin{tabular}{rrrrrlrr}
+\toprule
+$r$ & $e_r$ & $f_r$ & $Q_r$ & $k_r$ & weights & $g_r$ & unweighted\\
+\midrule
+$2$ & $8$ & $4$ & $16$ & $7$ & $10\times10$ matrix & $0.0390649879$ & $0.0387991734$\\
+$3$ & $2$ & $2$ & $9$ & $9$ & $10\times10$ matrix & $0.3652797033$ & $0.3622194132$\\
+$5$ & $2$ & $2$ & $25$ & $6$ & $10\times10$ matrix & $0.2795380841$ & $0.2780344049$\\
+$29$ & $1$ & $4$ & $707281$ & $1$ & product, $3$ shells & $0.0279173524$ & $0.0279172669$\\
+$41$ & $2$ & $4$ & $2825761$ & $1$ & product, $2$ shells & $0.0064840963$ & $0.0064840877$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{definition}\label{cert:lower-bounds}
+Let $Z_*$ be the right side of \eqref{pf:collected-overlap} for the data
+of Definition~\ref{cert:data}, with $n_*=1$. Let $\bar A_\C^*$ be the
+upper end of the rigorous interval enclosure of $\bar A_\C$ computed by
+the program of Subsection~\ref{cert:computations}
+(Proposition~\ref{cert:enclosures}(a)), so that
+$\bar A_\C\le\bar A_\C^*<45.4055724808268589$, the last number being
+$\bar A_\C^*$ rounded up. Let $J_\C^*$ be the right side of
+\eqref{pf:collected-functional} for these $Z_*$ and $\bar A_\C^*$, and put
+\[
+ \begin{split}
+ \mathcal M_*(\theta)={}&\sum_{r\in\mathcal R}
+ \frac{\log\mathcal F_{\delta,r}}{e_rf_r}
+ -(1/2-\delta)\ell-C+(1-\delta)\log2+(1-\theta)\log\pi\\
+ &+(1-2\theta)J_\R+\theta J_\C^* .
+ \end{split}
+\]
+\end{definition}
+
+\subsection{Finite Checks and Rigorous Bounds}
+
+This subsection states the finite checks (Proposition~\ref{cert:exact}) and
+the interval enclosures (Proposition~\ref{cert:enclosures}) on which the proof
+rests; both are verified by computer as described in
+Subsection~\ref{cert:computations}.
+
+\begin{proposition}\label{cert:exact}
+For the data of Definition~\ref{cert:data}:
+\begin{enumerate}
+\item[(a)] all weights $w_{r,ij}$ ($r=2,3,5$, $0\le i,j\le9$) and
+ $x_{r,i}$ ($r=29,41$) are positive (Lemma~\fref{fw:shell-lemma} needs only
+ $w_{r,ij}\ge0$ with $w_{r,00}>0$, which is what the programs assert; strict
+ positivity is checked separately);
+\item[(b)] the coefficients \eqref{pf:bernstein-witness} are positive,
+ and the tube constant satisfies $q_0<0.0296$;
+\item[(c)] on each of the $64$ squares $\mathcal Q$, the Bernstein
+ coefficients of degree $3$ of the restriction of $P$ to $\mathcal Q$ are
+ positive, and $\rho_{\mathcal Q}<0.3484$;
+\item[(d)] every cross satisfies \eqref{pf:cross-threshold}.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+These are finite checks, made by the supplementary programs
+\texttt{margin\_general.py} and \texttt{geom241.py} as described in
+Subsection~\ref{cert:computations}. The comparisons in (a)--(c), and the
+first condition in (d), are exact comparisons of rational numbers; the other
+two conditions in (d) are checked by outward-rounded interval evaluation of
+$\log(4/a)$.
+\end{proof}
+
+\begin{proposition}\label{cert:enclosures}
+For the data of Definition~\ref{cert:data}, with $Z_*$, $J_\C^*$ and
+$\mathcal M_*$ as in Definition~\ref{cert:lower-bounds}, the following
+hold.
+\begin{enumerate}
+\item[(a)] With $T$ and $T'$ independent with density $q_\star t^{q_\star-1}$ on
+$(0,1)$,
+\begin{equation}\label{cert:mass}
+ 45.4055724808268557<\bar A_\C=\mathbb E\,P(T,T')^p<45.4055724808268589 ,
+\end{equation}
+and the right side of \eqref{pf:subrectangle-mass} is less than
+$1.6\cdot10^{-15}$.
+\item[(b)] The expression $Z_*$ satisfies
+\begin{equation}\label{cert:overlap}
+ 397.6858754715135886<Z_*<397.6858754715135887 ,
+\end{equation}
+and the remainder term satisfies $E_{-,1}<2.8\cdot10^{-16}$.
+\item[(c)] $1.3444924010459460<J_\C^*<1.3444924010459462$.
+\item[(d)] $-0.2125007533361271<J_\R<-0.2125007533361270$.
+\item[(e)] $0.7182842240056688517<\sum_{r\in\mathcal R}\log\mathcal
+F_{\delta,r}/(e_rf_r)<0.7182842240056688518$.
+\item[(f)] The numbers $H$ of Lemma~\ref{cert:places} and
+$\ell=\frac94\log2+\frac12\log3615$ satisfy
+\begin{gather*}
+ 15.6026546826373748<H<15.6026546826373749,\\
+ 5.6560047235563094<\ell<5.6560047235563095 .
+\end{gather*}
+\item[(g)] $\log K_\C<0.0558518577$, $\varsigma_\C>1.4728810283$ and
+$\mu=2e^{H/2-\ell}>17.0895949922$.
+\item[(h)] $0.6247640218687999<-\log\pi-2J_\R+J_\C^*<0.6247640218688001$.
+\item[(i)] The lower bound for the margin satisfies
+\begin{equation}\label{cert:margin}
+ \mathcal M_*(\theta_*)>0.0000105426526168 .
+\end{equation}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The program \texttt{margin\_general.py} evaluates these quantities in
+outward-rounded interval arithmetic from the exact data, as described in
+Subsection~\ref{cert:computations}: (a) by Proposition~\ref{pf:mass}; (b)
+from \eqref{pf:collected-overlap}, with Lemma~\ref{pf:digamma} for the
+digamma values; (c) from \eqref{pf:collected-functional}; (d) from
+\eqref{pf:gaussian-compact}; (e) from \eqref{cert:finite-factor}; (f) from
+the definitions of $H$ and $\ell$; (g) from Lemma~\ref{pf:tube} and the
+definition of $\mu$; and (h) and (i) from
+Definition~\ref{cert:lower-bounds}, where $\bar A_\C^*$ is the upper end of
+the enclosure computed for (a).
+\end{proof}
+
+The proof of Theorem~\ref{thm:main} uses Proposition~\ref{cert:exact} and,
+from Proposition~\ref{cert:enclosures}, only the fact, established by the
+computation for (a), that $\bar A_\C\le\bar A_\C^*$, the positivity of $Z_*$
+given by (b), and (g), (h) and (i). Table~\ref{cert:tab-budget} lists the
+terms of $\mathcal M_*(\theta_*)$.
+
+\begin{table}[htbp]
+\centering\small
+\caption{The terms of $\mathcal M_*(\theta_*)$, rounded to ten decimals.}
+\label{cert:tab-budget}
+\begin{tabular}{lr}
+\toprule
+Term & Value\\
+\midrule
+$\sum_r\log\mathcal F_{\delta,r}/(e_rf_r)$ & $0.7182842240$\\
+$-(1/2-\delta)\ell$ & $-2.5838269819$\\
+$-C$ & $-0.0422764000$\\
+$(1-\delta)\log2$ & $0.6632233236$\\
+$(1-\theta_*)\log\pi$ & $0.5723736765$\\
+$(1-2\theta_*)J_\R$ & $-0.0000032425$\\
+$\theta_*J_\C^*$ & $0.6722359429$\\
+\midrule
+$\mathcal M_*(\theta_*)$ & $0.0000105427$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Conclusion of the Proof}
+
+This subsection verifies the hypotheses of Proposition~\ref{fw:transfer} for
+the fields of Theorem~\ref{tw:field-family} and the data of
+Definition~\ref{cert:data}, and concludes the proof of
+Theorem~\ref{thm:main}.
+
+\begin{corollary}\label{cert:fourier}
+The pair $(f_\R,g_\C)$ of Definition~\ref{cert:data} is admissible
+(Definition~\ref{geo:admissible}) with
+Fourier constants $M=2$ and $\varsigma=1$, and these satisfy
+\eqref{fw:fourier-condition} with $H_f=H$.
+\end{corollary}
+
+\begin{proof}
+Proposition~\ref{pf:admissible} applies, since $s\ge1$, $a>0$,
+$a_\R\le1$ and $0<\rho<1$, the Bernstein coefficients
+\eqref{pf:bernstein-witness} of degree $m=3$ are positive, and $q_0<1$
+(Proposition~\ref{cert:exact}(b)). It gives the Fourier constants
+$M=\max\{2,\sqrt{K_\C}\}$ and $\varsigma=\min\{1,\varsigma_\C\}$. By
+Proposition~\ref{cert:enclosures}(g), $K_\C<4$ and $\varsigma_\C>1$, so
+$M=2$ and $\varsigma=1$. The right side of \eqref{fw:fourier-condition} is
+then $\log2+2\log5+2<5.9121$, while
+$\varsigma\cdot2e^{H_f/2-\ell}=\mu>17.0895949922$ by Lemma~\ref{cert:places}
+and Proposition~\ref{cert:enclosures}(g).
+\end{proof}
+
+\begin{lemma}\label{cert:lower-margin}
+For the data of Definition~\ref{cert:data}, $J_\C\ge J_\C^*$.
+Consequently, for $\theta_*\le\theta<1/2$, the expression
+$\mathcal M_{\mathcal R}(\theta)$ obtained from $\mathcal M_*(\theta)$ by
+replacing $J_\C^*$ with $J_\C$ (by Lemma~\ref{cert:places}, at $\theta=c/d$
+for $F$ it is the margin \eqref{fw:margin} of $K/F$, for $K\in\mathcal K$;
+the same expression appears in Corollary~\fref{fw:uniform-types}) satisfies
+\[
+ \mathcal M_{\mathcal R}(\theta)\ge\mathcal M_*(\theta)\ge\mathcal
+ M_*(\theta_*)>0.0000105426526168 .
+\]
+\end{lemma}
+
+\begin{proof}
+Corollary~\ref{pf:functional} applies: the hypotheses of
+Propositions~\ref{pf:overlap} and~\ref{pf:mass} hold by
+Proposition~\ref{cert:exact}(c),(d), $Z_*>0$ by \eqref{cert:overlap},
+and $\bar A_\C\le\bar A_\C^*$ by Proposition~\ref{cert:enclosures}(a) and
+Definition~\ref{cert:lower-bounds}. Hence $J_\C\ge J_\C^*$. Since
+$\mathcal M_{\mathcal R}(\theta)-\mathcal M_*(\theta)=\theta(J_\C-J_\C^*)$
+and $\theta\ge0$, we get $\mathcal M_{\mathcal R}(\theta)\ge\mathcal
+M_*(\theta)$. The function $\mathcal M_*$ is affine in $\theta$ with slope
+$-\log\pi-2J_\R+J_\C^*$, which is positive by
+Proposition~\ref{cert:enclosures}(h); so $\mathcal M_*(\theta)\ge\mathcal
+M_*(\theta_*)$ for $\theta\ge\theta_*$, and \eqref{cert:margin} completes the
+proof.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+For each $n\ge49$, let $K^{(n)}/B$ be a Galois extension with
+$[K^{(n)}:B]=2^n$ as in Theorem~\ref{tw:field-family}, let $\iota_1$ be
+a complex conjugation at a place of $K^{(n)}$ above the real place $v_1$
+of $B$, put $F^{(n)}=(K^{(n)})^{\langle\iota_1\rangle}$ and
+$d_n=[F^{(n)}:\Q]$, and let $\theta_n$ be the value of $\theta$ for
+$F^{(n)}$. By Theorem~\ref{an:ceiling}, $d_n^{-1}\log L_{F^{(n)}}(1)<C$
+for all sufficiently large $n$; we discard the finitely many other
+fields.
+
+We apply Proposition~\ref{fw:transfer} to this sequence, with
+$\delta=\deltastar$, with $\mathcal P_n$ the set $\mathcal P$ of
+Definition~\ref{cert:data}(e) for $K^{(n)}$, the shell profiles $g_r$ at its
+places, and the pair $(f_\R,g_\C)$ of Definition~\ref{cert:data}, and check
+its hypotheses. By Theorem~\ref{tw:field-family}, each $K^{(n)}/F^{(n)}$
+satisfies (G1)--(G3) with the common $\lambda=2^{9/4}\sqrt{3615}$, and
+$d_n=2^n\to\infty$. By the choice above, $\log L_{F^{(n)}}(1)\le d_nC$. The
+places of $\mathcal P_n$ split in $K^{(n)}$ (Lemma~\ref{cert:places}). The
+weights are as in Definition~\ref{fw:shell-profile}, by
+Proposition~\ref{cert:exact}(a), and the parameters of the shell profiles take
+five values, independent of $n$. The pair $(f_\R,g_\C)$ is admissible, and its
+Fourier constants satisfy \eqref{fw:fourier-condition}, by
+Corollary~\ref{cert:fourier}, since $H_f=H$ for every $n$ by
+Lemma~\ref{cert:places}. By Lemma~\ref{cert:places}, the margin
+\eqref{fw:margin} of $K^{(n)}/F^{(n)}$ with these shell profiles is
+$\mathcal M_{\mathcal R}(\theta_n)$. Finally, $\theta_*\le\theta_n<1/2$ by
+Theorem~\ref{tw:field-family}, so Lemma~\ref{cert:lower-margin} gives
+$\mathcal M_{\mathcal R}(\theta_n)\ge\mathcal M_*(\theta_*)>0$ for all $n$.
+
+Proposition~\ref{fw:transfer} therefore gives finite sets
+$U_n\subset\R^2$ with $|U_n|\to\infty$ and
+$u(U_n)/|U_n|^{1+\delta}\to\infty$, where $1+\delta=1.043171$; these are
+the sets of Theorem~\ref{thm:main}, indexed by $n$. In particular
+$u(U_n)\ge|U_n|^{1.043171}$ for all large $n$, which gives the last
+assertion of Theorem~\ref{thm:main} at the cardinalities $|U_n|$.
+\end{proof}
+
+\subsection{Remarks}
+
+This subsection records numerical observations that are not used in the
+proof.
+
+\begin{remark}\label{cert:signature-remark}
+The program also encloses the value at $\theta=0$ and the zero $\theta_0$
+of the affine function $\mathcal M_*$:
+\[
+ \mathcal M_*(0)<-0.312,\qquad \theta_0<0.49997550 .
+\]
+These enclosures are not used in the proof. Since $\theta=1/2-1/(4N_\iota)$
+by Theorem~\ref{tw:field-family}, where $N_\iota$ is the number of conjugates
+of $\iota_1$ in $\Gal(K/B)$, $N_\iota\ge10205$ would suffice, whereas that
+theorem gives $N_\iota\ge2^{15}$. At $\theta=0$ the margin does not involve
+$J_\C$ and is negative: with these profiles, mixed signature is essential.
+\end{remark}
+
+\begin{remark}\label{cert:observations}
+The following numerical observations are not used in the proof. The proof of
+Proposition~\ref{fw:transfer} needs only some $\eta>0$ with $4\eta$ below the
+margin; for instance, $\eta=10^{-9}$ gives
+\begin{equation}\label{cert:final-margin}
+ \mathcal M_*(\theta_*)-4\eta>0.0000105386526168>0 .
+\end{equation}
+The value $\mathcal M_*(\theta_*)$ would be absorbed by an increase of
+$1.05\cdot10^{-5}$ in $C$. The general weights at $2$, $3$ and $5$ add
+$1.53\cdot10^{-5}$ to the margin: with the product weights of the
+intermediate certificate, optimized at $\delta=0.043170$, the margin at
+$\delta=\deltastar$ is about $-4.8\cdot10^{-6}$. At $\delta=0.043172$, with the
+same data and the same $C$, the evaluation gives about $-1.33\cdot10^{-5}$.
+\end{remark}
+
+\subsection{Computations}\label{cert:computations}
+This subsection describes how the finite checks and enclosures of
+Propositions~\ref{cert:exact} and~\ref{cert:enclosures} are computed.
+
+The program \texttt{margin\_general.py} calls the function \texttt{margin} of
+\texttt{geom241.py} of \cite{Naslund04273} unchanged, and replaces only, for
+the duration of the call, its routine for the local functional at the places
+whose weights are given as a matrix, by the routine of
+\texttt{general\_windows.py}, which evaluates \eqref{fw:shell-kernel} exactly
+in rational arithmetic, with the real powers $w_{r,ij}^p$ in interval
+arithmetic. The routine for product weights, and the routines for
+Propositions~\ref{pf:mass} and~\ref{pf:overlap}, Lemma~\ref{pf:tube} and
+Corollary~\ref{pf:functional}, are those of \cite{Naslund04273}, which take
+three modules of the supplementary archive of \cite{Naslund0418235} unchanged.
+In Proposition~\ref{pf:mass} the program uses the symmetry of
+\eqref{pf:bernstein-witness}: each square off the diagonal is evaluated once
+and counted twice. It checks the hypotheses listed in
+Proposition~\ref{cert:exact} (for (c), on the squares on or above the
+diagonal; the others follow by symmetry), the conditions $a_\R\le1$,
+$\varsigma_\C>1$, $\log K_\C<2\log2$ and $\mu>10$ (which implies
+\eqref{fw:fourier-condition} for $M=2$ and $\varsigma=1$, since $\log50+2<10$),
+and the positivity of the slope in Proposition~\ref{cert:enclosures}(h). It
+then prints the enclosures stated in this section. The exponents and weights
+were produced by separate optimization programs; they enter the proof only
+as the exact data of Appendix~\ref{fw-data:section}.
+
+Rational quantities are computed exactly; the remaining quantities involve the
+logarithm, the exponential (also through the real powers $x^y=\exp(y\log x)$),
+the square root in $\varsigma_\C$, the constant $\pi$ and the digamma function,
+which enters only through Lemma~\ref{pf:digamma}. These are evaluated in the
+interval arithmetic of mpmath \cite{Mpmath}, with every operation rounded
+outward, at a working precision of $80$ decimal digits. Hence every computed
+interval contains the exact value, and the decimals stated above are rigorous
+bounds.
+
+The replay program \texttt{dihedral/reproduce\_w3.py} recomputes
+Propositions~\ref{cert:exact} and~\ref{cert:enclosures} from the witness file,
+and also runs \texttt{general\_windows\_check.py}
+(Remark~\ref{fw:general-weights}).

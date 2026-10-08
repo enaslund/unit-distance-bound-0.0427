@@ -1,0 +1,905 @@
+\section{Units of Relative Norm One and Planar Point Sets}
+\label{geo:section}
+
+This section and Sections~\ref{fw:section} and~\ref{pf:section} turn
+arithmetic data of a quadratic extension into planar point sets. Let $K/F$ be a quadratic extension of
+number fields, let $\iota$ be the nontrivial automorphism of $K$ over
+$F$, and let $(b,c)$ be the signature of $F$. Throughout these three
+sections we assume:
+\begin{enumerate}
+\item[(G1)] $K$ is totally imaginary, and $b\ge1$;
+\item[(G2)] $K/F$ is unramified at every finite place;
+\item[(G3)] $\rd(K)=\rd(F)=\lambda$.
+\end{enumerate}
+Here the root discriminant $\rd$ and the discriminants $\Delta_M$ are as in
+Section~\ref{tw:tower}. By (G2), $|\Delta_K|=|\Delta_F|^2$, so (G3) amounts
+to $\rd(F)=\lambda$.
+Put $d=[F:\Q]=b+2c$, $\theta=c/d$ and $\ell=\log\lambda$. Then
+$[K:\Q]=2d$, $|\Delta_K|=\lambda^{2d}$, $|\Delta_F|=\lambda^d$ and
+$0\le\theta<1/2$, where $\Delta_K$ and $\Delta_F$ are the absolute
+discriminants. Theorem~\ref{tw:field-family} provides such extensions,
+with $\lambda=2^{9/4}\sqrt{3615}$ and $\theta\ge\theta_*$; there $\iota$
+is the complex conjugation $\iota_1$. The arguments of these three
+sections use no Galois structure over $B$ or over $\Q$. For a nonzero
+fractional ideal $\mathfrak a$ of $K$ or of $F$, $\mathrm N\mathfrak a$ denotes
+its absolute norm, so that $\mathrm N(x\mathcal O_K)=|N_{K/\Q}x|$
+\cite[Propositions~4.1 and~4.2]{MilneANT}. We take the unit theorem and
+the covolumes of ideal lattices from \cite{MilneANT}, and the Herbrand
+quotient, Hilbert's Theorem~90 and the analytic class-number formula
+from \cite{MilneCFT}.
+
+The argument has five steps. Proposition~\ref{geo:mass} is the
+class-number formula for the units of relative norm one: it expresses
+their regulator, together with the relative class number and the
+capitulation kernel, through $L_F(1)$. Lemma~\ref{geo:selection} uses the
+split primes and one ideal class to produce many elements
+$\beta_1,\dots,\beta_t$ of relative norm one in a single fractional ideal,
+with pairwise disjoint cosets $\beta_i\mathcal O_K^1$, where $\mathcal O_K^1$ is
+the group of units of relative norm one (Definition~\ref{geo:relative-units}).
+Lemmas~\ref{geo:unfold-lemma} and~\ref{geo:joint-average-lemma} average
+over the units of relative norm one and over translates of the ideal
+lattice; this counts exactly, on average, the pairs of lattice points in a
+window (Definition~\ref{geo:window}) that differ by the image of an element
+of $\bigcup_i\beta_i\mathcal O_K^1$. Lemmas~\ref{geo:dual}
+and~\ref{geo:poisson} bound the number of lattice points in a window
+uniformly, by Poisson summation. Finally, Proposition~\ref{geo:transfer},
+the geometric transfer, takes the window to be a sublevel set of the total
+energy of a pair of profiles (Definition~\ref{geo:profiles} and
+Lemma~\ref{geo:concentration}) and combines these steps.
+Section~\ref{fw:section} adds weights at finitely many split finite places
+(Proposition~\ref{fw:transfer}); that is the form used in
+Section~\ref{sec:certificate}. As in the introduction, $u(U)$ denotes the
+number of unordered pairs of points at distance one in a finite set
+$U\subset\R^2$.
+
+\subsection{Coordinates}
+This subsection identifies $K\otimes_\Q\R$ with $\C^d$ so that elements of
+relative norm one have modulus one at the compact coordinates, which give the
+planar map, and reciprocal moduli at the pair coordinates, which are used for
+unit averaging (Lemma~\ref{geo:norm-one}).
+
+A real place of $F$ extends to $K$ either as two real places or as one
+complex place, and by (G1) the second case occurs. A complex place of
+$F$ has two extensions to $K$, since $\C$ has no quadratic extension.
+Thus $K$ has exactly $d$ complex places.
+
+\begin{definition}\label{geo:coordinates}
+\begin{enumerate}
+\item[(a)] For each real place $v$ of $F$, let $\phi_v\colon K\to\C$ be one
+ of the two embeddings inducing the place of $K$ above $v$, and write
+ $v(y)\in\R$ for the image of $y\in F$ under the real embedding $v$. Number
+ the complex places of $F$ from $1$ to $c$. For the $j$-th one fix an
+ embedding $\phi_j^+\colon K\to\C$ whose restriction $\tau_j$ to $F$ induces
+ it, and put $\phi_j^-=\phi_j^+\circ\iota$.
+\item[(b)] For $x\in K$ put
+ \[
+  x_\infty=\bigl((\phi_v(x))_v,\ (\phi_j^+(x),\phi_j^-(x))_{j}\bigr)\in\C^d,
+ \]
+ and for $\mathfrak a\subset K$ put
+ $\mathfrak a_\infty=\{x_\infty:x\in\mathfrak a\}$.
+\item[(c)] For $x\in K^\times$ put
+ \[
+  l_j(x)=\tfrac12\bigl(\log|\phi_j^+(x)|-\log|\phi_j^-(x)|\bigr),
+  \qquad l(x)=(l_1(x),\dots,l_c(x))\in\R^c .
+ \]
+\item[(d)] The $b$ coordinates $\phi_v$ of $x_\infty$ are the \emph{compact
+ coordinates}, and the $c$ pairs $(\phi_j^+,\phi_j^-)$ are the \emph{pair
+ coordinates}. A compact coordinate, or a pair of coordinates, is called a
+ \emph{block}.
+\end{enumerate}
+\end{definition}
+
+The embeddings $\phi_j^\pm$ induce the two places of $K$ above the $j$-th
+complex place of $F$: they are distinct, and they are not complex conjugate,
+because $\tau_j$ is not real. We identify $K\otimes_\Q\R$ with $\C^d$ through
+the map $x\mapsto x_\infty$, and $\C^d$ with $\R^{2d}$ through real and
+imaginary parts. Volumes are Lebesgue measure in these coordinates, and
+$\langle x,\xi\rangle=\operatorname{Re}\sum_w x_w\overline{\xi_w}$ is the
+real inner product on $\C^d$, where $w$ runs over the $d$ coordinates. For a
+Borel set $\Omega$, $|\Omega|$ denotes its volume; for a finite set,
+$|\cdot|$ denotes its cardinality.
+
+\begin{lemma}\label{geo:norm-one}
+For $x\in K$, every real place $v$ of $F$ and $1\le j\le c$,
+\begin{equation}\label{geo:norm-modulus}
+ |\phi_v(x)|^2=v(N_{K/F}x),\qquad
+ \phi_j^+(x)\,\phi_j^-(x)=\tau_j(N_{K/F}x).
+\end{equation}
+In particular, if $N_{K/F}\beta=1$, then $|\phi_v(\beta)|=1$ for every real
+place $v$, and $|\phi_j^\pm(\beta)|=e^{\pm l_j(\beta)}$ for every $j$.
+\end{lemma}
+
+\begin{proof}
+At a real place $v$ of $F$, the automorphism $\iota$ induces complex
+conjugation on the completion $\C$ of $K$, so
+$\phi_v(\iota x)=\overline{\phi_v(x)}$, and
+$|\phi_v(x)|^2=\phi_v(x\,\iota x)=v(N_{K/F}x)$. Similarly
+$\phi_j^+(x)\phi_j^-(x)=\phi_j^+(x\,\iota x)=\tau_j(N_{K/F}x)$. If
+$N_{K/F}\beta=1$, the first identity gives $|\phi_v(\beta)|=1$, and the second
+gives $|\phi_j^+(\beta)|\,|\phi_j^-(\beta)|=1$, that is,
+$\log|\phi_j^\pm(\beta)|=\pm l_j(\beta)$.
+\end{proof}
+
+Thus at the compact coordinates the elements of relative norm one lie on the
+unit circle, and at the pair coordinates they have reciprocal moduli. The
+planar sets will be images under one compact coordinate, which is injective on
+$K$ and sends every element of relative norm one to a unit vector. We count
+ordered pairs of points at distance one, and divide by two at the end.
+
+\subsection{The Class-Number Formula for Units of Relative Norm One}
+
+This subsection expresses the quantity
+$w_K/(h_{\rm rel}h_{\rm cap}\operatorname{Reg}^1)$
+(Definition~\ref{geo:relative-units} and Proposition~\ref{geo:mass}), which governs the number
+of elements of relative norm one produced in the next subsections, through
+$L_F(1)$ (Proposition~\ref{geo:mass}). The hypothesis on $L_F(1)$ in
+Propositions~\ref{geo:transfer} and~\ref{fw:transfer} enters only through this
+formula.
+
+\begin{definition}\label{geo:relative-units}
+Let $\mathcal O_K^\times$ and $\mathcal O_F^\times$ be the unit groups,
+and put
+\[
+ \mathcal O_K^1=\ker\bigl(N_{K/F}\colon\mathcal O_K^\times\to
+ \mathcal O_F^\times\bigr),
+ \qquad u_N=[\mathcal O_F^\times:N_{K/F}(\mathcal O_K^\times)],
+\]
+the group of \emph{units of relative norm one} and the \emph{unit norm index}.
+Let $w_K$ be the number of roots of unity in $K$, let $h_K$ and $h_F$ be
+the class numbers of $K$ and $F$, put $h_{\rm rel}=h_K/h_F$, and let
+$h_{\rm cap}$ be the order of the \emph{capitulation kernel}
+$\ker\bigl(\Cl(F)\to\Cl(K)\bigr)$, the map being induced by extension of
+ideals. Let $L_F(s)=\zeta_K(s)/\zeta_F(s)$, the relative zeta function of the
+introduction; at $s=1$, $L_F(1)$ denotes the quotient
+of the residues of $\zeta_K$ and $\zeta_F$. The regulators
+$\operatorname{Reg}_K$ and $\operatorname{Reg}_F$ are the ordinary ones,
+which use twice the logarithm of the absolute value at a complex place
+\cite[Chapter~5]{MilneANT}.
+\end{definition}
+
+\begin{proposition}\label{geo:mass}
+The roots of unity of $K$ lie in $\mathcal O_K^1$, and the restriction of
+$l$ to $\mathcal O_K^1$ has kernel of order $w_K$ and image a full
+lattice in $\R^c$. Let $\operatorname{Reg}^1$ be the covolume of this
+lattice, with $\operatorname{Reg}^1=1$ if $c=0$. Then
+\[
+ h_{\rm cap}=u_N/2^{b-1},\qquad
+ \operatorname{Reg}_K/\operatorname{Reg}_F=2^{c-1}u_N\operatorname{Reg}^1,
+\]
+and consequently
+\begin{equation}\label{geo:mass-density}
+ \frac{w_K}{h_{\rm rel}h_{\rm cap}\operatorname{Reg}^1}
+ =\frac{2^{d-1}\pi^{b+c}}{\lambda^{d/2}L_F(1)}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+\emph{Signs.} Fix a real place $v_0$ of $F$. By
+\eqref{geo:norm-modulus}, $v_0(N_{K/F}x)=|\phi_{v_0}(x)|^2>0$ for
+$x\in K^\times$, so $-1$ is not a norm from $K^\times$. If $\zeta\in K$
+is a root of unity, then $N_{K/F}\zeta$ is a root of unity of $F$,
+hence $\pm1$ because $F$ has a real place, and it is positive at $v_0$.
+Thus $N_{K/F}\zeta=1$.
+
+\emph{Logarithmic embeddings.} For $x\in\mathcal O_K^\times$ and
+$y\in\mathcal O_F^\times$ let
+\[
+ \operatorname{Log}_K(x)=\bigl((2\log|\phi_vx|)_v,\,(2\log|\phi_j^+x|,
+ 2\log|\phi_j^-x|)_j\bigr),\qquad
+ \operatorname{Log}_F(y)=\bigl((\log|v(y)|)_v,\,(2\log|\tau_j(y)|)_j\bigr).
+\]
+Their images are lattices in the hyperplanes of coordinate sum zero,
+the kernel of $\operatorname{Log}_F$ is $\{\pm1\}$
+\cite[Proposition~5.8]{MilneANT}, and $\operatorname{Reg}_K$ and
+$\operatorname{Reg}_F$ are the covolumes of the images after one
+coordinate is deleted; the choice of the deleted coordinate does not
+matter.
+
+\emph{The lattice $l(\mathcal O_K^1)$.} Let $\beta\in\mathcal O_K^1$. Then
+$|\phi_v(\beta)|=1$ and $|\phi_j^\pm(\beta)|=e^{\pm l_j(\beta)}$, so
+\[
+ \operatorname{Log}_K(\beta)=\bigl(0,\ (2l_j(\beta),-2l_j(\beta))_j\bigr).
+\]
+Hence $l(\beta)=0$ exactly when every conjugate of $\beta$ has absolute
+value one, that is, when $\beta$ is a root of unity
+\cite[Corollary~5.6]{MilneANT}. By the first step the kernel of $l$ on
+$\mathcal O_K^1$ has order $w_K$. The norm of $y\in\mathcal O_F^\times$
+is $y^2$, so $N_{K/F}(\mathcal O_K^\times)$ has finite index in
+$\mathcal O_F^\times$ and rank $b+c-1$. By the unit theorem
+\cite[Theorem~5.1]{MilneANT}, $\mathcal O_K^\times$ has rank $d-1$, so
+$\mathcal O_K^1$ has rank $c$. As $\operatorname{Log}_K(\mathcal O_K^1)$
+is discrete, so is $l(\mathcal O_K^1)$, and it is a full lattice in
+$\R^c$.
+
+\emph{The capitulation kernel.} The Herbrand quotient of a
+$\langle\iota\rangle$-module $M$ is
+\[
+ h_{\rm Her}(M)=|\widehat H^0(\langle\iota\rangle,M)|/|H^1(\langle\iota\rangle,M)|
+\]
+\cite[Chapter~II, \S3]{MilneCFT}. For the units it satisfies
+$2\,h_{\rm Her}(\mathcal O_K^\times)=\prod_v[K_w:F_v]$, where $v$ runs over the
+archimedean places of $F$, $w$ lies above $v$, and $K_w$ and $F_v$ are the
+completions \cite[Chapter~VII, Proposition~3.1]{MilneCFT}. Each real place
+contributes $2$ and each complex place $1$, so
+$h_{\rm Her}(\mathcal O_K^\times)=2^{b-1}$. Since
+$\widehat H^0(\langle\iota\rangle,\mathcal O_K^\times)=\mathcal
+O_F^\times/N_{K/F}(\mathcal O_K^\times)$ has order $u_N$, we get
+$|H^1(\langle\iota\rangle,\mathcal O_K^\times)|=u_N/2^{b-1}$. This group
+is $\mathcal O_K^1$ modulo the units $\gamma/\iota\gamma$ with
+$\gamma\in\mathcal O_K^\times$. If $\mathfrak a$ is a fractional ideal
+of $F$ with $\mathfrak a\mathcal O_K=x\mathcal O_K$, the class of the
+unit $x/\iota x$ depends neither on the choice of $x$ nor on the choice
+of $\mathfrak a$ in its ideal class. This defines a homomorphism from
+$\ker(\Cl(F)\to\Cl(K))$ to $H^1(\langle\iota\rangle,\mathcal O_K^\times)$.
+It is injective: if $x/\iota x=\gamma/\iota\gamma$, then $y=x/\gamma$
+lies in $F$ and $\mathfrak a\mathcal O_K=y\mathcal O_K$, so
+$\mathfrak a=y\mathcal O_F$ by unique factorization. It is surjective:
+by Hilbert's Theorem~90 \cite[Chapter~II, Corollary~1.23]{MilneCFT}, an
+element of $\mathcal O_K^1$ has the form $x/\iota x$ with
+$x\in K^\times$, and then the fractional ideal
+$x\mathcal O_K=(\iota x)\mathcal O_K$ is invariant under $\iota$. By
+(G2), every $\iota$-invariant fractional ideal of $K$ is extended from
+$F$: at a split prime $\mathfrak P\,\iota\mathfrak P$ invariance forces
+equal exponents, an inert prime of $F$ stays prime, and no prime
+ramifies. Hence $h_{\rm cap}=u_N/2^{b-1}$.
+
+\emph{Regulators.} Delete the coordinate of $v_0$ from both logarithmic
+embeddings, and let $\mathcal U_K\subset\R^{d-1}$ and
+$\mathcal U_F\subset\R^{b+c-1}$ be the resulting lattices, of covolumes
+$\operatorname{Reg}_K$ and $\operatorname{Reg}_F$. By
+\eqref{geo:norm-modulus}, $\operatorname{Log}_F(N_{K/F}x)$ is obtained
+from $\operatorname{Log}_K(x)$ by keeping the coordinates of the real
+places and adding the two coordinates of each pair. This induces a
+linear map $T\colon\R^{d-1}\to\R^{b+c-1}$ such that
+$T(\mathcal U_K)$ is the image of $N_{K/F}(\mathcal O_K^\times)$ in
+$\mathcal U_F$. The substitution $(x_j,y_j)\mapsto(x_j,x_j+y_j)$ on each
+pair has determinant one and turns $T$ into a coordinate projection
+whose kernel consists of the $c$ coordinates $x_j$. The covolume of a
+lattice in a product of two coordinate spaces is the covolume of its
+intersection with the first factor times the covolume of its projection
+to the second, whenever both are lattices.
+
+A unit $x\in\mathcal O_K^\times$ lies in the kernel of $T$ exactly
+when $\operatorname{Log}_F(N_{K/F}x)=0$, because the deleted coordinate
+is minus the sum of the others. Then $N_{K/F}x=\pm1$, and $N_{K/F}x=1$
+by the first step. So the intersection of $\mathcal U_K$ with the kernel is
+the image of $\mathcal O_K^1$, which after the substitution is
+$2l(\mathcal O_K^1)$, of covolume $2^c\operatorname{Reg}^1$. Since
+$-1\notin N_{K/F}(\mathcal O_K^\times)$, the projection
+$T(\mathcal U_K)$ has index
+$[\mathcal O_F^\times:\{\pm1\}N_{K/F}(\mathcal O_K^\times)]=u_N/2$ in
+$\mathcal U_F$. Hence
+$\operatorname{Reg}_K=2^c\operatorname{Reg}^1\cdot\operatorname{Reg}_Fu_N/2$.
+
+\emph{The class-number formula.} The analytic class-number formula
+\cite[Chapter~V, Theorem~2.4]{MilneCFT} (compare
+\eqref{an:class-formula}), applied to $K$ (with $r_1=0$
+and $r_2=d$) and to $F$ (with $r_1=b$, $r_2=c$ and $w_F=2$), gives
+\[
+ L_F(1)=\frac{(2\pi)^dh_K\operatorname{Reg}_K}{w_K\lambda^d}\cdot
+ \frac{2\lambda^{d/2}}{2^b(2\pi)^ch_F\operatorname{Reg}_F}
+ =\frac{2^{c+1}\pi^{b+c}h_{\rm rel}}{w_K\lambda^{d/2}}\,
+ \frac{\operatorname{Reg}_K}{\operatorname{Reg}_F}.
+\]
+Substituting
+$\operatorname{Reg}_K/\operatorname{Reg}_F=2^{c-1}u_N\operatorname{Reg}^1
+=2^{b+c-2}h_{\rm cap}\operatorname{Reg}^1$ gives \eqref{geo:mass-density}.
+\end{proof}
+
+\subsection{Norm-One Elements from Split Primes}
+
+This subsection produces, from the split primes above a finite set
+$\mathcal R$ of rational primes, at least $e^{dJ}/(h_{\rm cap}h_{\rm rel})$
+elements of relative norm one in one fractional ideal, with pairwise disjoint
+cosets modulo $\mathcal O_K^1$ (Lemma~\ref{geo:selection}); this is the source
+of the term $J$ of Definition~\ref{geo:exponents} in the margin.
+
+\begin{definition}\label{geo:uniform-types}
+Let $\mathcal R$ be a finite set of rational primes. The extension $K/F$
+has \emph{uniform local types} $(e_r,f_r)_{r\in\mathcal R}$ if, for every
+$r\in\mathcal R$, every prime of $F$ above $r$ splits in $K$ and has
+absolute type $(e_r,f_r)$ (Definition~\ref{tw:type}).
+\end{definition}
+
+\begin{lemma}\label{geo:prime-count}
+If $K/F$ has uniform local types $(e_r,f_r)_{r\in\mathcal R}$, then for
+every $r\in\mathcal R$ the field $F$ has exactly $d/(e_rf_r)$ primes above
+$r$, each of norm $r^{f_r}$.
+\end{lemma}
+
+\begin{proof}
+The products $e_{\mathfrak p}f_{\mathfrak p}$ of the absolute ramification
+indices and residue degrees of the primes $\mathfrak p$ of $F$ above $r$ add
+up to $[F:\Q]=d$, and here each product is $e_rf_r$ and each norm is
+$r^{f_r}$.
+\end{proof}
+
+\begin{definition}\label{geo:exponents}
+Let $\mathcal R$ and $(e_r,f_r)_{r\in\mathcal R}$ be as in
+Definition~\ref{geo:uniform-types}. Given integers $k_r\ge0$
+($r\in\mathcal R$), called the \emph{exponents}, put
+\begin{equation}\label{geo:HJ}
+ H=\sum_{r\in\mathcal R}\frac{k_r\log r}{e_r},\qquad
+ J=\sum_{r\in\mathcal R}\frac{\log(k_r+1)}{e_rf_r}.
+\end{equation}
+If $K/F$ has uniform local types $(e_r,f_r)_{r\in\mathcal R}$, then by
+Lemma~\ref{geo:prime-count}, $e^{dH}=\prod_{\mathfrak p}(\mathrm N\mathfrak
+p)^{k_r}$ and $e^{dJ}=\prod_{\mathfrak p}(k_r+1)$, the products over the
+primes $\mathfrak p$ of $F$ above $\mathcal R$, with $r$ the prime below
+$\mathfrak p$: $H$ measures the density of the ideal lattice used, and $J$ the
+number of equal-norm choices.
+\end{definition}
+
+\begin{lemma}\label{geo:selection}
+Assume that $K/F$ has uniform local types $(e_r,f_r)_{r\in\mathcal R}$, and
+fix exponents $k_r\ge0$, with $H$ and $J$ as in
+Definition~\ref{geo:exponents}. There are a
+fractional ideal $\mathfrak b$ of $K$ with $\mathrm N\mathfrak b=e^{-dH}$, an integer
+$t\ge e^{dJ}/(h_{\rm cap}h_{\rm rel})$, and elements
+$\beta_1,\dots,\beta_t\in\mathfrak b$ of relative norm one whose cosets
+$\beta_i\mathcal O_K^1$ are pairwise disjoint.
+\end{lemma}
+
+\begin{proof}
+For each prime $\mathfrak p$ of $F$ above a prime $r\in\mathcal R$, write
+$\mathfrak p\mathcal O_K=\mathfrak P_{\mathfrak p}\,\iota\mathfrak
+P_{\mathfrak p}$ and $k_{\mathfrak p}=k_r$. For integer vectors
+$\boldsymbol j=(j_{\mathfrak p})$ with $0\le j_{\mathfrak p}\le
+k_{\mathfrak p}$ put
+\[
+ \mathfrak A_{\boldsymbol j}=\prod_{\mathfrak p}
+ \mathfrak P_{\mathfrak p}^{j_{\mathfrak p}},\qquad
+ \mathfrak J_{\boldsymbol j}=\prod_{\mathfrak p}
+ \mathfrak P_{\mathfrak p}^{j_{\mathfrak p}}
+ (\iota\mathfrak P_{\mathfrak p})^{k_{\mathfrak p}-j_{\mathfrak p}}.
+\]
+There are $\prod_{\mathfrak p}(k_{\mathfrak p}+1)=e^{dJ}$ such vectors.
+The quotient of $\Cl(K)$ by the image of $\Cl(F)$ has order
+$h_Kh_{\rm cap}/h_F=h_{\rm cap}h_{\rm rel}$, so one class of this quotient
+contains the classes of $\mathfrak A_{\boldsymbol j}$ for a set of
+$t\ge e^{dJ}/(h_{\rm cap}h_{\rm rel})$ vectors $\boldsymbol j$. Fix one of
+them, $\boldsymbol j_0$, and put $\mathfrak b=\mathfrak J_{\boldsymbol j_0}^{-1}$.
+For each $\boldsymbol j$ in the set, write
+$\mathfrak A_{\boldsymbol j}\mathfrak A_{\boldsymbol j_0}^{-1}
+=x\,\mathfrak a\mathcal O_K$ with $x\in K^\times$ and $\mathfrak a$ a
+fractional ideal of $F$, and put $\beta_{\boldsymbol j}=x/\iota x$.
+Then $N_{K/F}\beta_{\boldsymbol j}=1$, and since $\iota$ fixes
+$\mathfrak a\mathcal O_K$,
+\[
+ \beta_{\boldsymbol j}\mathcal O_K
+ =\mathfrak A_{\boldsymbol j}\mathfrak A_{\boldsymbol j_0}^{-1}
+ \bigl(\iota\mathfrak A_{\boldsymbol j}\bigr)^{-1}
+ \iota\mathfrak A_{\boldsymbol j_0}
+ =\mathfrak J_{\boldsymbol j}\mathfrak b.
+\]
+As $\mathfrak J_{\boldsymbol j}$ is integral,
+$\beta_{\boldsymbol j}\in\mathfrak b$. The ideals $\mathfrak J_{\boldsymbol j}\mathfrak b$
+are distinct for distinct $\boldsymbol j$, and every element of
+$\beta_{\boldsymbol j}\mathcal O_K^1$ generates
+$\mathfrak J_{\boldsymbol j}\mathfrak b$, so the cosets are disjoint. Finally,
+since each $\mathfrak p$ splits in $K$, Lemma~\ref{geo:prime-count} gives
+$(\mathrm N\mathfrak b)^{-1}=\prod_{\mathfrak p}(\mathrm N\mathfrak p)^{k_{\mathfrak p}}
+=\prod_r r^{f_rk_rd/(e_rf_r)}=e^{dH}$.
+\end{proof}
+
+\subsection{Unit Averaging and Translation}
+This subsection averages over the units of relative norm one and over the
+translates of an ideal lattice (Lemmas~\ref{geo:unfold-lemma}
+and~\ref{geo:joint-average-lemma}), which yields a translate with many
+ordered edges per point (Definition~\ref{geo:counts}), and turns such a
+translate into a planar set
+(Lemma~\ref{geo:planar}).
+
+In this subsection and the next, $\mathfrak b$ is a fractional ideal of $K$ and
+$\beta_1,\dots,\beta_t\in\mathfrak b$ are elements of relative norm one whose
+cosets $\beta_i\mathcal O_K^1$ are pairwise disjoint;
+Lemma~\ref{geo:selection} provides such data. For $h\in\R^c$ let
+$W_h\colon\C^d\to\C^d$ multiply the coordinate $\phi_j^+$ by
+$e^{-h_j}$ and $\phi_j^-$ by $e^{h_j}$, and fix the compact
+coordinates. It is a real diagonal map of determinant one. Put
+$\Lambda_h=W_h\mathfrak b_\infty$. For a lattice $\Lambda\subset\C^d$,
+$\covol(\Lambda)$ denotes the volume of a fundamental domain. By
+\cite[Proposition~4.26]{MilneANT}, extended to fractional ideals by
+scaling and \cite[Proposition~4.2]{MilneANT},
+\begin{equation}\label{geo:covolume}
+ \covol(\mathfrak a_\infty)=2^{-d}|\Delta_K|^{1/2}\mathrm N\mathfrak a
+\end{equation}
+for every fractional ideal $\mathfrak a$ of $K$. Hence
+$\covol(\Lambda_h)=2^{-d}\lambda^d\mathrm N\mathfrak b$, independently of $h$; for the
+ideal of Lemma~\ref{geo:selection},
+\begin{equation}\label{geo:determinant}
+ \covol(\Lambda_h)=2^{-d}\lambda^de^{-dH}.
+\end{equation}
+If $N_{K/F}\beta=1$, then by Lemma~\ref{geo:norm-one}
+$W_h\beta_\infty$ has compact coordinates of modulus one and pair
+coordinates of moduli $e^{\pm(l_j(\beta)-h_j)}$.
+Let $\Pi^1$ be a fundamental parallelepiped of the lattice
+$l(\mathcal O_K^1)$; its volume is $\operatorname{Reg}^1$. When $c=0$,
+integrals over $\R^0$ and over $\Pi^1$ are evaluations at the single
+point.
+
+\begin{lemma}\label{geo:unfold-lemma}
+For every Borel function $\Phi\colon\R^c\to[0,\infty]$,
+\begin{equation}\label{geo:unfold}
+ \frac1{\operatorname{Reg}^1}\int_{\Pi^1}\sum_{i=1}^t
+ \sum_{\beta\in\beta_i\mathcal O_K^1}\Phi(l(\beta)-h)\,dh
+ =\frac{tw_K}{\operatorname{Reg}^1}\int_{\R^c}\Phi(u)\,du .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The map $l$ is a homomorphism on $K^\times$, so
+$l(\beta_i\mathcal O_K^1)=l(\beta_i)+l(\mathcal O_K^1)$, and by
+Proposition~\ref{geo:mass} each point of this translate of
+$l(\mathcal O_K^1)$ is the image of exactly $w_K$ elements of
+$\beta_i\mathcal O_K^1$. The translates $\Pi^1-x$, with
+$x\in l(\mathcal O_K^1)$, tile $\R^c$, so by Tonelli's theorem
+$\int_{\Pi^1}\sum_{x\in l(\mathcal
+O_K^1)}\Phi(l(\beta_i)+x-h)\,dh=\int_{\R^c}\Phi(u)\,du$ for each
+$i$.
+\end{proof}
+
+\begin{definition}\label{geo:window}
+A \emph{window} is a bounded Borel set $\Omega\subset\C^d$ of positive
+volume that is invariant under rotation of each coordinate separately.
+For $u\in\R^c$ let the \emph{unit-norm displacement} $\mathbf e(u)\in\C^d$
+have compact coordinates $1$ and pair coordinates $(e^{u_j},e^{-u_j})$, and
+for a Borel set $\Omega\subset\C^d$ put
+\[
+ \Phi_\Omega(u)=|\Omega\cap(\Omega-\mathbf e(u))|.
+\]
+\end{definition}
+
+\begin{lemma}\label{geo:phi-omega}
+Let $\Omega$ be a window.
+\begin{enumerate}
+\item[(a)] If $h\in\R^c$ and $\beta\in K$ satisfies $N_{K/F}\beta=1$, then
+ $|\Omega\cap(\Omega-W_h\beta_\infty)|=\Phi_\Omega(l(\beta)-h)$.
+\item[(b)] The function $\Phi_\Omega$ is continuous, bounded by $|\Omega|$,
+ and vanishes at every $u$ for which some $e^{|u_j|}$ exceeds the diameter of
+ $\Omega$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) If $x\in\C^d$ has compact coordinates of modulus one and pair
+coordinates of moduli $e^{\pm u_j}$, then a rotation of the coordinates
+preserves $\Omega$ and maps $\mathbf e(u)$ to $x$, so
+$|\Omega\cap(\Omega-x)|=\Phi_\Omega(u)$. By the remark before
+Lemma~\fref{geo:unfold-lemma}, $x=W_h\beta_\infty$ is such a point, with
+$u=l(\beta)-h$.
+
+(b) We have $\Phi_\Omega(u)=\int\mathbf 1_\Omega(x)\mathbf
+1_\Omega(x+\mathbf e(u))\,dx\le|\Omega|$. For $y,y'\in\C^d$,
+$\bigl||\Omega\cap(\Omega-y)|-|\Omega\cap(\Omega-y')|\bigr|$ is at most the
+$L^1$-norm of $\mathbf 1_\Omega(\cdot+y)-\mathbf 1_\Omega(\cdot+y')$, which
+tends to $0$ as $y'\to y$ because translation is continuous in $L^1(\C^d)$;
+and $u\mapsto\mathbf e(u)$ is continuous. So $\Phi_\Omega$ is continuous. If
+$x$ and $x+\mathbf e(u)$ both lie in $\Omega$, then $e^{|u_j|}$, the modulus
+of a coordinate of their difference $\mathbf e(u)$, is at most the diameter of
+$\Omega$.
+\end{proof}
+
+\begin{definition}\label{geo:counts}
+Let $\Omega$ be a window. Fix a $\Z$-basis of $\mathfrak b_\infty$, and for
+$y\in[0,1)^{2d}$ let $y_{\mathfrak b}\in\C^d$ be the point with coordinate
+vector $y$ in this basis. For $h\in\R^c$ let
+$\mathcal X(h,y)=(\Lambda_h+W_hy_{\mathfrak b})\cap\Omega$ and
+$n(h,y)=|\mathcal X(h,y)|$, and let $\mathcal E(h,y)$ be the number of
+\emph{ordered edges} of $\mathcal X(h,y)$, that is, of pairs $(x,\beta)$
+with $x\in\mathcal X(h,y)$, $\beta\in\bigcup_i\beta_i\mathcal O_K^1$ and
+$x+W_h\beta_\infty\in\Omega$.
+\end{definition}
+
+Since $\beta\in\mathfrak b$, the second endpoint $x+W_h\beta_\infty$ of an
+ordered edge $(x,\beta)$ also lies in $\mathcal X(h,y)$.
+
+\begin{lemma}\label{geo:joint-average-lemma}
+Let $\Omega$ be a window and suppose $n(h,y)\le n_{\max}<\infty$ for
+all $(h,y)$. Then there is a pair $(h,y)$ with $n(h,y)>0$ and
+\begin{equation}\label{geo:joint-average}
+ \frac{\mathcal E(h,y)}{n(h,y)}\ge
+ \frac{tw_K}{\operatorname{Reg}^1}\,
+ \frac{\int_{\R^c}\Phi_\Omega(u)\,du}{|\Omega|}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For fixed $x$, distinct $\beta$ give distinct points
+$x+W_h\beta_\infty\ne x$, so $\mathcal E\le n^2\le n_{\max}^2$. Both $n$
+and $\mathcal E$ are countable sums of indicator functions of Borel sets
+in $(h,y)$. For fixed $h$, the map $y\mapsto W_hy_{\mathfrak b}$ has Jacobian
+$\covol(\Lambda_h)$ and maps $[0,1)^{2d}$ onto a fundamental domain of
+$\Lambda_h$, so tiling and Lemma~\ref{geo:phi-omega}(a) give
+\[
+ \int_{[0,1)^{2d}}n(h,y)\,dy=\frac{|\Omega|}{\covol(\Lambda_h)},\qquad
+ \int_{[0,1)^{2d}}\mathcal E(h,y)\,dy
+ =\frac1{\covol(\Lambda_h)}\sum_{i}\sum_{\beta\in\beta_i\mathcal O_K^1}
+ \Phi_\Omega(l(\beta)-h).
+\]
+Average over $h\in\Pi^1$ with respect to $dh/\operatorname{Reg}^1$ and
+apply \eqref{geo:unfold}. For the probability measure
+$dh\,dy/\operatorname{Reg}^1$ on $\Pi^1\times[0,1)^{2d}$ this gives
+$\mathbb E\,\mathcal E=\rho\,\mathbb En$ and
+$\mathbb En=|\Omega|/\covol(\Lambda_h)>0$, where $\rho$ is the right
+side of \eqref{geo:joint-average}. If $\mathcal E<\rho n$ held wherever
+$n>0$, then, since $\mathcal E=0$ where $n=0$ and $\{n>0\}$ has positive
+measure, we would get $\mathbb E\,\mathcal E<\rho\,\mathbb En$.
+\end{proof}
+
+\begin{lemma}\label{geo:planar}
+Let $\Omega$ be a window, let $(h,y)$ be a pair, and let $v_0$ be a real
+place of $F$. For $x\in\C^d$ let $x_{v_0}$ be its compact coordinate at
+$v_0$, and let $U=\{x_{v_0}:x\in\mathcal X(h,y)\}\subset\C=\R^2$. Then
+$|U|=n(h,y)$ and $u(U)\ge\mathcal E(h,y)/2$.
+\end{lemma}
+
+\begin{proof}
+Two distinct points of $\mathcal X(h,y)$ differ by $W_h\gamma_\infty$
+with $0\ne\gamma\in\mathfrak b$, whose $v_0$-coordinate $\phi_{v_0}(\gamma)$ is
+nonzero, so $|U|=n(h,y)$. An ordered edge $(x,\beta)$ gives two points of
+$U$ at distance $|\phi_{v_0}(\beta)|=1$, and distinct ordered edges give
+distinct ordered pairs of points. Hence $u(U)\ge\mathcal E(h,y)/2$.
+\end{proof}
+
+\subsection{Uniform Lattice Counting}
+This subsection bounds the number of lattice points in a window uniformly in
+the translate (Lemmas~\ref{geo:dual} and~\ref{geo:poisson}); this gives the
+bound for $n(h,y)$ in the proof of Proposition~\ref{geo:transfer}.
+
+For a lattice $\Lambda\subset\C^d$ let
+$\Lambda^*=\{\xi\in\C^d:\langle\xi,x\rangle\in\Z\text{ for all
+}x\in\Lambda\}$ be its dual lattice, and let
+$\|\xi\|_*=\sum_w|\xi_w|$, a norm on $\C^d$. We use the Fourier
+transform $\widehat\Psi(\xi)=\int_{\C^d}\Psi(x)e^{-2\pi i\langle
+x,\xi\rangle}\,dx$.
+
+\begin{lemma}\label{geo:dual}
+Let $\mathfrak a$ be a fractional ideal of $K$ and $h\in\R^c$. Every
+nonzero $\xi$ in the dual lattice of $W_h\mathfrak a_\infty$ satisfies
+\[
+ \prod_w|\xi_w|\ge\frac{2^d}{\lambda^d(\mathrm N\mathfrak a)^{1/2}},
+ \qquad
+ \|\xi\|_*\ge\frac{2d}{\lambda(\mathrm N\mathfrak a)^{1/(2d)}}.
+\]
+In particular, if $\mathrm N\mathfrak b=e^{-dH}$, as for the ideal of
+Lemma~\ref{geo:selection}, every nonzero dual vector of $\Lambda_h$
+satisfies
+\begin{equation}\label{geo:dual-product}
+ \prod_w|\xi_w|\ge\mu^d,\qquad \mu=2e^{H/2-\ell},\qquad
+ \|\xi\|_*\ge d\mu.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+First let $h=0$. For $x,y\in K$ we have
+$\langle x_\infty,\overline{y_\infty}\rangle
+=\operatorname{Re}\sum_w\phi_w(xy)=\tfrac12\Tr_{K/\Q}(xy)$, where the
+bar is coordinatewise complex conjugation and $\phi_w$ is the
+embedding of the coordinate $w$, because these embeddings and their
+complex conjugates are all the embeddings of $K$. Let
+$\mathfrak a^\vee=\{y\in K:\Tr_{K/\Q}(y\mathfrak a)\subset\Z\}$. It is an
+$\mathcal O_K$-module, and since the trace form is nondegenerate, the
+dual basis of a $\Z$-basis of $\mathfrak a$ is a $\Z$-basis of
+$\mathfrak a^\vee$. So $\mathfrak a^\vee$ is a fractional ideal, and
+the dual lattice of $\mathfrak a_\infty$ is
+$\overline{(2\mathfrak a^\vee)_\infty}$. Dual lattices have reciprocal
+covolumes, and complex conjugation preserves volume. With
+\eqref{geo:covolume} and $\mathrm N(2\mathfrak a^\vee)=2^{2d}\mathrm N(\mathfrak a^\vee)$, this
+gives $\mathrm N(\mathfrak a^\vee)=\lambda^{-2d}(\mathrm N\mathfrak a)^{-1}$. If
+$0\ne y\in\mathfrak a^\vee$, then $y\mathcal O_K\subset\mathfrak a^\vee$
+and $|N_{K/\Q}y|=\mathrm N(y\mathcal O_K)\ge \mathrm N(\mathfrak a^\vee)$
+\cite[Propositions~4.1 and~4.2]{MilneANT}. For
+$\xi=\overline{(2y)_\infty}$,
+\[
+ \prod_w|\xi_w|=|N_{K/\Q}(2y)|^{1/2}
+ \ge\bigl(2^{2d}\lambda^{-2d}(\mathrm N\mathfrak a)^{-1}\bigr)^{1/2}.
+\]
+For general $h$, the dual lattice of $W_h\mathfrak a_\infty$ is the
+image of the dual lattice of $\mathfrak a_\infty$ under $W_{-h}$,
+because $W_h$ is real diagonal, and $W_{-h}$ preserves
+$\prod_w|\xi_w|$. The bound for $\|\xi\|_*$ follows from the
+arithmetic-geometric mean inequality. For \eqref{geo:dual-product} take
+$\mathfrak a=\mathfrak b$.
+\end{proof}
+
+\begin{lemma}\label{geo:poisson}
+Let $\Lambda\subset\C^d$ be a lattice such that
+$\prod_w|\xi_w|\ge\mu^d$ for every nonzero $\xi\in\Lambda^*$, where
+$\mu>0$. Let $\Psi\colon\C^d\to[0,\infty)$ be smooth, bounded and
+integrable, with $\int\Psi>0$ and all partial derivatives bounded, and
+suppose that
+\[
+ |\widehat\Psi(\xi)|\le M^de^{-\varsigma\|\xi\|_*}\int\Psi
+ \qquad(\xi\in\C^d)
+\]
+for some $M\ge1$ and $\varsigma>0$. If the \emph{Fourier condition}
+\begin{equation}\label{geo:poisson-condition}
+ \varsigma\mu\ge\log M+2\log5+2
+\end{equation}
+holds, then for every $y\in\C^d$,
+\begin{equation}\label{geo:pointwise-poisson}
+ \sum_{x\in\Lambda+y}\Psi(x)\le\frac2{\covol(\Lambda)}\int\Psi.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+A nonzero $\xi\in\Lambda^*$ has no zero coordinate, and the
+arithmetic-geometric mean inequality gives $\|\xi\|_*\ge d\mu$. Hence
+distinct points of $\Lambda^*$ are at $\|\cdot\|_*$-distance at least
+$d\mu$, and the open $\|\cdot\|_*$-balls of radius $d\mu/2$ about them
+are disjoint. For $j\ge1$, the balls about the points with
+$jd\mu\le\|\xi\|_*<(j+1)d\mu$ lie in the ball of radius $(j+3/2)d\mu$
+about $0$. Comparing volumes in $\R^{2d}$ bounds the number of these
+points by $(2j+3)^{2d}\le5^{2dj}$. By the Fourier condition
+\eqref{geo:poisson-condition} and
+$M\ge1$,
+\[
+ M^d\sum_{\xi\in\Lambda^*\setminus\{0\}}e^{-\varsigma\|\xi\|_*}
+ \le\sum_{j\ge1}e^{d(\log M+2j\log5-j\varsigma\mu)}
+ \le\sum_{j\ge1}e^{-2dj}\le1 .
+\]
+
+For $\varepsilon>0$ put $\Psi_\varepsilon(x)=\Psi(x)e^{-\varepsilon|x|^2}$, a Schwartz
+function. Its Fourier transform is $\widehat\Psi*G_\varepsilon$, where
+$G_\varepsilon(\zeta)=(\pi/\varepsilon)^de^{-\pi^2|\zeta|^2/\varepsilon}$ is a probability
+density on $\R^{2d}$. Hence
+$|\widehat{\Psi_\varepsilon}(\xi)|\le m_\varepsilon M^de^{-\varsigma\|\xi\|_*}\int\Psi$,
+with $m_\varepsilon=\int e^{\varsigma\|\zeta\|_*}G_\varepsilon(\zeta)\,d\zeta$. The function
+$y\mapsto\sum_{x\in\Lambda}\Psi_\varepsilon(x+y)$ is smooth and
+$\Lambda$-periodic, its Fourier coefficient at $\xi\in\Lambda^*$ is
+$\widehat{\Psi_\varepsilon}(\xi)/\covol(\Lambda)$, and these coefficients are
+absolutely summable. This gives the Poisson summation formula
+\[
+ \sum_{x\in\Lambda}\Psi_\varepsilon(x+y)
+ =\frac1{\covol(\Lambda)}\sum_{\xi\in\Lambda^*}\widehat{\Psi_\varepsilon}(\xi)
+ e^{2\pi i\langle\xi,y\rangle}.
+\]
+Using $\widehat{\Psi_\varepsilon}(0)=\int\Psi_\varepsilon$ and the bound above, the sum
+is at most $(\int\Psi_\varepsilon+m_\varepsilon\int\Psi)/\covol(\Lambda)$. As
+$\varepsilon\to0$, we have $m_\varepsilon\to1$ by dominated convergence, since
+$G_\varepsilon$ is the image of $G_1$ under $\zeta\mapsto\sqrt\varepsilon\,\zeta$;
+moreover $\Psi_\varepsilon$ increases to $\Psi$. Monotone convergence gives
+\eqref{geo:pointwise-poisson}.
+\end{proof}
+
+The next bound is used in Section~\ref{pf:section} for the Gaussian
+real-place profile (Definition~\ref{geo:profiles}).
+
+\begin{lemma}\label{geo:gaussian}
+If $0<a_\R\le1$ and $\Psi_\R(z)=e^{-a_\R|z|^2}$ on $\C$, then
+$\widehat{\Psi_\R}(\xi)=(\pi/a_\R)e^{-\pi^2|\xi|^2/a_\R}$ and
+$|\widehat{\Psi_\R}(\xi)|\le2e^{-|\xi|}\int\Psi_\R$.
+\end{lemma}
+
+\begin{proof}
+The formula is the Gaussian integral, and $\int\Psi_\R=\pi/a_\R$. Since
+$a_\R\le1$, it suffices that $\pi^2x^2-x+\log2\ge0$ for $x\ge0$, and the
+minimum of the left side is $\log2-1/(4\pi^2)>0$.
+\end{proof}
+
+\subsection{Profiles at Real and Complex Places}
+
+This subsection defines the archimedean profiles, their functionals $J_\R$ and
+$J_\C$ and the admissibility conditions (P1)--(P5), and combines the previous
+subsections into Proposition~\ref{geo:transfer}. Section~\ref{pf:section}
+verifies admissibility for the profiles used in
+Section~\ref{sec:certificate}.
+
+\begin{definition}\label{geo:profiles}
+Fix $0<\delta<1$ and put $p=2/(1+\delta)$, the \emph{Lebesgue exponent}
+(not a prime), so that $1<p<2$ and $p(1+\delta)=2$. A \emph{real-place
+profile} is a positive radial function $f_\R$ on $\C$, used at the compact
+coordinates, and a \emph{complex-place profile} is a positive function
+$g_\C$ on $\C^2$ that depends only on $|z|$ and $|w|$, used at the pair
+coordinates. Their \emph{masses} $A_\R$, $A_\C$, \emph{overlaps} $I_\R$,
+$I_\C$ and \emph{functionals} $J_\R$, $J_\C$ are
+\[
+ A_\R=\int_\C f_\R^p,\qquad I_\R=\int_\C f_\R(z)f_\R(z+1)\,dz,
+ \qquad A_\C=\int_{\C^2}g_\C^p,
+\]
+\[
+ I_\C=\int_\R\int_{\C^2}g_\C(z,w)\,g_\C(z+e^u,w+e^{-u})\,dz\,dw\,du,
+\]
+\[
+ J_\R=\log I_\R-(1+\delta)\log A_\R,\qquad
+ J_\C=\log I_\C-(1+\delta)\log A_\C.
+\]
+When these integrals are finite and positive, the \emph{endpoint laws}
+are the probability densities $f_\R(z)f_\R(z+1)/I_\R$ on $\C$ and
+$g_\C(z,w)g_\C(z+e^u,w+e^{-u})/I_\C$ on $\C^2\times\R$. The functions
+$V_\R=-\log f_\R$ and $V_\C=-\log g_\C$ are the \emph{energies} of the
+profiles.
+\end{definition}
+
+The exponent $p$ is chosen so that the terms in the mean energy cancel at
+the end of the proof of Proposition~\ref{geo:transfer}.
+
+\begin{definition}\label{geo:admissible}
+Let $M\ge1$ and $\varsigma>0$. The pair $(f_\R,g_\C)$ is \emph{admissible
+with Fourier constants $(M,\varsigma)$} if:
+\begin{enumerate}
+\item[(P1)] $f_\R^p$ and $g_\C^p$ are smooth and bounded, and all their
+partial derivatives are bounded;
+\item[(P2)] $A_\R$, $I_\R$, $A_\C$ and $I_\C$ are finite and positive;
+\item[(P3)] $V_\R$ and $V_\C$ are bounded below and coercive, that is,
+their sublevel sets are bounded;
+\item[(P4)] $V_\R(z)$ and $V_\C(z,w)$ have finite second moments under
+the endpoint laws;
+\item[(P5)] $|\widehat{f_\R^p}(\xi)|\le Me^{-\varsigma|\xi|}A_\R$ and
+$|\widehat{g_\C^p}(\xi_1,\xi_2)|\le M^2e^{-\varsigma(|\xi_1|+|\xi_2|)}A_\C$
+for all $\xi,\xi_1,\xi_2\in\C$.
+\end{enumerate}
+\end{definition}
+
+Section~\ref{pf:section} proves admissibility for the profiles we use.
+
+\begin{lemma}\label{geo:tensor}
+Let $(f_\R,g_\C)$ be admissible with Fourier constants $(M,\varsigma)$
+(Definition~\ref{geo:admissible}), and
+let $\Psi=\prod_vf_\R^p\prod_jg_\C^p$ be the product function on $\C^d$,
+with one factor for each block. Then $\Psi$ satisfies the hypotheses that
+Lemma~\ref{geo:poisson} places on $\Psi$, other than the Fourier condition
+\eqref{geo:poisson-condition}: it is smooth and bounded, with bounded
+derivatives, $\int\Psi=A_\R^bA_\C^c$, and
+\[
+ |\widehat\Psi(\xi)|\le M^de^{-\varsigma\|\xi\|_*}\int\Psi\qquad(\xi\in\C^d).
+\]
+\end{lemma}
+
+\begin{proof}
+The first properties follow from (P1) and (P2). The Fourier transform of
+$\Psi$ is the product of the transforms of the factors, so (P5) gives
+$|\widehat\Psi(\xi)|\le M^{b+2c}e^{-\varsigma\|\xi\|_*}\int\Psi
+=M^de^{-\varsigma\|\xi\|_*}\int\Psi$.
+\end{proof}
+
+\begin{lemma}\label{geo:concentration}
+Let $f_\R$ and $g_\C$ be profiles satisfying (P1), (P2) and (P4), and let
+$\eta>0$. Let $m_\R$ and $m_\C$ be the means of $V_\R(z)$ and $V_\C(z,w)$
+under the endpoint laws, and let $\mathrm{Var}_\R$ and $\mathrm{Var}_\C$ be
+their variances. For $x\in\C^d$ with compact coordinates $x_v$ and pair
+coordinates $(x_j^+,x_j^-)$, let
+$V(x)=\sum_vV_\R(x_v)+\sum_jV_\C(x_j^+,x_j^-)$ be the total energy, put
+$\bar m=(bm_\R+cm_\C)/d$, and let
+\[
+ \Omega=\bigl\{x\in\C^d:V(x)\le d(\bar m+\eta)\bigr\}.
+\]
+Then, for all $d$ larger than a bound that depends only on $\eta$,
+$\mathrm{Var}_\R$ and $\mathrm{Var}_\C$,
+\[
+ \int_{\R^c}\Phi_\Omega(u)\,du\ge\tfrac12I_\R^bI_\C^ce^{2d(\bar m-\eta)}.
+\]
+\end{lemma}
+
+\begin{proof}
+By (P1), $f_\R$ and $g_\C$ are continuous, so $V$ is continuous and
+$\Omega$ is closed, hence a Borel set. The function
+$(x,u)\mapsto e^{-V(x)}e^{-V(x+\mathbf e(u))}/(I_\R^bI_\C^c)$ is the
+product of the endpoint densities of the blocks, hence a probability
+density on $\C^d\times\R^c$. Under it, the energies $V(x)$ and
+$V(x+\mathbf e(u))$ of the two endpoints are sums of independent terms, one for
+each block, and $V(x)$ has mean $d\bar m$. On a compact block the map
+$z\mapsto-z-1$, and on a pair block the map
+$(z,w,u_j)\mapsto(-z-e^{u_j},-w-e^{-u_j},u_j)$, preserves the endpoint
+density and carries the first endpoint to minus the second. Since the
+profiles are even, $V(x+\mathbf e(u))$ has the same law as $V(x)$. By
+Chebyshev's inequality, each of the two energies differs from $d\bar m$
+by more than $\eta d$ with probability at most
+$\max(\mathrm{Var}_\R,\mathrm{Var}_\C)/(\eta^2d)$. So the set
+$\mathcal Y\subset\C^d\times\R^c$ where both energies lie in
+$[d(\bar m-\eta),d(\bar m+\eta)]$ has probability at least $1/2$ for all
+$d$ larger than a bound that depends only on $\eta$, $\mathrm{Var}_\R$ and
+$\mathrm{Var}_\C$. On $\mathcal Y$ both endpoints lie in $\Omega$ and
+$e^{-V(x)}e^{-V(x+\mathbf e(u))}\le e^{-2d(\bar m-\eta)}$. Therefore, with
+$|\mathcal Y|$ the Lebesgue measure of $\mathcal Y$,
+\[
+ \int_{\R^c}\Phi_\Omega(u)\,du\ge|\mathcal Y|
+ \ge e^{2d(\bar m-\eta)}I_\R^bI_\C^c\,\mathbb P(\mathcal Y)
+ \ge\tfrac12I_\R^bI_\C^ce^{2d(\bar m-\eta)}.
+\]
+\end{proof}
+
+\begin{proposition}[Geometric transfer]\label{geo:transfer}
+Let $0<\delta<1$ and $C\in\R$. Let $(K_i/F_i)_{i\ge1}$ be quadratic
+extensions satisfying (G1)--(G3) with a common $\lambda$ and with
+$d_i=[F_i:\Q]\to\infty$, such that $\log L_{F_i}(1)\le d_iC$ and such
+that every $K_i/F_i$ has the same uniform local types
+$(e_r,f_r)_{r\in\mathcal R}$. Fix integers $k_r\ge0$, let $H$ and $J$ be
+as in \eqref{geo:HJ}, and let $\mu=2e^{H/2-\ell}$. Let $(f_\R,g_\C)$ be
+admissible with Fourier constants $(M,\varsigma)$ (Definition~\ref{geo:admissible})
+satisfying the Fourier
+condition \eqref{geo:poisson-condition}. Put
+\begin{equation}\label{geo:general-margin}
+ \mathcal M(\theta)=J-\delta H-(1/2-\delta)\ell-C
+ +(1-\delta)\log2+(1-\theta)\log\pi
+ +(1-2\theta)J_\R+\theta J_\C.
+\end{equation}
+We call $\mathcal M(\theta)$ the \emph{margin}. If
+$\inf_i\mathcal M(\theta_i)>0$, where $\theta_i$ is the value of
+$\theta$ for $F_i$, then there are finite sets $U_i\subset\R^2$ with
+$|U_i|\to\infty$ and $u(U_i)/|U_i|^{1+\delta}\to\infty$.
+\end{proposition}
+
+\begin{proof}
+\emph{The window.} Let $m_\R$, $m_\C$, $\mathrm{Var}_\R$ and
+$\mathrm{Var}_\C$ be as in Lemma~\ref{geo:concentration}; the variances
+are finite by (P4). Fix $\eta>0$ with
+$4\eta<\inf_i\mathcal M(\theta_i)$, and consider one extension $K/F$ of
+the sequence, with $d$ large. Take $\mathfrak b$, $t$ and
+$\beta_1,\dots,\beta_t$ from Lemma~\ref{geo:selection}, so that
+$\Lambda_h$ is defined; the counts $n(h,y)$ and $\mathcal E(h,y)$ of
+Definition~\ref{geo:counts} are those
+of the window $\Omega$ chosen next. With the total energy $V$ and the mean
+$\bar m$ of Lemma~\ref{geo:concentration}, let
+\[
+ \Omega=\bigl\{x\in\C^d:V(x)\le d(\bar m+\eta)\bigr\}.
+\]
+By (P1) and (P3) (see the proof of Lemma~\ref{geo:concentration}), this
+is a bounded Borel set, and it is invariant under
+coordinate rotations because the profiles are radial in each
+coordinate. By Lemma~\ref{geo:concentration},
+\[
+ \int_{\R^c}\Phi_\Omega(u)\,du\ge\tfrac12I_\R^bI_\C^ce^{2d(\bar m-\eta)}
+\]
+for all large $d$, uniformly in the signature. In particular
+$|\Omega|>0$ for large $d$, so $\Omega$ is a window.
+
+\emph{Counting points.} With the product function
+$\Psi=\prod_vf_\R^p\prod_jg_\C^p=e^{-pV}$ of Lemma~\ref{geo:tensor}, we
+have $\mathbf 1_\Omega\le e^{pd(\bar m+\eta)}\Psi$, so
+\[
+ |\Omega|\le e^{pd(\bar m+\eta)}A_\R^bA_\C^c,
+\]
+and Lemmas~\ref{geo:dual}, \ref{geo:poisson} and~\ref{geo:tensor} give,
+for all $(h,y)$,
+\[
+ n(h,y)\le\frac{2e^{pd(\bar m+\eta)}A_\R^bA_\C^c}{\covol(\Lambda_h)}
+ =2e^{dY_\eta},\qquad
+ Y_\eta=H+\log2-\ell+(1-2\theta)\log A_\R+\theta\log A_\C
+ +p(\bar m+\eta),
+\]
+by \eqref{geo:determinant}, $b/d=1-2\theta$ and $c/d=\theta$ (here $b$ and
+$c$ are the numbers of real and complex places of $F$; the ideal $\mathfrak b$
+is unrelated).
+
+\emph{Counting edges.} Now take a pair $(h,y)$ from
+Lemma~\ref{geo:joint-average-lemma}, applied with
+$n_{\max}=2e^{dY_\eta}$. By $t\ge e^{dJ}/(h_{\rm cap}h_{\rm rel})$,
+Proposition~\ref{geo:mass}, $\log L_F(1)\le dC$ and $b+c=(1-\theta)d$,
+\[
+ \frac{tw_K}{\operatorname{Reg}^1}\ge
+ \frac{e^{dJ}2^{d-1}\pi^{b+c}}{\lambda^{d/2}L_F(1)}
+ \ge\tfrac12\exp\bigl(d[J+\log2+(1-\theta)\log\pi-\ell/2-C]\bigr).
+\]
+Combined with the bounds for $|\Omega|$ and for the integral of
+$\Phi_\Omega$, \eqref{geo:joint-average} shows that the set
+$\mathcal X=\mathcal X(h,y)$ has $n=|\mathcal X|>0$ points and at least
+$\tfrac14e^{dX_\eta}n$ ordered edges, where
+\[
+ \begin{aligned}
+ X_\eta={}&J+\log2+(1-\theta)\log\pi-\ell/2-C
+ +(1-2\theta)(\log I_\R-\log A_\R)\\
+ &+\theta(\log I_\C-\log A_\C)+(2-p)\bar m-(2+p)\eta.
+ \end{aligned}
+\]
+Since $n\le2e^{dY_\eta}$ and $p(1+\delta)=2$, the terms in $\bar m$ cancel,
+and
+\[
+ \frac{\mathcal E(h,y)}{n^{1+\delta}}
+ \ge\frac{e^{dX_\eta}}{4\cdot2^\delta e^{\delta dY_\eta}}
+ =2^{-2-\delta}e^{d(\mathcal M(\theta)-4\eta)}.
+\]
+
+\emph{The planar set.} Finally let $v_0$ be a real place of $F$, and let
+$U=\{x_{v_0}:x\in\mathcal X\}\subset\C=\R^2$. By
+Lemma~\ref{geo:planar}, $|U|=n$ and $u(U)\ge\mathcal E(h,y)/2$, so
+\[
+ \frac{u(U)}{|U|^{1+\delta}}
+ \ge2^{-3-\delta}e^{d(\mathcal M(\theta)-4\eta)},
+\]
+which tends to infinity along the sequence. Since $u(U)\le|U|^2/2$ and
+$\delta<1$, also $|U|\to\infty$. These sets are the $U_i$. The
+conclusion concerns a sequence of cardinalities, not every large
+cardinality.
+\end{proof}

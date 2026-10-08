@@ -8,7 +8,7 @@ Writes
                                                       bounds, final bound, checks)
 
 The mass is E[P(T,U)^p] for T, U i.i.d. Beta(q,1) with
-p = 2/(1+delta) = 20000/10427 and q = s p - 1 = 12493117/10427000
+p = 2/(1+delta) = 40000/20863 and q = s p - 1 = 12488617/10431500
 (s = 22920117/20000000, the manuscript's).  The unit square is cut into
 N x N cells; on each cell the Lean side bounds P^p by h^p times the degree-3
 binomial polynomial in w = P/h - 1 plus the uniform tail, integrates it exactly
@@ -51,8 +51,8 @@ HPDIGITS = 20               # significant digits of the center powers
 CDIGITS = 15                # decimals of the per-cell contribution bounds
 MDIGITS = 9                 # decimals of the final bound
 
-pQ = Q(20000, 10427)
-qQ = Q(12493117, 10427000)
+pQ = Q(40000, 20863)
+qQ = Q(12488617, 10431500)
 assert Q(22920117, 20000000) * pQ - 1 == qQ
 
 # Power-basis coefficients of the manuscript polynomial

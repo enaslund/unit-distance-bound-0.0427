@@ -1,7 +1,7 @@
 module
 
 public import UnitDistance.Sqrt241.Levels.Restriction
-public import UnitDistance.Sqrt241.Retained.Concrete
+public import UnitDistance.Sqrt241.Retained.Sym
 public import UnitDistance.Sqrt241.GroupData.LocalModels
 public import UnitDistance.ProfiniteGeneratedTameFiniteImage
 public import UnitDistance.OddLocalRetainedImage
@@ -14,7 +14,9 @@ set_option autoImplicit false
 /-!
 # Local images at the tame primes `3` and `5`
 
-For an admissible `K` (`kernelHat ≤ Gal(Ω/K) ≤ core`) and a tame place `q`
+For a `K` admissible for the symmetric input `inputSym` (`inputSym.kernelHat ≤ Gal(Ω/K) ≤ core`;
+`Retained/Sym.lean`: every field admissible for version 1's `input` is, and so is the Galois
+closure of every version 2 level) and a tame place `q`
 (`𝔮₁, 𝔮₂, 𝔯₁, 𝔯₂`), with `t, f` the restrictions to `K` of the tame pair `τ_q, φ_q`
 (`Local.tameInertia q`, `Local.tameFrobenius q`):
 
@@ -44,7 +46,8 @@ attribute [local instance] PrimeCompletion.primeFact PrimeCompletion.baseRationa
 
 /-! ### Cut words at the tame places -/
 
-theorem tameInertia_sq_word (q : Fin 4) : input.A.tameInertia q ^ 2 ∈ input.A.lifts.words := by
+theorem tameInertia_sq_word (q : Fin 4) :
+    inputSym.A.tameInertia q ^ 2 ∈ inputSym.A.lifts.words := by
   fin_cases q
   · exact Or.inl (Or.inl ⟨13, rfl⟩)
   · exact Or.inl (Or.inl ⟨14, rfl⟩)
@@ -52,35 +55,35 @@ theorem tameInertia_sq_word (q : Fin 4) : input.A.tameInertia q ^ 2 ∈ input.A.
   · exact Or.inl (Or.inl ⟨16, rfl⟩)
 
 theorem tameFrobenius_sq_word (q : Fin 4) :
-    input.A.tameFrobenius q ^ 2 ∈ input.A.lifts.words := by
+    inputSym.A.tameFrobenius q ^ 2 ∈ inputSym.A.lifts.words := by
   fin_cases q
   · exact Or.inl (Or.inl ⟨17, rfl⟩)
   · exact Or.inl (Or.inl ⟨18, rfl⟩)
   · exact Or.inl (Or.inl ⟨19, rfl⟩)
   · exact Or.inl (Or.inl ⟨20, rfl⟩)
 
-theorem freeMap_tameInertia (q : Fin 4) : freeMap (input.A.tameInertia q) = tameInertia q :=
+theorem freeMap_tameInertia (q : Fin 4) : freeMap (inputSym.A.tameInertia q) = tameInertia q :=
   LocalElements.freeMap_lift _
 
 theorem freeMap_tameFrobenius (q : Fin 4) :
-    freeMap (input.A.tameFrobenius q) = tameFrobenius q :=
+    freeMap (inputSym.A.tameFrobenius q) = tameFrobenius q :=
   LocalElements.freeMap_lift _
 
 section Images
 
 variable {K : IntermediateField ℚ Omega} [FiniteDimensional ℚ K] [IsGalois ℚ K]
-  (hker : input.kernelHat ≤ K.fixingSubgroup) (hcore : K.fixingSubgroup ≤ input.core)
+  (hker : inputSym.kernelHat ≤ K.fixingSubgroup) (hcore : K.fixingSubgroup ≤ inputSym.core)
 
 include hker in
 theorem resB_tameInertia_sq (q : Fin 4) : resB K (tameInertia q) ^ 2 = 1 := by
-  have h := input.res_eq_one_of_word hker (tameInertia_sq_word q)
+  have h := inputSym.res_eq_one_of_word hker (tameInertia_sq_word q)
   rw [map_pow, freeMap_tameInertia] at h
   rw [← map_pow]
   exact h
 
 include hker in
 theorem resB_tameFrobenius_sq (q : Fin 4) : resB K (tameFrobenius q) ^ 2 = 1 := by
-  have h := input.res_eq_one_of_word hker (tameFrobenius_sq_word q)
+  have h := inputSym.res_eq_one_of_word hker (tameFrobenius_sq_word q)
   rw [map_pow, freeMap_tameFrobenius] at h
   rw [← map_pow]
   exact h
@@ -97,11 +100,11 @@ theorem resB_tame_commute (q : Fin 4) :
 
 theorem tameInertia_label (q : Fin 4) :
     genusLabel (tameInertia q) = Multiplicative.ofAdd (tameInertiaVector q) :=
-  input.labels.tameInertia q
+  inputSym.labels.tameInertia q
 
 theorem tameFrobenius_label (q : Fin 4) :
     genusLabel (tameFrobenius q) = Multiplicative.ofAdd (tameFrobeniusVector q) :=
-  input.labels.tameFrobenius q
+  inputSym.labels.tameFrobenius q
 
 /-- The local map `C₂ × C₂ → Gal(K/ℚ)`. -/
 def tameMapK (q : Fin 4) : D 0 →* Gal(K/ℚ) :=
@@ -127,7 +130,7 @@ theorem tameMapK_injective (q : Fin 4) : Function.Injective (tameMapK hker q) :=
   intro x hx
   change tameMapK hker q x = 1 at hx
   rw [tameMapK_apply, ← map_pow, ← map_pow, ← map_mul] at hx
-  have hl := input.genusLabel_eq_of_resB_eq hcore (hx.trans (map_one (resB K)).symm)
+  have hl := inputSym.genusLabel_eq_of_resB_eq hcore (hx.trans (map_one (resB K)).symm)
   rw [map_mul, map_pow, map_pow, tameInertia_label, tameFrobenius_label, map_one] at hl
   have hv : x.1.toAdd.val • tameInertiaVector q + x.2.toAdd.val • tameFrobeniusVector q = 0 := by
     have := congrArg Multiplicative.toAdd hl
@@ -162,7 +165,7 @@ theorem card_closure_tame (q : Fin 4) :
 include hcore in
 theorem resB_tameInertia_ne_one (q : Fin 4) : resB K (tameInertia q) ≠ 1 := by
   intro h
-  have hl := input.genusLabel_eq_of_resB_eq hcore (h.trans (map_one (resB K)).symm)
+  have hl := inputSym.genusLabel_eq_of_resB_eq hcore (h.trans (map_one (resB K)).symm)
   rw [tameInertia_label, map_one] at hl
   have hv : tameInertiaVector q = 0 := congrArg Multiplicative.toAdd hl
   have hc := LocalModels.tame_independent_certificate q 1 0 (by rw [hv]; simp)

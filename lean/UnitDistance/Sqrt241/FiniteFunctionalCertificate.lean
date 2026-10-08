@@ -12,7 +12,7 @@ set_option backward.privateInPublic true
 Port of the finite-profit part of `UnitDistance.FiniteFunctionalCertificate`.
 Every real-power and logarithm enclosure used here is proved in the generated
 certificate modules; the conclusion is a lower bound for the finite-place
-functional `finiteProfit` of `UnitDistance.Sqrt241.Witness` at δ = 0.0427.
+functional `finiteProfit` of `UnitDistance.Sqrt241.Witness` at δ = 0.04315.
 -/
 
 noncomputable section
@@ -37,7 +37,7 @@ theorem finiteLogFunctional_lower (v : Fin 5) :
 
 /-- The full lower rational sum, before rounding. -/
 theorem finiteProfit_explicit_lower :
-    (231032666637334688580197 : ℝ) / 320000000000000000000000 ≤ finiteProfit := by
+    (459906351912729240389471 : ℝ) / 640000000000000000000000 ≤ finiteProfit := by
   calc
     _ = ∑ v : Fin 5, finiteFunctionalLower v / (ramification v * residueDegree v) := by
       norm_num [finiteFunctionalLower, increment, periodPower, residueLogUpper,
@@ -48,8 +48,8 @@ theorem finiteProfit_explicit_lower :
       intro v _
       exact div_le_div_of_nonneg_right (finiteLogFunctional_lower v) (by positivity)
 
-/-- Evaluation of the finite-place witness functional at δ = 0.0427. -/
-theorem finiteProfit_lower : (721977083 : ℝ) / 10^9 ≤ finiteProfit := by
+/-- Evaluation of the finite-place witness functional at δ = 0.04315. -/
+theorem finiteProfit_lower : (718603674 : ℝ) / 10^9 ≤ finiteProfit := by
   linarith [finiteProfit_explicit_lower]
 
 end UnitDistance.Sqrt241.Witness

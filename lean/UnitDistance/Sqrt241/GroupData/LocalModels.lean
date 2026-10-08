@@ -230,6 +230,17 @@ theorem cap_square_ne_one (g : Q) (k : Fin 3) (hb : g.base = capVector k) : g^2 
   rw [sq_coordinates,hb] at hc
   exact (cap_square_ne_zero_certificate k).2 hc
 
+theorem cap_square_ne_one_of_good (g : Q) (hb : CapGood g.base) : g^2 ≠ 1 := by
+  intro h
+  have hc := congrArg GroupModel.central h
+  rw [sq_coordinates] at hc
+  exact hb.2 hc
+
+/-- Caps: any lift with an admissible vector gives a strict `C₄`. -/
+theorem cap_layers_of_good (g : Q) (hb : CapGood g.base) (n : ℕ) :
+    Function.Injective (layerMap F (Cyclic 4) (cyclicMap 4 g (pow_four_eq_one cocycle g)) n) :=
+  cyclicFour_layers cocycle g (cap_square_ne_one_of_good g hb) hb.1 n
+
 /-- Caps: any lift with the vector of the cap gives a strict `C₄`. -/
 theorem cap_layers (g : Q) (k : Fin 3) (hb : g.base = capVector k) (n : ℕ) :
     Function.Injective (layerMap F (Cyclic 4) (cyclicMap 4 g (pow_four_eq_one cocycle g)) n) :=

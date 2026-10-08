@@ -1,0 +1,920 @@
+\section{\texorpdfstring{Dihedral Quotients of the Tower and the Field $E_{W''}$}{Dihedral Quotients of the Tower and the Field E\_W''}}
+\label{dh:section}
+
+Every field $K\in\mathcal K$ contains the fixed field of $D_3G_B$
+(Theorem~\ref{tw:field-family}), whose Galois group over $B$ is the extension
+$G_B/D_3G_B$ of $G_B/D_2G_B=\Gal(E/B)=\Ftwo^8$ by
+$\operatorname{gr}_2G_B=D_2G_B/D_3G_B$, of dimension $15$
+(Lemma~\ref{tw:quadratic-layer}). The Kummer field $E$ sees only the quotient
+$\Ftwo^8$. In particular, a prime of $B$ whose Frobenius vector is $0$ splits
+completely in $E$, and the comparison with $E$ treats it as if it split
+completely in $K$. This section uses the layer $\operatorname{gr}_2G_B$:
+through dihedral quotients of $G_B$ it gives lower bounds for residue
+degrees, by a census for primes of norm at most $4\cdot10^{13}$ and through
+the field $\EW$ for all norms, and it supplies the system of floors of
+Definition~\ref{dh:floors}.
+
+Subsection~\ref{dh:forms-section} identifies the linear forms on
+$\operatorname{gr}_2G_B$ with quadratic forms and finds the $27$ forms of
+dihedral type; Subsection~\ref{dh:fields-section} realizes each of them by a
+dihedral field contained in every $K\in\mathcal K$.
+Subsection~\ref{dh:W-section} defines the space $W''$ spanned by four of
+these forms. Subsection~\ref{dh:census-section} reports the census of the
+primes of degree one with Frobenius vector $0$.
+Subsection~\ref{dh:EW-section} studies the field $\EW$ and factors its zeta
+function into the $L$-functions evaluated in Section~\ref{lv:section}, and
+Subsection~\ref{dh:floors-section} defines the floors and expresses their
+floor sum through $\zeta_{\EW}$, for use in Section~\ref{ce:section}.
+
+In Sections~\ref{dh:section}--\ref{ce:section}, supplementary programs and
+data files are named by their paths relative to the directory
+\texttt{certificates/dihedral} if they lie in it, and relative to
+\texttt{certificates} otherwise; the names are unique.
+
+For $r,v\in\Ftwo^8$ we write $r\cdot v=\sum_ir_iv_i\in\Ftwo$, and, as in
+Definition~\ref{gf:characters}, $\alpha_r=\prod_i\alpha_i^{r_i}$ and
+$\chi_r(g)=(-1)^{r\cdot\bar g}$, where $\bar g\in\Ftwo^8$ is the elementary
+image of $g$ (Definition~\ref{tw:elementary-image}). We use the same symbol
+$\chi_r$ for the inflation of this character to any Galois group over $B$
+that maps onto $\Gal(E/B)$. We write $\mathrm{Dih}_4$ for the dihedral group
+of order $8$.
+
+\subsection{\texorpdfstring{Linear forms on $\operatorname{gr}_2G_B$}{Linear forms on gr\_2 G\_B}}
+\label{dh:forms-section}
+This subsection identifies the linear forms on $\operatorname{gr}_2G_B$
+with quadratic forms on $\Ftwo^8$ (Lemma~\ref{dh:quadratic}) and isolates the
+$27$ forms whose polar form has rank $2$ (Lemma~\ref{dh:27}). All of them
+are of dihedral type (Definition~\ref{dh:dihedral-type}), and the next
+subsection realizes each of them by a dihedral field.
+
+Recall (Lemma~\ref{tw:graded}) that $\operatorname{gr}_2G_B=\mathfrak
+L_2/R_2$, where $\mathfrak L_2$ is the degree-two part of the free
+restricted Lie algebra on $\mathfrak L_1=\Ftwo^8$ and $R_2$ is the relation
+space (Definition~\ref{tw:relation-space}). A \emph{quadratic form} on
+$\Ftwo^8$ is a function $Q\colon\Ftwo^8\to\Ftwo$ such that
+$Q(v+w)-Q(v)-Q(w)$ is bilinear in $v,w$; this bilinear form is its
+\emph{polar form}. It is alternating, and its rank is even.
+
+\begin{lemma}\label{dh:quadratic}
+For a linear form $\psi$ on $\mathfrak L_2$ put $q_\psi(v)=\psi(v^{[2]})$.
+Then $\psi\mapsto q_\psi$ is a linear bijection from the dual of
+$\mathfrak L_2$ onto the space of quadratic forms on $\Ftwo^8$, and the polar
+form of $q_\psi$ is $\operatorname{pol}_\psi(v,w)=\psi([v,w])$. The linear
+forms on $\operatorname{gr}_2G_B$ are the $\psi$ that vanish on $R_2$.
+\end{lemma}
+
+\begin{proof}
+The identity $(v+w)^{[2]}=v^{[2]}+w^{[2]}+[v,w]$ shows that $q_\psi$ is a
+quadratic form with polar form $\psi([v,w])$. The map is injective, because
+$\mathfrak L_2$ is spanned by the restricted squares $v^{[2]}$, the brackets
+being differences of them. Both spaces have dimension $36$.
+\end{proof}
+
+\begin{definition}\label{dh:dihedral-type}
+A linear form $\psi$ on $\operatorname{gr}_2G_B$ is \emph{of dihedral type} if
+there are linearly independent $r_1,r_2\in\Ftwo^8$ and
+$\mathbf r\in\Ftwo^2\setminus\{0\}$ such that, with
+$\phi(v)=(r_1\cdot v,r_2\cdot v)$,
+\[
+ q_\psi(v)=\begin{cases}1&\text{if }\phi(v)=\mathbf r,\\0&\text{otherwise.}
+ \end{cases}
+\]
+We call $(r_1,r_2,\mathbf r)$ \emph{data} for $\psi$, and $\phi$ its
+\emph{associated map} $\Ftwo^8\to\Ftwo^2$.
+\end{definition}
+
+\begin{lemma}\label{dh:dihedral-polar}
+Let $\psi$ be of dihedral type with data $(r_1,r_2,\mathbf r)$ and associated
+map $\phi$. Then $\operatorname{pol}_\psi(v,w)=\det(\phi(v),\phi(w))$; it has
+rank $2$, and its radical is $\ker\phi$.
+\end{lemma}
+
+\begin{proof}
+The function $x\mapsto[x=\mathbf r]$ on $\Ftwo^2$ is $x_1x_2$, $x_1+x_1x_2$
+or $x_2+x_1x_2$ for $\mathbf r=(1,1),(1,0),(0,1)$. The linear terms have
+polar form $0$, and $x_1x_2$ has polar form $x_1y_2+x_2y_1=\det(x,y)$. Since
+$q_\psi(v)=[\phi(v)=\mathbf r]$ and $\phi$ is linear,
+$\operatorname{pol}_\psi(v,w)=\det(\phi(v),\phi(w))$. As $r_1,r_2$ are
+linearly independent, $\phi$ is surjective, and $\det$ is nondegenerate on
+$\Ftwo^2$; so the radical is $\ker\phi$, of codimension $2$.
+\end{proof}
+
+\begin{lemma}\label{dh:27}
+Exactly $27$ of the $2^{15}-1$ nonzero linear forms on $\operatorname{gr}_2G_B$
+have a polar form (Lemma~\ref{dh:quadratic}) of rank $2$. All of them are of
+dihedral type (Definition~\ref{dh:dihedral-type}), and they span the dual of
+$\operatorname{gr}_2G_B$. The polar forms of the other nonzero forms have rank
+$4$, $6$ or $8$. We number the $27$ forms $0$ to $26$ as in the file
+\texttt{d4all27.json}, and write $\psi_o$ for the form number $o$.
+\end{lemma}
+
+\begin{proof}[Proof (computer-assisted)]
+The supplementary programs \texttt{d4search.py} and \texttt{plane.py}
+enumerate the linear forms on $\mathfrak L_2$ that vanish on the space $R_2$
+of \texttt{lie241.py} (Lemma~\ref{tw:quadratic-layer}), compute the ranks of
+their polar forms, and, for those of rank $2$, find data $(r_1,r_2,\mathbf r)$;
+the $27$ forms and their data are listed in \texttt{d4all27.json}.
+\end{proof}
+
+\subsection{Dihedral fields}\label{dh:fields-section}
+This subsection realizes each form of dihedral type by a Galois extension
+$M/B$ with group $\mathrm{Dih}_4$, contained in every $K\in\mathcal K$, and
+shows how $M$ forces even residue degrees (Lemma~\ref{dh:detection}); the
+elements that define these fields exist for all $27$ forms
+(Lemma~\ref{dh:beta-exists}). The census and the field $\EW$ are built from
+these fields.
+
+\begin{lemma}\label{dh:detection}
+Let $\psi$ be a form of dihedral type with data $(r_1,r_2,\mathbf r)$
+(Definition~\ref{dh:dihedral-type}). Put
+$F_0=B(\sqrt{\alpha_{r_1}},\sqrt{\alpha_{r_2}})$, a biquadratic extension of
+$B$ contained in $E$, and identify $\Gal(F_0/B)$ with $\Ftwo^2$ through the
+signs by which an element multiplies $\sqrt{\alpha_{r_1}}$ and
+$\sqrt{\alpha_{r_2}}$. Let $\beta\in F_0^\times$ be a unit outside the primes
+above $S$ such that, for each $\sigma\ne1$ in $\Gal(F_0/B)$ (in this lemma
+$\sigma$ denotes such an element):
+\begin{enumerate}
+\item[(D1)] $\sigma(\beta)/\beta=u_\sigma^2$ for some $u_\sigma\in F_0^\times$;
+\item[(D2)] the number $t_\sigma=u_\sigma\sigma(u_\sigma)$, which is $\pm1$, is
+ $-1$ exactly when $\sigma=\mathbf r$.
+\end{enumerate}
+Let $M=F_0(\sqrt\beta)$. Then:
+\begin{enumerate}
+\item[(a)] $M$ is Galois over $B$ with group isomorphic to $\mathrm{Dih}_4$.
+ The elements of $\Gal(M/B)$ with image $\mathbf r$ in $\Gal(F_0/B)$ have
+ order $4$.
+\item[(b)] $M$ lies in the fixed field of $D_3G_B$, hence in every
+ $K\in\mathcal K$. The quotient map $\pi_M\colon G_B\to\Gal(M/B)$ maps
+ $D_2G_B$ to the center $\langle z\rangle$ of $\Gal(M/B)$, by
+ $g\mapsto z^{\psi([g]_2)}$, where $[g]_2$ is the class of $g$ in
+ $\operatorname{gr}_2G_B$.
+\item[(c)] Let $\mathfrak p\notin S$ be a prime of $B$ that splits completely
+ in $F_0$, and suppose that $\beta$ is not a square in the residue field of a
+ prime of $F_0$ above $\mathfrak p$. Then $f_K(\mathfrak p)$ is even for every
+ $K\in\mathcal K$. The hypothesis does not depend on the prime of $F_0$ above
+ $\mathfrak p$.
+\item[(d)] Let $\mathfrak p\notin S$ have Frobenius vector $0$. Then the
+ Frobenius elements in $G_B$ of the primes of $B_G$ above $\mathfrak p$ lie in
+ $D_2G_B$, and they have the same class
+ $\overline{\Frob}^{(2)}_{\mathfrak p}\in\operatorname{gr}_2G_B$. The
+ hypothesis of (c) holds exactly when
+ $\psi(\overline{\Frob}^{(2)}_{\mathfrak p})=1$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Since $\sigma^2=1$, $t_\sigma^2=(\sigma(\beta)/\beta)\cdot\sigma(\sigma(\beta)/\beta)
+=\sigma^2(\beta)/\beta=1$, so $t_\sigma=\pm1$.
+
+(a) Every conjugate of $\beta$ over $B$ is $\beta$ times a square in $F_0$, so
+$M$ is Galois over $B$. If $\beta$ were a square in $F_0$, we could take
+$u_\sigma=\sigma(\sqrt\beta)/\sqrt\beta$, and then $t_\sigma=1$ for every
+$\sigma$, contrary to (D2); so $[M:B]=8$. Let $\tilde\sigma\in\Gal(M/B)$ lift
+$\sigma\ne1$. Then $\tilde\sigma(\sqrt\beta)=\eta u_\sigma\sqrt\beta$ with
+$\eta=\pm1$, and
+$\tilde\sigma^2(\sqrt\beta)=\eta\sigma(u_\sigma)\,\eta u_\sigma\sqrt\beta
+=t_\sigma\sqrt\beta$. So $\tilde\sigma^2$ is the generator $z$ of
+$\Gal(M/F_0)$ exactly when $\sigma=\mathbf r$. The group $\Gal(M/B)$ has order
+$8$, a central subgroup $\langle z\rangle$ (a normal subgroup of order two),
+and quotient $\Ftwo^2$; among such groups, $C_2^3$ has no element of order
+four, $C_4\times C_2$ has elements of order four above two of the three
+nonzero classes of the quotient, the quaternion group above all three, and
+$\mathrm{Dih}_4$ above exactly one. Hence $\Gal(M/B)\cong\mathrm{Dih}_4$. In
+$\mathrm{Dih}_4$, an element squares to $z$ exactly when its image in
+$\Ftwo^2$ is $\mathbf r$, and two elements have commutator $z$ exactly when
+their images are linearly independent.
+
+(b) The field $F_0$ lies in $E$, so it is unramified over $B$ outside $S$,
+and $\beta$ is a unit outside the primes above $S$, which include all primes
+above $2$; so $M/F_0$ is also unramified outside $S$. Since $[M:B]=8$, $M$
+lies in $B_S$, and restriction gives a surjection $\pi_M\colon
+G_S\to\Gal(M/B)$. If $g\in G_S$ has elementary image $v$, then $\pi_M(g)$ has
+image $\phi(v)$ in $\Gal(F_0/B)$, because $g(\sqrt{\alpha_r})=(-1)^{r\cdot v}
+\sqrt{\alpha_r}$. By (a) and Lemma~\ref{dh:dihedral-polar}, for $g,h\in G_S$
+with elementary images $v,w$,
+\[
+ \pi_M(g^2)=z^{q_\psi(v)},\qquad \pi_M([g,h])=z^{\operatorname{pol}_\psi(v,w)}.
+\]
+We check that $\pi_M$ kills the generators (ii)--(iv) of $N_B$ in
+Lemma~\ref{tw:GB-presentation}, more precisely their images in $G_S$, which
+generate $N$ as a normal subgroup. The elements $x_j^2$, $[x_j,y_j]$,
+$[x_j,z_j]$, $\tau_\nu^2$ and $\varphi_\nu^2$ map to $z^{\psi(\xi)}$, where
+$\xi$ is respectively $\bar x_j^{\,[2]}$, $[\bar x_j,\bar y_j]$,
+$[\bar x_j,\bar z_j]$, $\bar\tau_\nu^{\,[2]}$ and $\bar\varphi_\nu^{\,[2]}$;
+these lie in $R_2$ by \eqref{tw:initials-list}, and $\psi$ vanishes on $R_2$.
+The elements $[[y_j,z_j],z_j]$, $z_j^4$, $[y_j,z_j]^2$ and
+$\Frob_{\mathfrak t_k}^4$ map to $1$, since $\mathrm{Dih}_4$ has class two
+and exponent four and its commutators lie in $\langle z\rangle$. So $\pi_M$
+factors through $G_B$. Since $D_3(\mathrm{Dih}_4)=1$ (its Frattini subgroup
+is $\langle z\rangle$, which is central of order two), $\pi_M$ kills
+$D_3G_B$, and $M$ lies in the fixed field of $D_3G_B$, which is contained in
+every $K\in\mathcal K$. On $D_2G_B$, $\pi_M$ is a homomorphism to
+$\langle z\rangle$ that kills $D_3G_B$, hence factors through
+$\operatorname{gr}_2G_B$; it agrees with $g\mapsto z^{\psi([g]_2)}$ on
+squares and commutators, by the formulas above, and these classes span
+$\operatorname{gr}_2G_B$.
+
+(c) The prime $\mathfrak p$ is unramified in $M$. If it splits completely in
+$F_0$, then the Frobenius of a prime $\mathfrak P_M$ of $M$ above a prime
+$\mathfrak P$ of $F_0$ above $\mathfrak p$ lies in $\Gal(M/F_0)=\langle
+z\rangle$, and it is $z$ exactly when $\beta$, a unit at $\mathfrak P$, is not
+a square modulo $\mathfrak P$. In that case $f_M(\mathfrak p)=2$, and $2$
+divides $f_K(\mathfrak p)$ because $M\subseteq K$
+(Lemma~\ref{an:local-contribution}). The primes of $F_0$ above $\mathfrak p$
+are conjugate under $\Gal(F_0/B)$, and $\sigma(\beta)/\beta$ is a square, so
+the condition does not depend on $\mathfrak P$.
+
+(d) If the Frobenius vector of $\mathfrak p$ is $0$, a Frobenius element
+$g\in G_B$ of a prime of $B_G$ above $\mathfrak p$ lies in $D_2G_B$, and the
+primes above $\mathfrak p$ give conjugate elements, whose classes in
+$\operatorname{gr}_2G_B$ agree because $[G_B,D_2G_B]\subseteq D_3G_B$. By (b),
+$\pi_M(g)=z^{\psi(\overline{\Frob}^{(2)}_{\mathfrak p})}$, and $\pi_M(g)$ is
+the Frobenius of a prime of $M$ above $\mathfrak p$, which is $z$ exactly when
+the hypothesis of (c) holds.
+\end{proof}
+
+\begin{lemma}\label{dh:beta-exists}
+For each of the $27$ forms of Lemma~\ref{dh:27}, with the data
+$(r_1,r_2,\mathbf r)$ of \texttt{d4all27.json}, there is an element $\beta$
+satisfying the hypotheses of Lemma~\ref{dh:detection}. For the fifteen
+census forms, the forms numbered $0,5,9,17,22,14,3,7,4,15,6,20,12,24,13$
+(Definition~\fref{dh:census-basis}), and the seven forms of
+Table~\ref{dh:W-table}, the elements used in this paper are given by their
+coordinates in \texttt{d4fields15.json} and in \texttt{vd4\_data27.gp}; the
+forms $7$, $17$, $20$ and $24$ belong to both lists, so these are $18$
+distinct elements, checked $22$ times. For each of them, the ideal
+factorization involves only primes above $2$, $3$ and $5$, and for every
+$\sigma\ne1$ in $\Gal(F_0/B)$ the quotient $\sigma(\beta)/\beta$ is a square
+and the sign $t_\sigma$ is the one required by (D2).
+\end{lemma}
+
+\begin{proof}[Proof (computer-assisted)]
+The supplementary program \texttt{d4beta.gp} finds the elements: it computes
+the $S$-units of $F_0$ modulo squares, the elements whose conjugates are
+squares up to the element itself, and the linear map
+$\beta\mapsto(t_\sigma)_\sigma$, and solves for the pattern of $\mathbf r$.
+The programs \texttt{vd4.gp} (for the census forms) and \texttt{vplane4.gp}
+(for the seven forms of Table~\ref{dh:W-table}) verify each of the $22$
+(form, element) pairs in an independently built model of $F_0$: that $\beta$ is a unit
+outside the primes above $S$ (by PARI's \texttt{idealfactor}), that the
+quotients $\sigma(\beta)/\beta$ are squares with the stated signs
+$t_\sigma$, and that the relative discriminant of $F_0(\sqrt\beta)/F_0$ has
+norm divisible only by $2$, $3$ and $5$.
+\end{proof}
+
+\subsection{\texorpdfstring{The space $W''$}{The space W''}}\label{dh:W-section}
+This subsection defines the space $W''$ of linear forms on
+$\operatorname{gr}_2G_B$ spanned by four forms of dihedral type, its
+subspaces $W\subset W'$ used for the intermediate results of
+Section~\ref{lim:section}, and the field $\EW$ (Definition~\ref{dh:W}), and
+describes the fifteen nonzero elements of $W''$
+(Lemma~\ref{dh:W-structure}). The census (Subsection~\ref{dh:census-section})
+decides which primes lie in $\ker W''$, and
+Subsection~\ref{dh:EW-section} studies $\EW$.
+
+\begin{table}[htbp]
+\centering\small
+\caption{The seven forms $\psi_o$ of dihedral type in $W''$, numbered as in
+\texttt{d4all27.json}, with data $(r_{1,o},r_{2,o},\mathbf r_o)$, the vectors
+written as strings of their coordinates as in Section~\ref{tw:tower}, and the
+element $c_o\in B$ with $B_{c_o}=B(\sqrt{c_o})$ of Lemma~\ref{dh:Lfunctions}.
+The forms satisfy $\psi_{24}=\psi_{10}+\psi_{23}$,
+$\psi_{20}=\psi_{10}+\psi_{19}$ and $\psi_7=\psi_{17}+\psi_{19}$.}
+\label{dh:W-table}
+\begin{tabular}{rllll}
+\toprule
+$o$ & $r_{1,o}$ & $r_{2,o}$ & $\mathbf r_o$ & $c_o$\\
+\midrule
+$10$ & $00010011$ & $01001100$ & $(1,1)$ & $213033204-13722675\sqrt{241}$\\
+$23$ & $01011111$ & $10001011$ & $(0,1)$ & $155-10\sqrt{241}$\\
+$24$ & $01011111$ & $10011000$ & $(0,1)$ & $(-378557+24385\sqrt{241})/2$\\
+$19$ & $01001100$ & $10000010$ & $(1,1)$ & $-326+21\sqrt{241}$\\
+$20$ & $01001100$ & $10010001$ & $(1,1)$ & $(47-3\sqrt{241})/2$\\
+$17$ & $01000110$ & $10001000$ & $(1,1)$ & $-31+2\sqrt{241}$\\
+$7$ & $00001010$ & $11000100$ & $(1,1)$ & $-3433342+221161\sqrt{241}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{definition}\label{dh:W}
+Let $\psi_o$, $o\in\{10,23,24,19,20,17,7\}$, be the forms of
+Table~\ref{dh:W-table}, with data $(r_{1,o},r_{2,o},\mathbf r_o)$ and
+associated maps $\phi_o(v)=(r_{1,o}\cdot v,r_{2,o}\cdot v)$. Let
+$F_{0,o}=B(\sqrt{\alpha_{r_{1,o}}},\sqrt{\alpha_{r_{2,o}}})$, let
+$\beta_o\in F_{0,o}$ be the element of Lemma~\ref{dh:beta-exists}, and let
+$M_o=F_{0,o}(\sqrt{\beta_o})$ be the dihedral field of
+Lemma~\ref{dh:detection}. Put
+\[
+ W=\langle\psi_{10},\psi_{23}\rangle\subset
+ W'=\langle\psi_{10},\psi_{23},\psi_{19}\rangle\subset
+ W''=\langle\psi_{10},\psi_{23},\psi_{19},\psi_{17}\rangle.
+\]
+Let $W''^\perp\subset\operatorname{gr}_2G_B$ be the common kernel of the forms
+in $W''$, let $N_{W''}\subseteq D_2G_B$ be its preimage, and let $\EW$ be the
+fixed field of $N_{W''}$ in $B_G$. A prime $\mathfrak p\notin S$ of $B$ with
+Frobenius vector $0$ \emph{lies in} $\ker W''$ if
+$\overline{\Frob}^{(2)}_{\mathfrak p}\in W''^\perp$
+(Lemma~\ref{dh:detection}(d)), that is, if
+$\omega(\overline{\Frob}^{(2)}_{\mathfrak p})=0$ for every $\omega\in W''$;
+likewise for $\ker W$ and $\ker W'$.
+\end{definition}
+
+\begin{lemma}\label{dh:W-structure}
+The space $W''$ has dimension $4$. Its $15$ nonzero elements are the seven
+forms of Table~\ref{dh:W-table}, which are of dihedral type, and the eight
+forms $\psi_a+\psi_b$ for the pairs
+\[
+ (a,b)=(19,23),\ (19,24),\ (7,10),\ (17,10),\ (17,24),\ (7,24),\ (7,23),\
+ (17,23),
+\]
+whose polar forms have rank $4$; for each of these pairs the four vectors
+$r_{1,a},r_{2,a},r_{1,b},r_{2,b}$ span a space of dimension $4$, and
+$c_a/c_b$ is not a square in $B$. Every subspace of the dual of
+$\operatorname{gr}_2G_B$ that properly contains $W''$ contains a form whose
+polar form has rank at least $6$.
+\end{lemma}
+
+\begin{proof}[Proof (computer-assisted)]
+The supplementary program \texttt{plane4.py} computes the $15$
+elements and their polar ranks from \texttt{d4all27.json}, and checks the last
+statement by running over all $2^{15}$ linear forms; \texttt{vplane4.gp}
+verifies the seven dihedral fields (Lemma~\ref{dh:beta-exists}). The rank of
+the four vectors and the fields $B(\sqrt{c_a},\sqrt{c_b})$, of degree $8$
+over $\Q$, are checked by \path{deg8/export8.gp}.
+\end{proof}
+
+\subsection{The census}\label{dh:census-section}
+This subsection determines, for the primes of $B$ of degree one with
+Frobenius vector $0$ and norm at most $4\cdot10^{13}$, whether they lie in
+$\ker W''$ and whether fifteen fixed dihedral fields detect them
+(Proposition~\ref{dh:census}). The detected primes in $\ker W''$ receive the
+floor $2$ in Definition~\ref{dh:floors}, and the census determines the
+residue degrees in $\EW$ of the primes of small norm
+(Lemma~\ref{dh:floors-valid}).
+
+\begin{definition}\label{dh:census-basis}
+The \emph{census forms} are $\psi^{\rm c}_i=\psi_{o_i}$, $1\le i\le15$, where
+\[
+ (o_1,\dots,o_{15})=(0,5,9,17,22,14,3,7,4,15,6,20,12,24,13)
+\]
+is the order of the file \texttt{d4fields15.json}, which records their data
+and elements $\beta^{\rm c}_1,\dots,\beta^{\rm c}_{15}$
+(Lemma~\ref{dh:beta-exists}); let $F^{\rm c}_{0,i}$ be the field $F_0$ of
+Lemma~\ref{dh:detection} for $\psi^{\rm c}_i$. (The superscript distinguishes
+these from $\beta_o$ and $F_{0,o}$ of Definition~\ref{dh:W}, indexed by the form
+number $o$.) For a prime $\mathfrak p$ of $B$ of degree one with
+Frobenius vector $0$, its \emph{pattern} is
+\[
+ \operatorname{pat}(\mathfrak p)
+ =\bigl(\psi^{\rm c}_i(\overline{\Frob}^{(2)}_{\mathfrak p})\bigr)_{i\le15}
+ \in\Ftwo^{15},
+\]
+and $\mathfrak p$ is \emph{detected} if $\operatorname{pat}(\mathfrak p)\ne0$.
+\end{definition}
+
+\begin{lemma}\label{dh:vector-zero}
+Let $p\ge7$ be a prime with $(241/p)=1$, let $r^2\equiv241\pmod p$, and let
+$\mathfrak p=(p,\sqrt{241}-r)$. Then $\mathfrak p$ has Frobenius vector $0$
+exactly when $p\equiv1$ or $49\pmod{120}$ and the images of
+$\alpha_1,\alpha_2,\alpha_4,\alpha_6$ under $\sqrt{241}\mapsto r$ are squares
+modulo $p$. In that case the conjugate prime $(p,\sqrt{241}+r)$ also has
+Frobenius vector $0$.
+\end{lemma}
+
+\begin{proof}
+The residue field of $\mathfrak p$ is $\mathbb F_p$, and by
+Definition~\ref{gf:frobenius-vector} and Euler's criterion $\mathfrak p$ has
+Frobenius vector $0$ exactly when $\alpha_0,\dots,\alpha_7$ are squares
+modulo $\mathfrak p$; they are units at $\mathfrak p$ since $p\ge7$ and
+$p\ne241$. By \eqref{tw:alpha}, $\alpha_0=-1$, $\alpha_2\alpha_3=2$,
+$\alpha_4\alpha_5=-3$, $\alpha_6\alpha_7=-5$ and
+$\mathrm N_{B/\Q}(\alpha_1)=-1$. If $\mathfrak p$ has vector $0$, then $-1$, $2$,
+$-3$ and $-5$ are squares modulo $p$, so $p\equiv1\pmod8$, $p\equiv1\pmod3$
+and $p\equiv\pm1\pmod5$, that is, $p\equiv1$ or $49\pmod{120}$. Conversely,
+for such $p$ the numbers $-1,2,3,5$ are squares modulo $p$, and the
+relations show that $\alpha_0,\alpha_3,\alpha_5,\alpha_7$ are squares modulo
+$\mathfrak p$ when $\alpha_2,\alpha_4,\alpha_6$ are. By \eqref{tw:alpha},
+the nontrivial automorphism of $B$ maps $\alpha_1,\alpha_2,\alpha_4,\alpha_6$ to
+$-\alpha_1^{-1}$, $-\alpha_3=-2\alpha_2^{-1}$, $\alpha_5=-3\alpha_4^{-1}$ and
+$\alpha_7=-5\alpha_6^{-1}$, which are squares modulo $\mathfrak p$ exactly
+when $\alpha_1,\alpha_2,\alpha_4,\alpha_6$ are; so the conjugate prime also
+has vector $0$.
+\end{proof}
+
+\begin{lemma}\label{dh:pattern-lemma}
+Let $\mathfrak p$ be a prime of $B$ of degree one with Frobenius vector $0$,
+and $p=\mathrm N\mathfrak p$, with $\operatorname{pat}(\mathfrak p)$ as in
+Definition~\ref{dh:census-basis}.
+\begin{enumerate}
+\item[(a)] $\operatorname{pat}(\mathfrak p)_i=1$ exactly when $\beta^{\rm c}_i$ is a
+ nonsquare modulo a prime of $F^{\rm c}_{0,i}$ above $\mathfrak p$; these primes have
+ residue field $\mathbb F_p$.
+\item[(b)] $\operatorname{pat}(\mathfrak p)=0$ exactly when
+ $\overline{\Frob}^{(2)}_{\mathfrak p}=0$, that is, when the Frobenius
+ elements of the primes of $B_G$ above $\mathfrak p$ lie in $D_3G_B$.
+\item[(c)] If $\psi=\sum_{i\in I}\psi^{\rm c}_i$ for a set $I$ of indices,
+ then $\psi(\overline{\Frob}^{(2)}_{\mathfrak p})=\sum_{i\in I}
+ \operatorname{pat}(\mathfrak p)_i$.
+\item[(d)] If $\mathfrak p$ is detected, then $f_K(\mathfrak p)$ is even for
+ every $K\in\mathcal K$.
+\item[(e)] $\psi_{17}=\psi^{\rm c}_4$,
+ $\psi_{19}=\psi^{\rm c}_4+\psi^{\rm c}_8$,
+ $\psi_{10}=\psi^{\rm c}_4+\psi^{\rm c}_8+\psi^{\rm c}_{12}$ and
+ $\psi_{23}=\psi^{\rm c}_4+\psi^{\rm c}_8+\psi^{\rm c}_{12}+\psi^{\rm c}_{14}$;
+ the index sets are encoded, with bit $i-1$ for $\psi^{\rm c}_i$, by the
+ masks $0x8$, $0x88$, $0x888$ and $0x2888$ of the file
+ \texttt{wmasks4.json}. Hence $\mathfrak p$ lies in $\ker W''$ exactly when
+ $\operatorname{pat}(\mathfrak p)$ has even weight on each of these four
+ index sets.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) The prime $\mathfrak p$ splits completely in $E\supseteq F^{\rm c}_{0,i}$, so the
+primes of $F^{\rm c}_{0,i}$ above it have residue field $\mathbb F_p$, and the
+statement is Lemma~\ref{dh:detection}(d) for $\psi^{\rm c}_i$ and $\beta^{\rm c}_i$.
+(b) The supplementary program \texttt{d4fields.py} checks that the fifteen
+census forms have rank $15$, so they form a basis of the dual of
+$\operatorname{gr}_2G_B$, which has dimension $15$; hence
+$\operatorname{pat}(\mathfrak p)=0$ exactly when
+$\overline{\Frob}^{(2)}_{\mathfrak p}=0$. (c) is linearity. (d) Some
+$\operatorname{pat}(\mathfrak p)_i$ is $1$, and Lemma~\ref{dh:detection}(c)
+applies to $\psi^{\rm c}_i$ by (a). (e) We have $o_4=17$, $o_8=7$, $o_{12}=20$
+and $o_{14}=24$, and the relations of Table~\ref{dh:W-table} give
+$\psi_{19}=\psi_{17}+\psi_7$, $\psi_{10}=\psi_{19}+\psi_{20}$ and
+$\psi_{23}=\psi_{10}+\psi_{24}$. The last statement follows from (c), since
+$\psi_{10},\psi_{23},\psi_{19},\psi_{17}$ span $W''$.
+\end{proof}
+
+\begin{proposition}[The census]\label{dh:census}
+The primes of $B$ of degree one with Frobenius vector $0$ and norm at most
+$4\cdot10^{13}$, sorted by whether they lie in $\ker W''$
+(Definition~\ref{dh:W}) and are detected (Definition~\ref{dh:census-basis}),
+are as follows:
+\begin{center}\small
+\begin{tabular}{lrrr}
+\toprule
+range of norms & vector $0$ & in $\ker W''$ & in $\ker W''$, detected\\
+\midrule
+$65809\le\mathrm N\mathfrak p\le1.2\cdot10^7$ & $2924$ & $136$ & $136$\\
+$(1.2\cdot10^7,10^{13}]$ & $1351669408$ & $84431399$ & $84395189$\\
+$(10^{13},4\cdot10^{13}]$ & $3807510358$ & $237942878$ & $237834284$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The smallest norm of a prime of degree one with vector $0$ is $65809$. The
+undetected primes are those in $\ker W''$ that are not detected; all
+other primes of the table are detected or lie outside $\ker W''$. The norms of
+the detected primes in $\ker W''$ are recorded exactly for norms at most
+$1.2\cdot10^7$, and above that in the geometric bins
+$[X(1+2^{-16})^j,X(1+2^{-16})^{j+1})$, $X=1.2\cdot10^7$ or $10^{13}$, as counts
+per bin (files \texttt{census/w4\_1e13.binsBW4} and
+\texttt{w4\_4e13.binsBW4}).
+\end{proposition}
+
+\begin{proof}[Proof (computer-assisted)]
+The census runs over the primes $\mathfrak p=(p,\sqrt{241}-r)$ of degree
+one, $r^2\equiv241\pmod p$, and tests vector $0$ by
+Lemma~\ref{dh:vector-zero}. Square roots modulo $p$ of the images of the
+Kummer generators $\alpha_0,\dots,\alpha_7$ under $\sqrt{241}\mapsto r$ give
+an embedding of each $F^{\rm c}_{0,i}$ into $\mathbb F_p$; each square root is
+checked by squaring, and $\beta^{\rm c}_i$ is evaluated from its coordinates, so that
+$\operatorname{pat}(\mathfrak p)$ is computed with Legendre symbols modulo
+$p$ (Lemma~\ref{dh:pattern-lemma}(a)). By Lemma~\ref{dh:beta-exists},
+$\beta^{\rm c}_i$ is a unit at every prime above $p\ge7$, so no Legendre symbol is
+$0$; every run reports this.
+Membership in $\ker W''$ is decided by Lemma~\ref{dh:pattern-lemma}(e). For
+norms at most $1.2\cdot10^7$, the supplementary program
+\path{dihedral_ceiling3.py} classifies the primes in Python with
+the functions of \texttt{rootcheck.py}. Above $1.2\cdot10^7$, the C program
+\texttt{census\_kv4.c} produced the bins; it computes, eight primes
+at a time in Montgomery arithmetic with the AVX-512 IFMA instructions, the
+vector-$0$ test and the Legendre symbols of the $\beta^{\rm c}_i$: first for the four
+census fields whose bits determine $\psi_{10}$, $\psi_{23}$, $\psi_{19}$ and
+$\psi_{17}$, and then, for the primes on which $\psi_{10}$ and $\psi_{23}$
+vanish, for the other census fields until one detects. In the bins a norm
+may be assigned to a neighboring bin by floating-point rounding; the bound of
+Lemma~\fref{ce:values} allows one bin of slack on each side. The program and
+its data were checked as follows; the earlier programs named here are those
+of the intermediate certificates.
+\begin{enumerate}
+\item[(1)] On the vector-$0$ primes of norm $6\cdot10^4$ to $1.2\cdot10^7$, all
+ C programs reproduce the Python classification prime by prime and field by
+ field, and \texttt{census\_kv4.c}'s bins for $\ker W$, $\ker W'$ and
+ $\ker W''$ (Definition~\ref{dh:W}) equal an independent classification by
+ \texttt{rootcheck.py}.
+\item[(2)] Its bins for $\ker W$ on $(1.2\cdot10^7,10^{13}]$ and
+ $(10^{13},4\cdot10^{13}]$ are byte-identical to those of the earlier programs
+ \texttt{census\_d3k.c} and \texttt{census\_kw.c}, which use scalar
+ arithmetic and a different structure. On sample ranges near $10^{13}$ and
+ $5\cdot10^{13}$, \texttt{census\_kv4.c} and \texttt{census\_kv.c} agree in
+ both their checking and their fast modes. In the fast mode about one
+ vector-$0$ prime in sixteen, and in the checking mode every one, is also
+ recomputed by the scalar code, and the outcomes must agree; all sixteen
+ square roots of the Kummer elements are checked by squaring, which
+ re-proves vector $0$.
+\item[(3)] Independent reviews recounted bins chosen at random with their own
+ programs and found exact agreement, and a second implementation in PARI/GP
+ matched patterns, bins and undetected primes on eight ranges up to
+ $10^{12}$.
+\end{enumerate}
+The replay program reruns (1) and the comparisons of (2) on sample ranges,
+and checks the stored bins by their SHA-256 hashes.
+\end{proof}
+
+\subsection{\texorpdfstring{The field $E_{W''}$ and its $L$-functions}{The field E\_W'' and its L-functions}}
+\label{dh:EW-section}
+This subsection shows that the field $\EW$ of Definition~\ref{dh:W} is
+Galois over $B$, of degree $8192$ over $\Q$, and contained in every
+$K\in\mathcal K$; it factors $\zeta_{\EW}$ into $\zeta_E$ and $576$
+$L$-functions (Lemma~\ref{dh:EW}), identifies these as Hecke $L$-functions
+of quadratic characters with known conductors and gamma factors
+(Lemmas~\ref{dh:Lfunctions} and~\ref{dh:gamma}), whose values
+Section~\ref{lv:section} encloses, and computes residue degrees in $\EW/B$
+(Lemma~\ref{dh:residue}).
+
+\begin{lemma}\label{dh:EW}
+\begin{enumerate}
+\item[(a)] $\EW$ is Galois over $B$ and contained in every $K\in\mathcal K$.
+ It contains $E$ and the seven dihedral fields $M_o$ of
+ Definition~\ref{dh:W}. Its group $G_{W''}=\Gal(\EW/B)$ is a central
+ extension of $\Gal(E/B)=\Ftwo^8$ by $Z_{W''}=D_2G_B/N_{W''}\cong\Ftwo^4$, and
+ $[\EW:\Q]=8192$.
+\item[(b)] For $\omega\in W''\setminus\{0\}$, regarded as a character of
+ $Z_{W''}=\operatorname{gr}_2G_B/W''^\perp$, let $r(\omega)$ be the rank of
+ its polar form $\operatorname{pol}_\omega$. The irreducible complex
+ representations of $G_{W''}$ with central character $\omega$ have dimension
+ $2^{r(\omega)/2}$, and there are $256/2^{r(\omega)}$ of them. Those with
+ trivial central character are the $256$ characters $\chi_w$.
+\item[(c)] For $\omega=\psi_o$ of dihedral type, they are the $64$
+ representations $\rho_o\otimes\chi_w$, where $\rho_o$ is the
+ two-dimensional irreducible representation of
+ $\Gal(M_o/B)\cong\mathrm{Dih}_4$, inflated to $G_{W''}$, and $w$ runs over a
+ complement of the span of $r_{1,o},r_{2,o}$.
+\item[(d)] For $\omega=\psi_a+\psi_b$ as in Lemma~\ref{dh:W-structure}, they
+ are the $16$ representations $\rho_a\otimes\rho_b\otimes\chi_w$, with $w$
+ over a complement of the span of $r_{1,a},r_{2,a},r_{1,b},r_{2,b}$.
+\item[(e)] With $L(s,\pi)$ the Artin $L$-function over $B$,
+ \[
+  \zeta_{\EW}(s)=\zeta_E(s)\prod_{o}\prod_{w}L(s,\rho_o\otimes\chi_w)^2
+  \prod_{(a,b)}\prod_{w}L(s,\rho_a\otimes\rho_b\otimes\chi_w)^4,
+ \]
+ the products over the seven forms and the eight pairs, and over the
+ complements of (c) and (d). Hence, for real $s>1$,
+ \begin{equation}\label{dh:YW}
+  Y_{W''}(s):=\frac{\log\zeta_{\EW}(s)}{8192}
+  =\frac{Y_E(s)}{16}+\frac1{4096}\sum_{o,w}\log L(s,\rho_o\otimes\chi_w)
+  +\frac1{2048}\sum_{(a,b),w}\log L(s,\rho_a\otimes\rho_b\otimes\chi_w),
+ \end{equation}
+ where $Y_E(s)=\log\zeta_E(s)/512$ as in Proposition~\ref{an:genus-value}.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Since $[G_B,D_2G_B]\subseteq D_3G_B\subseteq N_{W''}$, every subgroup
+between $D_3G_B$ and $D_2G_B$ is normal in $G_B$, and $D_2G_B/N_{W''}$ is
+central in $G_B/N_{W''}$; so $\EW$ is Galois over $B$ and $G_{W''}$ is a central
+extension of $G_B/D_2G_B=\Gal(E/B)$ by $Z_{W''}$. The latter is
+$\operatorname{gr}_2G_B/W''^\perp$, which is dual to $W''$, of dimension
+four. Hence $[\EW:B]=2^{12}$ and $[\EW:\Q]=8192$. Since $N_{W''}\supseteq
+D_3G_B\supseteq D_4G_B$, $\EW$ lies in every $K\in\mathcal K$. By
+Lemma~\ref{dh:detection}(b), the kernel of $\phi_{M_o}$ contains the elements
+of $D_2G_B$ whose class is killed by $\psi_o$, hence contains $N_{W''}$, so
+$M_o\subseteq\EW$.
+
+(b) The commutator of elements of $G_{W''}$ with elementary images $v,w$ is
+the class of $[v,w]$ in $Z_{W''}$, and the square of an element with image $v$
+is the class of $v^{[2]}$. Let $\omega\ne0$, and let $H=G_{W''}/\ker\omega$.
+The representations with central character $\omega$ factor through $H$, a
+central extension of $\Ftwo^8$ by $\langle z\rangle\cong C_2$ in which
+elements with images $v,w$ have commutator $z^{\operatorname{pol}_\omega(v,w)}$.
+The center $C_H$ of $H$ is the preimage of the radical of $\operatorname{pol}_\omega$,
+of index $2^{r(\omega)}$ in $H$. Let $\pi$ be irreducible with $\pi(z)=-1$.
+If $g\notin C_H$, there is $h$ with $h^{-1}gh=gz$, so
+$\tr\pi(g)=-\tr\pi(g)=0$; on $C_H$, $\pi$ acts by scalars, so
+$|\tr\pi|=\dim\pi$ there. The orthogonality relation
+$\sum_{g\in H}|\tr\pi(g)|^2=|H|$ gives $(\dim\pi)^2=[H:C_H]=2^{r(\omega)}$.
+The irreducible representations of $H$ with $z\mapsto-1$ have
+$\sum(\dim\pi)^2=|H|-|H/\langle z\rangle|=2^8$, so there are
+$2^8/2^{r(\omega)}$ of them. Those with trivial central character are the
+representations of $\Gal(E/B)=\Ftwo^8$.
+
+(c) The representation $\rho_o\otimes\chi_w$ has central character
+$\psi_o$, by Lemma~\ref{dh:detection}(b), and dimension $2=2^{r(\psi_o)/2}$,
+so it is irreducible. Its character vanishes outside the preimage of the
+radical $\ker\phi_o$ of $\operatorname{pol}_{\psi_o}$
+(Lemma~\ref{dh:dihedral-polar}), and is $\pm2\chi_w$ on it. Hence
+$\rho_o\otimes\chi_w\cong\rho_o\otimes\chi_{w'}$ exactly when
+$\chi_{w-w'}$ is trivial on $\ker\phi_o$, that is, when $w-w'$ lies in the
+span of $r_{1,o},r_{2,o}$. This gives $256/4=64$ classes, all of them by (b).
+
+(d) Likewise $\rho_a\otimes\rho_b\otimes\chi_w$ has central character
+$\psi_a+\psi_b$ and dimension $4=2^{r(\psi_a+\psi_b)/2}$, so it is irreducible. The radical of
+the polar form, of codimension four, contains $\ker\phi_a\cap\ker\phi_b$, which
+has codimension four by Lemma~\ref{dh:W-structure}, so they are equal, and
+the twists are distinct modulo the span of the four vectors.
+
+(e) The Artin formalism gives $\zeta_{\EW}=\prod_\pi L(s,\pi)^{\dim\pi}$ over
+the irreducible representations of $G_{W''}$, and $\prod_wL(s,\chi_w)=
+\zeta_E(s)$ (Proposition~\ref{gf:factorization}). By Lemma~\ref{dh:W-structure} every nonzero $\omega\in W''$ is
+of one of the two kinds in (c) and (d), which gives the product; the count
+$256+7\cdot64\cdot4+8\cdot16\cdot16=4096=|G_{W''}|$ is a check. Taking
+logarithms and dividing by $8192=16\cdot512$ gives \eqref{dh:YW}.
+\end{proof}
+
+\begin{remark}\label{dh:EW-sub}
+The proof of Lemma~\ref{dh:EW} uses only that every nonzero element of
+$W''$ is a form of dihedral type or a sum $\psi_a+\psi_b$ as in
+Lemma~\ref{dh:W-structure}. It therefore applies to every subspace
+$U\subseteq W''$, for instance to $W$ and $W'$, with $E_U$ the fixed field of
+the preimage in $D_2G_B$ of the common kernel of the forms in $U$: the field
+$E_U$ is Galois over $B$, contained in every $K\in\mathcal K$, of degree
+$512\cdot2^{\dim U}$ over $\Q$, and $\zeta_{E_U}$ is $\zeta_E$ times the
+squares of the $64$ functions $L(s,\rho_o\otimes\chi_w)$ of each form
+$\psi_o\in U$ and the fourth powers of the $16$ functions
+$L(s,\rho_a\otimes\rho_b\otimes\chi_w)$ of each sum $\psi_a+\psi_b\in U$.
+\end{remark}
+
+\begin{lemma}\label{dh:Lfunctions}
+Let $\rho_o$ and $\chi_w$ be as in Lemma~\ref{dh:EW}.
+\begin{enumerate}
+\item[(a)] Let $\psi_o$ be a form of Table~\ref{dh:W-table}. Let
+ $\tau_o\in\Gal(F_{0,o}/B)$ be one of the two nonzero elements other than
+ $\mathbf r_o$, and let $B_{c_o}=B(\sqrt{c_o})$ be its fixed field in
+ $F_{0,o}$; Table~\ref{dh:W-table} records the element $c_o$ used. Let
+ $u_o\in F_{0,o}^\times$ satisfy $\tau_o(\beta_o)/\beta_o=u_o^2$ and
+ $u_o\tau_o(u_o)=1$ (Lemma~\ref{dh:detection}, (D1) and (D2)), with
+ $u_o\ne-1$ (replace $u_o$ by $-u_o$ if necessary). Then
+ $\gamma_o=(1+u_o)^2\beta_o$ lies in $B_{c_o}$, and for every $w$,
+ \[
+  L(s,\rho_o\otimes\chi_w)=\frac{\zeta_{M_{o,w}}(s)}{\zeta_{B_{c_o}}(s)},\qquad
+  M_{o,w}=B_{c_o}\bigl(\sqrt{\gamma_o\alpha_w}\bigr).
+ \]
+\item[(b)] For a pair $(a,b)$ of Lemma~\ref{dh:W-structure}, put
+ $B_{ab}=B(\sqrt{c_a},\sqrt{c_b})$. Then for every $w$
+ \[
+  L(s,\rho_a\otimes\rho_b\otimes\chi_w)
+  =\frac{\zeta_{B_{ab,w}}(s)}{\zeta_{B_{ab}}(s)},
+  \qquad B_{ab,w}=B_{ab}\bigl(\sqrt{\gamma_a\gamma_b\alpha_w}\bigr).
+ \]
+\item[(c)] Each of these quotients is the Hecke $L$-function $L(s)$ of a
+ nontrivial quadratic character of $A=B_{c_o}$, respectively $A=B_{ab}$, and
+ it is entire. Let $A'$ be the quadratic extension $M_{o,w}$, respectively
+ $B_{ab,w}$, of $A$, and $Q=|\Delta_{A'}|/|\Delta_A|$. Then the function
+ $\Lambda(s)=Q^{s/2}\Gamma_\R(s)^{r_1(A')-r_1(A)}\Gamma_\C(s)^{r_2(A')-r_2(A)}L(s)$
+ satisfies $\Lambda(1-s)=\Lambda(s)$, where $(r_1(\cdot),r_2(\cdot))$ is the
+ signature.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Fix $o$ and write $F_0$, $\beta$, $\tau$, $u$, $\gamma$ and $c$ for
+$F_{0,o}$, $\beta_o$, $\tau_o$, $u_o$, $\gamma_o$ and $c_o$. Let
+$\tilde\tau\in\Gal(M_o/B)$ lift $\tau$ with $\tilde\tau(\sqrt\beta)=u\sqrt\beta$.
+Then $\tilde\tau^2(\sqrt\beta)=\tau(u)u\sqrt\beta=\sqrt\beta$, so $\tilde\tau$
+has order two, and
+$\tilde\tau((1+u)\sqrt\beta)=(1+\tau(u))u\sqrt\beta=(1+u)\sqrt\beta$. So the
+nonzero element $(1+u)\sqrt\beta$ is fixed by $\tilde\tau$; its square
+$\gamma$ lies in $F_0$ and is fixed by $\tau$, so it lies in $B_c$; and
+$\sqrt\gamma\notin B_c$, since $\sqrt\beta\notin F_0$. The fixed field of
+$\langle\tilde\tau\rangle$ in $M_o$ is therefore $B_c(\sqrt\gamma)$. Let
+$H_o\subset G_{W''}$ be the fixed group of $B_c$, of index two, and let
+$\xi_o$ be the quadratic character of $H_o$ that cuts out $B_c(\sqrt\gamma)$.
+The image of $H_o$ in $\Gal(M_o/B)\cong\mathrm{Dih}_4$ is
+$\langle\tilde\tau,z\rangle$, and $\xi_o$ factors through it, trivial on
+$\tilde\tau$ and nontrivial on $z$. Hence $\Ind_{H_o}^{G_{W''}}\xi_o$ is
+inflated from the representation of $\mathrm{Dih}_4$ induced from this
+character of $\langle\tilde\tau,z\rangle$, which has dimension two and is
+nontrivial on the center, so it is the two-dimensional irreducible
+representation: $\Ind_{H_o}\xi_o=\rho_o$. Twisting,
+$\rho_o\otimes\chi_w=\Ind_{H_o}(\xi_o\cdot\chi_w|_{H_o})$, and
+$\xi_o\cdot\chi_w|_{H_o}$ is the quadratic character of $H_o$ that cuts out
+$M_{o,w}$. It is nontrivial, since $\rho_o\otimes\chi_w$ is irreducible. By
+the invariance of Artin $L$-functions under induction,
+$L(s,\rho_o\otimes\chi_w)=L(s,\xi_o\chi_w|_{H_o})$, which is
+$\zeta_{M_{o,w}}(s)/\zeta_{B_c}(s)$.
+
+(b) Write $\rho_a=\Ind_{H_a}\xi_a$ and $\rho_b=\Ind_{H_b}\xi_b$ as in (a). Since
+$c_a/c_b$ is not a square, $H_a\ne H_b$, so $H_aH_b=G_{W''}$, and Mackey's
+formula \cite[Section~7.3]{Serre1977} gives
+$\operatorname{Res}_{H_a}\Ind_{H_b}\xi_b=\Ind_{H_a\cap H_b}^{H_a}\xi_b$. Hence
+\[
+ \rho_a\otimes\rho_b\otimes\chi_w
+ =\Ind_{H_a}\bigl(\xi_a\otimes\operatorname{Res}_{H_a}(\rho_b\otimes\chi_w)\bigr)
+ =\Ind_{H_a\cap H_b}\bigl(\xi_a\xi_b\chi_w\bigr),
+\]
+and $H_a\cap H_b$ is the fixed group of $B_{ab}$; the character
+$\xi_a\xi_b\chi_w$ cuts out $B_{ab,w}$, and it is nontrivial since the
+representation is irreducible.
+
+(c) A nontrivial Hecke character has an entire $L$-function
+\cite{Hecke1920,Tate1967}. The completed Dedekind zeta functions satisfy
+$\Lambda_A(1-s)=\Lambda_A(s)$ (Section~\ref{gf:section}), and the quotient of
+those of $A'$ and $A$ is the stated $\Lambda$.
+\end{proof}
+
+\begin{lemma}\label{dh:gamma}
+The conductors and gamma factors of the $576$ functions of
+Lemma~\ref{dh:Lfunctions} are as follows. For $o=10,23,24,19,17,7$, all $64$
+twists have $r_1(M_{o,w})=r_1(B_{c_o})$, so their gamma factor is
+$\Gamma_\C(s)^2$; for $o=20$, $B_{c_o}$ is totally real and
+$r_1(M_{o,w})=6$ for $32$ twists and $2$ for the other $32$, so the gamma
+factor is $\Gamma_\R(s)^3\Gamma_\R(s+1)$ or $\Gamma_\R(s)\Gamma_\R(s+1)^3$. For
+the eight pairs, $B_{ab}$ and all $B_{ab,w}$ are totally complex, so the
+gamma factor is $\Gamma_\C(s)^4$. The conductors lie in the following
+ranges:
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+functions & degree over $\Q$ & conductors\\
+\midrule
+$o=10$ & $4$ & $4.18\cdot10^8$ to $2.68\cdot10^{10}$\\
+$o=23,24$ & $4$ & $1.67\cdot10^9$ to $2.68\cdot10^{10}$\\
+$o=19,7$ & $4$ & $1.67\cdot10^8$ to $2.68\cdot10^{11}$\\
+$o=20$ & $4$ & $3.35\cdot10^8$ to $1.34\cdot10^{11}$\\
+$o=17$ & $4$ & $6.69\cdot10^8$ to $2.68\cdot10^{11}$\\
+pairs $(19,23)$, $(19,24)$ & $8$ & $6.995\cdot10^{17}$ and $1.791\cdot10^{20}$\\
+the other six pairs & $8$ & $2.798\cdot10^{18}$ or $4.477\cdot10^{19}$, and $7.163\cdot10^{20}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{lemma}
+
+\begin{proof}[Proof (computer-assisted)]
+The twists of $\psi_{10},\psi_{23},\psi_{24}$ are treated by the
+supplementary program \texttt{export.gp}, those of the other four forms by
+the program \path{deg8/exportg.gp}, and the pairs by
+\path{deg8/export8.gp}. These programs construct $B_{c_o}$, $\gamma_o$,
+$M_{o,w}$, $B_{ab}$ and $B_{ab,w}$ in PARI/GP from the data of
+Lemmas~\ref{dh:detection} and~\ref{dh:beta-exists}, and compute the
+signatures, the discriminants and the Euler factors at small primes from the
+maximal orders. For the twists of the seven forms the maximal orders come
+from PARI's \texttt{nfinit}. For the pairs, whose fields have degree $16$,
+the program computes orders maximal at $2,3,5,241$ and asserts that their
+discriminants are, up to sign, products of powers of these primes, so that
+the orders are maximal; it also asserts the signatures and that each local
+quotient of Euler factors is a polynomial of degree at most $8$ in $p^{-s}$.
+Wrong conductors or gamma factors would also be detected by the checks of
+Subsection~\ref{lv:checks}.
+\end{proof}
+
+\begin{lemma}\label{dh:residue}
+Let $\mathfrak p\notin S$ be a prime of $B$ with Frobenius vector $v$, and let
+$f_{W''}(\mathfrak p)$ be its residue degree in the extension $\EW/B$ of
+Lemma~\ref{dh:EW}, with the maps $\phi_o$ of Definition~\ref{dh:W}.
+\begin{enumerate}
+\item[(a)] If $v\ne0$, then $f_{W''}(\mathfrak p)=4$ if
+ $\phi_o(v)=\mathbf r_o$ for one of the seven forms $\psi_o$ of
+ Table~\ref{dh:W-table}, and $f_{W''}(\mathfrak p)=2$ otherwise.
+\item[(b)] If $v=0$, then $f_{W''}(\mathfrak p)=2$ if $\mathfrak p$ does not lie
+ in $\ker W''$, and $f_{W''}(\mathfrak p)=1$ if it does.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Let $g\in G_{W''}$ be a Frobenius of a prime above $\mathfrak p$; its order is
+$f_{W''}(\mathfrak p)$. (a) If $v\ne0$, then $g\notin Z_{W''}$ and $g^2\in
+Z_{W''}$, and $\omega(g^2)=q_\omega(v)$ for $\omega\in W''$. So $g^2=1$
+exactly when $q_\omega(v)=0$ for all $\omega\in W''$, that is, for the seven
+dihedral forms, which span $W''$; and $q_{\psi_o}(v)=1$ exactly when
+$\phi_o(v)=\mathbf r_o$. (b) If $v=0$, then $g\in Z_{W''}$, and $g\ne1$
+exactly when $\omega(\overline{\Frob}^{(2)}_{\mathfrak p})\ne0$ for some
+$\omega\in W''$.
+\end{proof}
+
+\subsection{Floors}\label{dh:floors-section}
+This subsection defines the floors used in the proof of
+Theorem~\ref{an:ceiling} (Definition~\ref{dh:floors}), shows that they form a
+system of floors (Lemma~\ref{dh:floors-valid}), and expresses their floor
+sum through $Y_{W''}$ and explicit corrections
+(Lemmas~\ref{dh:floor-sum} and~\ref{dh:delta-sel}); Section~\ref{ce:section}
+evaluates the result. For primes of degree one with vector $0$,
+Lemma~\ref{dh:residue}(b) is read from the census
+(Lemma~\ref{dh:pattern-lemma}(e)); the primes of degree two with vector $0$
+and small norm are treated by the next lemma.
+
+\begin{lemma}\label{dh:inert-v0}
+There are exactly thirteen primes of $B$ of degree two, that is,
+$p\mathcal O_B$ with $p$ inert in $B$, with Frobenius vector $0$ and norm
+$p^2\le1.2\cdot10^7$, namely $p=409$, $769$, $1129$, $1249$, $1489$, $1609$,
+$1801$, $2281$, $2521$, $2689$, $3001$, $3049$ and $3361$. None of them lies
+in $\ker W''$, so $f_{W''}(p\mathcal O_B)=2$ for each of them.
+\end{lemma}
+
+\begin{proof}[Proof (computer-assisted)]
+For such a prime $\mathfrak p=p\mathcal O_B$, the Frobenius in
+$\Gal(M_o/B)$ is central by Lemma~\ref{dh:detection}(b), so it is $1$ or $z$,
+and accordingly the Euler factor at $p$ of $L(s,\rho_o\otimes\chi_0)$ is
+$(1-p^{-2s})^{-2}$ or $(1+p^{-2s})^{-2}$; by Lemma~\ref{dh:detection}(b) it
+is $z$ exactly when $\psi_o(\overline{\Frob}^{(2)}_{\mathfrak p})=1$. The
+supplementary program \texttt{inertv0\_4.py} lists the inert primes of
+vector $0$ with $p^2\le1.2\cdot10^7$, computes these Euler factors with PARI
+from the prime decompositions of $p$ in $M_{o,0}$ and $B_{c_o}$
+(Lemma~\ref{dh:Lfunctions}(a)), and finds that none of the thirteen primes
+lies in $\ker W''$. Lemma~\ref{dh:residue}(b) then gives
+$f_{W''}(p\mathcal O_B)=2$.
+\end{proof}
+
+\begin{definition}\label{dh:floors}
+Let $\mathcal P_2$ be the set of the primes of $B$ of degree one with vector $0$
+and norm at most $4\cdot10^{13}$ that lie in $\ker W''$ and are detected; they
+are counted in the last column of Proposition~\fref{dh:census}. For a free
+prime $\mathfrak p$ of $B$ put $f^0_{\mathfrak p}=4$ if
+$\mathfrak p\in\mathcal P_4$ (Definition~\ref{an:P4}),
+$f^0_{\mathfrak p}=2$ if $\mathfrak p\in\mathcal P_2$, and
+$f^0_{\mathfrak p}=f_{W''}(\mathfrak p)$ otherwise.
+\end{definition}
+
+\begin{lemma}\label{dh:floors-valid}
+The numbers $f^0_{\mathfrak p}$ form a system of floors
+(Definition~\ref{an:floor-def}), and $f^0_{\mathfrak p}\ge f_{W''}(\mathfrak
+p)$ for every free $\mathfrak p$.
+\end{lemma}
+
+\begin{proof}
+(Fl1) The residue degree $f_{W''}(\mathfrak p)$ divides $f_K(\mathfrak p)$,
+since $\EW\subseteq K$ (Lemmas~\ref{dh:EW}(a) and~\ref{an:local-contribution}).
+For $\mathfrak p\in\mathcal P_4$, $4$ divides $f_K(\mathfrak p)$ by
+Lemma~\ref{an:census-degree}; for $\mathfrak p\in\mathcal P_2$, $2$ divides
+$f_K(\mathfrak p)$ by Lemma~\ref{dh:pattern-lemma}(d). Since
+$f_{W''}(\mathfrak p)\le4$ always and $f_{W''}(\mathfrak p)=1$ on
+$\mathcal P_2$, the floors are at least $f_{W''}(\mathfrak p)$. (Fl2) For
+$\mathrm N\mathfrak p>1.2\cdot10^7>41^4$ it is clear. For
+$\mathrm N\mathfrak p\le1.2\cdot10^7$ the supplementary program
+\path{dihedral_ceiling3.py} computes $f^0_{\mathfrak p}$ by
+Lemma~\ref{dh:residue}, using Proposition~\ref{dh:census} for the primes of
+degree one with vector $0$ and Lemma~\ref{dh:inert-v0} for those of degree
+two, and checks $\mathrm N\mathfrak p^{f^0_{\mathfrak p}}\ge41^4$; in
+particular every free prime of norm less than $1681$ has floor $4$.
+\end{proof}
+
+\begin{lemma}\label{dh:floor-sum}
+For real $\sigma>1$, the floor sum of the floors of
+Definition~\ref{dh:floors} is
+\[
+ Y_{\rm fl}(\sigma)=Y_{W''}(\sigma)-\Delta_{\rm sel}(\sigma)-Z_{\rm sel}(\sigma)
+ -\Delta_4(\sigma)-\sum_{\mathfrak p\in\mathcal P_2}T_\sigma(\mathrm N\mathfrak p),
+\]
+where $T_\sigma(N)=g_\sigma(N)/2-g_\sigma(N^2)/4$,
+\[
+ \Delta_4(\sigma)=\sum\Bigl(\frac{g_\sigma(\mathrm N\mathfrak p^2)}4
+ -\frac{g_\sigma(\mathrm N\mathfrak p^4)}8\Bigr),
+\]
+the sum over the $\mathfrak p\in\mathcal P_4$ with $f_{W''}(\mathfrak p)=2$,
+and $\Delta_{\rm sel}(\sigma)$ is the sum over the selected primes
+$\mathfrak p$ of the difference between the term of $\mathfrak p$ in
+\eqref{an:local-sum} for $M=\EW$ and for $M=K$, with the types of
+Theorem~\ref{tw:field-family}.
+\end{lemma}
+
+\begin{proof}
+By \eqref{an:local-sum} for $M=\EW$, $Y_{W''}(\sigma)$ is the sum over all
+primes of $B$ of the terms $g_\sigma(\mathrm N\mathfrak p^f)/(2ef)$ with the
+type $(e,f)$ of $\mathfrak p$ in $\EW/B$. For the selected primes, the term
+for $\EW$ is the term for $K$ plus a summand of $\Delta_{\rm sel}(\sigma)$, and
+the terms for $K$ add up to $Z_{\rm sel}(\sigma)$ by
+Lemma~\ref{an:selected-lemma}. A free prime has $e=1$ in $\EW$, and its
+floor differs from $f_{W''}(\mathfrak p)$ only on $\mathcal P_4$, from $2$ to
+$4$, and on $\mathcal P_2$, from $1$ to $2$; these changes lower its term by the
+summands of $\Delta_4(\sigma)$ and by $T_\sigma(\mathrm N\mathfrak p)$. The
+sets $\mathcal P_4$ and $\mathcal P_2$ are disjoint, since the primes of
+$\mathcal P_4$ have nonzero vectors.
+\end{proof}
+
+\begin{lemma}\label{dh:delta-sel}
+For real $\sigma>1$,
+\[
+ \Delta_{\rm sel}(\sigma)=Y^{(2)}_{W''}(\sigma)-\frac{g_\sigma(16)}{32}
+ +\sum_{k=1}^3\Bigl(\frac{g_\sigma(\mathrm N\mathfrak t_k^{f_k})}{2f_k}
+ -\frac{g_\sigma(\mathrm N\mathfrak t_k^4)}8\Bigr),
+\]
+where $f_k=f_{W''}(\mathfrak t_k)\in\{2,4\}$ is given by
+Lemma~\ref{dh:residue}(a), and $Y^{(2)}_{W''}(\sigma)$ is the right side of
+\eqref{dh:YW} at $s=\sigma$ with $\zeta_E$ and each $L$-function replaced by
+the product of its Euler factors at the primes of $B$ above $2$. The
+selected primes above $3$ and $5$ contribute $0$ to $\Delta_{\rm sel}$.
+\end{lemma}
+
+\begin{proof}
+By \eqref{an:local-sum} for $M=\EW$, restricted to the primes above $2$, the
+terms of $\mathfrak p_1,\mathfrak p_2$ for $M=\EW$ add up to the logarithm
+of the product of the Euler factors of $\zeta_{\EW}$ at the primes above $2$,
+divided by $8192$; by the factorization of Lemma~\ref{dh:EW}(e), which holds
+Euler factor by Euler factor, this is $Y^{(2)}_{W''}(\sigma)$. Their terms for
+$K$, of type $(8,4)$ and norm $2$, are $g_\sigma(16)/64$ each. Above $3$ and
+$5$ the types in $E$ (Corollary~\ref{gf:types}) and in $K$ are both $(2,2)$,
+so the type in $\EW$ is $(2,2)$ too, since $E\subseteq\EW\subseteq K$ and
+ramification indices and residue degrees divide in towers; these primes
+contribute nothing. The capped primes have nonzero Frobenius vectors
+(Table~\ref{tw:vector-table}), so their residue degree $f_k$ in $\EW$ is $2$
+or $4$ by Lemma~\ref{dh:residue}(a), with $e=1$; their type in $K$ is
+$(1,4)$.
+\end{proof}
+
+The supplementary program \path{dihedral_ceiling3.py} evaluates
+$\Delta_{\rm sel}$ by Lemma~\ref{dh:delta-sel}, reading the Euler factors at
+$2$ of all the $L$-functions in \eqref{dh:YW}; it also checks that the Euler
+factors at $3$ and $5$ give the types $(2,2)$. For orientation, at
+$\sigma=1001/1000$ it gives $Y_E=0.0853580483$, $Y_{W''}=0.050492599$ (radius
+$3.4\cdot10^{-10}$), $\Delta_{\rm sel}=0.0079701070$ and
+$\Delta_4=0.0005116777$.

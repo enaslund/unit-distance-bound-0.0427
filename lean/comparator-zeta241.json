@@ -2,7 +2,7 @@
   "challenge_module": "ChallengeZeta241",
   "solution_module": "SolutionZeta241",
   "theorem_names": [
-    "UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound"
+    "UnitDistanceSqrt241Submission.target_of_wide_zeta_bound"
   ],
   "definition_names": [],
   "permitted_axioms": [

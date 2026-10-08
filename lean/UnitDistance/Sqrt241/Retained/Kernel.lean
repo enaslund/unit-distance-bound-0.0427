@@ -92,8 +92,11 @@ theorem sigmaStable : I.A.SigmaStable GB freeHat sigmaHat where
     obtain ⟨s, hs, h⟩ := I.cap_compat
     exact ⟨s, hs, by rw [MulAut.conj_apply, freeHat_cap, freeHat_cap, h]⟩
   frob7 := by
-    obtain ⟨F, hF, hσF⟩ := I.frob7_compat
-    exact ⟨F, by rw [freeHat_cap, hF], hσF⟩
+    rcases I.frob7_compat with ⟨F, hF, hσF⟩ | h20
+    · exact Or.inl ⟨F, by rw [freeHat_cap, hF], hσF⟩
+    · exact Or.inr (by
+        change LocalElements.lift (I.E.cap 2) = LocalElements.lift (I.E.cap 0)
+        rw [h20])
 
 theorem kernelHat_eq_map : I.kernelHat = I.A.kernel.map freeHat.toMonoidHom := by
   ext x

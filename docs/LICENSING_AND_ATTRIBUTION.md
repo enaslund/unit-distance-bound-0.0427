@@ -6,12 +6,12 @@ and formalization documentation, and the release documentation of this
 repository, subject to the third-party notices described below. The
 formalization metadata therefore records `project.license: Apache-2.0`.
 
-The manuscripts, the research note and their numerical-certificate material
-under `papers/` retain the terms supplied with them. They carry no explicit
+The manuscripts, the research notes and their numerical-certificate material
+under `papers/` and `research/` retain the terms supplied with them. They carry no explicit
 blanket licence, and adding the formalization's root licence does not grant a
 new manuscript, research-note or certificate licence. The same applies to
-their copies under `lean/docs/manuscript/` and
-`lean/docs/quadratic-base-research/`. These works are attributed to Eric
+their copies under `lean/docs/manuscript/`, `lean/docs/quadratic-base-research/` and
+`lean/docs/research-1.043171/`, and to the research notes under `research/`. These works are attributed to Eric
 Naslund and are copied unchanged; their authorship and AI-production
 disclosures remain in the papers and in the provenance records.
 

@@ -1,0 +1,366 @@
+\section{Other Refinements, Intermediate Results and Limits}\label{lim:section}
+
+This section is not needed for Theorem~\ref{thm:main}. It records the
+refinements behind the intermediate exponents of
+Table~\ref{intro:table-steps}, with proofs, and what is known about the limits
+of the method. Statements about limits are labeled by the kind of evidence
+behind them. We use the notation of Section~\ref{an:section}: $\mathcal K$,
+$F$, $d$, $\theta$, the residue degree $f_K(\mathfrak p)$ of a prime
+$\mathfrak p$ of $B$ in $K/B$, the free and selected primes
+(Definition~\ref{an:selected-def}), $g_s$ and $w$
+(Subsection~\ref{an:budget-section}), and $\kappa_\infty$, $Z_{\rm sel}$ and
+$T_{\rm sel}$.
+
+\subsection{The adaptive dichotomy}
+The comparison with a fixed field charges each free prime $\mathfrak p$ of $B$
+with its floor $f^0_{\mathfrak p}$, a lower bound for its residue degree
+$f_K(\mathfrak p)$. Where $f_K(\mathfrak p)$ is not known, an adversary
+choosing the fields cannot both keep it small and avoid a gain: if
+$f_K(\mathfrak p)$ is small, the places of $F$ above $\mathfrak p$ that split
+in $K$ can carry shell profiles; if it is large, the term of $\mathfrak p$ in
+$\zeta_K$ is smaller; and places of $F$ above $\mathfrak p$ that are inert in
+$K$ lower $L_F$. This subsection makes the three gains precise
+(Definition~\ref{lim:credits}) and proves that their minimum can be added to
+the margin (Propositions~\ref{lim:A} and~\ref{lim:B}). With the bound
+$C=\ceiling$ alone, Proposition~\ref{lim:B} gave the exponent $1.042925$.
+
+\begin{lemma}\label{lim:inert}
+Let $K\in\mathcal K$ and $s>1$ real. Then
+\[
+ \frac1d\log L_F(s)=\frac1{[K:\Q]}\log\zeta_K(s)-\frac1d\sum_{\mathfrak q}
+ \artanh(\mathrm N\mathfrak q^{-s}),
+\]
+the sum over the primes $\mathfrak q$ of $F$ that are inert in $K$. For a free
+prime $\mathfrak p$ of $B$ with $f=f_K(\mathfrak p)$ and $N=\mathrm N\mathfrak
+p$, let $\rho_K(\mathfrak p)$ be the proportion of the primes $\mathfrak P$ of
+$K$ above $\mathfrak p$ with $\iota_1\mathfrak P=\mathfrak P$. The primes of
+$F$ above $\mathfrak p$ that are inert in $K$ are the $\mathfrak P\cap F$ with
+$\iota_1\mathfrak P=\mathfrak P$; there are $\rho_K(\mathfrak p)d/f$ of them,
+each of norm $N^{f/2}$, and $\rho_K(\mathfrak p)>0$ only if $f$ is even. The
+primes of $F$ above $\mathfrak p$ that split in $K$ number
+$(1-\rho_K(\mathfrak p))d/(2f)$, each of norm $N^f$.
+\end{lemma}
+
+\begin{proof}
+At a prime $\mathfrak q$ of $F$, with $x=\mathrm N\mathfrak q^{-s}$, the Euler
+factor of $L_F$ is $(1-x)^{-1}$ if $\mathfrak q$ splits in $K$ and
+$(1+x)^{-1}$ if $\mathfrak q$ is inert; no finite prime of $F$ ramifies in $K$
+(G2). The factor of $\zeta_K$ is $(1-x)^{-2}$, respectively
+$(1-x^2)^{-1}$, and $-\frac12\log(1-x^2)+\log(1+x)=\artanh x$. Since
+$[K:\Q]=2d$ this gives the identity. The prime $\mathfrak p$ is unramified in
+$K$, and $K/B$ is Galois of degree $d$, so there are $d/f$ primes $\mathfrak
+P$ above $\mathfrak p$, with cyclic decomposition groups of order $f$. The
+primes of $K$ above $\mathfrak q=\mathfrak P\cap F$ are $\mathfrak P$ and
+$\iota_1\mathfrak P$. If $\iota_1\mathfrak P=\mathfrak P$, then $\mathfrak q$
+is inert, $\mathrm N\mathfrak q=N^{f/2}$, and $\iota_1$ lies in the cyclic
+decomposition group of $\mathfrak P$, so $f$ is even. If
+$\iota_1\mathfrak P\ne\mathfrak P$, then $\mathfrak q$ splits and
+$\mathrm N\mathfrak q=N^f$.
+\end{proof}
+
+\begin{definition}\label{lim:credits}
+Fix $\sigma=1+\varepsilon\in(1,2]$, $0<\delta<1$, and floors $f^0_{\mathfrak
+p}$ for the free primes, that is, integers with $f^0_{\mathfrak p}\mid
+f_K(\mathfrak p)$ for every $K\in\mathcal K$. For a free prime $\mathfrak p$
+with $N=\mathrm N\mathfrak p$, and for $f\in f^0_{\mathfrak p}\cdot2^{\mathbb
+N}$, put
+\[
+ \begin{gathered}
+ R_{\mathfrak p}(f)=\frac{g_\sigma(N^{f^0_{\mathfrak p}})}{2f^0_{\mathfrak p}}
+ -\frac{g_\sigma(N^f)}{2f}\ge0,
+ \qquad
+ I_{\mathfrak p}(f)=\begin{cases}\artanh(N^{-f/2})/f&f\text{ even},\\0&f\text{ odd},\end{cases}\\
+ S_{\mathfrak p}(f)=\frac1{2f}\max\Bigl(0,\max_{k\ge1}\bigl(\log(k+1)-\delta kf\log N\bigr)\Bigr),
+ \end{gathered}
+\]
+with $R_{\mathfrak p}(\infty)=g_\sigma(N^{f^0_{\mathfrak p}})/(2f^0_{\mathfrak
+p})$ and $I_{\mathfrak p}(\infty)=S_{\mathfrak p}(\infty)=0$, and let
+\[
+ G_{\mathfrak p}=\inf\bigl\{R_{\mathfrak p}(f)+\rho I_{\mathfrak p}(f)
+ +(1-\rho)S_{\mathfrak p}(f)\bigr\}\ge0,
+\]
+over $f\in f^0_{\mathfrak p}\cdot2^{\mathbb N}\cup\{\infty\}$ and
+$\rho\in[0,1]$, with $\rho=0$ if $f$ is odd. For $K\in\mathcal K$ we call
+$R_{\mathfrak p}(f_K(\mathfrak p))+\rho_K(\mathfrak p)I_{\mathfrak
+p}(f_K(\mathfrak p))$ the \emph{adaptive credit} of $\mathfrak p$ (it lowers
+the bound for $d^{-1}\log L_F(1)$, Proposition~\ref{lim:A}), and
+$(1-\rho_K(\mathfrak p))S_{\mathfrak p}(f_K(\mathfrak p))$ its \emph{window
+credit} (it raises the finite term of the margin, Proposition~\ref{lim:B}).
+\end{definition}
+
+\begin{lemma}\label{lim:credit-sum}
+In Definition~\ref{lim:credits}, $R_{\mathfrak p}(f)\ge0$. For every
+$K\in\mathcal K$ and every free prime $\mathfrak p$, the sum of the adaptive
+credit and the window credit of $\mathfrak p$ is at least $G_{\mathfrak p}$.
+\end{lemma}
+
+\begin{proof}
+The inequality $R_{\mathfrak p}(f)\ge0$ follows from the monotonicity in
+Lemma~\ref{an:local-contribution}. Since $f_K(\mathfrak p)$ is a power of two
+divisible by $f^0_{\mathfrak p}$, and $\rho_K(\mathfrak p)=0$ if
+$f_K(\mathfrak p)$ is odd (Lemma~\ref{lim:inert}), the sum of the adaptive
+credit and the window credit of $\mathfrak p$ is one of the expressions in the
+infimum defining $G_{\mathfrak p}$, and hence at least $G_{\mathfrak p}$.
+\end{proof}
+
+\begin{proposition}[Adaptive ceiling]\label{lim:A}
+Fix $\sigma$, $\delta$ and floors as in Definition~\ref{lim:credits}, with
+the functions $R_{\mathfrak p}$ and $I_{\mathfrak p}$ defined there. Let
+$Y_*$ be a real number such that, for every $K\in\mathcal K$ and every
+finite set $\mathcal A$ of free primes,
+\begin{equation}\label{lim:termwise}
+ \frac{\log\zeta_K(\sigma)}{[K:\Q]}\le Y_*-\sum_{\mathfrak p\in\mathcal A}
+ R_{\mathfrak p}(f_K(\mathfrak p)),
+\end{equation}
+let $Y'_*$ be as in Proposition~\ref{an:prime-budget}, and let
+$C'>Y_*+\varepsilon(\kappa_\infty+Y'_*)$. For every finite set $\mathcal A$
+of free primes there is an $m_0$ such that every $K\in\mathcal K$ with
+$[K:B]\ge m_0$ satisfies
+\[
+ \frac1d\log L_F(1)<C'-\sum_{\mathfrak p\in\mathcal A}\bigl(R_{\mathfrak p}(f_K(\mathfrak p))
+ +\rho_K(\mathfrak p)I_{\mathfrak p}(f_K(\mathfrak p))\bigr),
+\]
+that is, $C'$ minus the adaptive credits of the primes of $\mathcal A$.
+\end{proposition}
+
+\begin{remark}\label{lim:termwise-remark}
+The hypothesis \eqref{lim:termwise} holds for the termwise bounds of this
+paper: by \eqref{an:local-sum}, $Y_*$ is a sum of terms
+$g_\sigma(\mathrm N\mathfrak p^{f^0_{\mathfrak p}})/(2f^0_{\mathfrak p})$ over the
+free primes, plus terms for the selected primes, and keeping the exact term
+$g_\sigma(N^f)/(2f)$ at the primes of $\mathcal A$ lowers it by
+$\sum_{\mathcal A}R_{\mathfrak p}$.
+\end{remark}
+
+\begin{proof}[Proof of Proposition~\ref{lim:A}]
+Suppose not, and let $K^{(j)}$ be fields of strictly increasing degree that
+violate the inequality. As $\mathcal A$ is finite and the
+$f_j(\mathfrak p)=f_{K^{(j)}}(\mathfrak p)$ are powers of two times
+$f^0_{\mathfrak p}$, we may pass to a subsequence along which, for each
+$\mathfrak p\in\mathcal A$, either $f_j(\mathfrak p)=f_\infty(\mathfrak p)$ is
+constant or $f_j(\mathfrak p)\to\infty=:f_\infty(\mathfrak p)$, and
+$\rho_j(\mathfrak p)=\rho_{K^{(j)}}(\mathfrak p)\to\rho_\infty(\mathfrak p)$;
+and then, as in Lemma~\ref{an:limit}, to one along which the $\beta_q$ exist,
+so that (a) and (b) of that lemma hold. Then $R_{\mathfrak p}(f_j)\to
+R_{\mathfrak p}(f_\infty)$ and $\rho_jI_{\mathfrak p}(f_j)\to\rho_\infty
+I_{\mathfrak p}(f_\infty)$.
+
+Fix $s\in(1,2]$. By the proof of Lemma~\ref{an:shift},
+$d^{-1}\log L_F(1)\le d^{-1}\log L_F(s)+\Upsilon(s-1,\theta)$, and by
+Lemma~\ref{lim:inert}, dropping the inert primes above primes outside
+$\mathcal A$,
+\[
+ \frac1d\log L_F(s)\le\frac{\log\zeta_K(s)}{[K:\Q]}-\sum_{\mathfrak p\in\mathcal A}
+ \frac{\rho_K(\mathfrak p)}{f_K(\mathfrak p)}
+ \artanh\bigl(\mathrm N\mathfrak p^{-f_K(\mathfrak p)s/2}\bigr).
+\]
+Along the subsequence the right side tends to $Z(s)-I_\infty(s)$, with $Z$ as
+in Lemma~\ref{an:limit} and
+\[
+ I_\infty(s)=\sum_{\mathfrak p\in\mathcal A}\frac{\rho_\infty}{f_\infty}
+ \artanh\bigl(\mathrm N\mathfrak p^{-f_\infty s/2}\bigr),
+\]
+a term being zero when $f_\infty=\infty$. Hence
+\[
+ C'-\sum_{\mathfrak p\in\mathcal A}\bigl(R_{\mathfrak p}(f_\infty)+\rho_\infty
+ I_{\mathfrak p}(f_\infty)\bigr)\le Z(s)-I_\infty(s)+\sup_\theta\Upsilon(s-1,\theta).
+\]
+As $s\downarrow1$, $Z(s)\to Z(1)$, $I_\infty(s)\to\sum_{\mathfrak p\in\mathcal A}
+\rho_\infty I_{\mathfrak p}(f_\infty)$ and the supremum tends to $0$; so
+$C'-\sum_{\mathcal A}R_{\mathfrak p}(f_\infty)\le Z(1)$. As in the proof of
+Proposition~\ref{an:prime-budget},
+$Z(1)\le Z(1+\varepsilon)+\varepsilon(\kappa_\infty+Y'_*)$, and by
+\eqref{lim:termwise} and Lemma~\ref{an:limit}(a),
+$Z(1+\varepsilon)\le Y_*-\sum_{\mathcal A}R_{\mathfrak p}(f_\infty)$. Together,
+$C'-\sum_{\mathcal A}R_{\mathfrak p}\le Y_*+\varepsilon(\kappa_\infty+Y'_*)
+-\sum_{\mathcal A}R_{\mathfrak p}<C'-\sum_{\mathcal A}R_{\mathfrak p}$, a
+contradiction.
+\end{proof}
+
+\begin{lemma}\label{lim:transfer-C}
+Proposition~\ref{fw:transfer} remains true if its hypothesis
+$\log L_{F_j}(1)\le d_jC$ is replaced by $\log L_{F_j}(1)\le d_jC_j$, and $C$ by
+$C_j$ in the margin \eqref{fw:margin}.
+\end{lemma}
+
+\begin{proof}
+In the proof of Proposition~\ref{fw:transfer} the hypothesis enters only once,
+for the field at hand, in the lower bound for the first factor through
+\eqref{geo:mass-density}. The choice of $\eta$ and the Chebyshev step depend
+only on the infimum of the margins and on the finite set of parameters.
+\end{proof}
+
+\begin{proposition}[Adaptive margin]\label{lim:B}
+Let $\mathcal A$ be a finite set of free primes, let $C'$ satisfy the
+hypotheses of Proposition~\ref{lim:A}, and let $G_{\mathfrak p}$ be as in
+Definition~\ref{lim:credits}. Let $\mathcal P$ and $\mathcal R$ be as
+in Definition~\ref{cert:data}(e), with the effective types $(e_r,f_r)$ of
+Definition~\ref{cert:effective-types}, and for $r\in\mathcal R$ let $g_r$ be a
+shell profile with parameters $(Q_r,k_r,w^{(r)})$, placed at the places of
+$\mathcal P$ above $r$, where $Q_r$ and $k_r$ are those of
+Table~\ref{cert:tab-local} and only the weights $w^{(r)}$ may differ from those
+of Definition~\ref{cert:data}. Let $(f_\R,g_\C)$ be an admissible pair whose Fourier
+constants satisfy \eqref{fw:fourier-condition} with $H_f=H$, the number $H$ of
+Lemma~\ref{cert:places}. Let $J_\C^*\le J_\C$, and let $\mathcal M_*(\theta)$
+be defined by the formula of Definition~\ref{cert:lower-bounds} from these
+data, with $C'$ in place of $C$. If the slope $-\log\pi-2J_\R+J_\C^*$ of
+$\mathcal M_*$ in $\theta$ is positive and
+$\mathcal M_*(\theta_*)+\sum_{\mathfrak p\in\mathcal A}G_{\mathfrak p}>0$, then
+there are finite sets $U_j\subset\R^2$ with $|U_j|\to\infty$ and
+$u(U_j)/|U_j|^{1+\delta}\to\infty$.
+\end{proposition}
+
+\begin{proof}
+Choose $K_j\in\mathcal K$ with $[K_j:B]\to\infty$ and $[K_j:B]\ge m_0$ of
+Proposition~\ref{lim:A}. For $\mathfrak p\in\mathcal A$ write
+$f_{K_j}=f_{K_j}(\mathfrak p)$ for the residue degree of $\mathfrak p$ in
+$K_j/B$ (not to be confused with the residue degrees $f_r$ of the effective
+types or with the profile $f_\R$) and $\rho_j=\rho_{K_j}(\mathfrak p)$, and
+put $C_j=C'-\sum_{\mathfrak p\in\mathcal
+A}(R_{\mathfrak p}(f_{K_j})+\rho_jI_{\mathfrak p}(f_{K_j}))$, so that $\log
+L_{F_j}(1)\le d_jC_j$. Let $\mathcal P_j$ consist of the places of
+$\mathcal P$ for $K_j$ and, for each $\mathfrak p\in\mathcal A$ with
+$S_{\mathfrak p}(f_{K_j})>0$, of the places of $F_j$ above $\mathfrak p$ that
+split in $K_j$, with the unweighted shell profile with parameters
+$(\mathrm N\mathfrak p^{f_{K_j}},k)$, where $k$ attains the maximum in
+$S_{\mathfrak p}(f_{K_j})$. By Lemma~\ref{lim:inert} these places add the window
+credit $(1-\rho_j)S_{\mathfrak p}(f_{K_j})$ to
+$d_j^{-1}\sum\log\mathcal F_{\delta,\mathfrak p}$. Since
+$S_{\mathfrak p}(f)=0$ for large $f$, their parameters lie in a finite set. The
+Fourier condition still holds, because $H_f$ only increases. By
+Lemma~\ref{cert:places} and $J_\C\ge J_\C^*$, the margin of $K_j/F_j$ is at
+least $\mathcal M_*(\theta_j)+\sum_{\mathcal A}(R_{\mathfrak p}+\rho_j
+I_{\mathfrak p}+(1-\rho_j)S_{\mathfrak p})\ge\mathcal M_*(\theta_*)+\sum_{\mathcal A}
+G_{\mathfrak p}>0$, by the positive slope and Lemma~\ref{lim:credit-sum}, and
+Lemma~\ref{lim:transfer-C} applies.
+\end{proof}
+
+\subsection{A refined Tsfasman--Vl\u{a}du\c{t} step with one abscissa}
+
+This subsection records the one-abscissa version of
+Proposition~\ref{an:signed}, combined with the adaptive credits, used for the
+intermediate exponent $1.043116$.
+
+\begin{proposition}\label{lim:D}
+Let $a\ge1$ and $b_{\rm TV}\ge0$ satisfy
+\begin{equation}\label{lim:kernel}
+ g_1(q)\le a\,g_\sigma(q)+b_{\rm TV}\,w(q)\qquad\text{for every real }q\ge2.
+\end{equation}
+Then Proposition~\ref{lim:A}, and hence Proposition~\ref{lim:B}, hold with any
+$C'>Z_{\rm sel}(1)+a\bigl(Y_*-Z_{\rm sel}(\sigma)\bigr)+b_{\rm TV}\,(2\kappa_\infty-T_{\rm sel})$
+in place of the condition $C'>Y_*+\varepsilon(\kappa_\infty+Y'_*)$.
+\end{proposition}
+
+\begin{proof}
+In the proof of Proposition~\ref{lim:A}, keep everything up to
+$C'-\sum_{\mathcal A}R_{\mathfrak p}(f_\infty)\le Z(1)$. Write $\beta^{\rm
+free}=\beta-\beta^{\rm sel}$ as in the proof of Proposition~\ref{an:signed}.
+By \eqref{lim:kernel}, Lemma~\ref{an:limit}(b) and $b_{\rm TV}\ge0$,
+\[
+ Z(1)=Z_{\rm sel}(1)+\sum_q\beta^{\rm free}_qg_1(q)
+ \le Z_{\rm sel}(1)+a\bigl(Z(\sigma)-Z_{\rm sel}(\sigma)\bigr)+b_{\rm TV}\,(2\kappa_\infty-T_{\rm sel}).
+\]
+By \eqref{lim:termwise}, $Z(\sigma)\le Y_*-\sum_{\mathcal A}R_{\mathfrak
+p}(f_\infty)$, and since $a\ge1$ and $R\ge0$ (Lemma~\ref{lim:credit-sum}), $a\sum_{\mathcal A}R\ge
+\sum_{\mathcal A}R$. So $C'-\sum_{\mathcal A}R\le Z_{\rm sel}(1)+a(Y_*-Z_{\rm
+sel}(\sigma))+b_{\rm TV}(2\kappa_\infty-T_{\rm sel})-\sum_{\mathcal A}R$, a
+contradiction. The bound $Y'_*$ is not needed.
+\end{proof}
+
+\begin{remark}\label{lim:kernel-check}
+For $q\ge q_{\min}=41^4$, condition \eqref{lim:kernel} follows from $h(x)\ge0$
+for $x=\log q$, where $h(x)=ae^{-\varepsilon x}+2b_{\rm TV}x(1-e^{-x})-1-2e^{-x}$,
+by $g_1(q)\le1/(q-1)$, $g_\sigma(q)\ge q^{-\sigma}$, $w(q)\ge2\log q/(q+1)$,
+$q/(q+1)\ge1-1/q$ and $q/(q-1)\le1+2/q$; the program \texttt{dihedral/lptv.py}
+checks $h\ge0$ in Arb on cells, with bisection near the minimum, and in a
+closed form, and checks \eqref{lim:kernel} directly on $5950$ geometric cells
+of $[2,2q_{\min}]$. Proposition~\ref{an:signed} with $n=1$ and $c_1=a$ is this
+step without the adaptive credits; with several abscissae and coefficients of
+both signs it gains $1.18\cdot10^{-4}$ in $C$ on the same data.
+\end{remark}
+
+\subsection{Intermediate results}
+This subsection lists how the intermediate exponents of
+Table~\ref{intro:table-steps} were obtained, as special cases of the results
+above. Each has a witness file and a replay program in the directory
+\texttt{certificates} of \cite{NaslundCode4317}.
+\begin{enumerate}
+\item[(1)] $1.042925$: Proposition~\ref{lim:B} with $C'=\ceiling$, the
+ floors of \cite{Naslund04273} relative to $E$, $\sigma=301/300$, and
+ $\mathcal A$ the free primes of norm at most $X=1.2\cdot10^7$
+ (\texttt{reproduce\_adaptive.py}; the values of $\sigma$ and $X$ are in the
+ witness file \texttt{witness\_0.042925.json}).
+\item[(2)] $1.042965$: the census of Proposition~\ref{dh:census} up to
+ $10^{12}$ relative to $E$, which raises the floors of the detected primes of
+ vector $0$ from $1$ to $2$ (\texttt{reproduce\_census.py}).
+\item[(3)] $1.043113$ to $1.043124$: Lemma~\ref{dh:EW} for the subspace
+ $W=\langle\psi_{10},\psi_{23}\rangle\subset W''$ in place of $W''$
+ (Remark~\ref{dh:EW-sub}), whose nonzero elements
+ $\psi_{10},\psi_{23},\psi_{24}$ are all of dihedral type, so that
+ $[E_W:\Q]=2048$ and $\zeta_{E_W}$ is $\zeta_E$ times the squares of the $192$
+ $L$-functions of these three forms; with the census relative to $E_W$ up to
+ $8.5\cdot10^{14}$, and with Propositions~\ref{an:prime-budget}, \ref{lim:D}
+ and~\ref{an:signed} in turn (\texttt{dihedral/reproduce\_dihedral.py}). One
+ review found that an earlier version of this step had credited the thirteen
+ inert primes of vector $0$ (Lemma~\ref{dh:inert-v0}) twice; the corrected value is in the table.
+\item[(4)] $1.043152$: Lemma~\ref{dh:EW} for the subspace
+ $W'=\langle\psi_{10},\psi_{23},\psi_{19}\rangle\subset W''$
+ (Remark~\ref{dh:EW-sub}), whose seven nonzero elements
+ are five forms of dihedral type and $\psi_{19}+\psi_{23}$,
+ $\psi_{19}+\psi_{24}$ of rank $4$; $[E_{W'}:\Q]=4096$, with $32$
+ $L$-functions of degree $8$ (\texttt{dihedral/reproduce\_w3.py}).
+\end{enumerate}
+
+\subsection{Limits}
+This subsection records what is known about how far the method can go, with
+the kind of evidence for each statement. The margin decreases by about $23.8$ per unit of $\delta$ and by $1$ per unit
+of $C$, so $2.38\cdot10^{-5}$ in $C$ corresponds to $10^{-6}$ in $\delta$.
+
+\emph{The next step (computation).} With general shell weights and
+profiles optimized at $\delta=0.043172$, the margin is positive only if
+$C\le0.0422631$. The repository contains, unused by any witness, the census
+relative to $\EW$ extended to the limit $2^{50}\approx1.13\cdot10^{15}$ of the
+program \texttt{census\_kv4.c}, $35$ further abscissae, and the twists of
+$\psi_{10},\psi_{23},\psi_{24}$ recomputed with the kernels of
+Section~\ref{lv:section}. With all of them the linear programme of
+Section~\ref{ce:section} reaches only about $0.0422638$, about $7\cdot10^{-7}$
+short.
+
+\emph{More dihedral forms (proved).} By Lemma~\ref{dh:W-structure}, every
+space properly containing $W''$ contains a form whose polar form has rank at
+least $6$, whose irreducible representations have dimension at least $8$ and
+whose $L$-functions have degree at least $16$ over $\Q$, with conductors
+around $10^{40}$. So $W''$ is the end of this route. The remaining part of
+$C_{\rm eff}-Z_{\rm sel}(1)\approx6.1\cdot10^{-4}$ comes from the primes of
+vector $0$ in $\ker W''$ that the census does not reach; the census gains only
+like the logarithm of its range.
+
+\emph{This design (proved, given the margin formula; numerical for the
+profiles).} By Remark~\ref{an:limit-remark}, no bound of the kind of
+Proposition~\ref{an:signed} is below $Z_{\rm sel}(1)=0.0416685$. With
+$C=Z_{\rm sel}(1)$ and profiles optimized by our programs, the margin is about
+$+3.9\cdot10^{-4}$ at $\delta=0.04318$ and $-8.8\cdot10^{-5}$ at
+$\delta=0.04320$. So for this tower, these local types and this margin formula,
+the method cannot go beyond about $\delta=0.043196$; this assumes that the
+profile optimization is close to optimal.
+
+\emph{A fourth cap (evidence).} One more $C_4$ cap would be worth about
+$2.9\cdot10^{-4}$ in $\delta$, but it raises the value of the
+Golod--Shafarevich function at its minimum from $-0.00211$ to $+0.00288$, so
+Proposition~\ref{tw:infinite} no longer applies. Screens of weighted versions
+of the Golod--Shafarevich argument, of the index-two subgroups of $G_B$, and
+of further overlaps between the local modules did not recover the deficit.
+These are limits of the present arguments, not proofs that such a tower is
+finite.
+
+\emph{A larger conjugacy class (conditional).} The proof uses
+$\theta\ge\theta_*=1/2-2^{-17}$, from the class of $\iota_1$ in
+$\overline G_B$, of size $2^{15}$ (Lemma~\ref{tw:retained-quotient}(c)). A class of
+size $2^{16}$ in a suitable quotient would give $\theta\ge1/2-2^{-18}$ and add
+about $2.4\cdot10^{-6}$ to the margin; with the bound $C\le0.04226506$, which
+\texttt{signed3.py} certifies for $\EW$ with the census to $8.5\cdot10^{14}$ and
+$36$ abscissae (not packaged as a witness), this would give the exponent
+$1.043172$. An argument for such a class, by an agent run of the Muse Spark
+system, is recorded in the directory \texttt{research/2026-10-muse-involution-class}
+of \cite{NaslundCode4317}. It has been checked only inside that run and is not
+used here.

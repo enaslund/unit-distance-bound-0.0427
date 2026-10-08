@@ -1,97 +1,75 @@
 # Formalization status
 
 [`lean/`](../lean/README.md) is a Lean 4 project (Lean `v4.35.0-rc2`, Mathlib
-`065356127b1dc0016f66b7283ce0ce2c4055aa55`). Its sources are the export of
-research commit `c280e7e6` of `enaslund/unit-distance-bound`, copied unchanged;
-[`provenance/lean-release.json`](../provenance/lean-release.json) records the
-archive identity. It formalizes the paper *An Exponent of 1.04273 for the Unit Distance Problem* at the
-exponent 1.0427, conditional on one zeta inequality, and its Palomar project
-name is "An Exponent of 1.04273 for the Unit Distance Problem: Lean formalization at exponent
-1.0427, conditional on one zeta inequality".
+`065356127b1dc0016f66b7283ce0ce2c4055aa55`). Its sources are the export of research commit
+`a5273110` of `enaslund/unit-distance-bound`, copied unchanged;
+[`provenance/lean-release.json`](../provenance/lean-release.json) records the archive identity. It
+formalizes the construction of the paper *An Exponent of 1.043 for the Unit Distance Problem* at
+the exponent 1.04315, conditional on one zeta inequality.
 
-The corrected external numerical certificates are maintained in
-[`papers/0.04273`](../papers/0.04273/README.md#reproduce). The copies under
-`lean/docs/quadratic-base-research` retain the original contents recorded in
-the sealed `lean/SOURCE_SNAPSHOT.json`; the October 2, 2026 interval-handling
-corrections do not alter that registered Lean archive.
+## The selected theorem: exponent 1.04315
 
-## The selected theorem: exponent 1.0427
+`UnitDistanceSqrt241Submission.target_of_wide_zeta_bound` is stated independently in
+[`lean/ChallengeZeta241.lean`](../lean/ChallengeZeta241.lean) (importing only Mathlib) and proved in
+[`lean/SolutionZeta241.lean`](../lean/SolutionZeta241.lean). It gives finite sets `U_j` in the
+Euclidean plane with `|U_j| → ∞` and (number of unordered unit-distance pairs)`/|U_j|^(20863/20000)
+→ ∞`, assuming one explicit inequality **H_W** for the Dedekind zeta function of the field `E_W`
+of degree 8192: the genus field `E` of `B = ℚ(√241)` (degree 512) adjoined square roots of four
+explicit elements `β_i ∈ E`, which define dihedral extensions of `B` of degree 8.
+[`lean/docs/ASSUMPTIONS.md`](../lean/docs/ASSUMPTIONS.md) displays H_W:
 
-`UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound` is stated
-independently in [`lean/ChallengeZeta241.lean`](../lean/ChallengeZeta241.lean)
-(135 lines, importing only Mathlib) and proved in
-[`lean/SolutionZeta241.lean`](../lean/SolutionZeta241.lean). It gives finite
-sets `U_j` in the Euclidean plane with `|U_j| → ∞` and (number of unordered
-unit-distance pairs)`/|U_j|^(10427/10000) → ∞`, assuming one explicit
-inequality H241 for the Dedekind zeta function of the degree-512 field
-generated over `ℚ` by `√241` and square roots of eight explicit elements of
-`ℚ(√241)`. The [package README](../lean/README.md) displays H241.
+```text
+log(Re ζ_{E_W}(1 + 1/4411))/8192
+  + (1/4411) ((ℓ − γ − log(4π))/4 − Re(logDeriv ζ_{E_W} 2)/8192) < 50969/1000000,
+ℓ = (9/4) log 2 + (1/2) log 3615.
+```
 
-- **H241 is not proved in Lean.** Outside Lean,
-  [`papers/0.04273/certificates/h241_receipt.py`](../papers/0.04273/certificates/h241_receipt.py)
-  bounds its left side by 0.0848335 against the ceiling 0.0852, and an
-  independent recomputation with PARI's Hecke L-functions agrees.
-- Apart from H241, the proof uses only `propext`, `Quot.sound` and
-  `Classical.choice`; there is no `sorry` and no `native_decide`.
-- The manuscript [papers/0.04273](../papers/0.04273/README.md) proves the
-  exponent 1.04273; the Lean statement uses 1.0427, which leaves room for exact
-  rational enclosures.
-- The Palomar selection is project `lean`, metadata `lean/formalization.yaml`
-  and comparator `lean/comparator-zeta241.json`.
-
-The theorem's import closure has 2,288 modules and about 653,000 lines of
-Lean: 42,000 in the new development over `ℚ(√241)`, 86,000 shared with the
-earlier development over `ℚ`, and 525,000 in vendored ports (Yamaguchi's
-class-field-theory library, AINTLIB, Hadamard products, Poisson summation),
-credited in [`lean/NOTICE`](../lean/NOTICE).
+- **H_W is not proved in Lean.** Outside Lean,
+  [`papers/0.043171/certificates/dihedral/h_w_receipt.py`](../papers/0.043171/certificates/dihedral/h_w_receipt.py)
+  bounds its left side by 0.0509171473 against the threshold 0.050969, from the certified L-values
+  of the paper (Sections 5 and 6) and an explicit bound for the logarithmic derivative at 2.
+- Apart from H_W, the proof uses only `propext`, `Quot.sound` and `Classical.choice`; there is no
+  `sorry` and no `native_decide`.
+- What Lean proves: the infinite 41-cap tower over `B` (presentation, Golod–Shafarevich
+  inequality), its fields with their local types and signature, the fixed base `M` and its root
+  discriminant, the field `E_W` with its degree, its embedding in `M` and its local data, the
+  passage from H_W to the analytic ceiling, the numerical margin and the planar construction.
+- The paper proves the exponent 1.043171 with a computer-assisted certificate; the Lean statement
+  uses 1.04315, which a single abscissa, the census of the fixed base up to norm 1000 and the
+  pair profile of the earlier formalization reach. The full certificate of the paper (the census
+  to 4·10¹³, the signed kernel and general shell weights) is not formalized.
+- An independent fresh-context review of the statement, the field `E_W` and the match between
+  H_W and its evidence found no error
+  ([report](../provenance/lean-checks/v2-statement-review-20261008.md)).
+- The Palomar selection is project `lean`, metadata `lean/formalization.yaml` and comparator
+  `lean/comparator-zeta241.json`.
 
 ## The companion theorem: exponent 1.0418235
 
-The package also contains the conditional theorem at exponent
-`2083647/2000000` of the author's interim note, a private note never released
-before this repository and superseded by the main paper: [`lean/ChallengeZeta.lean`](../lean/ChallengeZeta.lean),
-[`lean/SolutionZeta.lean`](../lean/SolutionZeta.lean),
-`lean/comparator-zeta.json` and `lean/formalization-zeta.yaml`, the
-formalization of [papers/0.0418235](../papers/0.0418235/README.md). It assumes
-a different inequality, for a fixed field of degree 524288, and 2,048 of its
-2,162 modules are shared with the selected theorem. It is included for
-reference and is not the Palomar selection; `lake build SolutionZeta
-ChallengeZeta` builds it.
+The package also contains the conditional theorem at exponent `2083647/2000000` of the author's
+interim note: [`lean/ChallengeZeta.lean`](../lean/ChallengeZeta.lean),
+[`lean/SolutionZeta.lean`](../lean/SolutionZeta.lean), `lean/comparator-zeta.json` and
+`lean/formalization-zeta.yaml`, the formalization of [papers/0.0418235](../papers/0.0418235/README.md).
+It assumes a different inequality, for a fixed field of degree 524288. It is included for reference
+and is not the Palomar selection; `lake build SolutionZeta ChallengeZeta` builds it.
 
 ## Verification
 
 | Check | Version checked | Result |
 | --- | --- | --- |
-| Complete pinned Palomar pipeline under the 16-CPU/32-GiB profile: fresh build, protected exports, statement and definition comparison, axiom checks, con-ron, NanoDa, Lean kernel | Candidate 4 (research commit `697c3cd7`) | Passed on September 29, 2026 in 7,876.6 s ([record](../lean/verification/sqrt241-full-20260929/README.md)) |
-| con-ron, NanoDa and Lean kernel replays of the Solution export, each within 4 CPUs and 16 GiB | The selected theorem's declarations in this package | Passed; memory peaks 10.3, 10.4 and 8.0 GiB ([record](../lean/verification/sqrt241-bounded-20260929/README.md)) |
-| Axiom audit of the 57,394 declarations in the selected closure and the 32 submission declarations | This package | Only the three standard axioms |
-| Packaging gate: deterministic re-export and the metadata contract of PalomarSubmission `65f0154` | This package's archive | Passed ([report](../provenance/lean-checks/gate.json)) |
-| Fresh build from source, with the axiom audit | The first export of this package, with byte-identical Lean files | Passed: 6,960 build jobs in 62 minutes; the audit of 52,186 project and 32 submission declarations reports only the three standard axioms ([report](../provenance/lean-checks/candidate1-fresh-build.json)) |
-| **Palomar's own preflight workflow** (pinned verifier `65f0154` on a GitHub-hosted runner, profile `palomar-standard-v1`: 4 CPUs, 16 GiB): fresh build, protected exports, statement and definition comparison, axiom checks, con-ron, NanoDa, Lean kernel | Commits `5e35812`, `6ebff18`, `7ce1f81`, `81755b0`, `144d08d`, `48cbae6` and `71f5d36` of this repository, with the same Lean files as the current package | **Passed** for all seven (on September 30 and October 1, 2026): `status: pass`, `stage: complete`, "Your solution is okay!"; for `6ebff18` the build took 1 h 43 min (peak 11.1 GiB) and the comparator phase 1 h 6 min (peak 12.0 GiB) ([latest report](../provenance/lean-checks/hosted-71f5d36-mechanical-report.json); earlier: [5e35812](../provenance/lean-checks/hosted-5e35812-mechanical-report.json), [6ebff18](../provenance/lean-checks/hosted-6ebff18-mechanical-report.json), [7ce1f81](../provenance/lean-checks/hosted-7ce1f81-mechanical-report.json), [81755b0](../provenance/lean-checks/hosted-81755b0-mechanical-report.json), [144d08d](../provenance/lean-checks/hosted-144d08d-mechanical-report.json), [48cbae6](../provenance/lean-checks/hosted-48cbae6-mechanical-report.json)) |
-| **Palomar registry verification** (Palomar's own dispatch, profile `palomar-namespace-16x32-v1`) | Commit `e0ac836`, the registered package | **Passed** on October 1, 2026 (run 36919920713 in `PalomarRegistry/PalomarSubmission`): `status: pass`, `stage: complete`; con-ron, NanoDa and Lean's kernel accept ([report](../provenance/lean-checks/palomar-registration-e0ac836-mechanical-report.json)) |
-| The same pinned pipeline reproduced on a local host under the `palomar-standard-v1` limits | The first export of this package, with byte-identical Lean files | Passed in 9,235 s ([report](../provenance/lean-checks/candidate1-local-standard-report.json)) |
-
-The sources differ from candidate 4 only inside proofs: certificate splits
-that fit con-ron within 16 GiB. Compared declaration by declaration, no
-theorem statement or definition changed. The companion theorem passed the
-complete pipeline under both Palomar profiles for its own earlier package,
-and its Lean sources are unchanged since.
+| `lake build` (default targets) and `lake build UnitDistance` | The version 2 sources | Passed |
+| Axiom audit of the 59,452 declarations in the selected closure and the 55 submission declarations | The version 2 sources | Only `propext`, `Classical.choice`, `Quot.sound` ([record](../provenance/lean-checks/v2-axiom-audit-README.md)) |
+| Packaging gate: deterministic re-export and the metadata contract of PalomarSubmission `65f0154` | This package's archive | Passed ([report](../provenance/lean-checks/v2-gate.json)) |
+| Complete pinned Palomar pipeline, profile `palomar-standard-v1` (4 CPUs, 16 GiB), on a local trusted setup: fresh build, protected export, statement and definition comparison, axiom checks, con-ron and NanoDa | An earlier export with byte-identical Lean files (archive `64721952…`) | Passed in 6,818 s, peak memory 15.2 GiB ([record](../provenance/lean-checks/v2-local-standard-README.md), [report](../provenance/lean-checks/v2-local-standard-local-execution.json)) |
+| Palomar's own preflight workflow ([`palomar-preflight.yml`](../.github/workflows/palomar-preflight.yml)) on this repository's commit | — | Not yet run on the version 2 package |
 
 ## Registration
 
-The 1.0427 theorem is registered in the Palomar registry as
-[PALOMAR-2026-10-01-000018, version 1](https://palomar-registry.org/entry?id=PALOMAR-2026-10-01-000018&version=1).
-The author submitted commit `e0ac836` (project `lean`, metadata
-`lean/formalization.yaml`, comparator `lean/comparator-zeta241.json`) on
-October 1, 2026. Palomar's mechanical verification passed (run 36919920713),
-the Challenge was rendered, the automated editorial review identified no
-problems, and the record was registered the same day. The registered
-`lean/` is the export of research commit `c280e7e6`. Its metadata cites the
-self-contained manuscript *An Exponent of 1.04273 for the Unit Distance
-Problem*, published at commit `7dfcf88`, and it carries that manuscript and
-its certificates under `lean/docs`. Later commits of this repository change
-only the papers and documentation; `lean/` is unchanged since `e0ac836`.
-The manual workflow
-[`.github/workflows/palomar-preflight.yml`](../.github/workflows/palomar-preflight.yml)
-reruns Palomar's pinned verifier on any commit, and its results appear in
-the repository's Actions tab.
+Version 1 of this formalization, the theorem
+`UnitDistanceSqrt241Submission.target_of_canonical_genus_zeta_bound` at exponent 1.0427 from an
+inequality H241 on the degree-512 genus field, is registered as
+[PALOMAR-2026-10-01-000018, version 1](https://palomar-registry.org/entry?id=PALOMAR-2026-10-01-000018&version=1),
+from commit `e0ac836` of this repository; Palomar keeps a preserved copy of that commit. The 1.04315
+theorem in the current `lean/` is prepared for submission with the same project, metadata and
+comparator paths. Because it is a new theorem with a new hypothesis, Palomar may register it as a
+new result rather than as a new version of that entry. No submission of it has been made yet.

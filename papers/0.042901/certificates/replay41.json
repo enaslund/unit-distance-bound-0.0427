@@ -1,0 +1,23 @@
+{
+  "shared_inputs": "PASS 241 Kummer/Lie/CE inputs hash-checked",
+  "kummer41": "PASS 41 splits; Frobenius vectors reproduced",
+  "cap_compatibility": "PASS C4 order and c1 separation for the capped 41-prime",
+  "lie_layers": "PASS L2=15, L3=26, |G/D4|=2^49, class(c1)=2^15 (fourth powers affect neither)",
+  "golod_shafarevich": {
+    "t": "34/117",
+    "P_B": "-187433948535241/88772225460489675",
+    "note": "3 C4 caps: two above 29, one above 41; same count as 241 design"
+  },
+  "analytic_ceiling": {
+    "C_upper": "[0.048712842890287597068555772665282586627260380309518115341522 +/- 2.07e-62]",
+    "used": "0.04871285",
+    "C_minus_Bsel": "[0.00704436 +/- 7.44e-9]"
+  },
+  "geometry": {
+    "delta": "0.042901",
+    "witness": "witness41_0.042901.json",
+    "margin_after_concentration_lower": "0.00000577935079126441484890749830716384534198303012915842093515759"
+  },
+  "status": "PASS finite replay for delta = 0.042901 (exponent 1.042901); tower/transfer per 241 construction.md with the 41-cap swap of research/construction-41cap.md",
+  "seconds": 9.299242500972468
+}

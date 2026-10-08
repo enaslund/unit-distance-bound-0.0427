@@ -238,7 +238,7 @@ theorem otherMap_layers (hL : A.Labels) (j : Index) (n : ℕ) :
       change A.retained hL (cyclicMap 4 (A.projection (A.cap k)) (A.cap_fourth k)
         (cyclicGenerator 4)) = _
       rw [cyclicMap_generator,cyclicMap_generator,retained_projection]
-    exact LocalModels.layers_of_comp _ _ _ he (LocalModels.cap_layers _ k (hL.cap k)) n
+    exact LocalModels.layers_of_comp _ _ _ he (LocalModels.cap_layers_of_good _ (hL.cap k)) n
 
 /-- Completed-word lifts of the generators of the other blocks. -/
 def otherLifts (j : Index) (i : GeneratorType j) : CompletedWords (Fin 8) :=

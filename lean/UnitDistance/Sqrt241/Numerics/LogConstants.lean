@@ -70,25 +70,25 @@ theorem logRD_bounds :
   constructor <;> nlinarith [h2.1, h2.2, h3.1, h3.2]
 
 theorem log_four_increment_bounds :
-    (-1767261997627667564 / 10 ^ 18 : ℝ) ≤ Real.log (4 * increment) ∧
-      Real.log (4 * increment) ≤ (-1767261997627667563 / 10 ^ 18 : ℝ) := by
-  have h1 := log_ge_of_le_logLo (y := 427 / 2500) (lo := -1767261997627667564 / 10 ^ 18)
+    (-1756778500332809483 / 10 ^ 18 : ℝ) ≤ Real.log (4 * increment) ∧
+      Real.log (4 * increment) ≤ (-1756778500332809480 / 10 ^ 18 : ℝ) := by
+  have h1 := log_ge_of_le_logLo (y := 863 / 5000) (lo := -1756778500332809483 / 10 ^ 18)
     (by norm_num) (by decide +kernel)
-  have h2 := log_le_of_logHi_le (y := 427 / 2500) (hi := -1767261997627667563 / 10 ^ 18)
+  have h2 := log_le_of_logHi_le (y := 863 / 5000) (hi := -1756778500332809480 / 10 ^ 18)
     (by norm_num) (by decide +kernel)
-  have he : 4 * increment = (427 / 2500 : ℝ) := by norm_num [increment]
+  have he : 4 * increment = (863 / 5000 : ℝ) := by norm_num [increment]
   rw [he]
   push_cast at h1 h2
   exact ⟨h1, h2⟩
 
 theorem log_one_add_increment_bounds :
-    (41813502813410388 / 10 ^ 18 : ℝ) ≤ Real.log (1 + increment) ∧
-      Real.log (1 + increment) ≤ (41813502813410389 / 10 ^ 18 : ℝ) := by
-  have h1 := log_ge_of_le_logLo (y := 10427 / 10000) (lo := 41813502813410388 / 10 ^ 18)
+    (42244981593746004 / 10 ^ 18 : ℝ) ≤ Real.log (1 + increment) ∧
+      Real.log (1 + increment) ≤ (42244981593746007 / 10 ^ 18 : ℝ) := by
+  have h1 := log_ge_of_le_logLo (y := 20863 / 20000) (lo := 42244981593746004 / 10 ^ 18)
     (by norm_num) (by decide +kernel)
-  have h2 := log_le_of_logHi_le (y := 10427 / 10000) (hi := 41813502813410389 / 10 ^ 18)
+  have h2 := log_le_of_logHi_le (y := 20863 / 20000) (hi := 42244981593746007 / 10 ^ 18)
     (by norm_num) (by decide +kernel)
-  have he : 1 + increment = (10427 / 10000 : ℝ) := by norm_num [increment]
+  have he : 1 + increment = (20863 / 20000 : ℝ) := by norm_num [increment]
   rw [he]
   push_cast at h1 h2
   exact ⟨h1, h2⟩

@@ -95,7 +95,7 @@ structure Labels : Prop where
     Multiplicative.ofAdd (dyadicBVector P)
   dyadicC : ∀ P, genusLabel (E.dyadic P (PadicTwoQuadraticRelation.generator 2)) =
     Multiplicative.ofAdd (dyadicCVector P)
-  cap : ∀ k, genusLabel (E.cap k) = Multiplicative.ofAdd (capVector k)
+  cap : ∀ k, CapGood (genusLabel (E.cap k)).toAdd
 
 /-- A fixed preimage in `F(8)` of an element of `G_B`. -/
 def lift (g : GB) : Free := Function.surjInv freeMap_surjective g
@@ -168,9 +168,9 @@ theorem sourceLifts_labels (hL : E.Labels) : E.sourceLifts.Labels := by
     rw [retainedFree_base, freeMap_dyadicLift, map_mul, map_mul, localPresentation_generator,
       localPresentation_generator, map_mul, hL.dyadicA, hL.dyadicC, dyadicZVector_eq]
     rfl
-  · change (Cut.retainedFree (lift (E.cap k))).base = _
-    rw [retainedFree_base_lift, hL.cap]
-    rfl
+  · change CapGood (Cut.retainedFree (lift (E.cap k))).base
+    rw [retainedFree_base_lift]
+    exact hL.cap k
 
 theorem relatorsTrivial (hR : E.Relations) : RelatorsTrivial E.sourceLifts genuineRelation := by
   refine ⟨fun k ↦ ?_, fun q ↦ ?_, fun P ↦ ?_⟩

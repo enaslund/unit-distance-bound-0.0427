@@ -202,8 +202,9 @@ variable {Ĝ : Type*} [Group Ĝ] [TopologicalSpace Ĝ] [IsTopologicalGroup Ĝ] [
 /-- Hypotheses of `σ`-stability for a map of the free source into `Ĝ`: at each
 pair of primes of `B` the second-prime lifts are conjugate to the first-prime
 lifts by an element `s ∈ Hσ` (for the normalized local maps of `Local/Maps.lean`, `s = σ̂`
-or `σ̂⁻¹`), the Frobenius at the inert `7` is a square root of the third cap with
-`σ F₇⁻¹ ∈ H`, and `σ² ∈ H`. -/
+or `σ̂⁻¹`), either the Frobenius at the inert `7` is a square root of the third cap
+with `σ F₇⁻¹ ∈ H` or the third cap is the first one (a symmetric cut without the cap at
+`7`), and `σ² ∈ H`. -/
 structure SigmaStable (H : Subgroup Ĝ) (f : Source →ₜ* Ĝ) (σ : Ĝ) : Prop where
   sq_mem : σ^2 ∈ H
   conj : ∃ s, s*σ⁻¹ ∈ H ∧ f (A.conj 1) = MulAut.conj s (f (A.conj 0))
@@ -213,7 +214,7 @@ structure SigmaStable (H : Subgroup Ĝ) (f : Source →ₜ* Ĝ) (σ : Ĝ) : Prop
     f (A.tameFrobenius 3) = MulAut.conj s (f (A.tameFrobenius 2))
   dyadic : ∃ s, s*σ⁻¹ ∈ H ∧ ∀ g, f (A.dyadic 1 g) = MulAut.conj s (f (A.dyadic 0 g))
   cap : ∃ s, s*σ⁻¹ ∈ H ∧ f (A.cap 1) = MulAut.conj s (f (A.cap 0))
-  frob7 : ∃ F : Ĝ, f (A.cap 2) = F^2 ∧ σ*F⁻¹ ∈ H
+  frob7 : (∃ F : Ĝ, f (A.cap 2) = F^2 ∧ σ*F⁻¹ ∈ H) ∨ A.cap 2 = A.cap 0
 
 variable (H : Subgroup Ĝ) [H.Normal] (f : Source →ₜ* Ĝ)
   (hfH : ∀ g, f g ∈ H) (honto : ∀ h ∈ H, ∃ g, f g = h)
@@ -338,7 +339,15 @@ theorem sigma_conj_words (r : LocalSource)
         simp [lifts,Lifts.deepWords,map_pow,hk])).1
     · exact (P sk hsk _ _ (hd 4) (hd 5) (by
         simp [lifts,Lifts.deepWords,map_pow,hk])).2
-    · obtain ⟨F,hF,hσF⟩ := hσ.frob7
+    · rcases hσ.frob7 with ⟨F,hF,hσF⟩ | h20
+      swap
+      · have hw : A.lifts.deepWords 6 = A.lifts.deepWords 4 := by
+          change A.cap 2^4 = A.cap 0^4
+          rw [h20]
+        change MulAut.conj σ (f (A.lifts.deepWords 6)) ∈ _
+        rw [hw]
+        exact (P sk hsk _ _ (hd 4) (hd 5) (by
+          simp [lifts,Lifts.deepWords,map_pow,hk])).1
       have hw : f (A.lifts.deepWords 6) = F^8 := by
         change f (A.cap 2^4) = _
         rw [map_pow,hF,← pow_mul]

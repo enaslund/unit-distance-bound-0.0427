@@ -44,6 +44,7 @@ needs no ramification at 7, 11 and 13. The root discriminant falls from about
 | Path | Contents |
 | --- | --- |
 | [main.tex](main.tex), [sections/](sections/), [references.bib](references.bib) | The manuscript: introduction; the tower over Q(√241); the Kummer field and its L-functions; the upper bound for the relative zeta value; units of relative norm one and planar point sets; shell profiles at split finite places; archimedean profiles; the proof of the main theorem |
+| [main-single-file.tex](main-single-file.tex) | The same paper as one self-contained LaTeX file, with the sections and the bibliography included, for submission to preprint servers and journals. It produces the same text as main.pdf; regenerate it after any change to main.tex, sections/ or references.bib |
 | [certificates/](certificates/) | The supplementary programs and the replay driver `reproduce241.py` |
 | [research/construction.md](research/construction.md) | The research note of September 29, 2026 that first recorded the construction; the manuscript supersedes it |
 | [research/manuscript-review-20260930.md](research/manuscript-review-20260930.md) | Review record of the manuscript |
@@ -72,7 +73,21 @@ The replay runs every step below, asserts each result, and writes
 `replay241.json`; it takes about fifteen minutes. It unpacks the supplementary
 archive of the 1.0418235 manuscript with that manuscript's own hash-checked
 routine, and imports its certified profile, shell-window and degree-two
-approximate-functional-equation modules unchanged.
+approximate-functional-equation modules. `geom241.py` supplies a lossless
+interval constructor for the archived mass and digamma routines; the
+archive files and their hashes are preserved.
+
+The October 2, 2026 certificate corrections round all exported factor
+endpoints outward, check their JSON decimal serialization, evaluate the
+logarithmic-derivative tail entirely in Arb using
+`(log X + 1)/(X*(1-X^-2))`, and compare the complete Arb enclosure with the
+analytic ceiling. The geometric certificate also passes exact dyadic
+endpoints directly to the interval constructor, avoiding decimal rounding
+of its mass and digamma error allowances. The stated exponent and rounded
+bounds are unchanged.
+The provenance copies under `lean/docs/quadratic-base-research` belong to
+the sealed Lean submission and retain their original contents; use the
+certificates in this directory for the corrected computations.
 
 The individual steps, from `certificates/` (Python ≥ 3.11, mpmath 1.3.0,
 python-flint 0.9.0 with FLINT 3.6.0, PARI/GP 2.17.2; set PYLIB if the Python
@@ -93,6 +108,7 @@ python3 ceiling241.py afe241_301_300.json   # C = 0.04871285
 python3 geom241.py 0.04273 0.04871285 shells241_0.04273.json   # the final margin
 python3 shells241.py 0.04273  # reoptimizes the shell weights (optional; needs scipy)
 python3 h241_receipt.py       # the Lean hypothesis H241 (not needed for the manuscript)
+python3 -m unittest -v test_interval241  # interval endpoints, export and strict-bound regressions
 ```
 
 `census241.c` and `census_1e9.txt` are floating-point diagnostics of the

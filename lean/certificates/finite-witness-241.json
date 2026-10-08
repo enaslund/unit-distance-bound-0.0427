@@ -1,77 +1,77 @@
 {
-  "source": "publication/quadratic-base-lower-bound/certificates/shells241_0.0427.json (optimized shells), with the profiles at 29 and 7 padded to six positive weights, each 10^-6 times the previous one (effect on the local functionals: -2.2e-20 at 29, -9.4e-14 at 7)",
-  "base_field": "Q(sqrt 241); rational primes listed, all primes of the tower above p have the stated absolute (e, f)",
-  "delta": "427/10000",
-  "primes": [
-    2,
-    3,
-    5,
-    29,
-    7
+ "source": "opt0.043150 shell profiles of the 0.043171 research (papers/0.043171), optimized at delta = 0.04315 for the 41-cap types; profiles at 29 and 41 padded to six positive weights, each 10^-6 times the previous one",
+ "base_field": "Q(sqrt 241); primes 2, 3, 5, 29: every prime of the tower above p has the stated absolute (e, f); 41: the primes above the capped prime P41[1] have true type (1, 4) and are entered as effective (2, 4) (half the primes above 41)",
+ "delta": "863/20000",
+ "primes": [
+  2,
+  3,
+  5,
+  29,
+  41
+ ],
+ "ramification": [
+  8,
+  2,
+  2,
+  1,
+  2
+ ],
+ "residue_degree": [
+  4,
+  2,
+  2,
+  4,
+  4
+ ],
+ "period": [
+  7,
+  9,
+  6,
+  1,
+  1
+ ],
+ "weights": [
+  [
+   "1",
+   "4509124288194/96956058240835",
+   "30486659864/15431412416677",
+   "4750817593/55833807291627",
+   "312557292/83683070090213",
+   "10202986/61336650248189"
   ],
-  "ramification": [
-    8,
-    2,
-    2,
-    1,
-    1
+  [
+   "1",
+   "3557293422470/41587294680821",
+   "4473097537/648982313134",
+   "26849579809/47776963967923",
+   "2513662972/54092619562375",
+   "282581518/72995375851841"
   ],
-  "residue_degree": [
-    4,
-    2,
-    2,
-    4,
-    8
+  [
+   "1",
+   "1193123103534/42681663198781",
+   "47239103179/65579497149591",
+   "123442883/6520756159540",
+   "23800649/46724632351127",
+   "581851/41663755329659"
   ],
-  "period": [
-    7,
-    9,
-    6,
-    1,
-    1
+  [
+   "1",
+   "8517707/22940059243274",
+   "13/99293481491072",
+   "13/99293481491072000000",
+   "13/99293481491072000000000000",
+   "13/99293481491072000000000000000000"
   ],
-  "weights": [
-    [
-      "1",
-      "4337752249783/89475534818478",
-      "142407545721/68475669431263",
-      "6794713568/75479284581567",
-      "290575981/73281982602526",
-      "5972273/33729033834294"
-    ],
-    [
-      "1",
-      "1855926878905/20719672018137",
-      "355542143822/48801251009333",
-      "58146544358/97425369110793",
-      "1474762657/29788551996439",
-      "398099368/96307786378223"
-    ],
-    [
-      "1",
-      "2640115727474/90949493463877",
-      "57338538679/75911152151678",
-      "1993282330/99898228546427",
-      "32287067/59918959199341",
-      "1005993/67887592557980"
-    ],
-    [
-      "1",
-      "30117307/79041895970601",
-      "13/94469155647357",
-      "13/94469155647357000000",
-      "13/94469155647357000000000000",
-      "13/94469155647357000000000000000000"
-    ],
-    [
-      "1",
-      "1388007/41533768108880",
-      "1388007/41533768108880000000",
-      "1388007/41533768108880000000000000",
-      "1388007/41533768108880000000000000000000",
-      "1388007/41533768108880000000000000000000000000"
-    ]
-  ],
-  "pair_profile_s": "22920117/20000000",
-  "pair_profile_note": "s, a and the Bernstein matrix are the manuscript witness values (pairProfile and pairOverlap equal those of UnitDistance.Witness); the mass exponent is q = s p - 1 = 12493117/10427000, see docs/sqrt241/A1_NUMERICS.md"
+  [
+   "1",
+   "6670914/90087681134399",
+   "1/100000000000000",
+   "1/100000000000000000000",
+   "1/100000000000000000000000000",
+   "1/100000000000000000000000000000000"
+  ]
+ ],
+ "pair_profile_s": "22920117/20000000",
+ "pair_profile_note": "s, a and the Bernstein matrix are the manuscript witness values (pairProfile and pairOverlap equal those of UnitDistance.Witness); the mass exponent is q = s p - 1 = 12493117/10427000, see docs/sqrt241/A1_NUMERICS.md"
 }

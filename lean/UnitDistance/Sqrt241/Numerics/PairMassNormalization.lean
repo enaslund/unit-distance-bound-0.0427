@@ -13,7 +13,7 @@ set_option backward.privateInPublic true
 Adapted from `UnitDistance.PairMassNormalization` for the mass exponent
 `p = 2/(1+δ)` of the new witness. The profile is the manuscript's, so the
 radial substitution is the same; the beta exponent is
-`q = s·p − 1 = 12493117/10427000` instead of `6/5`. The result identifies the
+`q = s·p − 1 = 12488617/10431500` instead of `6/5`. The result identifies the
 normalized mass `pairMass / (π²/a² / q²)` with the beta-weighted unit-square
 integral `∫∫ βq(t) βq(u) P(t,u)^p`, where `βq(t) = q t^(q-1)`.
 -/
@@ -45,7 +45,7 @@ def normalizedPairMass : ℝ := pairMass / (pairArchScale / (s * p - 1) ^ 2)
 def normalizedPairOverlap : ℝ := pairOverlap / pairArchScale
 
 /-- The beta exponent `q = s·p − 1` as a real number. -/
-def pairBetaExponent : ℝ := 12493117 / 10427000
+def pairBetaExponent : ℝ := 12488617 / 10431500
 
 theorem pairBetaExponent_eq : s * p - 1 = pairBetaExponent := by
   rw [pair_exponent_gap, pairBetaExponent]
@@ -166,7 +166,7 @@ theorem normalizedPairMass_eq_betaIntegral :
   field_simp
 
 /-- The normalized mass as an iterated integral against two `Beta(q,1)`
-densities, `q = 12493117/10427000`. -/
+densities, `q = 12488617/10431500`. -/
 theorem pairMassBetaIntegral_eq_iterated :
     pairMassBetaIntegral =
       ∫ t in Icc (0 : ℝ) 1, ∫ u in Icc (0 : ℝ) 1,

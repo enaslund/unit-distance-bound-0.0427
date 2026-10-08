@@ -1,0 +1,9 @@
+# Python packages for the replays of this folder, at the versions they were run with;
+# they also cover the 0.04273 and 0.042901 replays. `make venv` at the repository root
+# installs them into .venv, which the Makefile's replay targets use. Also needed:
+# PARI/GP 2.17, gcc with OpenMP and, for reproduce_w3.py, an x86-64 processor with
+# AVX-512 IFMA.
+mpmath==1.3.0
+python-flint==0.9.0
+numpy==2.5.3
+scipy==1.18.1
