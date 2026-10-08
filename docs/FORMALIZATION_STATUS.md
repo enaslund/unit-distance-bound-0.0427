@@ -61,7 +61,7 @@ and is not the Palomar selection; `lake build SolutionZeta ChallengeZeta` builds
 | Axiom audit of the 59,452 declarations in the selected closure and the 55 submission declarations | The version 2 sources | Only `propext`, `Classical.choice`, `Quot.sound` ([record](../provenance/lean-checks/v2-axiom-audit-README.md)) |
 | Packaging gate: deterministic re-export and the metadata contract of PalomarSubmission `65f0154` | This package's archive | Passed ([report](../provenance/lean-checks/v2-gate.json)) |
 | Complete pinned Palomar pipeline, profile `palomar-standard-v1` (4 CPUs, 16 GiB), on a local trusted setup: fresh build, protected export, statement and definition comparison, axiom checks, con-ron and NanoDa | An earlier export with byte-identical Lean files (archive `64721952…`) | Passed in 6,818 s, peak memory 15.2 GiB ([record](../provenance/lean-checks/v2-local-standard-README.md), [report](../provenance/lean-checks/v2-local-standard-local-execution.json)) |
-| Palomar's own preflight workflow ([`palomar-preflight.yml`](../.github/workflows/palomar-preflight.yml)) on this repository's commit | — | Not yet run on the version 2 package |
+| **Palomar's own preflight workflow** ([`palomar-preflight.yml`](../.github/workflows/palomar-preflight.yml): pinned verifier `65f0154` on a GitHub-hosted runner, profile `palomar-standard-v1`): fresh build, protected export, statement and definition comparison, axiom checks, con-ron, NanoDa, Lean kernel | Commit `edd88c0` of this repository, the version 2 package | **Passed** on October 8, 2026 (run 37753653599, 3 h 8 min): `status: pass`, `stage: complete`, no errors or warnings; con-ron accepted 152,915 declarations, NanoDa and Lean's kernel accept, "Your solution is okay!" ([mechanical report](../provenance/lean-checks/hosted-edd88c0-mechanical-report.json)) |
 
 ## Registration
 
@@ -71,5 +71,6 @@ inequality H241 on the degree-512 genus field, is registered as
 [PALOMAR-2026-10-01-000018, version 1](https://palomar-registry.org/entry?id=PALOMAR-2026-10-01-000018&version=1),
 from commit `e0ac836` of this repository; Palomar keeps a preserved copy of that commit. The 1.04315
 theorem in the current `lean/` is prepared for submission with the same project, metadata and
-comparator paths. Because it is a new theorem with a new hypothesis, Palomar may register it as a
+comparator paths; commit `edd88c0` passed Palomar's preflight, and later commits change only
+documentation. Because it is a new theorem with a new hypothesis, Palomar may register it as a
 new result rather than as a new version of that entry. No submission of it has been made yet.
