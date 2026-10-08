@@ -64,7 +64,7 @@
     "research/2026-10-muse-involution-class"
    ],
    "via": "research repository enaslund/unit-distance-bound (private), git-tracked files, unchanged; the copy of papers/0.04273 includes the certificate corrections first published here on October 2, 2026 (provenance/certificate-corrections-20261002.json), which the research repository adopted",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308"
+   "research_commit": "c9966eab3fadd8be3622af87e4882fcfc6013480"
   }
  ],
  "files": {
@@ -9334,9 +9334,9 @@
   },
   "papers/0.043171/main.pdf": {
    "research_source": "papers/0.043171/main.pdf",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "24c057cc74e0f501bbcc49d5069f6e7473331c54ef4f439d373c7e66f534cfe6",
-   "bytes": 1277924
+   "research_commit": "c9966eab3fadd8be3622af87e4882fcfc6013480",
+   "sha256": "dd3082cbe304e3cd2682f5f991c8a1f6d5ca278ad6f3d819254bbd2fda6a7036",
+   "bytes": 1280408
   },
   "papers/0.043171/main.tex": {
    "research_source": "papers/0.043171/main.tex",
@@ -9346,9 +9346,9 @@
   },
   "papers/0.043171/references.bib": {
    "research_source": "papers/0.043171/references.bib",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "951377fb676c7752f8340e3a8304bc5acb6b7308e1a02a4eb1b984bc4e5e87d4",
-   "bytes": 23530
+   "research_commit": "c9966eab3fadd8be3622af87e4882fcfc6013480",
+   "sha256": "e0e50c9b6b6414e16add81b0045277b4a1cd89040ac53e1a658ad27ec23b2211",
+   "bytes": 23998
   },
   "papers/0.043171/requirements.txt": {
    "research_source": "papers/0.043171/requirements.txt",
@@ -9370,9 +9370,9 @@
   },
   "papers/0.043171/sections/analytic.tex": {
    "research_source": "papers/0.043171/sections/analytic.tex",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "e48e8cf6044e81f47512463b9934769217f6fb896b1e06c6561a9d14dbaf6a69",
-   "bytes": 52625
+   "research_commit": "c9966eab3fadd8be3622af87e4882fcfc6013480",
+   "sha256": "1ad42e16853274cff7ada92b5949775515348df410d5b0a17e848f3c9bac5917",
+   "bytes": 53879
   },
   "papers/0.043171/sections/ceiling.tex": {
    "research_source": "papers/0.043171/sections/ceiling.tex",
@@ -9424,9 +9424,9 @@
   },
   "papers/0.043171/sections/introduction.tex": {
    "research_source": "papers/0.043171/sections/introduction.tex",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "d53f61cd0ac4ff8ea44288770ac472ae64a01b2bc00dcadea84e1fbaa9459d0d",
-   "bytes": 28316
+   "research_commit": "c9966eab3fadd8be3622af87e4882fcfc6013480",
+   "sha256": "7ea7e9afb024c420b29d4404fc999e850849a916491509f8d7391964e1742b4e",
+   "bytes": 28665
   },
   "papers/0.043171/sections/limits.tex": {
    "research_source": "papers/0.043171/sections/limits.tex",
@@ -9454,9 +9454,9 @@
   },
   "papers/0.043171/sections/tower.tex": {
    "research_source": "papers/0.043171/sections/tower.tex",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "d61393b53bc1a14c994f1430fa36eaec817414c617de5a855b29ba71f115fcee",
-   "bytes": 101648
+   "research_commit": "c9966eab3fadd8be3622af87e4882fcfc6013480",
+   "sha256": "49eb93848a385595c8352d63dd1350da265c4ca9bb565d351e8b5ca9592f43c7",
+   "bytes": 101771
   },
   "papers/0.043171/tools/depgraph.py": {
    "research_source": "papers/0.043171/tools/depgraph.py",
