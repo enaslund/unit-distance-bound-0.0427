@@ -1,23 +1,23 @@
 {
-  "archive": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p1/candidate.tar.gz",
-  "archive_sha256": "352487da6b6cd0b23c7b5f5d3b26e7def3b8b3b25c950c087d19841c08b22cb6",
+  "archive": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p3/candidate.tar.gz",
+  "archive_sha256": "a234c646ca7c8a0b767d251aab8c8c8d493cdd409819f8b1e7714950dc43e4ba",
   "checks": [
     {
       "command": [
         "/usr/bin/python3",
         "scripts/export-zeta241-candidate.py",
         "--output",
-        "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p1/check/reexport.tar.gz",
+        "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p3/check/reexport.tar.gz",
         "--report",
-        "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p1/check/reexport.json"
+        "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p3/check/reexport.json"
       ],
       "exit_code": 0,
-      "finished_at": "2026-10-08T08:52:00.751968+00:00",
-      "log": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p1/gate-determinism.log",
-      "log_sha256": "61c58f4e9d2557ccf24396b8c6431bab300c9d8855cba42b83d434200e3067e1",
-      "pid": 459732,
-      "seconds": 3.533,
-      "started_at": "2026-10-08T08:51:57.218663+00:00",
+      "finished_at": "2026-10-08T08:59:58.926128+00:00",
+      "log": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p3/gate-determinism.log",
+      "log_sha256": "5db8a7ddc6d2e66ee9c5e1b1cae3d329ef4a69de1e9c9bc8c87add9849554aca",
+      "pid": 461316,
+      "seconds": 3.503,
+      "started_at": "2026-10-08T08:59:55.423018+00:00",
       "state": "passed"
     },
     {
@@ -30,24 +30,24 @@
         "65f0154ed776cd26c224254aa57b379137f28b0d"
       ],
       "exit_code": 0,
-      "finished_at": "2026-10-08T08:52:00.845666+00:00",
-      "log": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p1/gate-metadata.log",
-      "log_sha256": "74b5713f73de16293c18e0f8224ed4dc0cb2d8afad706ed6529e7eeb6d72a96f",
-      "pid": 459734,
-      "seconds": 0.085,
-      "started_at": "2026-10-08T08:52:00.760385+00:00",
+      "finished_at": "2026-10-08T08:59:59.023414+00:00",
+      "log": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p3/gate-metadata.log",
+      "log_sha256": "2639f9dde10301551104beb9a69d050d73f7900a8b193ae9dc06d0ae4cfefee7",
+      "pid": 461318,
+      "seconds": 0.087,
+      "started_at": "2026-10-08T08:59:58.936079+00:00",
       "state": "passed"
     }
   ],
   "deterministic_archive": true,
-  "finished_at": "2026-10-08T08:52:00.946286+00:00",
+  "finished_at": "2026-10-08T08:59:59.124276+00:00",
   "mode": "archive-only",
   "passed": true,
   "policy_revision": "65f0154ed776cd26c224254aa57b379137f28b0d",
   "policy_tree": "/home/naslund_eric/src/enaslund/unit-distance-bound/master/lean-formalization/.cache/upstream/PalomarSubmission-current-20260928-pinned",
   "remote_submission": false,
   "scope": "Local source archive and pinned metadata contract only. No Lean build, axiom audit, or independent kernel replay. The fixed zeta inequality is not verified.",
-  "seconds": 4.146,
+  "seconds": 4.114,
   "selected_audit_script": "verification/Zeta241Audit.lean",
   "selected_configuration": "comparator-zeta241.json",
   "selected_exporter": "scripts/export-zeta241-candidate.py",
@@ -58,11 +58,11 @@
   "selected_theorems": [
     "UnitDistanceSqrt241Submission.target_of_wide_zeta_bound"
   ],
-  "snapshot_sha256": "0a8d3432b6b66e68fb6e83ad96c06c289798a22850039b464153dd7553764d90",
+  "snapshot_sha256": "214d74f0595c6c3c6ac2473b1003b32bb0a7e5f634ca93f9439fbb60993f2d87",
   "sources_unchanged": true,
-  "started_at": "2026-10-08T08:51:56.800426+00:00",
+  "started_at": "2026-10-08T08:59:55.010156+00:00",
   "state": "passed",
   "threads": 2,
   "timeout_seconds": 19800,
-  "work_directory": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p1/check"
+  "work_directory": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p3/check"
 }

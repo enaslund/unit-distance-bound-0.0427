@@ -76,8 +76,13 @@ In the research repository, on October 8, 2026, `lake build` of the default targ
 `lake build UnitDistance` succeeded, and `#print axioms` of the selected theorem, of the library
 theorem `UnitDistance.Sqrt241.V2.target_of_wide_zeta_bound` and of the local data of `E_W`
 reports only `propext`, `Classical.choice` and `Quot.sound`; there is no `sorry` and no
-`native_decide` in the library. **The complete pinned Palomar pipeline has not been run on
-version 2.** This archive's [source snapshot](SOURCE_SNAPSHOT.json) and
+`native_decide` in the library; the audit of the full closure (59,452 declarations) reports the
+same three axioms. The complete pinned Palomar pipeline (PalomarSubmission `65f0154`, profile
+`palomar-standard-v1`, 4 CPUs and 16 GiB) passed locally on October 8, 2026 in 6,818 s, peak memory
+15.2 GiB, on an export whose Lean files are byte-identical to this archive's (archive
+`647219527ad6…`); it is a local reproduction, not an official Palomar report. An independent
+fresh-context review of the statement, the field `E_W` and the match between H_W and its external
+evidence found no error. This archive's [source snapshot](SOURCE_SNAPSHOT.json) and
 [selection record](SELECTION.json) identify its exact bytes; any verification result applies only
 to the archive it records.
 

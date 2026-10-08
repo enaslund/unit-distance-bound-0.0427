@@ -2,7 +2,7 @@
 
 [`lean/`](../lean/README.md) is a Lean 4 project (Lean `v4.35.0-rc2`, Mathlib
 `065356127b1dc0016f66b7283ce0ce2c4055aa55`). Its sources are the export of research commit
-`a5273110` of `enaslund/unit-distance-bound`, copied unchanged;
+`2acbeccb` of `enaslund/unit-distance-bound`, copied unchanged;
 [`provenance/lean-release.json`](../provenance/lean-release.json) records the archive identity. It
 formalizes the construction of the paper *An Exponent of 1.043 for the Unit Distance Problem* at
 the exponent 1.04315, conditional on one zeta inequality.

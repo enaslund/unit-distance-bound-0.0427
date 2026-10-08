@@ -1,7 +1,7 @@
 {
-  "archive": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p1/candidate.tar.gz",
-  "archive_bytes": 11455739,
-  "archive_sha256": "352487da6b6cd0b23c7b5f5d3b26e7def3b8b3b25c950c087d19841c08b22cb6",
+  "archive": "/tmp/claude-1000/-home-naslund-eric-src-enaslund-unit-distance-bound-master/cdb0bbeb-b1c7-4474-8201-6a29f162e43c/scratchpad/export-p3/candidate.tar.gz",
+  "archive_bytes": 11460434,
+  "archive_sha256": "a234c646ca7c8a0b767d251aab8c8c8d493cdd409819f8b1e7714950dc43e4ba",
   "companion_modules_beyond_selected": 113,
   "external_zeta_records": 33,
   "files": 3077,
@@ -23,6 +23,6 @@
   "research_note_files": 84,
   "selected_configuration": "comparator-zeta241.json",
   "selected_theorem": "UnitDistanceSqrt241Submission.target_of_wide_zeta_bound",
-  "snapshot_sha256": "0a8d3432b6b66e68fb6e83ad96c06c289798a22850039b464153dd7553764d90",
-  "source_bytes": 49928965
+  "snapshot_sha256": "214d74f0595c6c3c6ac2473b1003b32bb0a7e5f634ca93f9439fbb60993f2d87",
+  "source_bytes": 49934357
 }

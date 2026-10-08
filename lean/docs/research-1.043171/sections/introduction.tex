@@ -341,10 +341,15 @@ fresh-context reviews of its argument, but its finite computations have
 not had a full independent review. These are automated reviews, not human
 peer review.
 
-A Lean formalization \cite{NaslundLean2026} proves the planar conclusion
-of \cite{Naslund04273}, with the exponent $1.0427$, from one explicit
-inequality for $\zeta_E$; it does not cover the present construction or
-its bound for the relative zeta value (Remark~\ref{an:lean-hypothesis}).
+A Lean formalization \cite{NaslundLean2026}, registered in the Palomar
+registry, proves the planar conclusion of \cite{Naslund04273}, with the
+exponent $1.0427$, from one explicit inequality for $\zeta_E$. A second
+one \cite{NaslundLeanW} formalizes the tower of the present paper and
+proves the planar conclusion with the exponent $1.04315$ from one explicit
+inequality for $\zeta_{\EW}$ (Remark~\ref{an:lean-hypothesis}). Neither
+inequality is proved in Lean, and neither formalization covers the census
+beyond norm $1000$, the signed kernel or the general shell weights, so
+neither proves Theorem~\fref{thm:main}, even conditionally.
 
 \subsection{Organization}\label{intro:organization}
 Section~\ref{tw:tower} constructs the tower and proves

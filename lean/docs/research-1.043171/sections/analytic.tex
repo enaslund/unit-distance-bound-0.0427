@@ -1101,10 +1101,13 @@ exceeds $Z_{\rm sel}(1)$ by $6.08\cdot10^{-4}$; Section~\ref{lim:section}
 discusses what this means for the exponent.
 \end{remark}
 
-\begin{remark}[The Lean formalization]\label{an:lean-hypothesis}
-The Lean formalization \cite{NaslundLean2026} proves, under one explicit
-hypothesis that it does not prove, that there are finite planar sets $U_j$
-with $|U_j|\to\infty$ and $u(U_j)/|U_j|^{1.0427}\to\infty$. Its fields are
+\begin{remark}[The Lean formalizations]\label{an:lean-hypothesis}
+Two Lean formalizations prove weaker forms of Theorem~\fref{thm:main}, each
+under one explicit hypothesis that it does not prove.
+
+(a) The formalization \cite{NaslundLean2026} proves that there are finite
+planar sets $U_j$ with $|U_j|\to\infty$ and
+$u(U_j)/|U_j|^{1.0427}\to\infty$. Its fields are
 those of \cite{Naslund04273}, with the capped prime $\mathfrak t_0$ in place
 of $\mathfrak t_3$, and its hypothesis is the inequality
 \begin{equation}\label{an:h241}
@@ -1113,8 +1116,29 @@ of $\mathfrak t_3$, and its hypothesis is the inequality
  -\frac1{512}\frac{\zeta_E'}{\zeta_E}(2)\Bigr)<0.0852,
 \end{equation}
 which is the bound of Proposition~\ref{an:prime-budget} with all local data
-taken from $E$. The formalization does not cover the cap above $41$, the
-dihedral quotients, the field $\EW$, the census or the signed kernel of this
-paper, so it does not prove Theorem~\fref{thm:main}, even conditionally.
+taken from $E$. It does not cover the cap above $41$, the dihedral
+quotients, the field $\EW$, the census or the signed kernel of this paper.
+
+(b) The formalization \cite{NaslundLeanW} proves the same statement with the
+exponent $20863/20000=1.04315$, for the fields of the present tower, under the
+hypothesis
+\begin{equation}\label{an:hw}
+ \frac{\log\zeta_{\EW}(1+\frac1{4411})}{8192}
+ +\frac1{4411}\Bigl(\frac{\ell-\gamma-\log(4\pi)}4
+ -\frac1{8192}\frac{\zeta_{\EW}'}{\zeta_{\EW}}(2)\Bigr)<0.050969,
+\end{equation}
+where $\EW$ is the field of Definition~\ref{dh:W}, given in the
+formalization by explicit generators $\sqrt{\beta_i}$ over $E$ for four
+dihedral forms that span $W''$. This is the bound of
+Proposition~\ref{an:prime-budget} at $\sigma=1+1/4411$ with comparison field
+$\EW$ in place of $E$. The formalization proves in Lean that
+$[\EW:\Q]=8192$, that $\EW$ lies in the fixed base of the tower, the local
+data of $\EW$ at $2$ and at fifty split primes below $1000$, the resulting
+bound $0.0425$ for $d^{-1}\log L_F(1)$, and the margin at the exponent
+$1.04315$. The supplementary program \texttt{h\_w\_receipt.py} bounds the
+left side of \eqref{an:hw} by $0.0509172$, from the enclosures of
+Proposition~\fref{lv:values} and an explicit bound for the logarithmic
+derivative. The formalization does not cover the census beyond norm $1000$,
+the signed kernel or the general shell weights.
 \end{remark}
 

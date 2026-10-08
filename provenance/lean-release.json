@@ -1,13 +1,13 @@
 {
  "schema": "unit-distance-public-lean-release-v1",
  "research_repository": "enaslund/unit-distance-bound",
- "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
+ "research_commit": "2acbeccb3bce16b1144d466e15a7cdd41ce71541",
  "exporter": "lean/scripts/export-zeta241-candidate.py",
- "archive_sha256": "352487da6b6cd0b23c7b5f5d3b26e7def3b8b3b25c950c087d19841c08b22cb6",
- "archive_bytes": 11455739,
+ "archive_sha256": "a234c646ca7c8a0b767d251aab8c8c8d493cdd409819f8b1e7714950dc43e4ba",
+ "archive_bytes": 11460434,
  "archive_files": 3077,
- "source_snapshot_sha256": "0a8d3432b6b66e68fb6e83ad96c06c289798a22850039b464153dd7553764d90",
- "selection_sha256": "63473eb1d8f5560c948e953e5a8750a1747d0e8c5f5a16514d116858f482b691",
+ "source_snapshot_sha256": "214d74f0595c6c3c6ac2473b1003b32bb0a7e5f634ca93f9439fbb60993f2d87",
+ "selection_sha256": "81132d97ddc34e59b7b935e0ff1722a241c27b6272fd3a4dc0ceda1ec9fd53d9",
  "identity_scope": "Every file of the source archive is unchanged under lean/; lean/SOURCE_SNAPSHOT.json lists their hashes.",
  "palomar_request": {
   "project_path": "lean",

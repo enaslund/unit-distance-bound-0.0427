@@ -1,10 +1,7 @@
-# Metadata for local verification of the 1.04315 conditional theorem (version 2 of
-# PALOMAR-2026-10-01-000018, which registered the 1.0427 theorem as version 1).
+# Metadata of the 1.04315 conditional theorem. It follows the formalization of the 1.0427 theorem,
+# registered as PALOMAR-2026-10-01-000018 version 1 from the same repository and paths.
 # Local Git identifiers describe provenance; they do not assert public availability.
-# Publication, submission, registration and owner proof review are not claimed.
-# PLACEHOLDER: the first source cites papers/0.043171/main.tex at a commit of the public
-# repository that does not exist yet. Replace PUBLIC_COMMIT_TO_BE_FILLED_AT_PUBLICATION
-# with that full commit when the manuscript is published there, before any submission.
+# Submission, registration and owner proof review are not claimed.
 version: v0.4
 project:
   name: 'An Exponent of 1.043 for the Unit Distance Problem: Lean formalization at exponent 1.04315, conditional on one zeta inequality'
@@ -31,8 +28,8 @@ project:
     are proved in Lean over Mathlib; (H_W) itself is not proved. Outside Lean, a rigorous computation
     (certified values of the 576 L-functions of degrees 4 and 8 in the factorization of zeta_{E_W} and an
     Euler product with explicit tail) bounds the left side of (H_W) by 0.0509172; that computation is not
-    part of the formal proof. Version 1 of this entry proved the exponent 10427/10000 from a different
-    inequality, for the field E.'
+    part of the formal proof. The earlier formalization registered as PALOMAR-2026-10-01-000018 version 1
+    proved the exponent 10427/10000 from a different inequality, for the field E.'
   authors:
   - Eric Naslund
   responsible_maintainers:
@@ -50,7 +47,7 @@ sources:
 - title: An Exponent of 1.043 for the Unit Distance Problem
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/PUBLIC_COMMIT_TO_BE_FILLED_AT_PUBLICATION/papers/0.043171/main.tex
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/2586d6b97682cc4cb890e076d2c4906e27f421f9/papers/0.043171/main.tex
   type: paper
   location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.043171/ at the cited commit
     (main.tex, sections/, certificates/). The source archive includes the manuscript, its research README and
@@ -70,13 +67,14 @@ sources:
 - title: An exponent of 1.04273 for the unit distance problem
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/7dfcf8889cecd9a484267c1401b8a32b810d4213/papers/0.04273/main.tex
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/2586d6b97682cc4cb890e076d2c4906e27f421f9/papers/0.04273/main.tex
   type: paper
   location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.04273/ at the cited commit
     (main.tex, sections/, certificates/). The source archive includes these materials under
     docs/quadratic-base-research/.'
   relationship: adapts
-  note: 'Self-contained manuscript of September 30, 2026, revised for readability on October 1, 2026,
+  note: 'Self-contained manuscript of September 30, 2026, revised for readability on October 1, 2026, with
+    the interval corrections of its certificates of October 2, 2026,
     for the tower over Q(sqrt 241) with the Frobenius cap at the prime 7: the tower, the Kummer field of
     the tower (called the genus field here) and its 255 quadratic L-functions, the upper bound for the relative
     zeta value, the geometric construction and the proof of the main theorem. It proves the exponent 1.04273
@@ -89,7 +87,7 @@ sources:
 - title: A lower exponent of 1.0418235 for planar unit distances
   authors:
   - Eric Naslund
-  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/7dfcf8889cecd9a484267c1401b8a32b810d4213/papers/0.0418235/main.tex
+  id: https://github.com/enaslund/unit-distance-bound-0.0427/blob/2586d6b97682cc4cb890e076d2c4906e27f421f9/papers/0.0418235/main.tex
   type: research note
   location: 'Public repository enaslund/unit-distance-bound-0.0427: papers/0.0418235/ at the cited commit.
     Exported formalization package: docs/manuscript/; especially sections/tower.tex, analytic.tex,
@@ -151,13 +149,13 @@ sources:
     the Lean proof.
 related_formalizations:
 - id: https://palomar-registry.org/entry?id=PALOMAR-2026-10-01-000018&version=1
-  relationship: earlier version of this entry
-  note: 'Version 1 of this entry, registered on 2026-10-01 from public commit e0ac836176016dbefae28646bc91fc3a5aca30e8
+  relationship: builds-on (the earlier formalization of the 1.0427 theorem, from the same repository)
+  note: 'Registered on 2026-10-01 from public commit e0ac836176016dbefae28646bc91fc3a5aca30e8
     of enaslund/unit-distance-bound-0.0427: the planar sequence theorem at exponent 10427/10000 conditional on
-    the inequality H241 for the genus field E (target_of_canonical_genus_zeta_bound). Version 2 keeps the
-    repository, the project path and the comparator configuration path, changes the tower (cap above 41
+    the inequality H241 for the genus field E (target_of_canonical_genus_zeta_bound). The present
+    formalization keeps the repository, the project path and the comparator configuration path, changes the tower (cap above 41
     instead of at 7), the comparison field (E_W of degree 8192 instead of E), the exponent and the selected
-    theorem (target_of_wide_zeta_bound), and removes version 1''s endpoint modules.'
+    theorem (target_of_wide_zeta_bound), and removes the endpoint modules of the 1.0427 theorem.'
 - id: 'local-git:enaslund/unit-distance-bound@ed01a1ea90e59c61e13c0e8cdc7392a15db0979f:lean-formalization'
   relationship: builds-on
   note: 'The library of the verified conditional 1.0418235 package (Lean v4.35.0-rc2) is reused unchanged:
@@ -339,8 +337,11 @@ review:
   reviewers: []
   notes: >-
     The 1.043171 manuscript had fresh-context AI referee reviews, recorded with it.
-    The version 2 Lean statement and code have not yet had an independent review;
-    version 1's statement and code reviews are recorded in docs/sqrt241/REVIEWS.md.
+    An independent fresh-context AI review of the Lean statement, the field E_W and the
+    match between (H_W) and its external evidence found no error (recorded with the public
+    repository as provenance/lean-checks/v2-statement-review-20261008.md); the Lean proofs
+    beyond the axiom audit and the pinned pipeline were not reviewed independently. The
+    statement and code reviews of the 1.0427 formalization are recorded in docs/sqrt241/REVIEWS.md.
     No human peer review, owner proof review, official Palomar report, editorial
     acceptance, publication, registration or proof of H_W is claimed by this metadata.
 alignment:
