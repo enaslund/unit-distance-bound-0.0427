@@ -2,12 +2,11 @@
 
 This section constructs the number fields of Theorem~\ref{tw:field-family}
 as finite subextensions of an infinite pro-$2$ extension of $B=\Q(\sqrt{241})$
-with prescribed local Galois groups. The tower is that of
-\cite[Section~2]{Naslund04273} with one change: the Frobenius condition at
-the inert prime $7$ is replaced by the same condition at one of the two
+with prescribed local Galois groups: ramification is allowed only above
+$2$, $3$ and $5$, and the order of the Frobenius is bounded by four at the
+two primes $\mathfrak t_1,\mathfrak t_2$ above $29$ and at one of the two
 primes $\mathfrak t_3,\mathfrak t_4$ above $41$, namely $\mathfrak t_3$
-(Lemma~\ref{tw:base}). The proofs are those of \cite{Naslund04273}, and we
-repeat them, indicating where the new condition enters. Subsection~\ref{tw:base-section} describes $B$ and its
+(Lemma~\ref{tw:base}). Subsection~\ref{tw:base-section} describes $B$ and its
 $\{2,3,5\}$-units. Subsection~\ref{tw:local-section} recalls the local Galois
 groups involved and constructs the dyadic local field.
 Subsection~\ref{tw:global-section} shows that the Galois group
@@ -869,8 +868,9 @@ $\Gal(\Q_p(\sqrt u,\sqrt p)/\Q_p)\cong C_2\times C_2$ for a nonsquare unit $u$;
 this quotient has ramification index and residue degree two. At
 the capped primes $\mathfrak t_1,\mathfrak t_2$ and $\mathfrak t_3$, whose
 completions are $\Q_{29}$, $\Q_{29}$ and $\Q_{41}$, we bound the order of the
-Frobenius by four. In \cite{Naslund04273} the third capped prime was
-$\mathfrak t_0$; here it is $\mathfrak t_3$.
+Frobenius by four. (A variant of the construction caps the inert prime
+$\mathfrak t_0$ instead of $\mathfrak t_3$; see
+Remark~\ref{tw:same-quotient}.)
 
 \begin{definition}\label{tw:GB}
 Let $N$ be the normal closure in $G_S$ of the images of
@@ -1771,21 +1771,20 @@ $\rd(K)=2^{9/4}\,3^{1/2}\,5^{1/2}\,241^{1/2}=\lambda$.
 \end{proof}
 
 \begin{remark}\label{tw:same-quotient}
-The quotient $\overline G_B=G_B/D_4G_B$, the relation spaces $R_2$ and $R_3$,
-and the class of $\iota_1$ are those of \cite{Naslund04273}: the proof of
+Consider the variant of the construction in which the third cap is placed at
+the inert prime $\mathfrak t_0=7\mathcal O_B$ instead of at $\mathfrak t_3$.
+Its quotient by the fourth Zassenhaus term, its relation spaces $R_2$ and
+$R_3$, and the class of $\iota_1$ are the same as here: the proof of
 Lemma~\ref{tw:retained-quotient}(a) uses only the generators of $N_B$ in
 (i)--(iii) of Lemma~\ref{tw:GB-presentation} and the commutators
 $[[\hat y_j,\hat z_j],\hat z_j]$, since a fourth power lies in $D_4\mathfrak F$.
-So the tower of \cite{Naslund04273} and the present one have the same quotient
-by the fourth Zassenhaus term, and the same Golod--Shafarevich function, since
-both impose three conditions of type $C_4$. They differ at the primes above
+The two towers also have the same Golod--Shafarevich function, since both
+impose three conditions of type $C_4$. They differ at the primes above
 $7$ and $41$.
 \end{remark}
 
 \begin{remark}\label{tw:lean-remark}
-The Lean development \cite{NaslundLean2026} formalizes the construction of
-\cite{Naslund04273}, with the capped prime $\mathfrak t_0$ in place of
-$\mathfrak t_3$; the later development \cite{NaslundLeanW} formalizes the
-present tower, with its caps at $\mathfrak t_1$, $\mathfrak t_2$ and
-$\mathfrak t_3$. Remark~\ref{an:lean-hypothesis} states what they prove.
+The Lean formalization \cite{NaslundLeanW} formalizes the present tower,
+with its caps at $\mathfrak t_1$, $\mathfrak t_2$ and $\mathfrak t_3$.
+Remark~\ref{an:lean-hypothesis} states what it proves.
 \end{remark}

@@ -778,8 +778,8 @@
   },
   "papers/0.043171/certificates/dihedral/ce_values_digits.json": {
    "research_source": "papers/0.043171/certificates/dihedral/ce_values_digits.json",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "f73466e7d29d411a7388226677c1608e4abccd0f33b698d2a2fef345735983f7",
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "8d9ee41421e07164f181e11a865d2a2a1e773d2913fa1ea25482605624fa30f5",
    "bytes": 722
   },
   "papers/0.043171/certificates/dihedral/ce_values_digits.py": {
@@ -9226,9 +9226,9 @@
   },
   "papers/0.043171/certificates/dihedral/witness_0.043171.json": {
    "research_source": "papers/0.043171/certificates/dihedral/witness_0.043171.json",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "df268fcfe3c0ba49529a2cfbc0564c80a093bdd972e9c30a7bceb7e60746d790",
-   "bytes": 83968
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "4b0bdd7873bde8cd6ed83ac9b92b675a6142deadfd476fa019cdbd74deeef234",
+   "bytes": 90494
   },
   "papers/0.043171/certificates/dihedral/wmasks.json": {
    "research_source": "papers/0.043171/certificates/dihedral/wmasks.json",
@@ -9334,15 +9334,15 @@
   },
   "papers/0.043171/main.pdf": {
    "research_source": "papers/0.043171/main.pdf",
-   "research_commit": "f66291fac1b2878df97a473bd137fa1c3a111a9d",
-   "sha256": "e759577c9496a9768628bb6919e461966218aee5ecb84ba2be78def57c591a0d",
-   "bytes": 1280835
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "cb26a4f7e7c2535daac228b433ae37fae90dcf354b0cfe232582d930f9d6df5b",
+   "bytes": 1277573
   },
   "papers/0.043171/main.tex": {
    "research_source": "papers/0.043171/main.tex",
-   "research_commit": "f66291fac1b2878df97a473bd137fa1c3a111a9d",
-   "sha256": "40af595a33bba0f5a2e78b79232ff7be9f890caaca95982ea147ff30ab9fb184",
-   "bytes": 5744
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "02a384fc333a7cb39268d539b9d76318fe770145ed4a499b7f9205e3128b77fa",
+   "bytes": 5557
   },
   "papers/0.043171/references.bib": {
    "research_source": "papers/0.043171/references.bib",
@@ -9370,27 +9370,27 @@
   },
   "papers/0.043171/sections/analytic.tex": {
    "research_source": "papers/0.043171/sections/analytic.tex",
-   "research_commit": "c9966eab3fadd8be3622af87e4882fcfc6013480",
-   "sha256": "1ad42e16853274cff7ada92b5949775515348df410d5b0a17e848f3c9bac5917",
-   "bytes": 53879
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "4bc1e5f87fc5d4dbea43eefed239164027250ece29bfa271e047029ece82763d",
+   "bytes": 53491
   },
   "papers/0.043171/sections/ceiling.tex": {
    "research_source": "papers/0.043171/sections/ceiling.tex",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "f3a9915c1c5e3d2c387abbc6453f382b3e4588cf8422449ea9838061eec0340e",
-   "bytes": 9306
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "176dcb01d6d196b76ad8f86ea30c9a192fff6bb34579ffbc23555a909652320f",
+   "bytes": 9307
   },
   "papers/0.043171/sections/certificate.tex": {
    "research_source": "papers/0.043171/sections/certificate.tex",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "7228a9345816cd04acd78cad149160f880aa8a46c3629fd0cf3f37040aff2996",
-   "bytes": 22493
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "53094b9ac4befa7842b6a66e27e449e265849c0b307c36f3bde64b61af73cab3",
+   "bytes": 22642
   },
   "papers/0.043171/sections/dependency-index.tex": {
    "research_source": "papers/0.043171/sections/dependency-index.tex",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "12029136ea9c51d920879cfe7fb0e216770738937e2ea18bd472b1c4bd50c4df",
-   "bytes": 25852
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "8e7f1cc7913b49e2ce2f50966683a36d9140ec3a4d05e6a1997d55a10ca9e220",
+   "bytes": 25962
   },
   "papers/0.043171/sections/dihedral.tex": {
    "research_source": "papers/0.043171/sections/dihedral.tex",
@@ -9400,9 +9400,9 @@
   },
   "papers/0.043171/sections/finite-windows.tex": {
    "research_source": "papers/0.043171/sections/finite-windows.tex",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "a47d3614a18d5378da3fc8277b703612896ed19cb699c13baed763ab668529b8",
-   "bytes": 41756
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "47478a47a65c3e95bc668f9ffa198a5e9c83c2dc618d0b6fbb01cc630b4c30df",
+   "bytes": 41588
   },
   "papers/0.043171/sections/finite-witness.tex": {
    "research_source": "papers/0.043171/sections/finite-witness.tex",
@@ -9412,9 +9412,9 @@
   },
   "papers/0.043171/sections/genus-field.tex": {
    "research_source": "papers/0.043171/sections/genus-field.tex",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "780ef2394e35c73ff0c5fe4d21df0dbbef9d050c6b833cb742c06e69a9a1467e",
-   "bytes": 20887
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "a4a3a82b01d8eb370e7cc6b359f876fa9e0a613f963c2ecb1c7ac3a8be3333fd",
+   "bytes": 20793
   },
   "papers/0.043171/sections/geometry.tex": {
    "research_source": "papers/0.043171/sections/geometry.tex",
@@ -9424,21 +9424,21 @@
   },
   "papers/0.043171/sections/introduction.tex": {
    "research_source": "papers/0.043171/sections/introduction.tex",
-   "research_commit": "c9966eab3fadd8be3622af87e4882fcfc6013480",
-   "sha256": "7ea7e9afb024c420b29d4404fc999e850849a916491509f8d7391964e1742b4e",
-   "bytes": 28665
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "d3303eb1311d0ed55f2e6f6caf332cf9a32eefaab6dc6260d7d7883080766d5c",
+   "bytes": 28664
   },
   "papers/0.043171/sections/limits.tex": {
    "research_source": "papers/0.043171/sections/limits.tex",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "a1e0f8c661802d0ae58b21b74e39a8a43ddd9ede6d1a6aab26e397d3e2ed5a1f",
-   "bytes": 20257
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "c187a7120f12f12f9a6928b692ee3df820797087991c1baa6f4196461d8ecf60",
+   "bytes": 20266
   },
   "papers/0.043171/sections/lvalues.tex": {
    "research_source": "papers/0.043171/sections/lvalues.tex",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "5d66629ec59417f0b9298bc7d829fc6819725db15a60f84a25763b1c4bb02c2a",
-   "bytes": 21814
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "7f2eb28e032ebb15e8ecb243ac48580cb0f55ca4fb102a100ee611e5007d2557",
+   "bytes": 21305
   },
   "papers/0.043171/sections/profiles.tex": {
    "research_source": "papers/0.043171/sections/profiles.tex",
@@ -9454,9 +9454,9 @@
   },
   "papers/0.043171/sections/tower.tex": {
    "research_source": "papers/0.043171/sections/tower.tex",
-   "research_commit": "c9966eab3fadd8be3622af87e4882fcfc6013480",
-   "sha256": "49eb93848a385595c8352d63dd1350da265c4ca9bb565d351e8b5ca9592f43c7",
-   "bytes": 101771
+   "research_commit": "b5fca1778abbb7192bbce2018410cb5281da670d",
+   "sha256": "c03098a9ada51ce2581ddf01e0e191a939eef72e140a1648be69bc4dec019197",
+   "bytes": 101609
   },
   "papers/0.043171/tools/depgraph.py": {
    "research_source": "papers/0.043171/tools/depgraph.py",

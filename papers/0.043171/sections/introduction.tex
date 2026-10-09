@@ -24,14 +24,16 @@ many numerical inequalities, among them enclosures of the values of $576$
 $L$-functions near $s=1$, are verified by exact computation and interval
 arithmetic (Subsection~\ref{intro:code}).
 
-The largest exponent previously claimed in a manuscript, $1.04273$, is in
-the author's paper \cite{Naslund04273}. The present paper keeps its
-method and most of its construction, and it repeats the parts that are
-used, so that it can be read on its own. It differs in three places,
-described in Subsection~\ref{intro:new}: one of the local conditions of
-the tower, the bound for the relative zeta value, and the weights at the
-selected primes (the primes used for equal-norm choices,
-Subsection~\ref{intro:outline}).
+The largest exponent previously claimed, $1.0358$, is in the author's
+unpublished manuscript \cite{Naslund0358}. The method is the number-field
+construction of OpenAI \cite{OpenAI2026} and Sawin \cite{Sawin2026}.
+Subsection~\ref{intro:new} describes the three ingredients that give the
+present exponent: the local conditions of a tower over $\Q(\sqrt{241})$,
+a bound for the relative zeta value through the dihedral quotients of the
+tower group, and general weights at the selected primes (the primes used
+for equal-norm choices, Subsection~\ref{intro:outline}). The paper is
+self-contained, apart from the cited standard results and the
+supplementary programs.
 
 \subsection{Background}\label{intro:background}
 Erd\H{o}s \cite{Erdos1946} showed that a suitable section of a scaled
@@ -58,11 +60,10 @@ Wang and Wood \cite{Alon2026} simplified the argument, and Sawin
 \cite{Sawin2026} made every step explicit and reached the exponent
 $1.014114$. Improvements followed in online discussions
 \cite{ErdosProblems90,SpiderduckpigMO2026,NaslundMO2026}, and the
-author's manuscript \cite{Naslund0358} recorded $1.0358324$. The paper
-\cite{Naslund04273} reached $1.04273$ with a tower over
-$\Q(\sqrt{241})$ and quadratic extensions $K/F$ of \emph{mixed
-signature}, that is, with $F$ having both real and complex places.
-Table~\ref{intro:table-bounds} lists the explicit exponents, and the
+author's manuscript \cite{Naslund0358} recorded $1.0358324$. The present
+paper uses a tower over $\Q(\sqrt{241})$ and quadratic extensions $K/F$
+of \emph{mixed signature}, that is, with $F$ having both real and complex
+places. Table~\ref{intro:table-bounds} lists the explicit exponents, and the
 repository \cite{TaoConstants84a} records further bounds posted online.
 
 \begin{table}[htbp]
@@ -87,9 +88,8 @@ $1.031849$ & mlewko \cite{ErdosProblems90} & finite data found by ChatGPT & foru
 $1.0333487$ & spiderduckpig \cite{SpiderduckpigMO2026} & weighted Zassenhaus count & online post\\
 $1.0358324$ & Naslund \cite{Naslund0358,NaslundMO2026} & covolume counting, dyadic & manuscript,\\
  & & ramification, fixed-subfield Euler products & online post\\
-$1.04273$ & Naslund \cite{Naslund04273} & tower over $\Q(\sqrt{241})$, mixed signature & manuscript\\
-$1.042901$ & \cite{NaslundCode4317} & Frobenius cap above $41$ instead of at $7$ & research record\\
-$1.043171$ & this paper & see Subsection~\ref{intro:new} & \\
+$1.043171$ & this paper & tower over $\Q(\sqrt{241})$, mixed signature, & \\
+ & & dihedral quotients (Subsection~\ref{intro:new}) & \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -205,24 +205,24 @@ statements that cite it.
 
 \input{sections/proof-structure}
 
-\subsection{What is new}\label{intro:new}
-\emph{A cap above $41$.} The tower of \cite{Naslund04273} bounds the order
-of the Frobenius elements by four (a \emph{cap}) at the two primes above
-$29$ and at the prime $7$, which is inert in $B$; a capped prime of $B$
-that splits into primes of $F$ that split in $K$ becomes selected. The
-prime $41$ splits in $B$. Capping one of the two primes above $41$
-instead of $7$ costs the same in the Golod--Shafarevich function, and it
-does not change the quotient $G_B/D_4G_B$ of the tower group, because
-every fourth power lies in $D_4G_B$. But
-the selected primes above $41$ have residue field of order $41^4$ instead
-of $7^8$, and their contribution to the margin roughly doubles. This
-alone gives the exponent $1.042901$ with the bound $C=\ceiling$ of
-\cite{Naslund04273}.
+\subsection{The main ingredients}\label{intro:new}
+\emph{The caps.} The local conditions of the tower bound the order of
+the Frobenius elements by four (a \emph{cap}) at the two primes above
+$29$ and at one of the two primes above $41$, which splits in $B$; a
+capped prime of $B$ that splits into primes of $F$ that split in $K$
+becomes selected. A cap at the prime $7$, which is inert in $B$, would
+cost the same in the Golod--Shafarevich function and would give the same
+quotient $G_B/D_4G_B$ of the tower group, because every fourth power lies
+in $D_4G_B$. But the selected primes above $41$ have residue field of
+order $41^4$ instead of $7^8$, and their contribution to the margin is
+about twice as large.
 
-\emph{The relative zeta value.} The bound $C$ of \cite{Naslund04273}
+\emph{The relative zeta value.} The simplest bound for
+$d^{-1}\log L_F(1)$, $C=\ceiling$ (Remark~\ref{an:base-ceiling}),
 compares $\zeta_K$ prime by prime with the zeta function of the Kummer
 field $E$, the maximal elementary abelian subextension of the tower,
-with $[E:\Q]=512$. A prime of $B$ that splits completely in $E$ is then
+with $[E:\Q]=512$. With this bound the construction gives the exponent
+$1.042901$. A prime of $B$ that splits completely in $E$ is then
 counted as if it split completely in $K$; such primes carry about $0.005$
 of $C$. We recover most of this through the second graded piece
 $\operatorname{gr}_2G_B=D_2G_B/D_3G_B$ of the Zassenhaus filtration, a
@@ -270,14 +270,13 @@ $C_{\rm eff}=\Ceff$ (Theorem~\ref{an:ceiling}). Since the margin falls by
 about $23.8$ per unit of $\delta$ and by $1$ per unit of $C$, this is
 worth about $0.00027$ in the exponent.
 
-\emph{General shell weights.} The shell profiles of \cite{Naslund04273}
-are weighted sums $\sum_{i,j}w_{ij}\mathbf 1_{\mathcal S_i\times
+\emph{General shell weights.} The shell profiles are weighted sums $\sum_{i,j}w_{ij}\mathbf 1_{\mathcal S_i\times
 \varpi^{-k}\mathcal S_j}$ over products of \emph{shells}: in a local field
 with ring of integers $\mathcal O$ and uniformizer $\varpi$,
 $\mathcal S_0=\mathcal O$ and $\mathcal S_i$ ($i\ge1$) is the set of elements
 of valuation $-i$, and $k$ is the exponent used at the prime
-(Definition~\ref{fw:shell-profile}); the certificate there
-used product weights $w_{ij}=x_ix_j$. The local lemma allows any
+(Definition~\ref{fw:shell-profile}). Product weights $w_{ij}=x_ix_j$
+suffice for the exponent $1.043170$; the local lemma allows any
 nonnegative weights (Lemma~\ref{fw:shell-lemma}), and optimized symmetric
 $10\times10$ matrices at the primes above $2$, $3$ and $5$ add
 $1.5\cdot10^{-5}$ to the margin.
@@ -306,8 +305,7 @@ $d^{-1}\log L_F(1)$ obtained with $M$ as comparison field.}
 \toprule
 step & $C_{\rm eff}$ & exponent\\
 \midrule
-tower of \cite{Naslund04273} & $0.04871285$ & $1.04273$\\
-cap above $41$ instead of $7$ & $0.04871285$ & $1.042901$\\
+caps above $29$ and $41$, comparison field $E$ & $0.04871285$ & $1.042901$\\
 ${}^*$adaptive dichotomy (Propositions~\ref{lim:A}, \ref{lim:B}) & $0.048134265$ & $1.042925$\\
 ${}^*$dihedral census to $10^{12}$ & $0.0471692613$ & $1.042965$\\
 ${}^*$ceiling over $E_W$, $[E_W:\Q]=2048$, census to $10^{13}$ & $0.0436495$ & $1.043113$\\
@@ -325,10 +323,11 @@ The proof of Theorem~\ref{thm:main} is complete as written, but parts of
 it rest on computations. Each computation is done by a supplementary
 program, named where it is used, in exact arithmetic or in outward-rounded
 interval arithmetic, and a replay program reruns the certificate
-(Subsection~\ref{intro:code}). The parts new relative to
-\cite{Naslund04273} were checked by ten independent reviews by AI agents
-in fresh contexts, each given the statements, the arguments and the
-programs but not the author's confidence or earlier verdicts. One review
+(Subsection~\ref{intro:code}). The dihedral refinements, the signed
+kernel, the general shell weights and the intermediate certificates were
+checked by ten independent reviews by AI agents in fresh contexts, each
+given the statements, the arguments and the programs but not the author's
+confidence or earlier verdicts. One review
 found a material error in an intermediate certificate: thirteen primes
 had been credited twice. It was corrected; the exponent of that step did
 not change. The other reviews found no error affecting the bounds; their
@@ -338,18 +337,19 @@ independently, since general-purpose software cannot reach their
 conductors; they rest on the method of Section~\ref{lv:section} and its
 checks. The cap above $41$ (Section~\ref{tw:tower}) has had two
 fresh-context reviews of its argument, but its finite computations have
-not had a full independent review. These are automated reviews, not human
-peer review.
+not had a full independent review. The manuscript as a whole had three
+further fresh-context reviews, which found no error affecting the theorem
+or any constant, and an audit of the floating-point arithmetic of the
+$L$-value programs found no bound that is not rigorous. These are
+automated reviews, not human peer review.
 
-A Lean formalization \cite{NaslundLean2026}, registered in the Palomar
-registry, proves the planar conclusion of \cite{Naslund04273}, with the
-exponent $1.0427$, from one explicit inequality for $\zeta_E$. A second
-one \cite{NaslundLeanW} formalizes the tower of the present paper and
-proves the planar conclusion with the exponent $1.04315$ from one explicit
-inequality for $\zeta_{\EW}$ (Remark~\ref{an:lean-hypothesis}). Neither
-inequality is proved in Lean, and neither formalization covers the census
-beyond norm $1000$, the signed kernel or the general shell weights, so
-neither proves Theorem~\fref{thm:main}, even conditionally.
+A Lean formalization \cite{NaslundLeanW} of the tower of the present
+paper proves the planar conclusion with the exponent $1.04315$ from one
+explicit inequality for $\zeta_{\EW}$ (Remark~\ref{an:lean-hypothesis}).
+The inequality is not proved in Lean, and the formalization does not cover
+the census beyond norm $1000$, the signed kernel or the general shell
+weights, so it does not prove Theorem~\fref{thm:main}, even
+conditionally.
 
 \subsection{Organization}\label{intro:organization}
 Section~\ref{tw:tower} constructs the tower and proves
@@ -362,7 +362,7 @@ the dihedral quotients, the census and the field $\EW$;
 Section~\ref{lv:section} evaluates the $L$-functions of $\EW$; and
 Section~\ref{ce:section} proves the bound $C_{\rm eff}$
 (Theorem~\ref{an:ceiling}). Sections~\ref{geo:section}--\ref{pf:section}
-carry out the geometric construction, as in \cite{Naslund04273}, with
+carry out the geometric construction, with
 general shell weights. Section~\ref{sec:certificate} proves the final
 inequality at $\delta=\deltastar$ and completes the proof of
 Theorem~\ref{thm:main}. Section~\ref{lim:section} records refinements that
@@ -429,20 +429,20 @@ fact is used.
 
 The programs and their data are in the directory
 \path{papers/0.043171/certificates} of the repository
-\cite{NaslundCode4317}. They import, without modifying them, the programs
-of \cite{Naslund04273} (directory \path{papers/0.04273/certificates}, in
-the version with the interval corrections of October~2, 2026) and of the
-41-cap variation (directory \path{papers/0.042901/certificates}), and some
-routines of the supplementary archive of the author's earlier note
-\cite{Naslund0418235}, whose members are checked against their SHA-256
-hashes when the archive is unpacked. A \emph{witness} is a JSON file that
+\cite{NaslundCode4317}. They import, without modifying them, programs
+in the directories \path{papers/0.04273/certificates} and
+\path{papers/0.042901/certificates} of the same repository (the
+arithmetic of $B$ and of $E$, the analytic ceiling with $E$ as comparison
+field, and the geometric margin) and some routines of the data archive in
+\path{papers/0.0418235/certificates}, whose members are checked against
+their SHA-256 hashes when the archive is unpacked. A \emph{witness} is a JSON file that
 records the exact data of one certificate (the exponent, the bound $C$,
 the kernel abscissae and coefficients, the profile parameters and the
 shell weights) together with the SHA-256 hashes of the data files it
 reads; its replay program recomputes every certified inequality from it.
 The witness of Theorem~\ref{thm:main} is
 \path{certificates/dihedral/witness_0.043171.json}; it pins the
-SHA-256 hashes of $617$ data files, among them all $353$ files that the
+SHA-256 hashes of $683$ data files, among them all $356$ files that the
 certification reads.
 The replay program \path{certificates/dihedral/reproduce_w3.py}
 regenerates the exports of the number fields with PARI/GP, recomputes

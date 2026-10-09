@@ -3,9 +3,6 @@
 We bound the relative zeta value $L_F(1)$ needed in the geometric
 construction. Logarithms of Dedekind zeta functions are normalized by the
 degree: for a number field $A$ we work with $[A:\Q]^{-1}\log\zeta_A(s)$.
-Subsections~\ref{an:reduction}--\ref{an:budget-section} and
-\ref{an:afe-section}--\ref{an:census} repeat \cite[Section~4]{Naslund04273};
-Subsections~\ref{an:selected} and~\ref{an:signed-section} are new.
 
 \begin{definition}\label{an:family}
 Let $\mathcal K$ be the set of all finite Galois extensions $K/B$ contained
@@ -309,9 +306,10 @@ As $s\downarrow1$, $Z(s)$ increases to $Z(1)$ by monotone convergence, and
 the supremum tends to zero. Hence $C'\le Z(1)$.
 \end{proof}
 
-The next proposition is the form of this argument used in
-\cite{Naslund04273}, with one abscissa. Here it serves only for comparison
-(Remark~\ref{an:base-ceiling} and Section~\ref{lim:section}).
+The next proposition is the form of this argument with one abscissa. Here
+it serves only for comparison (Remark~\ref{an:base-ceiling} and
+Section~\ref{lim:section}) and for the Lean formalization
+(Remark~\ref{an:lean-hypothesis}).
 
 \begin{proposition}\label{an:prime-budget}
 Let $\sigma=1+\varepsilon$ with $0<\varepsilon\le1$, and let $Y_*$ be a real
@@ -862,8 +860,8 @@ $\nu_k=\nu_k(e)$ (Definition~\ref{gf:archimedean}). Put $t=2\pi/\sqrt{Q_e}$ and 
 \[
  N^{\rm afe}_e=8\lfloor\sqrt{Q_e}\rfloor+1,
 \]
-twice the length used in \cite{Naslund04273}, so that the enclosures are
-narrow enough for Proposition~\ref{an:signed}.
+twice the length $4\lfloor\sqrt{Q_e}\rfloor+1$ of Remark~\ref{gf:checks},
+so that the enclosures are narrow enough for Proposition~\ref{an:signed}.
 
 \begin{lemma}\label{an:afe-range}
 For every $e\in\Ftwo^8\setminus\{0\}$, with $t=2\pi/\sqrt{Q_e}$ and
@@ -953,14 +951,16 @@ For example,
 The factorization is Proposition~\ref{gf:factorization}. The coefficients
 $a_n(e)$ for $n\le N^{\rm afe}_e$ are computed exactly from the Euler factors of
 Proposition~\ref{gf:local-data} by the functions of the supplementary program
-\texttt{lfun241.py} of \cite{Naslund04273}, and the program \texttt{afe241.py}
-of \cite{Naslund04273}, called unchanged by \texttt{ye\_hp.py}, evaluates
+\texttt{lfun241.py}, and the program \texttt{afe241.py}, both in the
+directory \path{papers/0.04273/certificates} of \cite{NaslundCode4317} and
+called unchanged by \texttt{ye\_hp.py}, evaluates
 \eqref{an:row-enclosure} in Arb midpoint--radius interval arithmetic
 \cite{Johansson2017,FLINT} with $256$ bits of precision, rounding every
 quantity outward. Its routines for
-Lemmas~\ref{an:balanced-afe}--\ref{an:binning} are taken unchanged from an
-earlier supplementary archive of the author \cite{Naslund0418235}, and
-they implement these lemmas as stated here. Every enclosure of
+Lemmas~\ref{an:balanced-afe}--\ref{an:binning} are taken unchanged from the
+data archive in \path{papers/0.0418235/certificates} of
+\cite{NaslundCode4317}, whose members are checked against their SHA-256
+hashes when it is unpacked, and they implement these lemmas as stated here. Every enclosure of
 $L(\sigma,\chi_e)$ is positive. The factor $\zeta_B(\sigma)=\zeta(\sigma)
 L(\sigma,\chi_B)$ is evaluated with
 \[
@@ -1050,14 +1050,17 @@ $\mathcal P_4$.
 \end{proposition}
 
 \begin{proof}
-The supplementary program \texttt{census241.py} computes the Frobenius
-vector of each of these primes from Proposition~\ref{gf:local-data}(1) with
-exact modular arithmetic, and compares it with the elements of $\Sigma_2$
-(Lemma~\ref{an:sigma2}). The free primes differ from those of
-\cite{Naslund04273} only in that $\mathfrak t_0$ is free and $\mathfrak t_3$
-is not; both have Frobenius vectors outside $\Sigma_2$, so the counts are those
-of \cite{Naslund04273}. The program \texttt{adaptive41.py} of this paper
-enumerates the free primes and reproduces the three counts.
+The supplementary program \texttt{census241.py} (directory
+\path{papers/0.04273/certificates} of \cite{NaslundCode4317}) computes the
+Frobenius vector of each of these primes from
+Proposition~\ref{gf:local-data}(1) with exact modular arithmetic, and compares
+it with the elements of $\Sigma_2$ (Lemma~\ref{an:sigma2}). It was written for
+the variant of the construction with the cap at $\mathfrak t_0$ instead of
+$\mathfrak t_3$ (Remark~\ref{tw:same-quotient}), whose free primes differ
+from the present ones only in that $\mathfrak t_0$ is free and $\mathfrak t_3$
+is not; both have Frobenius vectors outside $\Sigma_2$, so the three counts
+are the same for both. The program \texttt{adaptive41.py} enumerates the free
+primes of the present tower and reproduces the three counts.
 \end{proof}
 
 Below we use this classification of the primes, not the three counts.
@@ -1065,8 +1068,8 @@ Below we use this classification of the primes, not the three counts.
 
 \begin{remark}\label{an:base-ceiling}
 With $E$ as the comparison field, Proposition~\ref{an:prime-budget} at
-$\sigma=301/300$ gives the bound $C=\ceiling$ of
-\cite[Section~4]{Naslund04273} also for the present tower. Its lower bounds
+$\sigma=301/300$ gives the bound $C=\ceiling$ for the present tower. Its
+lower bounds
 $(e^0_{\mathfrak p},f^0_{\mathfrak p})$ are the types in $K$ at the selected
 primes, $(1,4)$ at the primes of $\mathcal P_4$
 (Lemma~\ref{an:census-degree}), and the types in $E$ at the other free
@@ -1077,12 +1080,14 @@ difference between the terms in \eqref{an:local-sum} for $M=E$ and for
 $M=K$, and
 $\Delta^E_4(\sigma)=\sum_{\mathfrak p\in\mathcal P_4}\bigl(g_\sigma(\mathrm
 N\mathfrak p^2)/4-g_\sigma(\mathrm N\mathfrak p^4)/8\bigr)$; $Y'_*$ is bounded
-from the same lower bounds. Compared with \cite{Naslund04273}, the terms
+from the same lower bounds. Compared with the variant with the cap at
+$\mathfrak t_0$ (Remark~\ref{tw:same-quotient}), the terms
 of $\mathfrak t_0$ and of $\mathfrak t_3$ change places between $\Delta^E_{\rm sel}$ and
 $\Delta^E_4$, with the same formula
 $g_\sigma(\mathrm N\mathfrak p^2)/4-g_\sigma(\mathrm N\mathfrak p^4)/8$, so the
-totals are unchanged; the supplementary program \texttt{ceiling41.py} of the
-41-cap variation recomputes the upper bound $0.04871284289\ldots$. With this
+totals are the same for both; the supplementary program \texttt{ceiling41.py}
+(directory \path{papers/0.042901/certificates} of \cite{NaslundCode4317})
+computes the upper bound $0.04871284289\ldots$. With this
 $C$, the margin of Section~\ref{sec:certificate} with re-optimized profiles
 gives the exponent $1.042901$ (Table~\ref{intro:table-steps}). This bound is
 not used in the proof of Theorem~\fref{thm:main}.
@@ -1095,33 +1100,18 @@ $2\kappa_\infty-T_{\rm sel}>1.07>0$. So no system of floors, abscissae and
 coefficients gives a bound below
 $Z_{\rm sel}(1)=0.04166848403\ldots$ (Lemma~\ref{an:selected-lemma}), the
 contribution of the selected primes to $Z(1)$. It exceeds the corresponding
-number of \cite{Naslund04273} by $2.3\cdot10^{-8}$, because the selected
-primes above $41$ replace those above $7$. The bound $C_{\rm eff}=\Ceff$
+number for the variant with the cap at $\mathfrak t_0$ by $2.3\cdot10^{-8}$,
+because the selected primes above $41$ replace those above $7$. The bound $C_{\rm eff}=\Ceff$
 exceeds $Z_{\rm sel}(1)$ by $6.08\cdot10^{-4}$; Section~\ref{lim:section}
 discusses what this means for the exponent.
 \end{remark}
 
-\begin{remark}[The Lean formalizations]\label{an:lean-hypothesis}
-Two Lean formalizations prove weaker forms of Theorem~\fref{thm:main}, each
-under one explicit hypothesis that it does not prove.
-
-(a) The formalization \cite{NaslundLean2026} proves that there are finite
-planar sets $U_j$ with $|U_j|\to\infty$ and
-$u(U_j)/|U_j|^{1.0427}\to\infty$. Its fields are
-those of \cite{Naslund04273}, with the capped prime $\mathfrak t_0$ in place
-of $\mathfrak t_3$, and its hypothesis is the inequality
-\begin{equation}\label{an:h241}
- \frac{\log\zeta_E(1+\frac1{300})}{512}
- +\frac1{300}\Bigl(\frac{\ell-\gamma-\log(4\pi)}4
- -\frac1{512}\frac{\zeta_E'}{\zeta_E}(2)\Bigr)<0.0852,
-\end{equation}
-which is the bound of Proposition~\ref{an:prime-budget} with all local data
-taken from $E$. It does not cover the cap above $41$, the dihedral
-quotients, the field $\EW$, the census or the signed kernel of this paper.
-
-(b) The formalization \cite{NaslundLeanW} proves the same statement with the
-exponent $20863/20000=1.04315$, for the fields of the present tower, under the
-hypothesis
+\begin{remark}[The Lean formalization]\label{an:lean-hypothesis}
+The Lean formalization \cite{NaslundLeanW} proves a weaker form of
+Theorem~\fref{thm:main}, under one explicit hypothesis that it does not
+prove: for the fields of the present tower, there are finite planar sets
+$U_j$ with $|U_j|\to\infty$ and $u(U_j)/|U_j|^{20863/20000}\to\infty$, where
+$20863/20000=1.04315$, provided that
 \begin{equation}\label{an:hw}
  \frac{\log\zeta_{\EW}(1+\frac1{4411})}{8192}
  +\frac1{4411}\Bigl(\frac{\ell-\gamma-\log(4\pi)}4

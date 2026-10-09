@@ -2,7 +2,7 @@
 
 The analytic estimate of Sections~\ref{an:section}--\ref{ce:section}
 compares every field of Theorem~\ref{tw:field-family} with a fixed subfield.
-In \cite{Naslund04273} this subfield is the Kummer field
+The simplest choice of this subfield is the Kummer field
 \[
  E=B(\sqrt{\alpha_0},\ldots,\sqrt{\alpha_7})=B(\sqrt V)
 \]
@@ -13,13 +13,11 @@ outside $S$, that is, the fixed field of the Frattini subgroup of $G_B$
 (Lemma~\ref{gf:in-tower}). The Lean formalization calls $E$ the genus field;
 we do not use that name here. Here the comparison field is a larger field
 $\EW\supset E$ (Section~\ref{dh:section}), whose zeta function contains
-$\zeta_E$ as a factor. This section, which repeats
-\cite[Section~3]{Naslund04273}, shows that $E$ lies in every field of
+$\zeta_E$ as a factor. This section shows that $E$ lies in every field of
 Theorem~\ref{tw:field-family}. It then writes $\zeta_E$ as the product of
 $\zeta_B$ and $255$ quadratic Hecke $L$-functions of $B$, and determines
-their conductors, gamma factors, root numbers and Euler factors. The capped
-primes of \cite{Naslund04273} and of the present tower differ, but the field
-$E$ does not depend on them.
+their conductors, gamma factors, root numbers and Euler factors. The field
+$E$ does not depend on the choice of the capped primes.
 
 For $v,e\in\Ftwo^8$ put $\langle v,e\rangle=\sum_{i=0}^7v_ie_i\in\Ftwo$; as
 in Section~\ref{tw:tower}, vectors are written as strings of their
@@ -388,16 +386,15 @@ range of $Q_e$ can be read off from the table.
 \end{proof}
 
 \begin{remark}\label{gf:checks}
-The supplementary program \texttt{lfun241.py} computes, for each $e\ne0$,
-the integer $Q_e$, the pair $(\nu_1(e),\nu_2(e))$ and the coefficients
-$a_n(e)$ for $n\le N_e=4\lfloor\sqrt{Q_e}\rfloor+1$, the truncation point
-of \cite{Naslund04273}, from
-Propositions~\ref{gf:local-data} and~\ref{gf:degree-two}(1); these are the
-data used in \cite{Naslund04273}. For the values used here
+The supplementary program \texttt{lfun241.py} (directory
+\path{papers/0.04273/certificates} of \cite{NaslundCode4317}) computes, for
+each $e\ne0$, the integer $Q_e$, the pair $(\nu_1(e),\nu_2(e))$ and the
+coefficients $a_n(e)$ for $n\le N_e=4\lfloor\sqrt{Q_e}\rfloor+1$, from
+Propositions~\ref{gf:local-data} and~\ref{gf:degree-two}(1). For the values used here
 (Subsection~\ref{an:value-section}), the program \texttt{ye\_hp.py} computes
 the coefficients up to the larger truncation point
 $8\lfloor\sqrt{Q_e}\rfloor+1$ of that subsection. The supplementary program
-\texttt{check255.gp} compares all $255$ of them with PARI/GP's own number
+\texttt{check255.gp}, in the same directory, compares all $255$ of them with PARI/GP's own number
 fields and $L$-functions \cite{PARI}. For each $e$ it computes the maximal
 order of $B_e$, checks $|\Delta_{B_e}|=241\,Q_e$ and the pair
 $(\nu_1(e),\nu_2(e))$ against the signature of $B_e$, and checks every

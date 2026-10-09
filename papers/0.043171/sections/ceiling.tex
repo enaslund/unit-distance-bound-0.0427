@@ -124,8 +124,8 @@ enclosures of Propositions~\ref{lv:values} and~\ref{an:genus-value}, with
 $\Delta_{\rm sel}$ given by Lemma~\ref{dh:delta-sel}, prime by prime for the
 corrections, in Arb; since the $c_j$ have both signs, each
 $Y_{\rm cor}(\sigma_j)$ is used as a two-sided enclosure. This gives
-$\sum_jc_jY_{\rm cor}(\sigma_j)\le0.000561803331934$ (the enclosure is
-$[0.000561206655994,\,0.000561803331934]$; only the upper end is used).
+$\sum_jc_jY_{\rm cor}(\sigma_j)\le0.000561519780954$ (the enclosure is
+$[0.000561490206974,\,0.000561519780954]$; only the upper end is used).
 
 The primes of $\mathcal P_2$ above $1.2\cdot10^7$ are known through their bin
 counts (Proposition~\ref{dh:census}). The program groups the nonempty bins
@@ -144,14 +144,14 @@ end is used). Finally $2\kappa_\infty-T_{\rm sel}=1.07342687156367\ldots$ is
 computed in Arb from the definitions, so that
 $b_{\rm TV}(2\kappa_\infty-T_{\rm sel})\le0.000121772671416$, and
 \begin{align*}
- &0.000561803331934-0.0000757399496680+0.000121772671416\\
- &\qquad=0.000607836053682<0.000607837.
+ &0.000561519780954-0.0000757399496680+0.000121772671416\\
+ &\qquad=0.000607552502702<0.000607837.
 \end{align*}
 The displayed endpoints are rounded outward from the Arb enclosures; the
 supplementary program \texttt{ce\_values\_digits.py} prints them with all
 digits, and the upper end of the total computed in Arb is
-$0.00060783605368197\ldots$. The bound of the lemma is stated with a margin
-of about $9\cdot10^{-13}$, so that it is not affected by changes of the
+$0.00060755250270059\ldots$. The bound of the lemma is stated with a margin
+of about $2.8\cdot10^{-7}$, so that it is not affected by changes of the
 enclosures at the level of the rounding errors that their computation
 accounts for.
 \end{proof}
@@ -168,7 +168,7 @@ and~\ref{ce:values},
 \end{align*}
 The interval evaluation of the same expression from the unrounded
 enclosures, by \texttt{signed.py}, gives the upper bound
-$0.04227632008582\ldots$. Proposition~\ref{an:signed} with $C'=C_{\rm eff}$
+$0.04227603653484\ldots$. Proposition~\ref{an:signed} with $C'=C_{\rm eff}$
 proves the theorem.
 \end{proof}
 

@@ -13,8 +13,9 @@ text. The inequalities between decimals in
 Propositions~\ref{cert:exact} and~\ref{cert:enclosures} and in the remarks,
 and the entries of Tables~\ref{cert:tab-local} and~\ref{cert:tab-budget},
 are computed by the supplementary program
-\texttt{margin\_general.py}, which calls the program \texttt{geom241.py} of
-\cite{Naslund04273} unchanged; the replay records the final margin, and
+\texttt{margin\_general.py}, which calls the program \texttt{geom241.py}
+(directory \path{papers/0.04273/certificates} of \cite{NaslundCode4317})
+unchanged; the replay records the final margin, and
 calling \texttt{margin\_general} with \texttt{verbose=True} prints every
 enclosure and table entry. In the inequalities the decimals are rounded
 outward from interval enclosures, and the table entries are rounded to
@@ -410,15 +411,17 @@ This subsection describes how the finite checks and enclosures of
 Propositions~\ref{cert:exact} and~\ref{cert:enclosures} are computed.
 
 The program \texttt{margin\_general.py} calls the function \texttt{margin} of
-\texttt{geom241.py} of \cite{Naslund04273} unchanged, and replaces only, for
+\texttt{geom241.py} unchanged, and replaces only, for
 the duration of the call, its routine for the local functional at the places
 whose weights are given as a matrix, by the routine of
 \texttt{general\_windows.py}, which evaluates \eqref{fw:shell-kernel} exactly
 in rational arithmetic, with the real powers $w_{r,ij}^p$ in interval
 arithmetic. The routine for product weights, and the routines for
 Propositions~\ref{pf:mass} and~\ref{pf:overlap}, Lemma~\ref{pf:tube} and
-Corollary~\ref{pf:functional}, are those of \cite{Naslund04273}, which take
-three modules of the supplementary archive of \cite{Naslund0418235} unchanged.
+Corollary~\ref{pf:functional}, are those of \texttt{geom241.py}, which takes
+three modules of the data archive in \path{papers/0.0418235/certificates} of
+\cite{NaslundCode4317} unchanged; the members of the archive are checked
+against their SHA-256 hashes when it is unpacked.
 In Proposition~\ref{pf:mass} the program uses the symmetry of
 \eqref{pf:bernstein-witness}: each square off the diagonal is evaluated once
 and counted twice. It checks the hypotheses listed in

@@ -12,21 +12,15 @@ Section~\ref{ce:section} chose these $21$. Proposition~\ref{an:genus-value}
 gives $Y_E(\sigma)$. This section encloses the $576$ values
 (Proposition~\ref{lv:values}); Lemma~\ref{ce:values} uses them.
 
-The $192$ twists of the forms $\psi_{10},\psi_{23},\psi_{24}$ were evaluated
-with the certified approximate functional equation for the gamma factor
-$\Gamma_\C(s)^2$ of \cite[Section~4.6, Lemma~4.4]{Naslund0418235}, with the
-tail bounds of its Section~4.7 and the kernel enclosures of its
-Section~4.9, which is not restated here. Its supplementary archive
-implements it in the program \texttt{nonpositive-afe.py} (kernel type
-\texttt{quartic}), which certifies enclosures of the kernels, of the
-interpolation errors and of the truncation errors; the program
-\texttt{dafe.py} applies it to these $192$ functions. The kernels of
-Subsection~\ref{lv:afe-general} evaluate the same $192$ functions
-independently (Subsection~\ref{lv:checks}, item~(3)), with radius about
-$10^{-13}$; a reader may use those values instead, which only enlarges the
-margin. The other $384$ functions were evaluated with the kernels of
-Subsection~\ref{lv:afe-general}, which cover the four gamma factors of
-Lemma~\ref{dh:gamma}.
+All $576$ functions are evaluated with the approximate functional
+equation and the kernels of Subsection~\ref{lv:afe-general}, which cover
+the four gamma factors of Lemma~\ref{dh:gamma}. The $192$ twists of the
+forms $\psi_{10},\psi_{23},\psi_{24}$ were also evaluated by a second,
+independent implementation for the gamma factor $\Gamma_\C(s)^2$, the
+program \texttt{dafe.py} with the kernels of the data archive in
+\path{papers/0.0418235/certificates} of \cite{NaslundCode4317};
+the two agree (Subsection~\ref{lv:checks}, item~(3)), and the proof uses
+only the first.
 
 \subsection{An approximate functional equation for products of gamma
 functions}\label{lv:afe-general}
@@ -321,8 +315,9 @@ kernels, or of part of them; none is used in the proof.
  reproduces PARI's \texttt{lfun} values of products of quadratic Dirichlet
  $L$-functions with that gamma factor, within the certified radii.
 \item[(3)] \emph{Two implementations.} \texttt{dcoef4.c} with
- \texttt{leval.py} reproduces the values computed with the archive kernels of
- \cite{Naslund0418235} by \texttt{dafe.py}: for the twists of
+ \texttt{leval.py} reproduces the values computed by the independent
+ program \texttt{dafe.py}, with the kernels of the data archive in
+ \path{papers/0.0418235/certificates} of \cite{NaslundCode4317}: for the twists of
  $\psi_{19}$ at $801/800$, and for all $6912$ values of the $192$ twists of
  $\psi_{10},\psi_{23},\psi_{24}$ at the $36$ abscissae, where all balls overlap
  and the midpoints agree to $3.4\cdot10^{-16}$.
@@ -350,43 +345,42 @@ Lemma~\ref{ce:values}.
 For each abscissa $\sigma_j$ of Table~\ref{ce:kernel-table} and each of the
 $576$ $L$-functions $L$ in \eqref{dh:YW}, the directories \texttt{hp} and
 \texttt{hp3} contain an interval that contains $L(\sigma_j)$, of radius at
-most the entry of Table~\ref{lv:results} (relative to the value, or absolute
-for the archive evaluation). With Proposition~\ref{an:genus-value} and
+most the entry of Table~\ref{lv:results}, relative to the value. With
+Proposition~\ref{an:genus-value} and
 \eqref{dh:YW} they give an enclosure of $Y_{W''}(\sigma_j)$; for instance
-$Y_{W''}(1001/1000)=0.050492599$ with radius $3.4\cdot10^{-10}$.
+$Y_{W''}(1001/1000)=0.050492599$ with radius $4\cdot10^{-12}$.
 \end{proposition}
 
 \begin{proof}[Proof (computer-assisted)]
 By Lemmas~\ref{dh:Lfunctions}(c) and~\ref{dh:gamma}, each of the $576$
 functions satisfies the hypotheses of Lemma~\ref{lv:afe}, with $Q$ its
-conductor and $G$ its gamma factor. For the $384$ functions of the forms
-$\psi_{19},\psi_{20},\psi_{17},\psi_7$ and of the eight pairs, the program
+conductor and $G$ its gamma factor. For all $576$ functions, the program
 \texttt{deg8/leval.py} evaluates the series of Lemma~\ref{lv:afe} as
 described in Subsection~\ref{lv:computation}: with the kernels of
 \texttt{deg8/gkernel.py} (Lemma~\ref{lv:kernel}), the coefficients from
 PARI's Euler factors and Lemma~\ref{lv:coefficients}, the cell remainders and
 tails of Lemma~\ref{lv:remainders}, and the floating-point errors bounded as
-described there. The $192$ twists of $\psi_{10},\psi_{23},\psi_{24}$ are
-evaluated by \texttt{dafe.py} with the approximate functional equation of
-\cite[Lemma~4.4]{Naslund0418235}, or alternatively, with radius about
-$10^{-13}$, by the same pipeline as the other functions
-(Subsection~\ref{lv:checks}, item~(3)).
+described there. The Dirichlet coefficients are computed by
+\texttt{dcoef4.c} (degree $4$) and \texttt{octcoef.c} (degree $8$) from data
+exported with PARI/GP; for the forms $\psi_{10},\psi_{23},\psi_{24}$ the
+export is \texttt{deg8/exportg.gp}, with Euler factors at the primes below
+$3000$.
 \end{proof}
 
 \begin{table}[htbp]
 \centering\small
 \caption{The $L$-functions in \eqref{dh:YW}: number, gamma factor, terms of
 the approximate functional equation, and the largest radius of the
-enclosures of their values at the abscissae (relative, except for $Y_E$ and
-for the archive evaluation, where it is absolute). All data are in the
-directories \texttt{hp} and \texttt{hp3}.}
+enclosures of their values at the abscissae (relative, except for $Y_E$,
+where it is absolute). All data are in the directories \texttt{hp} and
+\texttt{hp3}.}
 \label{lv:results}
 \begin{tabular}{lrlll}
 \toprule
 functions & number & gamma factor & terms & radius\\
 \midrule
 quadratic, $E$ & $255$ & $\Gamma_\R(s+\nu)^2$ or $\Gamma_\C(s)$ & $8\lfloor\sqrt{Q_e}\rfloor+1$ & $1.3\cdot10^{-19}$ (in $Y_E$)\\
-$\psi_{10},\psi_{23},\psi_{24}$ & $192$ & $\Gamma_\C(s)^2$ & $999999$ & $6.6\cdot10^{-9}$\\
+$\psi_{10},\psi_{23},\psi_{24}$ & $192$ & $\Gamma_\C(s)^2$ & up to $2.2\cdot10^6$ & $2.6\cdot10^{-13}$\\
 $\psi_{19},\psi_{20}$ & $128$ & $\Gamma_\C(s)^2$, mixed & up to $6.7\cdot10^6$ & $6.4\cdot10^{-13}$\\
 $\psi_{17},\psi_7$ & $128$ & $\Gamma_\C(s)^2$ & up to $6.7\cdot10^6$ & $2.2\cdot10^{-13}$\\
 pairs $(19,23),(19,24)$ & $32$ & $\Gamma_\C(s)^4$ & up to $5.28\cdot10^{10}$ & $5.1\cdot10^{-10}$\\
