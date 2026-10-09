@@ -64,7 +64,7 @@
     "research/2026-10-muse-involution-class"
    ],
    "via": "research repository enaslund/unit-distance-bound (private), git-tracked files, unchanged; the copy of papers/0.04273 includes the certificate corrections first published here on October 2, 2026 (provenance/certificate-corrections-20261002.json), which the research repository adopted",
-   "research_commit": "2acbeccb3bce16b1144d466e15a7cdd41ce71541"
+   "research_commit": "f66291fac1b2878df97a473bd137fa1c3a111a9d"
   }
  ],
  "files": {
@@ -9334,21 +9334,21 @@
   },
   "papers/0.043171/main.pdf": {
    "research_source": "papers/0.043171/main.pdf",
-   "research_commit": "c9966eab3fadd8be3622af87e4882fcfc6013480",
-   "sha256": "dd3082cbe304e3cd2682f5f991c8a1f6d5ca278ad6f3d819254bbd2fda6a7036",
-   "bytes": 1280408
+   "research_commit": "f66291fac1b2878df97a473bd137fa1c3a111a9d",
+   "sha256": "e759577c9496a9768628bb6919e461966218aee5ecb84ba2be78def57c591a0d",
+   "bytes": 1280835
   },
   "papers/0.043171/main.tex": {
    "research_source": "papers/0.043171/main.tex",
-   "research_commit": "a5273110318a73da5e02ae6ca8d695f4a26ec308",
-   "sha256": "d767f9251bf8412099c17b2f6f4bd622109113ab9a17e30a724a997c16be67df",
-   "bytes": 5545
+   "research_commit": "f66291fac1b2878df97a473bd137fa1c3a111a9d",
+   "sha256": "40af595a33bba0f5a2e78b79232ff7be9f890caaca95982ea147ff30ab9fb184",
+   "bytes": 5744
   },
   "papers/0.043171/references.bib": {
    "research_source": "papers/0.043171/references.bib",
-   "research_commit": "c9966eab3fadd8be3622af87e4882fcfc6013480",
-   "sha256": "e0e50c9b6b6414e16add81b0045277b4a1cd89040ac53e1a658ad27ec23b2211",
-   "bytes": 23998
+   "research_commit": "f66291fac1b2878df97a473bd137fa1c3a111a9d",
+   "sha256": "a695e01e02ce5995839e21390fa1abf5d00e9122593c014779ac5b6cf54a21f3",
+   "bytes": 24038
   },
   "papers/0.043171/requirements.txt": {
    "research_source": "papers/0.043171/requirements.txt",
