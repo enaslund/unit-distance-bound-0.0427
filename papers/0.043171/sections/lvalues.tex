@@ -320,7 +320,7 @@ kernels, or of part of them; none is used in the proof.
  \path{papers/0.0418235/certificates} of \cite{NaslundCode4317}: for the twists of
  $\psi_{19}$ at $801/800$, and for all $6912$ values of the $192$ twists of
  $\psi_{10},\psi_{23},\psi_{24}$ at the $36$ abscissae, where all balls overlap
- and the midpoints agree to $3.4\cdot10^{-16}$.
+ and the midpoints agree to $3.4\cdot10^{-16}$ relative to the values.
 \item[(4)] \emph{Coefficients.} The moments of \texttt{dcoef4.c} and
  \texttt{octcoef.c} agree with independent Python implementations up to
  $10^6$ and $2\cdot10^6$; the coefficients of the $192$ twists of
@@ -362,9 +362,7 @@ PARI's Euler factors and Lemma~\ref{lv:coefficients}, the cell remainders and
 tails of Lemma~\ref{lv:remainders}, and the floating-point errors bounded as
 described there. The Dirichlet coefficients are computed by
 \texttt{dcoef4.c} (degree $4$) and \texttt{octcoef.c} (degree $8$) from data
-exported with PARI/GP; for the forms $\psi_{10},\psi_{23},\psi_{24}$ the
-export is \texttt{deg8/exportg.gp}, with Euler factors at the primes below
-$3000$.
+exported with PARI/GP (Subsection~\ref{lv:computation}).
 \end{proof}
 
 \begin{table}[htbp]
@@ -380,7 +378,7 @@ where it is absolute). All data are in the directories \texttt{hp} and
 functions & number & gamma factor & terms & radius\\
 \midrule
 quadratic, $E$ & $255$ & $\Gamma_\R(s+\nu)^2$ or $\Gamma_\C(s)$ & $8\lfloor\sqrt{Q_e}\rfloor+1$ & $1.3\cdot10^{-19}$ (in $Y_E$)\\
-$\psi_{10},\psi_{23},\psi_{24}$ & $192$ & $\Gamma_\C(s)^2$ & up to $2.2\cdot10^6$ & $2.6\cdot10^{-13}$\\
+$\psi_{10},\psi_{23},\psi_{24}$ & $192$ & $\Gamma_\C(s)^2$ & up to $2.1\cdot10^6$ & $2.6\cdot10^{-13}$\\
 $\psi_{19},\psi_{20}$ & $128$ & $\Gamma_\C(s)^2$, mixed & up to $6.7\cdot10^6$ & $6.4\cdot10^{-13}$\\
 $\psi_{17},\psi_7$ & $128$ & $\Gamma_\C(s)^2$ & up to $6.7\cdot10^6$ & $2.2\cdot10^{-13}$\\
 pairs $(19,23),(19,24)$ & $32$ & $\Gamma_\C(s)^4$ & up to $5.28\cdot10^{10}$ & $5.1\cdot10^{-10}$\\

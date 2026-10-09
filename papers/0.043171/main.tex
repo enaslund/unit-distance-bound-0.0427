@@ -57,21 +57,22 @@
 \begin{abstract}
 Let $u(U)$ count the unordered pairs at distance one in a finite planar
 set $U$. We construct finite sets $U_j$ with $|U_j|\to\infty$ and
-$u(U_j)/|U_j|^{1.04317}\to\infty$. The largest exponent previously
-claimed, $1.0358$, is in the author's unpublished manuscript. The
-method is the number-field construction of OpenAI and Sawin: unit
+$u(U_j)/|U_j|^{1.043171}\to\infty$. The largest exponent previously
+claimed, apart from preliminary versions of the present work, is $1.0358$,
+in the author's unpublished manuscript. The
+method is the number-field construction of OpenAI and Sawin. Here unit
 distances come from elements of relative norm one in quadratic extensions
 $K/F$ in which $F$ has both real and complex places, and the fields come
 from an infinite pro-$2$ tower over $\Q(\sqrt{241})$, ramified only above
 $2$, $3$ and $5$, with Frobenius conditions at the two primes above $29$
-and at one prime above $41$. The main new input is a sharper bound for
-the relative zeta value. The tower group has $27$ quotients
+and at one prime above $41$. The relative zeta value is bounded through
+the dihedral quotients of the tower group: the tower group has $27$ quotients
 isomorphic to the dihedral group of order~$8$; fifteen of them detect, by
 a census, the residue degree of the primes that split completely in the
 Kummer field up to norm $4\cdot10^{13}$, and seven of them generate a
 field $E_{W''}$ of degree $8192$ contained in every field of the tower. We
 write $\zeta_{E_{W''}}$ as a product of $L$-functions of degrees $2$, $4$
-and~$8$, evaluate the $576$ new ones rigorously at $21$ real points
+and~$8$, evaluate the $576$ of degrees $4$ and $8$ rigorously at $21$ real points
 near~$1$, and combine the values through a kernel inequality with
 coefficients of both signs. Finite facts and numerical inequalities are
 certified by exact computation and interval arithmetic. Partial
@@ -87,11 +88,11 @@ formalization PALOMAR-2026-10-01-000018 v2~\cite{NaslundLeanW}.
 \small\setlength{\parindent}{0pt}\vspace{2pt}%
 \textsuperscript{*}\textbf{AI Methodology.} This work was
 done with extensive AI use, with agents developing the mathematics, writing
-the programs and writing the paper; I supervised, prompted, and coordinated them. The change of the Frobenius condition from the prime $7$ to a prime above $41$ (Section~\ref{tw:tower}) was found in an agent run of the Muse Spark system. The refinements of the bound for the relative zeta value
+the programs and writing the paper; I supervised, prompted, and coordinated them. The choice of the Frobenius condition at a prime above $41$, rather than at the prime $7$ (Section~\ref{tw:tower}), was found in an agent run of the Muse Spark system. The refinements of the bound for the relative zeta value
 (Sections~\ref{an:section}--\ref{ce:section}), the general shell weights,
 the certificates and this paper were produced with Claude Opus 5.5 working
-as an agent in Claude Code. The construction reuses earlier unpublished work of the
-author, produced with Claude Opus 5.5, ChatGPT Sol 5.6 and ChatGPT
+as an agent in Claude Code. Preliminary versions of this work, on which the construction
+builds, were produced with Claude Opus 5.5, ChatGPT Sol 5.6 and ChatGPT
 Astra 6. The reviews mentioned in Subsection~\ref{intro:status} are
 automated reviews by AI agents in fresh contexts, not human peer review. I have had the agents provide a clearer
 introduction, and a dependency graph on page~\pageref{fig:structure} to help

@@ -24,13 +24,15 @@ many numerical inequalities, among them enclosures of the values of $576$
 $L$-functions near $s=1$, are verified by exact computation and interval
 arithmetic (Subsection~\ref{intro:code}).
 
-The largest exponent previously claimed, $1.0358$, is in the author's
-unpublished manuscript \cite{Naslund0358}. The method is the number-field
+The largest exponent previously claimed, apart from preliminary versions
+of the present work, is $1.0358$, in the author's unpublished manuscript
+\cite{Naslund0358}. The method is the number-field
 construction of OpenAI \cite{OpenAI2026} and Sawin \cite{Sawin2026}.
-Subsection~\ref{intro:new} describes the three ingredients that give the
-present exponent: the local conditions of a tower over $\Q(\sqrt{241})$,
-a bound for the relative zeta value through the dihedral quotients of the
-tower group, and general weights at the selected primes (the primes used
+Subsection~\ref{intro:new} describes the ingredients that give the
+present exponent: fields of mixed signature from a tower over
+$\Q(\sqrt{241})$, the local conditions of that tower, a bound for the
+relative zeta value through the dihedral quotients of the tower group, and
+general weights at the selected primes (the primes used
 for equal-norm choices, Subsection~\ref{intro:outline}). The paper is
 self-contained, apart from the cited standard results and the
 supplementary programs.
@@ -206,12 +208,37 @@ statements that cite it.
 \input{sections/proof-structure}
 
 \subsection{The main ingredients}\label{intro:new}
+\emph{The base field and the signature.} In the construction of Sawin
+\cite{Sawin2026}, and in \cite{Naslund0358}, the field $K$ is a CM field:
+$F$ is totally real, so $\theta=0$, and the norm-one units are finite.
+Sawin's fields come from an unramified pro-$2$ tower over a real quadratic
+field ramified at $2$ and at the thirteen odd primes up to $43$, and their
+root discriminant is about $1.6\cdot10^8$. Here the base field is
+$B=\Q(\sqrt{241})$, the real quadratic field of smallest discriminant in
+which $2$, $3$ and $5$ all split. The tower is ramified only at the six
+primes of $B$ above $2$, $3$ and $5$, with prescribed local Galois groups
+there, and is still infinite (Proposition~\ref{tw:infinite}); its fields
+have root discriminant $\lambda\approx286$. The field $K$ is totally
+imaginary and Galois over $B$, and $F$ is the fixed field of one complex
+conjugation, which is not central, so that almost every place of $F$ is
+complex and $\theta\ge\theta_*$. Above a complex place of $F$ the two
+coordinates of a norm-one element can have different moduli, and the
+norm-one units, of rank $c$, move them along a lattice; averaging over a
+fundamental domain of that lattice counts the resulting pairs exactly, and
+the class-number formula cancels the regulator of these units
+(Proposition~\ref{geo:mass}). By \eqref{intro:margin}, mixed signature adds
+$\theta(J_\C-2J_\R-\log\pi)$ to the margin: with the profiles of
+Section~\ref{sec:certificate}, the lower bound for the margin proved there
+is positive for $\theta\ge\theta_*$, but would be below $-0.312$ at
+$\theta=0$ (Remark~\ref{cert:signature-remark}).
+
 \emph{The caps.} The local conditions of the tower bound the order of
 the Frobenius elements by four (a \emph{cap}) at the two primes above
-$29$ and at one of the two primes above $41$, which splits in $B$; a
-capped prime of $B$ that splits into primes of $F$ that split in $K$
-becomes selected. A cap at the prime $7$, which is inert in $B$, would
-cost the same in the Golod--Shafarevich function and would give the same
+$29$ and at one of the two primes of $B$ above $41$ (the prime $41$ splits
+in $B$). The capped primes are selected (Definition~\ref{an:selected-def}):
+the primes of $F$ above them that split in $K$ are used for equal-norm
+choices. A cap at the prime $7$, the smallest prime inert in $B$,
+would cost the same in the Golod--Shafarevich function and would give the same
 quotient $G_B/D_4G_B$ of the tower group, because every fourth power lies
 in $D_4G_B$. But the selected primes above $41$ have residue field of
 order $41^4$ instead of $7^8$, and their contribution to the margin is
@@ -340,7 +367,7 @@ fresh-context reviews of its argument, but its finite computations have
 not had a full independent review. The manuscript as a whole had three
 further fresh-context reviews, which found no error affecting the theorem
 or any constant, and an audit of the floating-point arithmetic of the
-$L$-value programs found no bound that is not rigorous. These are
+$L$-value programs found every bound rigorous. These are
 automated reviews, not human peer review.
 
 A Lean formalization \cite{NaslundLeanW} of the tower of the present
@@ -354,7 +381,7 @@ conditionally.
 \subsection{Organization}\label{intro:organization}
 Section~\ref{tw:tower} constructs the tower and proves
 Theorem~\ref{tw:field-family}, which supplies the fields.
-Section~\ref{gf:section} recalls the Kummer field $E$ and its quadratic
+Section~\ref{gf:section} describes the Kummer field $E$ and its quadratic
 $L$-functions. Section~\ref{an:section} reduces the relative zeta value
 to the primes of the fields of the tower, and proves the signed kernel
 inequality (Proposition~\ref{an:signed}). Section~\ref{dh:section} treats

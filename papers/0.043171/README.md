@@ -6,6 +6,12 @@
 > fresh-context readability review, which found no change to the mathematics, and an audit of the floating-point
 > arithmetic of the L-value, kernel and receipt programs, which found no non-rigorous bound.
 
+> **Update, 2026-10-09.** The witness `certificates/dihedral/witness_0.043171.json` now uses space W4x: all 576
+> L-values, including the 192 twists of psi_10, psi_23, psi_24, come from the paper's own kernels (`hp3/`, dcoef4.c +
+> leval.py); `dafe.py` remains an independent check. It pins 683 files (356 read); the replay passes with C_eff upper
+> 0.0422760365348 and the unchanged margin 1.0538652617e-5. Figures below that mention the W4 witness (617/353 files,
+> C_eff upper 0.0422763201) describe the earlier record.
+
 Date: 2026-10-05. Status: **research result; finite replays pass**
 (`certificates/dihedral/reproduce_w3.py` for 1.043171 and 1.043152, `certificates/dihedral/reproduce_dihedral.py`
 for 1.043124 and earlier, and for the intermediate results `certificates/reproduce_census.py` and

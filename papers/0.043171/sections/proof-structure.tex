@@ -32,6 +32,7 @@
 \node[box,fill=gray!18] (cert-enclosures) at (11.040,-7.000) {Proposition~\ref*{cert:enclosures}\\ interval enclosures};
 \node[box,fill=gray!18] (cert-lower-margin) at (13.800,-7.000) {Lemma~\ref*{cert:lower-margin}\\ the margin is positive};
 \node[box,fill=gray!18] (thm-main) at (8.280,-8.400) {Theorem~\ref*{thm:main}\\ $u(n)\ge n^{1.043171}$ infinitely often};
+\draw[->,black!50] (an-ceiling) -- (ce-values);
 \draw[->,black!50,densely dashed] (an-ceiling) -- (thm-main);
 \draw[->,black!50] (an-limit) -- (an-signed);
 \draw[->,black!50] (an-signed) -- (ce-kernel);
@@ -43,7 +44,6 @@
 \draw[->,black!50] (cert-places) -- (cert-enclosures);
 \draw[->,black!50] (dh-EW) -- (dh-floors-valid);
 \draw[->,black!50] (dh-EW) -- (lv-values);
-\draw[->,black!50] (dh-census) to[bend right=15] (ce-values);
 \draw[->,black!50] (dh-census) -- (dh-floors-valid);
 \draw[->,black!50] (dh-detection) -- (dh-EW);
 \draw[->,black!50] (dh-detection) -- (dh-census);
