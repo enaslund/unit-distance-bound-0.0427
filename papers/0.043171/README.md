@@ -5,6 +5,9 @@
 > record behind it. Reviews of the manuscript's revision of October 8, 2026 are in [reviews/](reviews/): a
 > fresh-context readability review, which found no change to the mathematics, and an audit of the floating-point
 > arithmetic of the L-value, kernel and receipt programs, which found no non-rigorous bound.
+> [main-single-file.tex](main-single-file.tex) is the same paper as one self-contained LaTeX file, with the sections
+> and the bibliography included, for submission to preprint servers and journals. Built alone with pdflatex, it
+> produces the same text as main.pdf; regenerate it after any change to main.tex, sections/ or references.bib.
 
 > **Update, 2026-10-09.** The witness `certificates/dihedral/witness_0.043171.json` now uses space W4x: all 576
 > L-values, including the 192 twists of psi_10, psi_23, psi_24, come from the paper's own kernels (`hp3/`, dcoef4.c +
